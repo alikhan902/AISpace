@@ -1,0 +1,23 @@
+{
+  "algorithm": [
+    "Compute all pairs shortest paths using BFS for each node.",
+    "For each node, find the maximum distance to any other node.",
+    "Return the dictionary of eccentricities."
+  ],
+  "constraints": [
+    "Vertices are 0 to n-1.",
+    "Edges are distinct and valid.",
+    "Graph is simple and undirected.",
+    "Weights are positive and can be floating point.",
+    "Return a dictionary of eccentricities or a single integer for singleton graphs."
+  ],
+  "edge_cases": [
+    "A singleton graph (n=1) has eccentricity 0.",
+    "A disconnected graph raises ValueError."
+  ],
+  "inputs": "n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.",
+  "method_id": "networkx.eccentricity",
+  "output": "A dictionary of eccentricity values keyed by node. If the graph is disconnected, raise ValueError.",
+  "purpose": "Compute the eccentricity of each node in a graph.",
+  "signature": "solve(n, edges)"
+}

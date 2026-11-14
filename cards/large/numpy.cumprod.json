@@ -1,0 +1,30 @@
+{
+  "algorithm": [
+    "For a single element input, return the element as a Python int.",
+    "For a non-empty list, compute the cumulative product starting from the first element, multiplying each subsequent element with the running product.",
+    "If the input is empty, return an empty list.",
+    "For a 1D list with axis not specified, flatten the list and compute the cumulative product across all elements.",
+    "For a 1D list with axis=0, compute the cumulative product across rows (each row is a single element, so this is equivalent to the cumulative product of the list).",
+    "For a 1D list with axis=1, compute the cumulative product across columns (each column is a single element, so this is equivalent to the cumulative product of the list).",
+    "Ensure all intermediate values fit within a signed 64-bit integer (int64).",
+    "Return the result as a Python int if the output is a single value, otherwise return a list[int]."
+  ],
+  "constraints": [
+    "The input list must be one-dimensional.",
+    "All intermediate values must fit within a signed 64-bit integer (int64).",
+    "The output must be a Python int for single-element results or a list[int] for multi-element results.",
+    "No NumPy objects are allowed in the output.",
+    "The function must use NumPy's default operation on the whole 1-D list with dtype=int64."
+  ],
+  "edge_cases": [
+    "Input list is empty: return an empty list.",
+    "Input list has a single element: return that element as a Python int.",
+    "Input list has multiple elements: compute cumulative product from left to right.",
+    "When the cumulative product overflows the int64 range: handle as per NumPy's default behavior (no error, modular arithmetic)."
+  ],
+  "inputs": "a: a one-dimensional list of integers (possibly empty)",
+  "method_id": "numpy.cumprod",
+  "output": "A Python int if the result is a single value (e.g., when axis is not specified and the input is a single element), or a list[int] of the cumulative products for the specified axis (e.g., for a 1D list with multiple elements or a 2D list with axis=0 or axis=1).",
+  "purpose": "Compute the cumulative product of elements along a specified axis for a 1D list of integers, returning the result as a Python int or list[int] based on the output size.",
+  "signature": "solve(a)"
+}

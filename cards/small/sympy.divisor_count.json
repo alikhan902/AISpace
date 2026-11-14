@@ -1,0 +1,22 @@
+{
+  "algorithm": [
+    "Compute all divisors of `n`",
+    "Count the number of divisors",
+    "Return the count"
+  ],
+  "constraints": [
+    "Only positive integers are considered",
+    "Divisors are counted as per the function's parameters (proper, modulus)",
+    "Divisor count is computed efficiently"
+  ],
+  "edge_cases": [
+    "n = 1: returns 1",
+    "n = 0: not applicable (since n is positive)",
+    "n = 5000: returns the correct count of divisors"
+  ],
+  "inputs": "n is a positive integer <= 5000",
+  "method_id": "sympy.divisor_count",
+  "output": "An exact Python int representing the number of divisors of `n`.",
+  "purpose": "Return the number of divisors of `n`.",
+  "signature": "solve(n)"
+}

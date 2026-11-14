@@ -1,0 +1,121 @@
+{
+  "elapsed_seconds": 6.442407885999955,
+  "finished_at": "2026-11-14T13:14:23.190579+00:00",
+  "parsed": {
+    "algorithm": [
+      "If source == target, return 0",
+      "Otherwise, construct the graph from n and edges",
+      "Use Dijkstra's algorithm (for unweighted graphs, this is equivalent to BFS) to compute shortest path length from source to target",
+      "If no path exists, raise ValueError"
+    ],
+    "constraints": [
+      "n must be at least 1",
+      "edges must be distinct and satisfy 0<=u<v<n",
+      "source and target must be valid vertices (0<=vertex<n)",
+      "The graph is simple undirected unweighted",
+      "The algorithm must use BFS for unweighted graphs (Dijkstra's algorithm for weighted, but here weight=1)"
+    ],
+    "edge_cases": [
+      "n=1: single vertex with no edges",
+      "source==target: return 0",
+      "No path exists between source and target: raise ValueError",
+      "Graph has isolated vertices (vertices with no edges)"
+    ],
+    "inputs": "n: integer >= 1; edges: list of distinct [u,v] pairs with 0<=u<v<n; source: string (valid vertex); target: string (valid vertex)",
+    "method_id": "networkx.shortest_path_length",
+    "output": "integer shortest-path length from source to target (0 if source==target), or raise ValueError if no path exists",
+    "purpose": "Compute the shortest path length between two vertices in a simple undirected unweighted graph",
+    "signature": "solve(n, edges, source, target)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"n is an integer >= 1; vertices are 0,...,n-1. edges is a list of distinct [u,v] pairs with 0<=u<v<n. Construct a simple undirected unweighted graph including isolated vertices. Return plain JSON-compatible Python values. Dictionary vertex keys must be strings. source and target are valid vertices. Return the integer shortest-path length; raise ValueError if there is no path. source==target returns 0.\",\n  \"documentation\": \"Compute shortest path lengths in the graph.\\n\\nParameters\\n----------\\nG : NetworkX graph\\n\\nsource : node, optional\\n    Starting node for path.\\n    If not specified, compute shortest path lengths using all nodes as\\n    source nodes.\\n\\ntarget : node, optional\\n    Ending node for path.\\n    If not specified, compute shortest path lengths using all nodes as\\n    target nodes.\\n\\nweight : None, string or function, optional (default = None)\\n    If None, every edge has weight/distance/cost 1.\\n    If a string, use this edge attribute as the edge weight.\\n    Any edge attribute not present defaults to 1.\\n    If this is a function, the weight of an edge is the value\\n    returned by the function. The function must accept exactly\\n    three positional arguments: the two endpoints of an edge and\\n    the dictionary of edge attributes for that edge.\\n    The function must return a number.\\n\\nmethod : string, optional (default = 'dijkstra')\\n    The algorithm to use to compute the path length.\\n    Supported options: 'dijkstra', 'bellman-ford'.\\n    Other inputs produce a ValueError.\\n    If `weight` is None, unweighted graph methods are used, and this\\n    suggestion is ignored.\\n\\nReturns\\n-------\\nlength: number or iterator\\n    If the source and target are both specified, return the length of\\n    the shortest path from the source to the target.\\n\\n    If only the source is specified, return a dict keyed by target\\n    to the shortest path length from the source to that target.\\n\\n    If only the target is specified, return a dict keyed by source\\n    to the shortest path length from that source to the target.\\n\\n    If neither the source nor target are specified, return an iterator\\n    over (source, dictionary) where dictionary is keyed by target to\\n    shortest path length from source to that target.\\n\\nRaises\\n------\\nNodeNotFound\\n    If `source` is not in `G`.\\n\\nNetworkXNoPath\\n    If no path exists between source and target.\\n\\nValueError\\n    If `method` is not among the supported options.\\n\\nExamples\\n--------\\n>>> G = nx.path_graph(5)\\n>>> nx.shortest_path_length(G, source=0, target=4)\\n4\\n>>> p = nx.shortest_path_length(G, source=0)  # target not specified\\n>>> p[4]\\n4\\n>>> p = nx.shortest_path_length(G, target=4)  # source not specified\\n>>> p[0]\\n4\\n>>> p = dict(nx.shortest_path_length(G))  # source,target not specified\\n>>> p[0][4]\\n4\\n\\nNotes\\n-----\\nThe length of the path is always 1 less than the number of nodes involved\\nin the path since the length measures the number of edges followed.\\n\\nFor digraphs this returns the shortest directed path length. To find path\\nlengths in the reverse direction use G.reverse(copy=False) first to flip\\nthe edge orientation.\\n\\nSee Also\\n--------\\nall_pairs_shortest_path_length\\nall_pairs_dijkstra_path_length\\nall_pairs_bellman_ford_path_length\\nsingle_source_shortest_path_length\\nsingle_source_dijkstra_path_length\\nsingle_source_bellman_ford_path_length\",\n  \"documentation_truncated\": false,\n  \"group\": \"distances\",\n  \"id\": \"networkx.shortest_path_length\",\n  \"library\": \"networkx\",\n  \"name\": \"shortest_path_length\",\n  \"signature\": \"solve(n, edges, source, target)\",\n  \"version\": \"3.6.1\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:4b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:14:23.190269056Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 331,
+    "eval_duration": 5780561000,
+    "load_duration": 616801,
+    "message": {
+      "content": "{\n  \"method_id\": \"networkx.shortest_path_length\",\n  \"signature\": \"solve(n, edges, source, target)\",\n  \"purpose\": \"Compute the shortest path length between two vertices in a simple undirected unweighted graph\",\n  \"inputs\": \"n: integer >= 1; edges: list of distinct [u,v] pairs with 0<=u<v<n; source: string (valid vertex); target: string (valid vertex)\",\n  \"output\": \"integer shortest-path length from source to target (0 if source==target), or raise ValueError if no path exists\",\n  \"algorithm\": [\n    \"If source == target, return 0\",\n    \"Otherwise, construct the graph from n and edges\",\n    \"Use Dijkstra's algorithm (for unweighted graphs, this is equivalent to BFS) to compute shortest path length from source to target\",\n    \"If no path exists, raise ValueError\"\n  ],\n  \"edge_cases\": [\n    \"n=1: single vertex with no edges\",\n    \"source==target: return 0\",\n    \"No path exists between source and target: raise ValueError\",\n    \"Graph has isolated vertices (vertices with no edges)\"\n  ],\n  \"constraints\": [\n    \"n must be at least 1\",\n    \"edges must be distinct and satisfy 0<=u<v<n\",\n    \"source and target must be valid vertices (0<=vertex<n)\",\n    \"The graph is simple undirected unweighted\",\n    \"The algorithm must use BFS for unweighted graphs (Dijkstra's algorithm for weighted, but here weight=1)\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:4b",
+    "prompt_eval_cached_count": 407,
+    "prompt_eval_count": 1247,
+    "prompt_eval_duration": 479309000,
+    "total_duration": 6441692983
+  },
+  "started_at": "2026-11-14T13:14:16.748171+00:00",
+  "valid": true
+}

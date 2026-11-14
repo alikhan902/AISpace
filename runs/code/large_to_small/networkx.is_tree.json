@@ -1,0 +1,61 @@
+{
+  "elapsed_seconds": 3.4960444099997403,
+  "finished_at": "2026-11-14T13:31:11.985853+00:00",
+  "parsed": {
+    "code": "def solve(n, edges):\n    if n < 1:\n        raise ValueError(\"n must be at least 1\")\n\n    if len(edges) != n - 1:\n        raise ValueError(\"graph must have exactly n-1 edges\")\n\n    if not isinstance(edges, list):\n        raise ValueError(\"edges must be a list\")\n\n    if not all(0 <= u < v < n for u, v in edges):\n        raise ValueError(\"edges must be distinct and unordered pairs with u < v\")\n\n    if not all(len(edge) == 2 for edge in edges):\n        raise ValueError(\"edges must be pairs\")\n\n    if not all(isinstance(edge, int) for edge in edges):\n        raise ValueError(\"edges must be integers\")\n\n    # Check if the graph is connected\n    if not is_connected(edges, n):\n        return False\n\n    # Check if the graph is acyclic\n    if not is_acyclic(edges, n):\n        return False\n\n    return True\n\ndef is_connected(edges, n):\n    if n == 1:\n        return True\n\n    visited = set()\n    queue = [0]\n    while queue:\n        u = queue.pop(0)\n        if u in visited:\n            continue\n        visited.add(u)\n        for v in range(n):\n            if v not in visited and (u, v) in edges:\n                queue.append(v)\n    return len(visited) == n\n\ndef is_acyclic(edges, n):\n    if n == 1:\n        return True\n\n    visited = set()\n    stack = [0]\n    while stack:\n        u = stack.pop()\n        if u in visited:\n            continue\n        visited.add(u)\n        for v in range(n):\n            if v not in visited and (u, v) in edges:\n                stack.append(v)\n    return len(visited) == n"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Implement a Python function from a JSON behavioral card. The card is the only task specification. Return a JSON object with a single string field code containing executable Python source. Define solve with the card's exact signature. Use only Python's standard library. Allowed imports: math, itertools, functools, collections, heapq, bisect, statistics, fractions, operator, typing. Do not import or call NumPy, SymPy, NetworkX or any other third-party library. Do not read files, use network, introspection, eval, exec, input or print. Implement computations yourself using built-ins and the allowed standard library. Return plain JSON-compatible values, not iterators or sets; use string keys in dictionaries. Include any helper functions in the code. No tests or main block. Raise ValueError where the card requires it.",
+        "role": "system"
+      },
+      {
+        "content": "Implement this card:\n{\n  \"algorithm\": [\n    \"Check that the graph has exactly n-1 edges\",\n    \"Check that the graph is connected\",\n    \"If both conditions hold, return True; otherwise, return False\"\n  ],\n  \"constraints\": [\n    \"Vertices are labeled 0 to n-1\",\n    \"Edges are distinct and unordered pairs with u < v\",\n    \"The graph must be simple (no multiple edges or self-loops)\",\n    \"The graph may contain isolated vertices\",\n    \"The graph must be undirected\"\n  ],\n  \"edge_cases\": [\n    \"n=1: single vertex with no edges (tree)\",\n    \"n=2: two vertices with one edge (tree)\",\n    \"n=3: three vertices with two edges (tree) or three edges (not tree)\",\n    \"Graph with cycles (not tree)\",\n    \"Graph with disconnected components (not tree)\"\n  ],\n  \"inputs\": \"n: integer >= 1; edges: list of distinct [u,v] pairs where 0<=u<v<n\",\n  \"method_id\": \"networkx.is_tree\",\n  \"output\": \"bool: True if the graph is a tree (connected and acyclic), False otherwise\",\n  \"purpose\": \"Determine if a simple undirected graph with n vertices and given edges is a tree\",\n  \"signature\": \"solve(n, edges)\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:1.7b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 3072,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:31:11.985571337Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 443,
+    "eval_duration": 3408934000,
+    "load_duration": 530748,
+    "message": {
+      "content": "{\n  \"code\": \"def solve(n, edges):\\n    if n < 1:\\n        raise ValueError(\\\"n must be at least 1\\\")\\n\\n    if len(edges) != n - 1:\\n        raise ValueError(\\\"graph must have exactly n-1 edges\\\")\\n\\n    if not isinstance(edges, list):\\n        raise ValueError(\\\"edges must be a list\\\")\\n\\n    if not all(0 <= u < v < n for u, v in edges):\\n        raise ValueError(\\\"edges must be distinct and unordered pairs with u < v\\\")\\n\\n    if not all(len(edge) == 2 for edge in edges):\\n        raise ValueError(\\\"edges must be pairs\\\")\\n\\n    if not all(isinstance(edge, int) for edge in edges):\\n        raise ValueError(\\\"edges must be integers\\\")\\n\\n    # Check if the graph is connected\\n    if not is_connected(edges, n):\\n        return False\\n\\n    # Check if the graph is acyclic\\n    if not is_acyclic(edges, n):\\n        return False\\n\\n    return True\\n\\ndef is_connected(edges, n):\\n    if n == 1:\\n        return True\\n\\n    visited = set()\\n    queue = [0]\\n    while queue:\\n        u = queue.pop(0)\\n        if u in visited:\\n            continue\\n        visited.add(u)\\n        for v in range(n):\\n            if v not in visited and (u, v) in edges:\\n                queue.append(v)\\n    return len(visited) == n\\n\\ndef is_acyclic(edges, n):\\n    if n == 1:\\n        return True\\n\\n    visited = set()\\n    stack = [0]\\n    while stack:\\n        u = stack.pop()\\n        if u in visited:\\n            continue\\n        visited.add(u)\\n        for v in range(n):\\n            if v not in visited and (u, v) in edges:\\n                stack.append(v)\\n    return len(visited) == n\"\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:1.7b",
+    "prompt_eval_cached_count": 183,
+    "prompt_eval_count": 473,
+    "prompt_eval_duration": 70569000,
+    "total_duration": 3495431105
+  },
+  "started_at": "2026-11-14T13:31:08.489807+00:00",
+  "valid": true
+}

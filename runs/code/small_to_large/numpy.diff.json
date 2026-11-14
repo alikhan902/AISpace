@@ -1,0 +1,61 @@
+{
+  "elapsed_seconds": 1.8452809989998968,
+  "finished_at": "2026-11-14T13:24:05.309527+00:00",
+  "parsed": {
+    "code": "def solve(a, n=1):\n    if n == 0:\n        return a[:]\n    if n > len(a):\n        return []\n    result = [a[0]]\n    for i in range(1, len(a)):\n        diff = a[i] - a[i-1]\n        result.append(diff)\n    return result"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Implement a Python function from a JSON behavioral card. The card is the only task specification. Return a JSON object with a single string field code containing executable Python source. Define solve with the card's exact signature. Use only Python's standard library. Allowed imports: math, itertools, functools, collections, heapq, bisect, statistics, fractions, operator, typing. Do not import or call NumPy, SymPy, NetworkX or any other third-party library. Do not read files, use network, introspection, eval, exec, input or print. Implement computations yourself using built-ins and the allowed standard library. Return plain JSON-compatible values, not iterators or sets; use string keys in dictionaries. Include any helper functions in the code. No tests or main block. Raise ValueError where the card requires it.",
+        "role": "system"
+      },
+      {
+        "content": "Implement this card:\n{\n  \"algorithm\": [\n    \"If n == 0, return a copy of `a`.\",\n    \"If n > len(a), return an empty list.\",\n    \"Otherwise, compute the n-th discrete forward difference along the specified axis.\"\n  ],\n  \"constraints\": [\n    \"n must be an integer from 0 to 5.\",\n    \"If n > len(a), the result is empty unless n = 0.\",\n    \"If n == 0, return a copy of `a`.\"\n  ],\n  \"edge_cases\": [\n    \"n = 0: return a copy of `a`.\",\n    \"n >= len(a): return an empty list unless n = 0.\",\n    \"a is empty: return an empty list.\"\n  ],\n  \"inputs\": \"a is a one-dimensional list of integers, possibly empty. n is an integer from 0 to 5.\",\n  \"method_id\": \"numpy.diff\",\n  \"output\": \"A list of integers, possibly empty, with the same shape as `a` except along the specified axis, where the dimension is reduced by `n`. The type is the same as the type of the difference between any two elements of `a`.\",\n  \"purpose\": \"Compute the n-th discrete forward difference of a one-dimensional array.\",\n  \"signature\": \"solve(a, n=1)\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:4b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 3072,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:24:05.309228426Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 91,
+    "eval_duration": 1672969000,
+    "load_duration": 502015,
+    "message": {
+      "content": "{\n  \"code\": \"def solve(a, n=1):\\n    if n == 0:\\n        return a[:]\\n    if n > len(a):\\n        return []\\n    result = [a[0]]\\n    for i in range(1, len(a)):\\n        diff = a[i] - a[i-1]\\n        result.append(diff)\\n    return result\"\n  }",
+      "role": "assistant"
+    },
+    "model": "qwen3:4b",
+    "prompt_eval_cached_count": 183,
+    "prompt_eval_count": 465,
+    "prompt_eval_duration": 146103000,
+    "total_duration": 1844682185
+  },
+  "started_at": "2026-11-14T13:24:03.464244+00:00",
+  "valid": true
+}

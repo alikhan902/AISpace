@@ -1,0 +1,10511 @@
+{
+  "brief": {
+    "contract": "n is an integer >= 1; vertices are 0,...,n-1. edges is a list of distinct [u,v] pairs with 0<=u<v<n. Construct a simple undirected unweighted graph including isolated vertices. Return plain JSON-compatible Python values. Dictionary vertex keys must be strings. Return int for number_connected_components and bool for predicates.",
+    "documentation": "Returns True if the graph is connected, False otherwise.\n\nA graph is connected if, for every pair of distinct nodes, there is a\npath between them. If there is a pair of nodes for which such path does\nnot exist, the graph is not connected (also referred to as \"disconnected\").\n\nA graph consisting of a single node and no edges is connected.\nConnectivity is undefined for the null graph (graph with no nodes).\n\nParameters\n----------\nG : NetworkX Graph\n   An undirected graph.\n\nReturns\n-------\nconnected : bool\n  True if the graph is connected, False otherwise.\n\nRaises\n------\nNetworkXNotImplemented\n    If G is directed.\n\nExamples\n--------\n>>> G = nx.path_graph(4)\n>>> print(nx.is_connected(G))\nTrue\n\nSee Also\n--------\nis_strongly_connected\nis_weakly_connected\nis_semiconnected\nis_biconnected\nconnected_components\n\nNotes\n-----\nThis function is for undirected graphs only. For directed graphs, use\n:func:`is_strongly_connected` or :func:`is_weakly_connected`.\n\nThe algorithm is based on a Breadth-First Search (BFS) traversal and its\ntime complexity is $O(n + m)$, where $n$ is the number of nodes and $m$ the\nnumber of edges in the graph.",
+    "documentation_truncated": false,
+    "group": "connectivity",
+    "id": "networkx.is_connected",
+    "library": "networkx",
+    "name": "is_connected",
+    "signature": "solve(n, edges)",
+    "version": "3.6.1"
+  },
+  "cases": [
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0000",
+      "input": {
+        "edges": [],
+        "n": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0001",
+      "input": {
+        "edges": [],
+        "n": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0002",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "n": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0003",
+      "input": {
+        "edges": [],
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0004",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0005",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ]
+        ],
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0006",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0007",
+      "input": {
+        "edges": [
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0008",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0009",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0010",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0011",
+      "input": {
+        "edges": [],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0012",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0013",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0014",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0015",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0016",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0017",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0018",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0019",
+      "input": {
+        "edges": [
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0020",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0021",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0022",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0023",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0024",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0025",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0026",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0027",
+      "input": {
+        "edges": [
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0028",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0029",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0030",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0031",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0032",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0033",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0034",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0035",
+      "input": {
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0036",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0037",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0038",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0039",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0040",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0041",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0042",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0043",
+      "input": {
+        "edges": [
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0044",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0045",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0046",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0047",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0048",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0049",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0050",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0051",
+      "input": {
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0052",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0053",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0054",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0055",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0056",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0057",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0058",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0059",
+      "input": {
+        "edges": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0060",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0061",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0062",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0063",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0064",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0065",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0066",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0067",
+      "input": {
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0068",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0069",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0070",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0071",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0072",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0073",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0074",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0075",
+      "input": {
+        "edges": [],
+        "n": 5
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0076",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0077",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0078",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0079",
+      "input": {
+        "edges": [],
+        "n": 6
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0080",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0081",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0082",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0083",
+      "input": {
+        "edges": [],
+        "n": 8
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0084",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0085",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0086",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0087",
+      "input": {
+        "edges": [],
+        "n": 12
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0088",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0089",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0090",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0091",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0092",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0093",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0094",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0095",
+      "input": {
+        "edges": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0096",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0097",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0098",
+      "input": {
+        "edges": [
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0099",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0100",
+      "input": {
+        "edges": [
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0101",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0102",
+      "input": {
+        "edges": [
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0103",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0104",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0105",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0106",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0107",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0108",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0109",
+      "input": {
+        "edges": [
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0110",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0111",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0112",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            9,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0113",
+      "input": {
+        "edges": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0114",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0115",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0116",
+      "input": {
+        "edges": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0117",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0118",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0119",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0120",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0121",
+      "input": {
+        "edges": [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            3,
+            6
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0122",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0123",
+      "input": {
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0124",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0125",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0126",
+      "input": {
+        "edges": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0127",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0128",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0129",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0130",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0131",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0132",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0133",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0134",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0135",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0136",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0137",
+      "input": {
+        "edges": [
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0138",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0139",
+      "input": {
+        "edges": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0140",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0141",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0142",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0143",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0144",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0145",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0146",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0147",
+      "input": {
+        "edges": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0148",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0149",
+      "input": {
+        "edges": [
+          [
+            0,
+            8
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0150",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0151",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0152",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            7,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0153",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0154",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0155",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0156",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0157",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0158",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            8,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0159",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0160",
+      "input": {
+        "edges": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            6
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0161",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0162",
+      "input": {
+        "edges": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            7,
+            10
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0163",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0164",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0165",
+      "input": {
+        "edges": [
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0166",
+      "input": {
+        "edges": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0167",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0168",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0169",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0170",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0171",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            9,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0172",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0173",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0174",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0175",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0176",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0177",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            7,
+            9
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0178",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0179",
+      "input": {
+        "edges": [
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0180",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": true
+      },
+      "id": "networkx.is_connected:0181",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0182",
+      "input": {
+        "edges": [
+          [
+            2,
+            11
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": false
+      },
+      "id": "networkx.is_connected:0183",
+      "input": {
+        "edges": [
+          [
+            0,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    }
+  ]
+}

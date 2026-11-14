@@ -1,0 +1,3201 @@
+{
+  "brief": {
+    "contract": "a is a one-dimensional list of integers, possibly empty. Return Python int or list[int], as appropriate; no NumPy objects. All intermediate values fit signed int64. Use NumPy's default operation on the whole 1-D list, with dtype=int64.",
+    "documentation": "Return the cumulative sum of the elements along a given axis.\n\nParameters\n----------\na : array_like\n    Input array.\naxis : int, optional\n    Axis along which the cumulative sum is computed. The default\n    (None) is to compute the cumsum over the flattened array.\ndtype : dtype, optional\n    Type of the returned array and of the accumulator in which the\n    elements are summed.  If `dtype` is not specified, it defaults\n    to the dtype of `a`, unless `a` has an integer dtype with a\n    precision less than that of the default platform integer.  In\n    that case, the default platform integer is used.\nout : ndarray, optional\n    Alternative output array in which to place the result. It must\n    have the same shape and buffer length as the expected output\n    but the type will be cast if necessary. See :ref:`ufuncs-output-type`\n    for more details.\n\nReturns\n-------\ncumsum_along_axis : ndarray.\n    A new array holding the result is returned unless `out` is\n    specified, in which case a reference to `out` is returned. The\n    result has the same size as `a`, and the same shape as `a` if\n    `axis` is not None or `a` is a 1-d array.\n\nSee Also\n--------\ncumulative_sum : Array API compatible alternative for ``cumsum``.\nsum : Sum array elements.\ntrapezoid : Integration of array values using composite trapezoidal rule.\ndiff : Calculate the n-th discrete difference along given axis.\n\nNotes\n-----\nArithmetic is modular when using integer types, and no error is\nraised on overflow.\n\n``cumsum(a)[-1]`` may not be equal to ``sum(a)`` for floating-point\nvalues since ``sum`` may use a pairwise summation routine, reducing\nthe roundoff-error. See `sum` for more information.\n\nExamples\n--------\n>>> import numpy as np\n>>> a = np.array([[1,2,3], [4,5,6]])\n>>> a\narray([[1, 2, 3],\n       [4, 5, 6]])\n>>> np.cumsum(a)\narray([ 1,  3,  6, 10, 15, 21])\n>>> np.cumsum(a, dtype=np.float64)  # specifies type of output value(s)\narray([  1.,   3.,   6.,  10.,  15.,  21.])\n\n>>> np.cumsum(a,axis=0)      # sum over rows for each of the 3 columns\narray([[1, 2, 3],\n       [5, 7, 9]])\n>>> np.cumsum(a,axis=1)      # sum over columns for each of the 2 rows\narray([[ 1,  3,  6],\n       [ 4,  9, 15]])\n\n``cumsum(b)[-1]`` may not be equal to ``sum(b)``\n\n>>> b = np.array([1, 2e-9, 3e-9] * 1000000)\n>>> b.cumsum()[-1]\n1000000.0050045159\n>>> b.sum()\n1000000.0050000029",
+    "documentation_truncated": false,
+    "group": "reductions",
+    "id": "numpy.cumsum",
+    "library": "numpy",
+    "name": "cumsum",
+    "signature": "solve(a)",
+    "version": "2.5.4"
+  },
+  "cases": [
+    {
+      "category": "boundary",
+      "expected": {
+        "value": []
+      },
+      "id": "numpy.cumsum:0000",
+      "input": {
+        "a": []
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0
+        ]
+      },
+      "id": "numpy.cumsum:0001",
+      "input": {
+        "a": [
+          0
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "id": "numpy.cumsum:0002",
+      "input": {
+        "a": [
+          1
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          -1
+        ]
+      },
+      "id": "numpy.cumsum:0003",
+      "input": {
+        "a": [
+          -1
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          0
+        ]
+      },
+      "id": "numpy.cumsum:0004",
+      "input": {
+        "a": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.cumsum:0005",
+      "input": {
+        "a": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          -3,
+          -5,
+          -6
+        ]
+      },
+      "id": "numpy.cumsum:0006",
+      "input": {
+        "a": [
+          -3,
+          -2,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          3,
+          2,
+          2,
+          5,
+          4
+        ]
+      },
+      "id": "numpy.cumsum:0007",
+      "input": {
+        "a": [
+          3,
+          -1,
+          0,
+          3,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          5,
+          9,
+          12,
+          14,
+          15
+        ]
+      },
+      "id": "numpy.cumsum:0008",
+      "input": {
+        "a": [
+          5,
+          4,
+          3,
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          -2,
+          0,
+          -2,
+          0
+        ]
+      },
+      "id": "numpy.cumsum:0009",
+      "input": {
+        "a": [
+          -2,
+          2,
+          -2,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          0,
+          3,
+          6,
+          4,
+          3,
+          4,
+          4
+        ]
+      },
+      "id": "numpy.cumsum:0010",
+      "input": {
+        "a": [
+          -3,
+          3,
+          3,
+          3,
+          -2,
+          -1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          2,
+          2,
+          -1,
+          -1,
+          -4
+        ]
+      },
+      "id": "numpy.cumsum:0011",
+      "input": {
+        "a": [
+          -1,
+          3,
+          0,
+          -3,
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -3,
+          -3
+        ]
+      },
+      "id": "numpy.cumsum:0012",
+      "input": {
+        "a": [
+          -2,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          6,
+          3,
+          0,
+          -2,
+          -2,
+          1,
+          2,
+          4,
+          3
+        ]
+      },
+      "id": "numpy.cumsum:0013",
+      "input": {
+        "a": [
+          0,
+          3,
+          3,
+          -3,
+          -3,
+          -2,
+          0,
+          3,
+          1,
+          2,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          2,
+          5,
+          6,
+          9,
+          6,
+          9,
+          8,
+          9
+        ]
+      },
+      "id": "numpy.cumsum:0014",
+      "input": {
+        "a": [
+          2,
+          0,
+          3,
+          1,
+          3,
+          -3,
+          3,
+          -1,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          3,
+          6,
+          6,
+          7,
+          6,
+          8,
+          10,
+          10
+        ]
+      },
+      "id": "numpy.cumsum:0015",
+      "input": {
+        "a": [
+          3,
+          0,
+          3,
+          0,
+          1,
+          -1,
+          2,
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -5,
+          -4
+        ]
+      },
+      "id": "numpy.cumsum:0016",
+      "input": {
+        "a": [
+          -3,
+          -2,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1
+        ]
+      },
+      "id": "numpy.cumsum:0017",
+      "input": {
+        "a": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1,
+          1,
+          0,
+          -3,
+          -1,
+          1
+        ]
+      },
+      "id": "numpy.cumsum:0018",
+      "input": {
+        "a": [
+          2,
+          -1,
+          0,
+          -1,
+          -3,
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          1,
+          3,
+          5,
+          2,
+          1,
+          0,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.cumsum:0019",
+      "input": {
+        "a": [
+          3,
+          -2,
+          2,
+          2,
+          -3,
+          -1,
+          -1,
+          2,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2
+        ]
+      },
+      "id": "numpy.cumsum:0020",
+      "input": {
+        "a": [
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1,
+          0,
+          2,
+          4,
+          6,
+          5,
+          2,
+          -1,
+          -2,
+          -3
+        ]
+      },
+      "id": "numpy.cumsum:0021",
+      "input": {
+        "a": [
+          2,
+          -1,
+          -1,
+          2,
+          2,
+          2,
+          -1,
+          -3,
+          -3,
+          -1,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          0,
+          1,
+          0,
+          -3,
+          0
+        ]
+      },
+      "id": "numpy.cumsum:0022",
+      "input": {
+        "a": [
+          -3,
+          3,
+          1,
+          -1,
+          -3,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          4,
+          3,
+          5,
+          6,
+          8,
+          11,
+          9,
+          10,
+          13
+        ]
+      },
+      "id": "numpy.cumsum:0023",
+      "input": {
+        "a": [
+          1,
+          0,
+          0,
+          3,
+          -1,
+          2,
+          1,
+          2,
+          3,
+          -2,
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -3,
+          -3,
+          -6,
+          -8,
+          -8
+        ]
+      },
+      "id": "numpy.cumsum:0024",
+      "input": {
+        "a": [
+          -2,
+          -1,
+          0,
+          -3,
+          -2,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3
+        ]
+      },
+      "id": "numpy.cumsum:0025",
+      "input": {
+        "a": [
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          1,
+          4,
+          3,
+          0
+        ]
+      },
+      "id": "numpy.cumsum:0026",
+      "input": {
+        "a": [
+          -2,
+          1,
+          2,
+          3,
+          -1,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          4,
+          3,
+          6,
+          3,
+          1
+        ]
+      },
+      "id": "numpy.cumsum:0027",
+      "input": {
+        "a": [
+          0,
+          3,
+          1,
+          -1,
+          3,
+          -3,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          1,
+          2,
+          3,
+          2,
+          1,
+          1,
+          0,
+          1,
+          3,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.cumsum:0028",
+      "input": {
+        "a": [
+          -1,
+          2,
+          1,
+          1,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          2,
+          -1,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          -1,
+          -1,
+          -4,
+          -1,
+          -1,
+          -3,
+          -3,
+          -6,
+          -6,
+          -6
+        ]
+      },
+      "id": "numpy.cumsum:0029",
+      "input": {
+        "a": [
+          2,
+          -3,
+          0,
+          -3,
+          3,
+          0,
+          -2,
+          0,
+          -3,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          2,
+          4,
+          5,
+          3,
+          6,
+          7,
+          4,
+          1,
+          -1,
+          0
+        ]
+      },
+      "id": "numpy.cumsum:0030",
+      "input": {
+        "a": [
+          -1,
+          3,
+          2,
+          1,
+          -2,
+          3,
+          1,
+          -3,
+          -3,
+          -2,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          0,
+          0,
+          3,
+          5,
+          2,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.cumsum:0031",
+      "input": {
+        "a": [
+          -2,
+          2,
+          0,
+          3,
+          2,
+          -3,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          -1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.cumsum:0032",
+      "input": {
+        "a": [
+          1,
+          -1,
+          -1,
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          4,
+          6,
+          8,
+          11,
+          11,
+          11,
+          11,
+          12
+        ]
+      },
+      "id": "numpy.cumsum:0033",
+      "input": {
+        "a": [
+          2,
+          1,
+          1,
+          2,
+          2,
+          3,
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          1,
+          3,
+          4,
+          2,
+          5,
+          7,
+          4,
+          5,
+          5
+        ]
+      },
+      "id": "numpy.cumsum:0034",
+      "input": {
+        "a": [
+          -2,
+          3,
+          2,
+          1,
+          -2,
+          3,
+          2,
+          -3,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          -1,
+          -1,
+          -4,
+          -3,
+          -3,
+          -1,
+          -2,
+          0,
+          3,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.cumsum:0035",
+      "input": {
+        "a": [
+          0,
+          -1,
+          0,
+          -3,
+          1,
+          0,
+          2,
+          -1,
+          2,
+          3,
+          -1,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3
+        ]
+      },
+      "id": "numpy.cumsum:0036",
+      "input": {
+        "a": [
+          0,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          -2,
+          -3,
+          -4
+        ]
+      },
+      "id": "numpy.cumsum:0037",
+      "input": {
+        "a": [
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          -1,
+          -4,
+          -7,
+          -6,
+          -4,
+          -2,
+          -2,
+          1,
+          4
+        ]
+      },
+      "id": "numpy.cumsum:0038",
+      "input": {
+        "a": [
+          -1,
+          0,
+          -3,
+          -3,
+          1,
+          2,
+          2,
+          0,
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -3,
+          -3,
+          -4,
+          -5,
+          -6,
+          -8,
+          -11
+        ]
+      },
+      "id": "numpy.cumsum:0039",
+      "input": {
+        "a": [
+          -2,
+          -1,
+          0,
+          -1,
+          -1,
+          -1,
+          -2,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          -3,
+          -4,
+          -4,
+          -7,
+          -4,
+          -7,
+          -4,
+          -6
+        ]
+      },
+      "id": "numpy.cumsum:0040",
+      "input": {
+        "a": [
+          -1,
+          -2,
+          -1,
+          0,
+          -3,
+          3,
+          -3,
+          3,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -2,
+          1
+        ]
+      },
+      "id": "numpy.cumsum:0041",
+      "input": {
+        "a": [
+          -2,
+          0,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          5,
+          8,
+          8,
+          9,
+          10,
+          11
+        ]
+      },
+      "id": "numpy.cumsum:0042",
+      "input": {
+        "a": [
+          3,
+          2,
+          3,
+          0,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -5,
+          -3
+        ]
+      },
+      "id": "numpy.cumsum:0043",
+      "input": {
+        "a": [
+          -2,
+          -3,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          6,
+          8,
+          6,
+          6,
+          8
+        ]
+      },
+      "id": "numpy.cumsum:0044",
+      "input": {
+        "a": [
+          3,
+          3,
+          2,
+          -2,
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          2
+        ]
+      },
+      "id": "numpy.cumsum:0045",
+      "input": {
+        "a": [
+          3,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          4,
+          1,
+          -1,
+          -4
+        ]
+      },
+      "id": "numpy.cumsum:0046",
+      "input": {
+        "a": [
+          3,
+          1,
+          -3,
+          -2,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          2,
+          0,
+          -1,
+          2,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.cumsum:0047",
+      "input": {
+        "a": [
+          0,
+          1,
+          1,
+          -2,
+          -1,
+          3,
+          -3,
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2
+        ]
+      },
+      "id": "numpy.cumsum:0048",
+      "input": {
+        "a": [
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          4,
+          5,
+          8,
+          6,
+          8,
+          5
+        ]
+      },
+      "id": "numpy.cumsum:0049",
+      "input": {
+        "a": [
+          1,
+          3,
+          1,
+          3,
+          -2,
+          2,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          0,
+          -2,
+          -5,
+          -4,
+          -5,
+          -4,
+          -3,
+          -3,
+          -2,
+          -4,
+          -6
+        ]
+      },
+      "id": "numpy.cumsum:0050",
+      "input": {
+        "a": [
+          2,
+          -2,
+          -2,
+          -3,
+          1,
+          -1,
+          1,
+          1,
+          0,
+          1,
+          -2,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          2,
+          1,
+          -1,
+          -2,
+          -4,
+          -1,
+          -4,
+          -1
+        ]
+      },
+      "id": "numpy.cumsum:0051",
+      "input": {
+        "a": [
+          0,
+          0,
+          2,
+          -1,
+          -2,
+          -1,
+          -2,
+          3,
+          -3,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -3,
+          -6,
+          -3,
+          -1,
+          -2,
+          -3,
+          -6
+        ]
+      },
+      "id": "numpy.cumsum:0052",
+      "input": {
+        "a": [
+          -2,
+          -1,
+          -3,
+          3,
+          2,
+          -1,
+          -1,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -4,
+          -1,
+          0,
+          0,
+          -1,
+          -4,
+          -4,
+          -6,
+          -6,
+          -4
+        ]
+      },
+      "id": "numpy.cumsum:0053",
+      "input": {
+        "a": [
+          -2,
+          -2,
+          3,
+          1,
+          0,
+          -1,
+          -3,
+          0,
+          -2,
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          0,
+          0,
+          -3
+        ]
+      },
+      "id": "numpy.cumsum:0054",
+      "input": {
+        "a": [
+          0,
+          1,
+          -1,
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          1,
+          -2,
+          -3,
+          -5,
+          -8
+        ]
+      },
+      "id": "numpy.cumsum:0055",
+      "input": {
+        "a": [
+          -1,
+          2,
+          -3,
+          -1,
+          -2,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -3,
+          -5,
+          -8,
+          -7,
+          -7
+        ]
+      },
+      "id": "numpy.cumsum:0056",
+      "input": {
+        "a": [
+          -3,
+          0,
+          -2,
+          -3,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          2,
+          4,
+          2,
+          1,
+          -2,
+          -3,
+          -2
+        ]
+      },
+      "id": "numpy.cumsum:0057",
+      "input": {
+        "a": [
+          0,
+          3,
+          -1,
+          2,
+          -2,
+          -1,
+          -3,
+          -1,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          -1
+        ]
+      },
+      "id": "numpy.cumsum:0058",
+      "input": {
+        "a": [
+          2,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          -1,
+          -2,
+          0,
+          3,
+          3,
+          0,
+          -2,
+          0,
+          0,
+          2
+        ]
+      },
+      "id": "numpy.cumsum:0059",
+      "input": {
+        "a": [
+          2,
+          -3,
+          -1,
+          2,
+          3,
+          0,
+          -3,
+          -2,
+          2,
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -3,
+          -4,
+          -6,
+          -7,
+          -5
+        ]
+      },
+      "id": "numpy.cumsum:0060",
+      "input": {
+        "a": [
+          -3,
+          0,
+          -1,
+          -2,
+          -1,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.cumsum:0061",
+      "input": {
+        "a": [
+          2,
+          0,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          4,
+          2,
+          -1,
+          -3,
+          -6,
+          -6
+        ]
+      },
+      "id": "numpy.cumsum:0062",
+      "input": {
+        "a": [
+          3,
+          1,
+          -2,
+          -3,
+          -2,
+          -3,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          3,
+          3,
+          2
+        ]
+      },
+      "id": "numpy.cumsum:0063",
+      "input": {
+        "a": [
+          3,
+          0,
+          0,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          2,
+          1,
+          0,
+          0,
+          -3,
+          -1,
+          -2
+        ]
+      },
+      "id": "numpy.cumsum:0064",
+      "input": {
+        "a": [
+          -1,
+          3,
+          -1,
+          -1,
+          0,
+          -3,
+          2,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          -2,
+          -4,
+          -5
+        ]
+      },
+      "id": "numpy.cumsum:0065",
+      "input": {
+        "a": [
+          -2,
+          1,
+          -1,
+          -2,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          -3,
+          -6,
+          -9,
+          -11,
+          -11,
+          -10,
+          -11,
+          -13,
+          -12,
+          -11,
+          -10
+        ]
+      },
+      "id": "numpy.cumsum:0066",
+      "input": {
+        "a": [
+          -1,
+          -2,
+          -3,
+          -3,
+          -2,
+          0,
+          1,
+          -1,
+          -2,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          0,
+          -1
+        ]
+      },
+      "id": "numpy.cumsum:0067",
+      "input": {
+        "a": [
+          -3,
+          2,
+          1,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          6
+        ]
+      },
+      "id": "numpy.cumsum:0068",
+      "input": {
+        "a": [
+          2,
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          4,
+          4
+        ]
+      },
+      "id": "numpy.cumsum:0069",
+      "input": {
+        "a": [
+          2,
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          -1
+        ]
+      },
+      "id": "numpy.cumsum:0070",
+      "input": {
+        "a": [
+          1,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          5,
+          8,
+          6,
+          9,
+          7,
+          7,
+          9,
+          10,
+          10,
+          10,
+          9
+        ]
+      },
+      "id": "numpy.cumsum:0071",
+      "input": {
+        "a": [
+          3,
+          2,
+          3,
+          -2,
+          3,
+          -2,
+          0,
+          2,
+          1,
+          0,
+          0,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.cumsum:0072",
+      "input": {
+        "a": [
+          0,
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          -2,
+          1,
+          0,
+          2,
+          3,
+          5,
+          7,
+          6
+        ]
+      },
+      "id": "numpy.cumsum:0073",
+      "input": {
+        "a": [
+          0,
+          -2,
+          3,
+          -1,
+          2,
+          1,
+          2,
+          2,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          3,
+          3
+        ]
+      },
+      "id": "numpy.cumsum:0074",
+      "input": {
+        "a": [
+          0,
+          3,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -5
+        ]
+      },
+      "id": "numpy.cumsum:0075",
+      "input": {
+        "a": [
+          -3,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          -1,
+          -1,
+          -4,
+          -6
+        ]
+      },
+      "id": "numpy.cumsum:0076",
+      "input": {
+        "a": [
+          -2,
+          1,
+          0,
+          0,
+          -3,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          5,
+          2,
+          2,
+          5,
+          8
+        ]
+      },
+      "id": "numpy.cumsum:0077",
+      "input": {
+        "a": [
+          3,
+          2,
+          -3,
+          0,
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          0
+        ]
+      },
+      "id": "numpy.cumsum:0078",
+      "input": {
+        "a": [
+          3,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -4,
+          -4,
+          -7,
+          -5,
+          -7
+        ]
+      },
+      "id": "numpy.cumsum:0079",
+      "input": {
+        "a": [
+          -3,
+          -1,
+          0,
+          -3,
+          2,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2
+        ]
+      },
+      "id": "numpy.cumsum:0080",
+      "input": {
+        "a": [
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -5,
+          -2,
+          1,
+          2,
+          3,
+          1,
+          -2,
+          -2
+        ]
+      },
+      "id": "numpy.cumsum:0081",
+      "input": {
+        "a": [
+          -2,
+          -3,
+          3,
+          3,
+          1,
+          1,
+          -2,
+          -3,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          0,
+          1,
+          4,
+          4,
+          4,
+          6,
+          4
+        ]
+      },
+      "id": "numpy.cumsum:0082",
+      "input": {
+        "a": [
+          1,
+          1,
+          -2,
+          1,
+          3,
+          0,
+          0,
+          2,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          0,
+          0,
+          -3
+        ]
+      },
+      "id": "numpy.cumsum:0083",
+      "input": {
+        "a": [
+          -1,
+          1,
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3
+        ]
+      },
+      "id": "numpy.cumsum:0084",
+      "input": {
+        "a": [
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          5,
+          7,
+          7,
+          6,
+          6,
+          5,
+          8,
+          11
+        ]
+      },
+      "id": "numpy.cumsum:0085",
+      "input": {
+        "a": [
+          3,
+          2,
+          2,
+          0,
+          -1,
+          0,
+          -1,
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          6,
+          9
+        ]
+      },
+      "id": "numpy.cumsum:0086",
+      "input": {
+        "a": [
+          1,
+          2,
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          2,
+          5,
+          6,
+          4,
+          2,
+          4,
+          4,
+          6,
+          9
+        ]
+      },
+      "id": "numpy.cumsum:0087",
+      "input": {
+        "a": [
+          0,
+          2,
+          0,
+          3,
+          1,
+          -2,
+          -2,
+          2,
+          0,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -6
+        ]
+      },
+      "id": "numpy.cumsum:0088",
+      "input": {
+        "a": [
+          -3,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          -2,
+          -4,
+          -5,
+          -4,
+          -4,
+          -1
+        ]
+      },
+      "id": "numpy.cumsum:0089",
+      "input": {
+        "a": [
+          0,
+          -2,
+          -2,
+          -1,
+          1,
+          0,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          0,
+          -3,
+          -3,
+          -1,
+          -3,
+          -1,
+          -2,
+          -1,
+          2
+        ]
+      },
+      "id": "numpy.cumsum:0090",
+      "input": {
+        "a": [
+          -2,
+          2,
+          -3,
+          0,
+          2,
+          -2,
+          2,
+          -1,
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          2,
+          0,
+          1,
+          4,
+          5,
+          5,
+          3,
+          1
+        ]
+      },
+      "id": "numpy.cumsum:0091",
+      "input": {
+        "a": [
+          3,
+          -1,
+          -2,
+          1,
+          3,
+          1,
+          0,
+          -2,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          0,
+          -1,
+          -3,
+          -1,
+          -1,
+          -1,
+          -2
+        ]
+      },
+      "id": "numpy.cumsum:0092",
+      "input": {
+        "a": [
+          2,
+          -2,
+          -1,
+          -2,
+          2,
+          0,
+          0,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -6,
+          -5,
+          -8,
+          -10,
+          -7,
+          -4,
+          -3,
+          -5,
+          -5,
+          -3,
+          -3
+        ]
+      },
+      "id": "numpy.cumsum:0093",
+      "input": {
+        "a": [
+          -3,
+          -3,
+          1,
+          -3,
+          -2,
+          3,
+          3,
+          1,
+          -2,
+          0,
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          1
+        ]
+      },
+      "id": "numpy.cumsum:0094",
+      "input": {
+        "a": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          2,
+          1,
+          1,
+          -1,
+          -4
+        ]
+      },
+      "id": "numpy.cumsum:0095",
+      "input": {
+        "a": [
+          0,
+          0,
+          2,
+          -1,
+          0,
+          -2,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          -3,
+          -5,
+          -7,
+          -8,
+          -11,
+          -9,
+          -9,
+          -8,
+          -7,
+          -5,
+          -6
+        ]
+      },
+      "id": "numpy.cumsum:0096",
+      "input": {
+        "a": [
+          0,
+          -3,
+          -2,
+          -2,
+          -1,
+          -3,
+          2,
+          0,
+          1,
+          1,
+          2,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -4,
+          -3
+        ]
+      },
+      "id": "numpy.cumsum:0097",
+      "input": {
+        "a": [
+          -2,
+          -2,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          -2,
+          -4,
+          -5,
+          -3,
+          -4,
+          -4,
+          -7,
+          -6,
+          -9,
+          -8
+        ]
+      },
+      "id": "numpy.cumsum:0098",
+      "input": {
+        "a": [
+          0,
+          -2,
+          -2,
+          -1,
+          2,
+          -1,
+          0,
+          -3,
+          1,
+          -3,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          0,
+          3,
+          6,
+          5,
+          5,
+          7
+        ]
+      },
+      "id": "numpy.cumsum:0099",
+      "input": {
+        "a": [
+          -3,
+          3,
+          3,
+          3,
+          -1,
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -5,
+          -7,
+          -10,
+          -11,
+          -8,
+          -6,
+          -9
+        ]
+      },
+      "id": "numpy.cumsum:0100",
+      "input": {
+        "a": [
+          -3,
+          1,
+          -3,
+          -2,
+          -3,
+          -1,
+          3,
+          2,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -3,
+          0,
+          -1,
+          -3,
+          0,
+          2,
+          5
+        ]
+      },
+      "id": "numpy.cumsum:0101",
+      "input": {
+        "a": [
+          -2,
+          -1,
+          3,
+          -1,
+          -2,
+          3,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          -2,
+          1,
+          -1,
+          1,
+          -2,
+          -1,
+          -2,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.cumsum:0102",
+      "input": {
+        "a": [
+          1,
+          0,
+          -3,
+          3,
+          -2,
+          2,
+          -3,
+          1,
+          -1,
+          3,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          7,
+          6,
+          5
+        ]
+      },
+      "id": "numpy.cumsum:0103",
+      "input": {
+        "a": [
+          -1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          -1,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          3,
+          1,
+          2,
+          2,
+          3,
+          2,
+          -1,
+          0,
+          -1,
+          -3
+        ]
+      },
+      "id": "numpy.cumsum:0104",
+      "input": {
+        "a": [
+          1,
+          0,
+          2,
+          -2,
+          1,
+          0,
+          1,
+          -1,
+          -3,
+          1,
+          -1,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -4,
+          -4,
+          -5,
+          -4
+        ]
+      },
+      "id": "numpy.cumsum:0105",
+      "input": {
+        "a": [
+          -3,
+          -1,
+          0,
+          -1,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          2,
+          -1,
+          -3,
+          0,
+          -2,
+          0,
+          -1,
+          2,
+          2
+        ]
+      },
+      "id": "numpy.cumsum:0106",
+      "input": {
+        "a": [
+          1,
+          2,
+          -1,
+          -3,
+          -2,
+          3,
+          -2,
+          2,
+          -1,
+          3,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          -1,
+          1,
+          0,
+          -3,
+          -1,
+          -2
+        ]
+      },
+      "id": "numpy.cumsum:0107",
+      "input": {
+        "a": [
+          1,
+          -2,
+          2,
+          -1,
+          -3,
+          2,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          1,
+          2,
+          5,
+          5
+        ]
+      },
+      "id": "numpy.cumsum:0108",
+      "input": {
+        "a": [
+          1,
+          -1,
+          1,
+          1,
+          3,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          0,
+          -3,
+          -6,
+          -6,
+          -6
+        ]
+      },
+      "id": "numpy.cumsum:0109",
+      "input": {
+        "a": [
+          -2,
+          2,
+          -3,
+          -3,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          1,
+          0,
+          1,
+          -1
+        ]
+      },
+      "id": "numpy.cumsum:0110",
+      "input": {
+        "a": [
+          -1,
+          2,
+          -1,
+          1,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          3,
+          4,
+          6,
+          8,
+          5,
+          7,
+          10
+        ]
+      },
+      "id": "numpy.cumsum:0111",
+      "input": {
+        "a": [
+          3,
+          0,
+          1,
+          2,
+          2,
+          -3,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          -1,
+          -2,
+          0,
+          -2,
+          -4,
+          -6,
+          -9,
+          -11,
+          -8,
+          -6
+        ]
+      },
+      "id": "numpy.cumsum:0112",
+      "input": {
+        "a": [
+          0,
+          -1,
+          -1,
+          2,
+          -2,
+          -2,
+          -2,
+          -3,
+          -2,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          -1,
+          -2,
+          -3,
+          -6,
+          -4
+        ]
+      },
+      "id": "numpy.cumsum:0113",
+      "input": {
+        "a": [
+          1,
+          0,
+          -2,
+          -1,
+          -1,
+          -3,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          -1,
+          -1,
+          0,
+          3,
+          1,
+          -2,
+          1,
+          4
+        ]
+      },
+      "id": "numpy.cumsum:0114",
+      "input": {
+        "a": [
+          2,
+          -3,
+          0,
+          1,
+          3,
+          -2,
+          -3,
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          4,
+          3,
+          2,
+          3,
+          4
+        ]
+      },
+      "id": "numpy.cumsum:0115",
+      "input": {
+        "a": [
+          2,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1,
+          2,
+          5,
+          5,
+          4,
+          6
+        ]
+      },
+      "id": "numpy.cumsum:0116",
+      "input": {
+        "a": [
+          2,
+          -1,
+          1,
+          3,
+          0,
+          -1,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          -1,
+          -4,
+          -4,
+          -5,
+          -3,
+          -5,
+          -2,
+          1,
+          3,
+          5
+        ]
+      },
+      "id": "numpy.cumsum:0117",
+      "input": {
+        "a": [
+          0,
+          2,
+          -3,
+          -3,
+          0,
+          -1,
+          2,
+          -2,
+          3,
+          3,
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          -2,
+          0
+        ]
+      },
+      "id": "numpy.cumsum:0118",
+      "input": {
+        "a": [
+          -1,
+          -1,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -5,
+          -2,
+          -5,
+          -4,
+          -1,
+          -2,
+          0,
+          -1,
+          0,
+          0,
+          -2
+        ]
+      },
+      "id": "numpy.cumsum:0119",
+      "input": {
+        "a": [
+          -2,
+          -3,
+          3,
+          -3,
+          1,
+          3,
+          -1,
+          2,
+          -1,
+          1,
+          0,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          1,
+          1,
+          3,
+          6,
+          5,
+          7,
+          4,
+          6,
+          7,
+          7,
+          8
+        ]
+      },
+      "id": "numpy.cumsum:0120",
+      "input": {
+        "a": [
+          -1,
+          2,
+          0,
+          2,
+          3,
+          -1,
+          2,
+          -3,
+          2,
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -3,
+          -3,
+          0,
+          3,
+          1,
+          -2,
+          -4
+        ]
+      },
+      "id": "numpy.cumsum:0121",
+      "input": {
+        "a": [
+          -3,
+          0,
+          0,
+          3,
+          3,
+          -2,
+          -3,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          1,
+          -2,
+          1,
+          -2,
+          1,
+          -2,
+          0,
+          -1
+        ]
+      },
+      "id": "numpy.cumsum:0122",
+      "input": {
+        "a": [
+          -1,
+          2,
+          -3,
+          3,
+          -3,
+          3,
+          -3,
+          2,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -4
+        ]
+      },
+      "id": "numpy.cumsum:0123",
+      "input": {
+        "a": [
+          -2,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          2,
+          0,
+          -2,
+          -1,
+          -1,
+          -2,
+          -1,
+          -3,
+          -6,
+          -3
+        ]
+      },
+      "id": "numpy.cumsum:0124",
+      "input": {
+        "a": [
+          2,
+          0,
+          -2,
+          -2,
+          1,
+          0,
+          -1,
+          1,
+          -2,
+          -3,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          -2,
+          -1,
+          0
+        ]
+      },
+      "id": "numpy.cumsum:0125",
+      "input": {
+        "a": [
+          1,
+          -1,
+          -2,
+          1,
+          1
+        ]
+      }
+    }
+  ]
+}

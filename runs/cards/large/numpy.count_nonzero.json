@@ -1,0 +1,121 @@
+{
+  "elapsed_seconds": 6.767749592999962,
+  "finished_at": "2026-11-14T13:12:03.112176+00:00",
+  "parsed": {
+    "algorithm": [
+      "Recursively traverse the input array `a` (which may contain nested lists) to count elements that are non-zero.",
+      "For each element in `a`, if the element is a non-zero value (i.e., it evaluates to truthy in a boolean context), increment the count.",
+      "If the element is a list, recursively apply the same count to that sublist.",
+      "Return the total count as a single integer."
+    ],
+    "constraints": [
+      "The input `a` is a one-dimensional list of integers (possibly empty).",
+      "All intermediate values fit within a signed 64-bit integer.",
+      "No NumPy objects are used; the implementation must work with pure Python lists.",
+      "The function returns a single integer for the total count (not a list or array)."
+    ],
+    "edge_cases": [
+      "Empty array: returns 0",
+      "Array with all zeros: returns 0",
+      "Array with mixed zeros and non-zeros: returns the count of non-zero elements",
+      "Nested lists: recursively counts non-zeros in all sub-lists",
+      "Single-element array: returns 1 if non-zero, 0 if zero"
+    ],
+    "inputs": "a: a one-dimensional list of integers (possibly empty)",
+    "method_id": "numpy.count_nonzero",
+    "output": "A single Python integer representing the total count of non-zero values in the array (where non-zero is defined as any value that evaluates to truthy in a boolean context, including non-zero numbers and non-empty strings).",
+    "purpose": "Count the number of non-zero values in the input array, recursively including sub-arrays, returning a single integer for the total count.",
+    "signature": "solve(a)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"a is a one-dimensional list of integers, possibly empty. Return Python int or list[int], as appropriate; no NumPy objects. All intermediate values fit signed int64. Return a single Python int counting nonzero values.\",\n  \"documentation\": \"Counts the number of non-zero values in the array ``a``.\\n\\nA non-zero value is one that evaluates to truthful in a boolean\\ncontext, including any non-zero number and any string that\\nis not empty. This function recursively counts how many elements\\nin ``a`` (and its sub-arrays) are non-zero values.\\n\\nParameters\\n----------\\na : array_like\\n    The array for which to count non-zeros.\\naxis : int or tuple, optional\\n    Axis or tuple of axes along which to count non-zeros.\\n    Default is None, meaning that non-zeros will be counted\\n    along a flattened version of ``a``.\\nkeepdims : bool, optional\\n    If this is set to True, the axes that are counted are left\\n    in the result as dimensions with size one. With this option,\\n    the result will broadcast correctly against the input array.\\n\\nReturns\\n-------\\ncount : int or array of int\\n    Number of non-zero values in the array along a given axis.\\n    Otherwise, the total number of non-zero values in the array\\n    is returned.\\n\\nSee Also\\n--------\\nnonzero : Return the coordinates of all the non-zero values.\\n\\nExamples\\n--------\\n>>> import numpy as np\\n>>> np.count_nonzero(np.eye(4))\\nnp.int64(4)\\n>>> a = np.array([[0, 1, 7, 0],\\n...               [3, 0, 2, 19]])\\n>>> np.count_nonzero(a)\\nnp.int64(5)\\n>>> np.count_nonzero(a, axis=0)\\narray([1, 1, 2, 1])\\n>>> np.count_nonzero(a, axis=1)\\narray([2, 3])\\n>>> np.count_nonzero(a, axis=1, keepdims=True)\\narray([[2],\\n       [3]])\",\n  \"documentation_truncated\": false,\n  \"group\": \"ordering_counting\",\n  \"id\": \"numpy.count_nonzero\",\n  \"library\": \"numpy\",\n  \"name\": \"count_nonzero\",\n  \"signature\": \"solve(a)\",\n  \"version\": \"2.5.4\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:4b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:12:03.111723564Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 377,
+    "eval_duration": 6437917000,
+    "load_duration": 525568,
+    "message": {
+      "content": "{\n  \"method_id\": \"numpy.count_nonzero\",\n  \"signature\": \"solve(a)\",\n  \"purpose\": \"Count the number of non-zero values in the input array, recursively including sub-arrays, returning a single integer for the total count.\",\n  \"inputs\": \"a: a one-dimensional list of integers (possibly empty)\",\n  \"output\": \"A single Python integer representing the total count of non-zero values in the array (where non-zero is defined as any value that evaluates to truthy in a boolean context, including non-zero numbers and non-empty strings).\",\n  \"algorithm\": [\n    \"Recursively traverse the input array `a` (which may contain nested lists) to count elements that are non-zero.\",\n    \"For each element in `a`, if the element is a non-zero value (i.e., it evaluates to truthy in a boolean context), increment the count.\",\n    \"If the element is a list, recursively apply the same count to that sublist.\",\n    \"Return the total count as a single integer.\"\n  ],\n  \"edge_cases\": [\n    \"Empty array: returns 0\",\n    \"Array with all zeros: returns 0\",\n    \"Array with mixed zeros and non-zeros: returns the count of non-zero elements\",\n    \"Nested lists: recursively counts non-zeros in all sub-lists\",\n    \"Single-element array: returns 1 if non-zero, 0 if zero\"\n  ],\n  \"constraints\": [\n    \"The input `a` is a one-dimensional list of integers (possibly empty).\",\n    \"All intermediate values fit within a signed 64-bit integer.\",\n    \"No NumPy objects are used; the implementation must work with pure Python lists.\",\n    \"The function returns a single integer for the total count (not a list or array).\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:4b",
+    "prompt_eval_cached_count": 381,
+    "prompt_eval_count": 883,
+    "prompt_eval_duration": 222075000,
+    "total_duration": 6766893837
+  },
+  "started_at": "2026-11-14T13:11:56.344423+00:00",
+  "valid": true
+}

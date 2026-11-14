@@ -1,0 +1,124 @@
+{
+  "elapsed_seconds": 6.928344201999835,
+  "finished_at": "2026-11-14T13:13:25.553587+00:00",
+  "parsed": {
+    "algorithm": [
+      "Start from candidate = n + 1",
+      "For each candidate, check if it is prime using the 6j ± 1 rule: if candidate % 6 == 1 or candidate % 6 == 5 (for candidate > 1), then it may be prime",
+      "Count the number of primes found starting from n + 1",
+      "Return the ith prime when the count reaches ith",
+      "If ith <= 0, raise ValueError",
+      "If n or ith is not an integer, raise ValueError"
+    ],
+    "constraints": [
+      "n must be an integer between -10 and 5000 inclusive",
+      "ith must be a positive integer",
+      "The output must be a plain Python int with no symbolic objects",
+      "The algorithm must use the 6j ± 1 rule to efficiently check for primes"
+    ],
+    "edge_cases": [
+      "n = -10: the first prime greater than -10 is 11",
+      "ith = 1: return the first prime greater than n",
+      "n = 5000: the first prime greater than 5000 is 5003",
+      "ith = 0: raise ValueError",
+      "n = 1: the first prime greater than 1 is 2",
+      "n = 2: the second prime greater than 2 is 5"
+    ],
+    "inputs": "n: integer in the range [-10, 5000]",
+    "method_id": "sympy.nextprime",
+    "output": "int: the ith prime greater than n",
+    "purpose": "Return the ith prime greater than n",
+    "signature": "solve(n)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"n is an integer in -10..5000. Use ith=1, the first prime strictly greater than n. Return a plain Python int, no symbolic objects.\",\n  \"documentation\": \"Return the ith prime greater than n.\\n\\nParameters\\n==========\\n\\nn : integer\\nith : positive integer\\n\\nReturns\\n=======\\n\\nint : Return the ith prime greater than n\\n\\nRaises\\n======\\n\\nValueError\\n    If ``ith <= 0``.\\n    If ``n`` or ``ith`` is not an integer.\\n\\nNotes\\n=====\\n\\nPotential primes are located at 6*j +/- 1. This\\nproperty is used during searching.\\n\\n>>> from sympy import nextprime\\n>>> [(i, nextprime(i)) for i in range(10, 15)]\\n[(10, 11), (11, 13), (12, 13), (13, 17), (14, 17)]\\n>>> nextprime(2, ith=2) # the 2nd prime after 2\\n5\\n\\nSee Also\\n========\\n\\nprevprime : Return the largest prime smaller than n\\nprimerange : Generate all primes in a given range\",\n  \"documentation_truncated\": false,\n  \"group\": \"primes\",\n  \"id\": \"sympy.nextprime\",\n  \"library\": \"sympy\",\n  \"name\": \"nextprime\",\n  \"signature\": \"solve(n)\",\n  \"version\": \"1.14.0\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:4b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:13:25.553315702Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 378,
+    "eval_duration": 6700180000,
+    "load_duration": 600467,
+    "message": {
+      "content": "{\n  \"method_id\": \"sympy.nextprime\",\n  \"signature\": \"solve(n)\",\n  \"purpose\": \"Return the ith prime greater than n\",\n  \"inputs\": \"n: integer in the range [-10, 5000]\",\n  \"output\": \"int: the ith prime greater than n\",\n  \"algorithm\": [\n    \"Start from candidate = n + 1\",\n    \"For each candidate, check if it is prime using the 6j ± 1 rule: if candidate % 6 == 1 or candidate % 6 == 5 (for candidate > 1), then it may be prime\",\n    \"Count the number of primes found starting from n + 1\",\n    \"Return the ith prime when the count reaches ith\",\n    \"If ith <= 0, raise ValueError\",\n    \"If n or ith is not an integer, raise ValueError\"\n  ],\n  \"edge_cases\": [\n    \"n = -10: the first prime greater than -10 is 11\",\n    \"ith = 1: return the first prime greater than n\",\n    \"n = 5000: the first prime greater than 5000 is 5003\",\n    \"ith = 0: raise ValueError\",\n    \"n = 1: the first prime greater than 1 is 2\",\n    \"n = 2: the second prime greater than 2 is 5\"\n  ],\n  \"constraints\": [\n    \"n must be an integer between -10 and 5000 inclusive\",\n    \"ith must be a positive integer\",\n    \"The output must be a plain Python int with no symbolic objects\",\n    \"The algorithm must use the 6j ± 1 rule to efficiently check for primes\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:4b",
+    "prompt_eval_cached_count": 350,
+    "prompt_eval_count": 688,
+    "prompt_eval_duration": 161141000,
+    "total_duration": 6927760524
+  },
+  "started_at": "2026-11-14T13:13:18.625241+00:00",
+  "valid": true
+}

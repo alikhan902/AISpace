@@ -1,0 +1,4078 @@
+{
+  "all_pass": false,
+  "cases": [
+    {
+      "case_id": "sympy.nextprime:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": -10
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": -9
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0002",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": -8
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0003",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": -7
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0004",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": -6
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0005",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": -5
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0006",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": -4
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0007",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": -3
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0008",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": -2
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0009",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": -1
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0010",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 0
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0011",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 1
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0012",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "n": 2
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0013",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "n": 3
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0014",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "n": 4
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0015",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "n": 5
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0016",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "n": 6
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0017",
+      "category": "exhaustive",
+      "expected": {
+        "value": 11
+      },
+      "input": {
+        "n": 7
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0018",
+      "category": "exhaustive",
+      "expected": {
+        "value": 11
+      },
+      "input": {
+        "n": 8
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0019",
+      "category": "exhaustive",
+      "expected": {
+        "value": 11
+      },
+      "input": {
+        "n": 9
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0020",
+      "category": "exhaustive",
+      "expected": {
+        "value": 11
+      },
+      "input": {
+        "n": 10
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0021",
+      "category": "exhaustive",
+      "expected": {
+        "value": 13
+      },
+      "input": {
+        "n": 11
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0022",
+      "category": "exhaustive",
+      "expected": {
+        "value": 13
+      },
+      "input": {
+        "n": 12
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0023",
+      "category": "exhaustive",
+      "expected": {
+        "value": 17
+      },
+      "input": {
+        "n": 13
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0024",
+      "category": "exhaustive",
+      "expected": {
+        "value": 17
+      },
+      "input": {
+        "n": 14
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0025",
+      "category": "exhaustive",
+      "expected": {
+        "value": 17
+      },
+      "input": {
+        "n": 15
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0026",
+      "category": "exhaustive",
+      "expected": {
+        "value": 17
+      },
+      "input": {
+        "n": 16
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0027",
+      "category": "exhaustive",
+      "expected": {
+        "value": 19
+      },
+      "input": {
+        "n": 17
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0028",
+      "category": "exhaustive",
+      "expected": {
+        "value": 19
+      },
+      "input": {
+        "n": 18
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0029",
+      "category": "exhaustive",
+      "expected": {
+        "value": 23
+      },
+      "input": {
+        "n": 19
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0030",
+      "category": "exhaustive",
+      "expected": {
+        "value": 23
+      },
+      "input": {
+        "n": 20
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0031",
+      "category": "exhaustive",
+      "expected": {
+        "value": 23
+      },
+      "input": {
+        "n": 21
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0032",
+      "category": "exhaustive",
+      "expected": {
+        "value": 23
+      },
+      "input": {
+        "n": 22
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0033",
+      "category": "exhaustive",
+      "expected": {
+        "value": 29
+      },
+      "input": {
+        "n": 23
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0034",
+      "category": "exhaustive",
+      "expected": {
+        "value": 29
+      },
+      "input": {
+        "n": 24
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0035",
+      "category": "exhaustive",
+      "expected": {
+        "value": 29
+      },
+      "input": {
+        "n": 25
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0036",
+      "category": "exhaustive",
+      "expected": {
+        "value": 29
+      },
+      "input": {
+        "n": 26
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0037",
+      "category": "exhaustive",
+      "expected": {
+        "value": 29
+      },
+      "input": {
+        "n": 27
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0038",
+      "category": "exhaustive",
+      "expected": {
+        "value": 29
+      },
+      "input": {
+        "n": 28
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0039",
+      "category": "exhaustive",
+      "expected": {
+        "value": 31
+      },
+      "input": {
+        "n": 29
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0040",
+      "category": "exhaustive",
+      "expected": {
+        "value": 31
+      },
+      "input": {
+        "n": 30
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0041",
+      "category": "exhaustive",
+      "expected": {
+        "value": 37
+      },
+      "input": {
+        "n": 31
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0042",
+      "category": "exhaustive",
+      "expected": {
+        "value": 37
+      },
+      "input": {
+        "n": 32
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0043",
+      "category": "exhaustive",
+      "expected": {
+        "value": 37
+      },
+      "input": {
+        "n": 33
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0044",
+      "category": "exhaustive",
+      "expected": {
+        "value": 37
+      },
+      "input": {
+        "n": 34
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0045",
+      "category": "exhaustive",
+      "expected": {
+        "value": 37
+      },
+      "input": {
+        "n": 35
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0046",
+      "category": "exhaustive",
+      "expected": {
+        "value": 37
+      },
+      "input": {
+        "n": 36
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0047",
+      "category": "exhaustive",
+      "expected": {
+        "value": 41
+      },
+      "input": {
+        "n": 37
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0048",
+      "category": "exhaustive",
+      "expected": {
+        "value": 41
+      },
+      "input": {
+        "n": 38
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0049",
+      "category": "exhaustive",
+      "expected": {
+        "value": 41
+      },
+      "input": {
+        "n": 39
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0050",
+      "category": "exhaustive",
+      "expected": {
+        "value": 41
+      },
+      "input": {
+        "n": 40
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0051",
+      "category": "exhaustive",
+      "expected": {
+        "value": 43
+      },
+      "input": {
+        "n": 41
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0052",
+      "category": "exhaustive",
+      "expected": {
+        "value": 43
+      },
+      "input": {
+        "n": 42
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0053",
+      "category": "exhaustive",
+      "expected": {
+        "value": 47
+      },
+      "input": {
+        "n": 43
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0054",
+      "category": "exhaustive",
+      "expected": {
+        "value": 47
+      },
+      "input": {
+        "n": 44
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0055",
+      "category": "exhaustive",
+      "expected": {
+        "value": 47
+      },
+      "input": {
+        "n": 45
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0056",
+      "category": "exhaustive",
+      "expected": {
+        "value": 47
+      },
+      "input": {
+        "n": 46
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0057",
+      "category": "exhaustive",
+      "expected": {
+        "value": 53
+      },
+      "input": {
+        "n": 47
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0058",
+      "category": "exhaustive",
+      "expected": {
+        "value": 53
+      },
+      "input": {
+        "n": 48
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0059",
+      "category": "exhaustive",
+      "expected": {
+        "value": 53
+      },
+      "input": {
+        "n": 49
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0060",
+      "category": "exhaustive",
+      "expected": {
+        "value": 53
+      },
+      "input": {
+        "n": 50
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0061",
+      "category": "exhaustive",
+      "expected": {
+        "value": 53
+      },
+      "input": {
+        "n": 51
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0062",
+      "category": "exhaustive",
+      "expected": {
+        "value": 53
+      },
+      "input": {
+        "n": 52
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0063",
+      "category": "exhaustive",
+      "expected": {
+        "value": 59
+      },
+      "input": {
+        "n": 53
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0064",
+      "category": "exhaustive",
+      "expected": {
+        "value": 59
+      },
+      "input": {
+        "n": 54
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0065",
+      "category": "exhaustive",
+      "expected": {
+        "value": 59
+      },
+      "input": {
+        "n": 55
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0066",
+      "category": "exhaustive",
+      "expected": {
+        "value": 59
+      },
+      "input": {
+        "n": 56
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0067",
+      "category": "exhaustive",
+      "expected": {
+        "value": 59
+      },
+      "input": {
+        "n": 57
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0068",
+      "category": "exhaustive",
+      "expected": {
+        "value": 59
+      },
+      "input": {
+        "n": 58
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0069",
+      "category": "exhaustive",
+      "expected": {
+        "value": 61
+      },
+      "input": {
+        "n": 59
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0070",
+      "category": "exhaustive",
+      "expected": {
+        "value": 61
+      },
+      "input": {
+        "n": 60
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0071",
+      "category": "exhaustive",
+      "expected": {
+        "value": 67
+      },
+      "input": {
+        "n": 61
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0072",
+      "category": "exhaustive",
+      "expected": {
+        "value": 67
+      },
+      "input": {
+        "n": 62
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0073",
+      "category": "exhaustive",
+      "expected": {
+        "value": 67
+      },
+      "input": {
+        "n": 63
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0074",
+      "category": "exhaustive",
+      "expected": {
+        "value": 67
+      },
+      "input": {
+        "n": 64
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0075",
+      "category": "exhaustive",
+      "expected": {
+        "value": 67
+      },
+      "input": {
+        "n": 65
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0076",
+      "category": "exhaustive",
+      "expected": {
+        "value": 67
+      },
+      "input": {
+        "n": 66
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0077",
+      "category": "exhaustive",
+      "expected": {
+        "value": 71
+      },
+      "input": {
+        "n": 67
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0078",
+      "category": "exhaustive",
+      "expected": {
+        "value": 71
+      },
+      "input": {
+        "n": 68
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0079",
+      "category": "exhaustive",
+      "expected": {
+        "value": 71
+      },
+      "input": {
+        "n": 69
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0080",
+      "category": "exhaustive",
+      "expected": {
+        "value": 71
+      },
+      "input": {
+        "n": 70
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0081",
+      "category": "exhaustive",
+      "expected": {
+        "value": 73
+      },
+      "input": {
+        "n": 71
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0082",
+      "category": "exhaustive",
+      "expected": {
+        "value": 73
+      },
+      "input": {
+        "n": 72
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0083",
+      "category": "exhaustive",
+      "expected": {
+        "value": 79
+      },
+      "input": {
+        "n": 73
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0084",
+      "category": "exhaustive",
+      "expected": {
+        "value": 79
+      },
+      "input": {
+        "n": 74
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0085",
+      "category": "exhaustive",
+      "expected": {
+        "value": 79
+      },
+      "input": {
+        "n": 75
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0086",
+      "category": "exhaustive",
+      "expected": {
+        "value": 79
+      },
+      "input": {
+        "n": 76
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0087",
+      "category": "exhaustive",
+      "expected": {
+        "value": 79
+      },
+      "input": {
+        "n": 77
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0088",
+      "category": "exhaustive",
+      "expected": {
+        "value": 79
+      },
+      "input": {
+        "n": 78
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0089",
+      "category": "exhaustive",
+      "expected": {
+        "value": 83
+      },
+      "input": {
+        "n": 79
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0090",
+      "category": "exhaustive",
+      "expected": {
+        "value": 83
+      },
+      "input": {
+        "n": 80
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0091",
+      "category": "exhaustive",
+      "expected": {
+        "value": 83
+      },
+      "input": {
+        "n": 81
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0092",
+      "category": "exhaustive",
+      "expected": {
+        "value": 83
+      },
+      "input": {
+        "n": 82
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0093",
+      "category": "exhaustive",
+      "expected": {
+        "value": 89
+      },
+      "input": {
+        "n": 83
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0094",
+      "category": "exhaustive",
+      "expected": {
+        "value": 89
+      },
+      "input": {
+        "n": 84
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0095",
+      "category": "exhaustive",
+      "expected": {
+        "value": 89
+      },
+      "input": {
+        "n": 85
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0096",
+      "category": "exhaustive",
+      "expected": {
+        "value": 89
+      },
+      "input": {
+        "n": 86
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0097",
+      "category": "exhaustive",
+      "expected": {
+        "value": 89
+      },
+      "input": {
+        "n": 87
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0098",
+      "category": "exhaustive",
+      "expected": {
+        "value": 89
+      },
+      "input": {
+        "n": 88
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0099",
+      "category": "exhaustive",
+      "expected": {
+        "value": 97
+      },
+      "input": {
+        "n": 89
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0100",
+      "category": "exhaustive",
+      "expected": {
+        "value": 97
+      },
+      "input": {
+        "n": 90
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0101",
+      "category": "exhaustive",
+      "expected": {
+        "value": 97
+      },
+      "input": {
+        "n": 91
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0102",
+      "category": "exhaustive",
+      "expected": {
+        "value": 97
+      },
+      "input": {
+        "n": 92
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0103",
+      "category": "exhaustive",
+      "expected": {
+        "value": 97
+      },
+      "input": {
+        "n": 93
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0104",
+      "category": "exhaustive",
+      "expected": {
+        "value": 97
+      },
+      "input": {
+        "n": 94
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0105",
+      "category": "exhaustive",
+      "expected": {
+        "value": 97
+      },
+      "input": {
+        "n": 95
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0106",
+      "category": "exhaustive",
+      "expected": {
+        "value": 97
+      },
+      "input": {
+        "n": 96
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0107",
+      "category": "exhaustive",
+      "expected": {
+        "value": 101
+      },
+      "input": {
+        "n": 97
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0108",
+      "category": "exhaustive",
+      "expected": {
+        "value": 101
+      },
+      "input": {
+        "n": 98
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0109",
+      "category": "exhaustive",
+      "expected": {
+        "value": 101
+      },
+      "input": {
+        "n": 99
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0110",
+      "category": "exhaustive",
+      "expected": {
+        "value": 101
+      },
+      "input": {
+        "n": 100
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0111",
+      "category": "random",
+      "expected": {
+        "value": 127
+      },
+      "input": {
+        "n": 121
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0112",
+      "category": "random",
+      "expected": {
+        "value": 173
+      },
+      "input": {
+        "n": 169
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0113",
+      "category": "random",
+      "expected": {
+        "value": 223
+      },
+      "input": {
+        "n": 221
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0114",
+      "category": "random",
+      "expected": {
+        "value": 347
+      },
+      "input": {
+        "n": 341
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0115",
+      "category": "random",
+      "expected": {
+        "value": 563
+      },
+      "input": {
+        "n": 561
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0116",
+      "category": "random",
+      "expected": {
+        "value": 1109
+      },
+      "input": {
+        "n": 1105
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0117",
+      "category": "random",
+      "expected": {
+        "value": 1733
+      },
+      "input": {
+        "n": 1729
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0118",
+      "category": "random",
+      "expected": {
+        "value": 2053
+      },
+      "input": {
+        "n": 2047
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0119",
+      "category": "random",
+      "expected": {
+        "value": 4099
+      },
+      "input": {
+        "n": 4096
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0120",
+      "category": "random",
+      "expected": {
+        "value": 5003
+      },
+      "input": {
+        "n": 4999
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0121",
+      "category": "random",
+      "expected": {
+        "value": 5003
+      },
+      "input": {
+        "n": 5000
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0122",
+      "category": "random",
+      "expected": {
+        "value": 1973
+      },
+      "input": {
+        "n": 1964
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0123",
+      "category": "random",
+      "expected": {
+        "value": 4943
+      },
+      "input": {
+        "n": 4940
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0124",
+      "category": "random",
+      "expected": {
+        "value": 1783
+      },
+      "input": {
+        "n": 1778
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0125",
+      "category": "random",
+      "expected": {
+        "value": 1669
+      },
+      "input": {
+        "n": 1668
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0126",
+      "category": "random",
+      "expected": {
+        "value": 4091
+      },
+      "input": {
+        "n": 4086
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0127",
+      "category": "random",
+      "expected": {
+        "value": 3257
+      },
+      "input": {
+        "n": 3253
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0128",
+      "category": "random",
+      "expected": {
+        "value": 4007
+      },
+      "input": {
+        "n": 4004
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0129",
+      "category": "random",
+      "expected": {
+        "value": 4621
+      },
+      "input": {
+        "n": 4606
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0130",
+      "category": "random",
+      "expected": {
+        "value": 3299
+      },
+      "input": {
+        "n": 3293
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0131",
+      "category": "random",
+      "expected": {
+        "value": 4241
+      },
+      "input": {
+        "n": 4233
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0132",
+      "category": "random",
+      "expected": {
+        "value": 4691
+      },
+      "input": {
+        "n": 4680
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0133",
+      "category": "random",
+      "expected": {
+        "value": 1627
+      },
+      "input": {
+        "n": 1625
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0134",
+      "category": "random",
+      "expected": {
+        "value": 3929
+      },
+      "input": {
+        "n": 3924
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0135",
+      "category": "random",
+      "expected": {
+        "value": 2663
+      },
+      "input": {
+        "n": 2659
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0136",
+      "category": "random",
+      "expected": {
+        "value": 4049
+      },
+      "input": {
+        "n": 4029
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0137",
+      "category": "random",
+      "expected": {
+        "value": 1361
+      },
+      "input": {
+        "n": 1345
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0138",
+      "category": "random",
+      "expected": {
+        "value": 3019
+      },
+      "input": {
+        "n": 3015
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0139",
+      "category": "random",
+      "expected": {
+        "value": 4561
+      },
+      "input": {
+        "n": 4550
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0140",
+      "category": "random",
+      "expected": {
+        "value": 2999
+      },
+      "input": {
+        "n": 2990
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0141",
+      "category": "random",
+      "expected": {
+        "value": 3079
+      },
+      "input": {
+        "n": 3073
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0142",
+      "category": "random",
+      "expected": {
+        "value": 4733
+      },
+      "input": {
+        "n": 4730
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0143",
+      "category": "random",
+      "expected": {
+        "value": 2609
+      },
+      "input": {
+        "n": 2600
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0144",
+      "category": "random",
+      "expected": {
+        "value": 4603
+      },
+      "input": {
+        "n": 4598
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0145",
+      "category": "random",
+      "expected": {
+        "value": 1993
+      },
+      "input": {
+        "n": 1992
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0146",
+      "category": "random",
+      "expected": {
+        "value": 2843
+      },
+      "input": {
+        "n": 2837
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0147",
+      "category": "random",
+      "expected": {
+        "value": 1693
+      },
+      "input": {
+        "n": 1691
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0148",
+      "category": "random",
+      "expected": {
+        "value": 1693
+      },
+      "input": {
+        "n": 1689
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0149",
+      "category": "random",
+      "expected": {
+        "value": 1201
+      },
+      "input": {
+        "n": 1195
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0150",
+      "category": "random",
+      "expected": {
+        "value": 4013
+      },
+      "input": {
+        "n": 4009
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0151",
+      "category": "random",
+      "expected": {
+        "value": 4447
+      },
+      "input": {
+        "n": 4441
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0152",
+      "category": "random",
+      "expected": {
+        "value": 127
+      },
+      "input": {
+        "n": 116
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0153",
+      "category": "random",
+      "expected": {
+        "value": 751
+      },
+      "input": {
+        "n": 748
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0154",
+      "category": "random",
+      "expected": {
+        "value": 4019
+      },
+      "input": {
+        "n": 4015
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0155",
+      "category": "random",
+      "expected": {
+        "value": 3433
+      },
+      "input": {
+        "n": 3425
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0156",
+      "category": "random",
+      "expected": {
+        "value": 3491
+      },
+      "input": {
+        "n": 3469
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0157",
+      "category": "random",
+      "expected": {
+        "value": 3691
+      },
+      "input": {
+        "n": 3679
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0158",
+      "category": "random",
+      "expected": {
+        "value": 1901
+      },
+      "input": {
+        "n": 1895
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0159",
+      "category": "random",
+      "expected": {
+        "value": 2767
+      },
+      "input": {
+        "n": 2759
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0160",
+      "category": "random",
+      "expected": {
+        "value": 3299
+      },
+      "input": {
+        "n": 3287
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0161",
+      "category": "random",
+      "expected": {
+        "value": 4421
+      },
+      "input": {
+        "n": 4419
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0162",
+      "category": "random",
+      "expected": {
+        "value": 4583
+      },
+      "input": {
+        "n": 4573
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0163",
+      "category": "random",
+      "expected": {
+        "value": 2503
+      },
+      "input": {
+        "n": 2480
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0164",
+      "category": "random",
+      "expected": {
+        "value": 1823
+      },
+      "input": {
+        "n": 1820
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0165",
+      "category": "random",
+      "expected": {
+        "value": 461
+      },
+      "input": {
+        "n": 459
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0166",
+      "category": "random",
+      "expected": {
+        "value": 4409
+      },
+      "input": {
+        "n": 4399
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0167",
+      "category": "random",
+      "expected": {
+        "value": 1931
+      },
+      "input": {
+        "n": 1922
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0168",
+      "category": "random",
+      "expected": {
+        "value": 1531
+      },
+      "input": {
+        "n": 1528
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0169",
+      "category": "random",
+      "expected": {
+        "value": 3907
+      },
+      "input": {
+        "n": 3890
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0170",
+      "category": "random",
+      "expected": {
+        "value": 641
+      },
+      "input": {
+        "n": 639
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0171",
+      "category": "random",
+      "expected": {
+        "value": 4903
+      },
+      "input": {
+        "n": 4896
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0172",
+      "category": "random",
+      "expected": {
+        "value": 4651
+      },
+      "input": {
+        "n": 4650
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0173",
+      "category": "random",
+      "expected": {
+        "value": 3833
+      },
+      "input": {
+        "n": 3825
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0174",
+      "category": "random",
+      "expected": {
+        "value": 4903
+      },
+      "input": {
+        "n": 4899
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0175",
+      "category": "random",
+      "expected": {
+        "value": 2153
+      },
+      "input": {
+        "n": 2149
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0176",
+      "category": "random",
+      "expected": {
+        "value": 1861
+      },
+      "input": {
+        "n": 1851
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0177",
+      "category": "random",
+      "expected": {
+        "value": 3761
+      },
+      "input": {
+        "n": 3739
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0178",
+      "category": "random",
+      "expected": {
+        "value": 3719
+      },
+      "input": {
+        "n": 3709
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0179",
+      "category": "random",
+      "expected": {
+        "value": 4657
+      },
+      "input": {
+        "n": 4651
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0180",
+      "category": "random",
+      "expected": {
+        "value": 4637
+      },
+      "input": {
+        "n": 4625
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0181",
+      "category": "random",
+      "expected": {
+        "value": 223
+      },
+      "input": {
+        "n": 213
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0182",
+      "category": "random",
+      "expected": {
+        "value": 4861
+      },
+      "input": {
+        "n": 4835
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0183",
+      "category": "random",
+      "expected": {
+        "value": 3137
+      },
+      "input": {
+        "n": 3131
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0184",
+      "category": "random",
+      "expected": {
+        "value": 2053
+      },
+      "input": {
+        "n": 2041
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0185",
+      "category": "random",
+      "expected": {
+        "value": 1277
+      },
+      "input": {
+        "n": 1274
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0186",
+      "category": "random",
+      "expected": {
+        "value": 4327
+      },
+      "input": {
+        "n": 4317
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0187",
+      "category": "random",
+      "expected": {
+        "value": 4999
+      },
+      "input": {
+        "n": 4994
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0188",
+      "category": "random",
+      "expected": {
+        "value": 1693
+      },
+      "input": {
+        "n": 1683
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0189",
+      "category": "random",
+      "expected": {
+        "value": 787
+      },
+      "input": {
+        "n": 780
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0190",
+      "category": "random",
+      "expected": {
+        "value": 3329
+      },
+      "input": {
+        "n": 3326
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0191",
+      "category": "random",
+      "expected": {
+        "value": 4567
+      },
+      "input": {
+        "n": 4565
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0192",
+      "category": "random",
+      "expected": {
+        "value": 2389
+      },
+      "input": {
+        "n": 2386
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0193",
+      "category": "random",
+      "expected": {
+        "value": 2447
+      },
+      "input": {
+        "n": 2446
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0194",
+      "category": "random",
+      "expected": {
+        "value": 2281
+      },
+      "input": {
+        "n": 2273
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0195",
+      "category": "random",
+      "expected": {
+        "value": 809
+      },
+      "input": {
+        "n": 800
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0196",
+      "category": "random",
+      "expected": {
+        "value": 2111
+      },
+      "input": {
+        "n": 2099
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0197",
+      "category": "random",
+      "expected": {
+        "value": 419
+      },
+      "input": {
+        "n": 418
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0198",
+      "category": "random",
+      "expected": {
+        "value": 1861
+      },
+      "input": {
+        "n": 1852
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0199",
+      "category": "random",
+      "expected": {
+        "value": 907
+      },
+      "input": {
+        "n": 899
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0200",
+      "category": "random",
+      "expected": {
+        "value": 3967
+      },
+      "input": {
+        "n": 3963
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0201",
+      "category": "random",
+      "expected": {
+        "value": 1657
+      },
+      "input": {
+        "n": 1650
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0202",
+      "category": "random",
+      "expected": {
+        "value": 4409
+      },
+      "input": {
+        "n": 4401
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0203",
+      "category": "random",
+      "expected": {
+        "value": 1459
+      },
+      "input": {
+        "n": 1453
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0204",
+      "category": "random",
+      "expected": {
+        "value": 2129
+      },
+      "input": {
+        "n": 2116
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0205",
+      "category": "random",
+      "expected": {
+        "value": 4327
+      },
+      "input": {
+        "n": 4301
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0206",
+      "category": "random",
+      "expected": {
+        "value": 2777
+      },
+      "input": {
+        "n": 2774
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0207",
+      "category": "random",
+      "expected": {
+        "value": 701
+      },
+      "input": {
+        "n": 698
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0208",
+      "category": "random",
+      "expected": {
+        "value": 251
+      },
+      "input": {
+        "n": 244
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0209",
+      "category": "random",
+      "expected": {
+        "value": 2267
+      },
+      "input": {
+        "n": 2251
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0210",
+      "category": "random",
+      "expected": {
+        "value": 367
+      },
+      "input": {
+        "n": 360
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0211",
+      "category": "random",
+      "expected": {
+        "value": 2579
+      },
+      "input": {
+        "n": 2574
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0212",
+      "category": "random",
+      "expected": {
+        "value": 2203
+      },
+      "input": {
+        "n": 2192
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0213",
+      "category": "random",
+      "expected": {
+        "value": 2521
+      },
+      "input": {
+        "n": 2511
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0214",
+      "category": "random",
+      "expected": {
+        "value": 577
+      },
+      "input": {
+        "n": 576
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0215",
+      "category": "random",
+      "expected": {
+        "value": 4243
+      },
+      "input": {
+        "n": 4242
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0216",
+      "category": "random",
+      "expected": {
+        "value": 3797
+      },
+      "input": {
+        "n": 3794
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0217",
+      "category": "random",
+      "expected": {
+        "value": 1399
+      },
+      "input": {
+        "n": 1384
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0218",
+      "category": "random",
+      "expected": {
+        "value": 4783
+      },
+      "input": {
+        "n": 4779
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0219",
+      "category": "random",
+      "expected": {
+        "value": 907
+      },
+      "input": {
+        "n": 898
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0220",
+      "category": "random",
+      "expected": {
+        "value": 2789
+      },
+      "input": {
+        "n": 2779
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0221",
+      "category": "random",
+      "expected": {
+        "value": 449
+      },
+      "input": {
+        "n": 444
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0222",
+      "category": "random",
+      "expected": {
+        "value": 2557
+      },
+      "input": {
+        "n": 2554
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0223",
+      "category": "random",
+      "expected": {
+        "value": 4493
+      },
+      "input": {
+        "n": 4491
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0224",
+      "category": "random",
+      "expected": {
+        "value": 1663
+      },
+      "input": {
+        "n": 1657
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0225",
+      "category": "random",
+      "expected": {
+        "value": 2617
+      },
+      "input": {
+        "n": 2613
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0226",
+      "category": "random",
+      "expected": {
+        "value": 4799
+      },
+      "input": {
+        "n": 4798
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0227",
+      "category": "random",
+      "expected": {
+        "value": 3271
+      },
+      "input": {
+        "n": 3262
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0228",
+      "category": "random",
+      "expected": {
+        "value": 1213
+      },
+      "input": {
+        "n": 1209
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0229",
+      "category": "random",
+      "expected": {
+        "value": 3727
+      },
+      "input": {
+        "n": 3720
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0230",
+      "category": "random",
+      "expected": {
+        "value": 4931
+      },
+      "input": {
+        "n": 4927
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0231",
+      "category": "random",
+      "expected": {
+        "value": 1423
+      },
+      "input": {
+        "n": 1410
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0232",
+      "category": "random",
+      "expected": {
+        "value": 2579
+      },
+      "input": {
+        "n": 2566
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0233",
+      "category": "random",
+      "expected": {
+        "value": 4621
+      },
+      "input": {
+        "n": 4609
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0234",
+      "category": "random",
+      "expected": {
+        "value": 2377
+      },
+      "input": {
+        "n": 2371
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0235",
+      "category": "random",
+      "expected": {
+        "value": 3323
+      },
+      "input": {
+        "n": 3321
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0236",
+      "category": "random",
+      "expected": {
+        "value": 887
+      },
+      "input": {
+        "n": 885
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0237",
+      "category": "random",
+      "expected": {
+        "value": 2281
+      },
+      "input": {
+        "n": 2276
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0238",
+      "category": "random",
+      "expected": {
+        "value": 1483
+      },
+      "input": {
+        "n": 1481
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0239",
+      "category": "random",
+      "expected": {
+        "value": 3079
+      },
+      "input": {
+        "n": 3071
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0240",
+      "category": "random",
+      "expected": {
+        "value": 1381
+      },
+      "input": {
+        "n": 1378
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0241",
+      "category": "random",
+      "expected": {
+        "value": 4079
+      },
+      "input": {
+        "n": 4073
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0242",
+      "category": "random",
+      "expected": {
+        "value": 2917
+      },
+      "input": {
+        "n": 2909
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0243",
+      "category": "random",
+      "expected": {
+        "value": 967
+      },
+      "input": {
+        "n": 953
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0244",
+      "category": "random",
+      "expected": {
+        "value": 1303
+      },
+      "input": {
+        "n": 1302
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0245",
+      "category": "random",
+      "expected": {
+        "value": 1993
+      },
+      "input": {
+        "n": 1991
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0246",
+      "category": "random",
+      "expected": {
+        "value": 4871
+      },
+      "input": {
+        "n": 4867
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0247",
+      "category": "random",
+      "expected": {
+        "value": 3821
+      },
+      "input": {
+        "n": 3803
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0248",
+      "category": "random",
+      "expected": {
+        "value": 4877
+      },
+      "input": {
+        "n": 4873
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0249",
+      "category": "random",
+      "expected": {
+        "value": 3833
+      },
+      "input": {
+        "n": 3826
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0250",
+      "category": "random",
+      "expected": {
+        "value": 4561
+      },
+      "input": {
+        "n": 4556
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0251",
+      "category": "random",
+      "expected": {
+        "value": 1619
+      },
+      "input": {
+        "n": 1614
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0252",
+      "category": "random",
+      "expected": {
+        "value": 1709
+      },
+      "input": {
+        "n": 1700
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0253",
+      "category": "random",
+      "expected": {
+        "value": 149
+      },
+      "input": {
+        "n": 143
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0254",
+      "category": "random",
+      "expected": {
+        "value": 1867
+      },
+      "input": {
+        "n": 1866
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0255",
+      "category": "random",
+      "expected": {
+        "value": 3583
+      },
+      "input": {
+        "n": 3581
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0256",
+      "category": "random",
+      "expected": {
+        "value": 307
+      },
+      "input": {
+        "n": 306
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0257",
+      "category": "random",
+      "expected": {
+        "value": 3271
+      },
+      "input": {
+        "n": 3265
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0258",
+      "category": "random",
+      "expected": {
+        "value": 149
+      },
+      "input": {
+        "n": 148
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0259",
+      "category": "random",
+      "expected": {
+        "value": 1193
+      },
+      "input": {
+        "n": 1188
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0260",
+      "category": "random",
+      "expected": {
+        "value": 3907
+      },
+      "input": {
+        "n": 3891
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0261",
+      "category": "random",
+      "expected": {
+        "value": 569
+      },
+      "input": {
+        "n": 567
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0262",
+      "category": "random",
+      "expected": {
+        "value": 3917
+      },
+      "input": {
+        "n": 3914
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0263",
+      "category": "random",
+      "expected": {
+        "value": 2381
+      },
+      "input": {
+        "n": 2378
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0264",
+      "category": "random",
+      "expected": {
+        "value": 1063
+      },
+      "input": {
+        "n": 1061
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0265",
+      "category": "random",
+      "expected": {
+        "value": 557
+      },
+      "input": {
+        "n": 551
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0266",
+      "category": "random",
+      "expected": {
+        "value": 1777
+      },
+      "input": {
+        "n": 1769
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0267",
+      "category": "random",
+      "expected": {
+        "value": 397
+      },
+      "input": {
+        "n": 392
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0268",
+      "category": "random",
+      "expected": {
+        "value": 3163
+      },
+      "input": {
+        "n": 3159
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0269",
+      "category": "random",
+      "expected": {
+        "value": 4271
+      },
+      "input": {
+        "n": 4266
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.nextprime:0270",
+      "category": "random",
+      "expected": {
+        "value": 631
+      },
+      "input": {
+        "n": 629
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    }
+  ],
+  "condition": "large_to_large",
+  "elapsed_seconds": 0.03176018900012423,
+  "group": "primes",
+  "library": "sympy",
+  "load_error": null,
+  "method_id": "sympy.nextprime",
+  "passed": 0,
+  "total": 271
+}

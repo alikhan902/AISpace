@@ -1,0 +1,120 @@
+{
+  "elapsed_seconds": 2.296426272999952,
+  "finished_at": "2026-11-14T13:07:43.428152+00:00",
+  "parsed": {
+    "algorithm": [
+      "Compute the binomial coefficient using the formula: \\binom{n}{k} = \\frac{n!}{k!(n-k)!} for nonnegative integers n and k.",
+      "For negative k, return 0.",
+      "For k > n, return 0.",
+      "Use efficient algorithms based on prime factorization for performance."
+    ],
+    "constraints": [
+      "n must be an integer in 0..50",
+      "k must be an integer in -3..55",
+      "If k < 0, return 0",
+      "If k > n, return 0"
+    ],
+    "edge_cases": [
+      "k < 0: return 0",
+      "k > n: return 0",
+      "n = 0: return 1 (by definition)",
+      "k = 0: return 1 (by definition)"
+    ],
+    "inputs": "n is an integer in 0..50; k is an integer in -3..55.",
+    "method_id": "sympy.binomial",
+    "output": "Exact Python int binomial coefficient, including zero when k < 0 or k > n.",
+    "purpose": "Compute the binomial coefficient, returning the exact value including zero for negative k or k > n.",
+    "signature": "solve(n, k)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"n is an integer in 0..50; k is an integer in -3..55. Return the exact Python int binomial coefficient, including zero when k<0 or k>n.\",\n  \"documentation\": \"Implementation of the binomial coefficient. It can be defined\\nin two ways depending on its desired interpretation:\\n\\n.. math:: \\\\binom{n}{k} = \\\\frac{n!}{k!(n-k)!}\\\\ \\\\text{or}\\\\\\n            \\\\binom{n}{k} = \\\\frac{(n)_k}{k!}\\n\\nFirst, in a strict combinatorial sense it defines the\\nnumber of ways we can choose `k` elements from a set of\\n`n` elements. In this case both arguments are nonnegative\\nintegers and binomial is computed using an efficient\\nalgorithm based on prime factorization.\\n\\nThe other definition is generalization for arbitrary `n`,\\nhowever `k` must also be nonnegative. This case is very\\nuseful when evaluating summations.\\n\\nFor the sake of convenience, for negative integer `k` this function\\nwill return zero no matter the other argument.\\n\\nTo expand the binomial when `n` is a symbol, use either\\n``expand_func()`` or ``expand(func=True)``. The former will keep\\nthe polynomial in factored form while the latter will expand the\\npolynomial itself. See examples for details.\\n\\nExamples\\n========\\n\\n>>> from sympy import Symbol, Rational, binomial, expand_func\\n>>> n = Symbol('n', integer=True, positive=True)\\n\\n>>> binomial(15, 8)\\n6435\\n\\n>>> binomial(n, -1)\\n0\\n\\nRows of Pascal's triangle can be generated with the binomial function:\\n\\n>>> for N in range(8):\\n...     print([binomial(N, i) for i in range(N + 1)])\\n...\\n[1]\\n[1, 1]\\n[1, 2, 1]\\n[1, 3, 3, 1]\\n[1, 4, 6, 4, 1]\\n[1, 5, 10, 10, 5, 1]\\n[1, 6, 15, 20, 15, 6, 1]\\n[1, 7, 21, 35, 35, 21, 7, 1]\\n\\nAs can a given diagonal, e.g. the 4th diagonal:\\n\\n>>> N = -4\\n>>> [binomial(N, i) for i in range(1 - N)]\\n[1, -4, 10, -20, 35]\\n\\n>>> binomial(Rational(5, 4), 3)\\n-5/128\\n>>> binomial(Rational(-5, 4), 3)\\n-195/128\\n\\n>>> binomial(n, 3)\\nbinomial(n, 3)\\n\\n>>> binomial(n, 3).expand(func=True)\\nn**3/6 - n**2/2 + n/3\\n\\n>>> expand_func(binomial(n, 3))\\nn*(n - 2)*(n - 1)/6\\n\\nIn many cases, we can also compute binomial coefficients modulo a\\nprime p quickly using Lucas' Theorem [2]_, though we need to include\\n`evaluate=False` to postpone evaluation:\\n\\n>>> from sympy import Mod\\n>>> Mod(binomial(156675, 4433, evaluate=False), 10**5 + 3)\\n28625\\n\\nUsing a generalisation of Lucas's Theorem given by Granville [3]_,\\nwe can extend this to arbitrary n:\\n\\n>>> Mod(binomial(10**18, 10**12, evaluate=False), (10**5 + 3)**2)\\n3744312326\\n\\nReferences\\n==========\\n\\n.. [1] https://www.johndcook.com/blog/binomial_coefficients/\\n.. [2] https://en.wikipedia.org/wiki/Lucas%27s_theorem\\n.. [3] Binomial coefficients modulo prime powers, Andrew Granville,\\n    Available: https://web.archive.org/web/20170202003812/http://www.dms.umontreal.ca/~andrew/PDF/BinCoeff.pdf\",\n  \"documentation_truncated\": false,\n  \"group\": \"combinatorics\",\n  \"id\": \"sympy.binomial\",\n  \"library\": \"sympy\",\n  \"name\": \"binomial\",\n  \"signature\": \"solve(n, k)\",\n  \"version\": \"1.14.0\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:1.7b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:07:43.427865915Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 295,
+    "eval_duration": 2106164000,
+    "load_duration": 567256,
+    "message": {
+      "content": "{\n  \"method_id\": \"sympy.binomial\",\n  \"signature\": \"solve(n, k)\",\n  \"purpose\": \"Compute the binomial coefficient, returning the exact value including zero for negative k or k > n.\",\n  \"inputs\": \"n is an integer in 0..50; k is an integer in -3..55.\",\n  \"output\": \"Exact Python int binomial coefficient, including zero when k < 0 or k > n.\",\n  \"algorithm\": [\n    \"Compute the binomial coefficient using the formula: \\\\binom{n}{k} = \\\\frac{n!}{k!(n-k)!} for nonnegative integers n and k.\",\n    \"For negative k, return 0.\",\n    \"For k > n, return 0.\",\n    \"Use efficient algorithms based on prime factorization for performance.\"\n  ],\n  \"edge_cases\": [\n    \"k < 0: return 0\",\n    \"k > n: return 0\",\n    \"n = 0: return 1 (by definition)\",\n    \"k = 0: return 1 (by definition)\"\n  ],\n  \"constraints\": [\n    \"n must be an integer in 0..50\",\n    \"k must be an integer in -3..55\",\n    \"If k < 0, return 0\",\n    \"If k > n, return 0\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:1.7b",
+    "prompt_eval_cached_count": 352,
+    "prompt_eval_count": 1413,
+    "prompt_eval_duration": 148942000,
+    "total_duration": 2295832447
+  },
+  "started_at": "2026-11-14T13:07:41.131725+00:00",
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "algorithm": [
+    "Perform a BFS or DFS traversal starting from each unvisited vertex to explore all reachable vertices",
+    "Count each distinct connected component found during traversal",
+    "The count of such components is the number of connected components in the graph"
+  ],
+  "constraints": [
+    "Vertices are labeled 0 to n-1",
+    "Edges are distinct and unordered pairs with u < v",
+    "Graph is simple (no self-loops or multiple edges)",
+    "The graph may contain isolated vertices",
+    "The algorithm must run in O(n + m) time where m is the number of edges"
+  ],
+  "edge_cases": [
+    "n=1 with no edges: returns 1",
+    "n=2 with one edge: returns 1",
+    "n=2 with no edges: returns 2",
+    "n=0 is not allowed (n>=1 per contract)",
+    "All vertices isolated: returns n",
+    "Graph with one connected component: returns 1"
+  ],
+  "inputs": "n: integer >= 1; edges: list of distinct [u,v] pairs where 0<=u<v<n",
+  "method_id": "networkx.number_connected_components",
+  "output": "int: number of connected components (a positive integer)",
+  "purpose": "Return the number of connected components in a simple undirected graph with n vertices and edges",
+  "signature": "solve(n, edges)"
+}

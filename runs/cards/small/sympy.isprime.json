@@ -1,0 +1,121 @@
+{
+  "elapsed_seconds": 2.36027736799997,
+  "finished_at": "2026-11-14T13:07:55.077482+00:00",
+  "parsed": {
+    "algorithm": [
+      "Check if n is less than 2. If so, return False.",
+      "Check for trivial factors (e.g., even numbers). If found, return False.",
+      "For n > 2, perform deterministic Miller-Rabin tests with bases that are known to have no counterexamples in their range.",
+      "If the number is larger than 2^64, perform a strong BPSW test.",
+      "Return the result based on the tests performed."
+    ],
+    "constraints": [
+      "n must be an integer in the range -20 to 10000",
+      "Negative numbers are not considered prime",
+      "For n > 2^64, the test is probabilistic and may return False even if the number is prime",
+      "The function returns False for numbers that are not prime but may appear prime due to pseudoprime properties"
+    ],
+    "edge_cases": [
+      "n < 2: return False",
+      "n = 2: return True",
+      "n = 1: return False",
+      "n = -2: return False"
+    ],
+    "inputs": "n is an integer in -20..10000",
+    "method_id": "sympy.isprime",
+    "output": "A plain Python bool (True or False)",
+    "purpose": "Test if n is a prime number (True) or not (False).",
+    "signature": "solve(n)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"n is an integer in -20..10000. Return a plain Python bool, no symbolic objects.\",\n  \"documentation\": \"Test if n is a prime number (True) or not (False). For n < 2^64 the\\nanswer is definitive; larger n values have a small probability of actually\\nbeing pseudoprimes.\\n\\nNegative numbers (e.g. -2) are not considered prime.\\n\\nThe first step is looking for trivial factors, which if found enables\\na quick return.  Next, if the sieve is large enough, use bisection search\\non the sieve.  For small numbers, a set of deterministic Miller-Rabin\\ntests are performed with bases that are known to have no counterexamples\\nin their range.  Finally if the number is larger than 2^64, a strong\\nBPSW test is performed.  While this is a probable prime test and we\\nbelieve counterexamples exist, there are no known counterexamples.\\n\\nExamples\\n========\\n\\n>>> from sympy.ntheory import isprime\\n>>> isprime(13)\\nTrue\\n>>> isprime(15)\\nFalse\\n\\nNotes\\n=====\\n\\nThis routine is intended only for integer input, not numerical\\nexpressions which may represent numbers. Floats are also\\nrejected as input because they represent numbers of limited\\nprecision. While it is tempting to permit 7.0 to represent an\\ninteger there are errors that may \\\"pass silently\\\" if this is\\nallowed:\\n\\n>>> from sympy import Float, S\\n>>> int(1e3) == 1e3 == 10**3\\nTrue\\n>>> int(1e23) == 1e23\\nTrue\\n>>> int(1e23) == 10**23\\nFalse\\n\\n>>> near_int = 1 + S(1)/10**19\\n>>> near_int == int(near_int)\\nFalse\\n>>> n = Float(near_int, 10)  # truncated by precision\\n>>> n % 1 == 0\\nTrue\\n>>> n = Float(near_int, 20)\\n>>> n % 1 == 0\\nFalse\\n\\nSee Also\\n========\\n\\nsympy.ntheory.generate.primerange : Generates all primes in a given range\\nsympy.functions.combinatorial.numbers.primepi : Return the number of primes less than or equal to n\\nsympy.ntheory.generate.prime : Return the nth prime\\n\\nReferences\\n==========\\n.. [1] https://en.wikipedia.org/wiki/Strong_pseudoprime\\n.. [2] Robert Baillie, Samuel S. Wagstaff, Lucas Pseudoprimes,\\n       Math. Comp. Vol 35, Number 152 (1980), pp. 1391-1417,\\n       https://doi.org/10.1090%2FS0025-5718-1980-0583518-6\\n       http://mpqs.free.fr/LucasPseudoprimes.pdf\\n.. [3] https://en.wikipedia.org/wiki/Baillie-PSW_primality_test\",\n  \"documentation_truncated\": false,\n  \"group\": \"primes\",\n  \"id\": \"sympy.isprime\",\n  \"library\": \"sympy\",\n  \"name\": \"isprime\",\n  \"signature\": \"solve(n)\",\n  \"version\": \"1.14.0\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:1.7b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:07:55.077124348Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 317,
+    "eval_duration": 2192092000,
+    "load_duration": 587399,
+    "message": {
+      "content": "{\n  \"method_id\": \"sympy.isprime\",\n  \"signature\": \"solve(n)\",\n  \"purpose\": \"Test if n is a prime number (True) or not (False).\",\n  \"inputs\": \"n is an integer in -20..10000\",\n  \"output\": \"A plain Python bool (True or False)\",\n  \"algorithm\": [\n    \"Check if n is less than 2. If so, return False.\",\n    \"Check for trivial factors (e.g., even numbers). If found, return False.\",\n    \"For n > 2, perform deterministic Miller-Rabin tests with bases that are known to have no counterexamples in their range.\",\n    \"If the number is larger than 2^64, perform a strong BPSW test.\",\n    \"Return the result based on the tests performed.\"\n  ],\n  \"edge_cases\": [\n    \"n < 2: return False\",\n    \"n = 2: return True\",\n    \"n = 1: return False\",\n    \"n = -2: return False\"\n  ],\n  \"constraints\": [\n    \"n must be an integer in the range -20 to 10000\",\n    \"Negative numbers are not considered prime\",\n    \"For n > 2^64, the test is probabilistic and may return False even if the number is prime\",\n    \"The function returns False for numbers that are not prime but may appear prime due to pseudoprime properties\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:1.7b",
+    "prompt_eval_cached_count": 349,
+    "prompt_eval_count": 1115,
+    "prompt_eval_duration": 118894000,
+    "total_duration": 2359519341
+  },
+  "started_at": "2026-11-14T13:07:52.717203+00:00",
+  "valid": true
+}

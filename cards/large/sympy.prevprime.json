@@ -1,0 +1,25 @@
+{
+  "algorithm": [
+    "Start from n-1 and decrement by 1 until a prime number is found",
+    "Use the property that potential primes are located at 6*j +/- 1 to optimize the search",
+    "Check divisibility by integers up to the square root of the candidate number",
+    "Return the first prime number encountered during the search"
+  ],
+  "constraints": [
+    "n must be an integer between 3 and 5000 inclusive",
+    "The output must be a plain Python integer with no symbolic objects",
+    "The search must be optimized using the 6j +/- 1 pattern to reduce unnecessary checks",
+    "The algorithm must terminate within a reasonable time for n up to 5000"
+  ],
+  "edge_cases": [
+    "When n is 3, return 2",
+    "When n is 4, return 3",
+    "When n is 5, return 3",
+    "When n is 6, return 5"
+  ],
+  "inputs": "An integer n where 3 <= n <= 5000",
+  "method_id": "sympy.prevprime",
+  "output": "A plain Python integer representing the largest prime number less than n",
+  "purpose": "Return the largest prime number strictly less than the input integer n",
+  "signature": "solve(n)"
+}

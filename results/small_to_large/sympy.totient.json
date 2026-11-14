@@ -1,0 +1,3805 @@
+{
+  "all_pass": false,
+  "cases": [
+    {
+      "case_id": "sympy.totient:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "n": 1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "n": 2
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0002",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 3
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0003",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 4
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0004",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 5
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0005",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 6
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0006",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 7
+      },
+      "observed": {
+        "value": 6
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0007",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 8
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0008",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 9
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0009",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 10
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0010",
+      "category": "exhaustive",
+      "expected": {
+        "value": 10
+      },
+      "input": {
+        "n": 11
+      },
+      "observed": {
+        "value": 10
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0011",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 12
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0012",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 13
+      },
+      "observed": {
+        "value": 12
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0013",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 14
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0014",
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 15
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0015",
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 16
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0016",
+      "category": "exhaustive",
+      "expected": {
+        "value": 16
+      },
+      "input": {
+        "n": 17
+      },
+      "observed": {
+        "value": 16
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0017",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 18
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0018",
+      "category": "exhaustive",
+      "expected": {
+        "value": 18
+      },
+      "input": {
+        "n": 19
+      },
+      "observed": {
+        "value": 18
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0019",
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 20
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0020",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 21
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0021",
+      "category": "exhaustive",
+      "expected": {
+        "value": 10
+      },
+      "input": {
+        "n": 22
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0022",
+      "category": "exhaustive",
+      "expected": {
+        "value": 22
+      },
+      "input": {
+        "n": 23
+      },
+      "observed": {
+        "value": 22
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0023",
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 24
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0024",
+      "category": "exhaustive",
+      "expected": {
+        "value": 20
+      },
+      "input": {
+        "n": 25
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0025",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 26
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0026",
+      "category": "exhaustive",
+      "expected": {
+        "value": 18
+      },
+      "input": {
+        "n": 27
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0027",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 28
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0028",
+      "category": "exhaustive",
+      "expected": {
+        "value": 28
+      },
+      "input": {
+        "n": 29
+      },
+      "observed": {
+        "value": 28
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0029",
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 30
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0030",
+      "category": "exhaustive",
+      "expected": {
+        "value": 30
+      },
+      "input": {
+        "n": 31
+      },
+      "observed": {
+        "value": 30
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0031",
+      "category": "exhaustive",
+      "expected": {
+        "value": 16
+      },
+      "input": {
+        "n": 32
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0032",
+      "category": "exhaustive",
+      "expected": {
+        "value": 20
+      },
+      "input": {
+        "n": 33
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0033",
+      "category": "exhaustive",
+      "expected": {
+        "value": 16
+      },
+      "input": {
+        "n": 34
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0034",
+      "category": "exhaustive",
+      "expected": {
+        "value": 24
+      },
+      "input": {
+        "n": 35
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0035",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 36
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0036",
+      "category": "exhaustive",
+      "expected": {
+        "value": 36
+      },
+      "input": {
+        "n": 37
+      },
+      "observed": {
+        "value": 36
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0037",
+      "category": "exhaustive",
+      "expected": {
+        "value": 18
+      },
+      "input": {
+        "n": 38
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0038",
+      "category": "exhaustive",
+      "expected": {
+        "value": 24
+      },
+      "input": {
+        "n": 39
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0039",
+      "category": "exhaustive",
+      "expected": {
+        "value": 16
+      },
+      "input": {
+        "n": 40
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0040",
+      "category": "exhaustive",
+      "expected": {
+        "value": 40
+      },
+      "input": {
+        "n": 41
+      },
+      "observed": {
+        "value": 40
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0041",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 42
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0042",
+      "category": "exhaustive",
+      "expected": {
+        "value": 42
+      },
+      "input": {
+        "n": 43
+      },
+      "observed": {
+        "value": 42
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0043",
+      "category": "exhaustive",
+      "expected": {
+        "value": 20
+      },
+      "input": {
+        "n": 44
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0044",
+      "category": "exhaustive",
+      "expected": {
+        "value": 24
+      },
+      "input": {
+        "n": 45
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0045",
+      "category": "exhaustive",
+      "expected": {
+        "value": 22
+      },
+      "input": {
+        "n": 46
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0046",
+      "category": "exhaustive",
+      "expected": {
+        "value": 46
+      },
+      "input": {
+        "n": 47
+      },
+      "observed": {
+        "value": 46
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0047",
+      "category": "exhaustive",
+      "expected": {
+        "value": 16
+      },
+      "input": {
+        "n": 48
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0048",
+      "category": "exhaustive",
+      "expected": {
+        "value": 42
+      },
+      "input": {
+        "n": 49
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0049",
+      "category": "exhaustive",
+      "expected": {
+        "value": 20
+      },
+      "input": {
+        "n": 50
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0050",
+      "category": "exhaustive",
+      "expected": {
+        "value": 32
+      },
+      "input": {
+        "n": 51
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0051",
+      "category": "exhaustive",
+      "expected": {
+        "value": 24
+      },
+      "input": {
+        "n": 52
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0052",
+      "category": "exhaustive",
+      "expected": {
+        "value": 52
+      },
+      "input": {
+        "n": 53
+      },
+      "observed": {
+        "value": 52
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0053",
+      "category": "exhaustive",
+      "expected": {
+        "value": 18
+      },
+      "input": {
+        "n": 54
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0054",
+      "category": "exhaustive",
+      "expected": {
+        "value": 40
+      },
+      "input": {
+        "n": 55
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0055",
+      "category": "exhaustive",
+      "expected": {
+        "value": 24
+      },
+      "input": {
+        "n": 56
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0056",
+      "category": "exhaustive",
+      "expected": {
+        "value": 36
+      },
+      "input": {
+        "n": 57
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0057",
+      "category": "exhaustive",
+      "expected": {
+        "value": 28
+      },
+      "input": {
+        "n": 58
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0058",
+      "category": "exhaustive",
+      "expected": {
+        "value": 58
+      },
+      "input": {
+        "n": 59
+      },
+      "observed": {
+        "value": 58
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0059",
+      "category": "exhaustive",
+      "expected": {
+        "value": 16
+      },
+      "input": {
+        "n": 60
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0060",
+      "category": "exhaustive",
+      "expected": {
+        "value": 60
+      },
+      "input": {
+        "n": 61
+      },
+      "observed": {
+        "value": 60
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0061",
+      "category": "exhaustive",
+      "expected": {
+        "value": 30
+      },
+      "input": {
+        "n": 62
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0062",
+      "category": "exhaustive",
+      "expected": {
+        "value": 36
+      },
+      "input": {
+        "n": 63
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0063",
+      "category": "exhaustive",
+      "expected": {
+        "value": 32
+      },
+      "input": {
+        "n": 64
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0064",
+      "category": "exhaustive",
+      "expected": {
+        "value": 48
+      },
+      "input": {
+        "n": 65
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0065",
+      "category": "exhaustive",
+      "expected": {
+        "value": 20
+      },
+      "input": {
+        "n": 66
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0066",
+      "category": "exhaustive",
+      "expected": {
+        "value": 66
+      },
+      "input": {
+        "n": 67
+      },
+      "observed": {
+        "value": 66
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0067",
+      "category": "exhaustive",
+      "expected": {
+        "value": 32
+      },
+      "input": {
+        "n": 68
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0068",
+      "category": "exhaustive",
+      "expected": {
+        "value": 44
+      },
+      "input": {
+        "n": 69
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0069",
+      "category": "exhaustive",
+      "expected": {
+        "value": 24
+      },
+      "input": {
+        "n": 70
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0070",
+      "category": "exhaustive",
+      "expected": {
+        "value": 70
+      },
+      "input": {
+        "n": 71
+      },
+      "observed": {
+        "value": 70
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0071",
+      "category": "exhaustive",
+      "expected": {
+        "value": 24
+      },
+      "input": {
+        "n": 72
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0072",
+      "category": "exhaustive",
+      "expected": {
+        "value": 72
+      },
+      "input": {
+        "n": 73
+      },
+      "observed": {
+        "value": 72
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0073",
+      "category": "exhaustive",
+      "expected": {
+        "value": 36
+      },
+      "input": {
+        "n": 74
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0074",
+      "category": "exhaustive",
+      "expected": {
+        "value": 40
+      },
+      "input": {
+        "n": 75
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0075",
+      "category": "exhaustive",
+      "expected": {
+        "value": 36
+      },
+      "input": {
+        "n": 76
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0076",
+      "category": "exhaustive",
+      "expected": {
+        "value": 60
+      },
+      "input": {
+        "n": 77
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0077",
+      "category": "exhaustive",
+      "expected": {
+        "value": 24
+      },
+      "input": {
+        "n": 78
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0078",
+      "category": "exhaustive",
+      "expected": {
+        "value": 78
+      },
+      "input": {
+        "n": 79
+      },
+      "observed": {
+        "value": 78
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0079",
+      "category": "exhaustive",
+      "expected": {
+        "value": 32
+      },
+      "input": {
+        "n": 80
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0080",
+      "category": "exhaustive",
+      "expected": {
+        "value": 54
+      },
+      "input": {
+        "n": 81
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0081",
+      "category": "exhaustive",
+      "expected": {
+        "value": 40
+      },
+      "input": {
+        "n": 82
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0082",
+      "category": "exhaustive",
+      "expected": {
+        "value": 82
+      },
+      "input": {
+        "n": 83
+      },
+      "observed": {
+        "value": 82
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0083",
+      "category": "exhaustive",
+      "expected": {
+        "value": 24
+      },
+      "input": {
+        "n": 84
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0084",
+      "category": "exhaustive",
+      "expected": {
+        "value": 64
+      },
+      "input": {
+        "n": 85
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0085",
+      "category": "exhaustive",
+      "expected": {
+        "value": 42
+      },
+      "input": {
+        "n": 86
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0086",
+      "category": "exhaustive",
+      "expected": {
+        "value": 56
+      },
+      "input": {
+        "n": 87
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0087",
+      "category": "exhaustive",
+      "expected": {
+        "value": 40
+      },
+      "input": {
+        "n": 88
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0088",
+      "category": "exhaustive",
+      "expected": {
+        "value": 88
+      },
+      "input": {
+        "n": 89
+      },
+      "observed": {
+        "value": 88
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0089",
+      "category": "exhaustive",
+      "expected": {
+        "value": 24
+      },
+      "input": {
+        "n": 90
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0090",
+      "category": "exhaustive",
+      "expected": {
+        "value": 72
+      },
+      "input": {
+        "n": 91
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0091",
+      "category": "exhaustive",
+      "expected": {
+        "value": 44
+      },
+      "input": {
+        "n": 92
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0092",
+      "category": "exhaustive",
+      "expected": {
+        "value": 60
+      },
+      "input": {
+        "n": 93
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0093",
+      "category": "exhaustive",
+      "expected": {
+        "value": 46
+      },
+      "input": {
+        "n": 94
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0094",
+      "category": "exhaustive",
+      "expected": {
+        "value": 72
+      },
+      "input": {
+        "n": 95
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0095",
+      "category": "exhaustive",
+      "expected": {
+        "value": 32
+      },
+      "input": {
+        "n": 96
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0096",
+      "category": "exhaustive",
+      "expected": {
+        "value": 96
+      },
+      "input": {
+        "n": 97
+      },
+      "observed": {
+        "value": 96
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0097",
+      "category": "exhaustive",
+      "expected": {
+        "value": 42
+      },
+      "input": {
+        "n": 98
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0098",
+      "category": "exhaustive",
+      "expected": {
+        "value": 60
+      },
+      "input": {
+        "n": 99
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0099",
+      "category": "exhaustive",
+      "expected": {
+        "value": 40
+      },
+      "input": {
+        "n": 100
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0100",
+      "category": "random",
+      "expected": {
+        "value": 110
+      },
+      "input": {
+        "n": 121
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0101",
+      "category": "random",
+      "expected": {
+        "value": 156
+      },
+      "input": {
+        "n": 169
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0102",
+      "category": "random",
+      "expected": {
+        "value": 192
+      },
+      "input": {
+        "n": 221
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0103",
+      "category": "random",
+      "expected": {
+        "value": 300
+      },
+      "input": {
+        "n": 341
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0104",
+      "category": "random",
+      "expected": {
+        "value": 320
+      },
+      "input": {
+        "n": 561
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0105",
+      "category": "random",
+      "expected": {
+        "value": 768
+      },
+      "input": {
+        "n": 1105
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0106",
+      "category": "random",
+      "expected": {
+        "value": 1296
+      },
+      "input": {
+        "n": 1729
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0107",
+      "category": "random",
+      "expected": {
+        "value": 1936
+      },
+      "input": {
+        "n": 2047
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0108",
+      "category": "random",
+      "expected": {
+        "value": 2048
+      },
+      "input": {
+        "n": 4096
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0109",
+      "category": "random",
+      "expected": {
+        "value": 4998
+      },
+      "input": {
+        "n": 4999
+      },
+      "observed": {
+        "value": 4998
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0110",
+      "category": "random",
+      "expected": {
+        "value": 2000
+      },
+      "input": {
+        "n": 5000
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0111",
+      "category": "random",
+      "expected": {
+        "value": 520
+      },
+      "input": {
+        "n": 1310
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0112",
+      "category": "random",
+      "expected": {
+        "value": 2496
+      },
+      "input": {
+        "n": 2669
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0113",
+      "category": "random",
+      "expected": {
+        "value": 1944
+      },
+      "input": {
+        "n": 3423
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0114",
+      "category": "random",
+      "expected": {
+        "value": 1632
+      },
+      "input": {
+        "n": 4932
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0115",
+      "category": "random",
+      "expected": {
+        "value": 252
+      },
+      "input": {
+        "n": 602
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0116",
+      "category": "random",
+      "expected": {
+        "value": 2940
+      },
+      "input": {
+        "n": 3479
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0117",
+      "category": "random",
+      "expected": {
+        "value": 1356
+      },
+      "input": {
+        "n": 1589
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0118",
+      "category": "random",
+      "expected": {
+        "value": 1500
+      },
+      "input": {
+        "n": 4506
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0119",
+      "category": "random",
+      "expected": {
+        "value": 1248
+      },
+      "input": {
+        "n": 3792
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0120",
+      "category": "random",
+      "expected": {
+        "value": 1280
+      },
+      "input": {
+        "n": 3936
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0121",
+      "category": "random",
+      "expected": {
+        "value": 216
+      },
+      "input": {
+        "n": 654
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0122",
+      "category": "random",
+      "expected": {
+        "value": 1044
+      },
+      "input": {
+        "n": 1593
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0123",
+      "category": "random",
+      "expected": {
+        "value": 1400
+      },
+      "input": {
+        "n": 4686
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0124",
+      "category": "random",
+      "expected": {
+        "value": 1428
+      },
+      "input": {
+        "n": 1673
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0125",
+      "category": "random",
+      "expected": {
+        "value": 1024
+      },
+      "input": {
+        "n": 2056
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0126",
+      "category": "random",
+      "expected": {
+        "value": 1316
+      },
+      "input": {
+        "n": 2636
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0127",
+      "category": "random",
+      "expected": {
+        "value": 4462
+      },
+      "input": {
+        "n": 4463
+      },
+      "observed": {
+        "value": 4462
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0128",
+      "category": "random",
+      "expected": {
+        "value": 88
+      },
+      "input": {
+        "n": 178
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0129",
+      "category": "random",
+      "expected": {
+        "value": 3322
+      },
+      "input": {
+        "n": 3323
+      },
+      "observed": {
+        "value": 3322
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0130",
+      "category": "random",
+      "expected": {
+        "value": 648
+      },
+      "input": {
+        "n": 999
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0131",
+      "category": "random",
+      "expected": {
+        "value": 4368
+      },
+      "input": {
+        "n": 4901
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0132",
+      "category": "random",
+      "expected": {
+        "value": 128
+      },
+      "input": {
+        "n": 510
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0133",
+      "category": "random",
+      "expected": {
+        "value": 168
+      },
+      "input": {
+        "n": 522
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0134",
+      "category": "random",
+      "expected": {
+        "value": 2640
+      },
+      "input": {
+        "n": 3963
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0135",
+      "category": "random",
+      "expected": {
+        "value": 240
+      },
+      "input": {
+        "n": 495
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0136",
+      "category": "random",
+      "expected": {
+        "value": 1800
+      },
+      "input": {
+        "n": 4774
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0137",
+      "category": "random",
+      "expected": {
+        "value": 1200
+      },
+      "input": {
+        "n": 3850
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0138",
+      "category": "random",
+      "expected": {
+        "value": 1728
+      },
+      "input": {
+        "n": 3464
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0139",
+      "category": "random",
+      "expected": {
+        "value": 520
+      },
+      "input": {
+        "n": 655
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0140",
+      "category": "random",
+      "expected": {
+        "value": 760
+      },
+      "input": {
+        "n": 955
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0141",
+      "category": "random",
+      "expected": {
+        "value": 2160
+      },
+      "input": {
+        "n": 4275
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0142",
+      "category": "random",
+      "expected": {
+        "value": 84
+      },
+      "input": {
+        "n": 129
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0143",
+      "category": "random",
+      "expected": {
+        "value": 2344
+      },
+      "input": {
+        "n": 4696
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0144",
+      "category": "random",
+      "expected": {
+        "value": 996
+      },
+      "input": {
+        "n": 997
+      },
+      "observed": {
+        "value": 996
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0145",
+      "category": "random",
+      "expected": {
+        "value": 1032
+      },
+      "input": {
+        "n": 2422
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0146",
+      "category": "random",
+      "expected": {
+        "value": 648
+      },
+      "input": {
+        "n": 1962
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0147",
+      "category": "random",
+      "expected": {
+        "value": 4720
+      },
+      "input": {
+        "n": 4721
+      },
+      "observed": {
+        "value": 4720
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0148",
+      "category": "random",
+      "expected": {
+        "value": 432
+      },
+      "input": {
+        "n": 819
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0149",
+      "category": "random",
+      "expected": {
+        "value": 3510
+      },
+      "input": {
+        "n": 3511
+      },
+      "observed": {
+        "value": 3510
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0150",
+      "category": "random",
+      "expected": {
+        "value": 1704
+      },
+      "input": {
+        "n": 2559
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0151",
+      "category": "random",
+      "expected": {
+        "value": 4416
+      },
+      "input": {
+        "n": 4559
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0152",
+      "category": "random",
+      "expected": {
+        "value": 1282
+      },
+      "input": {
+        "n": 1283
+      },
+      "observed": {
+        "value": 1282
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0153",
+      "category": "random",
+      "expected": {
+        "value": 2400
+      },
+      "input": {
+        "n": 2567
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0154",
+      "category": "random",
+      "expected": {
+        "value": 2136
+      },
+      "input": {
+        "n": 3759
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0155",
+      "category": "random",
+      "expected": {
+        "value": 4656
+      },
+      "input": {
+        "n": 4657
+      },
+      "observed": {
+        "value": 4656
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0156",
+      "category": "random",
+      "expected": {
+        "value": 1032
+      },
+      "input": {
+        "n": 1211
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0157",
+      "category": "random",
+      "expected": {
+        "value": 576
+      },
+      "input": {
+        "n": 2142
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0158",
+      "category": "random",
+      "expected": {
+        "value": 160
+      },
+      "input": {
+        "n": 410
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0159",
+      "category": "random",
+      "expected": {
+        "value": 2880
+      },
+      "input": {
+        "n": 4015
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0160",
+      "category": "random",
+      "expected": {
+        "value": 1600
+      },
+      "input": {
+        "n": 2005
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0161",
+      "category": "random",
+      "expected": {
+        "value": 1636
+      },
+      "input": {
+        "n": 1637
+      },
+      "observed": {
+        "value": 1636
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0162",
+      "category": "random",
+      "expected": {
+        "value": 1920
+      },
+      "input": {
+        "n": 2975
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0163",
+      "category": "random",
+      "expected": {
+        "value": 3852
+      },
+      "input": {
+        "n": 4501
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0164",
+      "category": "random",
+      "expected": {
+        "value": 660
+      },
+      "input": {
+        "n": 1694
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0165",
+      "category": "random",
+      "expected": {
+        "value": 1232
+      },
+      "input": {
+        "n": 4002
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0166",
+      "category": "random",
+      "expected": {
+        "value": 840
+      },
+      "input": {
+        "n": 2526
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0167",
+      "category": "random",
+      "expected": {
+        "value": 1740
+      },
+      "input": {
+        "n": 1829
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0168",
+      "category": "random",
+      "expected": {
+        "value": 3552
+      },
+      "input": {
+        "n": 3791
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0169",
+      "category": "random",
+      "expected": {
+        "value": 2016
+      },
+      "input": {
+        "n": 2017
+      },
+      "observed": {
+        "value": 2016
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0170",
+      "category": "random",
+      "expected": {
+        "value": 344
+      },
+      "input": {
+        "n": 519
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0171",
+      "category": "random",
+      "expected": {
+        "value": 828
+      },
+      "input": {
+        "n": 973
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0172",
+      "category": "random",
+      "expected": {
+        "value": 2800
+      },
+      "input": {
+        "n": 2911
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0173",
+      "category": "random",
+      "expected": {
+        "value": 2112
+      },
+      "input": {
+        "n": 2113
+      },
+      "observed": {
+        "value": 2112
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0174",
+      "category": "random",
+      "expected": {
+        "value": 1680
+      },
+      "input": {
+        "n": 2695
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0175",
+      "category": "random",
+      "expected": {
+        "value": 192
+      },
+      "input": {
+        "n": 520
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0176",
+      "category": "random",
+      "expected": {
+        "value": 384
+      },
+      "input": {
+        "n": 1680
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0177",
+      "category": "random",
+      "expected": {
+        "value": 1560
+      },
+      "input": {
+        "n": 3286
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0178",
+      "category": "random",
+      "expected": {
+        "value": 826
+      },
+      "input": {
+        "n": 827
+      },
+      "observed": {
+        "value": 826
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0179",
+      "category": "random",
+      "expected": {
+        "value": 880
+      },
+      "input": {
+        "n": 1936
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0180",
+      "category": "random",
+      "expected": {
+        "value": 2112
+      },
+      "input": {
+        "n": 2471
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0181",
+      "category": "random",
+      "expected": {
+        "value": 3582
+      },
+      "input": {
+        "n": 3583
+      },
+      "observed": {
+        "value": 3582
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0182",
+      "category": "random",
+      "expected": {
+        "value": 900
+      },
+      "input": {
+        "n": 1359
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0183",
+      "category": "random",
+      "expected": {
+        "value": 640
+      },
+      "input": {
+        "n": 1408
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0184",
+      "category": "random",
+      "expected": {
+        "value": 3168
+      },
+      "input": {
+        "n": 4255
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0185",
+      "category": "random",
+      "expected": {
+        "value": 960
+      },
+      "input": {
+        "n": 2952
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0186",
+      "category": "random",
+      "expected": {
+        "value": 612
+      },
+      "input": {
+        "n": 1226
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0187",
+      "category": "random",
+      "expected": {
+        "value": 2628
+      },
+      "input": {
+        "n": 3073
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0188",
+      "category": "random",
+      "expected": {
+        "value": 1080
+      },
+      "input": {
+        "n": 2168
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0189",
+      "category": "random",
+      "expected": {
+        "value": 478
+      },
+      "input": {
+        "n": 958
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0190",
+      "category": "random",
+      "expected": {
+        "value": 1192
+      },
+      "input": {
+        "n": 2386
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0191",
+      "category": "random",
+      "expected": {
+        "value": 2370
+      },
+      "input": {
+        "n": 4742
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0192",
+      "category": "random",
+      "expected": {
+        "value": 864
+      },
+      "input": {
+        "n": 1295
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0193",
+      "category": "random",
+      "expected": {
+        "value": 1680
+      },
+      "input": {
+        "n": 2529
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0194",
+      "category": "random",
+      "expected": {
+        "value": 528
+      },
+      "input": {
+        "n": 2010
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0195",
+      "category": "random",
+      "expected": {
+        "value": 1728
+      },
+      "input": {
+        "n": 2555
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0196",
+      "category": "random",
+      "expected": {
+        "value": 4704
+      },
+      "input": {
+        "n": 4859
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0197",
+      "category": "random",
+      "expected": {
+        "value": 468
+      },
+      "input": {
+        "n": 553
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0198",
+      "category": "random",
+      "expected": {
+        "value": 656
+      },
+      "input": {
+        "n": 2490
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0199",
+      "category": "random",
+      "expected": {
+        "value": 1848
+      },
+      "input": {
+        "n": 4508
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0200",
+      "category": "random",
+      "expected": {
+        "value": 2160
+      },
+      "input": {
+        "n": 2717
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0201",
+      "category": "random",
+      "expected": {
+        "value": 1040
+      },
+      "input": {
+        "n": 2332
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0202",
+      "category": "random",
+      "expected": {
+        "value": 1400
+      },
+      "input": {
+        "n": 2103
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0203",
+      "category": "random",
+      "expected": {
+        "value": 3670
+      },
+      "input": {
+        "n": 3671
+      },
+      "observed": {
+        "value": 3670
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0204",
+      "category": "random",
+      "expected": {
+        "value": 2880
+      },
+      "input": {
+        "n": 3689
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0205",
+      "category": "random",
+      "expected": {
+        "value": 2040
+      },
+      "input": {
+        "n": 3063
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0206",
+      "category": "random",
+      "expected": {
+        "value": 2388
+      },
+      "input": {
+        "n": 2389
+      },
+      "observed": {
+        "value": 2388
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0207",
+      "category": "random",
+      "expected": {
+        "value": 408
+      },
+      "input": {
+        "n": 818
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0208",
+      "category": "random",
+      "expected": {
+        "value": 2304
+      },
+      "input": {
+        "n": 3459
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0209",
+      "category": "random",
+      "expected": {
+        "value": 3298
+      },
+      "input": {
+        "n": 3299
+      },
+      "observed": {
+        "value": 3298
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0210",
+      "category": "random",
+      "expected": {
+        "value": 480
+      },
+      "input": {
+        "n": 1950
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0211",
+      "category": "random",
+      "expected": {
+        "value": 2352
+      },
+      "input": {
+        "n": 2561
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0212",
+      "category": "random",
+      "expected": {
+        "value": 1878
+      },
+      "input": {
+        "n": 3758
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0213",
+      "category": "random",
+      "expected": {
+        "value": 2496
+      },
+      "input": {
+        "n": 4996
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0214",
+      "category": "random",
+      "expected": {
+        "value": 2112
+      },
+      "input": {
+        "n": 3115
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0215",
+      "category": "random",
+      "expected": {
+        "value": 64
+      },
+      "input": {
+        "n": 160
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0216",
+      "category": "random",
+      "expected": {
+        "value": 882
+      },
+      "input": {
+        "n": 883
+      },
+      "observed": {
+        "value": 882
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0217",
+      "category": "random",
+      "expected": {
+        "value": 800
+      },
+      "input": {
+        "n": 1616
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0218",
+      "category": "random",
+      "expected": {
+        "value": 2110
+      },
+      "input": {
+        "n": 2111
+      },
+      "observed": {
+        "value": 2110
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0219",
+      "category": "random",
+      "expected": {
+        "value": 136
+      },
+      "input": {
+        "n": 137
+      },
+      "observed": {
+        "value": 136
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0220",
+      "category": "random",
+      "expected": {
+        "value": 982
+      },
+      "input": {
+        "n": 983
+      },
+      "observed": {
+        "value": 982
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0221",
+      "category": "random",
+      "expected": {
+        "value": 408
+      },
+      "input": {
+        "n": 1030
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0222",
+      "category": "random",
+      "expected": {
+        "value": 1544
+      },
+      "input": {
+        "n": 3092
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0223",
+      "category": "random",
+      "expected": {
+        "value": 3888
+      },
+      "input": {
+        "n": 4033
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0224",
+      "category": "random",
+      "expected": {
+        "value": 864
+      },
+      "input": {
+        "n": 949
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0225",
+      "category": "random",
+      "expected": {
+        "value": 1128
+      },
+      "input": {
+        "n": 2264
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0226",
+      "category": "random",
+      "expected": {
+        "value": 3360
+      },
+      "input": {
+        "n": 4615
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0227",
+      "category": "random",
+      "expected": {
+        "value": 712
+      },
+      "input": {
+        "n": 895
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0228",
+      "category": "random",
+      "expected": {
+        "value": 2528
+      },
+      "input": {
+        "n": 4755
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0229",
+      "category": "random",
+      "expected": {
+        "value": 712
+      },
+      "input": {
+        "n": 2148
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0230",
+      "category": "random",
+      "expected": {
+        "value": 1200
+      },
+      "input": {
+        "n": 2828
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0231",
+      "category": "random",
+      "expected": {
+        "value": 2880
+      },
+      "input": {
+        "n": 3007
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0232",
+      "category": "random",
+      "expected": {
+        "value": 960
+      },
+      "input": {
+        "n": 2870
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0233",
+      "category": "random",
+      "expected": {
+        "value": 1800
+      },
+      "input": {
+        "n": 1991
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0234",
+      "category": "random",
+      "expected": {
+        "value": 4140
+      },
+      "input": {
+        "n": 4837
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0235",
+      "category": "random",
+      "expected": {
+        "value": 1624
+      },
+      "input": {
+        "n": 2523
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0236",
+      "category": "random",
+      "expected": {
+        "value": 784
+      },
+      "input": {
+        "n": 1576
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0237",
+      "category": "random",
+      "expected": {
+        "value": 640
+      },
+      "input": {
+        "n": 2112
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0238",
+      "category": "random",
+      "expected": {
+        "value": 3696
+      },
+      "input": {
+        "n": 3697
+      },
+      "observed": {
+        "value": 3696
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0239",
+      "category": "random",
+      "expected": {
+        "value": 768
+      },
+      "input": {
+        "n": 1792
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0240",
+      "category": "random",
+      "expected": {
+        "value": 2208
+      },
+      "input": {
+        "n": 4935
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0241",
+      "category": "random",
+      "expected": {
+        "value": 2448
+      },
+      "input": {
+        "n": 3681
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0242",
+      "category": "random",
+      "expected": {
+        "value": 1680
+      },
+      "input": {
+        "n": 4466
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0243",
+      "category": "random",
+      "expected": {
+        "value": 504
+      },
+      "input": {
+        "n": 1270
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0244",
+      "category": "random",
+      "expected": {
+        "value": 3846
+      },
+      "input": {
+        "n": 3847
+      },
+      "observed": {
+        "value": 3846
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.totient:0245",
+      "category": "random",
+      "expected": {
+        "value": 2268
+      },
+      "input": {
+        "n": 3483
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0246",
+      "category": "random",
+      "expected": {
+        "value": 224
+      },
+      "input": {
+        "n": 435
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0247",
+      "category": "random",
+      "expected": {
+        "value": 712
+      },
+      "input": {
+        "n": 1432
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0248",
+      "category": "random",
+      "expected": {
+        "value": 464
+      },
+      "input": {
+        "n": 944
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0249",
+      "category": "random",
+      "expected": {
+        "value": 292
+      },
+      "input": {
+        "n": 586
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0250",
+      "category": "random",
+      "expected": {
+        "value": 1104
+      },
+      "input": {
+        "n": 4230
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0251",
+      "category": "random",
+      "expected": {
+        "value": 336
+      },
+      "input": {
+        "n": 1290
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0252",
+      "category": "random",
+      "expected": {
+        "value": 1424
+      },
+      "input": {
+        "n": 2864
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0253",
+      "category": "random",
+      "expected": {
+        "value": 720
+      },
+      "input": {
+        "n": 1810
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0254",
+      "category": "random",
+      "expected": {
+        "value": 820
+      },
+      "input": {
+        "n": 1826
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.totient:0255",
+      "category": "random",
+      "expected": {
+        "value": 1152
+      },
+      "input": {
+        "n": 2920
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    }
+  ],
+  "condition": "small_to_large",
+  "elapsed_seconds": 0.028221723000115162,
+  "group": "divisors",
+  "library": "sympy",
+  "load_error": null,
+  "method_id": "sympy.totient",
+  "passed": 48,
+  "total": 256
+}

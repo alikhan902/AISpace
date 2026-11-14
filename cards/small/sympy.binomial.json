@@ -1,0 +1,25 @@
+{
+  "algorithm": [
+    "Compute the binomial coefficient using the formula: \\binom{n}{k} = \\frac{n!}{k!(n-k)!} for nonnegative integers n and k.",
+    "For negative k, return 0.",
+    "For k > n, return 0.",
+    "Use efficient algorithms based on prime factorization for performance."
+  ],
+  "constraints": [
+    "n must be an integer in 0..50",
+    "k must be an integer in -3..55",
+    "If k < 0, return 0",
+    "If k > n, return 0"
+  ],
+  "edge_cases": [
+    "k < 0: return 0",
+    "k > n: return 0",
+    "n = 0: return 1 (by definition)",
+    "k = 0: return 1 (by definition)"
+  ],
+  "inputs": "n is an integer in 0..50; k is an integer in -3..55.",
+  "method_id": "sympy.binomial",
+  "output": "Exact Python int binomial coefficient, including zero when k < 0 or k > n.",
+  "purpose": "Compute the binomial coefficient, returning the exact value including zero for negative k or k > n.",
+  "signature": "solve(n, k)"
+}

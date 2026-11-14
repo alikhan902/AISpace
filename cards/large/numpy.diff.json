@@ -1,0 +1,25 @@
+{
+  "algorithm": [
+    "For n=0, return a copy of the input list a.",
+    "For n>=1, recursively compute the n-th difference by applying the first difference n times.",
+    "The first difference is calculated as [a[i+1] - a[i] for i in range(len(a)-1)].",
+    "If n >= len(a), return an empty list unless n=0 (which returns a copy of a)."
+  ],
+  "constraints": [
+    "All intermediate values fit within signed 64-bit integers.",
+    "n is an integer between 0 and 5 inclusive.",
+    "The input list a is one-dimensional.",
+    "The output must be a Python int or list[int] (no NumPy objects)."
+  ],
+  "edge_cases": [
+    "When a is empty, return empty list for n>=1 (n=0 returns empty list copy).",
+    "When n=0, return a copy of a regardless of a's length.",
+    "When n >= len(a), return empty list for n>=1 (n=0 returns a copy of a).",
+    "When a has length 1 and n>=1, return empty list."
+  ],
+  "inputs": "a: one-dimensional list of integers (possibly empty); n: integer from 0 to 5",
+  "method_id": "numpy.diff",
+  "output": "Python int if n=0 (a copy of a), otherwise list[int] of length len(a)-n",
+  "purpose": "Compute the n-th discrete forward difference of a one-dimensional list of integers",
+  "signature": "solve(a, n=1)"
+}

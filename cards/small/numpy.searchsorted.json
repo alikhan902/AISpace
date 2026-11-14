@@ -1,0 +1,24 @@
+{
+  "algorithm": [
+    "Use binary search to find the insertion points in a sorted array `a`.",
+    "For 'left' side, find the first suitable index where `v` can be inserted while maintaining order.",
+    "For 'right' side, find the last suitable index where `v` can be inserted while maintaining order."
+  ],
+  "constraints": [
+    "If `sorter` is provided, the returned indices refer to the sorted array `a` and not the original array `a`.",
+    "If `side` is 'left', return the first suitable index; if 'right', return the last suitable index.",
+    "If no suitable index is found, return 0 or N (length of `a`), depending on the side.",
+    "If `v` is a list, return a list of indices with the same shape as `v`."
+  ],
+  "edge_cases": [
+    "When `v` is empty, return an empty list.",
+    "When `a` is empty, return 0 or N (length of `a`), depending on the side.",
+    "When `v` is a scalar and `a` is empty, return 0.",
+    "When `v` contains `nan` values, handle them according to the NumPy implementation."
+  ],
+  "inputs": "a is a nondecreasing list of integers, possibly empty; v is an integer or list of integers; side is 'left' or 'right'.",
+  "method_id": "numpy.searchsorted",
+  "output": "int for scalar v and list[int] for list v.",
+  "purpose": "Find the indices into a sorted array `a` such that, if the corresponding elements in `v` were inserted before the indices, the order of `a` would be preserved.",
+  "signature": "solve(a, v, side='left')"
+}

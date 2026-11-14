@@ -1,0 +1,123 @@
+{
+  "elapsed_seconds": 8.329030210999917,
+  "finished_at": "2026-11-14T13:11:01.368325+00:00",
+  "parsed": {
+    "algorithm": [
+      "For each pair of elements (a, b) from the inputs (broadcasted to the same shape), compute the absolute value of each element.",
+      "Compute the lowest common multiple of |a| and |b| using the formula: lcm(a, b) = |a * b| / gcd(a, b), where gcd is the greatest common divisor.",
+      "If both inputs are scalars, return the computed lcm as a single integer; otherwise, return a list of computed lcms for each element pair.",
+      "Handle empty lists by returning an empty list."
+    ],
+    "constraints": [
+      "Inputs must be integers or 1-D lists of integers.",
+      "Values and results fit within signed 64-bit integers.",
+      "No broadcasting beyond the standard array broadcasting rules for 1-D lists.",
+      "Scalar inputs are treated as 1-element lists for broadcasting purposes.",
+      "The output must be a scalar if both inputs are scalars; otherwise, a list of the same length as the broadcasted input shape."
+    ],
+    "edge_cases": [
+      "Both inputs are empty lists: return an empty list.",
+      "One input is a scalar and the other is a list of length 1: return a single value.",
+      "One input is a scalar and the other is a list of length 0: return an empty list.",
+      "Inputs with negative values: take absolute values before computation.",
+      "Inputs with zero: lcm(0, x) = 0 for any x (since gcd(0, x) = |x|, and lcm(0, x) = 0).",
+      "Inputs that are not integers: not supported (per contract)."
+    ],
+    "inputs": "x and y are integers or 1-D lists of integers. Scalar/scalar inputs return an integer; scalar/list or list/scalar inputs return a list; lists of the same length (including empty) return a list. Inputs must be broadcastable if shapes differ.",
+    "method_id": "numpy.lcm",
+    "output": "A scalar integer if both inputs are scalars; otherwise, a list of integers representing the lowest common multiple of the absolute values of corresponding elements.",
+    "purpose": "Compute the lowest common multiple of the absolute values of two inputs, supporting scalar and list inputs with broadcasting rules.",
+    "signature": "solve(x, y)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"x and y are integers or 1-D lists of integers. Support scalar/scalar, scalar/list, list/scalar and lists of the same length (including empty). Scalar/scalar returns int, all other inputs return a list. No other broadcasting is required. Values and results fit signed int64.\",\n  \"documentation\": \"lcm(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])\\n\\nReturns the lowest common multiple of ``|x1|`` and ``|x2|``\\n\\nParameters\\n----------\\nx1, x2 : array_like, int\\n    Arrays of values.\\n    If ``x1.shape != x2.shape``, they must be broadcastable to a common\\n    shape (which becomes the shape of the output).\\n\\nReturns\\n-------\\ny : ndarray or scalar\\n    The lowest common multiple of the absolute value of the inputs\\n    This is a scalar if both `x1` and `x2` are scalars.\\n\\nSee Also\\n--------\\ngcd : The greatest common divisor\\n\\nExamples\\n--------\\n>>> import numpy as np\\n>>> np.lcm(12, 20)\\n60\\n>>> np.lcm.reduce([3, 12, 20])\\n60\\n>>> np.lcm.reduce([40, 12, 20])\\n120\\n>>> np.lcm(np.arange(6), 20)\\narray([ 0, 20, 20, 60, 20, 20])\",\n  \"documentation_truncated\": false,\n  \"group\": \"integer_arithmetic\",\n  \"id\": \"numpy.lcm\",\n  \"library\": \"numpy\",\n  \"name\": \"lcm\",\n  \"signature\": \"solve(x, y)\",\n  \"version\": \"2.5.4\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:4b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:11:01.368038337Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 502,
+    "eval_duration": 8130680000,
+    "load_duration": 530256,
+    "message": {
+      "content": "{\n  \"method_id\": \"numpy.lcm\",\n  \"signature\": \"solve(x, y)\",\n  \"purpose\": \"Compute the lowest common multiple of the absolute values of two inputs, supporting scalar and list inputs with broadcasting rules.\",\n  \"inputs\": \"x and y are integers or 1-D lists of integers. Scalar/scalar inputs return an integer; scalar/list or list/scalar inputs return a list; lists of the same length (including empty) return a list. Inputs must be broadcastable if shapes differ.\",\n  \"output\": \"A scalar integer if both inputs are scalars; otherwise, a list of integers representing the lowest common multiple of the absolute values of corresponding elements.\",\n  \"algorithm\": [\n    \"For each pair of elements (a, b) from the inputs (broadcasted to the same shape), compute the absolute value of each element.\",\n    \"Compute the lowest common multiple of |a| and |b| using the formula: lcm(a, b) = |a * b| / gcd(a, b), where gcd is the greatest common divisor.\",\n    \"If both inputs are scalars, return the computed lcm as a single integer; otherwise, return a list of computed lcms for each element pair.\",\n    \"Handle empty lists by returning an empty list.\"\n  ],\n  \"edge_cases\": [\n    \"Both inputs are empty lists: return an empty list.\",\n    \"One input is a scalar and the other is a list of length 1: return a single value.\",\n    \"One input is a scalar and the other is a list of length 0: return an empty list.\",\n    \"Inputs with negative values: take absolute values before computation.\",\n    \"Inputs with zero: lcm(0, x) = 0 for any x (since gcd(0, x) = |x|, and lcm(0, x) = 0).\",\n    \"Inputs that are not integers: not supported (per contract).\"\n  ],\n  \"constraints\": [\n    \"Inputs must be integers or 1-D lists of integers.\",\n    \"Values and results fit within signed 64-bit integers.\",\n    \"No broadcasting beyond the standard array broadcasting rules for 1-D lists.\",\n    \"Scalar inputs are treated as 1-element lists for broadcasting purposes.\",\n    \"The output must be a scalar if both inputs are scalars; otherwise, a list of the same length as the broadcasted input shape.\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:4b",
+    "prompt_eval_cached_count": 411,
+    "prompt_eval_count": 765,
+    "prompt_eval_duration": 164778000,
+    "total_duration": 8328457911
+  },
+  "started_at": "2026-11-14T13:10:53.039294+00:00",
+  "valid": true
+}

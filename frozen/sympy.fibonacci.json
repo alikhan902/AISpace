@@ -1,0 +1,1025 @@
+{
+  "brief": {
+    "contract": "n is an integer in 0..100. Return the exact Python int, with arbitrary precision; no symbolic result.",
+    "documentation": "Fibonacci numbers / Fibonacci polynomials\n\nThe Fibonacci numbers are the integer sequence defined by the\ninitial terms `F_0 = 0`, `F_1 = 1` and the two-term recurrence\nrelation `F_n = F_{n-1} + F_{n-2}`.  This definition\nextended to arbitrary real and complex arguments using\nthe formula\n\n.. math :: F_z = \\frac{\\phi^z - \\cos(\\pi z) \\phi^{-z}}{\\sqrt 5}\n\nThe Fibonacci polynomials are defined by `F_1(x) = 1`,\n`F_2(x) = x`, and `F_n(x) = x*F_{n-1}(x) + F_{n-2}(x)` for `n > 2`.\nFor all positive integers `n`, `F_n(1) = F_n`.\n\n* ``fibonacci(n)`` gives the `n^{th}` Fibonacci number, `F_n`\n* ``fibonacci(n, x)`` gives the `n^{th}` Fibonacci polynomial in `x`, `F_n(x)`\n\nExamples\n========\n\n>>> from sympy import fibonacci, Symbol\n\n>>> [fibonacci(x) for x in range(11)]\n[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]\n>>> fibonacci(5, Symbol('t'))\nt**4 + 3*t**2 + 1\n\nSee Also\n========\n\nbell, bernoulli, catalan, euler, harmonic, lucas, genocchi, partition, tribonacci\n\nReferences\n==========\n\n.. [1] https://en.wikipedia.org/wiki/Fibonacci_number\n.. [2] https://mathworld.wolfram.com/FibonacciNumber.html",
+    "documentation_truncated": false,
+    "group": "combinatorics",
+    "id": "sympy.fibonacci",
+    "library": "sympy",
+    "name": "fibonacci",
+    "signature": "solve(n)",
+    "version": "1.14.0"
+  },
+  "cases": [
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.fibonacci:0000",
+      "input": {
+        "n": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.fibonacci:0001",
+      "input": {
+        "n": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.fibonacci:0002",
+      "input": {
+        "n": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "sympy.fibonacci:0003",
+      "input": {
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "sympy.fibonacci:0004",
+      "input": {
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "id": "sympy.fibonacci:0005",
+      "input": {
+        "n": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "id": "sympy.fibonacci:0006",
+      "input": {
+        "n": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 13
+      },
+      "id": "sympy.fibonacci:0007",
+      "input": {
+        "n": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 21
+      },
+      "id": "sympy.fibonacci:0008",
+      "input": {
+        "n": 8
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 34
+      },
+      "id": "sympy.fibonacci:0009",
+      "input": {
+        "n": 9
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 55
+      },
+      "id": "sympy.fibonacci:0010",
+      "input": {
+        "n": 10
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 89
+      },
+      "id": "sympy.fibonacci:0011",
+      "input": {
+        "n": 11
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 144
+      },
+      "id": "sympy.fibonacci:0012",
+      "input": {
+        "n": 12
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 233
+      },
+      "id": "sympy.fibonacci:0013",
+      "input": {
+        "n": 13
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 377
+      },
+      "id": "sympy.fibonacci:0014",
+      "input": {
+        "n": 14
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 610
+      },
+      "id": "sympy.fibonacci:0015",
+      "input": {
+        "n": 15
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 987
+      },
+      "id": "sympy.fibonacci:0016",
+      "input": {
+        "n": 16
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1597
+      },
+      "id": "sympy.fibonacci:0017",
+      "input": {
+        "n": 17
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2584
+      },
+      "id": "sympy.fibonacci:0018",
+      "input": {
+        "n": 18
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4181
+      },
+      "id": "sympy.fibonacci:0019",
+      "input": {
+        "n": 19
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 6765
+      },
+      "id": "sympy.fibonacci:0020",
+      "input": {
+        "n": 20
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 10946
+      },
+      "id": "sympy.fibonacci:0021",
+      "input": {
+        "n": 21
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 17711
+      },
+      "id": "sympy.fibonacci:0022",
+      "input": {
+        "n": 22
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 28657
+      },
+      "id": "sympy.fibonacci:0023",
+      "input": {
+        "n": 23
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 46368
+      },
+      "id": "sympy.fibonacci:0024",
+      "input": {
+        "n": 24
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 75025
+      },
+      "id": "sympy.fibonacci:0025",
+      "input": {
+        "n": 25
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 121393
+      },
+      "id": "sympy.fibonacci:0026",
+      "input": {
+        "n": 26
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 196418
+      },
+      "id": "sympy.fibonacci:0027",
+      "input": {
+        "n": 27
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 317811
+      },
+      "id": "sympy.fibonacci:0028",
+      "input": {
+        "n": 28
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 514229
+      },
+      "id": "sympy.fibonacci:0029",
+      "input": {
+        "n": 29
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 832040
+      },
+      "id": "sympy.fibonacci:0030",
+      "input": {
+        "n": 30
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1346269
+      },
+      "id": "sympy.fibonacci:0031",
+      "input": {
+        "n": 31
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2178309
+      },
+      "id": "sympy.fibonacci:0032",
+      "input": {
+        "n": 32
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3524578
+      },
+      "id": "sympy.fibonacci:0033",
+      "input": {
+        "n": 33
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 5702887
+      },
+      "id": "sympy.fibonacci:0034",
+      "input": {
+        "n": 34
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 9227465
+      },
+      "id": "sympy.fibonacci:0035",
+      "input": {
+        "n": 35
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 14930352
+      },
+      "id": "sympy.fibonacci:0036",
+      "input": {
+        "n": 36
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 24157817
+      },
+      "id": "sympy.fibonacci:0037",
+      "input": {
+        "n": 37
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 39088169
+      },
+      "id": "sympy.fibonacci:0038",
+      "input": {
+        "n": 38
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 63245986
+      },
+      "id": "sympy.fibonacci:0039",
+      "input": {
+        "n": 39
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 102334155
+      },
+      "id": "sympy.fibonacci:0040",
+      "input": {
+        "n": 40
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 165580141
+      },
+      "id": "sympy.fibonacci:0041",
+      "input": {
+        "n": 41
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 267914296
+      },
+      "id": "sympy.fibonacci:0042",
+      "input": {
+        "n": 42
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 433494437
+      },
+      "id": "sympy.fibonacci:0043",
+      "input": {
+        "n": 43
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 701408733
+      },
+      "id": "sympy.fibonacci:0044",
+      "input": {
+        "n": 44
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1134903170
+      },
+      "id": "sympy.fibonacci:0045",
+      "input": {
+        "n": 45
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1836311903
+      },
+      "id": "sympy.fibonacci:0046",
+      "input": {
+        "n": 46
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2971215073
+      },
+      "id": "sympy.fibonacci:0047",
+      "input": {
+        "n": 47
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4807526976
+      },
+      "id": "sympy.fibonacci:0048",
+      "input": {
+        "n": 48
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 7778742049
+      },
+      "id": "sympy.fibonacci:0049",
+      "input": {
+        "n": 49
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 12586269025
+      },
+      "id": "sympy.fibonacci:0050",
+      "input": {
+        "n": 50
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 20365011074
+      },
+      "id": "sympy.fibonacci:0051",
+      "input": {
+        "n": 51
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 32951280099
+      },
+      "id": "sympy.fibonacci:0052",
+      "input": {
+        "n": 52
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 53316291173
+      },
+      "id": "sympy.fibonacci:0053",
+      "input": {
+        "n": 53
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 86267571272
+      },
+      "id": "sympy.fibonacci:0054",
+      "input": {
+        "n": 54
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 139583862445
+      },
+      "id": "sympy.fibonacci:0055",
+      "input": {
+        "n": 55
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 225851433717
+      },
+      "id": "sympy.fibonacci:0056",
+      "input": {
+        "n": 56
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 365435296162
+      },
+      "id": "sympy.fibonacci:0057",
+      "input": {
+        "n": 57
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 591286729879
+      },
+      "id": "sympy.fibonacci:0058",
+      "input": {
+        "n": 58
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 956722026041
+      },
+      "id": "sympy.fibonacci:0059",
+      "input": {
+        "n": 59
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1548008755920
+      },
+      "id": "sympy.fibonacci:0060",
+      "input": {
+        "n": 60
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2504730781961
+      },
+      "id": "sympy.fibonacci:0061",
+      "input": {
+        "n": 61
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4052739537881
+      },
+      "id": "sympy.fibonacci:0062",
+      "input": {
+        "n": 62
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 6557470319842
+      },
+      "id": "sympy.fibonacci:0063",
+      "input": {
+        "n": 63
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 10610209857723
+      },
+      "id": "sympy.fibonacci:0064",
+      "input": {
+        "n": 64
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 17167680177565
+      },
+      "id": "sympy.fibonacci:0065",
+      "input": {
+        "n": 65
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 27777890035288
+      },
+      "id": "sympy.fibonacci:0066",
+      "input": {
+        "n": 66
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 44945570212853
+      },
+      "id": "sympy.fibonacci:0067",
+      "input": {
+        "n": 67
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 72723460248141
+      },
+      "id": "sympy.fibonacci:0068",
+      "input": {
+        "n": 68
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 117669030460994
+      },
+      "id": "sympy.fibonacci:0069",
+      "input": {
+        "n": 69
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 190392490709135
+      },
+      "id": "sympy.fibonacci:0070",
+      "input": {
+        "n": 70
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 308061521170129
+      },
+      "id": "sympy.fibonacci:0071",
+      "input": {
+        "n": 71
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 498454011879264
+      },
+      "id": "sympy.fibonacci:0072",
+      "input": {
+        "n": 72
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 806515533049393
+      },
+      "id": "sympy.fibonacci:0073",
+      "input": {
+        "n": 73
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1304969544928657
+      },
+      "id": "sympy.fibonacci:0074",
+      "input": {
+        "n": 74
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2111485077978050
+      },
+      "id": "sympy.fibonacci:0075",
+      "input": {
+        "n": 75
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3416454622906707
+      },
+      "id": "sympy.fibonacci:0076",
+      "input": {
+        "n": 76
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 5527939700884757
+      },
+      "id": "sympy.fibonacci:0077",
+      "input": {
+        "n": 77
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 8944394323791464
+      },
+      "id": "sympy.fibonacci:0078",
+      "input": {
+        "n": 78
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 14472334024676221
+      },
+      "id": "sympy.fibonacci:0079",
+      "input": {
+        "n": 79
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 23416728348467685
+      },
+      "id": "sympy.fibonacci:0080",
+      "input": {
+        "n": 80
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 37889062373143906
+      },
+      "id": "sympy.fibonacci:0081",
+      "input": {
+        "n": 81
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 61305790721611591
+      },
+      "id": "sympy.fibonacci:0082",
+      "input": {
+        "n": 82
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 99194853094755497
+      },
+      "id": "sympy.fibonacci:0083",
+      "input": {
+        "n": 83
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 160500643816367088
+      },
+      "id": "sympy.fibonacci:0084",
+      "input": {
+        "n": 84
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 259695496911122585
+      },
+      "id": "sympy.fibonacci:0085",
+      "input": {
+        "n": 85
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 420196140727489673
+      },
+      "id": "sympy.fibonacci:0086",
+      "input": {
+        "n": 86
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 679891637638612258
+      },
+      "id": "sympy.fibonacci:0087",
+      "input": {
+        "n": 87
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1100087778366101931
+      },
+      "id": "sympy.fibonacci:0088",
+      "input": {
+        "n": 88
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1779979416004714189
+      },
+      "id": "sympy.fibonacci:0089",
+      "input": {
+        "n": 89
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2880067194370816120
+      },
+      "id": "sympy.fibonacci:0090",
+      "input": {
+        "n": 90
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4660046610375530309
+      },
+      "id": "sympy.fibonacci:0091",
+      "input": {
+        "n": 91
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 7540113804746346429
+      },
+      "id": "sympy.fibonacci:0092",
+      "input": {
+        "n": 92
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 12200160415121876738
+      },
+      "id": "sympy.fibonacci:0093",
+      "input": {
+        "n": 93
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 19740274219868223167
+      },
+      "id": "sympy.fibonacci:0094",
+      "input": {
+        "n": 94
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 31940434634990099905
+      },
+      "id": "sympy.fibonacci:0095",
+      "input": {
+        "n": 95
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 51680708854858323072
+      },
+      "id": "sympy.fibonacci:0096",
+      "input": {
+        "n": 96
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 83621143489848422977
+      },
+      "id": "sympy.fibonacci:0097",
+      "input": {
+        "n": 97
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 135301852344706746049
+      },
+      "id": "sympy.fibonacci:0098",
+      "input": {
+        "n": 98
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 218922995834555169026
+      },
+      "id": "sympy.fibonacci:0099",
+      "input": {
+        "n": 99
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 354224848179261915075
+      },
+      "id": "sympy.fibonacci:0100",
+      "input": {
+        "n": 100
+      }
+    }
+  ]
+}

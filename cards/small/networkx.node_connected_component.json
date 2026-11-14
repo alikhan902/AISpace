@@ -1,0 +1,26 @@
+{
+  "algorithm": [
+    "Perform a BFS starting from the specified node.",
+    "Traverse the graph, visiting nodes and their neighbors.",
+    "Collect all nodes visited during the traversal.",
+    "Return the collected nodes as a set."
+  ],
+  "constraints": [
+    "n is an integer >= 1",
+    "edges is a list of distinct [u, v] pairs with 0 <= u < v < n",
+    "node is a valid vertex label in the graph",
+    "The graph is undirected and unweighted",
+    "The function raises NetworkXNotImplemented if the graph is directed"
+  ],
+  "edge_cases": [
+    "When the graph is a single node with no edges (returns {n})",
+    "When the graph is disconnected (returns the component containing the specified node)",
+    "When the specified node is isolated (returns {n})",
+    "When the graph has no edges (returns {n})"
+  ],
+  "inputs": "n: integer >= 1, edges: list of distinct [u, v] pairs, node: valid vertex label in the graph",
+  "method_id": "networkx.node_connected_component",
+  "output": "A set of strings representing the nodes in the component containing the specified node.",
+  "purpose": "Return the set of nodes in the component of the graph containing the specified node.",
+  "signature": "solve(n, edges, node)"
+}

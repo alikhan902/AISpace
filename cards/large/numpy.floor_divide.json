@@ -1,0 +1,24 @@
+{
+  "algorithm": [
+    "For each pair of elements in the inputs (with broadcasting if necessary), compute the floor division (largest integer less than or equal to the quotient).",
+    "If both inputs are scalars, return a single integer result.",
+    "If inputs are lists of the same length or broadcastable to the same length, return a list of floor division results for each corresponding pair."
+  ],
+  "constraints": [
+    "Values and results fit within signed 64-bit integers.",
+    "Divisors (denominator) must be nonzero.",
+    "No broadcasting beyond the specified support (scalar/scalar, scalar/list, list/scalar, lists of same length).",
+    "The function does not support broadcasting to higher dimensions beyond 1D lists."
+  ],
+  "edge_cases": [
+    "Empty lists: Both inputs are empty lists, return an empty list.",
+    "Zero denominator: Denominator must be nonzero; if denominator is zero, raise an error.",
+    "Negative numbers: Floor division for negative numbers follows the standard mathematical definition (e.g., floor(-3/2) = -2).",
+    "Mixed types: Inputs must be integers or 1-D lists of integers; no other types are supported."
+  ],
+  "inputs": "x and y are integers or 1-D lists of integers. Support scalar/scalar, scalar/list, list/scalar and lists of the same length (including empty).",
+  "method_id": "numpy.floor_divide",
+  "output": "A scalar integer if both inputs are scalars; otherwise, a list of integers where each element is the floor division of corresponding elements (with broadcasting applied).",
+  "purpose": "Return the largest integer smaller or equal to the division of two inputs, equivalent to the Python // operator for integers and lists of integers.",
+  "signature": "solve(x, y)"
+}

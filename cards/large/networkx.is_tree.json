@@ -1,0 +1,26 @@
+{
+  "algorithm": [
+    "Check that the graph has exactly n-1 edges",
+    "Check that the graph is connected",
+    "If both conditions hold, return True; otherwise, return False"
+  ],
+  "constraints": [
+    "Vertices are labeled 0 to n-1",
+    "Edges are distinct and unordered pairs with u < v",
+    "The graph must be simple (no multiple edges or self-loops)",
+    "The graph may contain isolated vertices",
+    "The graph must be undirected"
+  ],
+  "edge_cases": [
+    "n=1: single vertex with no edges (tree)",
+    "n=2: two vertices with one edge (tree)",
+    "n=3: three vertices with two edges (tree) or three edges (not tree)",
+    "Graph with cycles (not tree)",
+    "Graph with disconnected components (not tree)"
+  ],
+  "inputs": "n: integer >= 1; edges: list of distinct [u,v] pairs where 0<=u<v<n",
+  "method_id": "networkx.is_tree",
+  "output": "bool: True if the graph is a tree (connected and acyclic), False otherwise",
+  "purpose": "Determine if a simple undirected graph with n vertices and given edges is a tree",
+  "signature": "solve(n, edges)"
+}

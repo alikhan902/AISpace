@@ -1,0 +1,25 @@
+{
+  "algorithm": [
+    "Initialize a result variable as n.",
+    "Iterate over all integers from 2 to sqrt(n).",
+    "For each integer i, if i divides n, check if i and n/i are coprime.",
+    "If they are coprime, multiply the result by (i-1)/i and add (n/i - 1)/i.",
+    "If i is a prime factor of n, add (i-1) to the result.",
+    "Finally, return the result."
+  ],
+  "constraints": [
+    "n is a positive integer <= 5000",
+    "Use generator=False and proper=False for divisor calculations",
+    "Use default modulus=1 for divisor_count"
+  ],
+  "edge_cases": [
+    "n = 1: φ(1) = 1",
+    "n = 2: φ(2) = 1",
+    "n = 5000: φ(5000) = 2000"
+  ],
+  "inputs": "n is a positive integer <= 5000",
+  "method_id": "sympy.totient",
+  "output": "An exact Python int, which is the value of the Euler totient function φ(n)",
+  "purpose": "Calculate the Euler totient function φ(n), which counts the number of integers up to n that are relatively prime to n.",
+  "signature": "solve(n)"
+}

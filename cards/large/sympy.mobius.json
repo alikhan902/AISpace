@@ -1,0 +1,29 @@
+{
+  "algorithm": [
+    "If n == 1, return 1",
+    "Factorize n into its prime factors",
+    "If any prime factor appears with exponent >= 2, return 0",
+    "Otherwise, count the number of distinct prime factors k, then return (-1)^k"
+  ],
+  "constraints": [
+    "n must be a positive integer <= 5000",
+    "The function must return an exact integer",
+    "The function must handle symbolic inputs with integer constraints as described in the documentation",
+    "The function must correctly identify squared prime factors"
+  ],
+  "edge_cases": [
+    "n = 1 returns 1",
+    "n = 13**2 returns 0",
+    "n = 13*7 returns 1",
+    "n = 13*7*5 returns -1",
+    "n = 4 returns 0",
+    "n = 2 returns -1",
+    "n = 6 returns 1",
+    "n = 12 returns 0"
+  ],
+  "inputs": "A positive integer n <= 5000",
+  "method_id": "sympy.mobius",
+  "output": "An integer in {-1, 0, 1} where:\n- 1 if n = 1\n- 0 if n has a squared prime factor\n- (-1)^k if n is square-free with k distinct prime factors",
+  "purpose": "Compute the Mobius function value for a natural number n, returning {-1, 0, or 1} based on prime factorization properties",
+  "signature": "solve(n)"
+}

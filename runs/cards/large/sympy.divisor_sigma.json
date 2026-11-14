@@ -1,0 +1,121 @@
+{
+  "elapsed_seconds": 7.611306744999865,
+  "finished_at": "2026-11-14T13:13:10.689190+00:00",
+  "parsed": {
+    "algorithm": [
+      "If n is 1, return 1 if k==0 else 1 (since 1^k=1 for any k)",
+      "Factorize n into its prime factors: n = \\prod_{i=1}^\\omega p_i^{m_i}",
+      "For each prime factor p_i with exponent m_i, compute the geometric series sum: S_i = 1 + p_i^k + p_i^{2k} + ... + p_i^{m_i k}",
+      "Multiply all S_i together to get \\sigma_k(n)",
+      "Return the product as the result"
+    ],
+    "constraints": [
+      "n must be a positive integer <= 1000",
+      "k must be an integer between 0 and 4 inclusive",
+      "The result must be an exact Python integer"
+    ],
+    "edge_cases": [
+      "n=1: \\sigma_k(1) = 1 for any k",
+      "k=0: \\sigma_0(n) = number of divisors of n",
+      "k= 4: \\sigma_4(n) = sum of fourth powers of divisors",
+      "n=prime: \\sigma_k(p) = 1 + p^k",
+      "n=prime^m: \\sigma_k(p^m) = (p^{(m+1)k} - 1)/(p^k - 1) for p^k != 1"
+    ],
+    "inputs": "n: positive integer <= 1000, k: integer in 0..4",
+    "method_id": "sympy.divisor_sigma",
+    "output": "exact Python int representing \\sigma_k(n)",
+    "purpose": "Calculate the divisor function \\sigma_k(n) for positive integer n, which is the sum of k-th powers of all positive divisors of n.",
+    "signature": "solve(n, k=1)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"n is a positive integer <=1000, k is an integer in 0..4. Return an exact Python int.\",\n  \"documentation\": \"Calculate the divisor function `\\\\sigma_k(n)` for positive integer n\\n\\n``divisor_sigma(n, k)`` is equal to ``sum([x**k for x in divisors(n)])``\\n\\nIf n's prime factorization is:\\n\\n.. math ::\\n    n = \\\\prod_{i=1}^\\\\omega p_i^{m_i},\\n\\nthen\\n\\n.. math ::\\n    \\\\sigma_k(n) = \\\\prod_{i=1}^\\\\omega (1+p_i^k+p_i^{2k}+\\\\cdots\\n    + p_i^{m_ik}).\\n\\nExamples\\n========\\n\\n>>> from sympy.functions.combinatorial.numbers import divisor_sigma\\n>>> divisor_sigma(18, 0)\\n6\\n>>> divisor_sigma(39, 1)\\n56\\n>>> divisor_sigma(12, 2)\\n210\\n>>> divisor_sigma(37)\\n38\\n\\nSee Also\\n========\\n\\nsympy.ntheory.factor_.divisor_count, totient, sympy.ntheory.factor_.divisors, sympy.ntheory.factor_.factorint\\n\\nReferences\\n==========\\n\\n.. [1] https://en.wikipedia.org/wiki/Divisor_function\",\n  \"documentation_truncated\": false,\n  \"group\": \"divisors\",\n  \"id\": \"sympy.divisor_sigma\",\n  \"library\": \"sympy\",\n  \"name\": \"divisor_sigma\",\n  \"signature\": \"solve(n, k=1)\",\n  \"version\": \"1.14.0\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:4b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:13:10.688874662Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 417,
+    "eval_duration": 7376279000,
+    "load_duration": 492278,
+    "message": {
+      "content": "{\n  \"method_id\": \"sympy.divisor_sigma\",\n  \"signature\": \"solve(n, k=1)\",\n  \"purpose\": \"Calculate the divisor function \\\\sigma_k(n) for positive integer n, which is the sum of k-th powers of all positive divisors of n.\",\n  \"inputs\": \"n: positive integer <= 1000, k: integer in 0..4\",\n  \"output\": \"exact Python int representing \\\\sigma_k(n)\",\n  \"algorithm\": [\n    \"If n is 1, return 1 if k==0 else 1 (since 1^k=1 for any k)\",\n    \"Factorize n into its prime factors: n = \\\\prod_{i=1}^\\\\omega p_i^{m_i}\",\n    \"For each prime factor p_i with exponent m_i, compute the geometric series sum: S_i = 1 + p_i^k + p_i^{2k} + ... + p_i^{m_i k}\",\n    \"Multiply all S_i together to get \\\\sigma_k(n)\",\n    \"Return the product as the result\"\n  ],\n  \"edge_cases\": [\n    \"n=1: \\\\sigma_k(1) = 1 for any k\",\n    \"k=0: \\\\sigma_0(n) = number of divisors of n\",\n    \"k= 4: \\\\sigma_4(n) = sum of fourth powers of divisors\",\n    \"n=prime: \\\\sigma_k(p) = 1 + p^k\",\n    \"n=prime^m: \\\\sigma_k(p^m) = (p^{(m+1)k} - 1)/(p^k - 1) for p^k != 1\"\n  ],\n  \"constraints\": [\n    \"n must be a positive integer <= 1000\",\n    \"k must be an integer between 0 and 4 inclusive\",\n    \"The result must be an exact Python integer\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:4b",
+    "prompt_eval_cached_count": 350,
+    "prompt_eval_count": 725,
+    "prompt_eval_duration": 186074000,
+    "total_duration": 7610690913
+  },
+  "started_at": "2026-11-14T13:13:03.077882+00:00",
+  "valid": true
+}

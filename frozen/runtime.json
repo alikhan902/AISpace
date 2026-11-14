@@ -1,0 +1,9 @@
+{
+  "OLLAMA_MAX_LOADED_MODELS": "1",
+  "binary": "/home/alikhan/AISpace/qwen_method_benchmark/.runtime/usr/bin/ollama",
+  "binary_sha256": "ee39b0560e18c06af0e5cbdb132f95ea13930c375a42cd71e5a90f623d73e25e",
+  "cublas": "13.8.2.12",
+  "cuda_package": "ollama-cuda 0.40.16-1.1 CachyOS x86_64_v3",
+  "cuda_runtime": "13.4.92",
+  "nvrtc": "13.5.37"
+}

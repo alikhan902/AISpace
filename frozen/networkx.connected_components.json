@@ -1,0 +1,11829 @@
+{
+  "brief": {
+    "contract": "n is an integer >= 1; vertices are 0,...,n-1. edges is a list of distinct [u,v] pairs with 0<=u<v<n. Construct a simple undirected unweighted graph including isolated vertices. Return plain JSON-compatible Python values. Dictionary vertex keys must be strings. Return components as internally sorted lists, with the outer list lexicographically sorted.",
+    "documentation": "Generate connected components.\n\nThe connected components of an undirected graph partition the graph into\ndisjoint sets of nodes. Each of these sets induces a subgraph of graph\n`G` that is connected and not part of any larger connected subgraph.\n\nA graph is connected (:func:`is_connected`) if, for every pair of distinct\nnodes, there is a path between them. If there is a pair of nodes for\nwhich such path does not exist, the graph is not connected (also referred\nto as \"disconnected\").\n\nA graph consisting of a single node and no edges is connected.\nConnectivity is undefined for the null graph (graph with no nodes).\n\nParameters\n----------\nG : NetworkX graph\n   An undirected graph\n\nYields\n------\ncomp : set\n   A set of nodes in one connected component of the graph.\n\nRaises\n------\nNetworkXNotImplemented\n    If G is directed.\n\nExamples\n--------\nGenerate a sorted list of connected components, largest first.\n\n>>> G = nx.path_graph(4)\n>>> nx.add_path(G, [10, 11, 12])\n>>> [len(c) for c in sorted(nx.connected_components(G), key=len, reverse=True)]\n[4, 3]\n\nIf you only want the largest connected component, it's more\nefficient to use max instead of sort.\n\n>>> largest_cc = max(nx.connected_components(G), key=len)\n\nTo create the induced subgraph of each component use:\n\n>>> S = [G.subgraph(c).copy() for c in nx.connected_components(G)]\n\nSee Also\n--------\nnumber_connected_components\nis_connected\nnumber_weakly_connected_components\nnumber_strongly_connected_components\n\nNotes\n-----\nThis function is for undirected graphs only. For directed graphs, use\n:func:`strongly_connected_components` or\n:func:`weakly_connected_components`.\n\nThe algorithm is based on a Breadth-First Search (BFS) traversal and its\ntime complexity is $O(n + m)$, where $n$ is the number of nodes and $m$ the\nnumber of edges in the graph.",
+    "documentation_truncated": false,
+    "group": "connectivity",
+    "id": "networkx.connected_components",
+    "library": "networkx",
+    "name": "connected_components",
+    "signature": "solve(n, edges)",
+    "version": "3.6.1"
+  },
+  "cases": [
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0000",
+      "input": {
+        "edges": [],
+        "n": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0001",
+      "input": {
+        "edges": [],
+        "n": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0002",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "n": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0003",
+      "input": {
+        "edges": [],
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1
+          ],
+          [
+            2
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0004",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            2
+          ],
+          [
+            1
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0005",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ]
+        ],
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0006",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0007",
+      "input": {
+        "edges": [
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0008",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0009",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0010",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0011",
+      "input": {
+        "edges": [],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0012",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            2
+          ],
+          [
+            1
+          ],
+          [
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0013",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0014",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            3
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0015",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0016",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0017",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0018",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0019",
+      "input": {
+        "edges": [
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0020",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0021",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0022",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0023",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0024",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0025",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0026",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0027",
+      "input": {
+        "edges": [
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0028",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0029",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0030",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0031",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0032",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0033",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0034",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0035",
+      "input": {
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0036",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0037",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0038",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0039",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0040",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0041",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0042",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0043",
+      "input": {
+        "edges": [
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0044",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0045",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0046",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0047",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0048",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0049",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0050",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0051",
+      "input": {
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0052",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0053",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0054",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0055",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0056",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0057",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0058",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0059",
+      "input": {
+        "edges": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0060",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0061",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0062",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0063",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0064",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0065",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0066",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0067",
+      "input": {
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0068",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0069",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0070",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0071",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0072",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0073",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0074",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0075",
+      "input": {
+        "edges": [],
+        "n": 5
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0076",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0077",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0078",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0079",
+      "input": {
+        "edges": [],
+        "n": 6
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0080",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0081",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0082",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ],
+          [
+            7
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0083",
+      "input": {
+        "edges": [],
+        "n": 8
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0084",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0085",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0086",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ],
+          [
+            7
+          ],
+          [
+            8
+          ],
+          [
+            9
+          ],
+          [
+            10
+          ],
+          [
+            11
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0087",
+      "input": {
+        "edges": [],
+        "n": 12
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0088",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0089",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0090",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            4,
+            6,
+            7
+          ],
+          [
+            1
+          ],
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            8
+          ],
+          [
+            9
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0091",
+      "input": {
+        "edges": [
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            6
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0092",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0093",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1,
+            2,
+            4,
+            6
+          ],
+          [
+            3
+          ],
+          [
+            5
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0094",
+      "input": {
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0095",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6
+          ],
+          [
+            5
+          ],
+          [
+            7
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0096",
+      "input": {
+        "edges": [
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            6
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1,
+            3,
+            4
+          ],
+          [
+            2
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0097",
+      "input": {
+        "edges": [
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0098",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            7,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            4,
+            5,
+            7
+          ],
+          [
+            3
+          ],
+          [
+            6
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0099",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0100",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0101",
+      "input": {
+        "edges": [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9
+          ],
+          [
+            8
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0102",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            7,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0103",
+      "input": {
+        "edges": [
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0104",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0105",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6
+          ],
+          [
+            8
+          ],
+          [
+            9
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0106",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0107",
+      "input": {
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0108",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            6
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            3
+          ],
+          [
+            1
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0109",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          [
+            7
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0110",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0111",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            4,
+            5
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0112",
+      "input": {
+        "edges": [
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          [
+            8
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0113",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0114",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0115",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0116",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0117",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0118",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0119",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0120",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0121",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0122",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          [
+            7
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0123",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0124",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0125",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0126",
+      "input": {
+        "edges": [
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0127",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          [
+            4
+          ],
+          [
+            11
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0128",
+      "input": {
+        "edges": [
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1,
+            2,
+            4,
+            5
+          ],
+          [
+            3
+          ],
+          [
+            6
+          ],
+          [
+            7
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0129",
+      "input": {
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1,
+            4,
+            7,
+            9
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0130",
+      "input": {
+        "edges": [
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1,
+            3,
+            6
+          ],
+          [
+            2
+          ],
+          [
+            4
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            7
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0131",
+      "input": {
+        "edges": [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0132",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0133",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0134",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0135",
+      "input": {
+        "edges": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0136",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ],
+          [
+            6,
+            8,
+            10
+          ],
+          [
+            7
+          ],
+          [
+            9
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0137",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            8,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0138",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0139",
+      "input": {
+        "edges": [
+          [
+            1,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            2,
+            6
+          ],
+          [
+            1
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ],
+          [
+            7
+          ],
+          [
+            9
+          ],
+          [
+            10
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0140",
+      "input": {
+        "edges": [
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            8
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0141",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            9
+          ],
+          [
+            6
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0142",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            7,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0143",
+      "input": {
+        "edges": [
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0144",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0145",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0146",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0147",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4
+          ],
+          [
+            6
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0148",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4
+          ],
+          [
+            7
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0149",
+      "input": {
+        "edges": [
+          [
+            1,
+            6
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0150",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8
+          ],
+          [
+            7
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0151",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0152",
+      "input": {
+        "edges": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0153",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            4
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            7,
+            9,
+            11
+          ],
+          [
+            5,
+            6,
+            10
+          ],
+          [
+            8
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0154",
+      "input": {
+        "edges": [
+          [
+            0,
+            4
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0155",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0156",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0157",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            3,
+            4,
+            5,
+            7
+          ],
+          [
+            2
+          ],
+          [
+            6
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0158",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            3,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          [
+            1,
+            2,
+            4
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0159",
+      "input": {
+        "edges": [
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0160",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0161",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0162",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0163",
+      "input": {
+        "edges": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0164",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0165",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0166",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            3
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ],
+          [
+            7
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0167",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0168",
+      "input": {
+        "edges": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            5,
+            6,
+            7
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ],
+          [
+            8
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0169",
+      "input": {
+        "edges": [
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            3,
+            4
+          ],
+          [
+            2
+          ],
+          [
+            5
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0170",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            2,
+            3,
+            6,
+            7,
+            9
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            4
+          ],
+          [
+            8
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0171",
+      "input": {
+        "edges": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            6,
+            7
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0172",
+      "input": {
+        "edges": [
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0173",
+      "input": {
+        "edges": [
+          [
+            1,
+            9
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            8
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0
+          ],
+          [
+            1,
+            2,
+            3,
+            7
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0174",
+      "input": {
+        "edges": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0175",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0176",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0177",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            3,
+            5,
+            6
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0178",
+      "input": {
+        "edges": [
+          [
+            0,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0179",
+      "input": {
+        "edges": [
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            10
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0180",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0181",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            2
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0182",
+      "input": {
+        "edges": [
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          [
+            2
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0183",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0184",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            2
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0185",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0186",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0187",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          [
+            0,
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          [
+            2
+          ]
+        ]
+      },
+      "id": "networkx.connected_components:0188",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 7
+      }
+    }
+  ]
+}

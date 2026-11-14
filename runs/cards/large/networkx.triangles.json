@@ -1,0 +1,125 @@
+{
+  "elapsed_seconds": 7.460363683999958,
+  "finished_at": "2026-11-14T13:14:55.521248+00:00",
+  "parsed": {
+    "algorithm": [
+      "For each vertex i in the graph (0 to n-1), count the number of triangles that include i",
+      "A triangle is formed by three vertices a, b, c such that (a,b), (b,c), and (c,a) are all edges in the graph",
+      "For each vertex i, iterate over its neighbors j and k such that j < k and both j and k are neighbors of i",
+      "Check if j and k are connected by an edge to form a triangle with i",
+      "Count the number of such valid (j,k) pairs for each i"
+    ],
+    "constraints": [
+      "Vertices are labeled 0 to n-1",
+      "Edges are distinct pairs with u < v",
+      "Graph is simple undirected unweighted",
+      "Triangle count is an integer",
+      "Output dictionary keys are strings",
+      "No self-loops or duplicate edges in input"
+    ],
+    "edge_cases": [
+      "n=1: graph has one isolated vertex, triangle count is 0",
+      "n=2: graph has two isolated vertices, triangle count is 0",
+      "Graph with no edges: all vertices have triangle count 0",
+      "Complete graph with n nodes: each vertex has (n-1 choose 2) triangles",
+      "Graph with self-loops: ignored (per documentation)",
+      "Graph with duplicate edges: ignored (edges are distinct per contract)"
+    ],
+    "inputs": "n: integer >= 1; edges: list of distinct [u,v] pairs where 0<=u<v<n",
+    "method_id": "networkx.triangles",
+    "output": "Dictionary mapping each string vertex key to its integer triangle count",
+    "purpose": "Compute the number of triangles for each vertex in a simple undirected unweighted graph",
+    "signature": "solve(n, edges)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"n is an integer >= 1; vertices are 0,...,n-1. edges is a list of distinct [u,v] pairs with 0<=u<v<n. Construct a simple undirected unweighted graph including isolated vertices. Return plain JSON-compatible Python values. Dictionary vertex keys must be strings. Return a dict mapping every string vertex key to its integer triangle count.\",\n  \"documentation\": \"Compute the number of triangles.\\n\\nFinds the number of triangles that include a node as one vertex.\\n\\nParameters\\n----------\\nG : graph\\n   A networkx graph\\n\\nnodes : node, iterable of nodes, or None (default=None)\\n    If a singleton node, return the number of triangles for that node.\\n    If an iterable, compute the number of triangles for each of those nodes.\\n    If `None` (the default) compute the number of triangles for all nodes in `G`.\\n\\nReturns\\n-------\\nout : dict or int\\n   If `nodes` is a container of nodes, returns number of triangles keyed by node (dict).\\n   If `nodes` is a specific node, returns number of triangles for the node (int).\\n\\nExamples\\n--------\\n>>> G = nx.complete_graph(5)\\n>>> print(nx.triangles(G, 0))\\n6\\n>>> print(nx.triangles(G))\\n{0: 6, 1: 6, 2: 6, 3: 6, 4: 6}\\n>>> print(list(nx.triangles(G, [0, 1]).values()))\\n[6, 6]\\n\\nThe total number of unique triangles in `G` can be determined by summing\\nthe number of triangles for each node and dividing by 3 (because a given\\ntriangle gets counted three times, once for each of its nodes).\\n\\n>>> sum(nx.triangles(G).values()) // 3\\n10\\n\\nNotes\\n-----\\nSelf loops are ignored.\",\n  \"documentation_truncated\": false,\n  \"group\": \"local_structure\",\n  \"id\": \"networkx.triangles\",\n  \"library\": \"networkx\",\n  \"name\": \"triangles\",\n  \"signature\": \"solve(n, edges)\",\n  \"version\": \"3.6.1\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:4b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:14:55.520897837Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 403,
+    "eval_duration": 6871369000,
+    "load_duration": 659025,
+    "message": {
+      "content": "{\n  \"method_id\": \"networkx.triangles\",\n  \"signature\": \"solve(n, edges)\",\n  \"purpose\": \"Compute the number of triangles for each vertex in a simple undirected unweighted graph\",\n  \"inputs\": \"n: integer >= 1; edges: list of distinct [u,v] pairs where 0<=u<v<n\",\n  \"output\": \"Dictionary mapping each string vertex key to its integer triangle count\",\n  \"algorithm\": [\n    \"For each vertex i in the graph (0 to n-1), count the number of triangles that include i\",\n    \"A triangle is formed by three vertices a, b, c such that (a,b), (b,c), and (c,a) are all edges in the graph\",\n    \"For each vertex i, iterate over its neighbors j and k such that j < k and both j and k are neighbors of i\",\n    \"Check if j and k are connected by an edge to form a triangle with i\",\n    \"Count the number of such valid (j,k) pairs for each i\"\n  ],\n  \"edge_cases\": [\n    \"n=1: graph has one isolated vertex, triangle count is 0\",\n    \"n=2: graph has two isolated vertices, triangle count is 0\",\n    \"Graph with no edges: all vertices have triangle count 0\",\n    \"Complete graph with n nodes: each vertex has (n-1 choose 2) triangles\",\n    \"Graph with self-loops: ignored (per documentation)\",\n    \"Graph with duplicate edges: ignored (edges are distinct per contract)\"\n  ],\n  \"constraints\": [\n    \"Vertices are labeled 0 to n-1\",\n    \"Edges are distinct pairs with u < v\",\n    \"Graph is simple undirected unweighted\",\n    \"Triangle count is an integer\",\n    \"Output dictionary keys are strings\",\n    \"No self-loops or duplicate edges in input\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:4b",
+    "prompt_eval_cached_count": 410,
+    "prompt_eval_count": 840,
+    "prompt_eval_duration": 173303000,
+    "total_duration": 7459643372
+  },
+  "started_at": "2026-11-14T13:14:48.060883+00:00",
+  "valid": true
+}

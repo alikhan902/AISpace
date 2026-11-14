@@ -1,0 +1,61 @@
+{
+  "elapsed_seconds": 5.756758805000118,
+  "finished_at": "2026-11-14T13:28:49.857413+00:00",
+  "parsed": {
+    "code": "def solve(n, edges):\n    if n == 1:\n        return 0\n\n    # Build adjacency list\n    adj = {i: [] for i in range(n)}\n    for u, v in edges:\n        adj[u].append(v)\n        adj[v].append(u)\n\n    # Check for disconnected graph\n    visited = set()\n    stack = [0]\n    while stack:\n        node = stack.pop()\n        if node not in visited:\n            visited.add(node)\n            for neighbor in adj[node]:\n                if neighbor not in visited:\n                    stack.append(neighbor)\n\n    if len(visited) != n:\n        raise ValueError(\"Graph is disconnected\")\n\n    # Compute eccentricity for each vertex\n    eccentricities = {}\n    for node in range(n):\n        # BFS from this node\n        dist = {node: 0}\n        queue = collections.deque([node])\n        while queue:\n            current = queue.popleft()\n            for neighbor in adj[current]:\n                if neighbor not in dist:\n                    dist[neighbor] = dist[current] + 1\n                    queue.append(neighbor)\n        # Eccentricity is max distance from this node\n        ecc = max(dist.values()) if dist else 0\n        eccentricities[str(node)] = ecc\n\n    # Find the diameter (max eccentricity)\n    diameter = max(eccentricities.values())\n    return diameter"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Implement a Python function from a JSON behavioral card. The card is the only task specification. Return a JSON object with a single string field code containing executable Python source. Define solve with the card's exact signature. Use only Python's standard library. Allowed imports: math, itertools, functools, collections, heapq, bisect, statistics, fractions, operator, typing. Do not import or call NumPy, SymPy, NetworkX or any other third-party library. Do not read files, use network, introspection, eval, exec, input or print. Implement computations yourself using built-ins and the allowed standard library. Return plain JSON-compatible values, not iterators or sets; use string keys in dictionaries. Include any helper functions in the code. No tests or main block. Raise ValueError where the card requires it.",
+        "role": "system"
+      },
+      {
+        "content": "Implement this card:\n{\n  \"algorithm\": [\n    \"Compute the eccentricity of each vertex.\",\n    \"Find the maximum eccentricity (diameter).\",\n    \"Return the maximum eccentricity as the diameter.\"\n  ],\n  \"constraints\": [\n    \"Vertices are numbered 0 to n-1.\",\n    \"Edges are distinct and contain only distinct pairs.\",\n    \"Graph is simple and undirected.\",\n    \"Graph is unweighted.\",\n    \"If graph is disconnected, raise ValueError.\"\n  ],\n  \"edge_cases\": [\n    \"A singleton graph (n=1) has diameter 0.\",\n    \"A disconnected graph raises ValueError.\"\n  ],\n  \"inputs\": \"n is an integer >= 1, edges is a list of distinct [u, v] pairs with 0 <= u < v < n.\",\n  \"method_id\": \"networkx.diameter\",\n  \"output\": \"A dictionary of every vertex's eccentricity, with keys as strings and values as integers, or an integer if the graph is disconnected.\",\n  \"purpose\": \"Compute the diameter of a simple undirected unweighted graph.\",\n  \"signature\": \"solve(n, edges)\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:4b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 3072,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:28:49.857094706Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 332,
+    "eval_duration": 5600814000,
+    "load_duration": 917174,
+    "message": {
+      "content": "{\n  \"code\": \"def solve(n, edges):\\n    if n == 1:\\n        return 0\\n\\n    # Build adjacency list\\n    adj = {i: [] for i in range(n)}\\n    for u, v in edges:\\n        adj[u].append(v)\\n        adj[v].append(u)\\n\\n    # Check for disconnected graph\\n    visited = set()\\n    stack = [0]\\n    while stack:\\n        node = stack.pop()\\n        if node not in visited:\\n            visited.add(node)\\n            for neighbor in adj[node]:\\n                if neighbor not in visited:\\n                    stack.append(neighbor)\\n\\n    if len(visited) != n:\\n        raise ValueError(\\\"Graph is disconnected\\\")\\n\\n    # Compute eccentricity for each vertex\\n    eccentricities = {}\\n    for node in range(n):\\n        # BFS from this node\\n        dist = {node: 0}\\n        queue = collections.deque([node])\\n        while queue:\\n            current = queue.popleft()\\n            for neighbor in adj[current]:\\n                if neighbor not in dist:\\n                    dist[neighbor] = dist[current] + 1\\n                    queue.append(neighbor)\\n        # Eccentricity is max distance from this node\\n        ecc = max(dist.values()) if dist else 0\\n        eccentricities[str(node)] = ecc\\n\\n    # Find the diameter (max eccentricity)\\n    diameter = max(eccentricities.values())\\n    return diameter\"\n  }",
+      "role": "assistant"
+    },
+    "model": "qwen3:4b",
+    "prompt_eval_cached_count": 184,
+    "prompt_eval_count": 416,
+    "prompt_eval_duration": 134191000,
+    "total_duration": 5756136117
+  },
+  "started_at": "2026-11-14T13:28:44.100652+00:00",
+  "valid": true
+}

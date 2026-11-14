@@ -1,0 +1,4767 @@
+{
+  "brief": {
+    "contract": "x and y are integers or 1-D lists of integers. Support scalar/scalar, scalar/list, list/scalar and lists of the same length (including empty). Scalar/scalar returns int, all other inputs return a list. No other broadcasting is required. Values and results fit signed int64.",
+    "documentation": "gcd(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])\n\nReturns the greatest common divisor of ``|x1|`` and ``|x2|``\n\nParameters\n----------\nx1, x2 : array_like, int\n    Arrays of values.\n    If ``x1.shape != x2.shape``, they must be broadcastable to a common\n    shape (which becomes the shape of the output).\n\nReturns\n-------\ny : ndarray or scalar\n    The greatest common divisor of the absolute value of the inputs\n    This is a scalar if both `x1` and `x2` are scalars.\n\nSee Also\n--------\nlcm : The lowest common multiple\n\nExamples\n--------\n>>> import numpy as np\n>>> np.gcd(12, 20)\n4\n>>> np.gcd.reduce([15, 25, 35])\n5\n>>> np.gcd(np.arange(6), 20)\narray([20,  1,  2,  1,  4,  5])",
+    "documentation_truncated": false,
+    "group": "integer_arithmetic",
+    "id": "numpy.gcd",
+    "library": "numpy",
+    "name": "gcd",
+    "signature": "solve(x, y)",
+    "version": "2.5.4"
+  },
+  "cases": [
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "id": "numpy.gcd:0000",
+      "input": {
+        "x": -7,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0001",
+      "input": {
+        "x": -7,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0002",
+      "input": {
+        "x": -7,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0003",
+      "input": {
+        "x": -7,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0004",
+      "input": {
+        "x": -7,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0005",
+      "input": {
+        "x": -7,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0006",
+      "input": {
+        "x": -7,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "id": "numpy.gcd:0007",
+      "input": {
+        "x": -7,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0008",
+      "input": {
+        "x": -7,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0009",
+      "input": {
+        "x": -7,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0010",
+      "input": {
+        "x": -7,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0011",
+      "input": {
+        "x": -7,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0012",
+      "input": {
+        "x": -7,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0013",
+      "input": {
+        "x": -7,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "id": "numpy.gcd:0014",
+      "input": {
+        "x": -7,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0015",
+      "input": {
+        "x": -6,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "id": "numpy.gcd:0016",
+      "input": {
+        "x": -6,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0017",
+      "input": {
+        "x": -6,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0018",
+      "input": {
+        "x": -6,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.gcd:0019",
+      "input": {
+        "x": -6,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0020",
+      "input": {
+        "x": -6,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0021",
+      "input": {
+        "x": -6,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "id": "numpy.gcd:0022",
+      "input": {
+        "x": -6,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0023",
+      "input": {
+        "x": -6,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0024",
+      "input": {
+        "x": -6,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.gcd:0025",
+      "input": {
+        "x": -6,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0026",
+      "input": {
+        "x": -6,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0027",
+      "input": {
+        "x": -6,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "id": "numpy.gcd:0028",
+      "input": {
+        "x": -6,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0029",
+      "input": {
+        "x": -6,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0030",
+      "input": {
+        "x": -5,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0031",
+      "input": {
+        "x": -5,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.gcd:0032",
+      "input": {
+        "x": -5,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0033",
+      "input": {
+        "x": -5,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0034",
+      "input": {
+        "x": -5,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0035",
+      "input": {
+        "x": -5,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0036",
+      "input": {
+        "x": -5,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.gcd:0037",
+      "input": {
+        "x": -5,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0038",
+      "input": {
+        "x": -5,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0039",
+      "input": {
+        "x": -5,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0040",
+      "input": {
+        "x": -5,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0041",
+      "input": {
+        "x": -5,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.gcd:0042",
+      "input": {
+        "x": -5,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0043",
+      "input": {
+        "x": -5,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0044",
+      "input": {
+        "x": -5,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0045",
+      "input": {
+        "x": -4,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0046",
+      "input": {
+        "x": -4,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0047",
+      "input": {
+        "x": -4,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.gcd:0048",
+      "input": {
+        "x": -4,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0049",
+      "input": {
+        "x": -4,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0050",
+      "input": {
+        "x": -4,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0051",
+      "input": {
+        "x": -4,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.gcd:0052",
+      "input": {
+        "x": -4,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0053",
+      "input": {
+        "x": -4,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0054",
+      "input": {
+        "x": -4,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0055",
+      "input": {
+        "x": -4,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.gcd:0056",
+      "input": {
+        "x": -4,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0057",
+      "input": {
+        "x": -4,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0058",
+      "input": {
+        "x": -4,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0059",
+      "input": {
+        "x": -4,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0060",
+      "input": {
+        "x": -3,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.gcd:0061",
+      "input": {
+        "x": -3,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0062",
+      "input": {
+        "x": -3,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0063",
+      "input": {
+        "x": -3,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.gcd:0064",
+      "input": {
+        "x": -3,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0065",
+      "input": {
+        "x": -3,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0066",
+      "input": {
+        "x": -3,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.gcd:0067",
+      "input": {
+        "x": -3,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0068",
+      "input": {
+        "x": -3,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0069",
+      "input": {
+        "x": -3,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.gcd:0070",
+      "input": {
+        "x": -3,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0071",
+      "input": {
+        "x": -3,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0072",
+      "input": {
+        "x": -3,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.gcd:0073",
+      "input": {
+        "x": -3,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0074",
+      "input": {
+        "x": -3,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0075",
+      "input": {
+        "x": -2,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0076",
+      "input": {
+        "x": -2,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0077",
+      "input": {
+        "x": -2,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0078",
+      "input": {
+        "x": -2,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0079",
+      "input": {
+        "x": -2,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0080",
+      "input": {
+        "x": -2,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0081",
+      "input": {
+        "x": -2,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0082",
+      "input": {
+        "x": -2,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0083",
+      "input": {
+        "x": -2,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0084",
+      "input": {
+        "x": -2,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0085",
+      "input": {
+        "x": -2,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0086",
+      "input": {
+        "x": -2,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0087",
+      "input": {
+        "x": -2,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0088",
+      "input": {
+        "x": -2,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0089",
+      "input": {
+        "x": -2,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0090",
+      "input": {
+        "x": -1,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0091",
+      "input": {
+        "x": -1,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0092",
+      "input": {
+        "x": -1,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0093",
+      "input": {
+        "x": -1,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0094",
+      "input": {
+        "x": -1,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0095",
+      "input": {
+        "x": -1,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0096",
+      "input": {
+        "x": -1,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0097",
+      "input": {
+        "x": -1,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0098",
+      "input": {
+        "x": -1,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0099",
+      "input": {
+        "x": -1,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0100",
+      "input": {
+        "x": -1,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0101",
+      "input": {
+        "x": -1,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0102",
+      "input": {
+        "x": -1,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0103",
+      "input": {
+        "x": -1,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0104",
+      "input": {
+        "x": -1,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "id": "numpy.gcd:0105",
+      "input": {
+        "x": 0,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "id": "numpy.gcd:0106",
+      "input": {
+        "x": 0,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.gcd:0107",
+      "input": {
+        "x": 0,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.gcd:0108",
+      "input": {
+        "x": 0,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.gcd:0109",
+      "input": {
+        "x": 0,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0110",
+      "input": {
+        "x": 0,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0111",
+      "input": {
+        "x": 0,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.gcd:0112",
+      "input": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0113",
+      "input": {
+        "x": 0,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0114",
+      "input": {
+        "x": 0,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.gcd:0115",
+      "input": {
+        "x": 0,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.gcd:0116",
+      "input": {
+        "x": 0,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.gcd:0117",
+      "input": {
+        "x": 0,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "id": "numpy.gcd:0118",
+      "input": {
+        "x": 0,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "id": "numpy.gcd:0119",
+      "input": {
+        "x": 0,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0120",
+      "input": {
+        "x": 1,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0121",
+      "input": {
+        "x": 1,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0122",
+      "input": {
+        "x": 1,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0123",
+      "input": {
+        "x": 1,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0124",
+      "input": {
+        "x": 1,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0125",
+      "input": {
+        "x": 1,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0126",
+      "input": {
+        "x": 1,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0127",
+      "input": {
+        "x": 1,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0128",
+      "input": {
+        "x": 1,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0129",
+      "input": {
+        "x": 1,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0130",
+      "input": {
+        "x": 1,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0131",
+      "input": {
+        "x": 1,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0132",
+      "input": {
+        "x": 1,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0133",
+      "input": {
+        "x": 1,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0134",
+      "input": {
+        "x": 1,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0135",
+      "input": {
+        "x": 2,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0136",
+      "input": {
+        "x": 2,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0137",
+      "input": {
+        "x": 2,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0138",
+      "input": {
+        "x": 2,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0139",
+      "input": {
+        "x": 2,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0140",
+      "input": {
+        "x": 2,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0141",
+      "input": {
+        "x": 2,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0142",
+      "input": {
+        "x": 2,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0143",
+      "input": {
+        "x": 2,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0144",
+      "input": {
+        "x": 2,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0145",
+      "input": {
+        "x": 2,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0146",
+      "input": {
+        "x": 2,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0147",
+      "input": {
+        "x": 2,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0148",
+      "input": {
+        "x": 2,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0149",
+      "input": {
+        "x": 2,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0150",
+      "input": {
+        "x": 3,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.gcd:0151",
+      "input": {
+        "x": 3,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0152",
+      "input": {
+        "x": 3,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0153",
+      "input": {
+        "x": 3,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.gcd:0154",
+      "input": {
+        "x": 3,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0155",
+      "input": {
+        "x": 3,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0156",
+      "input": {
+        "x": 3,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.gcd:0157",
+      "input": {
+        "x": 3,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0158",
+      "input": {
+        "x": 3,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0159",
+      "input": {
+        "x": 3,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.gcd:0160",
+      "input": {
+        "x": 3,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0161",
+      "input": {
+        "x": 3,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0162",
+      "input": {
+        "x": 3,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.gcd:0163",
+      "input": {
+        "x": 3,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0164",
+      "input": {
+        "x": 3,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0165",
+      "input": {
+        "x": 4,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0166",
+      "input": {
+        "x": 4,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0167",
+      "input": {
+        "x": 4,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.gcd:0168",
+      "input": {
+        "x": 4,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0169",
+      "input": {
+        "x": 4,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0170",
+      "input": {
+        "x": 4,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0171",
+      "input": {
+        "x": 4,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.gcd:0172",
+      "input": {
+        "x": 4,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0173",
+      "input": {
+        "x": 4,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0174",
+      "input": {
+        "x": 4,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0175",
+      "input": {
+        "x": 4,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.gcd:0176",
+      "input": {
+        "x": 4,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0177",
+      "input": {
+        "x": 4,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0178",
+      "input": {
+        "x": 4,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0179",
+      "input": {
+        "x": 4,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0180",
+      "input": {
+        "x": 5,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0181",
+      "input": {
+        "x": 5,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.gcd:0182",
+      "input": {
+        "x": 5,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0183",
+      "input": {
+        "x": 5,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0184",
+      "input": {
+        "x": 5,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0185",
+      "input": {
+        "x": 5,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0186",
+      "input": {
+        "x": 5,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.gcd:0187",
+      "input": {
+        "x": 5,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0188",
+      "input": {
+        "x": 5,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0189",
+      "input": {
+        "x": 5,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0190",
+      "input": {
+        "x": 5,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0191",
+      "input": {
+        "x": 5,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.gcd:0192",
+      "input": {
+        "x": 5,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0193",
+      "input": {
+        "x": 5,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0194",
+      "input": {
+        "x": 5,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0195",
+      "input": {
+        "x": 6,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "id": "numpy.gcd:0196",
+      "input": {
+        "x": 6,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0197",
+      "input": {
+        "x": 6,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0198",
+      "input": {
+        "x": 6,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.gcd:0199",
+      "input": {
+        "x": 6,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0200",
+      "input": {
+        "x": 6,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0201",
+      "input": {
+        "x": 6,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "id": "numpy.gcd:0202",
+      "input": {
+        "x": 6,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0203",
+      "input": {
+        "x": 6,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0204",
+      "input": {
+        "x": 6,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.gcd:0205",
+      "input": {
+        "x": 6,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.gcd:0206",
+      "input": {
+        "x": 6,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0207",
+      "input": {
+        "x": 6,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "id": "numpy.gcd:0208",
+      "input": {
+        "x": 6,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0209",
+      "input": {
+        "x": 6,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "id": "numpy.gcd:0210",
+      "input": {
+        "x": 7,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0211",
+      "input": {
+        "x": 7,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0212",
+      "input": {
+        "x": 7,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0213",
+      "input": {
+        "x": 7,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0214",
+      "input": {
+        "x": 7,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0215",
+      "input": {
+        "x": 7,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0216",
+      "input": {
+        "x": 7,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "id": "numpy.gcd:0217",
+      "input": {
+        "x": 7,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0218",
+      "input": {
+        "x": 7,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0219",
+      "input": {
+        "x": 7,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0220",
+      "input": {
+        "x": 7,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0221",
+      "input": {
+        "x": 7,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0222",
+      "input": {
+        "x": 7,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.gcd:0223",
+      "input": {
+        "x": 7,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "id": "numpy.gcd:0224",
+      "input": {
+        "x": 7,
+        "y": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          4,
+          8,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0225",
+      "input": {
+        "x": 8,
+        "y": [
+          7,
+          2,
+          12,
+          4,
+          8,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0226",
+      "input": {
+        "x": [
+          0,
+          9,
+          11,
+          -11,
+          3,
+          7,
+          11,
+          -10,
+          11,
+          -9,
+          -4
+        ],
+        "y": -1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          4,
+          1,
+          2,
+          8,
+          5,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0227",
+      "input": {
+        "x": [
+          1,
+          8,
+          -11,
+          6,
+          -8,
+          0,
+          -4,
+          2,
+          12,
+          -2,
+          7
+        ],
+        "y": [
+          -5,
+          12,
+          9,
+          -2,
+          8,
+          -5,
+          -3,
+          -7,
+          -11,
+          1,
+          8
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0228",
+      "input": {
+        "x": 5,
+        "y": [
+          7,
+          -11,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0229",
+      "input": {
+        "x": [
+          9,
+          0,
+          -1,
+          -12,
+          4,
+          6,
+          -12,
+          -2
+        ],
+        "y": -1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          4
+        ]
+      },
+      "id": "numpy.gcd:0230",
+      "input": {
+        "x": [
+          9,
+          -1,
+          8
+        ],
+        "y": [
+          10,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "id": "numpy.gcd:0231",
+      "input": {
+        "x": -7,
+        "y": []
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          7
+        ]
+      },
+      "id": "numpy.gcd:0232",
+      "input": {
+        "x": [
+          9,
+          -3,
+          -7
+        ],
+        "y": -7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          4,
+          1,
+          3,
+          1,
+          2,
+          8
+        ]
+      },
+      "id": "numpy.gcd:0233",
+      "input": {
+        "x": [
+          -11,
+          4,
+          -2,
+          9,
+          1,
+          2,
+          -8
+        ],
+        "y": [
+          -5,
+          -12,
+          -5,
+          -6,
+          -5,
+          -4,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1,
+          4,
+          1,
+          1,
+          4,
+          1,
+          8
+        ]
+      },
+      "id": "numpy.gcd:0234",
+      "input": {
+        "x": 8,
+        "y": [
+          2,
+          -3,
+          -4,
+          7,
+          -1,
+          4,
+          -11,
+          -8
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0235",
+      "input": {
+        "x": [
+          10,
+          6,
+          -3,
+          10
+        ],
+        "y": -7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          9,
+          2,
+          1,
+          8,
+          1,
+          1,
+          1,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0236",
+      "input": {
+        "x": [
+          3,
+          -9,
+          2,
+          8,
+          8,
+          -9,
+          1,
+          7,
+          2,
+          -9
+        ],
+        "y": [
+          -4,
+          9,
+          6,
+          7,
+          -8,
+          11,
+          0,
+          -2,
+          -10,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "id": "numpy.gcd:0237",
+      "input": {
+        "x": 7,
+        "y": [
+          -9
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "id": "numpy.gcd:0238",
+      "input": {
+        "x": [
+          5
+        ],
+        "y": -1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          2,
+          9
+        ]
+      },
+      "id": "numpy.gcd:0239",
+      "input": {
+        "x": [
+          -5,
+          11,
+          -8,
+          0
+        ],
+        "y": [
+          4,
+          -12,
+          2,
+          -9
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "id": "numpy.gcd:0240",
+      "input": {
+        "x": -7,
+        "y": [
+          -4
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "id": "numpy.gcd:0241",
+      "input": {
+        "x": [
+          -11
+        ],
+        "y": -7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          1,
+          3,
+          2,
+          4,
+          1,
+          5,
+          1,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0242",
+      "input": {
+        "x": [
+          2,
+          3,
+          9,
+          9,
+          10,
+          8,
+          -11,
+          5,
+          5,
+          -2,
+          7
+        ],
+        "y": [
+          12,
+          -12,
+          11,
+          -6,
+          2,
+          12,
+          -9,
+          0,
+          6,
+          12,
+          4
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "id": "numpy.gcd:0243",
+      "input": {
+        "x": 9,
+        "y": [
+          8
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          7,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0244",
+      "input": {
+        "x": [
+          3,
+          0,
+          11,
+          1,
+          -1,
+          -3,
+          9
+        ],
+        "y": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          0,
+          4,
+          4,
+          3,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0245",
+      "input": {
+        "x": [
+          4,
+          -7,
+          0,
+          -4,
+          12,
+          -9,
+          -1,
+          11
+        ],
+        "y": [
+          11,
+          -12,
+          0,
+          4,
+          8,
+          -12,
+          -10,
+          5
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.gcd:0246",
+      "input": {
+        "x": 4,
+        "y": [
+          7,
+          6,
+          -10,
+          9,
+          -6
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0247",
+      "input": {
+        "x": [
+          5,
+          1,
+          -9,
+          -4
+        ],
+        "y": -1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0248",
+      "input": {
+        "x": [
+          -10,
+          11,
+          11,
+          2,
+          9,
+          -1,
+          -2,
+          7,
+          10,
+          12,
+          -7
+        ],
+        "y": [
+          2,
+          8,
+          -10,
+          -12,
+          -11,
+          -3,
+          12,
+          3,
+          -1,
+          -2,
+          -5
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          8,
+          1,
+          8
+        ]
+      },
+      "id": "numpy.gcd:0249",
+      "input": {
+        "x": -8,
+        "y": [
+          -9,
+          -8,
+          -3,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0250",
+      "input": {
+        "x": [
+          6,
+          8
+        ],
+        "y": -7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "id": "numpy.gcd:0251",
+      "input": {
+        "x": [
+          4
+        ],
+        "y": [
+          5
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          1,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0252",
+      "input": {
+        "x": 4,
+        "y": [
+          -8,
+          -9,
+          -6,
+          -9
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0253",
+      "input": {
+        "x": [
+          -7,
+          -11,
+          0,
+          4,
+          11,
+          1,
+          -6,
+          1
+        ],
+        "y": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          1,
+          3,
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0254",
+      "input": {
+        "x": [
+          11,
+          -3,
+          9,
+          3,
+          -12,
+          11,
+          -1,
+          4
+        ],
+        "y": [
+          4,
+          -9,
+          10,
+          3,
+          9,
+          -12,
+          -3,
+          -5
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0255",
+      "input": {
+        "x": -1,
+        "y": [
+          7,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "id": "numpy.gcd:0256",
+      "input": {
+        "x": [],
+        "y": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "id": "numpy.gcd:0257",
+      "input": {
+        "x": [],
+        "y": []
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          1,
+          1,
+          4,
+          2,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0258",
+      "input": {
+        "x": -4,
+        "y": [
+          -4,
+          -5,
+          5,
+          -8,
+          2,
+          10,
+          -5
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "id": "numpy.gcd:0259",
+      "input": {
+        "x": [
+          -4
+        ],
+        "y": -1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0260",
+      "input": {
+        "x": [
+          -4,
+          -10
+        ],
+        "y": [
+          -8,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          2,
+          2,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ]
+      },
+      "id": "numpy.gcd:0261",
+      "input": {
+        "x": -6,
+        "y": [
+          9,
+          8,
+          -2,
+          -6,
+          -6,
+          6,
+          6,
+          -6,
+          12
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0262",
+      "input": {
+        "x": [
+          11,
+          -12,
+          -6,
+          3,
+          2,
+          -10,
+          -2,
+          8,
+          -12,
+          -5,
+          5
+        ],
+        "y": -1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          6,
+          2,
+          2,
+          4
+        ]
+      },
+      "id": "numpy.gcd:0263",
+      "input": {
+        "x": [
+          -6,
+          8,
+          2,
+          -4
+        ],
+        "y": [
+          -12,
+          6,
+          8,
+          8
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          3,
+          1,
+          3,
+          3
+        ]
+      },
+      "id": "numpy.gcd:0264",
+      "input": {
+        "x": 3,
+        "y": [
+          -1,
+          -7,
+          0,
+          5,
+          9,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0265",
+      "input": {
+        "x": [
+          5,
+          -12,
+          -2,
+          -11,
+          3,
+          4
+        ],
+        "y": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1,
+          1,
+          8,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0266",
+      "input": {
+        "x": [
+          4,
+          2,
+          7,
+          0,
+          3,
+          9,
+          2,
+          -8,
+          -5,
+          8,
+          -6
+        ],
+        "y": [
+          -2,
+          3,
+          3,
+          -8,
+          -6,
+          -6,
+          -8,
+          11,
+          -11,
+          3,
+          -7
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          5,
+          1,
+          1,
+          1,
+          5
+        ]
+      },
+      "id": "numpy.gcd:0267",
+      "input": {
+        "x": 5,
+        "y": [
+          5,
+          -4,
+          -7,
+          -7,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0268",
+      "input": {
+        "x": [
+          6,
+          9,
+          2,
+          9,
+          7,
+          -5,
+          3,
+          3,
+          -6,
+          -12
+        ],
+        "y": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          6,
+          1,
+          3,
+          7,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0269",
+      "input": {
+        "x": [
+          3,
+          12,
+          1,
+          -3,
+          -7,
+          5
+        ],
+        "y": [
+          5,
+          6,
+          -12,
+          6,
+          -7,
+          12
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          10,
+          5,
+          7,
+          12
+        ]
+      },
+      "id": "numpy.gcd:0270",
+      "input": {
+        "x": 0,
+        "y": [
+          4,
+          -10,
+          5,
+          -7,
+          -12
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          7,
+          7
+        ]
+      },
+      "id": "numpy.gcd:0271",
+      "input": {
+        "x": [
+          4,
+          1,
+          -9,
+          -12,
+          -11,
+          -7,
+          7
+        ],
+        "y": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0272",
+      "input": {
+        "x": [
+          -10,
+          -4
+        ],
+        "y": [
+          7,
+          5
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          7,
+          1,
+          1,
+          7,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0273",
+      "input": {
+        "x": -7,
+        "y": [
+          -1,
+          0,
+          4,
+          5,
+          7,
+          6,
+          9,
+          -8,
+          10
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          7,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0274",
+      "input": {
+        "x": [
+          -2,
+          -1,
+          0,
+          -1,
+          10,
+          -6,
+          -6,
+          -11,
+          -9
+        ],
+        "y": -7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2
+        ]
+      },
+      "id": "numpy.gcd:0275",
+      "input": {
+        "x": [
+          -1,
+          -10
+        ],
+        "y": [
+          -2,
+          8
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1,
+          4,
+          4,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0276",
+      "input": {
+        "x": 4,
+        "y": [
+          6,
+          -5,
+          -4,
+          4,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0277",
+      "input": {
+        "x": [
+          -6,
+          11,
+          3,
+          -1,
+          -8,
+          -11,
+          -4,
+          -9,
+          -3,
+          3
+        ],
+        "y": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0278",
+      "input": {
+        "x": [
+          -5,
+          -1
+        ],
+        "y": [
+          -6,
+          9
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "id": "numpy.gcd:0279",
+      "input": {
+        "x": 9,
+        "y": []
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0280",
+      "input": {
+        "x": [
+          -5,
+          11,
+          12,
+          5,
+          -4,
+          0,
+          6,
+          -11,
+          -4,
+          5
+        ],
+        "y": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          4,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.gcd:0281",
+      "input": {
+        "x": [
+          -2,
+          -2,
+          7,
+          6,
+          2,
+          6,
+          -2,
+          -2,
+          12,
+          -7,
+          -8
+        ],
+        "y": [
+          -8,
+          9,
+          6,
+          -7,
+          -7,
+          2,
+          -3,
+          -12,
+          8,
+          -6,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "id": "numpy.gcd:0282",
+      "input": {
+        "x": -8,
+        "y": []
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0283",
+      "input": {
+        "x": [
+          3,
+          11,
+          11,
+          -3,
+          -8,
+          -2,
+          -8,
+          5,
+          3,
+          -1
+        ],
+        "y": -1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          4
+        ]
+      },
+      "id": "numpy.gcd:0284",
+      "input": {
+        "x": [
+          4
+        ],
+        "y": [
+          12
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0285",
+      "input": {
+        "x": -1,
+        "y": [
+          -5,
+          -11
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          7,
+          1,
+          1,
+          1,
+          1,
+          7
+        ]
+      },
+      "id": "numpy.gcd:0286",
+      "input": {
+        "x": [
+          0,
+          2,
+          -9,
+          -11,
+          9,
+          -7
+        ],
+        "y": -7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0287",
+      "input": {
+        "x": [
+          0,
+          5,
+          3,
+          11,
+          -6,
+          6,
+          11
+        ],
+        "y": [
+          4,
+          6,
+          -7,
+          4,
+          -5,
+          -8,
+          -7
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          4,
+          4
+        ]
+      },
+      "id": "numpy.gcd:0288",
+      "input": {
+        "x": 8,
+        "y": [
+          6,
+          -4,
+          -4
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0289",
+      "input": {
+        "x": [
+          -9,
+          -4,
+          3
+        ],
+        "y": -7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          6,
+          1,
+          1,
+          5,
+          2,
+          1,
+          1,
+          1,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.gcd:0290",
+      "input": {
+        "x": [
+          -12,
+          -3,
+          4,
+          0,
+          10,
+          -6,
+          5,
+          10,
+          -1,
+          -12
+        ],
+        "y": [
+          6,
+          8,
+          -3,
+          -5,
+          -2,
+          7,
+          -11,
+          -3,
+          2,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          7,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0291",
+      "input": {
+        "x": [
+          -5,
+          -6,
+          6,
+          -11,
+          6,
+          -2,
+          1,
+          -12,
+          -10,
+          7,
+          -9
+        ],
+        "y": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          3,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0292",
+      "input": {
+        "x": [
+          11,
+          9,
+          9,
+          -5
+        ],
+        "y": [
+          -2,
+          -11,
+          -3,
+          -9
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0293",
+      "input": {
+        "x": 7,
+        "y": [
+          -11,
+          -8,
+          -11,
+          10,
+          11,
+          -11,
+          12,
+          -6,
+          -1,
+          -11,
+          11
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          7,
+          1,
+          1,
+          1,
+          1,
+          1,
+          7,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0294",
+      "input": {
+        "x": [
+          2,
+          7,
+          -12,
+          11,
+          -3,
+          -5,
+          -11,
+          7,
+          -2,
+          3,
+          9
+        ],
+        "y": -7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          4,
+          1,
+          1,
+          1,
+          1,
+          1,
+          5
+        ]
+      },
+      "id": "numpy.gcd:0295",
+      "input": {
+        "x": [
+          -3,
+          -4,
+          9,
+          -9,
+          -3,
+          8,
+          1,
+          5
+        ],
+        "y": [
+          1,
+          4,
+          5,
+          2,
+          11,
+          3,
+          -12,
+          5
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0296",
+      "input": {
+        "x": -7,
+        "y": [
+          5,
+          -6,
+          12,
+          10,
+          -5,
+          -4,
+          10,
+          2,
+          -11,
+          -4,
+          11
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "id": "numpy.gcd:0297",
+      "input": {
+        "x": [
+          8
+        ],
+        "y": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          4,
+          1,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0298",
+      "input": {
+        "x": [
+          8,
+          -8,
+          3,
+          -10,
+          -6,
+          7,
+          -5,
+          3,
+          -1,
+          -11
+        ],
+        "y": [
+          -4,
+          4,
+          5,
+          2,
+          -2,
+          4,
+          -11,
+          5,
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          5,
+          1,
+          5
+        ]
+      },
+      "id": "numpy.gcd:0299",
+      "input": {
+        "x": -5,
+        "y": [
+          4,
+          11,
+          -1,
+          -9,
+          -6,
+          1,
+          7,
+          10,
+          1,
+          10
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "id": "numpy.gcd:0300",
+      "input": {
+        "x": [
+          -2
+        ],
+        "y": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0301",
+      "input": {
+        "x": -2,
+        "y": [
+          4,
+          9
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "id": "numpy.gcd:0302",
+      "input": {
+        "x": [],
+        "y": -7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          3,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0303",
+      "input": {
+        "x": [
+          8,
+          -6,
+          1,
+          1,
+          1,
+          5,
+          -1,
+          11,
+          3
+        ],
+        "y": [
+          12,
+          -9,
+          1,
+          -9,
+          9,
+          3,
+          -3,
+          -2,
+          -4
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          6,
+          2,
+          3,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0304",
+      "input": {
+        "x": 6,
+        "y": [
+          -1,
+          10,
+          6,
+          2,
+          9,
+          -7
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "id": "numpy.gcd:0305",
+      "input": {
+        "x": [],
+        "y": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.gcd:0306",
+      "input": {
+        "x": [
+          -1,
+          -10,
+          -7,
+          1,
+          12,
+          1,
+          -11,
+          10,
+          9,
+          -8,
+          6
+        ],
+        "y": [
+          8,
+          -5,
+          2,
+          3,
+          -5,
+          -3,
+          12,
+          11,
+          -6,
+          1,
+          10
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2
+        ]
+      },
+      "id": "numpy.gcd:0307",
+      "input": {
+        "x": 2,
+        "y": [
+          -10
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "id": "numpy.gcd:0308",
+      "input": {
+        "x": [
+          0
+        ],
+        "y": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0309",
+      "input": {
+        "x": [
+          -4,
+          -10
+        ],
+        "y": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          1,
+          1,
+          3,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0310",
+      "input": {
+        "x": -3,
+        "y": [
+          -7,
+          -9,
+          -7,
+          2,
+          -6,
+          -7
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.gcd:0311",
+      "input": {
+        "x": [
+          1,
+          4,
+          12,
+          10
+        ],
+        "y": -7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "id": "numpy.gcd:0312",
+      "input": {
+        "x": [
+          -11
+        ],
+        "y": [
+          12
+        ]
+      }
+    }
+  ]
+}

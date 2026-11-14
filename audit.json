@@ -1,0 +1,25 @@
+{
+  "card_only_reconstruction_prompts_ok": true,
+  "cards": 90,
+  "case_accounting_ok": true,
+  "complete": true,
+  "frozen_hashes_ok": true,
+  "generation_failures": [
+    "runs/code/small_to_small/sympy.nextprime.json",
+    "runs/code/large_to_large/numpy.prod.json",
+    "runs/code/large_to_large/numpy.searchsorted.json",
+    "runs/code/large_to_large/sympy.factorial.json",
+    "runs/code/large_to_large/sympy.binomial.json",
+    "runs/code/large_to_large/networkx.triangles.json",
+    "runs/code/large_to_large/networkx.core_number.json",
+    "runs/code/small_to_large/numpy.power.json",
+    "runs/code/small_to_large/sympy.isprime.json",
+    "runs/code/small_to_large/networkx.shortest_path_length.json",
+    "runs/code/large_to_small/sympy.binomial.json"
+  ],
+  "implementations": 180,
+  "max_observed_total_tokens": 3854,
+  "observations": 45092,
+  "passed": 19413,
+  "unmodified_generated_code_ok": true
+}

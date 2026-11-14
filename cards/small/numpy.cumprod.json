@@ -1,0 +1,25 @@
+{
+  "algorithm": [
+    "Compute the cumulative product of elements along the specified axis.",
+    "Initialize the result array with the first element of `a`.",
+    "Iterate through the elements of `a` and multiply the current result by the next element.",
+    "Handle overflow by using integer arithmetic (modular arithmetic)."
+  ],
+  "constraints": [
+    "All intermediate values fit signed int64.",
+    "Use NumPy's default operation on the whole 1-D list, with dtype=int64.",
+    "No NumPy objects are returned; only Python int or list[int] is returned.",
+    "The result is returned as a new array unless `out` is specified."
+  ],
+  "edge_cases": [
+    "Empty input array: returns an empty list.",
+    "Input array with one element: returns a list with that element.",
+    "Specifying an axis that is out of bounds: returns the array as is.",
+    "Specifying a dtype that is not compatible with the input array: returns the array as is."
+  ],
+  "inputs": "a is a one-dimensional list of integers, possibly empty.",
+  "method_id": "cumprod",
+  "output": "A new array holding the result, or a reference to `out` if specified. The result is a list of integers.",
+  "purpose": "Compute the cumulative product of elements along a given axis.",
+  "signature": "solve(a)"
+}

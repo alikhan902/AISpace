@@ -1,0 +1,22 @@
+{
+  "algorithm": [
+    "Generate potential candidates using the form 6*j ± 1 (to skip composites)",
+    "Check for primality of each candidate using trial division or optimized methods",
+    "Return the largest candidate that is prime"
+  ],
+  "constraints": [
+    "n must be an integer in the range 3 to 5000",
+    "Return a plain Python int, no symbolic objects",
+    "Do not use any external libraries or functions beyond the provided reference"
+  ],
+  "edge_cases": [
+    "n = 3: return 2 (the only prime less than 3)",
+    "n = 5: return 3 (the only prime less than 5)",
+    "n = 5000: return the largest prime less than 5000"
+  ],
+  "inputs": "n is an integer in 3..5000",
+  "method_id": "sympy.prevprime",
+  "output": "A plain Python int, the largest prime strictly less than n",
+  "purpose": "Return the largest prime strictly less than n.",
+  "signature": "solve(n)"
+}

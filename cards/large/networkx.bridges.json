@@ -1,0 +1,26 @@
+{
+  "algorithm": [
+    "Construct a simple undirected graph from the input using vertex labels 0 to n-1",
+    "Identify connected components of the graph",
+    "For each connected component, find all edges that are not part of any cycle (bridges)",
+    "Return bridges sorted lexicographically by (u, v) with u < v"
+  ],
+  "constraints": [
+    "Vertices are labeled 0 to n-1",
+    "Edges are distinct and satisfy 0<=u<v<n",
+    "Graph must be simple (no self-loops or multi-edges)",
+    "Bridges must be returned with u < v and lexicographically sorted"
+  ],
+  "edge_cases": [
+    "Graph with no edges (all isolated vertices)",
+    "Graph with a single edge (one bridge)",
+    "Graph with multiple connected components",
+    "Graph where all edges are bridges (no cycles)",
+    "Graph with cycles (no bridges in cycles)"
+  ],
+  "inputs": "n: integer >= 1; edges: list of distinct [u,v] pairs with 0<=u<v<n",
+  "method_id": "networkx.bridges",
+  "output": "Sorted list of [u,v] pairs with u<v, lexicographically sorted, where u and v are string vertex keys",
+  "purpose": "Generate all bridges in a simple undirected graph with isolated vertices",
+  "signature": "solve(n, edges)"
+}

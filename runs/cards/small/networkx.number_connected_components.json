@@ -1,0 +1,121 @@
+{
+  "elapsed_seconds": 2.239891949999901,
+  "finished_at": "2026-11-14T13:08:04.563530+00:00",
+  "parsed": {
+    "algorithm": [
+      "Initialize a visited set and a queue.",
+      "For each unvisited node, perform a BFS/DFS to mark all reachable nodes.",
+      "Each BFS/DFS traversal corresponds to one connected component.",
+      "Count the number of such traversals."
+    ],
+    "constraints": [
+      "Edges are distinct and 0 <= u < v < n.",
+      "Graph is undirected and simple.",
+      "No cycles are allowed in the graph.",
+      "Graph is connected if all nodes are reachable from any starting node."
+    ],
+    "edge_cases": [
+      "n = 1 (single node, no edges): returns 1",
+      "n = 2, edges = []: returns 2",
+      "n = 2, edges = [(0, 1)]: returns 1",
+      "n = 3, edges = [(0, 1), (0, 2)]: returns 1",
+      "n = 3, edges = [(0, 1), (2, 3)]: returns 2"
+    ],
+    "inputs": "n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.",
+    "method_id": "networkx.number_connected_components",
+    "output": "int",
+    "purpose": "Returns the number of connected components in an undirected graph.",
+    "signature": "solve(n, edges)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"n is an integer >= 1; vertices are 0,...,n-1. edges is a list of distinct [u,v] pairs with 0<=u<v<n. Construct a simple undirected unweighted graph including isolated vertices. Return plain JSON-compatible Python values. Dictionary vertex keys must be strings. Return int for number_connected_components and bool for predicates.\",\n  \"documentation\": \"Returns the number of connected components.\\n\\nThe connected components of an undirected graph partition the graph into\\ndisjoint sets of nodes. Each of these sets induces a subgraph of graph\\n`G` that is connected and not part of any larger connected subgraph.\\n\\nA graph is connected (:func:`is_connected`) if, for every pair of distinct\\nnodes, there is a path between them. If there is a pair of nodes for\\nwhich such path does not exist, the graph is not connected (also referred\\nto as \\\"disconnected\\\").\\n\\nA graph consisting of a single node and no edges is connected.\\nConnectivity is undefined for the null graph (graph with no nodes).\\n\\nParameters\\n----------\\nG : NetworkX graph\\n   An undirected graph.\\n\\nReturns\\n-------\\nn : integer\\n   Number of connected components\\n\\nRaises\\n------\\nNetworkXNotImplemented\\n    If G is directed.\\n\\nExamples\\n--------\\n>>> G = nx.Graph([(0, 1), (1, 2), (5, 6), (3, 4)])\\n>>> nx.number_connected_components(G)\\n3\\n\\nSee Also\\n--------\\nconnected_components\\nis_connected\\nnumber_weakly_connected_components\\nnumber_strongly_connected_components\\n\\nNotes\\n-----\\nThis function is for undirected graphs only. For directed graphs, use\\n:func:`number_strongly_connected_components` or\\n:func:`number_weakly_connected_components`.\\n\\nThe algorithm is based on a Breadth-First Search (BFS) traversal and its\\ntime complexity is $O(n + m)$, where $n$ is the number of nodes and $m$ the\\nnumber of edges in the graph.\",\n  \"documentation_truncated\": false,\n  \"group\": \"connectivity\",\n  \"id\": \"networkx.number_connected_components\",\n  \"library\": \"networkx\",\n  \"name\": \"number_connected_components\",\n  \"signature\": \"solve(n, edges)\",\n  \"version\": \"3.6.1\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:1.7b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:08:04.56325209Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 311,
+    "eval_duration": 2076005000,
+    "load_duration": 593351,
+    "message": {
+      "content": "{\n  \"method_id\": \"networkx.number_connected_components\",\n  \"signature\": \"solve(n, edges)\",\n  \"purpose\": \"Returns the number of connected components in an undirected graph.\",\n  \"inputs\": \"n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.\",\n  \"output\": \"int\",\n  \"algorithm\": [\n    \"Initialize a visited set and a queue.\",\n    \"For each unvisited node, perform a BFS/DFS to mark all reachable nodes.\",\n    \"Each BFS/DFS traversal corresponds to one connected component.\",\n    \"Count the number of such traversals.\"\n  ],\n  \"edge_cases\": [\n    \"n = 1 (single node, no edges): returns 1\",\n    \"n = 2, edges = []: returns 2\",\n    \"n = 2, edges = [(0, 1)]: returns 1\",\n    \"n = 3, edges = [(0, 1), (0, 2)]: returns 1\",\n    \"n = 3, edges = [(0, 1), (2, 3)]: returns 2\"\n  ],\n  \"constraints\": [\n    \"Edges are distinct and 0 <= u < v < n.\",\n    \"Graph is undirected and simple.\",\n    \"No cycles are allowed in the graph.\",\n    \"Graph is connected if all nodes are reachable from any starting node.\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:1.7b",
+    "prompt_eval_cached_count": 348,
+    "prompt_eval_count": 874,
+    "prompt_eval_duration": 85436000,
+    "total_duration": 2239322044
+  },
+  "started_at": "2026-11-14T13:08:02.323637+00:00",
+  "valid": true
+}

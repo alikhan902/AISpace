@@ -1,0 +1,119 @@
+{
+  "elapsed_seconds": 7.643643268999995,
+  "finished_at": "2026-11-14T13:11:40.476614+00:00",
+  "parsed": {
+    "algorithm": [
+      "Initialize an output list with zeros of length max(a) + 1 if max(a) >= 0, otherwise length 1.",
+      "For each integer value in the input list a, increment the corresponding index in the output list by 1.",
+      "If minlength > 0, extend the output list to length minlength by appending zeros."
+    ],
+    "constraints": [
+      "Input list a must contain only nonnegative integers.",
+      "minlength must be a nonnegative integer.",
+      "The output list must be of integer type.",
+      "The output list length must be at least max(a) + 1 (if a is non-empty) or 1 (if a is empty)."
+    ],
+    "edge_cases": [
+      "Input list is empty: output is [0] if minlength > 0, otherwise [0] (but note: empty input is allowed per contract).",
+      "All input values are the same: output has one non-zero value at the index of that value.",
+      "minlength is 0: output length is max(a) + 1 (if a is non-empty) or 1 (if a is empty).",
+      "max(a) is negative: output is [0] (but contract specifies nonnegative integers, so this case is not expected)."
+    ],
+    "inputs": "a: list of nonnegative integers; minlength: nonnegative integer (default 0)",
+    "method_id": "numpy.bincount",
+    "output": "list of integers where each index corresponds to a non-negative integer value in the input, and the value at that index is the count of occurrences of that integer in the input. The length of the output list is equal to max(a) + 1 if minlength <= max(a) + 1, otherwise minlength.",
+    "purpose": "Count occurrences of each non-negative integer in the input array, returning a count list with NumPy's default unweighted behavior.",
+    "signature": "solve(a, minlength=0)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"a is a list of nonnegative integers; minlength is a nonnegative integer. Return the int count list with NumPy's default unweighted behavior. Empty input is allowed.\",\n  \"documentation\": \"bincount(x, /, weights=None, minlength=0)\\n\\nCount number of occurrences of each value in array of non-negative ints.\\n\\nThe number of bins (of size 1) is one larger than the largest value in\\n`x`. If `minlength` is specified, there will be at least this number\\nof bins in the output array (though it will be longer if necessary,\\ndepending on the contents of `x`).\\nEach bin gives the number of occurrences of its index value in `x`.\\nIf `weights` is specified the input array is weighted by it, i.e. if a\\nvalue ``n`` is found at position ``i``, ``out[n] += weight[i]`` instead\\nof ``out[n] += 1``.\\n\\nParameters\\n----------\\nx : array_like, 1 dimension, nonnegative ints\\n    Input array.\\nweights : array_like, optional\\n    Weights, array of the same shape as `x`.\\nminlength : int, optional\\n    A minimum number of bins for the output array.\\n\\nReturns\\n-------\\nout : ndarray of ints\\n    The result of binning the input array.\\n    The length of `out` is equal to ``np.amax(x)+1``.\\n\\nRaises\\n------\\nValueError\\n    If the input is not 1-dimensional, or contains elements with negative\\n    values, or if `minlength` is negative.\\nTypeError\\n    If the type of the input is float or complex.\\n\\nSee Also\\n--------\\nhistogram, digitize, unique\\n\\nExamples\\n--------\\n>>> import numpy as np\\n>>> np.bincount(np.arange(5))\\narray([1, 1, 1, 1, 1])\\n>>> np.bincount(np.array([0, 1, 1, 3, 2, 1, 7]))\\narray([1, 3, 1, 1, 0, 0, 0, 1])\\n\\n>>> x = np.array([0, 1, 1, 3, 2, 1, 7, 23])\\n>>> np.bincount(x).size == np.amax(x)+1\\nTrue\\n\\nThe input array needs to be of integer dtype, otherwise a\\nTypeError is raised:\\n\\n>>> np.bincount(np.arange(5, dtype=np.float64))\\nTraceback (most recent call last):\\n  ...\\nTypeError: Cannot cast array data from dtype('float64') to dtype('int64')\\naccording to the rule 'safe'\\n\\nA possible use of ``bincount`` is to perform sums over\\nvariable-size chunks of an array, using the ``weights`` keyword.\\n\\n>>> w = np.array([0.3, 0.5, 0.2, 0.7, 1., -0.6]) # weights\\n>>> x = np.array([0, 1, 1, 2, 2, 2])\\n>>> np.bincount(x,  weights=w)\\narray([ 0.3,  0.7,  1.1])\",\n  \"documentation_truncated\": false,\n  \"group\": \"ordering_counting\",\n  \"id\": \"numpy.bincount\",\n  \"library\": \"numpy\",\n  \"name\": \"bincount\",\n  \"signature\": \"solve(a, minlength=0)\",\n  \"version\": \"2.5.4\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:4b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:11:40.476036869Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 426,
+    "eval_duration": 7190654000,
+    "load_duration": 494072,
+    "message": {
+      "content": "{\n  \"method_id\": \"numpy.bincount\",\n  \"signature\": \"solve(a, minlength=0)\",\n  \"purpose\": \"Count occurrences of each non-negative integer in the input array, returning a count list with NumPy's default unweighted behavior.\",\n  \"inputs\": \"a: list of nonnegative integers; minlength: nonnegative integer (default 0)\",\n  \"output\": \"list of integers where each index corresponds to a non-negative integer value in the input, and the value at that index is the count of occurrences of that integer in the input. The length of the output list is equal to max(a) + 1 if minlength <= max(a) + 1, otherwise minlength.\",\n  \"algorithm\": [\n    \"Initialize an output list with zeros of length max(a) + 1 if max(a) >= 0, otherwise length 1.\",\n    \"For each integer value in the input list a, increment the corresponding index in the output list by 1.\",\n    \"If minlength > 0, extend the output list to length minlength by appending zeros.\"\n  ],\n  \"edge_cases\": [\n    \"Input list is empty: output is [0] if minlength > 0, otherwise [0] (but note: empty input is allowed per contract).\",\n    \"All input values are the same: output has one non-zero value at the index of that value.\",\n    \"minlength is 0: output length is max(a) + 1 (if a is non-empty) or 1 (if a is empty).\",\n    \"max(a) is negative: output is [0] (but contract specifies nonnegative integers, so this case is not expected).\"\n  ],\n  \"constraints\": [\n    \"Input list a must contain only nonnegative integers.\",\n    \"minlength must be a nonnegative integer.\",\n    \"The output list must be of integer type.\",\n    \"The output list length must be at least max(a) + 1 (if a is non-empty) or 1 (if a is empty).\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:4b",
+    "prompt_eval_cached_count": 347,
+    "prompt_eval_count": 1145,
+    "prompt_eval_duration": 359814000,
+    "total_duration": 7642768185
+  },
+  "started_at": "2026-11-14T13:11:32.832965+00:00",
+  "valid": true
+}

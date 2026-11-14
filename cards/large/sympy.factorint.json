@@ -1,0 +1,29 @@
+{
+  "algorithm": [
+    "For n < 2: return {0:1} if n==0, {} if n==1, or {-1:1} plus factorint(|n|) if n<0.",
+    "For n >= 2: perform trial division for small factors (up to a limit if specified), then use Pollard's rho and p-1 methods for larger factors.",
+    "Check if the remaining part is prime or a perfect power; stop early if found.",
+    "For unevaluated factorials, use Legendre's formula to compute multiplicities."
+  ],
+  "constraints": [
+    "n must be a positive integer <=5000",
+    "The output must be a plain Python dict with string keys and integer values",
+    "For negative n, the factorization includes -1:1 plus factors of |n|",
+    "The function handles partial factorization via limit parameter (default: no limit)",
+    "The function supports multiple output formats (list of factors, visual representation) but the default is a dict"
+  ],
+  "edge_cases": [
+    "n=0 returns {0:1}",
+    "n=1 returns {}",
+    "n=-1 returns {-1:1}",
+    "n=-2 returns {-1:1, 2:1}",
+    "n=65537 (prime) returns {65537:1}",
+    "n=2000 returns {2:4, 5:3}",
+    "n=3*101**7 with limit=5 returns {3:1, 101:7}"
+  ],
+  "inputs": "A positive integer n (<=5000) or a dictionary/unevaluated expression representing factors",
+  "method_id": "sympy.factorint",
+  "output": "A plain Python dict with string prime keys and integer multiplicities (e.g., {2: 4, 5: 3} for 2000). For n=1, returns {}; for n=0, returns {0:1}; for negative n, returns {-1:1} plus factors of |n|.",
+  "purpose": "Return a dictionary of prime factors with their multiplicities for a positive integer n, handling edge cases like 0, 1, and negative numbers.",
+  "signature": "solve(n)"
+}

@@ -1,0 +1,26 @@
+{
+  "algorithm": [
+    "If source == target, return 0",
+    "Otherwise, construct the graph from n and edges",
+    "Use Dijkstra's algorithm (for unweighted graphs, this is equivalent to BFS) to compute shortest path length from source to target",
+    "If no path exists, raise ValueError"
+  ],
+  "constraints": [
+    "n must be at least 1",
+    "edges must be distinct and satisfy 0<=u<v<n",
+    "source and target must be valid vertices (0<=vertex<n)",
+    "The graph is simple undirected unweighted",
+    "The algorithm must use BFS for unweighted graphs (Dijkstra's algorithm for weighted, but here weight=1)"
+  ],
+  "edge_cases": [
+    "n=1: single vertex with no edges",
+    "source==target: return 0",
+    "No path exists between source and target: raise ValueError",
+    "Graph has isolated vertices (vertices with no edges)"
+  ],
+  "inputs": "n: integer >= 1; edges: list of distinct [u,v] pairs with 0<=u<v<n; source: string (valid vertex); target: string (valid vertex)",
+  "method_id": "networkx.shortest_path_length",
+  "output": "integer shortest-path length from source to target (0 if source==target), or raise ValueError if no path exists",
+  "purpose": "Compute the shortest path length between two vertices in a simple undirected unweighted graph",
+  "signature": "solve(n, edges, source, target)"
+}

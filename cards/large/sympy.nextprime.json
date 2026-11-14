@@ -1,0 +1,29 @@
+{
+  "algorithm": [
+    "Start from candidate = n + 1",
+    "For each candidate, check if it is prime using the 6j ± 1 rule: if candidate % 6 == 1 or candidate % 6 == 5 (for candidate > 1), then it may be prime",
+    "Count the number of primes found starting from n + 1",
+    "Return the ith prime when the count reaches ith",
+    "If ith <= 0, raise ValueError",
+    "If n or ith is not an integer, raise ValueError"
+  ],
+  "constraints": [
+    "n must be an integer between -10 and 5000 inclusive",
+    "ith must be a positive integer",
+    "The output must be a plain Python int with no symbolic objects",
+    "The algorithm must use the 6j ± 1 rule to efficiently check for primes"
+  ],
+  "edge_cases": [
+    "n = -10: the first prime greater than -10 is 11",
+    "ith = 1: return the first prime greater than n",
+    "n = 5000: the first prime greater than 5000 is 5003",
+    "ith = 0: raise ValueError",
+    "n = 1: the first prime greater than 1 is 2",
+    "n = 2: the second prime greater than 2 is 5"
+  ],
+  "inputs": "n: integer in the range [-10, 5000]",
+  "method_id": "sympy.nextprime",
+  "output": "int: the ith prime greater than n",
+  "purpose": "Return the ith prime greater than n",
+  "signature": "solve(n)"
+}

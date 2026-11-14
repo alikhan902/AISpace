@@ -1,0 +1,61 @@
+{
+  "elapsed_seconds": 2.1935844189997624,
+  "finished_at": "2026-11-14T13:31:24.486341+00:00",
+  "parsed": {
+    "code": "import functools\n\ndef solve(n, edges):\n    if n == 1:\n        return 0\n\n    # Build adjacency list\n    adj = [[] for _ in range(n)]\n    for u, v in edges:\n        adj[u].append(v)\n        adj[v].append(u)\n\n    # Compute shortest path distances from each node\n    dist = [functools.reduce(lambda x, y: x + y, [0] * n, 0)]  # Initialize with 0 for all\n    for i in range(n):\n        queue = [i]\n        dist[i] = 0\n        while queue:\n            u = queue.pop(0)\n            for v in adj[u]:\n                if dist[v] == 0:\n                    dist[v] = dist[u] + 1\n                    queue.append(v)\n\n    # Compute eccentricity for each node\n    ecc = [0] * n\n    for i in range(n):\n        max_dist = 0\n        for j in range(n):\n            if dist[j] > max_dist:\n                max_dist = dist[j]\n        ecc[i] = max_dist\n\n    # Find the minimum eccentricity\n    return min(ecc)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Implement a Python function from a JSON behavioral card. The card is the only task specification. Return a JSON object with a single string field code containing executable Python source. Define solve with the card's exact signature. Use only Python's standard library. Allowed imports: math, itertools, functools, collections, heapq, bisect, statistics, fractions, operator, typing. Do not import or call NumPy, SymPy, NetworkX or any other third-party library. Do not read files, use network, introspection, eval, exec, input or print. Implement computations yourself using built-ins and the allowed standard library. Return plain JSON-compatible values, not iterators or sets; use string keys in dictionaries. Include any helper functions in the code. No tests or main block. Raise ValueError where the card requires it.",
+        "role": "system"
+      },
+      {
+        "content": "Implement this card:\n{\n  \"algorithm\": [\n    \"For each vertex v, compute its eccentricity (maximum shortest path distance to any other vertex)\",\n    \"Find the minimum eccentricity across all vertices\"\n  ],\n  \"constraints\": [\n    \"Graph must be simple undirected unweighted\",\n    \"Vertices are labeled 0 to n-1\",\n    \"Edges are distinct and satisfy 0<=u<v<n\",\n    \"Eccentricity of a singleton is 0\",\n    \"Graph must be connected to avoid ValueError\"\n  ],\n  \"edge_cases\": [\n    \"Graph with one vertex (n=1) has radius 0\",\n    \"Disconnected graph raises ValueError\",\n    \"Graph with all vertices isolated (n vertices) has radius 0\"\n  ],\n  \"inputs\": \"n: integer >= 1; edges: list of distinct [u,v] pairs with 0<=u<v<n\",\n  \"method_id\": \"networkx.radius\",\n  \"output\": \"integer: minimum eccentricity (radius) of the graph\",\n  \"purpose\": \"Compute the radius of a simple undirected unweighted graph\",\n  \"signature\": \"solve(n, edges)\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:1.7b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 3072,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:31:24.486062295Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 279,
+    "eval_duration": 2123601000,
+    "load_duration": 571328,
+    "message": {
+      "content": "{\n  \"code\": \"import functools\\n\\ndef solve(n, edges):\\n    if n == 1:\\n        return 0\\n\\n    # Build adjacency list\\n    adj = [[] for _ in range(n)]\\n    for u, v in edges:\\n        adj[u].append(v)\\n        adj[v].append(u)\\n\\n    # Compute shortest path distances from each node\\n    dist = [functools.reduce(lambda x, y: x + y, [0] * n, 0)]  # Initialize with 0 for all\\n    for i in range(n):\\n        queue = [i]\\n        dist[i] = 0\\n        while queue:\\n            u = queue.pop(0)\\n            for v in adj[u]:\\n                if dist[v] == 0:\\n                    dist[v] = dist[u] + 1\\n                    queue.append(v)\\n\\n    # Compute eccentricity for each node\\n    ecc = [0] * n\\n    for i in range(n):\\n        max_dist = 0\\n        for j in range(n):\\n            if dist[j] > max_dist:\\n                max_dist = dist[j]\\n        ecc[i] = max_dist\\n\\n    # Find the minimum eccentricity\\n    return min(ecc)\"\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:1.7b",
+    "prompt_eval_cached_count": 183,
+    "prompt_eval_count": 427,
+    "prompt_eval_duration": 52134000,
+    "total_duration": 2192958063
+  },
+  "started_at": "2026-11-14T13:31:22.292755+00:00",
+  "valid": true
+}

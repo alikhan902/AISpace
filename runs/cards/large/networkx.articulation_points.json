@@ -1,0 +1,120 @@
+{
+  "elapsed_seconds": 6.819889693999812,
+  "finished_at": "2026-11-14T13:15:08.378246+00:00",
+  "parsed": {
+    "algorithm": [
+      "Perform a depth-first search (DFS) on the graph to identify articulation points",
+      "For each node, track the discovery time and low-link values",
+      "A node is an articulation point if it has a child in the DFS tree whose low-link value is greater than or equal to the discovery time of the node",
+      "Return the list of articulation points in ascending order by vertex index"
+    ],
+    "constraints": [
+      "Vertices are labeled 0 to n-1",
+      "Edges are distinct and undirected (given as [u,v] with u < v)",
+      "Graph may contain isolated vertices",
+      "Articulation points must be returned as strings in ascending order"
+    ],
+    "edge_cases": [
+      "Graph with a single vertex (n=1) has no articulation points",
+      "Graph with no edges (n>=2) has all vertices as articulation points",
+      "Graph that is biconnected has no articulation points",
+      "Graph with multiple connected components: articulation points are identified per component"
+    ],
+    "inputs": "n: integer >= 1; edges: list of distinct [u,v] pairs where 0<=u<v<n",
+    "method_id": "networkx.articulation_points",
+    "output": "Ascending list of articulation vertices (as strings) across all connected components",
+    "purpose": "Yield the articulation points (cut vertices) of a graph constructed from integer vertices 0 to n-1 and distinct undirected edges",
+    "signature": "solve(n, edges)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"n is an integer >= 1; vertices are 0,...,n-1. edges is a list of distinct [u,v] pairs with 0<=u<v<n. Construct a simple undirected unweighted graph including isolated vertices. Return plain JSON-compatible Python values. Dictionary vertex keys must be strings. Return an ascending list of articulation vertices, across all components.\",\n  \"documentation\": \"Yield the articulation points, or cut vertices, of a graph.\\n\\nAn articulation point or cut vertex is any node whose removal (along with\\nall its incident edges) increases the number of connected components of\\na graph.  An undirected connected graph without articulation points is\\nbiconnected. Articulation points belong to more than one biconnected\\ncomponent of a graph.\\n\\nNotice that by convention a dyad is considered a biconnected component.\\n\\nParameters\\n----------\\nG : NetworkX Graph\\n    An undirected graph.\\n\\nYields\\n------\\nnode\\n    An articulation point in the graph.\\n\\nRaises\\n------\\nNetworkXNotImplemented\\n    If the input graph is not undirected.\\n\\nExamples\\n--------\\n\\n>>> G = nx.barbell_graph(4, 2)\\n>>> print(nx.is_biconnected(G))\\nFalse\\n>>> len(list(nx.articulation_points(G)))\\n4\\n>>> G.add_edge(2, 8)\\n>>> print(nx.is_biconnected(G))\\nTrue\\n>>> len(list(nx.articulation_points(G)))\\n0\\n\\nSee Also\\n--------\\nis_biconnected\\nbiconnected_components\\nbiconnected_component_edges\\n\\nNotes\\n-----\\nThe algorithm to find articulation points and biconnected\\ncomponents is implemented using a non-recursive depth-first-search\\n(DFS) that keeps track of the highest level that back edges reach\\nin the DFS tree.  A node `n` is an articulation point if, and only\\nif, there exists a subtree rooted at `n` such that there is no\\nback edge from any successor of `n` that links to a predecessor of\\n`n` in the DFS tree.  By keeping track of all the edges traversed\\nby the DFS we can obtain the biconnected components because all\\nedges of a bicomponent will be traversed consecutively between\\narticulation points.\\n\\nReferences\\n----------\\n.. [1] Hopcroft, J.; Tarjan, R. (1973).\\n       \\\"Efficient algorithms for graph manipulation\\\".\\n       Communications of the ACM 16: 372–378. doi:10.1145/362248.362272\",\n  \"documentation_truncated\": false,\n  \"group\": \"local_structure\",\n  \"id\": \"networkx.articulation_points\",\n  \"library\": \"networkx\",\n  \"name\": \"articulation_points\",\n  \"signature\": \"solve(n, edges)\",\n  \"version\": \"3.6.1\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:4b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:15:08.377730487Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 340,
+    "eval_duration": 5656509000,
+    "load_duration": 941964,
+    "message": {
+      "content": "{\n  \"method_id\": \"networkx.articulation_points\",\n  \"signature\": \"solve(n, edges)\",\n  \"purpose\": \"Yield the articulation points (cut vertices) of a graph constructed from integer vertices 0 to n-1 and distinct undirected edges\",\n  \"inputs\": \"n: integer >= 1; edges: list of distinct [u,v] pairs where 0<=u<v<n\",\n  \"output\": \"Ascending list of articulation vertices (as strings) across all connected components\",\n  \"algorithm\": [\n    \"Perform a depth-first search (DFS) on the graph to identify articulation points\",\n    \"For each node, track the discovery time and low-link values\",\n    \"A node is an articulation point if it has a child in the DFS tree whose low-link value is greater than or equal to the discovery time of the node\",\n    \"Return the list of articulation points in ascending order by vertex index\"\n  ],\n  \"edge_cases\": [\n    \"Graph with a single vertex (n=1) has no articulation points\",\n    \"Graph with no edges (n>=2) has all vertices as articulation points\",\n    \"Graph that is biconnected has no articulation points\",\n    \"Graph with multiple connected components: articulation points are identified per component\"\n  ],\n  \"constraints\": [\n    \"Vertices are labeled 0 to n-1\",\n    \"Edges are distinct and undirected (given as [u,v] with u < v)\",\n    \"Graph may contain isolated vertices\",\n    \"Articulation points must be returned as strings in ascending order\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:4b",
+    "prompt_eval_cached_count": 408,
+    "prompt_eval_count": 1009,
+    "prompt_eval_duration": 239777000,
+    "total_duration": 6819112502
+  },
+  "started_at": "2026-11-14T13:15:01.558351+00:00",
+  "valid": true
+}

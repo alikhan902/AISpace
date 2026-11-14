@@ -1,0 +1,10832 @@
+{
+  "all_pass": false,
+  "cases": [
+    {
+      "case_id": "networkx.radius:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "edges": [],
+        "n": 1
+      },
+      "observed": {
+        "value": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "networkx.radius:0001",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [],
+        "n": 2
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0002",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "n": 2
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0003",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [],
+        "n": 3
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0004",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "n": 3
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0005",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ]
+        ],
+        "n": 3
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0006",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "n": 3
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0007",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 3
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0008",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 3
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0009",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 3
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0010",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 3
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0011",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0012",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0013",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0014",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0015",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0016",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0017",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0018",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0019",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0020",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0021",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0022",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0023",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0024",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0025",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0026",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0027",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0028",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0029",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0030",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0031",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0032",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0033",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0034",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0035",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0036",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0037",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0038",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0039",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0040",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0041",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0042",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0043",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0044",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0045",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0046",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0047",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0048",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0049",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0050",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0051",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0052",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0053",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0054",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0055",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0056",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0057",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0058",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0059",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0060",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0061",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0062",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0063",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0064",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0065",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0066",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0067",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0068",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0069",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0070",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0071",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0072",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0073",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0074",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0075",
+      "category": "boundary",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [],
+        "n": 5
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0076",
+      "category": "boundary",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 5
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0077",
+      "category": "boundary",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "n": 5
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0078",
+      "category": "boundary",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 5
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0079",
+      "category": "boundary",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [],
+        "n": 6
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0080",
+      "category": "boundary",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0081",
+      "category": "boundary",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ]
+        ],
+        "n": 6
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0082",
+      "category": "boundary",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0083",
+      "category": "boundary",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [],
+        "n": 8
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0084",
+      "category": "boundary",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0085",
+      "category": "boundary",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ]
+        ],
+        "n": 8
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0086",
+      "category": "boundary",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0087",
+      "category": "boundary",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [],
+        "n": 12
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0088",
+      "category": "boundary",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0089",
+      "category": "boundary",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ]
+        ],
+        "n": 12
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0090",
+      "category": "boundary",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0091",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            1,
+            9
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            7,
+            9
+          ]
+        ],
+        "n": 10
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0092",
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0093",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            2,
+            4
+          ]
+        ],
+        "n": 6
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0094",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0095",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0096",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 7
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0097",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "n": 7
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0098",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            8,
+            10
+          ]
+        ],
+        "n": 12
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0099",
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "n": 9
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0100",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        "n": 10
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0101",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "n": 8
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0102",
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0103",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0104",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        "n": 10
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0105",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            11
+          ]
+        ],
+        "n": 12
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0106",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ]
+        ],
+        "n": 10
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0107",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0108",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0109",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0110",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        "n": 7
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0111",
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 9
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0112",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0113",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            7
+          ]
+        ],
+        "n": 9
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0114",
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "n": 7
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0115",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        "n": 10
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0116",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0117",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0118",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 5
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0119",
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "n": 5
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0120",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 9
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0121",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            2,
+            3
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "n": 9
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0122",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            3,
+            5
+          ]
+        ],
+        "n": 6
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0123",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            9
+          ]
+        ],
+        "n": 10
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0124",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0125",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 12
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0126",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ]
+        ],
+        "n": 11
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0127",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 6
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0128",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 6
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0129",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ]
+        ],
+        "n": 10
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0130",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            6
+          ]
+        ],
+        "n": 8
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0131",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0132",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            9
+          ]
+        ],
+        "n": 11
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0133",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 5
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0134",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            1,
+            5
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0135",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "n": 10
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0136",
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 9
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0137",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 5
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0138",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "n": 7
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0139",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "n": 9
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0140",
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        "n": 10
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0141",
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        "n": 6
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0142",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        "n": 10
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0143",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0144",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "n": 8
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0145",
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "n": 7
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0146",
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 5
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0147",
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        "n": 12
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0148",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        "n": 6
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0149",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            11
+          ]
+        ],
+        "n": 12
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0150",
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0151",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "n": 7
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0152",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 12
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0153",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 5
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0154",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 7
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0155",
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0156",
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 9
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0157",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0158",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "n": 7
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0159",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 9
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0160",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0161",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 10
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0162",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            1,
+            4
+          ]
+        ],
+        "n": 6
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0163",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0164",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "n": 9
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0165",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 9
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0166",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 5
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0167",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        "n": 6
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0168",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            3,
+            6
+          ]
+        ],
+        "n": 9
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0169",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            2,
+            8
+          ]
+        ],
+        "n": 10
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0170",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 5
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0171",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "n": 8
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0172",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 6
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0173",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0174",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "n": 6
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0175",
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0176",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            9
+          ]
+        ],
+        "n": 10
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0177",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 6
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0178",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 9
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0179",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ]
+        ],
+        "n": 12
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0180",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0181",
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 9
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0182",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            7,
+            9
+          ]
+        ],
+        "n": 10
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0183",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            11
+          ]
+        ],
+        "n": 12
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0184",
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            5
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "n": 6
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0185",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "n": 7
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0186",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            10
+          ]
+        ],
+        "n": 11
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "networkx.radius:0187",
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 9
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    }
+  ],
+  "condition": "large_to_small",
+  "elapsed_seconds": 0.03225771300003544,
+  "group": "distances",
+  "library": "networkx",
+  "load_error": null,
+  "method_id": "networkx.radius",
+  "passed": 1,
+  "total": 188
+}

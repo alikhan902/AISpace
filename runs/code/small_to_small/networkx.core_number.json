@@ -1,0 +1,61 @@
+{
+  "elapsed_seconds": 1.5089492869999503,
+  "finished_at": "2026-11-14T13:10:05.786191+00:00",
+  "parsed": {
+    "code": "from collections import defaultdict\n\ndef solve(n, edges):\n    # Create adjacency list\n    adj = defaultdict(list)\n    for u, v in edges:\n        adj[u].append(v)\n        adj[v].append(u)\n\n    # Compute degree of each node\n    degrees = [len(adj[u]) for u in range(n)]\n\n    # Compute k-core subgraphs for k = 1, 2, ..., n\n    core_numbers = [0] * n\n\n    # For each node, determine the largest k for which it is in a k-core\n    for u in range(n):\n        k = 1\n        while k <= n and degrees[u] >= k:\n            k += 1\n        core_numbers[u] = k - 1\n\n    return {str(i): core_numbers[i] for i in range(n)}"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Implement a Python function from a JSON behavioral card. The card is the only task specification. Return a JSON object with a single string field code containing executable Python source. Define solve with the card's exact signature. Use only Python's standard library. Allowed imports: math, itertools, functools, collections, heapq, bisect, statistics, fractions, operator, typing. Do not import or call NumPy, SymPy, NetworkX or any other third-party library. Do not read files, use network, introspection, eval, exec, input or print. Implement computations yourself using built-ins and the allowed standard library. Return plain JSON-compatible values, not iterators or sets; use string keys in dictionaries. Include any helper functions in the code. No tests or main block. Raise ValueError where the card requires it.",
+        "role": "system"
+      },
+      {
+        "content": "Implement this card:\n{\n  \"algorithm\": [\n    \"Compute the degree of each node.\",\n    \"Identify all k-core subgraphs for k = 1, 2, ..., n.\",\n    \"For each node, determine the largest k for which the node is in a k-core.\",\n    \"Return the core number dictionary.\"\n  ],\n  \"constraints\": [\n    \"The graph must be simple and undirected.\",\n    \"All edges must be distinct and satisfy 0 <= u < v < n.\",\n    \"The graph must be connected or contain isolated vertices.\",\n    \"The function raises NetworkXNotImplemented if the graph is a multigraph or contains self loops.\"\n  ],\n  \"edge_cases\": [\n    \"When n = 1, the graph is a single isolated vertex.\",\n    \"When the graph is empty (no edges), all nodes have core number 0.\",\n    \"When a node has degree 0, its core number is 0.\"\n  ],\n  \"inputs\": \"n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.\",\n  \"method_id\": \"networkx.core_number\",\n  \"output\": \"A dictionary mapping every string vertex key to its integer core number, including isolated vertices.\",\n  \"purpose\": \"Return the core number for each node in a given graph.\",\n  \"signature\": \"solve(n, edges)\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:1.7b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 3072,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:10:05.785721837Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 195,
+    "eval_duration": 1404008000,
+    "load_duration": 617728,
+    "message": {
+      "content": "{\n  \"code\": \"from collections import defaultdict\\n\\ndef solve(n, edges):\\n    # Create adjacency list\\n    adj = defaultdict(list)\\n    for u, v in edges:\\n        adj[u].append(v)\\n        adj[v].append(u)\\n\\n    # Compute degree of each node\\n    degrees = [len(adj[u]) for u in range(n)]\\n\\n    # Compute k-core subgraphs for k = 1, 2, ..., n\\n    core_numbers = [0] * n\\n\\n    # For each node, determine the largest k for which it is in a k-core\\n    for u in range(n):\\n        k = 1\\n        while k <= n and degrees[u] >= k:\\n            k += 1\\n        core_numbers[u] = k - 1\\n\\n    return {str(i): core_numbers[i] for i in range(n)}\"\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:1.7b",
+    "prompt_eval_cached_count": 185,
+    "prompt_eval_count": 479,
+    "prompt_eval_duration": 62687000,
+    "total_duration": 1508107142
+  },
+  "started_at": "2026-11-14T13:10:04.277239+00:00",
+  "valid": true
+}

@@ -1,0 +1,95 @@
+{
+  "card_options": {
+    "num_ctx": 8192,
+    "num_predict": 2048,
+    "num_thread": 4,
+    "seed": 20261114,
+    "temperature": 0
+  },
+  "card_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "algorithm": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "constraints": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "edge_cases": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "inputs": {
+        "type": "string"
+      },
+      "method_id": {
+        "type": "string"
+      },
+      "output": {
+        "type": "string"
+      },
+      "purpose": {
+        "type": "string"
+      },
+      "signature": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "method_id",
+      "signature",
+      "purpose",
+      "inputs",
+      "output",
+      "algorithm",
+      "edge_cases",
+      "constraints"
+    ],
+    "type": "object"
+  },
+  "card_system": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+  "case_timeout_seconds": 0.5,
+  "code_options": {
+    "num_ctx": 8192,
+    "num_predict": 3072,
+    "num_thread": 4,
+    "seed": 20261114,
+    "temperature": 0
+  },
+  "code_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "code": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "code"
+    ],
+    "type": "object"
+  },
+  "code_system": "Implement a Python function from a JSON behavioral card. The card is the only task specification. Return a JSON object with a single string field code containing executable Python source. Define solve with the card's exact signature. Use only Python's standard library. Allowed imports: math, itertools, functools, collections, heapq, bisect, statistics, fractions, operator, typing. Do not import or call NumPy, SymPy, NetworkX or any other third-party library. Do not read files, use network, introspection, eval, exec, input or print. Implement computations yourself using built-ins and the allowed standard library. Return plain JSON-compatible values, not iterators or sets; use string keys in dictionaries. Include any helper functions in the code. No tests or main block. Raise ValueError where the card requires it.",
+  "generation_repeats": 1,
+  "method_timeout_seconds": 45,
+  "models": {
+    "large": "qwen3:4b",
+    "small": "qwen3:1.7b"
+  },
+  "sequence": [
+    "cards_small",
+    "small_to_small",
+    "cards_large",
+    "large_to_large",
+    "small_to_large",
+    "large_to_small"
+  ],
+  "think": false
+}

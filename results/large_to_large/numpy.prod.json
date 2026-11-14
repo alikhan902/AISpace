@@ -1,0 +1,2582 @@
+{
+  "all_pass": false,
+  "cases": [
+    {
+      "case_id": "numpy.prod:0000",
+      "category": "boundary",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "a": []
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0001",
+      "category": "boundary",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          0
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0002",
+      "category": "boundary",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "a": [
+          1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0003",
+      "category": "boundary",
+      "expected": {
+        "value": -1
+      },
+      "input": {
+        "a": [
+          -1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0004",
+      "category": "boundary",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          0,
+          0
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0005",
+      "category": "boundary",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "a": [
+          1,
+          1,
+          1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0006",
+      "category": "boundary",
+      "expected": {
+        "value": -6
+      },
+      "input": {
+        "a": [
+          -3,
+          -2,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0007",
+      "category": "boundary",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          3,
+          -1,
+          0,
+          3,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0008",
+      "category": "boundary",
+      "expected": {
+        "value": 120
+      },
+      "input": {
+        "a": [
+          5,
+          4,
+          3,
+          2,
+          1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0009",
+      "category": "boundary",
+      "expected": {
+        "value": 16
+      },
+      "input": {
+        "a": [
+          -2,
+          2,
+          -2,
+          2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0010",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -2,
+          -2,
+          -3,
+          2,
+          -2,
+          0,
+          1,
+          3,
+          3,
+          3,
+          2,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0011",
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "a": [
+          -1,
+          1,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0012",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          2,
+          1,
+          0
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0013",
+      "category": "random",
+      "expected": {
+        "value": 324
+      },
+      "input": {
+        "a": [
+          -3,
+          -1,
+          1,
+          -1,
+          3,
+          -3,
+          -3,
+          -2,
+          2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0014",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -3,
+          -3,
+          1,
+          -1,
+          0,
+          -1,
+          1,
+          -3,
+          2,
+          0
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0015",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          1,
+          -3,
+          -1,
+          0,
+          2,
+          -2,
+          -1,
+          -2,
+          3,
+          2,
+          0,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0016",
+      "category": "random",
+      "expected": {
+        "value": -72
+      },
+      "input": {
+        "a": [
+          1,
+          -3,
+          3,
+          2,
+          -1,
+          -2,
+          -2,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0017",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          0,
+          2,
+          -1,
+          1,
+          0,
+          -3,
+          -1,
+          -1,
+          -3,
+          1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0018",
+      "category": "random",
+      "expected": {
+        "value": -648
+      },
+      "input": {
+        "a": [
+          -2,
+          -1,
+          3,
+          2,
+          2,
+          -3,
+          1,
+          -3,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0019",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -2,
+          -3,
+          3,
+          0,
+          1,
+          2,
+          2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0020",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -3,
+          1,
+          0,
+          1,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0021",
+      "category": "random",
+      "expected": {
+        "value": -3
+      },
+      "input": {
+        "a": [
+          -3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0022",
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "a": [
+          3,
+          1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0023",
+      "category": "random",
+      "expected": {
+        "value": -12
+      },
+      "input": {
+        "a": [
+          -2,
+          -1,
+          -2,
+          3,
+          1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0024",
+      "category": "random",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "a": [
+          2,
+          -2,
+          3,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0025",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          2,
+          0,
+          0,
+          -3,
+          1,
+          1,
+          -3,
+          2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0026",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "a": [
+          2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0027",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          0,
+          -1,
+          2,
+          -1,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0028",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -2,
+          0
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0029",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -1,
+          1,
+          -3,
+          2,
+          0,
+          3,
+          -2,
+          2,
+          -3,
+          2,
+          1,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0030",
+      "category": "random",
+      "expected": {
+        "value": 216
+      },
+      "input": {
+        "a": [
+          3,
+          -2,
+          -3,
+          -3,
+          -1,
+          -1,
+          2,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0031",
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "a": [
+          -1,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0032",
+      "category": "random",
+      "expected": {
+        "value": -162
+      },
+      "input": {
+        "a": [
+          1,
+          3,
+          -3,
+          -3,
+          2,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0033",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -3,
+          0,
+          -2,
+          -2,
+          0,
+          0
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0034",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -3,
+          -3,
+          3,
+          3,
+          -3,
+          0
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0035",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -3,
+          0
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0036",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -1,
+          0,
+          -2,
+          -1,
+          0,
+          2,
+          -2,
+          -1,
+          2,
+          0,
+          1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0037",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -3,
+          1,
+          -3,
+          -1,
+          0,
+          -1,
+          0,
+          1,
+          -2,
+          -3,
+          2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0038",
+      "category": "random",
+      "expected": {
+        "value": -18
+      },
+      "input": {
+        "a": [
+          3,
+          2,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0039",
+      "category": "random",
+      "expected": {
+        "value": -4
+      },
+      "input": {
+        "a": [
+          -2,
+          2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0040",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -3,
+          0,
+          2,
+          -1,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0041",
+      "category": "random",
+      "expected": {
+        "value": -108
+      },
+      "input": {
+        "a": [
+          -2,
+          -2,
+          3,
+          -3,
+          3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0042",
+      "category": "random",
+      "expected": {
+        "value": -6
+      },
+      "input": {
+        "a": [
+          3,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0043",
+      "category": "random",
+      "expected": {
+        "value": 1458
+      },
+      "input": {
+        "a": [
+          2,
+          -3,
+          -1,
+          3,
+          1,
+          -1,
+          1,
+          1,
+          -3,
+          -3,
+          -3,
+          3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0044",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -2,
+          -1,
+          -3,
+          -1,
+          0,
+          2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0045",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -1,
+          3,
+          0,
+          -3,
+          3,
+          1,
+          3,
+          0,
+          3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0046",
+      "category": "random",
+      "expected": {
+        "value": 18
+      },
+      "input": {
+        "a": [
+          -3,
+          3,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0047",
+      "category": "random",
+      "expected": {
+        "value": 243
+      },
+      "input": {
+        "a": [
+          -3,
+          3,
+          -1,
+          1,
+          3,
+          3,
+          3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0048",
+      "category": "random",
+      "expected": {
+        "value": -9
+      },
+      "input": {
+        "a": [
+          -1,
+          -1,
+          -3,
+          3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0049",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -2,
+          -2,
+          -1,
+          3,
+          -3,
+          -2,
+          0,
+          2,
+          2,
+          1,
+          3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0050",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -1,
+          1,
+          2,
+          -1,
+          1,
+          0
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0051",
+      "category": "random",
+      "expected": {
+        "value": 432
+      },
+      "input": {
+        "a": [
+          -3,
+          -1,
+          -2,
+          -1,
+          -2,
+          3,
+          -2,
+          1,
+          -1,
+          -2,
+          3,
+          1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0052",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -2,
+          3,
+          1,
+          0,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0053",
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "a": [
+          -2,
+          1,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0054",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          1,
+          -2,
+          2,
+          0,
+          -3,
+          -2,
+          0,
+          0,
+          -2,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0055",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          0,
+          -2,
+          -2,
+          0
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0056",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          3,
+          -3,
+          0,
+          -3,
+          -3,
+          -3,
+          2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0057",
+      "category": "random",
+      "expected": {
+        "value": -18
+      },
+      "input": {
+        "a": [
+          -3,
+          2,
+          3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0058",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -2,
+          -3,
+          -1,
+          -1,
+          1,
+          -3,
+          0,
+          -3,
+          -3,
+          1,
+          -2,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0059",
+      "category": "random",
+      "expected": {
+        "value": -2
+      },
+      "input": {
+        "a": [
+          2,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0060",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -2,
+          -3,
+          2,
+          -3,
+          -2,
+          -2,
+          -2,
+          0,
+          -2,
+          2,
+          -2,
+          1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0061",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          0,
+          0,
+          2,
+          0,
+          1,
+          2,
+          0,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0062",
+      "category": "random",
+      "expected": {
+        "value": -324
+      },
+      "input": {
+        "a": [
+          2,
+          -1,
+          -2,
+          3,
+          3,
+          3,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0063",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          0,
+          1,
+          -2,
+          2,
+          3,
+          0,
+          -3,
+          -2,
+          -2,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0064",
+      "category": "random",
+      "expected": {
+        "value": -12
+      },
+      "input": {
+        "a": [
+          2,
+          1,
+          -1,
+          1,
+          3,
+          2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0065",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -2,
+          3,
+          2,
+          0
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0066",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -2,
+          1,
+          -1,
+          0,
+          3,
+          2,
+          -3,
+          1,
+          -1,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0067",
+      "category": "random",
+      "expected": {
+        "value": 72
+      },
+      "input": {
+        "a": [
+          1,
+          -2,
+          2,
+          -2,
+          -3,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0068",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          0,
+          1,
+          2,
+          -2,
+          3,
+          1,
+          1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0069",
+      "category": "random",
+      "expected": {
+        "value": -6
+      },
+      "input": {
+        "a": [
+          -3,
+          2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0070",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          1,
+          -1,
+          -3,
+          2,
+          0,
+          -1,
+          3,
+          -2,
+          -2,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0071",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          2,
+          -3,
+          -1,
+          2,
+          -3,
+          -2,
+          -3,
+          -2,
+          -2,
+          0,
+          2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0072",
+      "category": "random",
+      "expected": {
+        "value": -72
+      },
+      "input": {
+        "a": [
+          3,
+          1,
+          2,
+          -1,
+          -2,
+          2,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0073",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          0,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0074",
+      "category": "random",
+      "expected": {
+        "value": -24
+      },
+      "input": {
+        "a": [
+          -2,
+          2,
+          1,
+          -2,
+          1,
+          3,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0075",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          2,
+          0
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0076",
+      "category": "random",
+      "expected": {
+        "value": 11664
+      },
+      "input": {
+        "a": [
+          1,
+          -3,
+          3,
+          -3,
+          -2,
+          1,
+          -3,
+          -2,
+          2,
+          2,
+          3,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0077",
+      "category": "random",
+      "expected": {
+        "value": 162
+      },
+      "input": {
+        "a": [
+          3,
+          -1,
+          1,
+          3,
+          3,
+          3,
+          2,
+          -1,
+          1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0078",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -3,
+          3,
+          0
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0079",
+      "category": "random",
+      "expected": {
+        "value": -2916
+      },
+      "input": {
+        "a": [
+          2,
+          -2,
+          3,
+          -3,
+          1,
+          3,
+          3,
+          3,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0080",
+      "category": "random",
+      "expected": {
+        "value": -12
+      },
+      "input": {
+        "a": [
+          2,
+          3,
+          2,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0081",
+      "category": "random",
+      "expected": {
+        "value": 18
+      },
+      "input": {
+        "a": [
+          3,
+          -3,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0082",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -3,
+          -3,
+          3,
+          1,
+          -3,
+          0,
+          -1,
+          -2,
+          1,
+          3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0083",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          1,
+          -3,
+          0,
+          -1,
+          2,
+          2,
+          0,
+          1,
+          1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0084",
+      "category": "random",
+      "expected": {
+        "value": 18
+      },
+      "input": {
+        "a": [
+          -1,
+          -3,
+          -3,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0085",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -3,
+          -1,
+          -2,
+          2,
+          -2,
+          2,
+          0,
+          -2,
+          2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0086",
+      "category": "random",
+      "expected": {
+        "value": 162
+      },
+      "input": {
+        "a": [
+          -1,
+          3,
+          -3,
+          -3,
+          -2,
+          -3,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0087",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          0,
+          1,
+          2,
+          -3,
+          -3,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0088",
+      "category": "random",
+      "expected": {
+        "value": 648
+      },
+      "input": {
+        "a": [
+          -1,
+          -3,
+          3,
+          -1,
+          3,
+          -2,
+          1,
+          2,
+          2,
+          3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0089",
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "a": [
+          3,
+          2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0090",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -1,
+          -2,
+          -3,
+          0,
+          3,
+          -2,
+          0,
+          1,
+          -3,
+          0,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0091",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          3,
+          2,
+          2,
+          2,
+          2,
+          3,
+          0,
+          2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0092",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          0,
+          -1,
+          -2,
+          -2,
+          3,
+          -3,
+          0,
+          -2,
+          -2,
+          2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0093",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          3,
+          2,
+          -3,
+          0,
+          -2,
+          -3,
+          2,
+          -2,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0094",
+      "category": "random",
+      "expected": {
+        "value": -12
+      },
+      "input": {
+        "a": [
+          -2,
+          -2,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0095",
+      "category": "random",
+      "expected": {
+        "value": -2
+      },
+      "input": {
+        "a": [
+          -1,
+          2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0096",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          0,
+          3,
+          -1,
+          1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0097",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          3,
+          0,
+          0
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0098",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -1,
+          -2,
+          -1,
+          0,
+          3,
+          0,
+          1,
+          3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0099",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -2,
+          3,
+          0,
+          0,
+          -2,
+          1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0100",
+      "category": "random",
+      "expected": {
+        "value": 216
+      },
+      "input": {
+        "a": [
+          -3,
+          -1,
+          -2,
+          3,
+          3,
+          2,
+          -1,
+          2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0101",
+      "category": "random",
+      "expected": {
+        "value": 54
+      },
+      "input": {
+        "a": [
+          2,
+          3,
+          3,
+          -1,
+          3,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0102",
+      "category": "random",
+      "expected": {
+        "value": -72
+      },
+      "input": {
+        "a": [
+          -2,
+          -3,
+          3,
+          1,
+          2,
+          -2,
+          1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0103",
+      "category": "random",
+      "expected": {
+        "value": -216
+      },
+      "input": {
+        "a": [
+          3,
+          -2,
+          -2,
+          -2,
+          1,
+          -3,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0104",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          2,
+          -1,
+          0,
+          1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0105",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          1,
+          1,
+          3,
+          1,
+          0
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0106",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "a": [
+          1,
+          2,
+          -1,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0107",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -1,
+          2,
+          -2,
+          -3,
+          2,
+          2,
+          0,
+          3,
+          2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0108",
+      "category": "random",
+      "expected": {
+        "value": 432
+      },
+      "input": {
+        "a": [
+          2,
+          -1,
+          -1,
+          -3,
+          2,
+          2,
+          3,
+          -3,
+          1,
+          2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0109",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          0,
+          2,
+          0,
+          -1,
+          1,
+          2,
+          2,
+          1,
+          -1,
+          3,
+          2,
+          2
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0110",
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "a": [
+          -1,
+          -2,
+          3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0111",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          1,
+          0,
+          0,
+          -2,
+          -1,
+          3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0112",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          1,
+          0,
+          -3,
+          1,
+          2,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0113",
+      "category": "random",
+      "expected": {
+        "value": -432
+      },
+      "input": {
+        "a": [
+          1,
+          3,
+          1,
+          -3,
+          -1,
+          -3,
+          -2,
+          2,
+          -1,
+          2,
+          2,
+          1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0114",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -2,
+          2,
+          -1,
+          2,
+          -1,
+          -2,
+          0,
+          -2,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0115",
+      "category": "random",
+      "expected": {
+        "value": -4
+      },
+      "input": {
+        "a": [
+          2,
+          2,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0116",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -3,
+          0,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0117",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0118",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          -1,
+          -2,
+          3,
+          0,
+          -1,
+          3,
+          1,
+          0,
+          -1,
+          1,
+          2,
+          3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0119",
+      "category": "random",
+      "expected": {
+        "value": -36
+      },
+      "input": {
+        "a": [
+          3,
+          1,
+          -1,
+          -2,
+          -3,
+          -2,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.prod:0120",
+      "category": "random",
+      "expected": {
+        "value": 36
+      },
+      "input": {
+        "a": [
+          2,
+          3,
+          -1,
+          1,
+          2,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    }
+  ],
+  "condition": "large_to_large",
+  "elapsed_seconds": 9.914600013871677e-05,
+  "group": "reductions",
+  "library": "numpy",
+  "load_error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)",
+  "method_id": "numpy.prod",
+  "passed": 0,
+  "total": 121
+}

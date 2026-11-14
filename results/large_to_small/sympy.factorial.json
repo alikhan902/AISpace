@@ -1,0 +1,517 @@
+{
+  "all_pass": true,
+  "cases": [
+    {
+      "case_id": "sympy.factorial:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "n": 0
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "n": 1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0002",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 2
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0003",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 3
+      },
+      "observed": {
+        "value": 6
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0004",
+      "category": "exhaustive",
+      "expected": {
+        "value": 24
+      },
+      "input": {
+        "n": 4
+      },
+      "observed": {
+        "value": 24
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0005",
+      "category": "exhaustive",
+      "expected": {
+        "value": 120
+      },
+      "input": {
+        "n": 5
+      },
+      "observed": {
+        "value": 120
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0006",
+      "category": "exhaustive",
+      "expected": {
+        "value": 720
+      },
+      "input": {
+        "n": 6
+      },
+      "observed": {
+        "value": 720
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0007",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5040
+      },
+      "input": {
+        "n": 7
+      },
+      "observed": {
+        "value": 5040
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0008",
+      "category": "exhaustive",
+      "expected": {
+        "value": 40320
+      },
+      "input": {
+        "n": 8
+      },
+      "observed": {
+        "value": 40320
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0009",
+      "category": "exhaustive",
+      "expected": {
+        "value": 362880
+      },
+      "input": {
+        "n": 9
+      },
+      "observed": {
+        "value": 362880
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0010",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3628800
+      },
+      "input": {
+        "n": 10
+      },
+      "observed": {
+        "value": 3628800
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0011",
+      "category": "exhaustive",
+      "expected": {
+        "value": 39916800
+      },
+      "input": {
+        "n": 11
+      },
+      "observed": {
+        "value": 39916800
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0012",
+      "category": "exhaustive",
+      "expected": {
+        "value": 479001600
+      },
+      "input": {
+        "n": 12
+      },
+      "observed": {
+        "value": 479001600
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0013",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6227020800
+      },
+      "input": {
+        "n": 13
+      },
+      "observed": {
+        "value": 6227020800
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0014",
+      "category": "exhaustive",
+      "expected": {
+        "value": 87178291200
+      },
+      "input": {
+        "n": 14
+      },
+      "observed": {
+        "value": 87178291200
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0015",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1307674368000
+      },
+      "input": {
+        "n": 15
+      },
+      "observed": {
+        "value": 1307674368000
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0016",
+      "category": "exhaustive",
+      "expected": {
+        "value": 20922789888000
+      },
+      "input": {
+        "n": 16
+      },
+      "observed": {
+        "value": 20922789888000
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0017",
+      "category": "exhaustive",
+      "expected": {
+        "value": 355687428096000
+      },
+      "input": {
+        "n": 17
+      },
+      "observed": {
+        "value": 355687428096000
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0018",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6402373705728000
+      },
+      "input": {
+        "n": 18
+      },
+      "observed": {
+        "value": 6402373705728000
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0019",
+      "category": "exhaustive",
+      "expected": {
+        "value": 121645100408832000
+      },
+      "input": {
+        "n": 19
+      },
+      "observed": {
+        "value": 121645100408832000
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0020",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2432902008176640000
+      },
+      "input": {
+        "n": 20
+      },
+      "observed": {
+        "value": 2432902008176640000
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0021",
+      "category": "exhaustive",
+      "expected": {
+        "value": 51090942171709440000
+      },
+      "input": {
+        "n": 21
+      },
+      "observed": {
+        "value": 51090942171709440000
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0022",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1124000727777607680000
+      },
+      "input": {
+        "n": 22
+      },
+      "observed": {
+        "value": 1124000727777607680000
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0023",
+      "category": "exhaustive",
+      "expected": {
+        "value": 25852016738884976640000
+      },
+      "input": {
+        "n": 23
+      },
+      "observed": {
+        "value": 25852016738884976640000
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0024",
+      "category": "exhaustive",
+      "expected": {
+        "value": 620448401733239439360000
+      },
+      "input": {
+        "n": 24
+      },
+      "observed": {
+        "value": 620448401733239439360000
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0025",
+      "category": "exhaustive",
+      "expected": {
+        "value": 15511210043330985984000000
+      },
+      "input": {
+        "n": 25
+      },
+      "observed": {
+        "value": 15511210043330985984000000
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0026",
+      "category": "exhaustive",
+      "expected": {
+        "value": 403291461126605635584000000
+      },
+      "input": {
+        "n": 26
+      },
+      "observed": {
+        "value": 403291461126605635584000000
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0027",
+      "category": "exhaustive",
+      "expected": {
+        "value": 10888869450418352160768000000
+      },
+      "input": {
+        "n": 27
+      },
+      "observed": {
+        "value": 10888869450418352160768000000
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0028",
+      "category": "exhaustive",
+      "expected": {
+        "value": 304888344611713860501504000000
+      },
+      "input": {
+        "n": 28
+      },
+      "observed": {
+        "value": 304888344611713860501504000000
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0029",
+      "category": "exhaustive",
+      "expected": {
+        "value": 8841761993739701954543616000000
+      },
+      "input": {
+        "n": 29
+      },
+      "observed": {
+        "value": 8841761993739701954543616000000
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0030",
+      "category": "exhaustive",
+      "expected": {
+        "value": 265252859812191058636308480000000
+      },
+      "input": {
+        "n": 30
+      },
+      "observed": {
+        "value": 265252859812191058636308480000000
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0031",
+      "category": "exhaustive",
+      "expected": {
+        "value": 8222838654177922817725562880000000
+      },
+      "input": {
+        "n": 31
+      },
+      "observed": {
+        "value": 8222838654177922817725562880000000
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0032",
+      "category": "exhaustive",
+      "expected": {
+        "value": 263130836933693530167218012160000000
+      },
+      "input": {
+        "n": 32
+      },
+      "observed": {
+        "value": 263130836933693530167218012160000000
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0033",
+      "category": "exhaustive",
+      "expected": {
+        "value": 8683317618811886495518194401280000000
+      },
+      "input": {
+        "n": 33
+      },
+      "observed": {
+        "value": 8683317618811886495518194401280000000
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0034",
+      "category": "exhaustive",
+      "expected": {
+        "value": 295232799039604140847618609643520000000
+      },
+      "input": {
+        "n": 34
+      },
+      "observed": {
+        "value": 295232799039604140847618609643520000000
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorial:0035",
+      "category": "exhaustive",
+      "expected": {
+        "value": 10333147966386144929666651337523200000000
+      },
+      "input": {
+        "n": 35
+      },
+      "observed": {
+        "value": 10333147966386144929666651337523200000000
+      },
+      "passed": true
+    }
+  ],
+  "condition": "large_to_small",
+  "elapsed_seconds": 0.029518981999899552,
+  "group": "combinatorics",
+  "library": "sympy",
+  "load_error": null,
+  "method_id": "sympy.factorial",
+  "passed": 36,
+  "total": 36
+}

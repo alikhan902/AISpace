@@ -1,0 +1,23 @@
+{
+  "algorithm": [
+    "Compute the cumulative sum along the specified axis.",
+    "Use NumPy's default operation on the entire 1-D list, with dtype=int64.",
+    "Return the result as a new array unless `out` is specified."
+  ],
+  "constraints": [
+    "All intermediate values fit signed int64.",
+    "Return type is int64 unless specified otherwise.",
+    "Use NumPy's default operation on the entire 1-D list."
+  ],
+  "edge_cases": [
+    "Empty input array.",
+    "Input array with all elements zero.",
+    "Input array with negative values.",
+    "Input array with overflow (but handled via integer arithmetic)."
+  ],
+  "inputs": "a is a one-dimensional list of integers, possibly empty.",
+  "method_id": "cumsum",
+  "output": "A new array holding the result, with the same size as `a`, and the same shape as `a` if `axis` is not None.",
+  "purpose": "Compute the cumulative sum of elements along a given axis.",
+  "signature": "solve(a)"
+}

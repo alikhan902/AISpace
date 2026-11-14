@@ -1,0 +1,23 @@
+{
+  "algorithm": [
+    "For each vertex v, compute its eccentricity (maximum shortest path distance to any other vertex)",
+    "Find the minimum eccentricity across all vertices"
+  ],
+  "constraints": [
+    "Graph must be simple undirected unweighted",
+    "Vertices are labeled 0 to n-1",
+    "Edges are distinct and satisfy 0<=u<v<n",
+    "Eccentricity of a singleton is 0",
+    "Graph must be connected to avoid ValueError"
+  ],
+  "edge_cases": [
+    "Graph with one vertex (n=1) has radius 0",
+    "Disconnected graph raises ValueError",
+    "Graph with all vertices isolated (n vertices) has radius 0"
+  ],
+  "inputs": "n: integer >= 1; edges: list of distinct [u,v] pairs with 0<=u<v<n",
+  "method_id": "networkx.radius",
+  "output": "integer: minimum eccentricity (radius) of the graph",
+  "purpose": "Compute the radius of a simple undirected unweighted graph",
+  "signature": "solve(n, edges)"
+}

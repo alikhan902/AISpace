@@ -1,0 +1,12545 @@
+{
+  "brief": {
+    "contract": "a is a list of nonnegative integers; minlength is a nonnegative integer. Return the int count list with NumPy's default unweighted behavior. Empty input is allowed.",
+    "documentation": "bincount(x, /, weights=None, minlength=0)\n\nCount number of occurrences of each value in array of non-negative ints.\n\nThe number of bins (of size 1) is one larger than the largest value in\n`x`. If `minlength` is specified, there will be at least this number\nof bins in the output array (though it will be longer if necessary,\ndepending on the contents of `x`).\nEach bin gives the number of occurrences of its index value in `x`.\nIf `weights` is specified the input array is weighted by it, i.e. if a\nvalue ``n`` is found at position ``i``, ``out[n] += weight[i]`` instead\nof ``out[n] += 1``.\n\nParameters\n----------\nx : array_like, 1 dimension, nonnegative ints\n    Input array.\nweights : array_like, optional\n    Weights, array of the same shape as `x`.\nminlength : int, optional\n    A minimum number of bins for the output array.\n\nReturns\n-------\nout : ndarray of ints\n    The result of binning the input array.\n    The length of `out` is equal to ``np.amax(x)+1``.\n\nRaises\n------\nValueError\n    If the input is not 1-dimensional, or contains elements with negative\n    values, or if `minlength` is negative.\nTypeError\n    If the type of the input is float or complex.\n\nSee Also\n--------\nhistogram, digitize, unique\n\nExamples\n--------\n>>> import numpy as np\n>>> np.bincount(np.arange(5))\narray([1, 1, 1, 1, 1])\n>>> np.bincount(np.array([0, 1, 1, 3, 2, 1, 7]))\narray([1, 3, 1, 1, 0, 0, 0, 1])\n\n>>> x = np.array([0, 1, 1, 3, 2, 1, 7, 23])\n>>> np.bincount(x).size == np.amax(x)+1\nTrue\n\nThe input array needs to be of integer dtype, otherwise a\nTypeError is raised:\n\n>>> np.bincount(np.arange(5, dtype=np.float64))\nTraceback (most recent call last):\n  ...\nTypeError: Cannot cast array data from dtype('float64') to dtype('int64')\naccording to the rule 'safe'\n\nA possible use of ``bincount`` is to perform sums over\nvariable-size chunks of an array, using the ``weights`` keyword.\n\n>>> w = np.array([0.3, 0.5, 0.2, 0.7, 1., -0.6]) # weights\n>>> x = np.array([0, 1, 1, 2, 2, 2])\n>>> np.bincount(x,  weights=w)\narray([ 0.3,  0.7,  1.1])",
+    "documentation_truncated": false,
+    "group": "ordering_counting",
+    "id": "numpy.bincount",
+    "library": "numpy",
+    "name": "bincount",
+    "signature": "solve(a, minlength=0)",
+    "version": "2.5.4"
+  },
+  "cases": [
+    {
+      "category": "boundary",
+      "expected": {
+        "value": []
+      },
+      "id": "numpy.bincount:0000",
+      "input": {
+        "a": [],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0
+        ]
+      },
+      "id": "numpy.bincount:0001",
+      "input": {
+        "a": [],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0002",
+      "input": {
+        "a": [],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0003",
+      "input": {
+        "a": [],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "id": "numpy.bincount:0004",
+      "input": {
+        "a": [
+          0
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "id": "numpy.bincount:0005",
+      "input": {
+        "a": [
+          0
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0006",
+      "input": {
+        "a": [
+          0
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0007",
+      "input": {
+        "a": [
+          0
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0008",
+      "input": {
+        "a": [
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0009",
+      "input": {
+        "a": [
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0010",
+      "input": {
+        "a": [
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0011",
+      "input": {
+        "a": [
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          2
+        ]
+      },
+      "id": "numpy.bincount:0012",
+      "input": {
+        "a": [
+          0,
+          0
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          2
+        ]
+      },
+      "id": "numpy.bincount:0013",
+      "input": {
+        "a": [
+          0,
+          0
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0014",
+      "input": {
+        "a": [
+          0,
+          0
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0015",
+      "input": {
+        "a": [
+          0,
+          0
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0016",
+      "input": {
+        "a": [
+          1,
+          1,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0017",
+      "input": {
+        "a": [
+          1,
+          1,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          3,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0018",
+      "input": {
+        "a": [
+          1,
+          1,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0019",
+      "input": {
+        "a": [
+          1,
+          1,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0020",
+      "input": {
+        "a": [
+          3,
+          2,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0021",
+      "input": {
+        "a": [
+          3,
+          2,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0022",
+      "input": {
+        "a": [
+          3,
+          2,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0023",
+      "input": {
+        "a": [
+          3,
+          2,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          1,
+          2,
+          0,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0024",
+      "input": {
+        "a": [
+          3,
+          1,
+          0,
+          3,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          1,
+          2,
+          0,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0025",
+      "input": {
+        "a": [
+          3,
+          1,
+          0,
+          3,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          1,
+          2,
+          0,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0026",
+      "input": {
+        "a": [
+          3,
+          1,
+          0,
+          3,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          1,
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0027",
+      "input": {
+        "a": [
+          3,
+          1,
+          0,
+          3,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0028",
+      "input": {
+        "a": [
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0029",
+      "input": {
+        "a": [
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0030",
+      "input": {
+        "a": [
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0031",
+      "input": {
+        "a": [
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          0,
+          4
+        ]
+      },
+      "id": "numpy.bincount:0032",
+      "input": {
+        "a": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          0,
+          4
+        ]
+      },
+      "id": "numpy.bincount:0033",
+      "input": {
+        "a": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          0,
+          4,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0034",
+      "input": {
+        "a": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0035",
+      "input": {
+        "a": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0036",
+      "input": {
+        "a": [
+          2,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0037",
+      "input": {
+        "a": [
+          2,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0038",
+      "input": {
+        "a": [
+          2,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0039",
+      "input": {
+        "a": [
+          2,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          4,
+          4,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0040",
+      "input": {
+        "a": [
+          0,
+          1,
+          1,
+          2,
+          3,
+          2,
+          2,
+          1,
+          0,
+          1,
+          2,
+          3
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          4,
+          4,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0041",
+      "input": {
+        "a": [
+          0,
+          1,
+          1,
+          2,
+          3,
+          2,
+          2,
+          1,
+          0,
+          1,
+          2,
+          3
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          4,
+          4,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0042",
+      "input": {
+        "a": [
+          0,
+          1,
+          1,
+          2,
+          3,
+          2,
+          2,
+          1,
+          0,
+          1,
+          2,
+          3
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          4,
+          4,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0043",
+      "input": {
+        "a": [
+          0,
+          1,
+          1,
+          2,
+          3,
+          2,
+          2,
+          1,
+          0,
+          1,
+          2,
+          3
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0044",
+      "input": {
+        "a": [
+          2,
+          2,
+          1,
+          1,
+          0,
+          1,
+          3,
+          1,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0045",
+      "input": {
+        "a": [
+          2,
+          2,
+          1,
+          1,
+          0,
+          1,
+          3,
+          1,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          2,
+          1,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0046",
+      "input": {
+        "a": [
+          2,
+          2,
+          1,
+          1,
+          0,
+          1,
+          3,
+          1,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0047",
+      "input": {
+        "a": [
+          2,
+          2,
+          1,
+          1,
+          0,
+          1,
+          3,
+          1,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0048",
+      "input": {
+        "a": [
+          1,
+          1,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0049",
+      "input": {
+        "a": [
+          1,
+          1,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          1,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0050",
+      "input": {
+        "a": [
+          1,
+          1,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0051",
+      "input": {
+        "a": [
+          1,
+          1,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0052",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          0
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0053",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          0
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          1,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0054",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          0
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0055",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          0
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0056",
+      "input": {
+        "a": [
+          3,
+          1,
+          2,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0057",
+      "input": {
+        "a": [
+          3,
+          1,
+          2,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          1,
+          1,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0058",
+      "input": {
+        "a": [
+          3,
+          1,
+          2,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0059",
+      "input": {
+        "a": [
+          3,
+          1,
+          2,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          5,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0060",
+      "input": {
+        "a": [
+          3,
+          1,
+          1,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          5,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0061",
+      "input": {
+        "a": [
+          3,
+          1,
+          1,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          5,
+          1,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0062",
+      "input": {
+        "a": [
+          3,
+          1,
+          1,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          5,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0063",
+      "input": {
+        "a": [
+          3,
+          1,
+          1,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0064",
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          3,
+          3,
+          0,
+          1,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0065",
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          3,
+          3,
+          0,
+          1,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2,
+          3,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0066",
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          3,
+          3,
+          0,
+          1,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0067",
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          3,
+          3,
+          0,
+          1,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          1,
+          4
+        ]
+      },
+      "id": "numpy.bincount:0068",
+      "input": {
+        "a": [
+          0,
+          1,
+          3,
+          1,
+          3,
+          2,
+          1,
+          3,
+          0,
+          3,
+          1,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          1,
+          4
+        ]
+      },
+      "id": "numpy.bincount:0069",
+      "input": {
+        "a": [
+          0,
+          1,
+          3,
+          1,
+          3,
+          2,
+          1,
+          3,
+          0,
+          3,
+          1,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          1,
+          4,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0070",
+      "input": {
+        "a": [
+          0,
+          1,
+          3,
+          1,
+          3,
+          2,
+          1,
+          3,
+          0,
+          3,
+          1,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          1,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0071",
+      "input": {
+        "a": [
+          0,
+          1,
+          3,
+          1,
+          3,
+          2,
+          1,
+          3,
+          0,
+          3,
+          1,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          2,
+          1,
+          5
+        ]
+      },
+      "id": "numpy.bincount:0072",
+      "input": {
+        "a": [
+          3,
+          3,
+          1,
+          3,
+          3,
+          2,
+          0,
+          3,
+          0,
+          0,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          2,
+          1,
+          5
+        ]
+      },
+      "id": "numpy.bincount:0073",
+      "input": {
+        "a": [
+          3,
+          3,
+          1,
+          3,
+          3,
+          2,
+          0,
+          3,
+          0,
+          0,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          2,
+          1,
+          5,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0074",
+      "input": {
+        "a": [
+          3,
+          3,
+          1,
+          3,
+          3,
+          2,
+          0,
+          3,
+          0,
+          0,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          2,
+          1,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0075",
+      "input": {
+        "a": [
+          3,
+          3,
+          1,
+          3,
+          3,
+          2,
+          0,
+          3,
+          0,
+          0,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          5,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0076",
+      "input": {
+        "a": [
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          0,
+          3,
+          3,
+          1,
+          3
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          5,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0077",
+      "input": {
+        "a": [
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          0,
+          3,
+          3,
+          1,
+          3
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          5,
+          3,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0078",
+      "input": {
+        "a": [
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          0,
+          3,
+          3,
+          1,
+          3
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          5,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0079",
+      "input": {
+        "a": [
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          0,
+          3,
+          3,
+          1,
+          3
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          1,
+          4
+        ]
+      },
+      "id": "numpy.bincount:0080",
+      "input": {
+        "a": [
+          3,
+          1,
+          0,
+          2,
+          1,
+          1,
+          3,
+          3,
+          0,
+          1,
+          3,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          1,
+          4
+        ]
+      },
+      "id": "numpy.bincount:0081",
+      "input": {
+        "a": [
+          3,
+          1,
+          0,
+          2,
+          1,
+          1,
+          3,
+          3,
+          0,
+          1,
+          3,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          1,
+          4,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0082",
+      "input": {
+        "a": [
+          3,
+          1,
+          0,
+          2,
+          1,
+          1,
+          3,
+          3,
+          0,
+          1,
+          3,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          1,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0083",
+      "input": {
+        "a": [
+          3,
+          1,
+          0,
+          2,
+          1,
+          1,
+          3,
+          3,
+          0,
+          1,
+          3,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0084",
+      "input": {
+        "a": [
+          3,
+          0,
+          3,
+          2,
+          1,
+          3,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0085",
+      "input": {
+        "a": [
+          3,
+          0,
+          3,
+          2,
+          1,
+          3,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          1,
+          3,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0086",
+      "input": {
+        "a": [
+          3,
+          0,
+          3,
+          2,
+          1,
+          3,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          1,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0087",
+      "input": {
+        "a": [
+          3,
+          0,
+          3,
+          2,
+          1,
+          3,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          3,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0088",
+      "input": {
+        "a": [
+          2,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          3,
+          3,
+          2,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          3,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0089",
+      "input": {
+        "a": [
+          2,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          3,
+          3,
+          2,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          3,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0090",
+      "input": {
+        "a": [
+          2,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          3,
+          3,
+          2,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          3,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0091",
+      "input": {
+        "a": [
+          2,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          3,
+          3,
+          2,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          3,
+          4,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0092",
+      "input": {
+        "a": [
+          1,
+          3,
+          2,
+          3,
+          2,
+          0,
+          1,
+          2,
+          1,
+          0,
+          0,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          3,
+          4,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0093",
+      "input": {
+        "a": [
+          1,
+          3,
+          2,
+          3,
+          2,
+          0,
+          1,
+          2,
+          1,
+          0,
+          0,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          3,
+          4,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0094",
+      "input": {
+        "a": [
+          1,
+          3,
+          2,
+          3,
+          2,
+          0,
+          1,
+          2,
+          1,
+          0,
+          0,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          3,
+          4,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0095",
+      "input": {
+        "a": [
+          1,
+          3,
+          2,
+          3,
+          2,
+          0,
+          1,
+          2,
+          1,
+          0,
+          0,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0096",
+      "input": {
+        "a": [
+          2,
+          1,
+          3,
+          1,
+          0,
+          1,
+          1,
+          3,
+          1,
+          3
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0097",
+      "input": {
+        "a": [
+          2,
+          1,
+          3,
+          1,
+          0,
+          1,
+          1,
+          3,
+          1,
+          3
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          1,
+          3,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0098",
+      "input": {
+        "a": [
+          2,
+          1,
+          3,
+          1,
+          0,
+          1,
+          1,
+          3,
+          1,
+          3
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          1,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0099",
+      "input": {
+        "a": [
+          2,
+          1,
+          3,
+          1,
+          0,
+          1,
+          1,
+          3,
+          1,
+          3
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          5,
+          4
+        ]
+      },
+      "id": "numpy.bincount:0100",
+      "input": {
+        "a": [
+          2,
+          3,
+          1,
+          2,
+          3,
+          1,
+          2,
+          3,
+          2,
+          3,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          5,
+          4
+        ]
+      },
+      "id": "numpy.bincount:0101",
+      "input": {
+        "a": [
+          2,
+          3,
+          1,
+          2,
+          3,
+          1,
+          2,
+          3,
+          2,
+          3,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          5,
+          4,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0102",
+      "input": {
+        "a": [
+          2,
+          3,
+          1,
+          2,
+          3,
+          1,
+          2,
+          3,
+          2,
+          3,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          5,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0103",
+      "input": {
+        "a": [
+          2,
+          3,
+          1,
+          2,
+          3,
+          1,
+          2,
+          3,
+          2,
+          3,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          5,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0104",
+      "input": {
+        "a": [
+          0,
+          1,
+          2,
+          2,
+          1,
+          2,
+          2,
+          3,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          5,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0105",
+      "input": {
+        "a": [
+          0,
+          1,
+          2,
+          2,
+          1,
+          2,
+          2,
+          3,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          5,
+          1,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0106",
+      "input": {
+        "a": [
+          0,
+          1,
+          2,
+          2,
+          1,
+          2,
+          2,
+          3,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          5,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0107",
+      "input": {
+        "a": [
+          0,
+          1,
+          2,
+          2,
+          1,
+          2,
+          2,
+          3,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          4,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0108",
+      "input": {
+        "a": [
+          0,
+          2,
+          2,
+          3,
+          1,
+          0,
+          1,
+          2,
+          3,
+          2,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          4,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0109",
+      "input": {
+        "a": [
+          0,
+          2,
+          2,
+          3,
+          1,
+          0,
+          1,
+          2,
+          3,
+          2,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          4,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0110",
+      "input": {
+        "a": [
+          0,
+          2,
+          2,
+          3,
+          1,
+          0,
+          1,
+          2,
+          3,
+          2,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          4,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0111",
+      "input": {
+        "a": [
+          0,
+          2,
+          2,
+          3,
+          1,
+          0,
+          1,
+          2,
+          3,
+          2,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0112",
+      "input": {
+        "a": [
+          2,
+          1,
+          2,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0113",
+      "input": {
+        "a": [
+          2,
+          1,
+          2,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          2,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0114",
+      "input": {
+        "a": [
+          2,
+          1,
+          2,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0115",
+      "input": {
+        "a": [
+          2,
+          1,
+          2,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0116",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          3,
+          0,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0117",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          3,
+          0,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2,
+          1,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0118",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          3,
+          0,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0119",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          3,
+          0,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          4,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0120",
+      "input": {
+        "a": [
+          2,
+          3,
+          2,
+          3,
+          3,
+          2,
+          1,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          4,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0121",
+      "input": {
+        "a": [
+          2,
+          3,
+          2,
+          3,
+          3,
+          2,
+          1,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          4,
+          3,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0122",
+      "input": {
+        "a": [
+          2,
+          3,
+          2,
+          3,
+          3,
+          2,
+          1,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          4,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0123",
+      "input": {
+        "a": [
+          2,
+          3,
+          2,
+          3,
+          3,
+          2,
+          1,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0124",
+      "input": {
+        "a": [
+          0,
+          1,
+          3,
+          2,
+          2,
+          1,
+          3,
+          3,
+          0,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0125",
+      "input": {
+        "a": [
+          0,
+          1,
+          3,
+          2,
+          2,
+          1,
+          3,
+          3,
+          0,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          2,
+          3,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0126",
+      "input": {
+        "a": [
+          0,
+          1,
+          3,
+          2,
+          2,
+          1,
+          3,
+          3,
+          0,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          2,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0127",
+      "input": {
+        "a": [
+          0,
+          1,
+          3,
+          2,
+          2,
+          1,
+          3,
+          3,
+          0,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          0,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0128",
+      "input": {
+        "a": [
+          0,
+          1,
+          1,
+          3,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          0,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0129",
+      "input": {
+        "a": [
+          0,
+          1,
+          1,
+          3,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          0,
+          1,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0130",
+      "input": {
+        "a": [
+          0,
+          1,
+          1,
+          3,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0131",
+      "input": {
+        "a": [
+          0,
+          1,
+          1,
+          3,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0132",
+      "input": {
+        "a": [
+          1,
+          1,
+          1,
+          0,
+          3,
+          2,
+          0,
+          3
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0133",
+      "input": {
+        "a": [
+          1,
+          1,
+          1,
+          0,
+          3,
+          2,
+          0,
+          3
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          1,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0134",
+      "input": {
+        "a": [
+          1,
+          1,
+          1,
+          0,
+          3,
+          2,
+          0,
+          3
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          1,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0135",
+      "input": {
+        "a": [
+          1,
+          1,
+          1,
+          0,
+          3,
+          2,
+          0,
+          3
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          2,
+          4
+        ]
+      },
+      "id": "numpy.bincount:0136",
+      "input": {
+        "a": [
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          0,
+          1,
+          3,
+          2,
+          1,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          2,
+          4
+        ]
+      },
+      "id": "numpy.bincount:0137",
+      "input": {
+        "a": [
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          0,
+          1,
+          3,
+          2,
+          1,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          2,
+          4,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0138",
+      "input": {
+        "a": [
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          0,
+          1,
+          3,
+          2,
+          1,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          2,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0139",
+      "input": {
+        "a": [
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          0,
+          1,
+          3,
+          2,
+          1,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0140",
+      "input": {
+        "a": [
+          2,
+          1,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0141",
+      "input": {
+        "a": [
+          2,
+          1,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          2,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0142",
+      "input": {
+        "a": [
+          2,
+          1,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0143",
+      "input": {
+        "a": [
+          2,
+          1,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          5,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0144",
+      "input": {
+        "a": [
+          1,
+          3,
+          0,
+          2,
+          2,
+          2,
+          3,
+          1,
+          2,
+          2,
+          0,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          5,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0145",
+      "input": {
+        "a": [
+          1,
+          3,
+          0,
+          2,
+          2,
+          2,
+          3,
+          1,
+          2,
+          2,
+          0,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          5,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0146",
+      "input": {
+        "a": [
+          1,
+          3,
+          0,
+          2,
+          2,
+          2,
+          3,
+          1,
+          2,
+          2,
+          0,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          5,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0147",
+      "input": {
+        "a": [
+          1,
+          3,
+          0,
+          2,
+          2,
+          2,
+          3,
+          1,
+          2,
+          2,
+          0,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          3,
+          4
+        ]
+      },
+      "id": "numpy.bincount:0148",
+      "input": {
+        "a": [
+          2,
+          3,
+          2,
+          0,
+          3,
+          1,
+          3,
+          0,
+          2,
+          3,
+          1,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          3,
+          4
+        ]
+      },
+      "id": "numpy.bincount:0149",
+      "input": {
+        "a": [
+          2,
+          3,
+          2,
+          0,
+          3,
+          1,
+          3,
+          0,
+          2,
+          3,
+          1,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          3,
+          4,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0150",
+      "input": {
+        "a": [
+          2,
+          3,
+          2,
+          0,
+          3,
+          1,
+          3,
+          0,
+          2,
+          3,
+          1,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          3,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0151",
+      "input": {
+        "a": [
+          2,
+          3,
+          2,
+          0,
+          3,
+          1,
+          3,
+          0,
+          2,
+          3,
+          1,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          7
+        ]
+      },
+      "id": "numpy.bincount:0152",
+      "input": {
+        "a": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          7
+        ]
+      },
+      "id": "numpy.bincount:0153",
+      "input": {
+        "a": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          7,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0154",
+      "input": {
+        "a": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0155",
+      "input": {
+        "a": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0156",
+      "input": {
+        "a": [
+          1,
+          0,
+          2,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0157",
+      "input": {
+        "a": [
+          1,
+          0,
+          2,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          1,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0158",
+      "input": {
+        "a": [
+          1,
+          0,
+          2,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0159",
+      "input": {
+        "a": [
+          1,
+          0,
+          2,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          0,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0160",
+      "input": {
+        "a": [
+          0,
+          3
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          0,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0161",
+      "input": {
+        "a": [
+          0,
+          3
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0162",
+      "input": {
+        "a": [
+          0,
+          3
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0163",
+      "input": {
+        "a": [
+          0,
+          3
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0164",
+      "input": {
+        "a": [
+          1,
+          3,
+          3,
+          0,
+          2,
+          3,
+          0
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0165",
+      "input": {
+        "a": [
+          1,
+          3,
+          3,
+          0,
+          2,
+          3,
+          0
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1,
+          1,
+          3,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0166",
+      "input": {
+        "a": [
+          1,
+          3,
+          3,
+          0,
+          2,
+          3,
+          0
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1,
+          1,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0167",
+      "input": {
+        "a": [
+          1,
+          3,
+          3,
+          0,
+          2,
+          3,
+          0
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          0,
+          2,
+          5
+        ]
+      },
+      "id": "numpy.bincount:0168",
+      "input": {
+        "a": [
+          0,
+          3,
+          2,
+          3,
+          0,
+          3,
+          3,
+          0,
+          3,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          0,
+          2,
+          5
+        ]
+      },
+      "id": "numpy.bincount:0169",
+      "input": {
+        "a": [
+          0,
+          3,
+          2,
+          3,
+          0,
+          3,
+          3,
+          0,
+          3,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          0,
+          2,
+          5,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0170",
+      "input": {
+        "a": [
+          0,
+          3,
+          2,
+          3,
+          0,
+          3,
+          3,
+          0,
+          3,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          0,
+          2,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0171",
+      "input": {
+        "a": [
+          0,
+          3,
+          2,
+          3,
+          0,
+          3,
+          3,
+          0,
+          3,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          7
+        ]
+      },
+      "id": "numpy.bincount:0172",
+      "input": {
+        "a": [
+          0,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          7
+        ]
+      },
+      "id": "numpy.bincount:0173",
+      "input": {
+        "a": [
+          0,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          7,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0174",
+      "input": {
+        "a": [
+          0,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0175",
+      "input": {
+        "a": [
+          0,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          4,
+          3,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0176",
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          1,
+          2,
+          1,
+          2,
+          3,
+          0,
+          3,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          4,
+          3,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0177",
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          1,
+          2,
+          1,
+          2,
+          3,
+          0,
+          3,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          4,
+          3,
+          3,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0178",
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          1,
+          2,
+          1,
+          2,
+          3,
+          0,
+          3,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          4,
+          3,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0179",
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          1,
+          2,
+          1,
+          2,
+          3,
+          0,
+          3,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0180",
+      "input": {
+        "a": [
+          0,
+          1,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0181",
+      "input": {
+        "a": [
+          0,
+          1,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0182",
+      "input": {
+        "a": [
+          0,
+          1,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0183",
+      "input": {
+        "a": [
+          0,
+          1,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0184",
+      "input": {
+        "a": [
+          1,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0185",
+      "input": {
+        "a": [
+          1,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0186",
+      "input": {
+        "a": [
+          1,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0187",
+      "input": {
+        "a": [
+          1,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          1,
+          4
+        ]
+      },
+      "id": "numpy.bincount:0188",
+      "input": {
+        "a": [
+          3,
+          3,
+          3,
+          1,
+          1,
+          0,
+          3,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          1,
+          4
+        ]
+      },
+      "id": "numpy.bincount:0189",
+      "input": {
+        "a": [
+          3,
+          3,
+          3,
+          1,
+          1,
+          0,
+          3,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          1,
+          4,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0190",
+      "input": {
+        "a": [
+          3,
+          3,
+          3,
+          1,
+          1,
+          0,
+          3,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          1,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0191",
+      "input": {
+        "a": [
+          3,
+          3,
+          3,
+          1,
+          1,
+          0,
+          3,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0192",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          2,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0193",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          2,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          2,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0194",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          2,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0195",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          2,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          5,
+          4,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0196",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          2,
+          2,
+          1,
+          1,
+          3,
+          3,
+          2,
+          3,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          5,
+          4,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0197",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          2,
+          2,
+          1,
+          1,
+          3,
+          3,
+          2,
+          3,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          5,
+          4,
+          3,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0198",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          2,
+          2,
+          1,
+          1,
+          3,
+          3,
+          2,
+          3,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          5,
+          4,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0199",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          2,
+          2,
+          1,
+          1,
+          3,
+          3,
+          2,
+          3,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          1,
+          0,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0200",
+      "input": {
+        "a": [
+          0,
+          0,
+          3,
+          1,
+          0
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          1,
+          0,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0201",
+      "input": {
+        "a": [
+          0,
+          0,
+          3,
+          1,
+          0
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          1,
+          0,
+          1,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0202",
+      "input": {
+        "a": [
+          0,
+          0,
+          3,
+          1,
+          0
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0203",
+      "input": {
+        "a": [
+          0,
+          0,
+          3,
+          1,
+          0
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          2,
+          0,
+          5
+        ]
+      },
+      "id": "numpy.bincount:0204",
+      "input": {
+        "a": [
+          0,
+          1,
+          3,
+          3,
+          3,
+          3,
+          3,
+          0,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          2,
+          0,
+          5
+        ]
+      },
+      "id": "numpy.bincount:0205",
+      "input": {
+        "a": [
+          0,
+          1,
+          3,
+          3,
+          3,
+          3,
+          3,
+          0,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          2,
+          0,
+          5,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0206",
+      "input": {
+        "a": [
+          0,
+          1,
+          3,
+          3,
+          3,
+          3,
+          3,
+          0,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          2,
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0207",
+      "input": {
+        "a": [
+          0,
+          1,
+          3,
+          3,
+          3,
+          3,
+          3,
+          0,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          4,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0208",
+      "input": {
+        "a": [
+          0,
+          2,
+          1,
+          2,
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          4,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0209",
+      "input": {
+        "a": [
+          0,
+          2,
+          1,
+          2,
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          4,
+          2,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0210",
+      "input": {
+        "a": [
+          0,
+          2,
+          1,
+          2,
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          4,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0211",
+      "input": {
+        "a": [
+          0,
+          2,
+          1,
+          2,
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0212",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          3,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0213",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          3,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          1,
+          1,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0214",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          3,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0215",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          3,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0216",
+      "input": {
+        "a": [
+          3,
+          3,
+          1,
+          2,
+          0,
+          3,
+          0
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0217",
+      "input": {
+        "a": [
+          3,
+          3,
+          1,
+          2,
+          0,
+          3,
+          0
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1,
+          1,
+          3,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0218",
+      "input": {
+        "a": [
+          3,
+          3,
+          1,
+          2,
+          0,
+          3,
+          0
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1,
+          1,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0219",
+      "input": {
+        "a": [
+          3,
+          3,
+          1,
+          2,
+          0,
+          3,
+          0
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          5,
+          6
+        ]
+      },
+      "id": "numpy.bincount:0220",
+      "input": {
+        "a": [
+          3,
+          2,
+          3,
+          3,
+          2,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          5,
+          6
+        ]
+      },
+      "id": "numpy.bincount:0221",
+      "input": {
+        "a": [
+          3,
+          2,
+          3,
+          3,
+          2,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          5,
+          6,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0222",
+      "input": {
+        "a": [
+          3,
+          2,
+          3,
+          3,
+          2,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          5,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0223",
+      "input": {
+        "a": [
+          3,
+          2,
+          3,
+          3,
+          2,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          0,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0224",
+      "input": {
+        "a": [
+          1,
+          3,
+          3,
+          1,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          0,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0225",
+      "input": {
+        "a": [
+          1,
+          3,
+          3,
+          1,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          0,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0226",
+      "input": {
+        "a": [
+          1,
+          3,
+          3,
+          1,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0227",
+      "input": {
+        "a": [
+          1,
+          3,
+          3,
+          1,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0228",
+      "input": {
+        "a": [
+          1,
+          2,
+          0,
+          3,
+          1,
+          3,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0229",
+      "input": {
+        "a": [
+          1,
+          2,
+          0,
+          3,
+          1,
+          3,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          1,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0230",
+      "input": {
+        "a": [
+          1,
+          2,
+          0,
+          3,
+          1,
+          3,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          1,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0231",
+      "input": {
+        "a": [
+          1,
+          2,
+          0,
+          3,
+          1,
+          3,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          0,
+          4
+        ]
+      },
+      "id": "numpy.bincount:0232",
+      "input": {
+        "a": [
+          1,
+          1,
+          3,
+          3,
+          3,
+          3,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          0,
+          4
+        ]
+      },
+      "id": "numpy.bincount:0233",
+      "input": {
+        "a": [
+          1,
+          1,
+          3,
+          3,
+          3,
+          3,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          0,
+          4,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0234",
+      "input": {
+        "a": [
+          1,
+          1,
+          3,
+          3,
+          3,
+          3,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0235",
+      "input": {
+        "a": [
+          1,
+          1,
+          3,
+          3,
+          3,
+          3,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          4,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0236",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          0,
+          2,
+          3,
+          1,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          4,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0237",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          0,
+          2,
+          3,
+          1,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          4,
+          2,
+          1,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0238",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          0,
+          2,
+          3,
+          1,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          4,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0239",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          0,
+          2,
+          3,
+          1,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          5,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0240",
+      "input": {
+        "a": [
+          2,
+          1,
+          2,
+          2,
+          3,
+          2,
+          2,
+          3
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          5,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0241",
+      "input": {
+        "a": [
+          2,
+          1,
+          2,
+          2,
+          3,
+          2,
+          2,
+          3
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          5,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0242",
+      "input": {
+        "a": [
+          2,
+          1,
+          2,
+          2,
+          3,
+          2,
+          2,
+          3
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          5,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0243",
+      "input": {
+        "a": [
+          2,
+          1,
+          2,
+          2,
+          3,
+          2,
+          2,
+          3
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0244",
+      "input": {
+        "a": [
+          2,
+          2,
+          0,
+          1,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0245",
+      "input": {
+        "a": [
+          2,
+          2,
+          0,
+          1,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0246",
+      "input": {
+        "a": [
+          2,
+          2,
+          0,
+          1,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0247",
+      "input": {
+        "a": [
+          2,
+          2,
+          0,
+          1,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          0,
+          0,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0248",
+      "input": {
+        "a": [
+          3,
+          0,
+          0,
+          0,
+          3
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          0,
+          0,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0249",
+      "input": {
+        "a": [
+          3,
+          0,
+          0,
+          0,
+          3
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0250",
+      "input": {
+        "a": [
+          3,
+          0,
+          0,
+          0,
+          3
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0251",
+      "input": {
+        "a": [
+          3,
+          0,
+          0,
+          0,
+          3
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          3,
+          5
+        ]
+      },
+      "id": "numpy.bincount:0252",
+      "input": {
+        "a": [
+          3,
+          1,
+          3,
+          2,
+          3,
+          2,
+          3,
+          1,
+          3,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          3,
+          5
+        ]
+      },
+      "id": "numpy.bincount:0253",
+      "input": {
+        "a": [
+          3,
+          1,
+          3,
+          2,
+          3,
+          2,
+          3,
+          1,
+          3,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          3,
+          5,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0254",
+      "input": {
+        "a": [
+          3,
+          1,
+          3,
+          2,
+          3,
+          2,
+          3,
+          1,
+          3,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          3,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0255",
+      "input": {
+        "a": [
+          3,
+          1,
+          3,
+          2,
+          3,
+          2,
+          3,
+          1,
+          3,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          4,
+          3,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0256",
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          0,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          4,
+          3,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0257",
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          0,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          4,
+          3,
+          1,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0258",
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          0,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          4,
+          3,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0259",
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          0,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0260",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          2,
+          2,
+          0
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0261",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          2,
+          2,
+          0
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0262",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          2,
+          2,
+          0
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0263",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          2,
+          2,
+          0
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0264",
+      "input": {
+        "a": [
+          0,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0265",
+      "input": {
+        "a": [
+          0,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0266",
+      "input": {
+        "a": [
+          0,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0267",
+      "input": {
+        "a": [
+          0,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          0,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0268",
+      "input": {
+        "a": [
+          1,
+          1,
+          0,
+          3,
+          3,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          0,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0269",
+      "input": {
+        "a": [
+          1,
+          1,
+          0,
+          3,
+          3,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          0,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0270",
+      "input": {
+        "a": [
+          1,
+          1,
+          0,
+          3,
+          3,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0271",
+      "input": {
+        "a": [
+          1,
+          1,
+          0,
+          3,
+          3,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          6,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0272",
+      "input": {
+        "a": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          3,
+          3
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          6,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0273",
+      "input": {
+        "a": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          3,
+          3
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          6,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0274",
+      "input": {
+        "a": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          3,
+          3
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          6,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0275",
+      "input": {
+        "a": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          3,
+          3
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0276",
+      "input": {
+        "a": [
+          0,
+          1,
+          3,
+          3,
+          1,
+          3,
+          1,
+          1,
+          2,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0277",
+      "input": {
+        "a": [
+          0,
+          1,
+          3,
+          3,
+          1,
+          3,
+          1,
+          1,
+          2,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          1,
+          3,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0278",
+      "input": {
+        "a": [
+          0,
+          1,
+          3,
+          3,
+          1,
+          3,
+          1,
+          1,
+          2,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          1,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0279",
+      "input": {
+        "a": [
+          0,
+          1,
+          3,
+          3,
+          1,
+          3,
+          1,
+          1,
+          2,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          4,
+          4
+        ]
+      },
+      "id": "numpy.bincount:0280",
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          1,
+          3,
+          3,
+          2,
+          2,
+          3,
+          0,
+          2,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          4,
+          4
+        ]
+      },
+      "id": "numpy.bincount:0281",
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          1,
+          3,
+          3,
+          2,
+          2,
+          3,
+          0,
+          2,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          4,
+          4,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0282",
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          1,
+          3,
+          3,
+          2,
+          2,
+          3,
+          0,
+          2,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          4,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0283",
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          1,
+          3,
+          3,
+          2,
+          2,
+          3,
+          0,
+          2,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0284",
+      "input": {
+        "a": [
+          1,
+          1,
+          2,
+          0,
+          3,
+          2,
+          1,
+          1,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0285",
+      "input": {
+        "a": [
+          1,
+          1,
+          2,
+          0,
+          3,
+          2,
+          1,
+          1,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          2,
+          1,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0286",
+      "input": {
+        "a": [
+          1,
+          1,
+          2,
+          0,
+          3,
+          2,
+          1,
+          1,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0287",
+      "input": {
+        "a": [
+          1,
+          1,
+          2,
+          0,
+          3,
+          2,
+          1,
+          1,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          3,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0288",
+      "input": {
+        "a": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          2,
+          0,
+          3,
+          2,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          3,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0289",
+      "input": {
+        "a": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          2,
+          0,
+          3,
+          2,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          3,
+          2,
+          1,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0290",
+      "input": {
+        "a": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          2,
+          0,
+          3,
+          2,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          3,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0291",
+      "input": {
+        "a": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          2,
+          0,
+          3,
+          2,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0292",
+      "input": {
+        "a": [
+          2,
+          2,
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0293",
+      "input": {
+        "a": [
+          2,
+          2,
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          2,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0294",
+      "input": {
+        "a": [
+          2,
+          2,
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0295",
+      "input": {
+        "a": [
+          2,
+          2,
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0296",
+      "input": {
+        "a": [
+          2,
+          0,
+          2,
+          1,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0297",
+      "input": {
+        "a": [
+          2,
+          0,
+          2,
+          1,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0298",
+      "input": {
+        "a": [
+          2,
+          0,
+          2,
+          1,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0299",
+      "input": {
+        "a": [
+          2,
+          0,
+          2,
+          1,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          2,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0300",
+      "input": {
+        "a": [
+          2,
+          1,
+          2,
+          0,
+          3,
+          3
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          2,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0301",
+      "input": {
+        "a": [
+          2,
+          1,
+          2,
+          0,
+          3,
+          3
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          2,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0302",
+      "input": {
+        "a": [
+          2,
+          1,
+          2,
+          0,
+          3,
+          3
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0303",
+      "input": {
+        "a": [
+          2,
+          1,
+          2,
+          0,
+          3,
+          3
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          5,
+          4
+        ]
+      },
+      "id": "numpy.bincount:0304",
+      "input": {
+        "a": [
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          1,
+          2,
+          0,
+          3,
+          3
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          5,
+          4
+        ]
+      },
+      "id": "numpy.bincount:0305",
+      "input": {
+        "a": [
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          1,
+          2,
+          0,
+          3,
+          3
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          5,
+          4,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0306",
+      "input": {
+        "a": [
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          1,
+          2,
+          0,
+          3,
+          3
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          5,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0307",
+      "input": {
+        "a": [
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          1,
+          2,
+          0,
+          3,
+          3
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0308",
+      "input": {
+        "a": [
+          0,
+          3,
+          0,
+          2,
+          3,
+          0,
+          1,
+          1,
+          2,
+          1,
+          3,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0309",
+      "input": {
+        "a": [
+          0,
+          3,
+          0,
+          2,
+          3,
+          0,
+          1,
+          1,
+          2,
+          1,
+          3,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          3,
+          3,
+          3,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0310",
+      "input": {
+        "a": [
+          0,
+          3,
+          0,
+          2,
+          3,
+          0,
+          1,
+          1,
+          2,
+          1,
+          3,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          3,
+          3,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0311",
+      "input": {
+        "a": [
+          0,
+          3,
+          0,
+          2,
+          3,
+          0,
+          1,
+          1,
+          2,
+          1,
+          3,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          6,
+          0,
+          5
+        ]
+      },
+      "id": "numpy.bincount:0312",
+      "input": {
+        "a": [
+          0,
+          1,
+          1,
+          3,
+          1,
+          3,
+          3,
+          1,
+          3,
+          3,
+          1,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          6,
+          0,
+          5
+        ]
+      },
+      "id": "numpy.bincount:0313",
+      "input": {
+        "a": [
+          0,
+          1,
+          1,
+          3,
+          1,
+          3,
+          3,
+          1,
+          3,
+          3,
+          1,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          6,
+          0,
+          5,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0314",
+      "input": {
+        "a": [
+          0,
+          1,
+          1,
+          3,
+          1,
+          3,
+          3,
+          1,
+          3,
+          3,
+          1,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          6,
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0315",
+      "input": {
+        "a": [
+          0,
+          1,
+          1,
+          3,
+          1,
+          3,
+          3,
+          1,
+          3,
+          3,
+          1,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          0,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0316",
+      "input": {
+        "a": [
+          1,
+          1,
+          3,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          0,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0317",
+      "input": {
+        "a": [
+          1,
+          1,
+          3,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          0,
+          1,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0318",
+      "input": {
+        "a": [
+          1,
+          1,
+          3,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0319",
+      "input": {
+        "a": [
+          1,
+          1,
+          3,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          5,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0320",
+      "input": {
+        "a": [
+          1,
+          1,
+          3,
+          2,
+          2,
+          1,
+          2,
+          3,
+          2,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          5,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0321",
+      "input": {
+        "a": [
+          1,
+          1,
+          3,
+          2,
+          2,
+          1,
+          2,
+          3,
+          2,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          5,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0322",
+      "input": {
+        "a": [
+          1,
+          1,
+          3,
+          2,
+          2,
+          1,
+          2,
+          3,
+          2,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          5,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0323",
+      "input": {
+        "a": [
+          1,
+          1,
+          3,
+          2,
+          2,
+          1,
+          2,
+          3,
+          2,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          4,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0324",
+      "input": {
+        "a": [
+          3,
+          0,
+          0,
+          3,
+          1,
+          1,
+          1,
+          3,
+          2,
+          1,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          4,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0325",
+      "input": {
+        "a": [
+          3,
+          0,
+          0,
+          3,
+          1,
+          1,
+          1,
+          3,
+          2,
+          1,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          4,
+          2,
+          3,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0326",
+      "input": {
+        "a": [
+          3,
+          0,
+          0,
+          3,
+          1,
+          1,
+          1,
+          3,
+          2,
+          1,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          4,
+          2,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0327",
+      "input": {
+        "a": [
+          3,
+          0,
+          0,
+          3,
+          1,
+          1,
+          1,
+          3,
+          2,
+          1,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0328",
+      "input": {
+        "a": [
+          2,
+          0,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0329",
+      "input": {
+        "a": [
+          2,
+          0,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0330",
+      "input": {
+        "a": [
+          2,
+          0,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0331",
+      "input": {
+        "a": [
+          2,
+          0,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          1,
+          3,
+          4
+        ]
+      },
+      "id": "numpy.bincount:0332",
+      "input": {
+        "a": [
+          2,
+          0,
+          1,
+          3,
+          0,
+          3,
+          2,
+          3,
+          0,
+          3,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          1,
+          3,
+          4
+        ]
+      },
+      "id": "numpy.bincount:0333",
+      "input": {
+        "a": [
+          2,
+          0,
+          1,
+          3,
+          0,
+          3,
+          2,
+          3,
+          0,
+          3,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          1,
+          3,
+          4,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0334",
+      "input": {
+        "a": [
+          2,
+          0,
+          1,
+          3,
+          0,
+          3,
+          2,
+          3,
+          0,
+          3,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          1,
+          3,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0335",
+      "input": {
+        "a": [
+          2,
+          0,
+          1,
+          3,
+          0,
+          3,
+          2,
+          3,
+          0,
+          3,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0336",
+      "input": {
+        "a": [
+          3,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0337",
+      "input": {
+        "a": [
+          3,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0338",
+      "input": {
+        "a": [
+          3,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0339",
+      "input": {
+        "a": [
+          3,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          4,
+          5,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0340",
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          3
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          4,
+          5,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0341",
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          3
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          4,
+          5,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0342",
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          3
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          4,
+          5,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0343",
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          3
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          3,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0344",
+      "input": {
+        "a": [
+          0,
+          3,
+          1,
+          2,
+          0,
+          1,
+          0,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          3,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0345",
+      "input": {
+        "a": [
+          0,
+          3,
+          1,
+          2,
+          0,
+          1,
+          0,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          3,
+          1,
+          1,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0346",
+      "input": {
+        "a": [
+          0,
+          3,
+          1,
+          2,
+          0,
+          1,
+          0,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          3,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0347",
+      "input": {
+        "a": [
+          0,
+          3,
+          1,
+          2,
+          0,
+          1,
+          0,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          3,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0348",
+      "input": {
+        "a": [
+          2,
+          2,
+          1,
+          3,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          3,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0349",
+      "input": {
+        "a": [
+          2,
+          2,
+          1,
+          3,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          3,
+          1,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0350",
+      "input": {
+        "a": [
+          2,
+          2,
+          1,
+          3,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          3,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0351",
+      "input": {
+        "a": [
+          2,
+          2,
+          1,
+          3,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          3,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0352",
+      "input": {
+        "a": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          3
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          3,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0353",
+      "input": {
+        "a": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          3
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          3,
+          1,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0354",
+      "input": {
+        "a": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          3
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          3,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0355",
+      "input": {
+        "a": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          3
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0356",
+      "input": {
+        "a": [
+          1,
+          0,
+          1,
+          2,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0357",
+      "input": {
+        "a": [
+          1,
+          0,
+          1,
+          2,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0358",
+      "input": {
+        "a": [
+          1,
+          0,
+          1,
+          2,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0359",
+      "input": {
+        "a": [
+          1,
+          0,
+          1,
+          2,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0360",
+      "input": {
+        "a": [
+          0,
+          1,
+          1,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0361",
+      "input": {
+        "a": [
+          0,
+          1,
+          1,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          1,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0362",
+      "input": {
+        "a": [
+          0,
+          1,
+          1,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0363",
+      "input": {
+        "a": [
+          0,
+          1,
+          1,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0364",
+      "input": {
+        "a": [
+          2,
+          2,
+          2,
+          0
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0365",
+      "input": {
+        "a": [
+          2,
+          2,
+          2,
+          0
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          3,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0366",
+      "input": {
+        "a": [
+          2,
+          2,
+          2,
+          0
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0367",
+      "input": {
+        "a": [
+          2,
+          2,
+          2,
+          0
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0368",
+      "input": {
+        "a": [
+          3,
+          3
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0369",
+      "input": {
+        "a": [
+          3,
+          3
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0370",
+      "input": {
+        "a": [
+          3,
+          3
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0371",
+      "input": {
+        "a": [
+          3,
+          3
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          3,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0372",
+      "input": {
+        "a": [
+          1,
+          3,
+          0,
+          2,
+          0,
+          1,
+          3,
+          0,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          3,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0373",
+      "input": {
+        "a": [
+          1,
+          3,
+          0,
+          2,
+          0,
+          1,
+          3,
+          0,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          3,
+          1,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0374",
+      "input": {
+        "a": [
+          1,
+          3,
+          0,
+          2,
+          0,
+          1,
+          3,
+          0,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          3,
+          1,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0375",
+      "input": {
+        "a": [
+          1,
+          3,
+          0,
+          2,
+          0,
+          1,
+          3,
+          0,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0376",
+      "input": {
+        "a": [
+          3
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0377",
+      "input": {
+        "a": [
+          3
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0378",
+      "input": {
+        "a": [
+          3
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0379",
+      "input": {
+        "a": [
+          3
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0380",
+      "input": {
+        "a": [
+          3,
+          0,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0381",
+      "input": {
+        "a": [
+          3,
+          0,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          1,
+          1,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0382",
+      "input": {
+        "a": [
+          3,
+          0,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0383",
+      "input": {
+        "a": [
+          3,
+          0,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          3,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0384",
+      "input": {
+        "a": [
+          2,
+          2,
+          3,
+          3,
+          2,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          3,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0385",
+      "input": {
+        "a": [
+          2,
+          2,
+          3,
+          3,
+          2,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          3,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0386",
+      "input": {
+        "a": [
+          2,
+          2,
+          3,
+          3,
+          2,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          3,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0387",
+      "input": {
+        "a": [
+          2,
+          2,
+          3,
+          3,
+          2,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0388",
+      "input": {
+        "a": [
+          3,
+          0,
+          2,
+          3
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0389",
+      "input": {
+        "a": [
+          3,
+          0,
+          2,
+          3
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          1,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0390",
+      "input": {
+        "a": [
+          3,
+          0,
+          2,
+          3
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          1,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0391",
+      "input": {
+        "a": [
+          3,
+          0,
+          2,
+          3
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0392",
+      "input": {
+        "a": [
+          3,
+          0,
+          2,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0393",
+      "input": {
+        "a": [
+          3,
+          0,
+          2,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0394",
+      "input": {
+        "a": [
+          3,
+          0,
+          2,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0395",
+      "input": {
+        "a": [
+          3,
+          0,
+          2,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0396",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0397",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          1,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0398",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0399",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0400",
+      "input": {
+        "a": [
+          1,
+          3,
+          1,
+          1,
+          2,
+          2,
+          0,
+          0
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0401",
+      "input": {
+        "a": [
+          1,
+          3,
+          1,
+          1,
+          2,
+          2,
+          0,
+          0
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          2,
+          1,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0402",
+      "input": {
+        "a": [
+          1,
+          3,
+          1,
+          1,
+          2,
+          2,
+          0,
+          0
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0403",
+      "input": {
+        "a": [
+          1,
+          3,
+          1,
+          1,
+          2,
+          2,
+          0,
+          0
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          4,
+          3,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0404",
+      "input": {
+        "a": [
+          3,
+          1,
+          2,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          4,
+          3,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0405",
+      "input": {
+        "a": [
+          3,
+          1,
+          2,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          4,
+          3,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0406",
+      "input": {
+        "a": [
+          3,
+          1,
+          2,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          4,
+          3,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0407",
+      "input": {
+        "a": [
+          3,
+          1,
+          2,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          2,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0408",
+      "input": {
+        "a": [
+          2,
+          2,
+          3,
+          3
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          2,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0409",
+      "input": {
+        "a": [
+          2,
+          2,
+          3,
+          3
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          2,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0410",
+      "input": {
+        "a": [
+          2,
+          2,
+          3,
+          3
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0411",
+      "input": {
+        "a": [
+          2,
+          2,
+          3,
+          3
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          4,
+          5,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0412",
+      "input": {
+        "a": [
+          2,
+          2,
+          2,
+          1,
+          1,
+          2,
+          3,
+          3,
+          1,
+          2,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          4,
+          5,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0413",
+      "input": {
+        "a": [
+          2,
+          2,
+          2,
+          1,
+          1,
+          2,
+          3,
+          3,
+          1,
+          2,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          4,
+          5,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0414",
+      "input": {
+        "a": [
+          2,
+          2,
+          2,
+          1,
+          1,
+          2,
+          3,
+          3,
+          1,
+          2,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          4,
+          5,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0415",
+      "input": {
+        "a": [
+          2,
+          2,
+          2,
+          1,
+          1,
+          2,
+          3,
+          3,
+          1,
+          2,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0416",
+      "input": {
+        "a": [
+          3,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0417",
+      "input": {
+        "a": [
+          3,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0418",
+      "input": {
+        "a": [
+          3,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0419",
+      "input": {
+        "a": [
+          3,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          3,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0420",
+      "input": {
+        "a": [
+          1,
+          2,
+          3,
+          0,
+          3,
+          1,
+          0,
+          1,
+          1,
+          2,
+          1,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          3,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0421",
+      "input": {
+        "a": [
+          1,
+          2,
+          3,
+          0,
+          3,
+          1,
+          0,
+          1,
+          1,
+          2,
+          1,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          3,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0422",
+      "input": {
+        "a": [
+          1,
+          2,
+          3,
+          0,
+          3,
+          1,
+          0,
+          1,
+          1,
+          2,
+          1,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          3,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0423",
+      "input": {
+        "a": [
+          1,
+          2,
+          3,
+          0,
+          3,
+          1,
+          0,
+          1,
+          1,
+          2,
+          1,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          3,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0424",
+      "input": {
+        "a": [
+          3,
+          2,
+          3,
+          1,
+          1,
+          2,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          3,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0425",
+      "input": {
+        "a": [
+          3,
+          2,
+          3,
+          1,
+          1,
+          2,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          3,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0426",
+      "input": {
+        "a": [
+          3,
+          2,
+          3,
+          1,
+          1,
+          2,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          3,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0427",
+      "input": {
+        "a": [
+          3,
+          2,
+          3,
+          1,
+          1,
+          2,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          2,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0428",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          3,
+          2,
+          3
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          2,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0429",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          3,
+          2,
+          3
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0430",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          3,
+          2,
+          3
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0431",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          3,
+          2,
+          3
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0432",
+      "input": {
+        "a": [
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0433",
+      "input": {
+        "a": [
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0434",
+      "input": {
+        "a": [
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0435",
+      "input": {
+        "a": [
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0436",
+      "input": {
+        "a": [
+          2,
+          2,
+          0
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0437",
+      "input": {
+        "a": [
+          2,
+          2,
+          0
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0438",
+      "input": {
+        "a": [
+          2,
+          2,
+          0
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0439",
+      "input": {
+        "a": [
+          2,
+          2,
+          0
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          3,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0440",
+      "input": {
+        "a": [
+          2,
+          0,
+          1,
+          1,
+          3,
+          2,
+          0,
+          3,
+          1,
+          3,
+          0
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          3,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0441",
+      "input": {
+        "a": [
+          2,
+          0,
+          1,
+          1,
+          3,
+          2,
+          0,
+          3,
+          1,
+          3,
+          0
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          3,
+          2,
+          3,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0442",
+      "input": {
+        "a": [
+          2,
+          0,
+          1,
+          1,
+          3,
+          2,
+          0,
+          3,
+          1,
+          3,
+          0
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          3,
+          2,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0443",
+      "input": {
+        "a": [
+          2,
+          0,
+          1,
+          1,
+          3,
+          2,
+          0,
+          3,
+          1,
+          3,
+          0
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          3,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0444",
+      "input": {
+        "a": [
+          1,
+          2,
+          3,
+          3,
+          2,
+          1,
+          2,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          3,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0445",
+      "input": {
+        "a": [
+          1,
+          2,
+          3,
+          3,
+          2,
+          1,
+          2,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          3,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0446",
+      "input": {
+        "a": [
+          1,
+          2,
+          3,
+          3,
+          2,
+          1,
+          2,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          3,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0447",
+      "input": {
+        "a": [
+          1,
+          2,
+          3,
+          3,
+          2,
+          1,
+          2,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          5,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0448",
+      "input": {
+        "a": [
+          0,
+          3,
+          3,
+          1,
+          2,
+          2,
+          2,
+          1,
+          3,
+          2,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          5,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0449",
+      "input": {
+        "a": [
+          0,
+          3,
+          3,
+          1,
+          2,
+          2,
+          2,
+          1,
+          3,
+          2,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          5,
+          3,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0450",
+      "input": {
+        "a": [
+          0,
+          3,
+          3,
+          1,
+          2,
+          2,
+          2,
+          1,
+          3,
+          2,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          5,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0451",
+      "input": {
+        "a": [
+          0,
+          3,
+          3,
+          1,
+          2,
+          2,
+          2,
+          1,
+          3,
+          2,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          3,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0452",
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          2,
+          2,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          3,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0453",
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          2,
+          2,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          3,
+          1,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0454",
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          2,
+          2,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          3,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0455",
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          2,
+          2,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          1,
+          4
+        ]
+      },
+      "id": "numpy.bincount:0456",
+      "input": {
+        "a": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          3,
+          2,
+          1,
+          3,
+          3,
+          3,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          1,
+          4
+        ]
+      },
+      "id": "numpy.bincount:0457",
+      "input": {
+        "a": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          3,
+          2,
+          1,
+          3,
+          3,
+          3,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          1,
+          4,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0458",
+      "input": {
+        "a": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          3,
+          2,
+          1,
+          3,
+          3,
+          3,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          1,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0459",
+      "input": {
+        "a": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          3,
+          2,
+          1,
+          3,
+          3,
+          3,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          4
+        ]
+      },
+      "id": "numpy.bincount:0460",
+      "input": {
+        "a": [
+          1,
+          2,
+          2,
+          2,
+          1,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          4
+        ]
+      },
+      "id": "numpy.bincount:0461",
+      "input": {
+        "a": [
+          1,
+          2,
+          2,
+          2,
+          1,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          4,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0462",
+      "input": {
+        "a": [
+          1,
+          2,
+          2,
+          2,
+          1,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0463",
+      "input": {
+        "a": [
+          1,
+          2,
+          2,
+          2,
+          1,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0464",
+      "input": {
+        "a": [
+          1,
+          1
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0465",
+      "input": {
+        "a": [
+          1,
+          1
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0466",
+      "input": {
+        "a": [
+          1,
+          1
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0467",
+      "input": {
+        "a": [
+          1,
+          1
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          0,
+          2,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0468",
+      "input": {
+        "a": [
+          2,
+          3,
+          0,
+          2,
+          3,
+          0
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          0,
+          2,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0469",
+      "input": {
+        "a": [
+          2,
+          3,
+          0,
+          2,
+          3,
+          0
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          0,
+          2,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0470",
+      "input": {
+        "a": [
+          2,
+          3,
+          0,
+          2,
+          3,
+          0
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          0,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0471",
+      "input": {
+        "a": [
+          2,
+          3,
+          0,
+          2,
+          3,
+          0
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          0,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0472",
+      "input": {
+        "a": [
+          3,
+          3,
+          1,
+          3,
+          0
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          0,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0473",
+      "input": {
+        "a": [
+          3,
+          3,
+          1,
+          3,
+          0
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          0,
+          3,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0474",
+      "input": {
+        "a": [
+          3,
+          3,
+          1,
+          3,
+          0
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0475",
+      "input": {
+        "a": [
+          3,
+          3,
+          1,
+          3,
+          0
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0476",
+      "input": {
+        "a": [
+          1,
+          3,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.bincount:0477",
+      "input": {
+        "a": [
+          1,
+          3,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0478",
+      "input": {
+        "a": [
+          1,
+          3,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0479",
+      "input": {
+        "a": [
+          1,
+          3,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0480",
+      "input": {
+        "a": [
+          2,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0481",
+      "input": {
+        "a": [
+          2,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0482",
+      "input": {
+        "a": [
+          2,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0483",
+      "input": {
+        "a": [
+          2,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          3,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0484",
+      "input": {
+        "a": [
+          1,
+          3,
+          1,
+          2,
+          1,
+          3,
+          2,
+          2
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          3,
+          2
+        ]
+      },
+      "id": "numpy.bincount:0485",
+      "input": {
+        "a": [
+          1,
+          3,
+          1,
+          2,
+          1,
+          3,
+          2,
+          2
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          3,
+          2,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0486",
+      "input": {
+        "a": [
+          1,
+          3,
+          1,
+          2,
+          1,
+          3,
+          2,
+          2
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          3,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0487",
+      "input": {
+        "a": [
+          1,
+          3,
+          1,
+          2,
+          1,
+          3,
+          2,
+          2
+        ],
+        "minlength": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          0,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0488",
+      "input": {
+        "a": [
+          2,
+          3,
+          3,
+          0,
+          2,
+          3,
+          0
+        ],
+        "minlength": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          0,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.bincount:0489",
+      "input": {
+        "a": [
+          2,
+          3,
+          3,
+          0,
+          2,
+          3,
+          0
+        ],
+        "minlength": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          0,
+          2,
+          3,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0490",
+      "input": {
+        "a": [
+          2,
+          3,
+          3,
+          0,
+          2,
+          3,
+          0
+        ],
+        "minlength": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          0,
+          2,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.bincount:0491",
+      "input": {
+        "a": [
+          2,
+          3,
+          3,
+          0,
+          2,
+          3,
+          0
+        ],
+        "minlength": 10
+      }
+    }
+  ]
+}

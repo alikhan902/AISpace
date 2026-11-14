@@ -1,0 +1,123 @@
+{
+  "elapsed_seconds": 5.94969512900002,
+  "finished_at": "2026-11-14T13:10:23.744284+00:00",
+  "parsed": {
+    "algorithm": [
+      "If the input list is empty, return 1.",
+      "Otherwise, compute the product of all integers in the list iteratively, starting from 1.",
+      "Ensure intermediate results fit within signed 64-bit integers (int64).",
+      "Handle overflow by using modular arithmetic as per integer type constraints (no error on overflow)."
+    ],
+    "constraints": [
+      "Input list must be one-dimensional",
+      "All intermediate values must fit within signed 64-bit integers (int64)",
+      "No NumPy objects are used; the implementation must be in pure Python",
+      "The product of an empty list is 1",
+      "Overflow is handled by modular arithmetic (no error raised on overflow)"
+    ],
+    "edge_cases": [
+      "Empty list: return 1",
+      "List with a single element: return that element",
+      "List with all zeros: return 0",
+      "List with a single non-zero element: return that element",
+      "List with mixed positive and negative integers: return the product with correct sign",
+      "List with large integers that would overflow in 32-bit systems: use modular arithmetic to handle overflow without error"
+    ],
+    "inputs": "a: a one-dimensional list of integers (possibly empty)",
+    "method_id": "numpy.prod",
+    "output": "int or list[int] (the product of all elements in a, or 1 for empty array)",
+    "purpose": "Return the product of all elements in a one-dimensional list of integers, with handling of edge cases such as empty arrays and overflow.",
+    "signature": "solve(a)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"a is a one-dimensional list of integers, possibly empty. Return Python int or list[int], as appropriate; no NumPy objects. All intermediate values fit signed int64. Use NumPy's default operation on the whole 1-D list, with dtype=int64.\",\n  \"documentation\": \"Return the product of array elements over a given axis.\\n\\nParameters\\n----------\\na : array_like\\n    Input data.\\naxis : None or int or tuple of ints, optional\\n    Axis or axes along which a product is performed.  The default,\\n    axis=None, will calculate the product of all the elements in the\\n    input array. If axis is negative it counts from the last to the\\n    first axis.\\n\\n    If axis is a tuple of ints, a product is performed on all of the\\n    axes specified in the tuple instead of a single axis or all the\\n    axes as before.\\ndtype : dtype, optional\\n    The type of the returned array, as well as of the accumulator in\\n    which the elements are multiplied.  The dtype of `a` is used by\\n    default unless `a` has an integer dtype of less precision than the\\n    default platform integer.  In that case, if `a` is signed then the\\n    platform integer is used while if `a` is unsigned then an unsigned\\n    integer of the same precision as the platform integer is used.\\nout : ndarray, optional\\n    Alternative output array in which to place the result. It must have\\n    the same shape as the expected output, but the type of the output\\n    values will be cast if necessary.\\nkeepdims : bool, optional\\n    If this is set to True, the axes which are reduced are left in the\\n    result as dimensions with size one. With this option, the result\\n    will broadcast correctly against the input array.\\n\\n    If the default value is passed, then `keepdims` will not be\\n    passed through to the `prod` method of sub-classes of\\n    `ndarray`, however any non-default value will be.  If the\\n    sub-class' method does not implement `keepdims` any\\n    exceptions will be raised.\\ninitial : scalar, optional\\n    The starting value for this product. See `~numpy.ufunc.reduce`\\n    for details.\\nwhere : array_like of bool, optional\\n    Elements to include in the product. See `~numpy.ufunc.reduce`\\n    for details.\\n\\nReturns\\n-------\\nproduct_along_axis : ndarray, see `dtype` parameter above.\\n    An array shaped as `a` but with the specified axis removed.\\n    Returns a reference to `out` if specified.\\n\\nSee Also\\n--------\\nndarray.prod : equivalent method\\n:ref:`ufuncs-output-type`\\n\\nNotes\\n-----\\nArithmetic is modular when using integer types, and no error is\\nraised on overflow.  That means that, on a 32-bit platform:\\n\\n>>> x = np.array([536870910, 536870910, 536870910, 536870910])\\n>>> np.prod(x)\\n16 # may vary\\n\\nThe product of an empty array is the neutral element 1:\\n\\n>>> np.prod([])\\n1.0\\n\\nExamples\\n--------\\nBy default, calculate the product of all elements:\\n\\n>>> import numpy as np\\n>>> np.prod([1.,2.])\\n2.0\\n\\nEven when the input array is two-dimensional:\\n\\n>>> a = np.array([[1., 2.], [3., 4.]])\\n>>> np.prod(a)\\n24.0\\n\\nBut we can also specify the axis over which to multiply:\\n\\n>>> np.prod(a, axis=1)\\narray([  2.,  12.])\\n>>> np.prod(a, axis=0)\\narray([3., 8.])\\n\\nOr select specific elements to include:\\n\\n>>> np.prod([1., np.nan, 3.], where=[True, False, True])\\n3.0\\n\\nIf the type of `x` is unsigned, then the output type is\\nthe unsigned platform integer:\\n\\n>>> x = np.array([1, 2, 3], dtype=np.uint8)\\n>>> np.prod(x).dtype == np.uint\\nTrue\\n\\nIf `x` is of a signed integer type, then the output type\\nis the default platform integer:\\n\\n>>> x = np.array([1, 2, 3], dtype=np.int8)\\n>>> np.prod(x).dtype == int\\nTrue\\n\\nYou can also start the product with a value other than one:\\n\\n>>> np.prod([1, 2], initial=5)\\n10\",\n  \"documentation_truncated\": false,\n  \"group\": \"reductions\",\n  \"id\": \"numpy.prod\",\n  \"library\": \"numpy\",\n  \"name\": \"prod\",\n  \"signature\": \"solve(a)\",\n  \"version\": \"2.5.4\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:4b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:10:23.743958824Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 349,
+    "eval_duration": 5441632000,
+    "load_duration": 481665,
+    "message": {
+      "content": "{\n  \"method_id\": \"numpy.prod\",\n  \"signature\": \"solve(a)\",\n  \"purpose\": \"Return the product of all elements in a one-dimensional list of integers, with handling of edge cases such as empty arrays and overflow.\",\n  \"inputs\": \"a: a one-dimensional list of integers (possibly empty)\",\n  \"output\": \"int or list[int] (the product of all elements in a, or 1 for empty array)\",\n  \"algorithm\": [\n    \"If the input list is empty, return 1.\",\n    \"Otherwise, compute the product of all integers in the list iteratively, starting from 1.\",\n    \"Ensure intermediate results fit within signed 64-bit integers (int64).\",\n    \"Handle overflow by using modular arithmetic as per integer type constraints (no error on overflow).\"\n  ],\n  \"edge_cases\": [\n    \"Empty list: return 1\",\n    \"List with a single element: return that element\",\n    \"List with all zeros: return 0\",\n    \"List with a single non-zero element: return that element\",\n    \"List with mixed positive and negative integers: return the product with correct sign\",\n    \"List with large integers that would overflow in 32-bit systems: use modular arithmetic to handle overflow without error\"\n  ],\n  \"constraints\": [\n    \"Input list must be one-dimensional\",\n    \"All intermediate values must fit within signed 64-bit integers (int64)\",\n    \"No NumPy objects are used; the implementation must be in pure Python\",\n    \"The product of an empty list is 1\",\n    \"Overflow is handled by modular arithmetic (no error raised on overflow)\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:4b",
+    "prompt_eval_cached_count": 405,
+    "prompt_eval_count": 1458,
+    "prompt_eval_duration": 456763000,
+    "total_duration": 5949034181
+  },
+  "started_at": "2026-11-14T13:10:17.794587+00:00",
+  "valid": true
+}

@@ -1,0 +1,120 @@
+{
+  "elapsed_seconds": 1.847218944999895,
+  "finished_at": "2026-11-14T13:07:32.959969+00:00",
+  "parsed": {
+    "algorithm": [
+      "Timsort (default, for integer data types)",
+      "Quicksort (fallback if Timsort is not available)",
+      "Merge sort (for stable sorting)",
+      "Heap sort (for unstable sorting)"
+    ],
+    "constraints": [
+      "All intermediate values fit signed int64",
+      "Return ascending sorted values",
+      "No in-place modification required",
+      "No NumPy objects returned"
+    ],
+    "edge_cases": [
+      "Empty input array",
+      "Input array with all elements the same",
+      "Input array with mixed values and NaNs",
+      "Input array with non-integer elements"
+    ],
+    "inputs": "a is a one-dimensional list of integers, possibly empty.",
+    "method_id": "sort",
+    "output": "A sorted list of integers, in ascending order, with the same type and shape as `a`.",
+    "purpose": "Return a sorted copy of an array.",
+    "signature": "solve(a)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"a is a one-dimensional list of integers, possibly empty. Return Python int or list[int], as appropriate; no NumPy objects. All intermediate values fit signed int64. Return ascending sorted values; no in-place modification is required.\",\n  \"documentation\": \"Return a sorted copy of an array.\\n\\nParameters\\n----------\\na : array_like\\n    Array to be sorted.\\naxis : int or None, optional\\n    Axis along which to sort. If None, the array is flattened before\\n    sorting. The default is -1, which sorts along the last axis.\\nkind : {'quicksort', 'mergesort', 'heapsort', 'stable'}, optional\\n    Sorting algorithm. The default is 'quicksort'. Note that both 'stable'\\n    and 'mergesort' use timsort or radix sort under the covers and,\\n    in general, the actual implementation will vary with data type.\\n    The 'mergesort' option is retained for backwards compatibility.\\norder : str or list of str, optional\\n    When `a` is an array with fields defined, this argument specifies\\n    which fields to compare first, second, etc.  A single field can\\n    be specified as a string, and not all fields need be specified,\\n    but unspecified fields will still be used, in the order in which\\n    they come up in the dtype, to break ties.\\nstable : bool, optional\\n    Sort stability. If ``True``, the returned array will maintain\\n    the relative order of ``a`` values which compare as equal.\\n    If ``False`` or ``None``, this is not guaranteed. Internally,\\n    this option selects ``kind='stable'``. Default: ``None``.\\n\\n    .. versionadded:: 2.0.0\\ndescending : bool, optional\\n    Sort order. If ``True``, the returned array will be sorted in\\n    descending order. If ``False`` or ``None``, the returned array will\\n    be sorted in ascending order. Values that are NaN are sorted to the\\n    end for both orders. Default: ``None``.\\n\\n    .. versionadded:: 2.5.0\\n\\nReturns\\n-------\\nsorted_array : ndarray\\n    Array of the same type and shape as `a`.\\n\\nSee Also\\n--------\\nndarray.sort : Method to sort an array in-place.\\nargsort : Indirect sort.\\nlexsort : Indirect stable sort on multiple keys.\\nsearchsorted : Find elements in a sorted array.\\npartition : Partial sort.\\n\\nNotes\\n-----\\nThe various sorting algorithms are characterized by their average speed,\\nworst case performance, work space size, and whether they are stable. A\\nstable sort keeps items with the same key in the same relative\\norder. The four algorithms implemented in NumPy have the following\\nproperties:\\n\\n=========== ======= ============= ============ ========\\n   kind      speed   worst case    work space   stable\\n=========== ======= ============= ============ ========\\n'quicksort'    1     O(n^2)            0          no\\n'heapsort'     3     O(n*log(n))       0          no\\n'mergesort'    2     O(n*log(n))      ~n/2        yes\\n'timsort'      2     O(n*log(n))      ~n/2        yes\\n=========== ======= ============= ============ ========\\n\\n.. note:: The datatype determines which of 'mergesort' or 'timsort'\\n   is actually used, even if 'mergesort' is specified. User selection\\n   at a finer scale is not currently available.\\n\\nFor performance, ``sort`` makes a temporary copy if needed to make the data\\n`contiguous <https://numpy.org/doc/stable/glossary.html#term-contiguous>`_\\nin memory along the sort axis. For even better performance and reduced\\nmemory consumption, ensure that the array is already contiguous along the\\nsort axis.\\n\\nThe sort order for complex numbers is lexicographic. If both the real\\nand imaginary parts are non-nan then the order is determined by the\\nreal parts except when they are equal, in which case the order is\\ndetermined by the imaginary parts.\\n\\nPrevious to numpy 1.4.0 sorting real and complex arrays containing nan\\nvalues led to undefined behaviour. In numpy versions >= 1.4.0 nan\\nvalues are sorted to the end. The extended sort order is:\\n\\n  * Real: [R, nan]\\n  * Complex: [R + Rj, R + nanj, nan + Rj, nan + nanj]\\n\\nwhere R is a non-nan real value. Complex values with the same nan\\nplacements are sorted according to the non-nan part if it exists.\\nNon-nan values are sorted as before.\\n\\nquicksort has been changed to:\\n`introsort <https://en.wikipedia.org/wiki/Introsort>`_.\\nWhen sorting does not make enough progress it switches to\\n`heapsort <https://en.wikipedia.org/wiki/Heapsort>`_.\\nThis implementation makes quicksort O(n*log(n)) in the worst case.\\n\\n'stable' automatically chooses the best stable sorting algorithm\\nfor the data type being sorted.\\nIt, along with 'mergesort' is currently mapped to\\n`timsort <https://en.wikipedia.org/wiki/Timsort>`_\\nor `radix sort <https://en.wikipedia.org/wiki/Radix_sort>`_\\ndepending on the data type.\\nAPI forward compatibility currently limits the\\nability to select the implementation and it is hardwired for the different\\ndata types.\\n\\nTimsort is added for better performance on already or nearly\\nsorted data. On random data timsort is almost identical to\\nmergesort. It is now used for stable sort while quicksort is still the\\ndefault sort if none is chosen. For timsort details, refer to\\n`CPython listsort.txt\\n<https://github.com/python/cpython/blob/3.7/Objects/listsort.txt>`_\\n'mergesort' and 'stable' are mapped to radix sort for integer data types.\\nRadix sort is an O(n) sort instead of O(n log n).\\n\\nNaT now sorts to the end of arrays for consistency with NaN.\\n\\nExamples\\n--------\\n>>> import numpy as np\\n>>> a = np.array([[1,4],[3,1]])\\n>>> np.sort(a)                # sort along the last axis\\narray([[1, 4],\\n       [1, 3]])\\n>>> np.sort(a, axis=None)     # sort the flattened array\\narray([1, 1, 3, 4])\\n>>> np.sort(a, axis=0)        # sort along the first axis\\narray([[1, 1],\\n       [3, 4]])\\n\\nUse the `order` keyword to specify a field to use when sorting a\\nstructured array:\\n\\n>>> dtype = [('name', 'S10'), ('height', float), ('age', int)]\\n>>> values = [('Arthur', 1.8, 41), ('Lancelot', 1.9, 38),\\n...           ('Galahad', 1.7, 38)]\\n>>> a = np.array(values, dtype=dtype)       # create a structured array\\n>>> np.sort(a, order='height')                        # doctest: +SKIP\\narray([('Galahad', 1.7, 38), ('Arthur', 1.8, 41),\\n       ('Lancelot', 1.8999999999999999, 38)],\\n      dtype=[('name', '|S10'), ('height', '<f8'), ('age', '<i4')])\\n\\nSort by age, then height if ages are equal:\\n\\n>>> np.sort(a, order=['age', 'height'])               # doctest: +SKIP\\narray([('Galahad', 1.7, 38), ('Lancelot', 1.8999999999999999, 38),\\n       ('Arthur', 1.8, 41)],\\n      dtype=[('name', '|S10'), ('height', '<f8'), ('age', '<i4')])\",\n  \"documentation_truncated\": false,\n  \"group\": \"ordering_counting\",\n  \"id\": \"numpy.sort\",\n  \"library\": \"numpy\",\n  \"name\": \"sort\",\n  \"signature\": \"solve(a)\",\n  \"version\": \"2.5.4\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:1.7b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:07:32.95963124Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 214,
+    "eval_duration": 1489471000,
+    "load_duration": 1053739,
+    "message": {
+      "content": "{\n  \"method_id\": \"sort\",\n  \"signature\": \"solve(a)\",\n  \"purpose\": \"Return a sorted copy of an array.\",\n  \"inputs\": \"a is a one-dimensional list of integers, possibly empty.\",\n  \"output\": \"A sorted list of integers, in ascending order, with the same type and shape as `a`.\",\n  \"algorithm\": [\n    \"Timsort (default, for integer data types)\",\n    \"Quicksort (fallback if Timsort is not available)\",\n    \"Merge sort (for stable sorting)\",\n    \"Heap sort (for unstable sorting)\"\n  ],\n  \"edge_cases\": [\n    \"Empty input array\",\n    \"Input array with all elements the same\",\n    \"Input array with mixed values and NaNs\",\n    \"Input array with non-integer elements\"\n  ],\n  \"constraints\": [\n    \"All intermediate values fit signed int64\",\n    \"Return ascending sorted values\",\n    \"No in-place modification required\",\n    \"No NumPy objects returned\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:1.7b",
+    "prompt_eval_cached_count": 380,
+    "prompt_eval_count": 2241,
+    "prompt_eval_duration": 274995000,
+    "total_duration": 1846499180
+  },
+  "started_at": "2026-11-14T13:07:31.112747+00:00",
+  "valid": true
+}

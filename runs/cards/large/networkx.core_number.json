@@ -1,0 +1,125 @@
+{
+  "elapsed_seconds": 8.720195427999897,
+  "finished_at": "2026-11-14T13:15:17.109488+00:00",
+  "parsed": {
+    "algorithm": [
+      "Initialize a degree count for each vertex from 0 to n-1.",
+      "Iterate through the edges to update the degree counts.",
+      "Initialize a queue for vertices with degree less than the current core number (starting at 0).",
+      "For each vertex in the queue, decrement the degree of its neighbors and check if neighbors now have degree less than the current core number.",
+      "Repeat until no more vertices can be processed.",
+      "The core number of a vertex is the highest core number for which it remains in the graph after the process."
+    ],
+    "constraints": [
+      "n is an integer >= 1",
+      "Vertices are labeled 0 to n-1",
+      "Edges are distinct [u,v] pairs with 0<=u<v<n",
+      "The graph is simple and undirected",
+      "Core numbers must be integers >= 0",
+      "Output dictionary must have string keys corresponding to vertex labels"
+    ],
+    "edge_cases": [
+      "n=1 with no edges (isolated vertex)",
+      "n=2 with one edge (two connected vertices)",
+      "Graph with multiple connected components",
+      "Graph with isolated vertices",
+      "Graph where all vertices have the same degree"
+    ],
+    "inputs": "n: integer >= 1; edges: list of distinct [u,v] pairs with 0<=u<v<n",
+    "method_id": "networkx.core_number",
+    "output": "Dictionary mapping each string vertex key (e.g., \"0\", \"1\", ...) to its integer core number, including isolated vertices.",
+    "purpose": "Compute the core number for each node in a simple undirected unweighted graph, including isolated vertices.",
+    "signature": "solve(n, edges)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"n is an integer >= 1; vertices are 0,...,n-1. edges is a list of distinct [u,v] pairs with 0<=u<v<n. Construct a simple undirected unweighted graph including isolated vertices. Return plain JSON-compatible Python values. Dictionary vertex keys must be strings. Return a dict mapping every string vertex key to its integer core number, including isolated vertices.\",\n  \"documentation\": \"Returns the core number for each node.\\n\\nA k-core is a maximal subgraph that contains nodes of degree k or more.\\n\\nThe core number of a node is the largest value k of a k-core containing\\nthat node.\\n\\nParameters\\n----------\\nG : NetworkX graph\\n   An undirected or directed graph\\n\\nReturns\\n-------\\ncore_number : dictionary\\n   A dictionary keyed by node to the core number.\\n\\nRaises\\n------\\nNetworkXNotImplemented\\n    If `G` is a multigraph or contains self loops.\\n\\nNotes\\n-----\\nFor directed graphs the node degree is defined to be the\\nin-degree + out-degree.\\n\\nExamples\\n--------\\n>>> degrees = [0, 1, 2, 2, 2, 2, 3]\\n>>> H = nx.havel_hakimi_graph(degrees)\\n>>> nx.core_number(H)\\n{0: 1, 1: 2, 2: 2, 3: 2, 4: 1, 5: 2, 6: 0}\\n>>> G = nx.DiGraph()\\n>>> G.add_edges_from([(1, 2), (2, 1), (2, 3), (2, 4), (3, 4), (4, 3)])\\n>>> nx.core_number(G)\\n{1: 2, 2: 2, 3: 2, 4: 2}\\n\\nReferences\\n----------\\n.. [1] An O(m) Algorithm for Cores Decomposition of Networks\\n   Vladimir Batagelj and Matjaz Zaversnik, 2003.\\n   https://arxiv.org/abs/cs.DS/0310049\",\n  \"documentation_truncated\": false,\n  \"group\": \"local_structure\",\n  \"id\": \"networkx.core_number\",\n  \"library\": \"networkx\",\n  \"name\": \"core_number\",\n  \"signature\": \"solve(n, edges)\",\n  \"version\": \"3.6.1\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:4b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:15:17.108851939Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 375,
+    "eval_duration": 5996622000,
+    "load_duration": 957305,
+    "message": {
+      "content": "{\n  \"method_id\": \"networkx.core_number\",\n  \"signature\": \"solve(n, edges)\",\n  \"purpose\": \"Compute the core number for each node in a simple undirected unweighted graph, including isolated vertices.\",\n  \"inputs\": \"n: integer >= 1; edges: list of distinct [u,v] pairs with 0<=u<v<n\",\n  \"output\": \"Dictionary mapping each string vertex key (e.g., \\\"0\\\", \\\"1\\\", ...) to its integer core number, including isolated vertices.\",\n  \"algorithm\": [\n    \"Initialize a degree count for each vertex from 0 to n-1.\",\n    \"Iterate through the edges to update the degree counts.\",\n    \"Initialize a queue for vertices with degree less than the current core number (starting at 0).\",\n    \"For each vertex in the queue, decrement the degree of its neighbors and check if neighbors now have degree less than the current core number.\",\n    \"Repeat until no more vertices can be processed.\",\n    \"The core number of a vertex is the highest core number for which it remains in the graph after the process.\"\n  ],\n  \"edge_cases\": [\n    \"n=1 with no edges (isolated vertex)\",\n    \"n=2 with one edge (two connected vertices)\",\n    \"Graph with multiple connected components\",\n    \"Graph with isolated vertices\",\n    \"Graph where all vertices have the same degree\"\n  ],\n  \"constraints\": [\n    \"n is an integer >= 1\",\n    \"Vertices are labeled 0 to n-1\",\n    \"Edges are distinct [u,v] pairs with 0<=u<v<n\",\n    \"The graph is simple and undirected\",\n    \"Core numbers must be integers >= 0\",\n    \"Output dictionary must have string keys corresponding to vertex labels\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:4b",
+    "prompt_eval_cached_count": 418,
+    "prompt_eval_count": 887,
+    "prompt_eval_duration": 210265000,
+    "total_duration": 8719012187
+  },
+  "started_at": "2026-11-14T13:15:08.389288+00:00",
+  "valid": true
+}

@@ -1,0 +1,25 @@
+{
+  "algorithm": [
+    "Perform a depth-first search (DFS) on the graph to identify articulation points",
+    "For each node, track the discovery time and low-link values",
+    "A node is an articulation point if it has a child in the DFS tree whose low-link value is greater than or equal to the discovery time of the node",
+    "Return the list of articulation points in ascending order by vertex index"
+  ],
+  "constraints": [
+    "Vertices are labeled 0 to n-1",
+    "Edges are distinct and undirected (given as [u,v] with u < v)",
+    "Graph may contain isolated vertices",
+    "Articulation points must be returned as strings in ascending order"
+  ],
+  "edge_cases": [
+    "Graph with a single vertex (n=1) has no articulation points",
+    "Graph with no edges (n>=2) has all vertices as articulation points",
+    "Graph that is biconnected has no articulation points",
+    "Graph with multiple connected components: articulation points are identified per component"
+  ],
+  "inputs": "n: integer >= 1; edges: list of distinct [u,v] pairs where 0<=u<v<n",
+  "method_id": "networkx.articulation_points",
+  "output": "Ascending list of articulation vertices (as strings) across all connected components",
+  "purpose": "Yield the articulation points (cut vertices) of a graph constructed from integer vertices 0 to n-1 and distinct undirected edges",
+  "signature": "solve(n, edges)"
+}

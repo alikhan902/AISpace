@@ -1,0 +1,21 @@
+{
+  "algorithm": [
+    "Use the formula for Catalan numbers: C_n = (1/(n+1)) * binomial(2n, n)",
+    "Compute the binomial coefficient binomial(2n, n) using combinatorial mathematics",
+    "Divide the result by (n+1) to obtain the Catalan number"
+  ],
+  "constraints": [
+    "n must be an integer in the range 0 to 35 inclusive",
+    "No symbolic computation is allowed; result must be an exact Python integer",
+    "No floating-point approximations are used"
+  ],
+  "edge_cases": [
+    "n = 0: Catalan number is 1",
+    "n = 35: Catalan number is computed with arbitrary precision"
+  ],
+  "inputs": "n is an integer in 0..35",
+  "method_id": "sympy.catalan",
+  "output": "The nth Catalan number as an exact Python integer",
+  "purpose": "Compute the nth Catalan number",
+  "signature": "solve(n)"
+}

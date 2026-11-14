@@ -1,0 +1,25 @@
+{
+  "algorithm": [
+    "Compute the product of all elements in the input list.",
+    "If an axis is specified, compute the product along that axis.",
+    "Handle empty input by returning 1.",
+    "Support for modular arithmetic and overflow handling."
+  ],
+  "constraints": [
+    "All intermediate values fit signed int64.",
+    "Use NumPy's default operation on the whole 1-D list.",
+    "Return a reference to `out` if specified.",
+    "Support for modular arithmetic and overflow handling."
+  ],
+  "edge_cases": [
+    "Empty input returns 1.",
+    "Product of an empty array is 1.0.",
+    "Product of a single element returns that element.",
+    "Product of a list with all elements zero returns 0."
+  ],
+  "inputs": "a is a one-dimensional list of integers, possibly empty.",
+  "method_id": "numpy.prod",
+  "output": "A Python int or list[int], as appropriate; no NumPy objects. The output is of type int64.",
+  "purpose": "Compute the product of elements in a one-dimensional list along a specified axis.",
+  "signature": "solve(a)"
+}

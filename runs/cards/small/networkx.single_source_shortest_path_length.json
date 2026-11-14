@@ -1,0 +1,120 @@
+{
+  "elapsed_seconds": 2.2946642580000116,
+  "finished_at": "2026-11-14T13:08:17.204357+00:00",
+  "parsed": {
+    "algorithm": [
+      "Use Dijkstra's algorithm for unweighted graphs",
+      "Initialize distances to infinity",
+      "Set distance to source as 0",
+      "Relax edges in order of increasing distance",
+      "Stop when all reachable nodes are processed"
+    ],
+    "constraints": [
+      "Vertices are 0 to n-1",
+      "Edges are distinct and 0 <= u < v < n",
+      "Source is a valid vertex",
+      "No cutoff specified, so all reachable nodes are included"
+    ],
+    "edge_cases": [
+      "Source is the only node in the graph",
+      "No edges exist, so all nodes are isolated",
+      "Graph is disconnected, some nodes are unreachable"
+    ],
+    "inputs": "n: integer >= 1, edges: list of distinct [u, v] pairs with 0 <= u < v < n, source: valid vertex",
+    "method_id": "networkx.single_source_shortest_path_length",
+    "output": "Dict with string vertex keys and integer shortest-path lengths for reachable nodes, including source:0",
+    "purpose": "Compute the shortest path lengths from `source` to all reachable nodes in the graph `G`.",
+    "signature": "solve(n, edges, source)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"n is an integer >= 1; vertices are 0,...,n-1. edges is a list of distinct [u,v] pairs with 0<=u<v<n. Construct a simple undirected unweighted graph including isolated vertices. Return plain JSON-compatible Python values. Dictionary vertex keys must be strings. source is a valid vertex. Return a dict with string vertex keys and integer shortest-path lengths for reachable nodes only; include source:0. No cutoff.\",\n  \"documentation\": \"Compute the shortest path lengths from `source` to all reachable nodes in `G`.\\n\\nParameters\\n----------\\nG : NetworkX graph\\n\\nsource : node\\n   Starting node for path\\n\\ncutoff : integer, optional\\n    Depth to stop the search. Only target nodes where the shortest path to\\n    this node from the source node contains <= ``cutoff + 1`` nodes will be\\n    included in the returned results.\\n\\nReturns\\n-------\\nlengths : dict\\n    Dict keyed by node to shortest path length from source node.\\n\\nExamples\\n--------\\n>>> G = nx.path_graph(5)\\n>>> length = nx.single_source_shortest_path_length(G, 0)\\n>>> length[4]\\n4\\n>>> for node in sorted(length):\\n...     print(f\\\"{node}: {length[node]}\\\")\\n0: 0\\n1: 1\\n2: 2\\n3: 3\\n4: 4\\n\\nOnly include paths with length less than or equal to the `cutoff` keyword\\nargument:\\n\\n>>> length = nx.single_source_shortest_path_length(G, 0, cutoff=2)\\n>>> for node in sorted(length):\\n...     print(f\\\"{node}: {length[node]}\\\")\\n0: 0\\n1: 1\\n2: 2\\n\\nSee Also\\n--------\\n:any:`shortest_path_length` :\\n   Shortest path length with specifiable source, target, and weight.\\n:any:`single_source_dijkstra_path_length` :\\n   Shortest weighted path length from source with Dijkstra algorithm.\\n:any:`single_source_bellman_ford_path_length` :\\n   Shortest weighted path length from source with Bellman-Ford algorithm.\",\n  \"documentation_truncated\": false,\n  \"group\": \"distances\",\n  \"id\": \"networkx.single_source_shortest_path_length\",\n  \"library\": \"networkx\",\n  \"name\": \"single_source_shortest_path_length\",\n  \"signature\": \"solve(n, edges, source)\",\n  \"version\": \"3.6.1\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:1.7b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:08:17.204065049Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 270,
+    "eval_duration": 2173367000,
+    "load_duration": 1281777,
+    "message": {
+      "content": "{\n  \"method_id\": \"networkx.single_source_shortest_path_length\",\n  \"signature\": \"solve(n, edges, source)\",\n  \"purpose\": \"Compute the shortest path lengths from `source` to all reachable nodes in the graph `G`.\",\n  \"inputs\": \"n: integer >= 1, edges: list of distinct [u, v] pairs with 0 <= u < v < n, source: valid vertex\",\n  \"output\": \"Dict with string vertex keys and integer shortest-path lengths for reachable nodes, including source:0\",\n  \"algorithm\": [\n    \"Use Dijkstra's algorithm for unweighted graphs\",\n    \"Initialize distances to infinity\",\n    \"Set distance to source as 0\",\n    \"Relax edges in order of increasing distance\",\n    \"Stop when all reachable nodes are processed\"\n  ],\n  \"edge_cases\": [\n    \"Source is the only node in the graph\",\n    \"No edges exist, so all nodes are isolated\",\n    \"Graph is disconnected, some nodes are unreachable\"\n  ],\n  \"constraints\": [\n    \"Vertices are 0 to n-1\",\n    \"Edges are distinct and 0 <= u < v < n\",\n    \"Source is a valid vertex\",\n    \"No cutoff specified, so all reachable nodes are included\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:1.7b",
+    "prompt_eval_cached_count": 408,
+    "prompt_eval_count": 905,
+    "prompt_eval_duration": 71421000,
+    "total_duration": 2293954008
+  },
+  "started_at": "2026-11-14T13:08:14.909694+00:00",
+  "valid": true
+}

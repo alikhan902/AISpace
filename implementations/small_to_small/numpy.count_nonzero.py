@@ -1,0 +1,1 @@
+def solve(a):\n    count = 0\n    for num in a:\n        if num != 0:\n            count += 1\n    return count

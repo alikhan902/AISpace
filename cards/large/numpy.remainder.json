@@ -1,0 +1,27 @@
+{
+  "algorithm": [
+    "For each element in the input lists x and y, compute the remainder using the formula: remainder = x % y",
+    "If x and y are scalars, return a single integer result.",
+    "If x and y are lists of the same length or broadcastable to the same length, return a list of remainders with the same length as the input lists.",
+    "The result has the same sign as the divisor y (not the dividend x)."
+  ],
+  "constraints": [
+    "Values and results fit within signed int64",
+    "Divisors y must be nonzero",
+    "No broadcasting beyond 1D lists is supported",
+    "The remainder has the same sign as the divisor y",
+    "The function does not support IEEE remainder or floor division remainder"
+  ],
+  "edge_cases": [
+    "When y is 0, return 0 (as per the contract, divisors are nonzero, but the documentation states this behavior for completeness)",
+    "Empty lists: return an empty list",
+    "When x and y are both integers, return a single integer",
+    "When x is a scalar and y is a list, or vice versa, broadcast the scalar to match the list length",
+    "When x and y are lists of different lengths but broadcastable (e.g., 1D lists with compatible shapes), return the remainder for each element after broadcasting"
+  ],
+  "inputs": "x and y are integers or 1-D lists of integers. Support scalar/scalar, scalar/list, list/scalar and lists of the same length (including empty).",
+  "method_id": "numpy.remainder",
+  "output": "A list of integers with the same length as the input lists (or a single integer if both inputs are scalars). The remainder has the same sign as the divisor y.",
+  "purpose": "Compute the element-wise remainder of division with the same sign as the divisor",
+  "signature": "solve(x, y)"
+}

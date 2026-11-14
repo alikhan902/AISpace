@@ -1,0 +1,20 @@
+{
+  "algorithm": [
+    "The Lucas sequence starts with L_0 = 2 and L_1 = 1. For n >= 2, each subsequent Lucas number is computed as L_n = L_{n-1} + L_{n-2}.",
+    "Iteratively compute the Lucas numbers from L_0 up to L_n using dynamic programming, storing only the last two values to minimize memory usage."
+  ],
+  "constraints": [
+    "n must be an integer between 0 and 100 inclusive",
+    "The result must be an exact Python integer with arbitrary precision (no symbolic expressions)"
+  ],
+  "edge_cases": [
+    "n = 0 returns 2",
+    "n = 1 returns 1",
+    "n = 2 returns 3"
+  ],
+  "inputs": "n: integer in the range 0 to 100 inclusive",
+  "method_id": "sympy.lucas",
+  "output": "The n-th Lucas number as an exact Python integer (arbitrary precision)",
+  "purpose": "Compute the n-th Lucas number using integer arithmetic with arbitrary precision",
+  "signature": "solve(n)"
+}

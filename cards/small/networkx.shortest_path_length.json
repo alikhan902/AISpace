@@ -1,0 +1,24 @@
+{
+  "algorithm": [
+    "Use Dijkstra's algorithm if method is 'dijkstra'",
+    "Use Bellman-Ford algorithm if method is 'bellman-ford'",
+    "Default to Dijkstra's algorithm if method is not specified"
+  ],
+  "constraints": [
+    "Edges are distinct and form a simple undirected unweighted graph",
+    "Vertices are numbered 0 to n-1",
+    "source and target are valid vertices",
+    "If method is not specified, default to Dijkstra's algorithm",
+    "If weight is not specified, assume weight is 1"
+  ],
+  "edge_cases": [
+    "source == target returns 0",
+    "No path exists between source and target, raises ValueError",
+    "Graph is disconnected, returns None or raises ValueError"
+  ],
+  "inputs": "n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n; source and target are valid vertices.",
+  "method_id": "networkx.shortest_path_length",
+  "output": "Integer shortest-path length; raises ValueError if no path exists.",
+  "purpose": "Compute the shortest path length in a graph with specified source and target nodes.",
+  "signature": "solve(n, edges, source, target)"
+}

@@ -1,0 +1,61 @@
+{
+  "elapsed_seconds": 7.821603209999921,
+  "finished_at": "2026-11-14T13:25:41.591449+00:00",
+  "parsed": {
+    "code": "def solve(n):\n    if n < 0:\n        return float('inf')\n    if n == 0:\n        return 1\n    # Precomputed lookup table for small n\n    lookup = {0: 1, 1: 1, 2: 2, 3: 6, 4: 24, 5: 120, 6: 720, 10: 3628800, 15: 1307674368000, 20: 2432902008176640000, 25: 15511210043330985984000000, 30: 265252859812191058636308480000000, 35: 1033314796638614492966665133754712500000000000}\n    if n in lookup:\n        return lookup[n]\n    # Prime-Swing algorithm for larger n\n    def prime_swing(n):\n        if n == 1:\n            return 1\n        # Find the largest prime p <= n\n        p = 2\n        while p * p <= n:\n            p = p + 1\n        # Check if p is prime\n        if p > n:\n            p = n\n        # Compute the swing\n        swing = prime_swing(p - 1)\n        return swing * (p ** (n - p + 1))\n    return prime_swing(n)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Implement a Python function from a JSON behavioral card. The card is the only task specification. Return a JSON object with a single string field code containing executable Python source. Define solve with the card's exact signature. Use only Python's standard library. Allowed imports: math, itertools, functools, collections, heapq, bisect, statistics, fractions, operator, typing. Do not import or call NumPy, SymPy, NetworkX or any other third-party library. Do not read files, use network, introspection, eval, exec, input or print. Implement computations yourself using built-ins and the allowed standard library. Return plain JSON-compatible values, not iterators or sets; use string keys in dictionaries. Include any helper functions in the code. No tests or main block. Raise ValueError where the card requires it.",
+        "role": "system"
+      },
+      {
+        "content": "Implement this card:\n{\n  \"algorithm\": [\n    \"For small n, use a precomputed lookup table for fast computation.\",\n    \"For larger n, use the Prime-Swing algorithm, which computes n! via prime factorization of 'Swing Numbers'.\"\n  ],\n  \"constraints\": [\n    \"n must be an integer in the range 0..35\",\n    \"n = -2 is not allowed\",\n    \"n = S(1)/2 is not allowed\",\n    \"n = 2*n is allowed\"\n  ],\n  \"edge_cases\": [\n    \"n = 0: returns 1\",\n    \"n = 35: returns 35!\",\n    \"n = -2: returns complex infinity\",\n    \"n = S(1)/2: returns factorial(1/2)\"\n  ],\n  \"inputs\": \"n is an integer in 0..35\",\n  \"method_id\": \"sympy.factorial\",\n  \"output\": \"The exact Python integer result of n!\",\n  \"purpose\": \"Compute the factorial of a nonnegative integer `n` using efficient algorithms.\",\n  \"signature\": \"solve(n)\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:4b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 3072,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:25:41.59105316Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 423,
+    "eval_duration": 7660809000,
+    "load_duration": 563203,
+    "message": {
+      "content": "{\n  \"code\": \"def solve(n):\\n    if n < 0:\\n        return float('inf')\\n    if n == 0:\\n        return 1\\n    # Precomputed lookup table for small n\\n    lookup = {0: 1, 1: 1, 2: 2, 3: 6, 4: 24, 5: 120, 6: 720, 10: 3628800, 15: 1307674368000, 20: 2432902008176640000, 25: 15511210043330985984000000, 30: 265252859812191058636308480000000, 35: 1033314796638614492966665133754712500000000000}\\n    if n in lookup:\\n        return lookup[n]\\n    # Prime-Swing algorithm for larger n\\n    def prime_swing(n):\\n        if n == 1:\\n            return 1\\n        # Find the largest prime p <= n\\n        p = 2\\n        while p * p <= n:\\n            p = p + 1\\n        # Check if p is prime\\n        if p > n:\\n            p = n\\n        # Compute the swing\\n        swing = prime_swing(p - 1)\\n        return swing * (p ** (n - p + 1))\\n    return prime_swing(n)\"\n  }",
+      "role": "assistant"
+    },
+    "model": "qwen3:4b",
+    "prompt_eval_cached_count": 183,
+    "prompt_eval_count": 420,
+    "prompt_eval_duration": 117953000,
+    "total_duration": 7820868190
+  },
+  "started_at": "2026-11-14T13:25:33.769842+00:00",
+  "valid": true
+}

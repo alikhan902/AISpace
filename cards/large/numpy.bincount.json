@@ -1,0 +1,24 @@
+{
+  "algorithm": [
+    "Initialize an output list with zeros of length max(a) + 1 if max(a) >= 0, otherwise length 1.",
+    "For each integer value in the input list a, increment the corresponding index in the output list by 1.",
+    "If minlength > 0, extend the output list to length minlength by appending zeros."
+  ],
+  "constraints": [
+    "Input list a must contain only nonnegative integers.",
+    "minlength must be a nonnegative integer.",
+    "The output list must be of integer type.",
+    "The output list length must be at least max(a) + 1 (if a is non-empty) or 1 (if a is empty)."
+  ],
+  "edge_cases": [
+    "Input list is empty: output is [0] if minlength > 0, otherwise [0] (but note: empty input is allowed per contract).",
+    "All input values are the same: output has one non-zero value at the index of that value.",
+    "minlength is 0: output length is max(a) + 1 (if a is non-empty) or 1 (if a is empty).",
+    "max(a) is negative: output is [0] (but contract specifies nonnegative integers, so this case is not expected)."
+  ],
+  "inputs": "a: list of nonnegative integers; minlength: nonnegative integer (default 0)",
+  "method_id": "numpy.bincount",
+  "output": "list of integers where each index corresponds to a non-negative integer value in the input, and the value at that index is the count of occurrences of that integer in the input. The length of the output list is equal to max(a) + 1 if minlength <= max(a) + 1, otherwise minlength.",
+  "purpose": "Count occurrences of each non-negative integer in the input array, returning a count list with NumPy's default unweighted behavior.",
+  "signature": "solve(a, minlength=0)"
+}

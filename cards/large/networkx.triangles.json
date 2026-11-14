@@ -1,0 +1,30 @@
+{
+  "algorithm": [
+    "For each vertex i in the graph (0 to n-1), count the number of triangles that include i",
+    "A triangle is formed by three vertices a, b, c such that (a,b), (b,c), and (c,a) are all edges in the graph",
+    "For each vertex i, iterate over its neighbors j and k such that j < k and both j and k are neighbors of i",
+    "Check if j and k are connected by an edge to form a triangle with i",
+    "Count the number of such valid (j,k) pairs for each i"
+  ],
+  "constraints": [
+    "Vertices are labeled 0 to n-1",
+    "Edges are distinct pairs with u < v",
+    "Graph is simple undirected unweighted",
+    "Triangle count is an integer",
+    "Output dictionary keys are strings",
+    "No self-loops or duplicate edges in input"
+  ],
+  "edge_cases": [
+    "n=1: graph has one isolated vertex, triangle count is 0",
+    "n=2: graph has two isolated vertices, triangle count is 0",
+    "Graph with no edges: all vertices have triangle count 0",
+    "Complete graph with n nodes: each vertex has (n-1 choose 2) triangles",
+    "Graph with self-loops: ignored (per documentation)",
+    "Graph with duplicate edges: ignored (edges are distinct per contract)"
+  ],
+  "inputs": "n: integer >= 1; edges: list of distinct [u,v] pairs where 0<=u<v<n",
+  "method_id": "networkx.triangles",
+  "output": "Dictionary mapping each string vertex key to its integer triangle count",
+  "purpose": "Compute the number of triangles for each vertex in a simple undirected unweighted graph",
+  "signature": "solve(n, edges)"
+}

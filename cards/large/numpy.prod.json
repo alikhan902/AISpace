@@ -1,0 +1,28 @@
+{
+  "algorithm": [
+    "If the input list is empty, return 1.",
+    "Otherwise, compute the product of all integers in the list iteratively, starting from 1.",
+    "Ensure intermediate results fit within signed 64-bit integers (int64).",
+    "Handle overflow by using modular arithmetic as per integer type constraints (no error on overflow)."
+  ],
+  "constraints": [
+    "Input list must be one-dimensional",
+    "All intermediate values must fit within signed 64-bit integers (int64)",
+    "No NumPy objects are used; the implementation must be in pure Python",
+    "The product of an empty list is 1",
+    "Overflow is handled by modular arithmetic (no error raised on overflow)"
+  ],
+  "edge_cases": [
+    "Empty list: return 1",
+    "List with a single element: return that element",
+    "List with all zeros: return 0",
+    "List with a single non-zero element: return that element",
+    "List with mixed positive and negative integers: return the product with correct sign",
+    "List with large integers that would overflow in 32-bit systems: use modular arithmetic to handle overflow without error"
+  ],
+  "inputs": "a: a one-dimensional list of integers (possibly empty)",
+  "method_id": "numpy.prod",
+  "output": "int or list[int] (the product of all elements in a, or 1 for empty array)",
+  "purpose": "Return the product of all elements in a one-dimensional list of integers, with handling of edge cases such as empty arrays and overflow.",
+  "signature": "solve(a)"
+}

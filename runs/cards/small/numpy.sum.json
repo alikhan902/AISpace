@@ -1,0 +1,116 @@
+{
+  "elapsed_seconds": 3.996158211999955,
+  "finished_at": "2026-11-14T13:07:04.453643+00:00",
+  "parsed": {
+    "algorithm": [
+      "Sum all elements of the input list.",
+      "If the list is empty, return 0.",
+      "If the list is not empty, return the sum of all elements."
+    ],
+    "constraints": [
+      "All intermediate values fit signed int64.",
+      "Use NumPy's default operation on the whole 1-D list, with dtype=int64."
+    ],
+    "edge_cases": [
+      "Empty list: return 0.",
+      "List with one element: return that element.",
+      "List with multiple elements: return the sum of all elements."
+    ],
+    "inputs": "a is a one-dimensional list of integers, possibly empty.",
+    "method_id": "numpy.sum",
+    "output": "A Python int or list[int], as appropriate; no NumPy objects.",
+    "purpose": "Compute the sum of elements in a 1-dimensional list.",
+    "signature": "solve(a)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"a is a one-dimensional list of integers, possibly empty. Return Python int or list[int], as appropriate; no NumPy objects. All intermediate values fit signed int64. Use NumPy's default operation on the whole 1-D list, with dtype=int64.\",\n  \"documentation\": \"Sum of array elements over a given axis.\\n\\nParameters\\n----------\\na : array_like\\n    Elements to sum.\\naxis : None or int or tuple of ints, optional\\n    Axis or axes along which a sum is performed.  The default,\\n    axis=None, will sum all of the elements of the input array.  If\\n    axis is negative it counts from the last to the first axis. If\\n    axis is a tuple of ints, a sum is performed on all of the axes\\n    specified in the tuple instead of a single axis or all the axes as\\n    before.\\ndtype : dtype, optional\\n    The type of the returned array and of the accumulator in which the\\n    elements are summed.  The dtype of `a` is used by default unless `a`\\n    has an integer dtype of less precision than the default platform\\n    integer.  In that case, if `a` is signed then the platform integer\\n    is used while if `a` is unsigned then an unsigned integer of the\\n    same precision as the platform integer is used.\\nout : ndarray, optional\\n    Alternative output array in which to place the result. It must have\\n    the same shape as the expected output, but the type of the output\\n    values will be cast if necessary.\\nkeepdims : bool, optional\\n    If this is set to True, the axes which are reduced are left\\n    in the result as dimensions with size one. With this option,\\n    the result will broadcast correctly against the input array.\\n\\n    If the default value is passed, then `keepdims` will not be\\n    passed through to the `sum` method of sub-classes of\\n    `ndarray`, however any non-default value will be.  If the\\n    sub-class' method does not implement `keepdims` any\\n    exceptions will be raised.\\ninitial : scalar, optional\\n    Starting value for the sum. See `~numpy.ufunc.reduce` for details.\\nwhere : array_like of bool, optional\\n    Elements to include in the sum. See `~numpy.ufunc.reduce` for details.\\n\\nReturns\\n-------\\nsum_along_axis : ndarray\\n    An array with the same shape as `a`, with the specified\\n    axis removed.   If `a` is a 0-d array, or if `axis` is None, a scalar\\n    is returned.  If an output array is specified, a reference to\\n    `out` is returned.\\n\\nSee Also\\n--------\\nndarray.sum : Equivalent method.\\nadd: ``numpy.add.reduce`` equivalent function.\\ncumsum : Cumulative sum of array elements.\\ntrapezoid : Integration of array values using composite trapezoidal rule.\\n\\nmean, average\\n\\nNotes\\n-----\\nArithmetic is modular when using integer types, and no error is\\nraised on overflow.\\n\\nThe sum of an empty array is the neutral element 0:\\n\\n>>> np.sum([])\\n0.0\\n\\nFor floating point numbers the numerical precision of sum (and\\n``np.add.reduce``) is in general limited by directly adding each number\\nindividually to the result causing rounding errors in every step.\\nHowever, often numpy will use a  numerically better approach (partial\\npairwise summation) leading to improved precision in many use-cases.\\nThis improved precision is always provided when no ``axis`` is given.\\nWhen ``axis`` is given, it will depend on which axis is summed.\\nTechnically, to provide the best speed possible, the improved precision\\nis only used when the summation is along the fast axis in memory.\\nNote that the exact precision may vary depending on other parameters.\\nIn contrast to NumPy, Python's ``math.fsum`` function uses a slower but\\nmore precise approach to summation.\\nEspecially when summing a large number of lower precision floating point\\nnumbers, such as ``float32``, numerical errors can become significant.\\nIn such cases it can be advisable to use `dtype=np.float64` to use a higher\\nprecision for the output.\\n\\nExamples\\n--------\\n>>> import numpy as np\\n>>> np.sum([0.5, 1.5])\\n2.0\\n>>> np.sum([0.5, 0.7, 0.2, 1.5], dtype=np.int32)\\nnp.int32(1)\\n>>> np.sum([[0, 1], [0, 5]])\\n6\\n>>> np.sum([[0, 1], [0, 5]], axis=0)\\narray([0, 6])\\n>>> np.sum([[0, 1], [0, 5]], axis=1)\\narray([1, 5])\\n>>> np.sum([[0, 1], [np.nan, 5]], where=[False, True], axis=1)\\narray([1., 5.])\\n\\nIf the accumulator is too small, overflow occurs:\\n\\n>>> np.ones(128, dtype=np.int8).sum(dtype=np.int8)\\nnp.int8(-128)\\n\\nYou can also start the sum with a value other than zero:\\n\\n>>> np.sum([10], initial=5)\\n15\",\n  \"documentation_truncated\": false,\n  \"group\": \"reductions\",\n  \"id\": \"numpy.sum\",\n  \"library\": \"numpy\",\n  \"name\": \"sum\",\n  \"signature\": \"solve(a)\",\n  \"version\": \"2.5.4\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:1.7b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:07:04.45333297Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 201,
+    "eval_duration": 1289242000,
+    "load_duration": 2440580378,
+    "message": {
+      "content": "{\n  \"method_id\": \"numpy.sum\",\n  \"signature\": \"solve(a)\",\n  \"purpose\": \"Compute the sum of elements in a 1-dimensional list.\",\n  \"inputs\": \"a is a one-dimensional list of integers, possibly empty.\",\n  \"output\": \"A Python int or list[int], as appropriate; no NumPy objects.\",\n  \"algorithm\": [\n    \"Sum all elements of the input list.\",\n    \"If the list is empty, return 0.\",\n    \"If the list is not empty, return the sum of all elements.\"\n  ],\n  \"edge_cases\": [\n    \"Empty list: return 0.\",\n    \"List with one element: return that element.\",\n    \"List with multiple elements: return the sum of all elements.\"\n  ],\n  \"constraints\": [\n    \"All intermediate values fit signed int64.\",\n    \"Use NumPy's default operation on the whole 1-D list, with dtype=int64.\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:1.7b",
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_count": 1605,
+    "prompt_eval_duration": 257632999,
+    "total_duration": 3995484534
+  },
+  "started_at": "2026-11-14T13:07:00.457485+00:00",
+  "valid": true
+}

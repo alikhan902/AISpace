@@ -1,0 +1,116 @@
+{
+  "elapsed_seconds": 1.5730168249999679,
+  "finished_at": "2026-11-14T13:07:25.962690+00:00",
+  "parsed": {
+    "algorithm": [
+      "Sort the input array in ascending order.",
+      "Remove duplicate elements while preserving the order of their first occurrence.",
+      "Return the resulting sorted unique elements."
+    ],
+    "constraints": [
+      "All intermediate values fit signed int64.",
+      "Use default unique behavior: sorted distinct values only, no indices or counts."
+    ],
+    "edge_cases": [
+      "Input is empty list.",
+      "Input contains only one element.",
+      "Input contains all elements the same."
+    ],
+    "inputs": "a is a one-dimensional list of integers, possibly empty.",
+    "method_id": "solve",
+    "output": "A list of sorted distinct integers, or a list of sorted distinct integers if the input is empty.",
+    "purpose": "Return the sorted unique elements of an array.",
+    "signature": "solve(a)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"a is a one-dimensional list of integers, possibly empty. Return Python int or list[int], as appropriate; no NumPy objects. All intermediate values fit signed int64. Use default unique behavior: sorted distinct values only, no indices or counts.\",\n  \"documentation\": \"Find the unique elements of an array.\\n\\nReturns the sorted unique elements of an array. There are three optional\\noutputs in addition to the unique elements:\\n\\n* the indices of the input array that give the unique values\\n* the indices of the unique array that reconstruct the input array\\n* the number of times each unique value comes up in the input array\\n\\nParameters\\n----------\\nar : array_like\\n    Input array. Unless `axis` is specified, this will be flattened if it\\n    is not already 1-D.\\nreturn_index : bool, optional\\n    If True, also return the indices of `ar` (along the specified axis,\\n    if provided, or in the flattened array) that result in the unique array.\\nreturn_inverse : bool, optional\\n    If True, also return the indices of the unique array (for the specified\\n    axis, if provided) that can be used to reconstruct `ar`.\\nreturn_counts : bool, optional\\n    If True, also return the number of times each unique item appears\\n    in `ar`.\\naxis : int or None, optional\\n    The axis to operate on. If None, `ar` will be flattened. If an integer,\\n    the subarrays indexed by the given axis will be flattened and treated\\n    as the elements of a 1-D array with the dimension of the given axis,\\n    see the notes for more details.  Object arrays or structured arrays\\n    that contain objects are not supported if the `axis` kwarg is used. The\\n    default is None.\\n\\nequal_nan : bool, optional\\n    If True, collapses multiple NaN values in the return array into one.\\n\\n    .. versionadded:: 1.24\\n\\nsorted : bool, optional\\n    If True, the unique elements are sorted. Elements may be sorted in\\n    practice even if ``sorted=False``, but this could change without\\n    notice.\\n\\n    .. versionadded:: 2.3\\n\\nReturns\\n-------\\nunique : ndarray\\n    The sorted unique values.\\nunique_indices : ndarray, optional\\n    The indices of the first occurrences of the unique values in the\\n    original array. Only provided if `return_index` is True.\\nunique_inverse : ndarray, optional\\n    The indices to reconstruct the original array from the\\n    unique array. Only provided if `return_inverse` is True.\\nunique_counts : ndarray, optional\\n    The number of times each of the unique values comes up in the\\n    original array. Only provided if `return_counts` is True.\\n\\nSee Also\\n--------\\nrepeat : Repeat elements of an array.\\nsort : Return a sorted copy of an array.\\n\\nNotes\\n-----\\nWhen an axis is specified the subarrays indexed by the axis are sorted.\\nThis is done by making the specified axis the first dimension of the array\\n(move the axis to the first dimension to keep the order of the other axes)\\nand then flattening the subarrays in C order. The flattened subarrays are\\nthen viewed as a structured type with each element given a label, with the\\neffect that we end up with a 1-D array of structured types that can be\\ntreated in the same way as any other 1-D array. The result is that the\\nflattened subarrays are sorted in lexicographic order starting with the\\nfirst element.\\n\\n.. versionchanged:: 1.21\\n    Like np.sort, NaN will sort to the end of the values.\\n    For complex arrays all NaN values are considered equivalent\\n    (no matter whether the NaN is in the real or imaginary part).\\n    As the representant for the returned array the smallest one in the\\n    lexicographical order is chosen - see np.sort for how the lexicographical\\n    order is defined for complex arrays.\\n\\n.. versionchanged:: 2.0\\n    For multi-dimensional inputs, ``unique_inverse`` is reshaped\\n    such that the input can be reconstructed using\\n    ``np.take(unique, unique_inverse, axis=axis)``. The result is\\n    now not 1-dimensional when ``axis=None``.\\n\\n    Note that in NumPy 2.0.0 a higher dimensional array was returned also\\n    when ``axis`` was not ``None``.  This was reverted, but\\n    ``inverse.reshape(-1)`` can be used to ensure compatibility with both\\n    versions.\\n\\nExamples\\n--------\\n>>> import numpy as np\\n>>> np.unique([1, 1, 2, 2, 3, 3])\\narray([1, 2, 3])\\n>>> a = np.array([[1, 1], [2, 3]])\\n>>> np.unique(a)\\narray([1, 2, 3])\\n\\nReturn the unique rows of a 2D array\\n\\n>>> a = np.array([[1, 0, 0], [1, 0, 0], [2, 3, 4]])\\n>>> np.unique(a, axis=0)\\narray([[1, 0, 0], [2, 3, 4]])\\n\\nReturn the indices of the original array that give the unique values:\\n\\n>>> a = np.array(['a', 'b', 'b', 'c', 'a'])\\n>>> u, indices = np.unique(a, return_index=True)\\n>>> u\\narray(['a', 'b', 'c'], dtype='<U1')\\n>>> indices\\narray([0, 1, 3])\\n>>> a[indices]\\narray(['a', 'b', 'c'], dtype='<U1')\\n\\nReconstruct the input array from the unique values and inverse:\\n\\n>>> a = np.array([1, 2, 6, 4, 2, 3, 2])\\n>>> u, indices = np.unique(a, return_inverse=True)\\n>>> u\\narray([1, 2, 3, 4, 6])\\n>>> indices\\narray([0, 1, 4, 3, 1, 2, 1])\\n>>> u[indices]\\narray([1, 2, 6, 4, 2, 3, 2])\\n\\nReconstruct the input values from the unique values and counts:\\n\\n>>> a = np.array([1, 2, 6, 4, 2, 3, 2])\\n>>> values, counts = np.unique(a, return_counts=True)\\n>>> values\\narray([1, 2, 3, 4, 6])\\n>>> counts\\narray([1, 3, 1, 1, 1])\\n>>> np.repeat(values, counts)\\narray([1, 2, 2, 2, 3, 4, 6])    # original order not preserved\",\n  \"documentation_truncated\": false,\n  \"group\": \"ordering_counting\",\n  \"id\": \"numpy.unique\",\n  \"library\": \"numpy\",\n  \"name\": \"unique\",\n  \"signature\": \"solve(a)\",\n  \"version\": \"2.5.4\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:1.7b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:07:25.962412016Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 182,
+    "eval_duration": 1244140000,
+    "load_duration": 515306,
+    "message": {
+      "content": "{\n  \"method_id\": \"solve\",\n  \"signature\": \"solve(a)\",\n  \"purpose\": \"Return the sorted unique elements of an array.\",\n  \"inputs\": \"a is a one-dimensional list of integers, possibly empty.\",\n  \"output\": \"A list of sorted distinct integers, or a list of sorted distinct integers if the input is empty.\",\n  \"algorithm\": [\n    \"Sort the input array in ascending order.\",\n    \"Remove duplicate elements while preserving the order of their first occurrence.\",\n    \"Return the resulting sorted unique elements.\"\n  ],\n  \"edge_cases\": [\n    \"Input is empty list.\",\n    \"Input contains only one element.\",\n    \"Input contains all elements the same.\"\n  ],\n  \"constraints\": [\n    \"All intermediate values fit signed int64.\",\n    \"Use default unique behavior: sorted distinct values only, no indices or counts.\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:1.7b",
+    "prompt_eval_cached_count": 381,
+    "prompt_eval_count": 1952,
+    "prompt_eval_duration": 236596000,
+    "total_duration": 1572432511
+  },
+  "started_at": "2026-11-14T13:07:24.389671+00:00",
+  "valid": true
+}

@@ -1,0 +1,118 @@
+{
+  "elapsed_seconds": 1.6369787189998988,
+  "finished_at": "2026-11-14T13:07:36.134885+00:00",
+  "parsed": {
+    "algorithm": [
+      "For small n, use a precomputed lookup table for fast computation.",
+      "For larger n, use the Prime-Swing algorithm, which computes n! via prime factorization of 'Swing Numbers'."
+    ],
+    "constraints": [
+      "n must be an integer in the range 0..35",
+      "n = -2 is not allowed",
+      "n = S(1)/2 is not allowed",
+      "n = 2*n is allowed"
+    ],
+    "edge_cases": [
+      "n = 0: returns 1",
+      "n = 35: returns 35!",
+      "n = -2: returns complex infinity",
+      "n = S(1)/2: returns factorial(1/2)"
+    ],
+    "inputs": "n is an integer in 0..35",
+    "method_id": "sympy.factorial",
+    "output": "The exact Python integer result of n!",
+    "purpose": "Compute the factorial of a nonnegative integer `n` using efficient algorithms.",
+    "signature": "solve(n)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"n is an integer in 0..35. Return the exact Python int, with arbitrary precision; no symbolic result.\",\n  \"documentation\": \"Implementation of factorial function over nonnegative integers.\\nBy convention (consistent with the gamma function and the binomial\\ncoefficients), factorial of a negative integer is complex infinity.\\n\\nThe factorial is very important in combinatorics where it gives\\nthe number of ways in which `n` objects can be permuted. It also\\narises in calculus, probability, number theory, etc.\\n\\nThere is strict relation of factorial with gamma function. In\\nfact `n! = gamma(n+1)` for nonnegative integers. Rewrite of this\\nkind is very useful in case of combinatorial simplification.\\n\\nComputation of the factorial is done using two algorithms. For\\nsmall arguments a precomputed look up table is used. However for bigger\\ninput algorithm Prime-Swing is used. It is the fastest algorithm\\nknown and computes `n!` via prime factorization of special class\\nof numbers, called here the 'Swing Numbers'.\\n\\nExamples\\n========\\n\\n>>> from sympy import Symbol, factorial, S\\n>>> n = Symbol('n', integer=True)\\n\\n>>> factorial(0)\\n1\\n\\n>>> factorial(7)\\n5040\\n\\n>>> factorial(-2)\\nzoo\\n\\n>>> factorial(n)\\nfactorial(n)\\n\\n>>> factorial(2*n)\\nfactorial(2*n)\\n\\n>>> factorial(S(1)/2)\\nfactorial(1/2)\\n\\nSee Also\\n========\\n\\nfactorial2, RisingFactorial, FallingFactorial\",\n  \"documentation_truncated\": false,\n  \"group\": \"combinatorics\",\n  \"id\": \"sympy.factorial\",\n  \"library\": \"sympy\",\n  \"name\": \"factorial\",\n  \"signature\": \"solve(n)\",\n  \"version\": \"1.14.0\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:1.7b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:07:36.134607367Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 239,
+    "eval_duration": 1531345000,
+    "load_duration": 549092,
+    "message": {
+      "content": "{\n  \"method_id\": \"sympy.factorial\",\n  \"signature\": \"solve(n)\",\n  \"purpose\": \"Compute the factorial of a nonnegative integer `n` using efficient algorithms.\",\n  \"inputs\": \"n is an integer in 0..35\",\n  \"output\": \"The exact Python integer result of n!\",\n  \"algorithm\": [\n    \"For small n, use a precomputed lookup table for fast computation.\",\n    \"For larger n, use the Prime-Swing algorithm, which computes n! via prime factorization of 'Swing Numbers'.\"\n  ],\n  \"edge_cases\": [\n    \"n = 0: returns 1\",\n    \"n = 35: returns 35!\",\n    \"n = -2: returns complex infinity\",\n    \"n = S(1)/2: returns factorial(1/2)\"\n  ],\n  \"constraints\": [\n    \"n must be an integer in the range 0..35\",\n    \"n = -2 is not allowed\",\n    \"n = S(1)/2 is not allowed\",\n    \"n = 2*n is allowed\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:1.7b",
+    "prompt_eval_cached_count": 344,
+    "prompt_eval_count": 775,
+    "prompt_eval_duration": 66784000,
+    "total_duration": 1636253351
+  },
+  "started_at": "2026-11-14T13:07:34.497905+00:00",
+  "valid": true
+}

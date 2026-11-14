@@ -1,0 +1,1427 @@
+{
+  "all_pass": true,
+  "cases": [
+    {
+      "case_id": "sympy.lucas:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 0
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "n": 1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0002",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "n": 2
+      },
+      "observed": {
+        "value": 3
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0003",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 3
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0004",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "n": 4
+      },
+      "observed": {
+        "value": 7
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0005",
+      "category": "exhaustive",
+      "expected": {
+        "value": 11
+      },
+      "input": {
+        "n": 5
+      },
+      "observed": {
+        "value": 11
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0006",
+      "category": "exhaustive",
+      "expected": {
+        "value": 18
+      },
+      "input": {
+        "n": 6
+      },
+      "observed": {
+        "value": 18
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0007",
+      "category": "exhaustive",
+      "expected": {
+        "value": 29
+      },
+      "input": {
+        "n": 7
+      },
+      "observed": {
+        "value": 29
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0008",
+      "category": "exhaustive",
+      "expected": {
+        "value": 47
+      },
+      "input": {
+        "n": 8
+      },
+      "observed": {
+        "value": 47
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0009",
+      "category": "exhaustive",
+      "expected": {
+        "value": 76
+      },
+      "input": {
+        "n": 9
+      },
+      "observed": {
+        "value": 76
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0010",
+      "category": "exhaustive",
+      "expected": {
+        "value": 123
+      },
+      "input": {
+        "n": 10
+      },
+      "observed": {
+        "value": 123
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0011",
+      "category": "exhaustive",
+      "expected": {
+        "value": 199
+      },
+      "input": {
+        "n": 11
+      },
+      "observed": {
+        "value": 199
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0012",
+      "category": "exhaustive",
+      "expected": {
+        "value": 322
+      },
+      "input": {
+        "n": 12
+      },
+      "observed": {
+        "value": 322
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0013",
+      "category": "exhaustive",
+      "expected": {
+        "value": 521
+      },
+      "input": {
+        "n": 13
+      },
+      "observed": {
+        "value": 521
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0014",
+      "category": "exhaustive",
+      "expected": {
+        "value": 843
+      },
+      "input": {
+        "n": 14
+      },
+      "observed": {
+        "value": 843
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0015",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1364
+      },
+      "input": {
+        "n": 15
+      },
+      "observed": {
+        "value": 1364
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0016",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2207
+      },
+      "input": {
+        "n": 16
+      },
+      "observed": {
+        "value": 2207
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0017",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3571
+      },
+      "input": {
+        "n": 17
+      },
+      "observed": {
+        "value": 3571
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0018",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5778
+      },
+      "input": {
+        "n": 18
+      },
+      "observed": {
+        "value": 5778
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0019",
+      "category": "exhaustive",
+      "expected": {
+        "value": 9349
+      },
+      "input": {
+        "n": 19
+      },
+      "observed": {
+        "value": 9349
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0020",
+      "category": "exhaustive",
+      "expected": {
+        "value": 15127
+      },
+      "input": {
+        "n": 20
+      },
+      "observed": {
+        "value": 15127
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0021",
+      "category": "exhaustive",
+      "expected": {
+        "value": 24476
+      },
+      "input": {
+        "n": 21
+      },
+      "observed": {
+        "value": 24476
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0022",
+      "category": "exhaustive",
+      "expected": {
+        "value": 39603
+      },
+      "input": {
+        "n": 22
+      },
+      "observed": {
+        "value": 39603
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0023",
+      "category": "exhaustive",
+      "expected": {
+        "value": 64079
+      },
+      "input": {
+        "n": 23
+      },
+      "observed": {
+        "value": 64079
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0024",
+      "category": "exhaustive",
+      "expected": {
+        "value": 103682
+      },
+      "input": {
+        "n": 24
+      },
+      "observed": {
+        "value": 103682
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0025",
+      "category": "exhaustive",
+      "expected": {
+        "value": 167761
+      },
+      "input": {
+        "n": 25
+      },
+      "observed": {
+        "value": 167761
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0026",
+      "category": "exhaustive",
+      "expected": {
+        "value": 271443
+      },
+      "input": {
+        "n": 26
+      },
+      "observed": {
+        "value": 271443
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0027",
+      "category": "exhaustive",
+      "expected": {
+        "value": 439204
+      },
+      "input": {
+        "n": 27
+      },
+      "observed": {
+        "value": 439204
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0028",
+      "category": "exhaustive",
+      "expected": {
+        "value": 710647
+      },
+      "input": {
+        "n": 28
+      },
+      "observed": {
+        "value": 710647
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0029",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1149851
+      },
+      "input": {
+        "n": 29
+      },
+      "observed": {
+        "value": 1149851
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0030",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1860498
+      },
+      "input": {
+        "n": 30
+      },
+      "observed": {
+        "value": 1860498
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0031",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3010349
+      },
+      "input": {
+        "n": 31
+      },
+      "observed": {
+        "value": 3010349
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0032",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4870847
+      },
+      "input": {
+        "n": 32
+      },
+      "observed": {
+        "value": 4870847
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0033",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7881196
+      },
+      "input": {
+        "n": 33
+      },
+      "observed": {
+        "value": 7881196
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0034",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12752043
+      },
+      "input": {
+        "n": 34
+      },
+      "observed": {
+        "value": 12752043
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0035",
+      "category": "exhaustive",
+      "expected": {
+        "value": 20633239
+      },
+      "input": {
+        "n": 35
+      },
+      "observed": {
+        "value": 20633239
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0036",
+      "category": "exhaustive",
+      "expected": {
+        "value": 33385282
+      },
+      "input": {
+        "n": 36
+      },
+      "observed": {
+        "value": 33385282
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0037",
+      "category": "exhaustive",
+      "expected": {
+        "value": 54018521
+      },
+      "input": {
+        "n": 37
+      },
+      "observed": {
+        "value": 54018521
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0038",
+      "category": "exhaustive",
+      "expected": {
+        "value": 87403803
+      },
+      "input": {
+        "n": 38
+      },
+      "observed": {
+        "value": 87403803
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0039",
+      "category": "exhaustive",
+      "expected": {
+        "value": 141422324
+      },
+      "input": {
+        "n": 39
+      },
+      "observed": {
+        "value": 141422324
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0040",
+      "category": "exhaustive",
+      "expected": {
+        "value": 228826127
+      },
+      "input": {
+        "n": 40
+      },
+      "observed": {
+        "value": 228826127
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0041",
+      "category": "exhaustive",
+      "expected": {
+        "value": 370248451
+      },
+      "input": {
+        "n": 41
+      },
+      "observed": {
+        "value": 370248451
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0042",
+      "category": "exhaustive",
+      "expected": {
+        "value": 599074578
+      },
+      "input": {
+        "n": 42
+      },
+      "observed": {
+        "value": 599074578
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0043",
+      "category": "exhaustive",
+      "expected": {
+        "value": 969323029
+      },
+      "input": {
+        "n": 43
+      },
+      "observed": {
+        "value": 969323029
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0044",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1568397607
+      },
+      "input": {
+        "n": 44
+      },
+      "observed": {
+        "value": 1568397607
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0045",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2537720636
+      },
+      "input": {
+        "n": 45
+      },
+      "observed": {
+        "value": 2537720636
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0046",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4106118243
+      },
+      "input": {
+        "n": 46
+      },
+      "observed": {
+        "value": 4106118243
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0047",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6643838879
+      },
+      "input": {
+        "n": 47
+      },
+      "observed": {
+        "value": 6643838879
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0048",
+      "category": "exhaustive",
+      "expected": {
+        "value": 10749957122
+      },
+      "input": {
+        "n": 48
+      },
+      "observed": {
+        "value": 10749957122
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0049",
+      "category": "exhaustive",
+      "expected": {
+        "value": 17393796001
+      },
+      "input": {
+        "n": 49
+      },
+      "observed": {
+        "value": 17393796001
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0050",
+      "category": "exhaustive",
+      "expected": {
+        "value": 28143753123
+      },
+      "input": {
+        "n": 50
+      },
+      "observed": {
+        "value": 28143753123
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0051",
+      "category": "exhaustive",
+      "expected": {
+        "value": 45537549124
+      },
+      "input": {
+        "n": 51
+      },
+      "observed": {
+        "value": 45537549124
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0052",
+      "category": "exhaustive",
+      "expected": {
+        "value": 73681302247
+      },
+      "input": {
+        "n": 52
+      },
+      "observed": {
+        "value": 73681302247
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0053",
+      "category": "exhaustive",
+      "expected": {
+        "value": 119218851371
+      },
+      "input": {
+        "n": 53
+      },
+      "observed": {
+        "value": 119218851371
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0054",
+      "category": "exhaustive",
+      "expected": {
+        "value": 192900153618
+      },
+      "input": {
+        "n": 54
+      },
+      "observed": {
+        "value": 192900153618
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0055",
+      "category": "exhaustive",
+      "expected": {
+        "value": 312119004989
+      },
+      "input": {
+        "n": 55
+      },
+      "observed": {
+        "value": 312119004989
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0056",
+      "category": "exhaustive",
+      "expected": {
+        "value": 505019158607
+      },
+      "input": {
+        "n": 56
+      },
+      "observed": {
+        "value": 505019158607
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0057",
+      "category": "exhaustive",
+      "expected": {
+        "value": 817138163596
+      },
+      "input": {
+        "n": 57
+      },
+      "observed": {
+        "value": 817138163596
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0058",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1322157322203
+      },
+      "input": {
+        "n": 58
+      },
+      "observed": {
+        "value": 1322157322203
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0059",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2139295485799
+      },
+      "input": {
+        "n": 59
+      },
+      "observed": {
+        "value": 2139295485799
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0060",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3461452808002
+      },
+      "input": {
+        "n": 60
+      },
+      "observed": {
+        "value": 3461452808002
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0061",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5600748293801
+      },
+      "input": {
+        "n": 61
+      },
+      "observed": {
+        "value": 5600748293801
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0062",
+      "category": "exhaustive",
+      "expected": {
+        "value": 9062201101803
+      },
+      "input": {
+        "n": 62
+      },
+      "observed": {
+        "value": 9062201101803
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0063",
+      "category": "exhaustive",
+      "expected": {
+        "value": 14662949395604
+      },
+      "input": {
+        "n": 63
+      },
+      "observed": {
+        "value": 14662949395604
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0064",
+      "category": "exhaustive",
+      "expected": {
+        "value": 23725150497407
+      },
+      "input": {
+        "n": 64
+      },
+      "observed": {
+        "value": 23725150497407
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0065",
+      "category": "exhaustive",
+      "expected": {
+        "value": 38388099893011
+      },
+      "input": {
+        "n": 65
+      },
+      "observed": {
+        "value": 38388099893011
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0066",
+      "category": "exhaustive",
+      "expected": {
+        "value": 62113250390418
+      },
+      "input": {
+        "n": 66
+      },
+      "observed": {
+        "value": 62113250390418
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0067",
+      "category": "exhaustive",
+      "expected": {
+        "value": 100501350283429
+      },
+      "input": {
+        "n": 67
+      },
+      "observed": {
+        "value": 100501350283429
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0068",
+      "category": "exhaustive",
+      "expected": {
+        "value": 162614600673847
+      },
+      "input": {
+        "n": 68
+      },
+      "observed": {
+        "value": 162614600673847
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0069",
+      "category": "exhaustive",
+      "expected": {
+        "value": 263115950957276
+      },
+      "input": {
+        "n": 69
+      },
+      "observed": {
+        "value": 263115950957276
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0070",
+      "category": "exhaustive",
+      "expected": {
+        "value": 425730551631123
+      },
+      "input": {
+        "n": 70
+      },
+      "observed": {
+        "value": 425730551631123
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0071",
+      "category": "exhaustive",
+      "expected": {
+        "value": 688846502588399
+      },
+      "input": {
+        "n": 71
+      },
+      "observed": {
+        "value": 688846502588399
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0072",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1114577054219522
+      },
+      "input": {
+        "n": 72
+      },
+      "observed": {
+        "value": 1114577054219522
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0073",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1803423556807921
+      },
+      "input": {
+        "n": 73
+      },
+      "observed": {
+        "value": 1803423556807921
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0074",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2918000611027443
+      },
+      "input": {
+        "n": 74
+      },
+      "observed": {
+        "value": 2918000611027443
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0075",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4721424167835364
+      },
+      "input": {
+        "n": 75
+      },
+      "observed": {
+        "value": 4721424167835364
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0076",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7639424778862807
+      },
+      "input": {
+        "n": 76
+      },
+      "observed": {
+        "value": 7639424778862807
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0077",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12360848946698171
+      },
+      "input": {
+        "n": 77
+      },
+      "observed": {
+        "value": 12360848946698171
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0078",
+      "category": "exhaustive",
+      "expected": {
+        "value": 20000273725560978
+      },
+      "input": {
+        "n": 78
+      },
+      "observed": {
+        "value": 20000273725560978
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0079",
+      "category": "exhaustive",
+      "expected": {
+        "value": 32361122672259149
+      },
+      "input": {
+        "n": 79
+      },
+      "observed": {
+        "value": 32361122672259149
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0080",
+      "category": "exhaustive",
+      "expected": {
+        "value": 52361396397820127
+      },
+      "input": {
+        "n": 80
+      },
+      "observed": {
+        "value": 52361396397820127
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0081",
+      "category": "exhaustive",
+      "expected": {
+        "value": 84722519070079276
+      },
+      "input": {
+        "n": 81
+      },
+      "observed": {
+        "value": 84722519070079276
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0082",
+      "category": "exhaustive",
+      "expected": {
+        "value": 137083915467899403
+      },
+      "input": {
+        "n": 82
+      },
+      "observed": {
+        "value": 137083915467899403
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0083",
+      "category": "exhaustive",
+      "expected": {
+        "value": 221806434537978679
+      },
+      "input": {
+        "n": 83
+      },
+      "observed": {
+        "value": 221806434537978679
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0084",
+      "category": "exhaustive",
+      "expected": {
+        "value": 358890350005878082
+      },
+      "input": {
+        "n": 84
+      },
+      "observed": {
+        "value": 358890350005878082
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0085",
+      "category": "exhaustive",
+      "expected": {
+        "value": 580696784543856761
+      },
+      "input": {
+        "n": 85
+      },
+      "observed": {
+        "value": 580696784543856761
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0086",
+      "category": "exhaustive",
+      "expected": {
+        "value": 939587134549734843
+      },
+      "input": {
+        "n": 86
+      },
+      "observed": {
+        "value": 939587134549734843
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0087",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1520283919093591604
+      },
+      "input": {
+        "n": 87
+      },
+      "observed": {
+        "value": 1520283919093591604
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0088",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2459871053643326447
+      },
+      "input": {
+        "n": 88
+      },
+      "observed": {
+        "value": 2459871053643326447
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0089",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3980154972736918051
+      },
+      "input": {
+        "n": 89
+      },
+      "observed": {
+        "value": 3980154972736918051
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0090",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6440026026380244498
+      },
+      "input": {
+        "n": 90
+      },
+      "observed": {
+        "value": 6440026026380244498
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0091",
+      "category": "exhaustive",
+      "expected": {
+        "value": 10420180999117162549
+      },
+      "input": {
+        "n": 91
+      },
+      "observed": {
+        "value": 10420180999117162549
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0092",
+      "category": "exhaustive",
+      "expected": {
+        "value": 16860207025497407047
+      },
+      "input": {
+        "n": 92
+      },
+      "observed": {
+        "value": 16860207025497407047
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0093",
+      "category": "exhaustive",
+      "expected": {
+        "value": 27280388024614569596
+      },
+      "input": {
+        "n": 93
+      },
+      "observed": {
+        "value": 27280388024614569596
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0094",
+      "category": "exhaustive",
+      "expected": {
+        "value": 44140595050111976643
+      },
+      "input": {
+        "n": 94
+      },
+      "observed": {
+        "value": 44140595050111976643
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0095",
+      "category": "exhaustive",
+      "expected": {
+        "value": 71420983074726546239
+      },
+      "input": {
+        "n": 95
+      },
+      "observed": {
+        "value": 71420983074726546239
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0096",
+      "category": "exhaustive",
+      "expected": {
+        "value": 115561578124838522882
+      },
+      "input": {
+        "n": 96
+      },
+      "observed": {
+        "value": 115561578124838522882
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0097",
+      "category": "exhaustive",
+      "expected": {
+        "value": 186982561199565069121
+      },
+      "input": {
+        "n": 97
+      },
+      "observed": {
+        "value": 186982561199565069121
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0098",
+      "category": "exhaustive",
+      "expected": {
+        "value": 302544139324403592003
+      },
+      "input": {
+        "n": 98
+      },
+      "observed": {
+        "value": 302544139324403592003
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0099",
+      "category": "exhaustive",
+      "expected": {
+        "value": 489526700523968661124
+      },
+      "input": {
+        "n": 99
+      },
+      "observed": {
+        "value": 489526700523968661124
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.lucas:0100",
+      "category": "exhaustive",
+      "expected": {
+        "value": 792070839848372253127
+      },
+      "input": {
+        "n": 100
+      },
+      "observed": {
+        "value": 792070839848372253127
+      },
+      "passed": true
+    }
+  ],
+  "condition": "small_to_large",
+  "elapsed_seconds": 0.028265292000014597,
+  "group": "combinatorics",
+  "library": "sympy",
+  "load_error": null,
+  "method_id": "sympy.lucas",
+  "passed": 101,
+  "total": 101
+}

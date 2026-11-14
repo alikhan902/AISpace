@@ -1,0 +1,24 @@
+{
+  "algorithm": [
+    "Compute the degree of each node.",
+    "Identify all k-core subgraphs for k = 1, 2, ..., n.",
+    "For each node, determine the largest k for which the node is in a k-core.",
+    "Return the core number dictionary."
+  ],
+  "constraints": [
+    "The graph must be simple and undirected.",
+    "All edges must be distinct and satisfy 0 <= u < v < n.",
+    "The graph must be connected or contain isolated vertices.",
+    "The function raises NetworkXNotImplemented if the graph is a multigraph or contains self loops."
+  ],
+  "edge_cases": [
+    "When n = 1, the graph is a single isolated vertex.",
+    "When the graph is empty (no edges), all nodes have core number 0.",
+    "When a node has degree 0, its core number is 0."
+  ],
+  "inputs": "n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.",
+  "method_id": "networkx.core_number",
+  "output": "A dictionary mapping every string vertex key to its integer core number, including isolated vertices.",
+  "purpose": "Return the core number for each node in a given graph.",
+  "signature": "solve(n, edges)"
+}

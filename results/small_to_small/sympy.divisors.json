@@ -1,0 +1,7835 @@
+{
+  "all_pass": true,
+  "cases": [
+    {
+      "case_id": "sympy.divisors:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "input": {
+        "n": 1
+      },
+      "observed": {
+        "value": [
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2
+        ]
+      },
+      "input": {
+        "n": 2
+      },
+      "observed": {
+        "value": [
+          1,
+          2
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0002",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          3
+        ]
+      },
+      "input": {
+        "n": 3
+      },
+      "observed": {
+        "value": [
+          1,
+          3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0003",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4
+        ]
+      },
+      "input": {
+        "n": 4
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0004",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          5
+        ]
+      },
+      "input": {
+        "n": 5
+      },
+      "observed": {
+        "value": [
+          1,
+          5
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0005",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          6
+        ]
+      },
+      "input": {
+        "n": 6
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          6
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0006",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          7
+        ]
+      },
+      "input": {
+        "n": 7
+      },
+      "observed": {
+        "value": [
+          1,
+          7
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0007",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          8
+        ]
+      },
+      "input": {
+        "n": 8
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          8
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0008",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          3,
+          9
+        ]
+      },
+      "input": {
+        "n": 9
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          9
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0009",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          5,
+          10
+        ]
+      },
+      "input": {
+        "n": 10
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          5,
+          10
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0010",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          11
+        ]
+      },
+      "input": {
+        "n": 11
+      },
+      "observed": {
+        "value": [
+          1,
+          11
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0011",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          12
+        ]
+      },
+      "input": {
+        "n": 12
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          12
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0012",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          13
+        ]
+      },
+      "input": {
+        "n": 13
+      },
+      "observed": {
+        "value": [
+          1,
+          13
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0013",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          7,
+          14
+        ]
+      },
+      "input": {
+        "n": 14
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          7,
+          14
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0014",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          3,
+          5,
+          15
+        ]
+      },
+      "input": {
+        "n": 15
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          5,
+          15
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0015",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ]
+      },
+      "input": {
+        "n": 16
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0016",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          17
+        ]
+      },
+      "input": {
+        "n": 17
+      },
+      "observed": {
+        "value": [
+          1,
+          17
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0017",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          6,
+          9,
+          18
+        ]
+      },
+      "input": {
+        "n": 18
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          6,
+          9,
+          18
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0018",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          19
+        ]
+      },
+      "input": {
+        "n": 19
+      },
+      "observed": {
+        "value": [
+          1,
+          19
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0019",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          5,
+          10,
+          20
+        ]
+      },
+      "input": {
+        "n": 20
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          5,
+          10,
+          20
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0020",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          3,
+          7,
+          21
+        ]
+      },
+      "input": {
+        "n": 21
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          7,
+          21
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0021",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          11,
+          22
+        ]
+      },
+      "input": {
+        "n": 22
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          11,
+          22
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0022",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          23
+        ]
+      },
+      "input": {
+        "n": 23
+      },
+      "observed": {
+        "value": [
+          1,
+          23
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0023",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8,
+          12,
+          24
+        ]
+      },
+      "input": {
+        "n": 24
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8,
+          12,
+          24
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0024",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          5,
+          25
+        ]
+      },
+      "input": {
+        "n": 25
+      },
+      "observed": {
+        "value": [
+          1,
+          5,
+          25
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0025",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          13,
+          26
+        ]
+      },
+      "input": {
+        "n": 26
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          13,
+          26
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0026",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          3,
+          9,
+          27
+        ]
+      },
+      "input": {
+        "n": 27
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          9,
+          27
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0027",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          7,
+          14,
+          28
+        ]
+      },
+      "input": {
+        "n": 28
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          7,
+          14,
+          28
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0028",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          29
+        ]
+      },
+      "input": {
+        "n": 29
+      },
+      "observed": {
+        "value": [
+          1,
+          29
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0029",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          10,
+          15,
+          30
+        ]
+      },
+      "input": {
+        "n": 30
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          10,
+          15,
+          30
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0030",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          31
+        ]
+      },
+      "input": {
+        "n": 31
+      },
+      "observed": {
+        "value": [
+          1,
+          31
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0031",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ]
+      },
+      "input": {
+        "n": 32
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0032",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          3,
+          11,
+          33
+        ]
+      },
+      "input": {
+        "n": 33
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          11,
+          33
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0033",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          17,
+          34
+        ]
+      },
+      "input": {
+        "n": 34
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          17,
+          34
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0034",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          5,
+          7,
+          35
+        ]
+      },
+      "input": {
+        "n": 35
+      },
+      "observed": {
+        "value": [
+          1,
+          5,
+          7,
+          35
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0035",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          9,
+          12,
+          18,
+          36
+        ]
+      },
+      "input": {
+        "n": 36
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          9,
+          12,
+          18,
+          36
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0036",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          37
+        ]
+      },
+      "input": {
+        "n": 37
+      },
+      "observed": {
+        "value": [
+          1,
+          37
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0037",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          19,
+          38
+        ]
+      },
+      "input": {
+        "n": 38
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          19,
+          38
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0038",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          3,
+          13,
+          39
+        ]
+      },
+      "input": {
+        "n": 39
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          13,
+          39
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0039",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          5,
+          8,
+          10,
+          20,
+          40
+        ]
+      },
+      "input": {
+        "n": 40
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          5,
+          8,
+          10,
+          20,
+          40
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0040",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          41
+        ]
+      },
+      "input": {
+        "n": 41
+      },
+      "observed": {
+        "value": [
+          1,
+          41
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0041",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          6,
+          7,
+          14,
+          21,
+          42
+        ]
+      },
+      "input": {
+        "n": 42
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          6,
+          7,
+          14,
+          21,
+          42
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0042",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          43
+        ]
+      },
+      "input": {
+        "n": 43
+      },
+      "observed": {
+        "value": [
+          1,
+          43
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0043",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          11,
+          22,
+          44
+        ]
+      },
+      "input": {
+        "n": 44
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          11,
+          22,
+          44
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0044",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          3,
+          5,
+          9,
+          15,
+          45
+        ]
+      },
+      "input": {
+        "n": 45
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          5,
+          9,
+          15,
+          45
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0045",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          23,
+          46
+        ]
+      },
+      "input": {
+        "n": 46
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          23,
+          46
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0046",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          47
+        ]
+      },
+      "input": {
+        "n": 47
+      },
+      "observed": {
+        "value": [
+          1,
+          47
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0047",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8,
+          12,
+          16,
+          24,
+          48
+        ]
+      },
+      "input": {
+        "n": 48
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8,
+          12,
+          16,
+          24,
+          48
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0048",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          7,
+          49
+        ]
+      },
+      "input": {
+        "n": 49
+      },
+      "observed": {
+        "value": [
+          1,
+          7,
+          49
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0049",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          5,
+          10,
+          25,
+          50
+        ]
+      },
+      "input": {
+        "n": 50
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          5,
+          10,
+          25,
+          50
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0050",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          3,
+          17,
+          51
+        ]
+      },
+      "input": {
+        "n": 51
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          17,
+          51
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0051",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          13,
+          26,
+          52
+        ]
+      },
+      "input": {
+        "n": 52
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          13,
+          26,
+          52
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0052",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          53
+        ]
+      },
+      "input": {
+        "n": 53
+      },
+      "observed": {
+        "value": [
+          1,
+          53
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0053",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          6,
+          9,
+          18,
+          27,
+          54
+        ]
+      },
+      "input": {
+        "n": 54
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          6,
+          9,
+          18,
+          27,
+          54
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0054",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          5,
+          11,
+          55
+        ]
+      },
+      "input": {
+        "n": 55
+      },
+      "observed": {
+        "value": [
+          1,
+          5,
+          11,
+          55
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0055",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          7,
+          8,
+          14,
+          28,
+          56
+        ]
+      },
+      "input": {
+        "n": 56
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          7,
+          8,
+          14,
+          28,
+          56
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0056",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          3,
+          19,
+          57
+        ]
+      },
+      "input": {
+        "n": 57
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          19,
+          57
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0057",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          29,
+          58
+        ]
+      },
+      "input": {
+        "n": 58
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          29,
+          58
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0058",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          59
+        ]
+      },
+      "input": {
+        "n": 59
+      },
+      "observed": {
+        "value": [
+          1,
+          59
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0059",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          10,
+          12,
+          15,
+          20,
+          30,
+          60
+        ]
+      },
+      "input": {
+        "n": 60
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          10,
+          12,
+          15,
+          20,
+          30,
+          60
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0060",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          61
+        ]
+      },
+      "input": {
+        "n": 61
+      },
+      "observed": {
+        "value": [
+          1,
+          61
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0061",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          31,
+          62
+        ]
+      },
+      "input": {
+        "n": 62
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          31,
+          62
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0062",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          3,
+          7,
+          9,
+          21,
+          63
+        ]
+      },
+      "input": {
+        "n": 63
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          7,
+          9,
+          21,
+          63
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0063",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "input": {
+        "n": 64
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0064",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          5,
+          13,
+          65
+        ]
+      },
+      "input": {
+        "n": 65
+      },
+      "observed": {
+        "value": [
+          1,
+          5,
+          13,
+          65
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0065",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          6,
+          11,
+          22,
+          33,
+          66
+        ]
+      },
+      "input": {
+        "n": 66
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          6,
+          11,
+          22,
+          33,
+          66
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0066",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          67
+        ]
+      },
+      "input": {
+        "n": 67
+      },
+      "observed": {
+        "value": [
+          1,
+          67
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0067",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          17,
+          34,
+          68
+        ]
+      },
+      "input": {
+        "n": 68
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          17,
+          34,
+          68
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0068",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          3,
+          23,
+          69
+        ]
+      },
+      "input": {
+        "n": 69
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          23,
+          69
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0069",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          5,
+          7,
+          10,
+          14,
+          35,
+          70
+        ]
+      },
+      "input": {
+        "n": 70
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          5,
+          7,
+          10,
+          14,
+          35,
+          70
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0070",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          71
+        ]
+      },
+      "input": {
+        "n": 71
+      },
+      "observed": {
+        "value": [
+          1,
+          71
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0071",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8,
+          9,
+          12,
+          18,
+          24,
+          36,
+          72
+        ]
+      },
+      "input": {
+        "n": 72
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8,
+          9,
+          12,
+          18,
+          24,
+          36,
+          72
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0072",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          73
+        ]
+      },
+      "input": {
+        "n": 73
+      },
+      "observed": {
+        "value": [
+          1,
+          73
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0073",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          37,
+          74
+        ]
+      },
+      "input": {
+        "n": 74
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          37,
+          74
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0074",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          3,
+          5,
+          15,
+          25,
+          75
+        ]
+      },
+      "input": {
+        "n": 75
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          5,
+          15,
+          25,
+          75
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0075",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          19,
+          38,
+          76
+        ]
+      },
+      "input": {
+        "n": 76
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          19,
+          38,
+          76
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0076",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          7,
+          11,
+          77
+        ]
+      },
+      "input": {
+        "n": 77
+      },
+      "observed": {
+        "value": [
+          1,
+          7,
+          11,
+          77
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0077",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          6,
+          13,
+          26,
+          39,
+          78
+        ]
+      },
+      "input": {
+        "n": 78
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          6,
+          13,
+          26,
+          39,
+          78
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0078",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          79
+        ]
+      },
+      "input": {
+        "n": 79
+      },
+      "observed": {
+        "value": [
+          1,
+          79
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0079",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          5,
+          8,
+          10,
+          16,
+          20,
+          40,
+          80
+        ]
+      },
+      "input": {
+        "n": 80
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          5,
+          8,
+          10,
+          16,
+          20,
+          40,
+          80
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0080",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          3,
+          9,
+          27,
+          81
+        ]
+      },
+      "input": {
+        "n": 81
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          9,
+          27,
+          81
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0081",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          41,
+          82
+        ]
+      },
+      "input": {
+        "n": 82
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          41,
+          82
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0082",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          83
+        ]
+      },
+      "input": {
+        "n": 83
+      },
+      "observed": {
+        "value": [
+          1,
+          83
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0083",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          12,
+          14,
+          21,
+          28,
+          42,
+          84
+        ]
+      },
+      "input": {
+        "n": 84
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          12,
+          14,
+          21,
+          28,
+          42,
+          84
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0084",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          5,
+          17,
+          85
+        ]
+      },
+      "input": {
+        "n": 85
+      },
+      "observed": {
+        "value": [
+          1,
+          5,
+          17,
+          85
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0085",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          43,
+          86
+        ]
+      },
+      "input": {
+        "n": 86
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          43,
+          86
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0086",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          3,
+          29,
+          87
+        ]
+      },
+      "input": {
+        "n": 87
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          29,
+          87
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0087",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          11,
+          22,
+          44,
+          88
+        ]
+      },
+      "input": {
+        "n": 88
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          11,
+          22,
+          44,
+          88
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0088",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          89
+        ]
+      },
+      "input": {
+        "n": 89
+      },
+      "observed": {
+        "value": [
+          1,
+          89
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0089",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          9,
+          10,
+          15,
+          18,
+          30,
+          45,
+          90
+        ]
+      },
+      "input": {
+        "n": 90
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          9,
+          10,
+          15,
+          18,
+          30,
+          45,
+          90
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0090",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          7,
+          13,
+          91
+        ]
+      },
+      "input": {
+        "n": 91
+      },
+      "observed": {
+        "value": [
+          1,
+          7,
+          13,
+          91
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0091",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          23,
+          46,
+          92
+        ]
+      },
+      "input": {
+        "n": 92
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          23,
+          46,
+          92
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0092",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          3,
+          31,
+          93
+        ]
+      },
+      "input": {
+        "n": 93
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          31,
+          93
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0093",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          47,
+          94
+        ]
+      },
+      "input": {
+        "n": 94
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          47,
+          94
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0094",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          5,
+          19,
+          95
+        ]
+      },
+      "input": {
+        "n": 95
+      },
+      "observed": {
+        "value": [
+          1,
+          5,
+          19,
+          95
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0095",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8,
+          12,
+          16,
+          24,
+          32,
+          48,
+          96
+        ]
+      },
+      "input": {
+        "n": 96
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8,
+          12,
+          16,
+          24,
+          32,
+          48,
+          96
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0096",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          97
+        ]
+      },
+      "input": {
+        "n": 97
+      },
+      "observed": {
+        "value": [
+          1,
+          97
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0097",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          7,
+          14,
+          49,
+          98
+        ]
+      },
+      "input": {
+        "n": 98
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          7,
+          14,
+          49,
+          98
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0098",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          3,
+          9,
+          11,
+          33,
+          99
+        ]
+      },
+      "input": {
+        "n": 99
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          9,
+          11,
+          33,
+          99
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0099",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          5,
+          10,
+          20,
+          25,
+          50,
+          100
+        ]
+      },
+      "input": {
+        "n": 100
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          5,
+          10,
+          20,
+          25,
+          50,
+          100
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0100",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          11,
+          121
+        ]
+      },
+      "input": {
+        "n": 121
+      },
+      "observed": {
+        "value": [
+          1,
+          11,
+          121
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0101",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          13,
+          169
+        ]
+      },
+      "input": {
+        "n": 169
+      },
+      "observed": {
+        "value": [
+          1,
+          13,
+          169
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0102",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          13,
+          17,
+          221
+        ]
+      },
+      "input": {
+        "n": 221
+      },
+      "observed": {
+        "value": [
+          1,
+          13,
+          17,
+          221
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0103",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          11,
+          31,
+          341
+        ]
+      },
+      "input": {
+        "n": 341
+      },
+      "observed": {
+        "value": [
+          1,
+          11,
+          31,
+          341
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0104",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          11,
+          17,
+          33,
+          51,
+          187,
+          561
+        ]
+      },
+      "input": {
+        "n": 561
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          11,
+          17,
+          33,
+          51,
+          187,
+          561
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0105",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          13,
+          17,
+          65,
+          85,
+          221,
+          1105
+        ]
+      },
+      "input": {
+        "n": 1105
+      },
+      "observed": {
+        "value": [
+          1,
+          5,
+          13,
+          17,
+          65,
+          85,
+          221,
+          1105
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0106",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          7,
+          13,
+          19,
+          91,
+          133,
+          247,
+          1729
+        ]
+      },
+      "input": {
+        "n": 1729
+      },
+      "observed": {
+        "value": [
+          1,
+          7,
+          13,
+          19,
+          91,
+          133,
+          247,
+          1729
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0107",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          23,
+          89,
+          2047
+        ]
+      },
+      "input": {
+        "n": 2047
+      },
+      "observed": {
+        "value": [
+          1,
+          23,
+          89,
+          2047
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0108",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048,
+          4096
+        ]
+      },
+      "input": {
+        "n": 4096
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048,
+          4096
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0109",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          4999
+        ]
+      },
+      "input": {
+        "n": 4999
+      },
+      "observed": {
+        "value": [
+          1,
+          4999
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0110",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          5,
+          8,
+          10,
+          20,
+          25,
+          40,
+          50,
+          100,
+          125,
+          200,
+          250,
+          500,
+          625,
+          1000,
+          1250,
+          2500,
+          5000
+        ]
+      },
+      "input": {
+        "n": 5000
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          5,
+          8,
+          10,
+          20,
+          25,
+          40,
+          50,
+          100,
+          125,
+          200,
+          250,
+          500,
+          625,
+          1000,
+          1250,
+          2500,
+          5000
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0111",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          12,
+          373,
+          746,
+          1119,
+          1492,
+          2238,
+          4476
+        ]
+      },
+      "input": {
+        "n": 4476
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          12,
+          373,
+          746,
+          1119,
+          1492,
+          2238,
+          4476
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0112",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          857,
+          4285
+        ]
+      },
+      "input": {
+        "n": 4285
+      },
+      "observed": {
+        "value": [
+          1,
+          5,
+          857,
+          4285
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0113",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          41,
+          109,
+          4469
+        ]
+      },
+      "input": {
+        "n": 4469
+      },
+      "observed": {
+        "value": [
+          1,
+          41,
+          109,
+          4469
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0114",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          9,
+          27,
+          103,
+          309,
+          927,
+          2781
+        ]
+      },
+      "input": {
+        "n": 2781
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          9,
+          27,
+          103,
+          309,
+          927,
+          2781
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0115",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          10,
+          15,
+          19,
+          30,
+          38,
+          57,
+          95,
+          114,
+          190,
+          285,
+          570
+        ]
+      },
+      "input": {
+        "n": 570
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          10,
+          15,
+          19,
+          30,
+          38,
+          57,
+          95,
+          114,
+          190,
+          285,
+          570
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0116",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          10,
+          15,
+          25,
+          30,
+          50,
+          75,
+          125,
+          150,
+          250,
+          375,
+          750
+        ]
+      },
+      "input": {
+        "n": 750
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          10,
+          15,
+          25,
+          30,
+          50,
+          75,
+          125,
+          150,
+          250,
+          375,
+          750
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0117",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          11,
+          22,
+          37,
+          44,
+          74,
+          148,
+          407,
+          814,
+          1628
+        ]
+      },
+      "input": {
+        "n": 1628
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          11,
+          22,
+          37,
+          44,
+          74,
+          148,
+          407,
+          814,
+          1628
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0118",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          17,
+          34,
+          73,
+          146,
+          1241,
+          2482
+        ]
+      },
+      "input": {
+        "n": 2482
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          17,
+          34,
+          73,
+          146,
+          1241,
+          2482
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0119",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          641,
+          1282,
+          2564
+        ]
+      },
+      "input": {
+        "n": 2564
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          641,
+          1282,
+          2564
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0120",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1697
+        ]
+      },
+      "input": {
+        "n": 1697
+      },
+      "observed": {
+        "value": [
+          1,
+          1697
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0121",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          13,
+          65,
+          169,
+          845
+        ]
+      },
+      "input": {
+        "n": 845
+      },
+      "observed": {
+        "value": [
+          1,
+          5,
+          13,
+          65,
+          169,
+          845
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0122",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          17,
+          34,
+          139,
+          278,
+          2363,
+          4726
+        ]
+      },
+      "input": {
+        "n": 4726
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          17,
+          34,
+          139,
+          278,
+          2363,
+          4726
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0123",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          9,
+          12,
+          18,
+          27,
+          36,
+          54,
+          81,
+          108,
+          162,
+          243,
+          324,
+          486,
+          972
+        ]
+      },
+      "input": {
+        "n": 972
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          9,
+          12,
+          18,
+          27,
+          36,
+          54,
+          81,
+          108,
+          162,
+          243,
+          324,
+          486,
+          972
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0124",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          439,
+          2195
+        ]
+      },
+      "input": {
+        "n": 2195
+      },
+      "observed": {
+        "value": [
+          1,
+          5,
+          439,
+          2195
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0125",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          13,
+          233,
+          3029
+        ]
+      },
+      "input": {
+        "n": 3029
+      },
+      "observed": {
+        "value": [
+          1,
+          13,
+          233,
+          3029
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0126",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          5,
+          15,
+          307,
+          921,
+          1535,
+          4605
+        ]
+      },
+      "input": {
+        "n": 4605
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          5,
+          15,
+          307,
+          921,
+          1535,
+          4605
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0127",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1487
+        ]
+      },
+      "input": {
+        "n": 1487
+      },
+      "observed": {
+        "value": [
+          1,
+          1487
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0128",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          9,
+          439,
+          1317,
+          3951
+        ]
+      },
+      "input": {
+        "n": 3951
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          9,
+          439,
+          1317,
+          3951
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0129",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          13,
+          37,
+          39,
+          111,
+          481,
+          1443
+        ]
+      },
+      "input": {
+        "n": 1443
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          13,
+          37,
+          39,
+          111,
+          481,
+          1443
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0130",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          23,
+          46,
+          53,
+          106,
+          1219,
+          2438
+        ]
+      },
+      "input": {
+        "n": 2438
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          23,
+          46,
+          53,
+          106,
+          1219,
+          2438
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0131",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          19,
+          251,
+          4769
+        ]
+      },
+      "input": {
+        "n": 4769
+      },
+      "observed": {
+        "value": [
+          1,
+          19,
+          251,
+          4769
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0132",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          5,
+          10,
+          20,
+          197,
+          394,
+          788,
+          985,
+          1970,
+          3940
+        ]
+      },
+      "input": {
+        "n": 3940
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          5,
+          10,
+          20,
+          197,
+          394,
+          788,
+          985,
+          1970,
+          3940
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0133",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2083
+        ]
+      },
+      "input": {
+        "n": 2083
+      },
+      "observed": {
+        "value": [
+          1,
+          2083
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0134",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          11,
+          22,
+          44,
+          121,
+          242,
+          484
+        ]
+      },
+      "input": {
+        "n": 484
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          11,
+          22,
+          44,
+          121,
+          242,
+          484
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0135",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          7,
+          8,
+          14,
+          16,
+          28,
+          32,
+          49,
+          56,
+          64,
+          98,
+          112,
+          196,
+          224,
+          392,
+          448,
+          784,
+          1568,
+          3136
+        ]
+      },
+      "input": {
+        "n": 3136
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          7,
+          8,
+          14,
+          16,
+          28,
+          32,
+          49,
+          56,
+          64,
+          98,
+          112,
+          196,
+          224,
+          392,
+          448,
+          784,
+          1568,
+          3136
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0136",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          6,
+          13,
+          26,
+          37,
+          39,
+          74,
+          78,
+          111,
+          222,
+          481,
+          962,
+          1443,
+          2886
+        ]
+      },
+      "input": {
+        "n": 2886
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          6,
+          13,
+          26,
+          37,
+          39,
+          74,
+          78,
+          111,
+          222,
+          481,
+          962,
+          1443,
+          2886
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0137",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          7,
+          109,
+          763
+        ]
+      },
+      "input": {
+        "n": 763
+      },
+      "observed": {
+        "value": [
+          1,
+          7,
+          109,
+          763
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0138",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          7,
+          17,
+          21,
+          49,
+          51,
+          119,
+          147,
+          357,
+          833,
+          2499
+        ]
+      },
+      "input": {
+        "n": 2499
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          7,
+          17,
+          21,
+          49,
+          51,
+          119,
+          147,
+          357,
+          833,
+          2499
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0139",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          7,
+          139,
+          973
+        ]
+      },
+      "input": {
+        "n": 973
+      },
+      "observed": {
+        "value": [
+          1,
+          7,
+          139,
+          973
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0140",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          1907,
+          3814
+        ]
+      },
+      "input": {
+        "n": 3814
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          1907,
+          3814
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0141",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          263,
+          526,
+          1052,
+          2104,
+          4208
+        ]
+      },
+      "input": {
+        "n": 4208
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          263,
+          526,
+          1052,
+          2104,
+          4208
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0142",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          811,
+          2433
+        ]
+      },
+      "input": {
+        "n": 2433
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          811,
+          2433
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0143",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          5,
+          8,
+          10,
+          20,
+          40,
+          41,
+          82,
+          164,
+          205,
+          328,
+          410,
+          820,
+          1640
+        ]
+      },
+      "input": {
+        "n": 1640
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          5,
+          8,
+          10,
+          20,
+          40,
+          41,
+          82,
+          164,
+          205,
+          328,
+          410,
+          820,
+          1640
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0144",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          7,
+          8,
+          13,
+          14,
+          16,
+          26,
+          28,
+          52,
+          56,
+          91,
+          104,
+          112,
+          182,
+          208,
+          364,
+          728,
+          1456
+        ]
+      },
+      "input": {
+        "n": 1456
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          7,
+          8,
+          13,
+          14,
+          16,
+          26,
+          28,
+          52,
+          56,
+          91,
+          104,
+          112,
+          182,
+          208,
+          364,
+          728,
+          1456
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0145",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          1009,
+          2018
+        ]
+      },
+      "input": {
+        "n": 2018
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          1009,
+          2018
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0146",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          13,
+          23,
+          26,
+          46,
+          299,
+          598
+        ]
+      },
+      "input": {
+        "n": 598
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          13,
+          23,
+          26,
+          46,
+          299,
+          598
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0147",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          181,
+          362,
+          724,
+          1448,
+          2896
+        ]
+      },
+      "input": {
+        "n": 2896
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          181,
+          362,
+          724,
+          1448,
+          2896
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0148",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          523
+        ]
+      },
+      "input": {
+        "n": 523
+      },
+      "observed": {
+        "value": [
+          1,
+          523
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0149",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9,
+          10,
+          12,
+          15,
+          18,
+          20,
+          24,
+          25,
+          30,
+          36,
+          40,
+          45,
+          50,
+          60,
+          72,
+          75,
+          90,
+          100,
+          120,
+          150,
+          180,
+          200,
+          225,
+          300,
+          360,
+          450,
+          600,
+          900,
+          1800
+        ]
+      },
+      "input": {
+        "n": 1800
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9,
+          10,
+          12,
+          15,
+          18,
+          20,
+          24,
+          25,
+          30,
+          36,
+          40,
+          45,
+          50,
+          60,
+          72,
+          75,
+          90,
+          100,
+          120,
+          150,
+          180,
+          200,
+          225,
+          300,
+          360,
+          450,
+          600,
+          900,
+          1800
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0150",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8,
+          12,
+          24,
+          127,
+          254,
+          381,
+          508,
+          762,
+          1016,
+          1524,
+          3048
+        ]
+      },
+      "input": {
+        "n": 3048
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8,
+          12,
+          24,
+          127,
+          254,
+          381,
+          508,
+          762,
+          1016,
+          1524,
+          3048
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0151",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          5,
+          10,
+          20,
+          25,
+          31,
+          50,
+          62,
+          100,
+          124,
+          155,
+          310,
+          620,
+          775,
+          1550,
+          3100
+        ]
+      },
+      "input": {
+        "n": 3100
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          5,
+          10,
+          20,
+          25,
+          31,
+          50,
+          62,
+          100,
+          124,
+          155,
+          310,
+          620,
+          775,
+          1550,
+          3100
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0152",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          23,
+          31,
+          115,
+          155,
+          713,
+          3565
+        ]
+      },
+      "input": {
+        "n": 3565
+      },
+      "observed": {
+        "value": [
+          1,
+          5,
+          23,
+          31,
+          115,
+          155,
+          713,
+          3565
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0153",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          7,
+          21,
+          73,
+          219,
+          511,
+          1533
+        ]
+      },
+      "input": {
+        "n": 1533
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          7,
+          21,
+          73,
+          219,
+          511,
+          1533
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0154",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          6,
+          7,
+          14,
+          21,
+          42,
+          89,
+          178,
+          267,
+          534,
+          623,
+          1246,
+          1869,
+          3738
+        ]
+      },
+      "input": {
+        "n": 3738
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          6,
+          7,
+          14,
+          21,
+          42,
+          89,
+          178,
+          267,
+          534,
+          623,
+          1246,
+          1869,
+          3738
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0155",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          5,
+          13,
+          15,
+          17,
+          39,
+          51,
+          65,
+          85,
+          195,
+          221,
+          255,
+          663,
+          1105,
+          3315
+        ]
+      },
+      "input": {
+        "n": 3315
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          5,
+          13,
+          15,
+          17,
+          39,
+          51,
+          65,
+          85,
+          195,
+          221,
+          255,
+          663,
+          1105,
+          3315
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0156",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          41,
+          47,
+          82,
+          94,
+          1927,
+          3854
+        ]
+      },
+      "input": {
+        "n": 3854
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          41,
+          47,
+          82,
+          94,
+          1927,
+          3854
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0157",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          211,
+          422,
+          844,
+          1688
+        ]
+      },
+      "input": {
+        "n": 1688
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          211,
+          422,
+          844,
+          1688
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0158",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          19,
+          38,
+          76,
+          152
+        ]
+      },
+      "input": {
+        "n": 152
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          19,
+          38,
+          76,
+          152
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0159",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          9,
+          19,
+          23,
+          57,
+          69,
+          171,
+          207,
+          437,
+          1311,
+          3933
+        ]
+      },
+      "input": {
+        "n": 3933
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          9,
+          19,
+          23,
+          57,
+          69,
+          171,
+          207,
+          437,
+          1311,
+          3933
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0160",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          11,
+          13,
+          22,
+          26,
+          143,
+          169,
+          286,
+          338,
+          1859,
+          3718
+        ]
+      },
+      "input": {
+        "n": 3718
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          11,
+          13,
+          22,
+          26,
+          143,
+          169,
+          286,
+          338,
+          1859,
+          3718
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0161",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          9,
+          10,
+          15,
+          18,
+          27,
+          30,
+          45,
+          54,
+          81,
+          90,
+          135,
+          162,
+          243,
+          270,
+          405,
+          486,
+          810,
+          1215,
+          2430
+        ]
+      },
+      "input": {
+        "n": 2430
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          9,
+          10,
+          15,
+          18,
+          27,
+          30,
+          45,
+          54,
+          81,
+          90,
+          135,
+          162,
+          243,
+          270,
+          405,
+          486,
+          810,
+          1215,
+          2430
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0162",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          37,
+          41,
+          111,
+          123,
+          1517,
+          4551
+        ]
+      },
+      "input": {
+        "n": 4551
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          37,
+          41,
+          111,
+          123,
+          1517,
+          4551
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0163",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          9,
+          53,
+          159,
+          477
+        ]
+      },
+      "input": {
+        "n": 477
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          9,
+          53,
+          159,
+          477
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0164",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          11,
+          25,
+          55,
+          125,
+          275,
+          1375
+        ]
+      },
+      "input": {
+        "n": 1375
+      },
+      "observed": {
+        "value": [
+          1,
+          5,
+          11,
+          25,
+          55,
+          125,
+          275,
+          1375
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0165",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          17,
+          41,
+          697
+        ]
+      },
+      "input": {
+        "n": 697
+      },
+      "observed": {
+        "value": [
+          1,
+          17,
+          41,
+          697
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0166",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          13,
+          23,
+          299
+        ]
+      },
+      "input": {
+        "n": 299
+      },
+      "observed": {
+        "value": [
+          1,
+          13,
+          23,
+          299
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0167",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3557
+        ]
+      },
+      "input": {
+        "n": 3557
+      },
+      "observed": {
+        "value": [
+          1,
+          3557
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0168",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          17,
+          37,
+          629
+        ]
+      },
+      "input": {
+        "n": 629
+      },
+      "observed": {
+        "value": [
+          1,
+          17,
+          37,
+          629
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0169",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1069
+        ]
+      },
+      "input": {
+        "n": 1069
+      },
+      "observed": {
+        "value": [
+          1,
+          1069
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0170",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          6,
+          9,
+          18,
+          89,
+          178,
+          267,
+          534,
+          801,
+          1602
+        ]
+      },
+      "input": {
+        "n": 1602
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          6,
+          9,
+          18,
+          89,
+          178,
+          267,
+          534,
+          801,
+          1602
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0171",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2111
+        ]
+      },
+      "input": {
+        "n": 2111
+      },
+      "observed": {
+        "value": [
+          1,
+          2111
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0172",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          947,
+          4735
+        ]
+      },
+      "input": {
+        "n": 4735
+      },
+      "observed": {
+        "value": [
+          1,
+          5,
+          947,
+          4735
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0173",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          13,
+          15,
+          21,
+          35,
+          39,
+          45,
+          63,
+          65,
+          91,
+          105,
+          117,
+          195,
+          273,
+          315,
+          455,
+          585,
+          819,
+          1365,
+          4095
+        ]
+      },
+      "input": {
+        "n": 4095
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          13,
+          15,
+          21,
+          35,
+          39,
+          45,
+          63,
+          65,
+          91,
+          105,
+          117,
+          195,
+          273,
+          315,
+          455,
+          585,
+          819,
+          1365,
+          4095
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0174",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          587,
+          2935
+        ]
+      },
+      "input": {
+        "n": 2935
+      },
+      "observed": {
+        "value": [
+          1,
+          5,
+          587,
+          2935
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0175",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          29,
+          151,
+          4379
+        ]
+      },
+      "input": {
+        "n": 4379
+      },
+      "observed": {
+        "value": [
+          1,
+          29,
+          151,
+          4379
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0176",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          19,
+          38,
+          83,
+          166,
+          1577,
+          3154
+        ]
+      },
+      "input": {
+        "n": 3154
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          19,
+          38,
+          83,
+          166,
+          1577,
+          3154
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0177",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          7,
+          49,
+          343,
+          2401
+        ]
+      },
+      "input": {
+        "n": 2401
+      },
+      "observed": {
+        "value": [
+          1,
+          7,
+          49,
+          343,
+          2401
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0178",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          641
+        ]
+      },
+      "input": {
+        "n": 641
+      },
+      "observed": {
+        "value": [
+          1,
+          641
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0179",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          5,
+          10,
+          20,
+          25,
+          41,
+          50,
+          82,
+          100,
+          164,
+          205,
+          410,
+          820,
+          1025,
+          2050,
+          4100
+        ]
+      },
+      "input": {
+        "n": 4100
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          5,
+          10,
+          20,
+          25,
+          41,
+          50,
+          82,
+          100,
+          164,
+          205,
+          410,
+          820,
+          1025,
+          2050,
+          4100
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0180",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          29,
+          41,
+          1189
+        ]
+      },
+      "input": {
+        "n": 1189
+      },
+      "observed": {
+        "value": [
+          1,
+          29,
+          41,
+          1189
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0181",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          1259,
+          2518
+        ]
+      },
+      "input": {
+        "n": 2518
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          1259,
+          2518
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0182",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          7,
+          19,
+          31,
+          133,
+          217,
+          589,
+          4123
+        ]
+      },
+      "input": {
+        "n": 4123
+      },
+      "observed": {
+        "value": [
+          1,
+          7,
+          19,
+          31,
+          133,
+          217,
+          589,
+          4123
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0183",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          41,
+          59,
+          2419
+        ]
+      },
+      "input": {
+        "n": 2419
+      },
+      "observed": {
+        "value": [
+          1,
+          41,
+          59,
+          2419
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0184",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          37,
+          59,
+          74,
+          118,
+          2183,
+          4366
+        ]
+      },
+      "input": {
+        "n": 4366
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          37,
+          59,
+          74,
+          118,
+          2183,
+          4366
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0185",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          6,
+          379,
+          758,
+          1137,
+          2274
+        ]
+      },
+      "input": {
+        "n": 2274
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          6,
+          379,
+          758,
+          1137,
+          2274
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0186",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          5,
+          8,
+          10,
+          16,
+          20,
+          32,
+          40,
+          80,
+          160
+        ]
+      },
+      "input": {
+        "n": 160
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          5,
+          8,
+          10,
+          16,
+          20,
+          32,
+          40,
+          80,
+          160
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0187",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          5,
+          15,
+          251,
+          753,
+          1255,
+          3765
+        ]
+      },
+      "input": {
+        "n": 3765
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          5,
+          15,
+          251,
+          753,
+          1255,
+          3765
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0188",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          5,
+          8,
+          10,
+          11,
+          16,
+          20,
+          22,
+          25,
+          40,
+          44,
+          50,
+          55,
+          80,
+          88,
+          100,
+          110,
+          176,
+          200,
+          220,
+          275,
+          400,
+          440,
+          550,
+          880,
+          1100,
+          2200,
+          4400
+        ]
+      },
+      "input": {
+        "n": 4400
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          5,
+          8,
+          10,
+          11,
+          16,
+          20,
+          22,
+          25,
+          40,
+          44,
+          50,
+          55,
+          80,
+          88,
+          100,
+          110,
+          176,
+          200,
+          220,
+          275,
+          400,
+          440,
+          550,
+          880,
+          1100,
+          2200,
+          4400
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0189",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          43,
+          79,
+          3397
+        ]
+      },
+      "input": {
+        "n": 3397
+      },
+      "observed": {
+        "value": [
+          1,
+          43,
+          79,
+          3397
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0190",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          41,
+          43,
+          1763
+        ]
+      },
+      "input": {
+        "n": 1763
+      },
+      "observed": {
+        "value": [
+          1,
+          41,
+          43,
+          1763
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0191",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          11,
+          419,
+          4609
+        ]
+      },
+      "input": {
+        "n": 4609
+      },
+      "observed": {
+        "value": [
+          1,
+          11,
+          419,
+          4609
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0192",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          1583,
+          3166
+        ]
+      },
+      "input": {
+        "n": 3166
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          1583,
+          3166
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0193",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          19,
+          57,
+          79,
+          237,
+          1501,
+          4503
+        ]
+      },
+      "input": {
+        "n": 4503
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          19,
+          57,
+          79,
+          237,
+          1501,
+          4503
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0194",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          37,
+          43,
+          111,
+          129,
+          1591,
+          4773
+        ]
+      },
+      "input": {
+        "n": 4773
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          37,
+          43,
+          111,
+          129,
+          1591,
+          4773
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0195",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2963
+        ]
+      },
+      "input": {
+        "n": 2963
+      },
+      "observed": {
+        "value": [
+          1,
+          2963
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0196",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8,
+          9,
+          12,
+          18,
+          24,
+          36,
+          67,
+          72,
+          134,
+          201,
+          268,
+          402,
+          536,
+          603,
+          804,
+          1206,
+          1608,
+          2412,
+          4824
+        ]
+      },
+      "input": {
+        "n": 4824
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8,
+          9,
+          12,
+          18,
+          24,
+          36,
+          67,
+          72,
+          134,
+          201,
+          268,
+          402,
+          536,
+          603,
+          804,
+          1206,
+          1608,
+          2412,
+          4824
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0197",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          149,
+          745
+        ]
+      },
+      "input": {
+        "n": 745
+      },
+      "observed": {
+        "value": [
+          1,
+          5,
+          149,
+          745
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0198",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          421,
+          842,
+          1684,
+          3368
+        ]
+      },
+      "input": {
+        "n": 3368
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          421,
+          842,
+          1684,
+          3368
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0199",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          13,
+          26,
+          52,
+          53,
+          106,
+          212,
+          689,
+          1378,
+          2756
+        ]
+      },
+      "input": {
+        "n": 2756
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          13,
+          26,
+          52,
+          53,
+          106,
+          212,
+          689,
+          1378,
+          2756
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0200",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          17,
+          113,
+          1921
+        ]
+      },
+      "input": {
+        "n": 1921
+      },
+      "observed": {
+        "value": [
+          1,
+          17,
+          113,
+          1921
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0201",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          23,
+          46,
+          83,
+          166,
+          1909,
+          3818
+        ]
+      },
+      "input": {
+        "n": 3818
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          23,
+          46,
+          83,
+          166,
+          1909,
+          3818
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0202",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          7,
+          9,
+          11,
+          21,
+          33,
+          63,
+          77,
+          99,
+          231,
+          693
+        ]
+      },
+      "input": {
+        "n": 693
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          7,
+          9,
+          11,
+          21,
+          33,
+          63,
+          77,
+          99,
+          231,
+          693
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0203",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          29,
+          53,
+          1537
+        ]
+      },
+      "input": {
+        "n": 1537
+      },
+      "observed": {
+        "value": [
+          1,
+          29,
+          53,
+          1537
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0204",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          5,
+          15,
+          197,
+          591,
+          985,
+          2955
+        ]
+      },
+      "input": {
+        "n": 2955
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          5,
+          15,
+          197,
+          591,
+          985,
+          2955
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0205",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          541,
+          2705
+        ]
+      },
+      "input": {
+        "n": 2705
+      },
+      "observed": {
+        "value": [
+          1,
+          5,
+          541,
+          2705
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0206",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          593,
+          1779
+        ]
+      },
+      "input": {
+        "n": 1779
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          593,
+          1779
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0207",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          7,
+          541,
+          3787
+        ]
+      },
+      "input": {
+        "n": 3787
+      },
+      "observed": {
+        "value": [
+          1,
+          7,
+          541,
+          3787
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0208",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          7,
+          14,
+          167,
+          334,
+          1169,
+          2338
+        ]
+      },
+      "input": {
+        "n": 2338
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          7,
+          14,
+          167,
+          334,
+          1169,
+          2338
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0209",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1201
+        ]
+      },
+      "input": {
+        "n": 1201
+      },
+      "observed": {
+        "value": [
+          1,
+          1201
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0210",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          131,
+          262,
+          524,
+          1048,
+          2096
+        ]
+      },
+      "input": {
+        "n": 2096
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          131,
+          262,
+          524,
+          1048,
+          2096
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0211",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          6,
+          9,
+          18,
+          27,
+          31,
+          54,
+          62,
+          93,
+          186,
+          279,
+          558,
+          837,
+          1674
+        ]
+      },
+      "input": {
+        "n": 1674
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          6,
+          9,
+          18,
+          27,
+          31,
+          54,
+          62,
+          93,
+          186,
+          279,
+          558,
+          837,
+          1674
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0212",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          991,
+          1982,
+          3964
+        ]
+      },
+      "input": {
+        "n": 3964
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          991,
+          1982,
+          3964
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0213",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          7,
+          14,
+          83,
+          166,
+          581,
+          1162
+        ]
+      },
+      "input": {
+        "n": 1162
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          7,
+          14,
+          83,
+          166,
+          581,
+          1162
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0214",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          6,
+          17,
+          19,
+          34,
+          38,
+          51,
+          57,
+          102,
+          114,
+          323,
+          646,
+          969,
+          1938
+        ]
+      },
+      "input": {
+        "n": 1938
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          6,
+          17,
+          19,
+          34,
+          38,
+          51,
+          57,
+          102,
+          114,
+          323,
+          646,
+          969,
+          1938
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0215",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          109,
+          218,
+          436,
+          872
+        ]
+      },
+      "input": {
+        "n": 872
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          109,
+          218,
+          436,
+          872
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0216",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          59,
+          67,
+          3953
+        ]
+      },
+      "input": {
+        "n": 3953
+      },
+      "observed": {
+        "value": [
+          1,
+          59,
+          67,
+          3953
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0217",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          67,
+          73,
+          4891
+        ]
+      },
+      "input": {
+        "n": 4891
+      },
+      "observed": {
+        "value": [
+          1,
+          67,
+          73,
+          4891
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0218",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          12,
+          14,
+          21,
+          28,
+          37,
+          42,
+          74,
+          84,
+          111,
+          148,
+          222,
+          259,
+          444,
+          518,
+          777,
+          1036,
+          1554,
+          3108
+        ]
+      },
+      "input": {
+        "n": 3108
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          12,
+          14,
+          21,
+          28,
+          37,
+          42,
+          74,
+          84,
+          111,
+          148,
+          222,
+          259,
+          444,
+          518,
+          777,
+          1036,
+          1554,
+          3108
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0219",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          5,
+          10,
+          13,
+          26,
+          65,
+          130,
+          169,
+          338,
+          845,
+          1690
+        ]
+      },
+      "input": {
+        "n": 1690
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          5,
+          10,
+          13,
+          26,
+          65,
+          130,
+          169,
+          338,
+          845,
+          1690
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0220",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          929,
+          4645
+        ]
+      },
+      "input": {
+        "n": 4645
+      },
+      "observed": {
+        "value": [
+          1,
+          5,
+          929,
+          4645
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0221",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          397,
+          794,
+          1588,
+          3176
+        ]
+      },
+      "input": {
+        "n": 3176
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          397,
+          794,
+          1588,
+          3176
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0222",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          227,
+          454
+        ]
+      },
+      "input": {
+        "n": 454
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          227,
+          454
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0223",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2129,
+          4258
+        ]
+      },
+      "input": {
+        "n": 4258
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          2129,
+          4258
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0224",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          31,
+          47,
+          62,
+          94,
+          1457,
+          2914
+        ]
+      },
+      "input": {
+        "n": 2914
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          31,
+          47,
+          62,
+          94,
+          1457,
+          2914
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0225",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          7,
+          19,
+          49,
+          133,
+          931
+        ]
+      },
+      "input": {
+        "n": 931
+      },
+      "observed": {
+        "value": [
+          1,
+          7,
+          19,
+          49,
+          133,
+          931
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0226",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          5,
+          10,
+          337,
+          674,
+          1685,
+          3370
+        ]
+      },
+      "input": {
+        "n": 3370
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          5,
+          10,
+          337,
+          674,
+          1685,
+          3370
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0227",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          383,
+          1915
+        ]
+      },
+      "input": {
+        "n": 1915
+      },
+      "observed": {
+        "value": [
+          1,
+          5,
+          383,
+          1915
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0228",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2141,
+          4282
+        ]
+      },
+      "input": {
+        "n": 4282
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          2141,
+          4282
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0229",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          443
+        ]
+      },
+      "input": {
+        "n": 443
+      },
+      "observed": {
+        "value": [
+          1,
+          443
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0230",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          11,
+          16,
+          22,
+          32,
+          44,
+          64,
+          88,
+          128,
+          176,
+          256,
+          352,
+          704,
+          1408,
+          2816
+        ]
+      },
+      "input": {
+        "n": 2816
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          11,
+          16,
+          22,
+          32,
+          44,
+          64,
+          88,
+          128,
+          176,
+          256,
+          352,
+          704,
+          1408,
+          2816
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0231",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          617,
+          1851
+        ]
+      },
+      "input": {
+        "n": 1851
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          617,
+          1851
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0232",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          29,
+          61,
+          1769
+        ]
+      },
+      "input": {
+        "n": 1769
+      },
+      "observed": {
+        "value": [
+          1,
+          29,
+          61,
+          1769
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0233",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          13,
+          227,
+          2951
+        ]
+      },
+      "input": {
+        "n": 2951
+      },
+      "observed": {
+        "value": [
+          1,
+          13,
+          227,
+          2951
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0234",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          9,
+          23,
+          69,
+          207,
+          529,
+          1587,
+          4761
+        ]
+      },
+      "input": {
+        "n": 4761
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          9,
+          23,
+          69,
+          207,
+          529,
+          1587,
+          4761
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0235",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          6,
+          151,
+          302,
+          453,
+          906
+        ]
+      },
+      "input": {
+        "n": 906
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          6,
+          151,
+          302,
+          453,
+          906
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0236",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          6,
+          9,
+          18,
+          277,
+          554,
+          831,
+          1662,
+          2493,
+          4986
+        ]
+      },
+      "input": {
+        "n": 4986
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          6,
+          9,
+          18,
+          277,
+          554,
+          831,
+          1662,
+          2493,
+          4986
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0237",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          9,
+          12,
+          18,
+          36,
+          103,
+          206,
+          309,
+          412,
+          618,
+          927,
+          1236,
+          1854,
+          3708
+        ]
+      },
+      "input": {
+        "n": 3708
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          9,
+          12,
+          18,
+          36,
+          103,
+          206,
+          309,
+          412,
+          618,
+          927,
+          1236,
+          1854,
+          3708
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0238",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          661,
+          1322,
+          2644
+        ]
+      },
+      "input": {
+        "n": 2644
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          661,
+          1322,
+          2644
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0239",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          601
+        ]
+      },
+      "input": {
+        "n": 601
+      },
+      "observed": {
+        "value": [
+          1,
+          601
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0240",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          7,
+          8,
+          14,
+          28,
+          56,
+          59,
+          118,
+          236,
+          413,
+          472,
+          826,
+          1652,
+          3304
+        ]
+      },
+      "input": {
+        "n": 3304
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          7,
+          8,
+          14,
+          28,
+          56,
+          59,
+          118,
+          236,
+          413,
+          472,
+          826,
+          1652,
+          3304
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0241",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          7,
+          13,
+          17,
+          91,
+          119,
+          221,
+          1547
+        ]
+      },
+      "input": {
+        "n": 1547
+      },
+      "observed": {
+        "value": [
+          1,
+          7,
+          13,
+          17,
+          91,
+          119,
+          221,
+          1547
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0242",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8,
+          12,
+          24,
+          109,
+          218,
+          327,
+          436,
+          654,
+          872,
+          1308,
+          2616
+        ]
+      },
+      "input": {
+        "n": 2616
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8,
+          12,
+          24,
+          109,
+          218,
+          327,
+          436,
+          654,
+          872,
+          1308,
+          2616
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0243",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2297,
+          4594
+        ]
+      },
+      "input": {
+        "n": 4594
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          2297,
+          4594
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0244",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          7,
+          593,
+          4151
+        ]
+      },
+      "input": {
+        "n": 4151
+      },
+      "observed": {
+        "value": [
+          1,
+          7,
+          593,
+          4151
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0245",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          9,
+          193,
+          579,
+          1737
+        ]
+      },
+      "input": {
+        "n": 1737
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          9,
+          193,
+          579,
+          1737
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0246",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          521
+        ]
+      },
+      "input": {
+        "n": 521
+      },
+      "observed": {
+        "value": [
+          1,
+          521
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0247",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          41,
+          82,
+          164,
+          328,
+          656
+        ]
+      },
+      "input": {
+        "n": 656
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          41,
+          82,
+          164,
+          328,
+          656
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0248",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          17,
+          229,
+          3893
+        ]
+      },
+      "input": {
+        "n": 3893
+      },
+      "observed": {
+        "value": [
+          1,
+          17,
+          229,
+          3893
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0249",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          13,
+          307,
+          3991
+        ]
+      },
+      "input": {
+        "n": 3991
+      },
+      "observed": {
+        "value": [
+          1,
+          13,
+          307,
+          3991
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0250",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          37,
+          67,
+          74,
+          134,
+          2479,
+          4958
+        ]
+      },
+      "input": {
+        "n": 4958
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          37,
+          67,
+          74,
+          134,
+          2479,
+          4958
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0251",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          25,
+          29,
+          125,
+          145,
+          725,
+          3625
+        ]
+      },
+      "input": {
+        "n": 3625
+      },
+      "observed": {
+        "value": [
+          1,
+          5,
+          25,
+          29,
+          125,
+          145,
+          725,
+          3625
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0252",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          593,
+          2965
+        ]
+      },
+      "input": {
+        "n": 2965
+      },
+      "observed": {
+        "value": [
+          1,
+          5,
+          593,
+          2965
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0253",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          5,
+          10,
+          20,
+          23,
+          46,
+          92,
+          115,
+          230,
+          460
+        ]
+      },
+      "input": {
+        "n": 460
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          5,
+          10,
+          20,
+          23,
+          46,
+          92,
+          115,
+          230,
+          460
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0254",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          23,
+          37,
+          46,
+          74,
+          851,
+          1702
+        ]
+      },
+      "input": {
+        "n": 1702
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          23,
+          37,
+          46,
+          74,
+          851,
+          1702
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0255",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8,
+          9,
+          12,
+          18,
+          24,
+          36,
+          47,
+          72,
+          94,
+          141,
+          188,
+          282,
+          376,
+          423,
+          564,
+          846,
+          1128,
+          1692,
+          3384
+        ]
+      },
+      "input": {
+        "n": 3384
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8,
+          9,
+          12,
+          18,
+          24,
+          36,
+          47,
+          72,
+          94,
+          141,
+          188,
+          282,
+          376,
+          423,
+          564,
+          846,
+          1128,
+          1692,
+          3384
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0256",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          257,
+          514,
+          1028,
+          2056,
+          4112
+        ]
+      },
+      "input": {
+        "n": 4112
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          257,
+          514,
+          1028,
+          2056,
+          4112
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0257",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2017,
+          4034
+        ]
+      },
+      "input": {
+        "n": 4034
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          2017,
+          4034
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0258",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          11,
+          19,
+          22,
+          38,
+          209,
+          418
+        ]
+      },
+      "input": {
+        "n": 418
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          11,
+          19,
+          22,
+          38,
+          209,
+          418
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisors:0259",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          17,
+          51,
+          61,
+          183,
+          1037,
+          3111
+        ]
+      },
+      "input": {
+        "n": 3111
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          17,
+          51,
+          61,
+          183,
+          1037,
+          3111
+        ]
+      },
+      "passed": true
+    }
+  ],
+  "condition": "small_to_small",
+  "elapsed_seconds": 0.030751282999972318,
+  "group": "divisors",
+  "library": "sympy",
+  "load_error": null,
+  "method_id": "sympy.divisors",
+  "passed": 260,
+  "total": 260
+}

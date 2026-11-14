@@ -1,0 +1,26 @@
+{
+  "algorithm": [
+    "For the given positive integer n, find all prime numbers that divide n exactly without remainder.",
+    "Ignore any composite factors that remain if the factorization limit is set too low for complete factorization.",
+    "Return the list of prime factors sorted in ascending order."
+  ],
+  "constraints": [
+    "n must be a positive integer <= 5000",
+    "The function does not return -1 or 0",
+    "The output list must be sorted in ascending order",
+    "The function ignores multiplicity of prime factors",
+    "The function may return fewer prime factors if the factorization limit is set too low (as per the examples)"
+  ],
+  "edge_cases": [
+    "n = 1: returns empty list (no prime factors)",
+    "n = 2: returns [2] (smallest prime)",
+    "n = 4: returns [2] (ignores multiplicity)",
+    "n = 0 or negative n: returns absolute value's prime factors (e.g., primefactors(-5) returns [5])",
+    "n = 10000000001 with limit=200: returns [101, 99009901] (but 99009901 is composite, so only [101] is returned when limit=300)"
+  ],
+  "inputs": "n: integer (positive integer <= 5000)",
+  "method_id": "sympy.primefactors",
+  "output": "list of distinct positive integers (sorted ascending) that are prime factors of n",
+  "purpose": "Return a sorted list of distinct prime factors of n, ignoring multiplicity and composite factors that may remain due to factorization limits.",
+  "signature": "solve(n)"
+}

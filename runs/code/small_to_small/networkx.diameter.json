@@ -1,0 +1,61 @@
+{
+  "elapsed_seconds": 2.767700477000062,
+  "finished_at": "2026-11-14T13:09:58.031907+00:00",
+  "parsed": {
+    "code": "from collections import defaultdict\n\ndef solve(n, edges):\n    if n == 1:\n        return {'0': 0}\n\n    graph = defaultdict(list)\n    for u, v in edges:\n        graph[u].append(v)\n        graph[v].append(u)\n\n    # Check if graph is disconnected\n    if not graph or not graph[0]:\n        raise ValueError\n\n    # Compute eccentricity of each vertex\n    eccentricities = {}\n    visited = set()\n\n    # BFS to find shortest path from 0\n    from collections import deque\n    q = deque([0])\n    visited.add(0)\n    while q:\n        u = q.popleft()\n        for v in graph[u]:\n            if v not in visited:\n                visited.add(v)\n                q.append(v)\n                eccentricities[v] = len(visited) - 1\n\n    # BFS to find shortest path from all other vertices\n    for v in visited:\n        q = deque([v])\n        visited_v = set([v])\n        while q:\n            u = q.popleft()\n            for w in graph[u]:\n                if w not in visited_v:\n                    visited_v.add(w)\n                    q.append(w)\n                    eccentricities[w] = len(visited_v) - 1\n\n    # Return the diameter (maximum eccentricity)\n    if not eccentricities:\n        return 0\n    return max(eccentricities.values())"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Implement a Python function from a JSON behavioral card. The card is the only task specification. Return a JSON object with a single string field code containing executable Python source. Define solve with the card's exact signature. Use only Python's standard library. Allowed imports: math, itertools, functools, collections, heapq, bisect, statistics, fractions, operator, typing. Do not import or call NumPy, SymPy, NetworkX or any other third-party library. Do not read files, use network, introspection, eval, exec, input or print. Implement computations yourself using built-ins and the allowed standard library. Return plain JSON-compatible values, not iterators or sets; use string keys in dictionaries. Include any helper functions in the code. No tests or main block. Raise ValueError where the card requires it.",
+        "role": "system"
+      },
+      {
+        "content": "Implement this card:\n{\n  \"algorithm\": [\n    \"Compute the eccentricity of each vertex.\",\n    \"Find the maximum eccentricity (diameter).\",\n    \"Return the maximum eccentricity as the diameter.\"\n  ],\n  \"constraints\": [\n    \"Vertices are numbered 0 to n-1.\",\n    \"Edges are distinct and contain only distinct pairs.\",\n    \"Graph is simple and undirected.\",\n    \"Graph is unweighted.\",\n    \"If graph is disconnected, raise ValueError.\"\n  ],\n  \"edge_cases\": [\n    \"A singleton graph (n=1) has diameter 0.\",\n    \"A disconnected graph raises ValueError.\"\n  ],\n  \"inputs\": \"n is an integer >= 1, edges is a list of distinct [u, v] pairs with 0 <= u < v < n.\",\n  \"method_id\": \"networkx.diameter\",\n  \"output\": \"A dictionary of every vertex's eccentricity, with keys as strings and values as integers, or an integer if the graph is disconnected.\",\n  \"purpose\": \"Compute the diameter of a simple undirected unweighted graph.\",\n  \"signature\": \"solve(n, edges)\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:1.7b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 3072,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:09:58.031610107Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 340,
+    "eval_duration": 2668647000,
+    "load_duration": 591301,
+    "message": {
+      "content": "{\n  \"code\": \"from collections import defaultdict\\n\\ndef solve(n, edges):\\n    if n == 1:\\n        return {'0': 0}\\n\\n    graph = defaultdict(list)\\n    for u, v in edges:\\n        graph[u].append(v)\\n        graph[v].append(u)\\n\\n    # Check if graph is disconnected\\n    if not graph or not graph[0]:\\n        raise ValueError\\n\\n    # Compute eccentricity of each vertex\\n    eccentricities = {}\\n    visited = set()\\n\\n    # BFS to find shortest path from 0\\n    from collections import deque\\n    q = deque([0])\\n    visited.add(0)\\n    while q:\\n        u = q.popleft()\\n        for v in graph[u]:\\n            if v not in visited:\\n                visited.add(v)\\n                q.append(v)\\n                eccentricities[v] = len(visited) - 1\\n\\n    # BFS to find shortest path from all other vertices\\n    for v in visited:\\n        q = deque([v])\\n        visited_v = set([v])\\n        while q:\\n            u = q.popleft()\\n            for w in graph[u]:\\n                if w not in visited_v:\\n                    visited_v.add(w)\\n                    q.append(w)\\n                    eccentricities[w] = len(visited_v) - 1\\n\\n    # Return the diameter (maximum eccentricity)\\n    if not eccentricities:\\n        return 0\\n    return max(eccentricities.values())\"\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:1.7b",
+    "prompt_eval_cached_count": 185,
+    "prompt_eval_count": 422,
+    "prompt_eval_duration": 57573000,
+    "total_duration": 2767041022
+  },
+  "started_at": "2026-11-14T13:09:55.264205+00:00",
+  "valid": true
+}

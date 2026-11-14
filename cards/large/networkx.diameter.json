@@ -1,0 +1,26 @@
+{
+  "algorithm": [
+    "Compute eccentricity for each vertex",
+    "Find the maximum eccentricity value",
+    "Return the maximum value as the diameter"
+  ],
+  "constraints": [
+    "Vertices are labeled 0 to n-1",
+    "Edges are distinct and satisfy 0<=u<v<n",
+    "Graph must be simple undirected unweighted",
+    "Isolated vertices are allowed",
+    "Diameter is defined as the maximum eccentricity",
+    "For disconnected graphs, raise ValueError"
+  ],
+  "edge_cases": [
+    "Graph with a single vertex (n=1) has diameter 0",
+    "Disconnected graph raises ValueError",
+    "Graph with all vertices isolated has diameter 0",
+    "Graph with two connected vertices has diameter 1"
+  ],
+  "inputs": "n: integer >= 1; edges: list of distinct [u,v] pairs with 0<=u<v<n",
+  "method_id": "networkx.diameter",
+  "output": "integer: maximum eccentricity (diameter) of the graph",
+  "purpose": "Compute the diameter of a simple undirected unweighted graph",
+  "signature": "solve(n, edges)"
+}

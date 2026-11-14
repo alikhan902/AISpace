@@ -1,0 +1,22 @@
+{
+  "algorithm": [
+    "Factorize n into its prime factors: n = p1^k1 * p2^k2 * ... * pr^kr",
+    "Apply the formula: phi(n) = n * product_{i=1 to r} (1 - 1/pi)",
+    "For example, phi(25) = 25 * (1 - 1/5) = 20"
+  ],
+  "constraints": [
+    "n must be a positive integer <= 5000",
+    "The output must be an exact integer",
+    "The function uses proper divisors with generator=False and modulus=1 for divisor_count (but this is not directly used in totient calculation)"
+  ],
+  "edge_cases": [
+    "n = 1: phi(1) = 1",
+    "n = prime: phi(p) = p - 1",
+    "n = 1 is the only positive integer with phi(n) = 1"
+  ],
+  "inputs": "A positive integer n <= 500: the input value for which to compute the totient",
+  "method_id": "sympy.totient",
+  "output": "An exact integer representing phi(n) (the count of positive integers <= n relatively prime to n)",
+  "purpose": "Calculate Euler's totient function phi(n), which counts the number of positive integers <= n that are relatively prime to n",
+  "signature": "solve(n)"
+}

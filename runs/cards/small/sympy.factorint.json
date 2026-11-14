@@ -1,0 +1,119 @@
+{
+  "elapsed_seconds": 2.1337828880000416,
+  "finished_at": "2026-11-14T13:08:02.317041+00:00",
+  "parsed": {
+    "algorithm": [
+      "Trial division to find small factors",
+      "Pollard's rho and p-1 algorithms for finding large factors",
+      "Periodic checks for prime or perfect power factors"
+    ],
+    "constraints": [
+      "n is a positive integer <= 5000",
+      "Handles factorization with limit parameter",
+      "Returns {0: 1} for n=0",
+      "Returns empty dict for n=1"
+    ],
+    "edge_cases": [
+      "n=0 returns {0: 1}",
+      "n=1 returns {}",
+      "n < 2 returns empty factorization",
+      "n with large prime factors"
+    ],
+    "inputs": "n is a positive integer <= 5000",
+    "method_id": "factorint",
+    "output": "A plain Python dict with string prime keys and integer multiplicities, or {0: 1} for n=0.",
+    "purpose": "Return a dictionary of prime factors of a positive integer n, with multiplicities.",
+    "signature": "solve(n)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"n is a positive integer <=5000. Return a plain Python dict with string prime keys and integer multiplicities (1 gives {}), no symbolic objects.\",\n  \"documentation\": \"Given a positive integer ``n``, ``factorint(n)`` returns a dict containing\\nthe prime factors of ``n`` as keys and their respective multiplicities\\nas values. For example:\\n\\n>>> from sympy.ntheory import factorint\\n>>> factorint(2000)    # 2000 = (2**4) * (5**3)\\n{2: 4, 5: 3}\\n>>> factorint(65537)   # This number is prime\\n{65537: 1}\\n\\nFor input less than 2, factorint behaves as follows:\\n\\n    - ``factorint(1)`` returns the empty factorization, ``{}``\\n    - ``factorint(0)`` returns ``{0:1}``\\n    - ``factorint(-n)`` adds ``-1:1`` to the factors and then factors ``n``\\n\\nPartial Factorization:\\n\\nIf ``limit`` (> 3) is specified, the search is stopped after performing\\ntrial division up to (and including) the limit (or taking a\\ncorresponding number of rho/p-1 steps). This is useful if one has\\na large number and only is interested in finding small factors (if\\nany). Note that setting a limit does not prevent larger factors\\nfrom being found early; it simply means that the largest factor may\\nbe composite. Since checking for perfect power is relatively cheap, it is\\ndone regardless of the limit setting.\\n\\nThis number, for example, has two small factors and a huge\\nsemi-prime factor that cannot be reduced easily:\\n\\n>>> from sympy.ntheory import isprime\\n>>> a = 1407633717262338957430697921446883\\n>>> f = factorint(a, limit=10000)\\n>>> f == {991: 1, int(202916782076162456022877024859): 1, 7: 1}\\nTrue\\n>>> isprime(max(f))\\nFalse\\n\\nThis number has a small factor and a residual perfect power whose\\nbase is greater than the limit:\\n\\n>>> factorint(3*101**7, limit=5)\\n{3: 1, 101: 7}\\n\\nList of Factors:\\n\\nIf ``multiple`` is set to ``True`` then a list containing the\\nprime factors including multiplicities is returned.\\n\\n>>> factorint(24, multiple=True)\\n[2, 2, 2, 3]\\n\\nVisual Factorization:\\n\\nIf ``visual`` is set to ``True``, then it will return a visual\\nfactorization of the integer.  For example:\\n\\n>>> from sympy import pprint\\n>>> pprint(factorint(4200, visual=True))\\n 3  1  2  1\\n2 *3 *5 *7\\n\\nNote that this is achieved by using the evaluate=False flag in Mul\\nand Pow. If you do other manipulations with an expression where\\nevaluate=False, it may evaluate.  Therefore, you should use the\\nvisual option only for visualization, and use the normal dictionary\\nreturned by visual=False if you want to perform operations on the\\nfactors.\\n\\nYou can easily switch between the two forms by sending them back to\\nfactorint:\\n\\n>>> from sympy import Mul\\n>>> regular = factorint(1764); regular\\n{2: 2, 3: 2, 7: 2}\\n>>> pprint(factorint(regular))\\n 2  2  2\\n2 *3 *7\\n\\n>>> visual = factorint(1764, visual=True); pprint(visual)\\n 2  2  2\\n2 *3 *7\\n>>> print(factorint(visual))\\n{2: 2, 3: 2, 7: 2}\\n\\nIf you want to send a number to be factored in a partially factored form\\nyou can do so with a dictionary or unevaluated expression:\\n\\n>>> factorint(factorint({4: 2, 12: 3})) # twice to toggle to dict form\\n{2: 10, 3: 3}\\n>>> factorint(Mul(4, 12, evaluate=False))\\n{2: 4, 3: 1}\\n\\nThe table of the output logic is:\\n\\n    ====== ====== ======= =======\\n                   Visual\\n    ------ ----------------------\\n    Input  True   False   other\\n    ====== ====== ======= =======\\n    dict    mul    dict    mul\\n    n       mul    dict    dict\\n    mul     mul    dict    dict\\n    ====== ====== ======= =======\\n\\nNotes\\n=====\\n\\nAlgorithm:\\n\\nThe function switches between multiple algorithms. Trial division\\nquickly finds small factors (of the order 1-5 digits), and finds\\nall large factors if given enough time. The Pollard rho and p-1\\nalgorithms are used to find large factors ahead of time; they\\nwill often find factors of the order of 10 digits within a few\\nseconds:\\n\\n>>> factors = factorint(12345678910111213141516)\\n>>> for base, exp in sorted(factors.items()):\\n...     print('%s %s' % (base, exp))\\n...\\n2 2\\n2507191691 1\\n1231026625769 1\\n\\nAny of these methods can optionally be disabled with the following\\nboolean parameters:\\n\\n    - ``use_trial``: Toggle use of trial division\\n    - ``use_rho``: Toggle use of Pollard's rho method\\n    - ``use_pm1``: Toggle use of Pollard's p-1 method\\n\\n``factorint`` also periodically checks if the remaining part is\\na prime number or a perfect power, and in those cases stops.\\n\\nFor unevaluated factorial, it uses Legendre's formula(theorem).\\n\\n\\nIf ``verbose`` is set to ``True``, detailed progress is printed.\\n\\nSee Also\\n========\\n\\nsmoothness, smoothness_p, divisors\",\n  \"documentation_truncated\": false,\n  \"group\": \"primes\",\n  \"id\": \"sympy.factorint\",\n  \"library\": \"sympy\",\n  \"name\": \"factorint\",\n  \"signature\": \"solve(n)\",\n  \"version\": \"1.14.0\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:1.7b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:08:02.316686356Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 233,
+    "eval_duration": 1861448000,
+    "load_duration": 651484,
+    "message": {
+      "content": "{\n  \"method_id\": \"factorint\",\n  \"signature\": \"solve(n)\",\n  \"purpose\": \"Return a dictionary of prime factors of a positive integer n, with multiplicities.\",\n  \"inputs\": \"n is a positive integer <= 5000\",\n  \"output\": \"A plain Python dict with string prime keys and integer multiplicities, or {0: 1} for n=0.\",\n  \"algorithm\": [\n    \"Trial division to find small factors\",\n    \"Pollard's rho and p-1 algorithms for finding large factors\",\n    \"Periodic checks for prime or perfect power factors\"\n  ],\n  \"edge_cases\": [\n    \"n=0 returns {0: 1}\",\n    \"n=1 returns {}\",\n    \"n < 2 returns empty factorization\",\n    \"n with large prime factors\"\n  ],\n  \"constraints\": [\n    \"n is a positive integer <= 5000\",\n    \"Handles factorization with limit parameter\",\n    \"Returns {0: 1} for n=0\",\n    \"Returns empty dict for n=1\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:1.7b",
+    "prompt_eval_cached_count": 359,
+    "prompt_eval_count": 1874,
+    "prompt_eval_duration": 245446000,
+    "total_duration": 2133091085
+  },
+  "started_at": "2026-11-14T13:08:00.183257+00:00",
+  "valid": true
+}

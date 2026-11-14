@@ -1,0 +1,25 @@
+{
+  "algorithm": [
+    "Compute the absolute values of the inputs.",
+    "Compute the greatest common divisor (GCD) of the absolute values using the Euclidean algorithm.",
+    "Use the formula: LCM(a, b) = (a * b) // GCD(a, b)."
+  ],
+  "constraints": [
+    "Inputs must be integers or 1-D lists of integers.",
+    "Supports scalar/scalar, scalar/list, list/scalar, and lists of the same length.",
+    "No other broadcasting is required.",
+    "Values and results fit signed int64."
+  ],
+  "edge_cases": [
+    "When both inputs are scalars, the output is an integer.",
+    "When one input is a list and the other is a scalar, the output is a list.",
+    "When inputs are empty lists, the output is an empty list.",
+    "When inputs are of different lengths, they are broadcasted to a common shape.",
+    "When inputs are not integers or lists, the function may raise an error."
+  ],
+  "inputs": "x and y are integers or 1-D lists of integers. Support scalar/scalar, scalar/list, list/scalar and lists of the same length (including empty). Scalar/scalar returns int, all other inputs return a list. No other broadcasting is required. Values and results fit signed int64.",
+  "method_id": "numpy.lcm",
+  "output": "A list or scalar, depending on input type. The output is the LCM of the absolute values of the inputs.",
+  "purpose": "Compute the lowest common multiple (LCM) of two inputs.",
+  "signature": "solve(x, y)"
+}

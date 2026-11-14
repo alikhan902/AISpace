@@ -1,0 +1,120 @@
+{
+  "elapsed_seconds": 6.233804475999932,
+  "finished_at": "2026-11-14T13:10:45.062183+00:00",
+  "parsed": {
+    "algorithm": [
+      "For n=0, return a copy of the input list a.",
+      "For n>=1, recursively compute the n-th difference by applying the first difference n times.",
+      "The first difference is calculated as [a[i+1] - a[i] for i in range(len(a)-1)].",
+      "If n >= len(a), return an empty list unless n=0 (which returns a copy of a)."
+    ],
+    "constraints": [
+      "All intermediate values fit within signed 64-bit integers.",
+      "n is an integer between 0 and 5 inclusive.",
+      "The input list a is one-dimensional.",
+      "The output must be a Python int or list[int] (no NumPy objects)."
+    ],
+    "edge_cases": [
+      "When a is empty, return empty list for n>=1 (n=0 returns empty list copy).",
+      "When n=0, return a copy of a regardless of a's length.",
+      "When n >= len(a), return empty list for n>=1 (n=0 returns a copy of a).",
+      "When a has length 1 and n>=1, return empty list."
+    ],
+    "inputs": "a: one-dimensional list of integers (possibly empty); n: integer from 0 to 5",
+    "method_id": "numpy.diff",
+    "output": "Python int if n=0 (a copy of a), otherwise list[int] of length len(a)-n",
+    "purpose": "Compute the n-th discrete forward difference of a one-dimensional list of integers",
+    "signature": "solve(a, n=1)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"a is a one-dimensional list of integers, possibly empty. Return Python int or list[int], as appropriate; no NumPy objects. All intermediate values fit signed int64. n is an integer from 0 to 5. Compute the n-th discrete forward difference; n=0 returns a copy of a. If n>=len(a), the result is empty unless n=0.\",\n  \"documentation\": \"Calculate the n-th discrete difference along the given axis.\\n\\nThe first difference is given by ``out[i] = a[i+1] - a[i]`` along\\nthe given axis, higher differences are calculated by using `diff`\\nrecursively.\\n\\nParameters\\n----------\\na : array_like\\n    Input array\\nn : int, optional\\n    The number of times values are differenced. If zero, the input\\n    is returned as-is.\\naxis : int, optional\\n    The axis along which the difference is taken, default is the\\n    last axis.\\nprepend, append : array_like, optional\\n    Values to prepend or append to `a` along axis prior to\\n    performing the difference.  Scalar values are expanded to\\n    arrays with length 1 in the direction of axis and the shape\\n    of the input array in along all other axes.  Otherwise the\\n    dimension and shape must match `a` except along axis.\\n\\nReturns\\n-------\\ndiff : ndarray\\n    The n-th differences. The shape of the output is the same as `a`\\n    except along `axis` where the dimension is smaller by `n`. The\\n    type of the output is the same as the type of the difference\\n    between any two elements of `a`. This is the same as the type of\\n    `a` in most cases. A notable exception is `datetime64`, which\\n    results in a `timedelta64` output array.\\n\\nSee Also\\n--------\\ngradient, ediff1d, cumsum\\n\\nNotes\\n-----\\nType is preserved for boolean arrays, so the result will contain\\n`False` when consecutive elements are the same and `True` when they\\ndiffer.\\n\\nFor unsigned integer arrays, the results will also be unsigned. This\\nshould not be surprising, as the result is consistent with\\ncalculating the difference directly:\\n\\n>>> u8_arr = np.array([1, 0], dtype=np.uint8)\\n>>> np.diff(u8_arr)\\narray([255], dtype=uint8)\\n>>> u8_arr[1,...] - u8_arr[0,...]\\nnp.uint8(255)\\n\\nIf this is not desirable, then the array should be cast to a larger\\ninteger type first:\\n\\n>>> i16_arr = u8_arr.astype(np.int16)\\n>>> np.diff(i16_arr)\\narray([-1], dtype=int16)\\n\\nExamples\\n--------\\n>>> import numpy as np\\n>>> x = np.array([1, 2, 4, 7, 0])\\n>>> np.diff(x)\\narray([ 1,  2,  3, -7])\\n>>> np.diff(x, n=2)\\narray([  1,   1, -10])\\n\\n>>> x = np.array([[1, 3, 6, 10], [0, 5, 6, 8]])\\n>>> np.diff(x)\\narray([[2, 3, 4],\\n       [5, 1, 2]])\\n>>> np.diff(x, axis=0)\\narray([[-1,  2,  0, -2]])\\n\\n>>> x = np.arange('1066-10-13', '1066-10-16', dtype=np.datetime64)\\n>>> np.diff(x)\\narray([1, 1], dtype='timedelta64[D]')\",\n  \"documentation_truncated\": false,\n  \"group\": \"reductions\",\n  \"id\": \"numpy.diff\",\n  \"library\": \"numpy\",\n  \"name\": \"diff\",\n  \"signature\": \"solve(a, n=1)\",\n  \"version\": \"2.5.4\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:4b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:10:45.061912116Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 353,
+    "eval_duration": 5825756000,
+    "load_duration": 529725,
+    "message": {
+      "content": "{\n  \"method_id\": \"numpy.diff\",\n  \"signature\": \"solve(a, n=1)\",\n  \"purpose\": \"Compute the n-th discrete forward difference of a one-dimensional list of integers\",\n  \"inputs\": \"a: one-dimensional list of integers (possibly empty); n: integer from 0 to 5\",\n  \"output\": \"Python int if n=0 (a copy of a), otherwise list[int] of length len(a)-n\",\n  \"algorithm\": [\n    \"For n=0, return a copy of the input list a.\",\n    \"For n>=1, recursively compute the n-th difference by applying the first difference n times.\",\n    \"The first difference is calculated as [a[i+1] - a[i] for i in range(len(a)-1)].\",\n    \"If n >= len(a), return an empty list unless n=0 (which returns a copy of a).\"\n  ],\n  \"edge_cases\": [\n    \"When a is empty, return empty list for n>=1 (n=0 returns empty list copy).\",\n    \"When n=0, return a copy of a regardless of a's length.\",\n    \"When n >= len(a), return empty list for n>=1 (n=0 returns a copy of a).\",\n    \"When a has length 1 and n>=1, return empty list.\"\n  ],\n  \"constraints\": [\n    \"All intermediate values fit within signed 64-bit integers.\",\n    \"n is an integer between 0 and 5 inclusive.\",\n    \"The input list a is one-dimensional.\",\n    \"The output must be a Python int or list[int] (no NumPy objects).\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:4b",
+    "prompt_eval_cached_count": 380,
+    "prompt_eval_count": 1263,
+    "prompt_eval_duration": 365439000,
+    "total_duration": 6233222238
+  },
+  "started_at": "2026-11-14T13:10:38.828377+00:00",
+  "valid": true
+}

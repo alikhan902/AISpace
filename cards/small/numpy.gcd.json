@@ -1,0 +1,23 @@
+{
+  "algorithm": [
+    "Compute the absolute values of the inputs.",
+    "Use the Euclidean algorithm to find the GCD.",
+    "Return the result as a scalar if both inputs are scalars, otherwise return as a list."
+  ],
+  "constraints": [
+    "Inputs must be integers or 1-D lists of integers.",
+    "Supports broadcasting for scalar/scalar, scalar/list, list/scalar, and lists of the same length.",
+    "No other broadcasting is required.",
+    "Values and results fit signed int64."
+  ],
+  "edge_cases": [
+    "Empty lists (e.g., np.gcd([], [])) return 0.",
+    "Negative numbers are handled by taking absolute values.",
+    "Scalar inputs return integers, list inputs return lists."
+  ],
+  "inputs": "x and y are integers or 1-D lists of integers. Support scalar/scalar, scalar/list, list/scalar and lists of the same length (including empty). Scalar/scalar returns int, all other inputs return a list. No other broadcasting is required. Values and results fit signed int64.",
+  "method_id": "numpy.gcd",
+  "output": "A scalar if both x and y are scalars, otherwise a list. The output is the GCD of the absolute values of the inputs.",
+  "purpose": "Compute the greatest common divisor (GCD) of two inputs.",
+  "signature": "solve(x, y)"
+}

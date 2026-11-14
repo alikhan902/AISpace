@@ -1,0 +1,517 @@
+{
+  "all_pass": false,
+  "cases": [
+    {
+      "case_id": "sympy.catalan:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "n": 0
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.catalan:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "n": 1
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0002",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 2
+      },
+      "observed": {
+        "value": 6
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0003",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "n": 3
+      },
+      "observed": {
+        "value": 20
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0004",
+      "category": "exhaustive",
+      "expected": {
+        "value": 14
+      },
+      "input": {
+        "n": 4
+      },
+      "observed": {
+        "value": 70
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0005",
+      "category": "exhaustive",
+      "expected": {
+        "value": 42
+      },
+      "input": {
+        "n": 5
+      },
+      "observed": {
+        "value": 252
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0006",
+      "category": "exhaustive",
+      "expected": {
+        "value": 132
+      },
+      "input": {
+        "n": 6
+      },
+      "observed": {
+        "value": 924
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0007",
+      "category": "exhaustive",
+      "expected": {
+        "value": 429
+      },
+      "input": {
+        "n": 7
+      },
+      "observed": {
+        "value": 3432
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0008",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1430
+      },
+      "input": {
+        "n": 8
+      },
+      "observed": {
+        "value": 12870
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0009",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4862
+      },
+      "input": {
+        "n": 9
+      },
+      "observed": {
+        "value": 48620
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0010",
+      "category": "exhaustive",
+      "expected": {
+        "value": 16796
+      },
+      "input": {
+        "n": 10
+      },
+      "observed": {
+        "value": 184756
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0011",
+      "category": "exhaustive",
+      "expected": {
+        "value": 58786
+      },
+      "input": {
+        "n": 11
+      },
+      "observed": {
+        "value": 705432
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0012",
+      "category": "exhaustive",
+      "expected": {
+        "value": 208012
+      },
+      "input": {
+        "n": 12
+      },
+      "observed": {
+        "value": 2704156
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0013",
+      "category": "exhaustive",
+      "expected": {
+        "value": 742900
+      },
+      "input": {
+        "n": 13
+      },
+      "observed": {
+        "value": 10400600
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0014",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2674440
+      },
+      "input": {
+        "n": 14
+      },
+      "observed": {
+        "value": 40116600
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0015",
+      "category": "exhaustive",
+      "expected": {
+        "value": 9694845
+      },
+      "input": {
+        "n": 15
+      },
+      "observed": {
+        "value": 155117520
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0016",
+      "category": "exhaustive",
+      "expected": {
+        "value": 35357670
+      },
+      "input": {
+        "n": 16
+      },
+      "observed": {
+        "value": 601080390
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0017",
+      "category": "exhaustive",
+      "expected": {
+        "value": 129644790
+      },
+      "input": {
+        "n": 17
+      },
+      "observed": {
+        "value": 2333606220
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0018",
+      "category": "exhaustive",
+      "expected": {
+        "value": 477638700
+      },
+      "input": {
+        "n": 18
+      },
+      "observed": {
+        "value": 9075135300
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0019",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1767263190
+      },
+      "input": {
+        "n": 19
+      },
+      "observed": {
+        "value": 35345263800
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0020",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6564120420
+      },
+      "input": {
+        "n": 20
+      },
+      "observed": {
+        "value": 137846528820
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0021",
+      "category": "exhaustive",
+      "expected": {
+        "value": 24466267020
+      },
+      "input": {
+        "n": 21
+      },
+      "observed": {
+        "value": 538257874440
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0022",
+      "category": "exhaustive",
+      "expected": {
+        "value": 91482563640
+      },
+      "input": {
+        "n": 22
+      },
+      "observed": {
+        "value": 2104098963720
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0023",
+      "category": "exhaustive",
+      "expected": {
+        "value": 343059613650
+      },
+      "input": {
+        "n": 23
+      },
+      "observed": {
+        "value": 8233430727600
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0024",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1289904147324
+      },
+      "input": {
+        "n": 24
+      },
+      "observed": {
+        "value": 32247603683100
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0025",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4861946401452
+      },
+      "input": {
+        "n": 25
+      },
+      "observed": {
+        "value": 126410606437752
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0026",
+      "category": "exhaustive",
+      "expected": {
+        "value": 18367353072152
+      },
+      "input": {
+        "n": 26
+      },
+      "observed": {
+        "value": 495918532948104
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0027",
+      "category": "exhaustive",
+      "expected": {
+        "value": 69533550916004
+      },
+      "input": {
+        "n": 27
+      },
+      "observed": {
+        "value": 1946939425648112
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0028",
+      "category": "exhaustive",
+      "expected": {
+        "value": 263747951750360
+      },
+      "input": {
+        "n": 28
+      },
+      "observed": {
+        "value": 7648690600760440
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0029",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1002242216651368
+      },
+      "input": {
+        "n": 29
+      },
+      "observed": {
+        "value": 30067266499541040
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0030",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3814986502092304
+      },
+      "input": {
+        "n": 30
+      },
+      "observed": {
+        "value": 118264581564861424
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0031",
+      "category": "exhaustive",
+      "expected": {
+        "value": 14544636039226909
+      },
+      "input": {
+        "n": 31
+      },
+      "observed": {
+        "value": 465428353255261088
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0032",
+      "category": "exhaustive",
+      "expected": {
+        "value": 55534064877048198
+      },
+      "input": {
+        "n": 32
+      },
+      "observed": {
+        "value": 1832624140942590534
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0033",
+      "category": "exhaustive",
+      "expected": {
+        "value": 212336130412243110
+      },
+      "input": {
+        "n": 33
+      },
+      "observed": {
+        "value": 7219428434016265740
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0034",
+      "category": "exhaustive",
+      "expected": {
+        "value": 812944042149730764
+      },
+      "input": {
+        "n": 34
+      },
+      "observed": {
+        "value": 28453041475240576740
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.catalan:0035",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3116285494907301262
+      },
+      "input": {
+        "n": 35
+      },
+      "observed": {
+        "value": 112186277816662845432
+      },
+      "passed": false
+    }
+  ],
+  "condition": "large_to_small",
+  "elapsed_seconds": 0.02566041399995811,
+  "group": "combinatorics",
+  "library": "sympy",
+  "load_error": null,
+  "method_id": "sympy.catalan",
+  "passed": 1,
+  "total": 36
+}

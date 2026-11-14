@@ -1,0 +1,5265 @@
+{
+  "all_pass": true,
+  "cases": [
+    {
+      "case_id": "sympy.primefactors:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "n": 1
+      },
+      "observed": {
+        "value": []
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2
+        ]
+      },
+      "input": {
+        "n": 2
+      },
+      "observed": {
+        "value": [
+          2
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0002",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          3
+        ]
+      },
+      "input": {
+        "n": 3
+      },
+      "observed": {
+        "value": [
+          3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0003",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2
+        ]
+      },
+      "input": {
+        "n": 4
+      },
+      "observed": {
+        "value": [
+          2
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0004",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          5
+        ]
+      },
+      "input": {
+        "n": 5
+      },
+      "observed": {
+        "value": [
+          5
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0005",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          3
+        ]
+      },
+      "input": {
+        "n": 6
+      },
+      "observed": {
+        "value": [
+          2,
+          3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0006",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          7
+        ]
+      },
+      "input": {
+        "n": 7
+      },
+      "observed": {
+        "value": [
+          7
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0007",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2
+        ]
+      },
+      "input": {
+        "n": 8
+      },
+      "observed": {
+        "value": [
+          2
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0008",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          3
+        ]
+      },
+      "input": {
+        "n": 9
+      },
+      "observed": {
+        "value": [
+          3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0009",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          5
+        ]
+      },
+      "input": {
+        "n": 10
+      },
+      "observed": {
+        "value": [
+          2,
+          5
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0010",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          11
+        ]
+      },
+      "input": {
+        "n": 11
+      },
+      "observed": {
+        "value": [
+          11
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0011",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          3
+        ]
+      },
+      "input": {
+        "n": 12
+      },
+      "observed": {
+        "value": [
+          2,
+          3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0012",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          13
+        ]
+      },
+      "input": {
+        "n": 13
+      },
+      "observed": {
+        "value": [
+          13
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0013",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          7
+        ]
+      },
+      "input": {
+        "n": 14
+      },
+      "observed": {
+        "value": [
+          2,
+          7
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0014",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          3,
+          5
+        ]
+      },
+      "input": {
+        "n": 15
+      },
+      "observed": {
+        "value": [
+          3,
+          5
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0015",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2
+        ]
+      },
+      "input": {
+        "n": 16
+      },
+      "observed": {
+        "value": [
+          2
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0016",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          17
+        ]
+      },
+      "input": {
+        "n": 17
+      },
+      "observed": {
+        "value": [
+          17
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0017",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          3
+        ]
+      },
+      "input": {
+        "n": 18
+      },
+      "observed": {
+        "value": [
+          2,
+          3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0018",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          19
+        ]
+      },
+      "input": {
+        "n": 19
+      },
+      "observed": {
+        "value": [
+          19
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0019",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          5
+        ]
+      },
+      "input": {
+        "n": 20
+      },
+      "observed": {
+        "value": [
+          2,
+          5
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0020",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          3,
+          7
+        ]
+      },
+      "input": {
+        "n": 21
+      },
+      "observed": {
+        "value": [
+          3,
+          7
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0021",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          11
+        ]
+      },
+      "input": {
+        "n": 22
+      },
+      "observed": {
+        "value": [
+          2,
+          11
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0022",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          23
+        ]
+      },
+      "input": {
+        "n": 23
+      },
+      "observed": {
+        "value": [
+          23
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0023",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          3
+        ]
+      },
+      "input": {
+        "n": 24
+      },
+      "observed": {
+        "value": [
+          2,
+          3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0024",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          5
+        ]
+      },
+      "input": {
+        "n": 25
+      },
+      "observed": {
+        "value": [
+          5
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0025",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          13
+        ]
+      },
+      "input": {
+        "n": 26
+      },
+      "observed": {
+        "value": [
+          2,
+          13
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0026",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          3
+        ]
+      },
+      "input": {
+        "n": 27
+      },
+      "observed": {
+        "value": [
+          3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0027",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          7
+        ]
+      },
+      "input": {
+        "n": 28
+      },
+      "observed": {
+        "value": [
+          2,
+          7
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0028",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          29
+        ]
+      },
+      "input": {
+        "n": 29
+      },
+      "observed": {
+        "value": [
+          29
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0029",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          3,
+          5
+        ]
+      },
+      "input": {
+        "n": 30
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          5
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0030",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          31
+        ]
+      },
+      "input": {
+        "n": 31
+      },
+      "observed": {
+        "value": [
+          31
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0031",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2
+        ]
+      },
+      "input": {
+        "n": 32
+      },
+      "observed": {
+        "value": [
+          2
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0032",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          3,
+          11
+        ]
+      },
+      "input": {
+        "n": 33
+      },
+      "observed": {
+        "value": [
+          3,
+          11
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0033",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          17
+        ]
+      },
+      "input": {
+        "n": 34
+      },
+      "observed": {
+        "value": [
+          2,
+          17
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0034",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          5,
+          7
+        ]
+      },
+      "input": {
+        "n": 35
+      },
+      "observed": {
+        "value": [
+          5,
+          7
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0035",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          3
+        ]
+      },
+      "input": {
+        "n": 36
+      },
+      "observed": {
+        "value": [
+          2,
+          3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0036",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          37
+        ]
+      },
+      "input": {
+        "n": 37
+      },
+      "observed": {
+        "value": [
+          37
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0037",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          19
+        ]
+      },
+      "input": {
+        "n": 38
+      },
+      "observed": {
+        "value": [
+          2,
+          19
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0038",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          3,
+          13
+        ]
+      },
+      "input": {
+        "n": 39
+      },
+      "observed": {
+        "value": [
+          3,
+          13
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0039",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          5
+        ]
+      },
+      "input": {
+        "n": 40
+      },
+      "observed": {
+        "value": [
+          2,
+          5
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0040",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          41
+        ]
+      },
+      "input": {
+        "n": 41
+      },
+      "observed": {
+        "value": [
+          41
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0041",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          3,
+          7
+        ]
+      },
+      "input": {
+        "n": 42
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          7
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0042",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          43
+        ]
+      },
+      "input": {
+        "n": 43
+      },
+      "observed": {
+        "value": [
+          43
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0043",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          11
+        ]
+      },
+      "input": {
+        "n": 44
+      },
+      "observed": {
+        "value": [
+          2,
+          11
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0044",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          3,
+          5
+        ]
+      },
+      "input": {
+        "n": 45
+      },
+      "observed": {
+        "value": [
+          3,
+          5
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0045",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          23
+        ]
+      },
+      "input": {
+        "n": 46
+      },
+      "observed": {
+        "value": [
+          2,
+          23
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0046",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          47
+        ]
+      },
+      "input": {
+        "n": 47
+      },
+      "observed": {
+        "value": [
+          47
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0047",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          3
+        ]
+      },
+      "input": {
+        "n": 48
+      },
+      "observed": {
+        "value": [
+          2,
+          3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0048",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          7
+        ]
+      },
+      "input": {
+        "n": 49
+      },
+      "observed": {
+        "value": [
+          7
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0049",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          5
+        ]
+      },
+      "input": {
+        "n": 50
+      },
+      "observed": {
+        "value": [
+          2,
+          5
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0050",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          3,
+          17
+        ]
+      },
+      "input": {
+        "n": 51
+      },
+      "observed": {
+        "value": [
+          3,
+          17
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0051",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          13
+        ]
+      },
+      "input": {
+        "n": 52
+      },
+      "observed": {
+        "value": [
+          2,
+          13
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0052",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          53
+        ]
+      },
+      "input": {
+        "n": 53
+      },
+      "observed": {
+        "value": [
+          53
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0053",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          3
+        ]
+      },
+      "input": {
+        "n": 54
+      },
+      "observed": {
+        "value": [
+          2,
+          3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0054",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          5,
+          11
+        ]
+      },
+      "input": {
+        "n": 55
+      },
+      "observed": {
+        "value": [
+          5,
+          11
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0055",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          7
+        ]
+      },
+      "input": {
+        "n": 56
+      },
+      "observed": {
+        "value": [
+          2,
+          7
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0056",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          3,
+          19
+        ]
+      },
+      "input": {
+        "n": 57
+      },
+      "observed": {
+        "value": [
+          3,
+          19
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0057",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          29
+        ]
+      },
+      "input": {
+        "n": 58
+      },
+      "observed": {
+        "value": [
+          2,
+          29
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0058",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          59
+        ]
+      },
+      "input": {
+        "n": 59
+      },
+      "observed": {
+        "value": [
+          59
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0059",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          3,
+          5
+        ]
+      },
+      "input": {
+        "n": 60
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          5
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0060",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          61
+        ]
+      },
+      "input": {
+        "n": 61
+      },
+      "observed": {
+        "value": [
+          61
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0061",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          31
+        ]
+      },
+      "input": {
+        "n": 62
+      },
+      "observed": {
+        "value": [
+          2,
+          31
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0062",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          3,
+          7
+        ]
+      },
+      "input": {
+        "n": 63
+      },
+      "observed": {
+        "value": [
+          3,
+          7
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0063",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2
+        ]
+      },
+      "input": {
+        "n": 64
+      },
+      "observed": {
+        "value": [
+          2
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0064",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          5,
+          13
+        ]
+      },
+      "input": {
+        "n": 65
+      },
+      "observed": {
+        "value": [
+          5,
+          13
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0065",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          3,
+          11
+        ]
+      },
+      "input": {
+        "n": 66
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          11
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0066",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          67
+        ]
+      },
+      "input": {
+        "n": 67
+      },
+      "observed": {
+        "value": [
+          67
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0067",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          17
+        ]
+      },
+      "input": {
+        "n": 68
+      },
+      "observed": {
+        "value": [
+          2,
+          17
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0068",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          3,
+          23
+        ]
+      },
+      "input": {
+        "n": 69
+      },
+      "observed": {
+        "value": [
+          3,
+          23
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0069",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          5,
+          7
+        ]
+      },
+      "input": {
+        "n": 70
+      },
+      "observed": {
+        "value": [
+          2,
+          5,
+          7
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0070",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          71
+        ]
+      },
+      "input": {
+        "n": 71
+      },
+      "observed": {
+        "value": [
+          71
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0071",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          3
+        ]
+      },
+      "input": {
+        "n": 72
+      },
+      "observed": {
+        "value": [
+          2,
+          3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0072",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          73
+        ]
+      },
+      "input": {
+        "n": 73
+      },
+      "observed": {
+        "value": [
+          73
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0073",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          37
+        ]
+      },
+      "input": {
+        "n": 74
+      },
+      "observed": {
+        "value": [
+          2,
+          37
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0074",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          3,
+          5
+        ]
+      },
+      "input": {
+        "n": 75
+      },
+      "observed": {
+        "value": [
+          3,
+          5
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0075",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          19
+        ]
+      },
+      "input": {
+        "n": 76
+      },
+      "observed": {
+        "value": [
+          2,
+          19
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0076",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          7,
+          11
+        ]
+      },
+      "input": {
+        "n": 77
+      },
+      "observed": {
+        "value": [
+          7,
+          11
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0077",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          3,
+          13
+        ]
+      },
+      "input": {
+        "n": 78
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          13
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0078",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          79
+        ]
+      },
+      "input": {
+        "n": 79
+      },
+      "observed": {
+        "value": [
+          79
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0079",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          5
+        ]
+      },
+      "input": {
+        "n": 80
+      },
+      "observed": {
+        "value": [
+          2,
+          5
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0080",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          3
+        ]
+      },
+      "input": {
+        "n": 81
+      },
+      "observed": {
+        "value": [
+          3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0081",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          41
+        ]
+      },
+      "input": {
+        "n": 82
+      },
+      "observed": {
+        "value": [
+          2,
+          41
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0082",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          83
+        ]
+      },
+      "input": {
+        "n": 83
+      },
+      "observed": {
+        "value": [
+          83
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0083",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          3,
+          7
+        ]
+      },
+      "input": {
+        "n": 84
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          7
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0084",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          5,
+          17
+        ]
+      },
+      "input": {
+        "n": 85
+      },
+      "observed": {
+        "value": [
+          5,
+          17
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0085",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          43
+        ]
+      },
+      "input": {
+        "n": 86
+      },
+      "observed": {
+        "value": [
+          2,
+          43
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0086",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          3,
+          29
+        ]
+      },
+      "input": {
+        "n": 87
+      },
+      "observed": {
+        "value": [
+          3,
+          29
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0087",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          11
+        ]
+      },
+      "input": {
+        "n": 88
+      },
+      "observed": {
+        "value": [
+          2,
+          11
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0088",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          89
+        ]
+      },
+      "input": {
+        "n": 89
+      },
+      "observed": {
+        "value": [
+          89
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0089",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          3,
+          5
+        ]
+      },
+      "input": {
+        "n": 90
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          5
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0090",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          7,
+          13
+        ]
+      },
+      "input": {
+        "n": 91
+      },
+      "observed": {
+        "value": [
+          7,
+          13
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0091",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          23
+        ]
+      },
+      "input": {
+        "n": 92
+      },
+      "observed": {
+        "value": [
+          2,
+          23
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0092",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          3,
+          31
+        ]
+      },
+      "input": {
+        "n": 93
+      },
+      "observed": {
+        "value": [
+          3,
+          31
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0093",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          47
+        ]
+      },
+      "input": {
+        "n": 94
+      },
+      "observed": {
+        "value": [
+          2,
+          47
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0094",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          5,
+          19
+        ]
+      },
+      "input": {
+        "n": 95
+      },
+      "observed": {
+        "value": [
+          5,
+          19
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0095",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          3
+        ]
+      },
+      "input": {
+        "n": 96
+      },
+      "observed": {
+        "value": [
+          2,
+          3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0096",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          97
+        ]
+      },
+      "input": {
+        "n": 97
+      },
+      "observed": {
+        "value": [
+          97
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0097",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          7
+        ]
+      },
+      "input": {
+        "n": 98
+      },
+      "observed": {
+        "value": [
+          2,
+          7
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0098",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          3,
+          11
+        ]
+      },
+      "input": {
+        "n": 99
+      },
+      "observed": {
+        "value": [
+          3,
+          11
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0099",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2,
+          5
+        ]
+      },
+      "input": {
+        "n": 100
+      },
+      "observed": {
+        "value": [
+          2,
+          5
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0100",
+      "category": "random",
+      "expected": {
+        "value": [
+          11
+        ]
+      },
+      "input": {
+        "n": 121
+      },
+      "observed": {
+        "value": [
+          11
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0101",
+      "category": "random",
+      "expected": {
+        "value": [
+          13
+        ]
+      },
+      "input": {
+        "n": 169
+      },
+      "observed": {
+        "value": [
+          13
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0102",
+      "category": "random",
+      "expected": {
+        "value": [
+          13,
+          17
+        ]
+      },
+      "input": {
+        "n": 221
+      },
+      "observed": {
+        "value": [
+          13,
+          17
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0103",
+      "category": "random",
+      "expected": {
+        "value": [
+          11,
+          31
+        ]
+      },
+      "input": {
+        "n": 341
+      },
+      "observed": {
+        "value": [
+          11,
+          31
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0104",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          11,
+          17
+        ]
+      },
+      "input": {
+        "n": 561
+      },
+      "observed": {
+        "value": [
+          3,
+          11,
+          17
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0105",
+      "category": "random",
+      "expected": {
+        "value": [
+          5,
+          13,
+          17
+        ]
+      },
+      "input": {
+        "n": 1105
+      },
+      "observed": {
+        "value": [
+          5,
+          13,
+          17
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0106",
+      "category": "random",
+      "expected": {
+        "value": [
+          7,
+          13,
+          19
+        ]
+      },
+      "input": {
+        "n": 1729
+      },
+      "observed": {
+        "value": [
+          7,
+          13,
+          19
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0107",
+      "category": "random",
+      "expected": {
+        "value": [
+          23,
+          89
+        ]
+      },
+      "input": {
+        "n": 2047
+      },
+      "observed": {
+        "value": [
+          23,
+          89
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0108",
+      "category": "random",
+      "expected": {
+        "value": [
+          2
+        ]
+      },
+      "input": {
+        "n": 4096
+      },
+      "observed": {
+        "value": [
+          2
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0109",
+      "category": "random",
+      "expected": {
+        "value": [
+          4999
+        ]
+      },
+      "input": {
+        "n": 4999
+      },
+      "observed": {
+        "value": [
+          4999
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0110",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5
+        ]
+      },
+      "input": {
+        "n": 5000
+      },
+      "observed": {
+        "value": [
+          2,
+          5
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0111",
+      "category": "random",
+      "expected": {
+        "value": [
+          2473
+        ]
+      },
+      "input": {
+        "n": 2473
+      },
+      "observed": {
+        "value": [
+          2473
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0112",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          13
+        ]
+      },
+      "input": {
+        "n": 702
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          13
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0113",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          7,
+          97
+        ]
+      },
+      "input": {
+        "n": 2716
+      },
+      "observed": {
+        "value": [
+          2,
+          7,
+          97
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0114",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          1109
+        ]
+      },
+      "input": {
+        "n": 3327
+      },
+      "observed": {
+        "value": [
+          3,
+          1109
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0115",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          73
+        ]
+      },
+      "input": {
+        "n": 3650
+      },
+      "observed": {
+        "value": [
+          2,
+          5,
+          73
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0116",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1847
+        ]
+      },
+      "input": {
+        "n": 3694
+      },
+      "observed": {
+        "value": [
+          2,
+          1847
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0117",
+      "category": "random",
+      "expected": {
+        "value": [
+          37,
+          61
+        ]
+      },
+      "input": {
+        "n": 2257
+      },
+      "observed": {
+        "value": [
+          37,
+          61
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0118",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          11
+        ]
+      },
+      "input": {
+        "n": 242
+      },
+      "observed": {
+        "value": [
+          2,
+          11
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0119",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          11,
+          43
+        ]
+      },
+      "input": {
+        "n": 3784
+      },
+      "observed": {
+        "value": [
+          2,
+          11,
+          43
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0120",
+      "category": "random",
+      "expected": {
+        "value": [
+          17,
+          131
+        ]
+      },
+      "input": {
+        "n": 2227
+      },
+      "observed": {
+        "value": [
+          17,
+          131
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0121",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          31,
+          53
+        ]
+      },
+      "input": {
+        "n": 4929
+      },
+      "observed": {
+        "value": [
+          3,
+          31,
+          53
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0122",
+      "category": "random",
+      "expected": {
+        "value": [
+          4337
+        ]
+      },
+      "input": {
+        "n": 4337
+      },
+      "observed": {
+        "value": [
+          4337
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0123",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          181
+        ]
+      },
+      "input": {
+        "n": 3620
+      },
+      "observed": {
+        "value": [
+          2,
+          5,
+          181
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0124",
+      "category": "random",
+      "expected": {
+        "value": [
+          29,
+          47
+        ]
+      },
+      "input": {
+        "n": 1363
+      },
+      "observed": {
+        "value": [
+          29,
+          47
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0125",
+      "category": "random",
+      "expected": {
+        "value": [
+          41,
+          47
+        ]
+      },
+      "input": {
+        "n": 1927
+      },
+      "observed": {
+        "value": [
+          41,
+          47
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0126",
+      "category": "random",
+      "expected": {
+        "value": [
+          41,
+          53
+        ]
+      },
+      "input": {
+        "n": 2173
+      },
+      "observed": {
+        "value": [
+          41,
+          53
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0127",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          7
+        ]
+      },
+      "input": {
+        "n": 168
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          7
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0128",
+      "category": "random",
+      "expected": {
+        "value": [
+          5,
+          743
+        ]
+      },
+      "input": {
+        "n": 3715
+      },
+      "observed": {
+        "value": [
+          5,
+          743
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0129",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          11,
+          53
+        ]
+      },
+      "input": {
+        "n": 1166
+      },
+      "observed": {
+        "value": [
+          2,
+          11,
+          53
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0130",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          7,
+          83
+        ]
+      },
+      "input": {
+        "n": 2324
+      },
+      "observed": {
+        "value": [
+          2,
+          7,
+          83
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0131",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          61
+        ]
+      },
+      "input": {
+        "n": 1464
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          61
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0132",
+      "category": "random",
+      "expected": {
+        "value": [
+          7,
+          431
+        ]
+      },
+      "input": {
+        "n": 3017
+      },
+      "observed": {
+        "value": [
+          7,
+          431
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0133",
+      "category": "random",
+      "expected": {
+        "value": [
+          5,
+          31
+        ]
+      },
+      "input": {
+        "n": 775
+      },
+      "observed": {
+        "value": [
+          5,
+          31
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0134",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          13,
+          19
+        ]
+      },
+      "input": {
+        "n": 4940
+      },
+      "observed": {
+        "value": [
+          2,
+          5,
+          13,
+          19
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0135",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          13,
+          23
+        ]
+      },
+      "input": {
+        "n": 2990
+      },
+      "observed": {
+        "value": [
+          2,
+          5,
+          13,
+          23
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0136",
+      "category": "random",
+      "expected": {
+        "value": [
+          5,
+          7,
+          17
+        ]
+      },
+      "input": {
+        "n": 4165
+      },
+      "observed": {
+        "value": [
+          5,
+          7,
+          17
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0137",
+      "category": "random",
+      "expected": {
+        "value": [
+          2797
+        ]
+      },
+      "input": {
+        "n": 2797
+      },
+      "observed": {
+        "value": [
+          2797
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0138",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1933
+        ]
+      },
+      "input": {
+        "n": 3866
+      },
+      "observed": {
+        "value": [
+          2,
+          1933
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0139",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          7
+        ]
+      },
+      "input": {
+        "n": 560
+      },
+      "observed": {
+        "value": [
+          2,
+          5,
+          7
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0140",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          593
+        ]
+      },
+      "input": {
+        "n": 4744
+      },
+      "observed": {
+        "value": [
+          2,
+          593
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0141",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          7,
+          71
+        ]
+      },
+      "input": {
+        "n": 4970
+      },
+      "observed": {
+        "value": [
+          2,
+          5,
+          7,
+          71
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0142",
+      "category": "random",
+      "expected": {
+        "value": [
+          4153
+        ]
+      },
+      "input": {
+        "n": 4153
+      },
+      "observed": {
+        "value": [
+          4153
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0143",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          113
+        ]
+      },
+      "input": {
+        "n": 3616
+      },
+      "observed": {
+        "value": [
+          2,
+          113
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0144",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          71
+        ]
+      },
+      "input": {
+        "n": 1917
+      },
+      "observed": {
+        "value": [
+          3,
+          71
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0145",
+      "category": "random",
+      "expected": {
+        "value": [
+          7,
+          61
+        ]
+      },
+      "input": {
+        "n": 2989
+      },
+      "observed": {
+        "value": [
+          7,
+          61
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0146",
+      "category": "random",
+      "expected": {
+        "value": [
+          17,
+          233
+        ]
+      },
+      "input": {
+        "n": 3961
+      },
+      "observed": {
+        "value": [
+          17,
+          233
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0147",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          17
+        ]
+      },
+      "input": {
+        "n": 4131
+      },
+      "observed": {
+        "value": [
+          3,
+          17
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0148",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          293
+        ]
+      },
+      "input": {
+        "n": 2637
+      },
+      "observed": {
+        "value": [
+          3,
+          293
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0149",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          607
+        ]
+      },
+      "input": {
+        "n": 1214
+      },
+      "observed": {
+        "value": [
+          2,
+          607
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0150",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          13
+        ]
+      },
+      "input": {
+        "n": 3042
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          13
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0151",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          17,
+          29
+        ]
+      },
+      "input": {
+        "n": 4930
+      },
+      "observed": {
+        "value": [
+          2,
+          5,
+          17,
+          29
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0152",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          71
+        ]
+      },
+      "input": {
+        "n": 2272
+      },
+      "observed": {
+        "value": [
+          2,
+          71
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0153",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          7
+        ]
+      },
+      "input": {
+        "n": 2058
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          7
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0154",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          7,
+          29
+        ]
+      },
+      "input": {
+        "n": 609
+      },
+      "observed": {
+        "value": [
+          3,
+          7,
+          29
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0155",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          11,
+          37
+        ]
+      },
+      "input": {
+        "n": 2442
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          11,
+          37
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0156",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          17,
+          19
+        ]
+      },
+      "input": {
+        "n": 3230
+      },
+      "observed": {
+        "value": [
+          2,
+          5,
+          17,
+          19
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0157",
+      "category": "random",
+      "expected": {
+        "value": [
+          5,
+          11,
+          73
+        ]
+      },
+      "input": {
+        "n": 4015
+      },
+      "observed": {
+        "value": [
+          5,
+          11,
+          73
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0158",
+      "category": "random",
+      "expected": {
+        "value": [
+          13,
+          379
+        ]
+      },
+      "input": {
+        "n": 4927
+      },
+      "observed": {
+        "value": [
+          13,
+          379
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0159",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          347
+        ]
+      },
+      "input": {
+        "n": 3123
+      },
+      "observed": {
+        "value": [
+          3,
+          347
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0160",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          23,
+          43
+        ]
+      },
+      "input": {
+        "n": 2967
+      },
+      "observed": {
+        "value": [
+          3,
+          23,
+          43
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0161",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1013
+        ]
+      },
+      "input": {
+        "n": 4052
+      },
+      "observed": {
+        "value": [
+          2,
+          1013
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0162",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          5,
+          7
+        ]
+      },
+      "input": {
+        "n": 2205
+      },
+      "observed": {
+        "value": [
+          3,
+          5,
+          7
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0163",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          7,
+          31
+        ]
+      },
+      "input": {
+        "n": 434
+      },
+      "observed": {
+        "value": [
+          2,
+          7,
+          31
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0164",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1091
+        ]
+      },
+      "input": {
+        "n": 2182
+      },
+      "observed": {
+        "value": [
+          2,
+          1091
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0165",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          13,
+          53
+        ]
+      },
+      "input": {
+        "n": 1378
+      },
+      "observed": {
+        "value": [
+          2,
+          13,
+          53
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0166",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          17,
+          43
+        ]
+      },
+      "input": {
+        "n": 2193
+      },
+      "observed": {
+        "value": [
+          3,
+          17,
+          43
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0167",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          691
+        ]
+      },
+      "input": {
+        "n": 4146
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          691
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0168",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          907
+        ]
+      },
+      "input": {
+        "n": 2721
+      },
+      "observed": {
+        "value": [
+          3,
+          907
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0169",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1709
+        ]
+      },
+      "input": {
+        "n": 3418
+      },
+      "observed": {
+        "value": [
+          2,
+          1709
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0170",
+      "category": "random",
+      "expected": {
+        "value": [
+          7,
+          23
+        ]
+      },
+      "input": {
+        "n": 1127
+      },
+      "observed": {
+        "value": [
+          7,
+          23
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0171",
+      "category": "random",
+      "expected": {
+        "value": [
+          101
+        ]
+      },
+      "input": {
+        "n": 101
+      },
+      "observed": {
+        "value": [
+          101
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0172",
+      "category": "random",
+      "expected": {
+        "value": [
+          11,
+          389
+        ]
+      },
+      "input": {
+        "n": 4279
+      },
+      "observed": {
+        "value": [
+          11,
+          389
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0173",
+      "category": "random",
+      "expected": {
+        "value": [
+          5,
+          13,
+          67
+        ]
+      },
+      "input": {
+        "n": 4355
+      },
+      "observed": {
+        "value": [
+          5,
+          13,
+          67
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0174",
+      "category": "random",
+      "expected": {
+        "value": [
+          857
+        ]
+      },
+      "input": {
+        "n": 857
+      },
+      "observed": {
+        "value": [
+          857
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0175",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          13,
+          19
+        ]
+      },
+      "input": {
+        "n": 2223
+      },
+      "observed": {
+        "value": [
+          3,
+          13,
+          19
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0176",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          19
+        ]
+      },
+      "input": {
+        "n": 912
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          19
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0177",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          79
+        ]
+      },
+      "input": {
+        "n": 1264
+      },
+      "observed": {
+        "value": [
+          2,
+          79
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0178",
+      "category": "random",
+      "expected": {
+        "value": [
+          23,
+          43
+        ]
+      },
+      "input": {
+        "n": 989
+      },
+      "observed": {
+        "value": [
+          23,
+          43
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0179",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          11,
+          29
+        ]
+      },
+      "input": {
+        "n": 2871
+      },
+      "observed": {
+        "value": [
+          3,
+          11,
+          29
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0180",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          11,
+          109
+        ]
+      },
+      "input": {
+        "n": 3597
+      },
+      "observed": {
+        "value": [
+          3,
+          11,
+          109
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0181",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          571
+        ]
+      },
+      "input": {
+        "n": 3426
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          571
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0182",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          311
+        ]
+      },
+      "input": {
+        "n": 3732
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          311
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0183",
+      "category": "random",
+      "expected": {
+        "value": [
+          23,
+          103
+        ]
+      },
+      "input": {
+        "n": 2369
+      },
+      "observed": {
+        "value": [
+          23,
+          103
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0184",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          751
+        ]
+      },
+      "input": {
+        "n": 3004
+      },
+      "observed": {
+        "value": [
+          2,
+          751
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0185",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          457
+        ]
+      },
+      "input": {
+        "n": 4570
+      },
+      "observed": {
+        "value": [
+          2,
+          5,
+          457
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0186",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          11,
+          19
+        ]
+      },
+      "input": {
+        "n": 3344
+      },
+      "observed": {
+        "value": [
+          2,
+          11,
+          19
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0187",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          83
+        ]
+      },
+      "input": {
+        "n": 332
+      },
+      "observed": {
+        "value": [
+          2,
+          83
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0188",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          13,
+          41
+        ]
+      },
+      "input": {
+        "n": 2132
+      },
+      "observed": {
+        "value": [
+          2,
+          13,
+          41
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0189",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          461
+        ]
+      },
+      "input": {
+        "n": 2766
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          461
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0190",
+      "category": "random",
+      "expected": {
+        "value": [
+          2539
+        ]
+      },
+      "input": {
+        "n": 2539
+      },
+      "observed": {
+        "value": [
+          2539
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0191",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          101
+        ]
+      },
+      "input": {
+        "n": 1616
+      },
+      "observed": {
+        "value": [
+          2,
+          101
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0192",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          103
+        ]
+      },
+      "input": {
+        "n": 618
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          103
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0193",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          11
+        ]
+      },
+      "input": {
+        "n": 3267
+      },
+      "observed": {
+        "value": [
+          3,
+          11
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0194",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          17,
+          43
+        ]
+      },
+      "input": {
+        "n": 4386
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          17,
+          43
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0195",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          233
+        ]
+      },
+      "input": {
+        "n": 2330
+      },
+      "observed": {
+        "value": [
+          2,
+          5,
+          233
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0196",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          17,
+          59
+        ]
+      },
+      "input": {
+        "n": 4012
+      },
+      "observed": {
+        "value": [
+          2,
+          17,
+          59
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0197",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          11,
+          131
+        ]
+      },
+      "input": {
+        "n": 4323
+      },
+      "observed": {
+        "value": [
+          3,
+          11,
+          131
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0198",
+      "category": "random",
+      "expected": {
+        "value": [
+          7,
+          17,
+          31
+        ]
+      },
+      "input": {
+        "n": 3689
+      },
+      "observed": {
+        "value": [
+          7,
+          17,
+          31
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0199",
+      "category": "random",
+      "expected": {
+        "value": [
+          5,
+          71
+        ]
+      },
+      "input": {
+        "n": 1775
+      },
+      "observed": {
+        "value": [
+          5,
+          71
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0200",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          433
+        ]
+      },
+      "input": {
+        "n": 3464
+      },
+      "observed": {
+        "value": [
+          2,
+          433
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0201",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          7
+        ]
+      },
+      "input": {
+        "n": 2646
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          7
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0202",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          7
+        ]
+      },
+      "input": {
+        "n": 140
+      },
+      "observed": {
+        "value": [
+          2,
+          5,
+          7
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0203",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          347
+        ]
+      },
+      "input": {
+        "n": 2776
+      },
+      "observed": {
+        "value": [
+          2,
+          347
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0204",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          389
+        ]
+      },
+      "input": {
+        "n": 1556
+      },
+      "observed": {
+        "value": [
+          2,
+          389
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0205",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          103
+        ]
+      },
+      "input": {
+        "n": 1854
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          103
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0206",
+      "category": "random",
+      "expected": {
+        "value": [
+          317
+        ]
+      },
+      "input": {
+        "n": 317
+      },
+      "observed": {
+        "value": [
+          317
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0207",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          241
+        ]
+      },
+      "input": {
+        "n": 1928
+      },
+      "observed": {
+        "value": [
+          2,
+          241
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0208",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          79
+        ]
+      },
+      "input": {
+        "n": 3792
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          79
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0209",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          7,
+          37
+        ]
+      },
+      "input": {
+        "n": 3108
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          7,
+          37
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0210",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          97
+        ]
+      },
+      "input": {
+        "n": 3880
+      },
+      "observed": {
+        "value": [
+          2,
+          5,
+          97
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0211",
+      "category": "random",
+      "expected": {
+        "value": [
+          5,
+          11,
+          13
+        ]
+      },
+      "input": {
+        "n": 3575
+      },
+      "observed": {
+        "value": [
+          5,
+          11,
+          13
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0212",
+      "category": "random",
+      "expected": {
+        "value": [
+          151
+        ]
+      },
+      "input": {
+        "n": 151
+      },
+      "observed": {
+        "value": [
+          151
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0213",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          19
+        ]
+      },
+      "input": {
+        "n": 2166
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          19
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0214",
+      "category": "random",
+      "expected": {
+        "value": [
+          5,
+          71
+        ]
+      },
+      "input": {
+        "n": 355
+      },
+      "observed": {
+        "value": [
+          5,
+          71
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0215",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          743
+        ]
+      },
+      "input": {
+        "n": 4458
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          743
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0216",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          821
+        ]
+      },
+      "input": {
+        "n": 3284
+      },
+      "observed": {
+        "value": [
+          2,
+          821
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0217",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          7,
+          79
+        ]
+      },
+      "input": {
+        "n": 2212
+      },
+      "observed": {
+        "value": [
+          2,
+          7,
+          79
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0218",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          67
+        ]
+      },
+      "input": {
+        "n": 804
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          67
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0219",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1567
+        ]
+      },
+      "input": {
+        "n": 3134
+      },
+      "observed": {
+        "value": [
+          2,
+          1567
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0220",
+      "category": "random",
+      "expected": {
+        "value": [
+          17,
+          103
+        ]
+      },
+      "input": {
+        "n": 1751
+      },
+      "observed": {
+        "value": [
+          17,
+          103
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0221",
+      "category": "random",
+      "expected": {
+        "value": [
+          4643
+        ]
+      },
+      "input": {
+        "n": 4643
+      },
+      "observed": {
+        "value": [
+          4643
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0222",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          383
+        ]
+      },
+      "input": {
+        "n": 1149
+      },
+      "observed": {
+        "value": [
+          3,
+          383
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0223",
+      "category": "random",
+      "expected": {
+        "value": [
+          5,
+          149
+        ]
+      },
+      "input": {
+        "n": 745
+      },
+      "observed": {
+        "value": [
+          5,
+          149
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0224",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          17
+        ]
+      },
+      "input": {
+        "n": 1700
+      },
+      "observed": {
+        "value": [
+          2,
+          5,
+          17
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0225",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          19,
+          29
+        ]
+      },
+      "input": {
+        "n": 1102
+      },
+      "observed": {
+        "value": [
+          2,
+          19,
+          29
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0226",
+      "category": "random",
+      "expected": {
+        "value": [
+          11,
+          257
+        ]
+      },
+      "input": {
+        "n": 2827
+      },
+      "observed": {
+        "value": [
+          11,
+          257
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0227",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          103
+        ]
+      },
+      "input": {
+        "n": 1236
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          103
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0228",
+      "category": "random",
+      "expected": {
+        "value": [
+          2393
+        ]
+      },
+      "input": {
+        "n": 2393
+      },
+      "observed": {
+        "value": [
+          2393
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0229",
+      "category": "random",
+      "expected": {
+        "value": [
+          43,
+          79
+        ]
+      },
+      "input": {
+        "n": 3397
+      },
+      "observed": {
+        "value": [
+          43,
+          79
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0230",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          29
+        ]
+      },
+      "input": {
+        "n": 1392
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          29
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0231",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          31,
+          43
+        ]
+      },
+      "input": {
+        "n": 2666
+      },
+      "observed": {
+        "value": [
+          2,
+          31,
+          43
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0232",
+      "category": "random",
+      "expected": {
+        "value": [
+          17,
+          281
+        ]
+      },
+      "input": {
+        "n": 4777
+      },
+      "observed": {
+        "value": [
+          17,
+          281
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0233",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          17,
+          73
+        ]
+      },
+      "input": {
+        "n": 4964
+      },
+      "observed": {
+        "value": [
+          2,
+          17,
+          73
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0234",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          137
+        ]
+      },
+      "input": {
+        "n": 3288
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          137
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0235",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          7,
+          17
+        ]
+      },
+      "input": {
+        "n": 238
+      },
+      "observed": {
+        "value": [
+          2,
+          7,
+          17
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0236",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          167
+        ]
+      },
+      "input": {
+        "n": 3006
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          167
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0237",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          107
+        ]
+      },
+      "input": {
+        "n": 856
+      },
+      "observed": {
+        "value": [
+          2,
+          107
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0238",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          7
+        ]
+      },
+      "input": {
+        "n": 2800
+      },
+      "observed": {
+        "value": [
+          2,
+          5,
+          7
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0239",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          569
+        ]
+      },
+      "input": {
+        "n": 3414
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          569
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0240",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          139
+        ]
+      },
+      "input": {
+        "n": 1668
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          139
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0241",
+      "category": "random",
+      "expected": {
+        "value": [
+          1193
+        ]
+      },
+      "input": {
+        "n": 1193
+      },
+      "observed": {
+        "value": [
+          1193
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0242",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1171
+        ]
+      },
+      "input": {
+        "n": 4684
+      },
+      "observed": {
+        "value": [
+          2,
+          1171
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0243",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          5,
+          67
+        ]
+      },
+      "input": {
+        "n": 1005
+      },
+      "observed": {
+        "value": [
+          3,
+          5,
+          67
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0244",
+      "category": "random",
+      "expected": {
+        "value": [
+          1093
+        ]
+      },
+      "input": {
+        "n": 1093
+      },
+      "observed": {
+        "value": [
+          1093
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0245",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          883
+        ]
+      },
+      "input": {
+        "n": 1766
+      },
+      "observed": {
+        "value": [
+          2,
+          883
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0246",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          163
+        ]
+      },
+      "input": {
+        "n": 1467
+      },
+      "observed": {
+        "value": [
+          3,
+          163
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0247",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          31,
+          37
+        ]
+      },
+      "input": {
+        "n": 2294
+      },
+      "observed": {
+        "value": [
+          2,
+          31,
+          37
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0248",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          149
+        ]
+      },
+      "input": {
+        "n": 1192
+      },
+      "observed": {
+        "value": [
+          2,
+          149
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0249",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          1087
+        ]
+      },
+      "input": {
+        "n": 3261
+      },
+      "observed": {
+        "value": [
+          3,
+          1087
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0250",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          331
+        ]
+      },
+      "input": {
+        "n": 2648
+      },
+      "observed": {
+        "value": [
+          2,
+          331
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0251",
+      "category": "random",
+      "expected": {
+        "value": [
+          1181
+        ]
+      },
+      "input": {
+        "n": 1181
+      },
+      "observed": {
+        "value": [
+          1181
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0252",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          89
+        ]
+      },
+      "input": {
+        "n": 890
+      },
+      "observed": {
+        "value": [
+          2,
+          5,
+          89
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0253",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          5,
+          29
+        ]
+      },
+      "input": {
+        "n": 3480
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          5,
+          29
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0254",
+      "category": "random",
+      "expected": {
+        "value": [
+          3037
+        ]
+      },
+      "input": {
+        "n": 3037
+      },
+      "observed": {
+        "value": [
+          3037
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0255",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1151
+        ]
+      },
+      "input": {
+        "n": 4604
+      },
+      "observed": {
+        "value": [
+          2,
+          1151
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0256",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          17,
+          67
+        ]
+      },
+      "input": {
+        "n": 4556
+      },
+      "observed": {
+        "value": [
+          2,
+          17,
+          67
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0257",
+      "category": "random",
+      "expected": {
+        "value": [
+          7,
+          197
+        ]
+      },
+      "input": {
+        "n": 1379
+      },
+      "observed": {
+        "value": [
+          7,
+          197
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.primefactors:0258",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          613
+        ]
+      },
+      "input": {
+        "n": 2452
+      },
+      "observed": {
+        "value": [
+          2,
+          613
+        ]
+      },
+      "passed": true
+    }
+  ],
+  "condition": "small_to_large",
+  "elapsed_seconds": 0.02930868199973702,
+  "group": "primes",
+  "library": "sympy",
+  "load_error": null,
+  "method_id": "sympy.primefactors",
+  "passed": 259,
+  "total": 259
+}

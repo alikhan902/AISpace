@@ -1,0 +1,2134 @@
+{
+  "brief": {
+    "contract": "a is a one-dimensional list of integers, possibly empty. Return Python int or list[int], as appropriate; no NumPy objects. All intermediate values fit signed int64. Use NumPy's default operation on the whole 1-D list, with dtype=int64.",
+    "documentation": "Sum of array elements over a given axis.\n\nParameters\n----------\na : array_like\n    Elements to sum.\naxis : None or int or tuple of ints, optional\n    Axis or axes along which a sum is performed.  The default,\n    axis=None, will sum all of the elements of the input array.  If\n    axis is negative it counts from the last to the first axis. If\n    axis is a tuple of ints, a sum is performed on all of the axes\n    specified in the tuple instead of a single axis or all the axes as\n    before.\ndtype : dtype, optional\n    The type of the returned array and of the accumulator in which the\n    elements are summed.  The dtype of `a` is used by default unless `a`\n    has an integer dtype of less precision than the default platform\n    integer.  In that case, if `a` is signed then the platform integer\n    is used while if `a` is unsigned then an unsigned integer of the\n    same precision as the platform integer is used.\nout : ndarray, optional\n    Alternative output array in which to place the result. It must have\n    the same shape as the expected output, but the type of the output\n    values will be cast if necessary.\nkeepdims : bool, optional\n    If this is set to True, the axes which are reduced are left\n    in the result as dimensions with size one. With this option,\n    the result will broadcast correctly against the input array.\n\n    If the default value is passed, then `keepdims` will not be\n    passed through to the `sum` method of sub-classes of\n    `ndarray`, however any non-default value will be.  If the\n    sub-class' method does not implement `keepdims` any\n    exceptions will be raised.\ninitial : scalar, optional\n    Starting value for the sum. See `~numpy.ufunc.reduce` for details.\nwhere : array_like of bool, optional\n    Elements to include in the sum. See `~numpy.ufunc.reduce` for details.\n\nReturns\n-------\nsum_along_axis : ndarray\n    An array with the same shape as `a`, with the specified\n    axis removed.   If `a` is a 0-d array, or if `axis` is None, a scalar\n    is returned.  If an output array is specified, a reference to\n    `out` is returned.\n\nSee Also\n--------\nndarray.sum : Equivalent method.\nadd: ``numpy.add.reduce`` equivalent function.\ncumsum : Cumulative sum of array elements.\ntrapezoid : Integration of array values using composite trapezoidal rule.\n\nmean, average\n\nNotes\n-----\nArithmetic is modular when using integer types, and no error is\nraised on overflow.\n\nThe sum of an empty array is the neutral element 0:\n\n>>> np.sum([])\n0.0\n\nFor floating point numbers the numerical precision of sum (and\n``np.add.reduce``) is in general limited by directly adding each number\nindividually to the result causing rounding errors in every step.\nHowever, often numpy will use a  numerically better approach (partial\npairwise summation) leading to improved precision in many use-cases.\nThis improved precision is always provided when no ``axis`` is given.\nWhen ``axis`` is given, it will depend on which axis is summed.\nTechnically, to provide the best speed possible, the improved precision\nis only used when the summation is along the fast axis in memory.\nNote that the exact precision may vary depending on other parameters.\nIn contrast to NumPy, Python's ``math.fsum`` function uses a slower but\nmore precise approach to summation.\nEspecially when summing a large number of lower precision floating point\nnumbers, such as ``float32``, numerical errors can become significant.\nIn such cases it can be advisable to use `dtype=np.float64` to use a higher\nprecision for the output.\n\nExamples\n--------\n>>> import numpy as np\n>>> np.sum([0.5, 1.5])\n2.0\n>>> np.sum([0.5, 0.7, 0.2, 1.5], dtype=np.int32)\nnp.int32(1)\n>>> np.sum([[0, 1], [0, 5]])\n6\n>>> np.sum([[0, 1], [0, 5]], axis=0)\narray([0, 6])\n>>> np.sum([[0, 1], [0, 5]], axis=1)\narray([1, 5])\n>>> np.sum([[0, 1], [np.nan, 5]], where=[False, True], axis=1)\narray([1., 5.])\n\nIf the accumulator is too small, overflow occurs:\n\n>>> np.ones(128, dtype=np.int8).sum(dtype=np.int8)\nnp.int8(-128)\n\nYou can also start the sum with a value other than zero:\n\n>>> np.sum([10], initial=5)\n15",
+    "documentation_truncated": false,
+    "group": "reductions",
+    "id": "numpy.sum",
+    "library": "numpy",
+    "name": "sum",
+    "signature": "solve(a)",
+    "version": "2.5.4"
+  },
+  "cases": [
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.sum:0000",
+      "input": {
+        "a": []
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.sum:0001",
+      "input": {
+        "a": [
+          0
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.sum:0002",
+      "input": {
+        "a": [
+          1
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.sum:0003",
+      "input": {
+        "a": [
+          -1
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.sum:0004",
+      "input": {
+        "a": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.sum:0005",
+      "input": {
+        "a": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": -6
+      },
+      "id": "numpy.sum:0006",
+      "input": {
+        "a": [
+          -3,
+          -2,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.sum:0007",
+      "input": {
+        "a": [
+          3,
+          -1,
+          0,
+          3,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 15
+      },
+      "id": "numpy.sum:0008",
+      "input": {
+        "a": [
+          5,
+          4,
+          3,
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.sum:0009",
+      "input": {
+        "a": [
+          -2,
+          2,
+          -2,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.sum:0010",
+      "input": {
+        "a": [
+          -2,
+          1,
+          -3,
+          -3,
+          1,
+          1,
+          2,
+          1,
+          2,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 7
+      },
+      "id": "numpy.sum:0011",
+      "input": {
+        "a": [
+          1,
+          -2,
+          2,
+          -2,
+          0,
+          -1,
+          3,
+          3,
+          -1,
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.sum:0012",
+      "input": {
+        "a": [
+          0,
+          3,
+          -3,
+          2,
+          3,
+          -2,
+          -3,
+          1,
+          2,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.sum:0013",
+      "input": {
+        "a": [
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.sum:0014",
+      "input": {
+        "a": [
+          -1,
+          1,
+          -1,
+          0,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.sum:0015",
+      "input": {
+        "a": [
+          -1,
+          0,
+          3,
+          1,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.sum:0016",
+      "input": {
+        "a": [
+          2,
+          3,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -3
+      },
+      "id": "numpy.sum:0017",
+      "input": {
+        "a": [
+          -2,
+          -2,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.sum:0018",
+      "input": {
+        "a": [
+          1,
+          -2,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -9
+      },
+      "id": "numpy.sum:0019",
+      "input": {
+        "a": [
+          3,
+          -2,
+          3,
+          -1,
+          -3,
+          0,
+          0,
+          -3,
+          -2,
+          0,
+          -3,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -7
+      },
+      "id": "numpy.sum:0020",
+      "input": {
+        "a": [
+          1,
+          -2,
+          -3,
+          -1,
+          0,
+          -2,
+          -3,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.sum:0021",
+      "input": {
+        "a": [
+          -1,
+          0,
+          3,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.sum:0022",
+      "input": {
+        "a": [
+          0,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -5
+      },
+      "id": "numpy.sum:0023",
+      "input": {
+        "a": [
+          3,
+          2,
+          -2,
+          -2,
+          -2,
+          1,
+          -3,
+          -3,
+          -1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.sum:0024",
+      "input": {
+        "a": [
+          2,
+          -3,
+          2,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.sum:0025",
+      "input": {
+        "a": [
+          -1,
+          2,
+          0,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.sum:0026",
+      "input": {
+        "a": [
+          1,
+          -2,
+          3,
+          -2,
+          2,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -6
+      },
+      "id": "numpy.sum:0027",
+      "input": {
+        "a": [
+          0,
+          -3,
+          -2,
+          0,
+          -2,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -4
+      },
+      "id": "numpy.sum:0028",
+      "input": {
+        "a": [
+          1,
+          0,
+          -1,
+          2,
+          -1,
+          0,
+          -2,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -5
+      },
+      "id": "numpy.sum:0029",
+      "input": {
+        "a": [
+          -1,
+          0,
+          2,
+          1,
+          -1,
+          -2,
+          1,
+          -3,
+          -1,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -3
+      },
+      "id": "numpy.sum:0030",
+      "input": {
+        "a": [
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.sum:0031",
+      "input": {
+        "a": [
+          3,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -2
+      },
+      "id": "numpy.sum:0032",
+      "input": {
+        "a": [
+          0,
+          3,
+          -3,
+          2,
+          -2,
+          0,
+          -1,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.sum:0033",
+      "input": {
+        "a": [
+          2,
+          -1,
+          -2,
+          3,
+          2,
+          -3,
+          -1,
+          2,
+          2,
+          -2,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -6
+      },
+      "id": "numpy.sum:0034",
+      "input": {
+        "a": [
+          -3,
+          -3,
+          0,
+          -3,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -3
+      },
+      "id": "numpy.sum:0035",
+      "input": {
+        "a": [
+          -1,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 7
+      },
+      "id": "numpy.sum:0036",
+      "input": {
+        "a": [
+          1,
+          1,
+          -2,
+          2,
+          0,
+          2,
+          -2,
+          -3,
+          3,
+          0,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -2
+      },
+      "id": "numpy.sum:0037",
+      "input": {
+        "a": [
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.sum:0038",
+      "input": {
+        "a": [
+          2,
+          1,
+          0,
+          1,
+          0,
+          -2,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.sum:0039",
+      "input": {
+        "a": [
+          -2,
+          2,
+          1,
+          -2,
+          3,
+          0,
+          0,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.sum:0040",
+      "input": {
+        "a": [
+          1,
+          1,
+          0,
+          -2,
+          3,
+          2,
+          -1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.sum:0041",
+      "input": {
+        "a": [
+          -2,
+          0,
+          0,
+          2,
+          3,
+          2,
+          -3,
+          3,
+          -2,
+          1,
+          -3,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.sum:0042",
+      "input": {
+        "a": [
+          1,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -6
+      },
+      "id": "numpy.sum:0043",
+      "input": {
+        "a": [
+          -3,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -7
+      },
+      "id": "numpy.sum:0044",
+      "input": {
+        "a": [
+          -1,
+          -1,
+          -3,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -6
+      },
+      "id": "numpy.sum:0045",
+      "input": {
+        "a": [
+          -3,
+          0,
+          2,
+          -2,
+          -3,
+          2,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.sum:0046",
+      "input": {
+        "a": [
+          -1,
+          1,
+          2,
+          -3,
+          -3,
+          2,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.sum:0047",
+      "input": {
+        "a": [
+          2,
+          1,
+          -3,
+          -1,
+          0,
+          0,
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.sum:0048",
+      "input": {
+        "a": [
+          -1,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -3
+      },
+      "id": "numpy.sum:0049",
+      "input": {
+        "a": [
+          3,
+          -3,
+          -3,
+          2,
+          -2,
+          -3,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.sum:0050",
+      "input": {
+        "a": [
+          -2,
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -5
+      },
+      "id": "numpy.sum:0051",
+      "input": {
+        "a": [
+          0,
+          3,
+          -1,
+          1,
+          -3,
+          1,
+          -3,
+          -2,
+          -2,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 7
+      },
+      "id": "numpy.sum:0052",
+      "input": {
+        "a": [
+          3,
+          -1,
+          1,
+          0,
+          2,
+          1,
+          3,
+          -3,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.sum:0053",
+      "input": {
+        "a": [
+          0,
+          3,
+          1,
+          0,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -5
+      },
+      "id": "numpy.sum:0054",
+      "input": {
+        "a": [
+          2,
+          0,
+          -1,
+          -3,
+          1,
+          1,
+          1,
+          -3,
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.sum:0055",
+      "input": {
+        "a": [
+          0,
+          0,
+          -2,
+          2,
+          3,
+          3,
+          1,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -3
+      },
+      "id": "numpy.sum:0056",
+      "input": {
+        "a": [
+          1,
+          -3,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 9
+      },
+      "id": "numpy.sum:0057",
+      "input": {
+        "a": [
+          3,
+          1,
+          0,
+          2,
+          -2,
+          3,
+          -1,
+          2,
+          1,
+          -2,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -8
+      },
+      "id": "numpy.sum:0058",
+      "input": {
+        "a": [
+          -2,
+          1,
+          -3,
+          1,
+          -2,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -11
+      },
+      "id": "numpy.sum:0059",
+      "input": {
+        "a": [
+          -1,
+          -2,
+          1,
+          -1,
+          -2,
+          -1,
+          -2,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.sum:0060",
+      "input": {
+        "a": [
+          -1,
+          3,
+          -2,
+          3,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.sum:0061",
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          -3,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.sum:0062",
+      "input": {
+        "a": [
+          -1,
+          -2,
+          3,
+          2,
+          0,
+          -1,
+          2,
+          -2,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -5
+      },
+      "id": "numpy.sum:0063",
+      "input": {
+        "a": [
+          -1,
+          -3,
+          0,
+          -2,
+          0,
+          -3,
+          -1,
+          2,
+          3,
+          2,
+          -1,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.sum:0064",
+      "input": {
+        "a": [
+          -2,
+          1,
+          0,
+          -1,
+          3,
+          1,
+          3,
+          -2,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 17
+      },
+      "id": "numpy.sum:0065",
+      "input": {
+        "a": [
+          2,
+          3,
+          0,
+          1,
+          2,
+          3,
+          1,
+          3,
+          -2,
+          3,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -8
+      },
+      "id": "numpy.sum:0066",
+      "input": {
+        "a": [
+          -1,
+          -1,
+          -2,
+          -1,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.sum:0067",
+      "input": {
+        "a": [
+          0,
+          2,
+          3,
+          0,
+          3,
+          0,
+          -3,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 7
+      },
+      "id": "numpy.sum:0068",
+      "input": {
+        "a": [
+          3,
+          -1,
+          1,
+          3,
+          3,
+          -3,
+          0,
+          -1,
+          3,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -8
+      },
+      "id": "numpy.sum:0069",
+      "input": {
+        "a": [
+          -2,
+          -3,
+          -3,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.sum:0070",
+      "input": {
+        "a": [
+          0,
+          1,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 12
+      },
+      "id": "numpy.sum:0071",
+      "input": {
+        "a": [
+          2,
+          -1,
+          3,
+          2,
+          1,
+          3,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.sum:0072",
+      "input": {
+        "a": [
+          1,
+          -2,
+          1,
+          0,
+          -1,
+          2,
+          -1,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.sum:0073",
+      "input": {
+        "a": [
+          -3,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -7
+      },
+      "id": "numpy.sum:0074",
+      "input": {
+        "a": [
+          1,
+          -1,
+          -3,
+          -2,
+          1,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.sum:0075",
+      "input": {
+        "a": [
+          3,
+          -1,
+          3,
+          -3,
+          -2,
+          2,
+          -3,
+          3,
+          -1,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -3
+      },
+      "id": "numpy.sum:0076",
+      "input": {
+        "a": [
+          -3,
+          -1,
+          -3,
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -6
+      },
+      "id": "numpy.sum:0077",
+      "input": {
+        "a": [
+          2,
+          -1,
+          -1,
+          -1,
+          0,
+          3,
+          -3,
+          -1,
+          -2,
+          -1,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.sum:0078",
+      "input": {
+        "a": [
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.sum:0079",
+      "input": {
+        "a": [
+          2,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.sum:0080",
+      "input": {
+        "a": [
+          -3,
+          1,
+          3,
+          2,
+          3,
+          -3,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.sum:0081",
+      "input": {
+        "a": [
+          3,
+          -2,
+          3,
+          -1,
+          1,
+          0,
+          -1,
+          -1,
+          -1,
+          3,
+          -2,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.sum:0082",
+      "input": {
+        "a": [
+          -3,
+          1,
+          -2,
+          -1,
+          2,
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.sum:0083",
+      "input": {
+        "a": [
+          0,
+          -3,
+          -2,
+          -1,
+          3,
+          0,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 7
+      },
+      "id": "numpy.sum:0084",
+      "input": {
+        "a": [
+          3,
+          -2,
+          2,
+          0,
+          3,
+          3,
+          -1,
+          2,
+          -2,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.sum:0085",
+      "input": {
+        "a": [
+          -2,
+          0,
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -16
+      },
+      "id": "numpy.sum:0086",
+      "input": {
+        "a": [
+          1,
+          -3,
+          0,
+          -2,
+          0,
+          -2,
+          -1,
+          -3,
+          -3,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.sum:0087",
+      "input": {
+        "a": [
+          2,
+          1,
+          -3,
+          -3,
+          3,
+          2,
+          3,
+          2,
+          -1,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.sum:0088",
+      "input": {
+        "a": [
+          2,
+          3,
+          -2,
+          1,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 13
+      },
+      "id": "numpy.sum:0089",
+      "input": {
+        "a": [
+          2,
+          3,
+          3,
+          -2,
+          -2,
+          3,
+          3,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.sum:0090",
+      "input": {
+        "a": [
+          -1,
+          -1,
+          -3,
+          3,
+          -3,
+          3,
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -6
+      },
+      "id": "numpy.sum:0091",
+      "input": {
+        "a": [
+          -3,
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -3
+      },
+      "id": "numpy.sum:0092",
+      "input": {
+        "a": [
+          1,
+          0,
+          -3,
+          3,
+          -3,
+          0,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.sum:0093",
+      "input": {
+        "a": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.sum:0094",
+      "input": {
+        "a": [
+          3,
+          1,
+          -3,
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.sum:0095",
+      "input": {
+        "a": [
+          3,
+          1,
+          0,
+          3,
+          -2,
+          -3,
+          3,
+          -2,
+          -1,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -3
+      },
+      "id": "numpy.sum:0096",
+      "input": {
+        "a": [
+          -1,
+          2,
+          -1,
+          1,
+          -2,
+          1,
+          -3,
+          3,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -3
+      },
+      "id": "numpy.sum:0097",
+      "input": {
+        "a": [
+          2,
+          -3,
+          0,
+          2,
+          0,
+          -2,
+          1,
+          -1,
+          3,
+          -1,
+          -3,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -6
+      },
+      "id": "numpy.sum:0098",
+      "input": {
+        "a": [
+          -3,
+          -1,
+          1,
+          1,
+          3,
+          -3,
+          -2,
+          -1,
+          0,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.sum:0099",
+      "input": {
+        "a": [
+          -2,
+          1,
+          -1,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.sum:0100",
+      "input": {
+        "a": [
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -7
+      },
+      "id": "numpy.sum:0101",
+      "input": {
+        "a": [
+          -2,
+          -3,
+          3,
+          -1,
+          -2,
+          2,
+          -2,
+          -2,
+          -3,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.sum:0102",
+      "input": {
+        "a": [
+          3,
+          -1,
+          3,
+          -2,
+          1,
+          0,
+          -2,
+          -1,
+          -2,
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.sum:0103",
+      "input": {
+        "a": [
+          0,
+          2,
+          -3,
+          0,
+          -2,
+          -2,
+          2,
+          0,
+          1,
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.sum:0104",
+      "input": {
+        "a": [
+          1,
+          1,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -2
+      },
+      "id": "numpy.sum:0105",
+      "input": {
+        "a": [
+          0,
+          1,
+          0,
+          1,
+          -2,
+          0,
+          -2,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.sum:0106",
+      "input": {
+        "a": [
+          0,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -5
+      },
+      "id": "numpy.sum:0107",
+      "input": {
+        "a": [
+          1,
+          -3,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 10
+      },
+      "id": "numpy.sum:0108",
+      "input": {
+        "a": [
+          1,
+          1,
+          3,
+          2,
+          -1,
+          -2,
+          -1,
+          2,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -10
+      },
+      "id": "numpy.sum:0109",
+      "input": {
+        "a": [
+          3,
+          -1,
+          -3,
+          -3,
+          -2,
+          -1,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.sum:0110",
+      "input": {
+        "a": [
+          -1,
+          -3,
+          3,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "id": "numpy.sum:0111",
+      "input": {
+        "a": [
+          3,
+          1,
+          -3,
+          1,
+          3,
+          -2,
+          2,
+          2,
+          2,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.sum:0112",
+      "input": {
+        "a": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.sum:0113",
+      "input": {
+        "a": [
+          -3,
+          -3,
+          -1,
+          3,
+          0,
+          3,
+          3,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 11
+      },
+      "id": "numpy.sum:0114",
+      "input": {
+        "a": [
+          3,
+          3,
+          0,
+          -3,
+          1,
+          3,
+          -2,
+          -1,
+          -1,
+          3,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.sum:0115",
+      "input": {
+        "a": [
+          0,
+          0,
+          -1,
+          -2,
+          3,
+          -3,
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -11
+      },
+      "id": "numpy.sum:0116",
+      "input": {
+        "a": [
+          -2,
+          3,
+          -3,
+          -3,
+          -3,
+          -1,
+          0,
+          1,
+          -3,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.sum:0117",
+      "input": {
+        "a": [
+          -3,
+          2,
+          -1,
+          0,
+          -3,
+          1,
+          3,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.sum:0118",
+      "input": {
+        "a": [
+          -2,
+          1,
+          1,
+          -2,
+          0,
+          0,
+          3,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.sum:0119",
+      "input": {
+        "a": [
+          -2,
+          2,
+          1,
+          2,
+          1,
+          3,
+          1,
+          -2,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.sum:0120",
+      "input": {
+        "a": [
+          2,
+          -2,
+          0
+        ]
+      }
+    }
+  ]
+}

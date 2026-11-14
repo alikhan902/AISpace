@@ -1,0 +1,26 @@
+{
+  "algorithm": [
+    "Perform a Breadth-First Search (BFS) starting from the given node to explore all reachable vertices in the undirected graph.",
+    "Track visited vertices to avoid cycles and ensure each vertex is processed once.",
+    "Collect all vertices visited during BFS to form the connected component.",
+    "Sort the collected vertices in ascending order to produce the output list."
+  ],
+  "constraints": [
+    "The graph is simple and undirected with vertices 0 to n-1",
+    "Edges are distinct and satisfy 0<=u<v<n",
+    "The graph may contain isolated vertices",
+    "The output must be a sorted list of vertex strings",
+    "The function assumes the graph is undirected and does not handle directed graphs"
+  ],
+  "edge_cases": [
+    "Graph with a single node (no edges): returns [str(node)]",
+    "Node is isolated (no edges connected to it): returns [str(node)]",
+    "Graph with multiple disconnected components: returns only the component containing the specified node",
+    "Input node is the only node in the graph: returns [str(node)]"
+  ],
+  "inputs": "n: integer >= 1; edges: list of distinct [u,v] pairs with 0<=u<v<n; node: valid vertex in the graph",
+  "method_id": "networkx.node_connected_component",
+  "output": "Ascending list of vertices (as strings) in the connected component containing the specified node.",
+  "purpose": "Return the ascending list of vertices in the connected component of a simple undirected graph that contains a specified node, including isolated vertices.",
+  "signature": "solve(n, edges, node)"
+}

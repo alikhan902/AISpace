@@ -1,0 +1,4468 @@
+{
+  "all_pass": false,
+  "cases": [
+    {
+      "case_id": "sympy.binomial:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -2,
+        "n": 0
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -1,
+        "n": 0
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0002",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 0,
+        "n": 0
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0003",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 1,
+        "n": 0
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0004",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 2,
+        "n": 0
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0005",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -2,
+        "n": 1
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0006",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -1,
+        "n": 1
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0007",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 0,
+        "n": 1
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0008",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 1,
+        "n": 1
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0009",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 2,
+        "n": 1
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0010",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 3,
+        "n": 1
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0011",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -2,
+        "n": 2
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0012",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -1,
+        "n": 2
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0013",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 0,
+        "n": 2
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0014",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "k": 1,
+        "n": 2
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0015",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 2,
+        "n": 2
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0016",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 3,
+        "n": 2
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0017",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 4,
+        "n": 2
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0018",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -2,
+        "n": 3
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0019",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -1,
+        "n": 3
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0020",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 0,
+        "n": 3
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0021",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "k": 1,
+        "n": 3
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0022",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "k": 2,
+        "n": 3
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0023",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 3,
+        "n": 3
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0024",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 4,
+        "n": 3
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0025",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 5,
+        "n": 3
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0026",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -2,
+        "n": 4
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0027",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -1,
+        "n": 4
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0028",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 0,
+        "n": 4
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0029",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 1,
+        "n": 4
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0030",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "k": 2,
+        "n": 4
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0031",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 3,
+        "n": 4
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0032",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 4,
+        "n": 4
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0033",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 5,
+        "n": 4
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0034",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 6,
+        "n": 4
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0035",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -2,
+        "n": 5
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0036",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -1,
+        "n": 5
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0037",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 0,
+        "n": 5
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0038",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "k": 1,
+        "n": 5
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0039",
+      "category": "exhaustive",
+      "expected": {
+        "value": 10
+      },
+      "input": {
+        "k": 2,
+        "n": 5
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0040",
+      "category": "exhaustive",
+      "expected": {
+        "value": 10
+      },
+      "input": {
+        "k": 3,
+        "n": 5
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0041",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "k": 4,
+        "n": 5
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0042",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 5,
+        "n": 5
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0043",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 6,
+        "n": 5
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0044",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 7,
+        "n": 5
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0045",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -2,
+        "n": 6
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0046",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -1,
+        "n": 6
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0047",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 0,
+        "n": 6
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0048",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "k": 1,
+        "n": 6
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0049",
+      "category": "exhaustive",
+      "expected": {
+        "value": 15
+      },
+      "input": {
+        "k": 2,
+        "n": 6
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0050",
+      "category": "exhaustive",
+      "expected": {
+        "value": 20
+      },
+      "input": {
+        "k": 3,
+        "n": 6
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0051",
+      "category": "exhaustive",
+      "expected": {
+        "value": 15
+      },
+      "input": {
+        "k": 4,
+        "n": 6
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0052",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "k": 5,
+        "n": 6
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0053",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 6,
+        "n": 6
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0054",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 7,
+        "n": 6
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0055",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 8,
+        "n": 6
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0056",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -2,
+        "n": 7
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0057",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -1,
+        "n": 7
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0058",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 0,
+        "n": 7
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0059",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "k": 1,
+        "n": 7
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0060",
+      "category": "exhaustive",
+      "expected": {
+        "value": 21
+      },
+      "input": {
+        "k": 2,
+        "n": 7
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0061",
+      "category": "exhaustive",
+      "expected": {
+        "value": 35
+      },
+      "input": {
+        "k": 3,
+        "n": 7
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0062",
+      "category": "exhaustive",
+      "expected": {
+        "value": 35
+      },
+      "input": {
+        "k": 4,
+        "n": 7
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0063",
+      "category": "exhaustive",
+      "expected": {
+        "value": 21
+      },
+      "input": {
+        "k": 5,
+        "n": 7
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0064",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "k": 6,
+        "n": 7
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0065",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 7,
+        "n": 7
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0066",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 8,
+        "n": 7
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0067",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 9,
+        "n": 7
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0068",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -2,
+        "n": 8
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0069",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -1,
+        "n": 8
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0070",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 0,
+        "n": 8
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0071",
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "k": 1,
+        "n": 8
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0072",
+      "category": "exhaustive",
+      "expected": {
+        "value": 28
+      },
+      "input": {
+        "k": 2,
+        "n": 8
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0073",
+      "category": "exhaustive",
+      "expected": {
+        "value": 56
+      },
+      "input": {
+        "k": 3,
+        "n": 8
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0074",
+      "category": "exhaustive",
+      "expected": {
+        "value": 70
+      },
+      "input": {
+        "k": 4,
+        "n": 8
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0075",
+      "category": "exhaustive",
+      "expected": {
+        "value": 56
+      },
+      "input": {
+        "k": 5,
+        "n": 8
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0076",
+      "category": "exhaustive",
+      "expected": {
+        "value": 28
+      },
+      "input": {
+        "k": 6,
+        "n": 8
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0077",
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "k": 7,
+        "n": 8
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0078",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 8,
+        "n": 8
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0079",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 9,
+        "n": 8
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0080",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 10,
+        "n": 8
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0081",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -2,
+        "n": 9
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0082",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -1,
+        "n": 9
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0083",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 0,
+        "n": 9
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0084",
+      "category": "exhaustive",
+      "expected": {
+        "value": 9
+      },
+      "input": {
+        "k": 1,
+        "n": 9
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0085",
+      "category": "exhaustive",
+      "expected": {
+        "value": 36
+      },
+      "input": {
+        "k": 2,
+        "n": 9
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0086",
+      "category": "exhaustive",
+      "expected": {
+        "value": 84
+      },
+      "input": {
+        "k": 3,
+        "n": 9
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0087",
+      "category": "exhaustive",
+      "expected": {
+        "value": 126
+      },
+      "input": {
+        "k": 4,
+        "n": 9
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0088",
+      "category": "exhaustive",
+      "expected": {
+        "value": 126
+      },
+      "input": {
+        "k": 5,
+        "n": 9
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0089",
+      "category": "exhaustive",
+      "expected": {
+        "value": 84
+      },
+      "input": {
+        "k": 6,
+        "n": 9
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0090",
+      "category": "exhaustive",
+      "expected": {
+        "value": 36
+      },
+      "input": {
+        "k": 7,
+        "n": 9
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0091",
+      "category": "exhaustive",
+      "expected": {
+        "value": 9
+      },
+      "input": {
+        "k": 8,
+        "n": 9
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0092",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 9,
+        "n": 9
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0093",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 10,
+        "n": 9
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0094",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 11,
+        "n": 9
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0095",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -2,
+        "n": 10
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0096",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -1,
+        "n": 10
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0097",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 0,
+        "n": 10
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0098",
+      "category": "exhaustive",
+      "expected": {
+        "value": 10
+      },
+      "input": {
+        "k": 1,
+        "n": 10
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0099",
+      "category": "exhaustive",
+      "expected": {
+        "value": 45
+      },
+      "input": {
+        "k": 2,
+        "n": 10
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0100",
+      "category": "exhaustive",
+      "expected": {
+        "value": 120
+      },
+      "input": {
+        "k": 3,
+        "n": 10
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0101",
+      "category": "exhaustive",
+      "expected": {
+        "value": 210
+      },
+      "input": {
+        "k": 4,
+        "n": 10
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0102",
+      "category": "exhaustive",
+      "expected": {
+        "value": 252
+      },
+      "input": {
+        "k": 5,
+        "n": 10
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0103",
+      "category": "exhaustive",
+      "expected": {
+        "value": 210
+      },
+      "input": {
+        "k": 6,
+        "n": 10
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0104",
+      "category": "exhaustive",
+      "expected": {
+        "value": 120
+      },
+      "input": {
+        "k": 7,
+        "n": 10
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0105",
+      "category": "exhaustive",
+      "expected": {
+        "value": 45
+      },
+      "input": {
+        "k": 8,
+        "n": 10
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0106",
+      "category": "exhaustive",
+      "expected": {
+        "value": 10
+      },
+      "input": {
+        "k": 9,
+        "n": 10
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0107",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 10,
+        "n": 10
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0108",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 11,
+        "n": 10
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0109",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 12,
+        "n": 10
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0110",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -2,
+        "n": 11
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0111",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -1,
+        "n": 11
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0112",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 0,
+        "n": 11
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0113",
+      "category": "exhaustive",
+      "expected": {
+        "value": 11
+      },
+      "input": {
+        "k": 1,
+        "n": 11
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0114",
+      "category": "exhaustive",
+      "expected": {
+        "value": 55
+      },
+      "input": {
+        "k": 2,
+        "n": 11
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0115",
+      "category": "exhaustive",
+      "expected": {
+        "value": 165
+      },
+      "input": {
+        "k": 3,
+        "n": 11
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0116",
+      "category": "exhaustive",
+      "expected": {
+        "value": 330
+      },
+      "input": {
+        "k": 4,
+        "n": 11
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0117",
+      "category": "exhaustive",
+      "expected": {
+        "value": 462
+      },
+      "input": {
+        "k": 5,
+        "n": 11
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0118",
+      "category": "exhaustive",
+      "expected": {
+        "value": 462
+      },
+      "input": {
+        "k": 6,
+        "n": 11
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0119",
+      "category": "exhaustive",
+      "expected": {
+        "value": 330
+      },
+      "input": {
+        "k": 7,
+        "n": 11
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0120",
+      "category": "exhaustive",
+      "expected": {
+        "value": 165
+      },
+      "input": {
+        "k": 8,
+        "n": 11
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0121",
+      "category": "exhaustive",
+      "expected": {
+        "value": 55
+      },
+      "input": {
+        "k": 9,
+        "n": 11
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0122",
+      "category": "exhaustive",
+      "expected": {
+        "value": 11
+      },
+      "input": {
+        "k": 10,
+        "n": 11
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0123",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 11,
+        "n": 11
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0124",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 12,
+        "n": 11
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0125",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 13,
+        "n": 11
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0126",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -2,
+        "n": 12
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0127",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -1,
+        "n": 12
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0128",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 0,
+        "n": 12
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0129",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "k": 1,
+        "n": 12
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0130",
+      "category": "exhaustive",
+      "expected": {
+        "value": 66
+      },
+      "input": {
+        "k": 2,
+        "n": 12
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0131",
+      "category": "exhaustive",
+      "expected": {
+        "value": 220
+      },
+      "input": {
+        "k": 3,
+        "n": 12
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0132",
+      "category": "exhaustive",
+      "expected": {
+        "value": 495
+      },
+      "input": {
+        "k": 4,
+        "n": 12
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0133",
+      "category": "exhaustive",
+      "expected": {
+        "value": 792
+      },
+      "input": {
+        "k": 5,
+        "n": 12
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0134",
+      "category": "exhaustive",
+      "expected": {
+        "value": 924
+      },
+      "input": {
+        "k": 6,
+        "n": 12
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0135",
+      "category": "exhaustive",
+      "expected": {
+        "value": 792
+      },
+      "input": {
+        "k": 7,
+        "n": 12
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0136",
+      "category": "exhaustive",
+      "expected": {
+        "value": 495
+      },
+      "input": {
+        "k": 8,
+        "n": 12
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0137",
+      "category": "exhaustive",
+      "expected": {
+        "value": 220
+      },
+      "input": {
+        "k": 9,
+        "n": 12
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0138",
+      "category": "exhaustive",
+      "expected": {
+        "value": 66
+      },
+      "input": {
+        "k": 10,
+        "n": 12
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0139",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "k": 11,
+        "n": 12
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0140",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 12,
+        "n": 12
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0141",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 13,
+        "n": 12
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0142",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 14,
+        "n": 12
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0143",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -2,
+        "n": 13
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0144",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -1,
+        "n": 13
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0145",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 0,
+        "n": 13
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0146",
+      "category": "exhaustive",
+      "expected": {
+        "value": 13
+      },
+      "input": {
+        "k": 1,
+        "n": 13
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0147",
+      "category": "exhaustive",
+      "expected": {
+        "value": 78
+      },
+      "input": {
+        "k": 2,
+        "n": 13
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0148",
+      "category": "exhaustive",
+      "expected": {
+        "value": 286
+      },
+      "input": {
+        "k": 3,
+        "n": 13
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0149",
+      "category": "exhaustive",
+      "expected": {
+        "value": 715
+      },
+      "input": {
+        "k": 4,
+        "n": 13
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0150",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1287
+      },
+      "input": {
+        "k": 5,
+        "n": 13
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0151",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1716
+      },
+      "input": {
+        "k": 6,
+        "n": 13
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0152",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1716
+      },
+      "input": {
+        "k": 7,
+        "n": 13
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0153",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1287
+      },
+      "input": {
+        "k": 8,
+        "n": 13
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0154",
+      "category": "exhaustive",
+      "expected": {
+        "value": 715
+      },
+      "input": {
+        "k": 9,
+        "n": 13
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0155",
+      "category": "exhaustive",
+      "expected": {
+        "value": 286
+      },
+      "input": {
+        "k": 10,
+        "n": 13
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0156",
+      "category": "exhaustive",
+      "expected": {
+        "value": 78
+      },
+      "input": {
+        "k": 11,
+        "n": 13
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0157",
+      "category": "exhaustive",
+      "expected": {
+        "value": 13
+      },
+      "input": {
+        "k": 12,
+        "n": 13
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0158",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 13,
+        "n": 13
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0159",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 14,
+        "n": 13
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0160",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 15,
+        "n": 13
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0161",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -2,
+        "n": 14
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0162",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -1,
+        "n": 14
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0163",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 0,
+        "n": 14
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0164",
+      "category": "exhaustive",
+      "expected": {
+        "value": 14
+      },
+      "input": {
+        "k": 1,
+        "n": 14
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0165",
+      "category": "exhaustive",
+      "expected": {
+        "value": 91
+      },
+      "input": {
+        "k": 2,
+        "n": 14
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0166",
+      "category": "exhaustive",
+      "expected": {
+        "value": 364
+      },
+      "input": {
+        "k": 3,
+        "n": 14
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0167",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1001
+      },
+      "input": {
+        "k": 4,
+        "n": 14
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0168",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2002
+      },
+      "input": {
+        "k": 5,
+        "n": 14
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0169",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3003
+      },
+      "input": {
+        "k": 6,
+        "n": 14
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0170",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3432
+      },
+      "input": {
+        "k": 7,
+        "n": 14
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0171",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3003
+      },
+      "input": {
+        "k": 8,
+        "n": 14
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0172",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2002
+      },
+      "input": {
+        "k": 9,
+        "n": 14
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0173",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1001
+      },
+      "input": {
+        "k": 10,
+        "n": 14
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0174",
+      "category": "exhaustive",
+      "expected": {
+        "value": 364
+      },
+      "input": {
+        "k": 11,
+        "n": 14
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0175",
+      "category": "exhaustive",
+      "expected": {
+        "value": 91
+      },
+      "input": {
+        "k": 12,
+        "n": 14
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0176",
+      "category": "exhaustive",
+      "expected": {
+        "value": 14
+      },
+      "input": {
+        "k": 13,
+        "n": 14
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0177",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 14,
+        "n": 14
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0178",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 15,
+        "n": 14
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0179",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 16,
+        "n": 14
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0180",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -2,
+        "n": 15
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0181",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -1,
+        "n": 15
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0182",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 0,
+        "n": 15
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0183",
+      "category": "exhaustive",
+      "expected": {
+        "value": 15
+      },
+      "input": {
+        "k": 1,
+        "n": 15
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0184",
+      "category": "exhaustive",
+      "expected": {
+        "value": 105
+      },
+      "input": {
+        "k": 2,
+        "n": 15
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0185",
+      "category": "exhaustive",
+      "expected": {
+        "value": 455
+      },
+      "input": {
+        "k": 3,
+        "n": 15
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0186",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1365
+      },
+      "input": {
+        "k": 4,
+        "n": 15
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0187",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3003
+      },
+      "input": {
+        "k": 5,
+        "n": 15
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0188",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5005
+      },
+      "input": {
+        "k": 6,
+        "n": 15
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0189",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6435
+      },
+      "input": {
+        "k": 7,
+        "n": 15
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0190",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6435
+      },
+      "input": {
+        "k": 8,
+        "n": 15
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0191",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5005
+      },
+      "input": {
+        "k": 9,
+        "n": 15
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0192",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3003
+      },
+      "input": {
+        "k": 10,
+        "n": 15
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0193",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1365
+      },
+      "input": {
+        "k": 11,
+        "n": 15
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0194",
+      "category": "exhaustive",
+      "expected": {
+        "value": 455
+      },
+      "input": {
+        "k": 12,
+        "n": 15
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0195",
+      "category": "exhaustive",
+      "expected": {
+        "value": 105
+      },
+      "input": {
+        "k": 13,
+        "n": 15
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0196",
+      "category": "exhaustive",
+      "expected": {
+        "value": 15
+      },
+      "input": {
+        "k": 14,
+        "n": 15
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0197",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 15,
+        "n": 15
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0198",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 16,
+        "n": 15
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0199",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 17,
+        "n": 15
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0200",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 50,
+        "n": 41
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0201",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 55,
+        "n": 47
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0202",
+      "category": "random",
+      "expected": {
+        "value": 239877544005
+      },
+      "input": {
+        "k": 32,
+        "n": 46
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0203",
+      "category": "random",
+      "expected": {
+        "value": 166509721602
+      },
+      "input": {
+        "k": 16,
+        "n": 42
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0204",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 38,
+        "n": 23
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0205",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 51,
+        "n": 35
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0206",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 52,
+        "n": 47
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0207",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 40,
+        "n": 25
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0208",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 24,
+        "n": 23
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0209",
+      "category": "random",
+      "expected": {
+        "value": 20160075
+      },
+      "input": {
+        "k": 9,
+        "n": 31
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0210",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -3,
+        "n": 39
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0211",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 46,
+        "n": 20
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0212",
+      "category": "random",
+      "expected": {
+        "value": 20475
+      },
+      "input": {
+        "k": 24,
+        "n": 28
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0213",
+      "category": "random",
+      "expected": {
+        "value": 11058116888
+      },
+      "input": {
+        "k": 30,
+        "n": 42
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0214",
+      "category": "random",
+      "expected": {
+        "value": 28760021745
+      },
+      "input": {
+        "k": 12,
+        "n": 45
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0215",
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 40,
+        "n": 40
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0216",
+      "category": "random",
+      "expected": {
+        "value": 40225345056
+      },
+      "input": {
+        "k": 15,
+        "n": 40
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0217",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 39,
+        "n": 26
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0218",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 43,
+        "n": 16
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0219",
+      "category": "random",
+      "expected": {
+        "value": 123410
+      },
+      "input": {
+        "k": 39,
+        "n": 43
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0220",
+      "category": "random",
+      "expected": {
+        "value": 203490
+      },
+      "input": {
+        "k": 13,
+        "n": 21
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0221",
+      "category": "random",
+      "expected": {
+        "value": 38910617655
+      },
+      "input": {
+        "k": 12,
+        "n": 46
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0222",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 46,
+        "n": 22
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0223",
+      "category": "random",
+      "expected": {
+        "value": 962598
+      },
+      "input": {
+        "k": 5,
+        "n": 43
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0224",
+      "category": "random",
+      "expected": {
+        "value": 129024480
+      },
+      "input": {
+        "k": 21,
+        "n": 32
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0225",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 24,
+        "n": 19
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0226",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 26,
+        "n": 23
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0227",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 42,
+        "n": 37
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0228",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 30,
+        "n": 19
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0229",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 43,
+        "n": 39
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0230",
+      "category": "random",
+      "expected": {
+        "value": 84672315
+      },
+      "input": {
+        "k": 11,
+        "n": 31
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0231",
+      "category": "random",
+      "expected": {
+        "value": 28
+      },
+      "input": {
+        "k": 27,
+        "n": 28
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0232",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 39,
+        "n": 33
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0233",
+      "category": "random",
+      "expected": {
+        "value": 2760681
+      },
+      "input": {
+        "k": 6,
+        "n": 38
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0234",
+      "category": "random",
+      "expected": {
+        "value": 20058300
+      },
+      "input": {
+        "k": 14,
+        "n": 27
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0235",
+      "category": "random",
+      "expected": {
+        "value": 151584480450
+      },
+      "input": {
+        "k": 17,
+        "n": 41
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0236",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 34,
+        "n": 27
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0237",
+      "category": "random",
+      "expected": {
+        "value": 18053528883775
+      },
+      "input": {
+        "k": 18,
+        "n": 50
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0238",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 23,
+        "n": 21
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0239",
+      "category": "random",
+      "expected": {
+        "value": 48
+      },
+      "input": {
+        "k": 47,
+        "n": 48
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0240",
+      "category": "random",
+      "expected": {
+        "value": 2380
+      },
+      "input": {
+        "k": 13,
+        "n": 17
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0241",
+      "category": "random",
+      "expected": {
+        "value": 960566918220
+      },
+      "input": {
+        "k": 23,
+        "n": 43
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0242",
+      "category": "random",
+      "expected": {
+        "value": 10518300
+      },
+      "input": {
+        "k": 8,
+        "n": 32
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0243",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 53,
+        "n": 19
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0244",
+      "category": "random",
+      "expected": {
+        "value": 30405943383200
+      },
+      "input": {
+        "k": 19,
+        "n": 50
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0245",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 33,
+        "n": 23
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0246",
+      "category": "random",
+      "expected": {
+        "value": 2300
+      },
+      "input": {
+        "k": 3,
+        "n": 25
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0247",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 54,
+        "n": 44
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0248",
+      "category": "random",
+      "expected": {
+        "value": 28760021745
+      },
+      "input": {
+        "k": 33,
+        "n": 45
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0249",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -2,
+        "n": 45
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0250",
+      "category": "random",
+      "expected": {
+        "value": 4457400
+      },
+      "input": {
+        "k": 11,
+        "n": 25
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0251",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 42,
+        "n": 39
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0252",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 42,
+        "n": 38
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0253",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 43,
+        "n": 22
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0254",
+      "category": "random",
+      "expected": {
+        "value": 141120525
+      },
+      "input": {
+        "k": 19,
+        "n": 31
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0255",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 34,
+        "n": 22
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0256",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -1,
+        "n": 30
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0257",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 54,
+        "n": 39
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0258",
+      "category": "random",
+      "expected": {
+        "value": 1362649145
+      },
+      "input": {
+        "k": 9,
+        "n": 47
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0259",
+      "category": "random",
+      "expected": {
+        "value": 230300
+      },
+      "input": {
+        "k": 46,
+        "n": 50
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0260",
+      "category": "random",
+      "expected": {
+        "value": 39049918716424
+      },
+      "input": {
+        "k": 28,
+        "n": 49
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0261",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 23,
+        "n": 17
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0262",
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 0,
+        "n": 29
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0263",
+      "category": "random",
+      "expected": {
+        "value": 28781143380
+      },
+      "input": {
+        "k": 17,
+        "n": 38
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0264",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -2,
+        "n": 27
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0265",
+      "category": "random",
+      "expected": {
+        "value": 15380937
+      },
+      "input": {
+        "k": 32,
+        "n": 39
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0266",
+      "category": "random",
+      "expected": {
+        "value": 278256
+      },
+      "input": {
+        "k": 29,
+        "n": 34
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0267",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 33,
+        "n": 26
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0268",
+      "category": "random",
+      "expected": {
+        "value": 230230
+      },
+      "input": {
+        "k": 20,
+        "n": 26
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0269",
+      "category": "random",
+      "expected": {
+        "value": 5752004349
+      },
+      "input": {
+        "k": 32,
+        "n": 43
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0270",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 48,
+        "n": 27
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0271",
+      "category": "random",
+      "expected": {
+        "value": 406
+      },
+      "input": {
+        "k": 27,
+        "n": 29
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0272",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 54,
+        "n": 49
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0273",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 48,
+        "n": 29
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0274",
+      "category": "random",
+      "expected": {
+        "value": 5379616
+      },
+      "input": {
+        "k": 7,
+        "n": 34
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0275",
+      "category": "random",
+      "expected": {
+        "value": 6499270398159
+      },
+      "input": {
+        "k": 32,
+        "n": 49
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0276",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 37,
+        "n": 27
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0277",
+      "category": "random",
+      "expected": {
+        "value": 1852482996
+      },
+      "input": {
+        "k": 25,
+        "n": 37
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0278",
+      "category": "random",
+      "expected": {
+        "value": 2496144
+      },
+      "input": {
+        "k": 11,
+        "n": 24
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0279",
+      "category": "random",
+      "expected": {
+        "value": 4368
+      },
+      "input": {
+        "k": 11,
+        "n": 16
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0280",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 28,
+        "n": 27
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0281",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 48,
+        "n": 42
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0282",
+      "category": "random",
+      "expected": {
+        "value": 145422675
+      },
+      "input": {
+        "k": 16,
+        "n": 30
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0283",
+      "category": "random",
+      "expected": {
+        "value": 3910797436
+      },
+      "input": {
+        "k": 12,
+        "n": 39
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0284",
+      "category": "random",
+      "expected": {
+        "value": 22239974430
+      },
+      "input": {
+        "k": 22,
+        "n": 38
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0285",
+      "category": "random",
+      "expected": {
+        "value": 820
+      },
+      "input": {
+        "k": 2,
+        "n": 41
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0286",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 41,
+        "n": 25
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0287",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 55,
+        "n": 39
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0288",
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 31,
+        "n": 31
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0289",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 26,
+        "n": 19
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0290",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 47,
+        "n": 45
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0291",
+      "category": "random",
+      "expected": {
+        "value": 2300
+      },
+      "input": {
+        "k": 22,
+        "n": 25
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0292",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": 32,
+        "n": 21
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0293",
+      "category": "random",
+      "expected": {
+        "value": 25518731280
+      },
+      "input": {
+        "k": 29,
+        "n": 42
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0294",
+      "category": "random",
+      "expected": {
+        "value": 850668
+      },
+      "input": {
+        "k": 37,
+        "n": 42
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0295",
+      "category": "random",
+      "expected": {
+        "value": 1052049481860
+      },
+      "input": {
+        "k": 22,
+        "n": 43
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.binomial:0296",
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -2,
+        "n": 30
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    }
+  ],
+  "condition": "large_to_large",
+  "elapsed_seconds": 0.00021775000004709,
+  "group": "combinatorics",
+  "library": "sympy",
+  "load_error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)",
+  "method_id": "sympy.binomial",
+  "passed": 0,
+  "total": 297
+}

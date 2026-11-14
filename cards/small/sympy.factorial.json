@@ -1,0 +1,23 @@
+{
+  "algorithm": [
+    "For small n, use a precomputed lookup table for fast computation.",
+    "For larger n, use the Prime-Swing algorithm, which computes n! via prime factorization of 'Swing Numbers'."
+  ],
+  "constraints": [
+    "n must be an integer in the range 0..35",
+    "n = -2 is not allowed",
+    "n = S(1)/2 is not allowed",
+    "n = 2*n is allowed"
+  ],
+  "edge_cases": [
+    "n = 0: returns 1",
+    "n = 35: returns 35!",
+    "n = -2: returns complex infinity",
+    "n = S(1)/2: returns factorial(1/2)"
+  ],
+  "inputs": "n is an integer in 0..35",
+  "method_id": "sympy.factorial",
+  "output": "The exact Python integer result of n!",
+  "purpose": "Compute the factorial of a nonnegative integer `n` using efficient algorithms.",
+  "signature": "solve(n)"
+}

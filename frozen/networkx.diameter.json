@@ -1,0 +1,9799 @@
+{
+  "brief": {
+    "contract": "n is an integer >= 1; vertices are 0,...,n-1. edges is a list of distinct [u,v] pairs with 0<=u<v<n. Construct a simple undirected unweighted graph including isolated vertices. Return plain JSON-compatible Python values. Dictionary vertex keys must be strings. Return a dict of every vertex's eccentricity for eccentricity (string keys), otherwise an int. For a disconnected graph raise ValueError. A singleton has eccentricity, diameter and radius 0.",
+    "documentation": "Returns the diameter of the graph G.\n\nThe diameter is the maximum eccentricity.\n\nParameters\n----------\nG : NetworkX graph\n   A graph\n\ne : eccentricity dictionary, optional\n  A precomputed dictionary of eccentricities.\n\nusebounds : bool, optional\n    If `True`, use extrema bounding (see Notes) when computing the diameter\n    for undirected graphs. Extrema bounding may accelerate the\n    distance calculation for some graphs. `usebounds` is ignored if `G` is\n    directed or if `e` is not `None`. Default is `False`.\n\nweight : string, function, or None\n    If this is a string, then edge weights will be accessed via the\n    edge attribute with this key (that is, the weight of the edge\n    joining `u` to `v` will be ``G.edges[u, v][weight]``). If no\n    such edge attribute exists, the weight of the edge is assumed to\n    be one.\n\n    If this is a function, the weight of an edge is the value\n    returned by the function. The function must accept exactly three\n    positional arguments: the two endpoints of an edge and the\n    dictionary of edge attributes for that edge. The function must\n    return a number.\n\n    If this is None, every edge has weight/distance/cost 1.\n\n    Weights stored as floating point values can lead to small round-off\n    errors in distances. Use integer weights to avoid this.\n\n    Weights should be positive, since they are distances.\n\nReturns\n-------\nd : integer\n   Diameter of graph\n\nNotes\n-----\nWhen ``usebounds=True``, the computation makes use of smart lower\nand upper bounds and is often linear in the number of nodes, rather than\nquadratic (except for some border cases such as complete graphs or circle\nshaped-graphs).\n\nExamples\n--------\n>>> G = nx.Graph([(1, 2), (1, 3), (1, 4), (3, 4), (3, 5), (4, 5)])\n>>> nx.diameter(G)\n3\n\nSee Also\n--------\neccentricity",
+    "documentation_truncated": false,
+    "group": "distances",
+    "id": "networkx.diameter",
+    "library": "networkx",
+    "name": "diameter",
+    "signature": "solve(n, edges)",
+    "version": "3.6.1"
+  },
+  "cases": [
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "networkx.diameter:0000",
+      "input": {
+        "edges": [],
+        "n": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0001",
+      "input": {
+        "edges": [],
+        "n": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "networkx.diameter:0002",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "n": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0003",
+      "input": {
+        "edges": [],
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0004",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0005",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ]
+        ],
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0006",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0007",
+      "input": {
+        "edges": [
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0008",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0009",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "networkx.diameter:0010",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0011",
+      "input": {
+        "edges": [],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0012",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0013",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0014",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0015",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0016",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0017",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0018",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0019",
+      "input": {
+        "edges": [
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0020",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0021",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0022",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0023",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "networkx.diameter:0024",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "networkx.diameter:0025",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0026",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0027",
+      "input": {
+        "edges": [
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0028",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0029",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "networkx.diameter:0030",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0031",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0032",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "networkx.diameter:0033",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0034",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0035",
+      "input": {
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0036",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "networkx.diameter:0037",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0038",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "networkx.diameter:0039",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0040",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0041",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0042",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0043",
+      "input": {
+        "edges": [
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0044",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0045",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "networkx.diameter:0046",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0047",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "networkx.diameter:0048",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0049",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0050",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0051",
+      "input": {
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "networkx.diameter:0052",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0053",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0054",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "networkx.diameter:0055",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0056",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0057",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0058",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0059",
+      "input": {
+        "edges": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "networkx.diameter:0060",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "networkx.diameter:0061",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0062",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0063",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0064",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0065",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0066",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0067",
+      "input": {
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0068",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0069",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0070",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0071",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0072",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0073",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "networkx.diameter:0074",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 4
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0075",
+      "input": {
+        "edges": [],
+        "n": 5
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 4
+      },
+      "id": "networkx.diameter:0076",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0077",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 1
+      },
+      "id": "networkx.diameter:0078",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0079",
+      "input": {
+        "edges": [],
+        "n": 6
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 5
+      },
+      "id": "networkx.diameter:0080",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0081",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 1
+      },
+      "id": "networkx.diameter:0082",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0083",
+      "input": {
+        "edges": [],
+        "n": 8
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 7
+      },
+      "id": "networkx.diameter:0084",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0085",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 1
+      },
+      "id": "networkx.diameter:0086",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0087",
+      "input": {
+        "edges": [],
+        "n": 12
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 11
+      },
+      "id": "networkx.diameter:0088",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0089",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 1
+      },
+      "id": "networkx.diameter:0090",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "networkx.diameter:0091",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "networkx.diameter:0092",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 5
+      },
+      "id": "networkx.diameter:0093",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "id": "networkx.diameter:0094",
+      "input": {
+        "edges": [
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0095",
+      "input": {
+        "edges": [
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0096",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0097",
+      "input": {
+        "edges": [
+          [
+            0,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0098",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0099",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            9,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0100",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0101",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0102",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0103",
+      "input": {
+        "edges": [
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0104",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0105",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0106",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0107",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0108",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0109",
+      "input": {
+        "edges": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            6
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0110",
+      "input": {
+        "edges": [
+          [
+            2,
+            7
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0111",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 5
+      },
+      "id": "networkx.diameter:0112",
+      "input": {
+        "edges": [
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            10
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0113",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0114",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0115",
+      "input": {
+        "edges": [
+          [
+            0,
+            4
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0116",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0117",
+      "input": {
+        "edges": [
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0118",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0119",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "networkx.diameter:0120",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0121",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0122",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "networkx.diameter:0123",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "networkx.diameter:0124",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0125",
+      "input": {
+        "edges": [
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0126",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0127",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0128",
+      "input": {
+        "edges": [
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "networkx.diameter:0129",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0130",
+      "input": {
+        "edges": [
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0131",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0132",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0133",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "id": "networkx.diameter:0134",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0135",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "networkx.diameter:0136",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0137",
+      "input": {
+        "edges": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0138",
+      "input": {
+        "edges": [
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 7
+      },
+      "id": "networkx.diameter:0139",
+      "input": {
+        "edges": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            7,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "networkx.diameter:0140",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0141",
+      "input": {
+        "edges": [
+          [
+            0,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0142",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0143",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            7
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0144",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0145",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "networkx.diameter:0146",
+      "input": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0147",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "networkx.diameter:0148",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "id": "networkx.diameter:0149",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            9
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0150",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0151",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0152",
+      "input": {
+        "edges": [
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0153",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0154",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0155",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0156",
+      "input": {
+        "edges": [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0157",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0158",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0159",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0160",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "id": "networkx.diameter:0161",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0162",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "id": "networkx.diameter:0163",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0164",
+      "input": {
+        "edges": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "networkx.diameter:0165",
+      "input": {
+        "edges": [
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0166",
+      "input": {
+        "edges": [
+          [
+            4,
+            6
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0167",
+      "input": {
+        "edges": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0168",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        "n": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "networkx.diameter:0169",
+      "input": {
+        "edges": [
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "networkx.diameter:0170",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0171",
+      "input": {
+        "edges": [
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "networkx.diameter:0172",
+      "input": {
+        "edges": [
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ]
+        ],
+        "n": 11
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0173",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0174",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0175",
+      "input": {
+        "edges": [
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        "n": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0176",
+      "input": {
+        "edges": [
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "n": 12
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "id": "networkx.diameter:0177",
+      "input": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0178",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "n": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0179",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "networkx.diameter:0180",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 9
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "networkx.diameter:0181",
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "n": 10
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0182",
+      "input": {
+        "edges": [
+          [
+            1,
+            4
+          ]
+        ],
+        "n": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "error": "ValueError"
+      },
+      "id": "networkx.diameter:0183",
+      "input": {
+        "edges": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        "n": 10
+      }
+    }
+  ]
+}

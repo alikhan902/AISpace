@@ -1,0 +1,118 @@
+{
+  "elapsed_seconds": 1.9833035440001368,
+  "finished_at": "2026-11-14T13:07:13.973858+00:00",
+  "parsed": {
+    "algorithm": [
+      "Compute the absolute values of the inputs.",
+      "Use the Euclidean algorithm to find the GCD.",
+      "Return the result as a scalar if both inputs are scalars, otherwise return as a list."
+    ],
+    "constraints": [
+      "Inputs must be integers or 1-D lists of integers.",
+      "Supports broadcasting for scalar/scalar, scalar/list, list/scalar, and lists of the same length.",
+      "No other broadcasting is required.",
+      "Values and results fit signed int64."
+    ],
+    "edge_cases": [
+      "Empty lists (e.g., np.gcd([], [])) return 0.",
+      "Negative numbers are handled by taking absolute values.",
+      "Scalar inputs return integers, list inputs return lists."
+    ],
+    "inputs": "x and y are integers or 1-D lists of integers. Support scalar/scalar, scalar/list, list/scalar and lists of the same length (including empty). Scalar/scalar returns int, all other inputs return a list. No other broadcasting is required. Values and results fit signed int64.",
+    "method_id": "numpy.gcd",
+    "output": "A scalar if both x and y are scalars, otherwise a list. The output is the GCD of the absolute values of the inputs.",
+    "purpose": "Compute the greatest common divisor (GCD) of two inputs.",
+    "signature": "solve(x, y)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"x and y are integers or 1-D lists of integers. Support scalar/scalar, scalar/list, list/scalar and lists of the same length (including empty). Scalar/scalar returns int, all other inputs return a list. No other broadcasting is required. Values and results fit signed int64.\",\n  \"documentation\": \"gcd(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])\\n\\nReturns the greatest common divisor of ``|x1|`` and ``|x2|``\\n\\nParameters\\n----------\\nx1, x2 : array_like, int\\n    Arrays of values.\\n    If ``x1.shape != x2.shape``, they must be broadcastable to a common\\n    shape (which becomes the shape of the output).\\n\\nReturns\\n-------\\ny : ndarray or scalar\\n    The greatest common divisor of the absolute value of the inputs\\n    This is a scalar if both `x1` and `x2` are scalars.\\n\\nSee Also\\n--------\\nlcm : The lowest common multiple\\n\\nExamples\\n--------\\n>>> import numpy as np\\n>>> np.gcd(12, 20)\\n4\\n>>> np.gcd.reduce([15, 25, 35])\\n5\\n>>> np.gcd(np.arange(6), 20)\\narray([20,  1,  2,  1,  4,  5])\",\n  \"documentation_truncated\": false,\n  \"group\": \"integer_arithmetic\",\n  \"id\": \"numpy.gcd\",\n  \"library\": \"numpy\",\n  \"name\": \"gcd\",\n  \"signature\": \"solve(x, y)\",\n  \"version\": \"2.5.4\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:1.7b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:07:13.973565086Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 306,
+    "eval_duration": 1887160000,
+    "load_duration": 1036002,
+    "message": {
+      "content": "{\n  \"method_id\": \"numpy.gcd\",\n  \"signature\": \"solve(x, y)\",\n  \"purpose\": \"Compute the greatest common divisor (GCD) of two inputs.\",\n  \"inputs\": \"x and y are integers or 1-D lists of integers. Support scalar/scalar, scalar/list, list/scalar and lists of the same length (including empty). Scalar/scalar returns int, all other inputs return a list. No other broadcasting is required. Values and results fit signed int64.\",\n  \"output\": \"A scalar if both x and y are scalars, otherwise a list. The output is the GCD of the absolute values of the inputs.\",\n  \"algorithm\": [\n    \"Compute the absolute values of the inputs.\",\n    \"Use the Euclidean algorithm to find the GCD.\",\n    \"Return the result as a scalar if both inputs are scalars, otherwise return as a list.\"\n  ],\n  \"edge_cases\": [\n    \"Empty lists (e.g., np.gcd([], [])) return 0.\",\n    \"Negative numbers are handled by taking absolute values.\",\n    \"Scalar inputs return integers, list inputs return lists.\"\n  ],\n  \"constraints\": [\n    \"Inputs must be integers or 1-D lists of integers.\",\n    \"Supports broadcasting for scalar/scalar, scalar/list, list/scalar, and lists of the same length.\",\n    \"No other broadcasting is required.\",\n    \"Values and results fit signed int64.\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:1.7b",
+    "prompt_eval_cached_count": 344,
+    "prompt_eval_count": 745,
+    "prompt_eval_duration": 58261000,
+    "total_duration": 1982729788
+  },
+  "started_at": "2026-11-14T13:07:11.990551+00:00",
+  "valid": true
+}

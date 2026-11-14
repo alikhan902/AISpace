@@ -1,0 +1,21 @@
+{
+  "algorithm": [
+    "Sum all elements of the input list.",
+    "If the list is empty, return 0.",
+    "If the list is not empty, return the sum of all elements."
+  ],
+  "constraints": [
+    "All intermediate values fit signed int64.",
+    "Use NumPy's default operation on the whole 1-D list, with dtype=int64."
+  ],
+  "edge_cases": [
+    "Empty list: return 0.",
+    "List with one element: return that element.",
+    "List with multiple elements: return the sum of all elements."
+  ],
+  "inputs": "a is a one-dimensional list of integers, possibly empty.",
+  "method_id": "numpy.sum",
+  "output": "A Python int or list[int], as appropriate; no NumPy objects.",
+  "purpose": "Compute the sum of elements in a 1-dimensional list.",
+  "signature": "solve(a)"
+}

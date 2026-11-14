@@ -1,0 +1,2029 @@
+{
+  "brief": {
+    "contract": "a is a one-dimensional list of integers, possibly empty. Return Python int or list[int], as appropriate; no NumPy objects. All intermediate values fit signed int64. Return a single Python int counting nonzero values.",
+    "documentation": "Counts the number of non-zero values in the array ``a``.\n\nA non-zero value is one that evaluates to truthful in a boolean\ncontext, including any non-zero number and any string that\nis not empty. This function recursively counts how many elements\nin ``a`` (and its sub-arrays) are non-zero values.\n\nParameters\n----------\na : array_like\n    The array for which to count non-zeros.\naxis : int or tuple, optional\n    Axis or tuple of axes along which to count non-zeros.\n    Default is None, meaning that non-zeros will be counted\n    along a flattened version of ``a``.\nkeepdims : bool, optional\n    If this is set to True, the axes that are counted are left\n    in the result as dimensions with size one. With this option,\n    the result will broadcast correctly against the input array.\n\nReturns\n-------\ncount : int or array of int\n    Number of non-zero values in the array along a given axis.\n    Otherwise, the total number of non-zero values in the array\n    is returned.\n\nSee Also\n--------\nnonzero : Return the coordinates of all the non-zero values.\n\nExamples\n--------\n>>> import numpy as np\n>>> np.count_nonzero(np.eye(4))\nnp.int64(4)\n>>> a = np.array([[0, 1, 7, 0],\n...               [3, 0, 2, 19]])\n>>> np.count_nonzero(a)\nnp.int64(5)\n>>> np.count_nonzero(a, axis=0)\narray([1, 1, 2, 1])\n>>> np.count_nonzero(a, axis=1)\narray([2, 3])\n>>> np.count_nonzero(a, axis=1, keepdims=True)\narray([[2],\n       [3]])",
+    "documentation_truncated": false,
+    "group": "ordering_counting",
+    "id": "numpy.count_nonzero",
+    "library": "numpy",
+    "name": "count_nonzero",
+    "signature": "solve(a)",
+    "version": "2.5.4"
+  },
+  "cases": [
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.count_nonzero:0000",
+      "input": {
+        "a": []
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.count_nonzero:0001",
+      "input": {
+        "a": [
+          0
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.count_nonzero:0002",
+      "input": {
+        "a": [
+          1
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.count_nonzero:0003",
+      "input": {
+        "a": [
+          -1
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.count_nonzero:0004",
+      "input": {
+        "a": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.count_nonzero:0005",
+      "input": {
+        "a": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.count_nonzero:0006",
+      "input": {
+        "a": [
+          -3,
+          -2,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.count_nonzero:0007",
+      "input": {
+        "a": [
+          3,
+          -1,
+          0,
+          3,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.count_nonzero:0008",
+      "input": {
+        "a": [
+          5,
+          4,
+          3,
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.count_nonzero:0009",
+      "input": {
+        "a": [
+          -2,
+          2,
+          -2,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.count_nonzero:0010",
+      "input": {
+        "a": [
+          0,
+          0,
+          -1,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.count_nonzero:0011",
+      "input": {
+        "a": [
+          -1,
+          -3,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.count_nonzero:0012",
+      "input": {
+        "a": [
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 7
+      },
+      "id": "numpy.count_nonzero:0013",
+      "input": {
+        "a": [
+          -3,
+          -2,
+          -2,
+          3,
+          3,
+          -3,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.count_nonzero:0014",
+      "input": {
+        "a": [
+          1,
+          3,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.count_nonzero:0015",
+      "input": {
+        "a": [
+          -1,
+          -2,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.count_nonzero:0016",
+      "input": {
+        "a": [
+          0,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "id": "numpy.count_nonzero:0017",
+      "input": {
+        "a": [
+          3,
+          -3,
+          -3,
+          3,
+          -1,
+          -2,
+          1,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.count_nonzero:0018",
+      "input": {
+        "a": [
+          3,
+          1,
+          -2,
+          2,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 9
+      },
+      "id": "numpy.count_nonzero:0019",
+      "input": {
+        "a": [
+          -3,
+          -3,
+          3,
+          -3,
+          0,
+          1,
+          -3,
+          2,
+          -3,
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.count_nonzero:0020",
+      "input": {
+        "a": [
+          1,
+          0,
+          1,
+          -1,
+          -3,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.count_nonzero:0021",
+      "input": {
+        "a": [
+          3,
+          0,
+          0,
+          3,
+          0,
+          -1,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "id": "numpy.count_nonzero:0022",
+      "input": {
+        "a": [
+          -3,
+          3,
+          -2,
+          -1,
+          3,
+          -3,
+          2,
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.count_nonzero:0023",
+      "input": {
+        "a": [
+          2,
+          0,
+          0,
+          3,
+          1,
+          -1,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.count_nonzero:0024",
+      "input": {
+        "a": [
+          -1,
+          0,
+          2,
+          -2,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "id": "numpy.count_nonzero:0025",
+      "input": {
+        "a": [
+          0,
+          -2,
+          -1,
+          -1,
+          -2,
+          1,
+          3,
+          -1,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.count_nonzero:0026",
+      "input": {
+        "a": [
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "id": "numpy.count_nonzero:0027",
+      "input": {
+        "a": [
+          -2,
+          -2,
+          -2,
+          2,
+          3,
+          -1,
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.count_nonzero:0028",
+      "input": {
+        "a": [
+          1,
+          -3,
+          0,
+          2,
+          0,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.count_nonzero:0029",
+      "input": {
+        "a": [
+          3,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "id": "numpy.count_nonzero:0030",
+      "input": {
+        "a": [
+          -3,
+          3,
+          3,
+          1,
+          3,
+          0,
+          2,
+          -3,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.count_nonzero:0031",
+      "input": {
+        "a": [
+          -3,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 7
+      },
+      "id": "numpy.count_nonzero:0032",
+      "input": {
+        "a": [
+          0,
+          -2,
+          -2,
+          1,
+          -2,
+          -3,
+          -1,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.count_nonzero:0033",
+      "input": {
+        "a": [
+          3,
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.count_nonzero:0034",
+      "input": {
+        "a": [
+          -1,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 7
+      },
+      "id": "numpy.count_nonzero:0035",
+      "input": {
+        "a": [
+          3,
+          -3,
+          -2,
+          0,
+          -2,
+          1,
+          2,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.count_nonzero:0036",
+      "input": {
+        "a": [
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 9
+      },
+      "id": "numpy.count_nonzero:0037",
+      "input": {
+        "a": [
+          2,
+          -1,
+          -1,
+          -2,
+          3,
+          -3,
+          -1,
+          0,
+          -3,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 10
+      },
+      "id": "numpy.count_nonzero:0038",
+      "input": {
+        "a": [
+          -3,
+          0,
+          2,
+          -1,
+          -3,
+          2,
+          0,
+          2,
+          -1,
+          1,
+          -3,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "id": "numpy.count_nonzero:0039",
+      "input": {
+        "a": [
+          -1,
+          2,
+          0,
+          0,
+          2,
+          -1,
+          -3,
+          -3,
+          -2,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.count_nonzero:0040",
+      "input": {
+        "a": [
+          -2,
+          1,
+          2,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.count_nonzero:0041",
+      "input": {
+        "a": [
+          -1,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.count_nonzero:0042",
+      "input": {
+        "a": [
+          -1,
+          -2,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.count_nonzero:0043",
+      "input": {
+        "a": [
+          0,
+          -1,
+          3,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.count_nonzero:0044",
+      "input": {
+        "a": [
+          -2,
+          2,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "id": "numpy.count_nonzero:0045",
+      "input": {
+        "a": [
+          -2,
+          3,
+          -1,
+          2,
+          0,
+          -2,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.count_nonzero:0046",
+      "input": {
+        "a": [
+          2,
+          -1,
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "id": "numpy.count_nonzero:0047",
+      "input": {
+        "a": [
+          -3,
+          2,
+          2,
+          0,
+          0,
+          0,
+          -3,
+          3,
+          -1,
+          -2,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.count_nonzero:0048",
+      "input": {
+        "a": [
+          2,
+          -3,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.count_nonzero:0049",
+      "input": {
+        "a": [
+          1,
+          -3,
+          2,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.count_nonzero:0050",
+      "input": {
+        "a": [
+          -2,
+          -2,
+          0,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 12
+      },
+      "id": "numpy.count_nonzero:0051",
+      "input": {
+        "a": [
+          -1,
+          -3,
+          3,
+          -3,
+          -3,
+          1,
+          2,
+          -1,
+          2,
+          2,
+          -3,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "id": "numpy.count_nonzero:0052",
+      "input": {
+        "a": [
+          -3,
+          -2,
+          3,
+          3,
+          -2,
+          -1,
+          -1,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.count_nonzero:0053",
+      "input": {
+        "a": [
+          3,
+          -2,
+          3,
+          0,
+          -1,
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.count_nonzero:0054",
+      "input": {
+        "a": [
+          1,
+          1,
+          2,
+          -3,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.count_nonzero:0055",
+      "input": {
+        "a": [
+          -2,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 9
+      },
+      "id": "numpy.count_nonzero:0056",
+      "input": {
+        "a": [
+          2,
+          -1,
+          1,
+          -2,
+          2,
+          -2,
+          -1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 12
+      },
+      "id": "numpy.count_nonzero:0057",
+      "input": {
+        "a": [
+          -1,
+          -2,
+          2,
+          2,
+          -1,
+          -3,
+          -3,
+          -2,
+          -3,
+          2,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 7
+      },
+      "id": "numpy.count_nonzero:0058",
+      "input": {
+        "a": [
+          -2,
+          1,
+          0,
+          2,
+          3,
+          -3,
+          1,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.count_nonzero:0059",
+      "input": {
+        "a": [
+          3,
+          -2,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 9
+      },
+      "id": "numpy.count_nonzero:0060",
+      "input": {
+        "a": [
+          -2,
+          3,
+          -2,
+          3,
+          -2,
+          -3,
+          1,
+          -2,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "id": "numpy.count_nonzero:0061",
+      "input": {
+        "a": [
+          -1,
+          1,
+          2,
+          -2,
+          2,
+          -1,
+          1,
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 9
+      },
+      "id": "numpy.count_nonzero:0062",
+      "input": {
+        "a": [
+          0,
+          -2,
+          3,
+          3,
+          2,
+          3,
+          3,
+          -3,
+          1,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "id": "numpy.count_nonzero:0063",
+      "input": {
+        "a": [
+          2,
+          -3,
+          2,
+          0,
+          1,
+          -3,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.count_nonzero:0064",
+      "input": {
+        "a": [
+          3,
+          0,
+          3,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 10
+      },
+      "id": "numpy.count_nonzero:0065",
+      "input": {
+        "a": [
+          -2,
+          3,
+          3,
+          3,
+          -3,
+          2,
+          -1,
+          3,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.count_nonzero:0066",
+      "input": {
+        "a": [
+          -2,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.count_nonzero:0067",
+      "input": {
+        "a": [
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 10
+      },
+      "id": "numpy.count_nonzero:0068",
+      "input": {
+        "a": [
+          2,
+          -3,
+          2,
+          2,
+          3,
+          1,
+          2,
+          -3,
+          -3,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "id": "numpy.count_nonzero:0069",
+      "input": {
+        "a": [
+          -1,
+          3,
+          1,
+          3,
+          0,
+          1,
+          3,
+          -1,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "id": "numpy.count_nonzero:0070",
+      "input": {
+        "a": [
+          2,
+          3,
+          3,
+          0,
+          0,
+          1,
+          2,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.count_nonzero:0071",
+      "input": {
+        "a": [
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.count_nonzero:0072",
+      "input": {
+        "a": [
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 9
+      },
+      "id": "numpy.count_nonzero:0073",
+      "input": {
+        "a": [
+          -3,
+          1,
+          0,
+          0,
+          -1,
+          -1,
+          -2,
+          1,
+          -3,
+          -2,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.count_nonzero:0074",
+      "input": {
+        "a": [
+          0,
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.count_nonzero:0075",
+      "input": {
+        "a": [
+          1,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.count_nonzero:0076",
+      "input": {
+        "a": [
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.count_nonzero:0077",
+      "input": {
+        "a": [
+          0,
+          3,
+          3,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "id": "numpy.count_nonzero:0078",
+      "input": {
+        "a": [
+          1,
+          -2,
+          -2,
+          -1,
+          -2,
+          3,
+          -3,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 7
+      },
+      "id": "numpy.count_nonzero:0079",
+      "input": {
+        "a": [
+          -2,
+          3,
+          -1,
+          3,
+          -1,
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "id": "numpy.count_nonzero:0080",
+      "input": {
+        "a": [
+          3,
+          2,
+          -1,
+          -1,
+          -3,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 7
+      },
+      "id": "numpy.count_nonzero:0081",
+      "input": {
+        "a": [
+          1,
+          -2,
+          0,
+          3,
+          3,
+          3,
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "id": "numpy.count_nonzero:0082",
+      "input": {
+        "a": [
+          -1,
+          -3,
+          2,
+          -1,
+          3,
+          3,
+          -3,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 9
+      },
+      "id": "numpy.count_nonzero:0083",
+      "input": {
+        "a": [
+          2,
+          0,
+          2,
+          -1,
+          -2,
+          1,
+          -3,
+          2,
+          -2,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.count_nonzero:0084",
+      "input": {
+        "a": [
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.count_nonzero:0085",
+      "input": {
+        "a": [
+          0,
+          -1,
+          3,
+          3,
+          -1,
+          0,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "id": "numpy.count_nonzero:0086",
+      "input": {
+        "a": [
+          0,
+          -1,
+          -2,
+          1,
+          -2,
+          -1,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 9
+      },
+      "id": "numpy.count_nonzero:0087",
+      "input": {
+        "a": [
+          -3,
+          0,
+          -1,
+          0,
+          1,
+          -3,
+          2,
+          2,
+          -3,
+          0,
+          -3,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.count_nonzero:0088",
+      "input": {
+        "a": [
+          0,
+          3,
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.count_nonzero:0089",
+      "input": {
+        "a": [
+          2,
+          2,
+          -2,
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.count_nonzero:0090",
+      "input": {
+        "a": [
+          -3,
+          2,
+          0,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 9
+      },
+      "id": "numpy.count_nonzero:0091",
+      "input": {
+        "a": [
+          2,
+          -1,
+          -2,
+          -2,
+          3,
+          2,
+          2,
+          -2,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "id": "numpy.count_nonzero:0092",
+      "input": {
+        "a": [
+          0,
+          0,
+          0,
+          -3,
+          2,
+          1,
+          -3,
+          -1,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 11
+      },
+      "id": "numpy.count_nonzero:0093",
+      "input": {
+        "a": [
+          3,
+          2,
+          -3,
+          -2,
+          -2,
+          -2,
+          -3,
+          0,
+          3,
+          3,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "id": "numpy.count_nonzero:0094",
+      "input": {
+        "a": [
+          -1,
+          1,
+          -3,
+          -1,
+          -3,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 10
+      },
+      "id": "numpy.count_nonzero:0095",
+      "input": {
+        "a": [
+          2,
+          1,
+          3,
+          2,
+          -1,
+          1,
+          -1,
+          -2,
+          0,
+          -3,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "id": "numpy.count_nonzero:0096",
+      "input": {
+        "a": [
+          0,
+          -2,
+          3,
+          2,
+          3,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.count_nonzero:0097",
+      "input": {
+        "a": [
+          -2,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.count_nonzero:0098",
+      "input": {
+        "a": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "id": "numpy.count_nonzero:0099",
+      "input": {
+        "a": [
+          1,
+          2,
+          1,
+          -3,
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 10
+      },
+      "id": "numpy.count_nonzero:0100",
+      "input": {
+        "a": [
+          -1,
+          -2,
+          1,
+          -1,
+          1,
+          -3,
+          3,
+          1,
+          3,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.count_nonzero:0101",
+      "input": {
+        "a": [
+          3,
+          1,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 10
+      },
+      "id": "numpy.count_nonzero:0102",
+      "input": {
+        "a": [
+          -2,
+          0,
+          -2,
+          2,
+          -3,
+          -2,
+          -2,
+          1,
+          -3,
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 9
+      },
+      "id": "numpy.count_nonzero:0103",
+      "input": {
+        "a": [
+          -1,
+          2,
+          1,
+          -3,
+          -2,
+          -3,
+          3,
+          3,
+          0,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "id": "numpy.count_nonzero:0104",
+      "input": {
+        "a": [
+          2,
+          -1,
+          2,
+          2,
+          2,
+          -3,
+          -2,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 9
+      },
+      "id": "numpy.count_nonzero:0105",
+      "input": {
+        "a": [
+          3,
+          0,
+          2,
+          -3,
+          2,
+          2,
+          -1,
+          0,
+          -1,
+          -3,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 9
+      },
+      "id": "numpy.count_nonzero:0106",
+      "input": {
+        "a": [
+          -2,
+          -1,
+          -3,
+          -2,
+          -3,
+          -1,
+          -1,
+          1,
+          -3,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.count_nonzero:0107",
+      "input": {
+        "a": [
+          1,
+          -1,
+          0,
+          1,
+          1,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 12
+      },
+      "id": "numpy.count_nonzero:0108",
+      "input": {
+        "a": [
+          3,
+          -3,
+          1,
+          -3,
+          -2,
+          -2,
+          3,
+          1,
+          -2,
+          -2,
+          -1,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.count_nonzero:0109",
+      "input": {
+        "a": [
+          2,
+          -1,
+          1,
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.count_nonzero:0110",
+      "input": {
+        "a": [
+          -2,
+          1,
+          0,
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "id": "numpy.count_nonzero:0111",
+      "input": {
+        "a": [
+          3,
+          1,
+          -1,
+          -3,
+          2,
+          -2,
+          2,
+          0,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.count_nonzero:0112",
+      "input": {
+        "a": [
+          1,
+          -2,
+          2,
+          -1,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "id": "numpy.count_nonzero:0113",
+      "input": {
+        "a": [
+          -2,
+          2,
+          1,
+          1,
+          0,
+          0,
+          3,
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 9
+      },
+      "id": "numpy.count_nonzero:0114",
+      "input": {
+        "a": [
+          3,
+          2,
+          3,
+          -2,
+          2,
+          3,
+          0,
+          -1,
+          3,
+          -3,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.count_nonzero:0115",
+      "input": {
+        "a": [
+          -1,
+          0,
+          0,
+          -1,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.count_nonzero:0116",
+      "input": {
+        "a": [
+          -1,
+          1,
+          2,
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.count_nonzero:0117",
+      "input": {
+        "a": [
+          3,
+          2,
+          3
+        ]
+      }
+    }
+  ]
+}

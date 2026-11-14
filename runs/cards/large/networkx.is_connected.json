@@ -1,0 +1,120 @@
+{
+  "elapsed_seconds": 5.208410618000016,
+  "finished_at": "2026-11-14T13:14:05.376858+00:00",
+  "parsed": {
+    "algorithm": [
+      "Perform a BFS starting from vertex 0",
+      "Count the number of visited vertices during BFS",
+      "Compare count to n: if equal, graph is connected; else disconnected"
+    ],
+    "constraints": [
+      "Vertices are labeled 0 to n-1",
+      "Edges are distinct and satisfy 0<=u<v<n",
+      "Graph must be simple undirected",
+      "No self-loops or multiple edges",
+      "BFS must be used for traversal"
+    ],
+    "edge_cases": [
+      "n=1 (single node with no edges): returns True",
+      "n>1 with no edges: returns False",
+      "n>1 with all vertices isolated: returns False",
+      "n=0: not applicable (n>=1 per contract)"
+    ],
+    "inputs": "n: integer >= 1; edges: list of distinct [u,v] pairs where 0<=u<v<n",
+    "method_id": "networkx.is_connected",
+    "output": "bool: True if the graph is connected, False otherwise",
+    "purpose": "Determine if an undirected graph with n vertices (labeled 0 to n-1) and given edges is connected",
+    "signature": "solve(n, edges)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"n is an integer >= 1; vertices are 0,...,n-1. edges is a list of distinct [u,v] pairs with 0<=u<v<n. Construct a simple undirected unweighted graph including isolated vertices. Return plain JSON-compatible Python values. Dictionary vertex keys must be strings. Return int for number_connected_components and bool for predicates.\",\n  \"documentation\": \"Returns True if the graph is connected, False otherwise.\\n\\nA graph is connected if, for every pair of distinct nodes, there is a\\npath between them. If there is a pair of nodes for which such path does\\nnot exist, the graph is not connected (also referred to as \\\"disconnected\\\").\\n\\nA graph consisting of a single node and no edges is connected.\\nConnectivity is undefined for the null graph (graph with no nodes).\\n\\nParameters\\n----------\\nG : NetworkX Graph\\n   An undirected graph.\\n\\nReturns\\n-------\\nconnected : bool\\n  True if the graph is connected, False otherwise.\\n\\nRaises\\n------\\nNetworkXNotImplemented\\n    If G is directed.\\n\\nExamples\\n--------\\n>>> G = nx.path_graph(4)\\n>>> print(nx.is_connected(G))\\nTrue\\n\\nSee Also\\n--------\\nis_strongly_connected\\nis_weakly_connected\\nis_semiconnected\\nis_biconnected\\nconnected_components\\n\\nNotes\\n-----\\nThis function is for undirected graphs only. For directed graphs, use\\n:func:`is_strongly_connected` or :func:`is_weakly_connected`.\\n\\nThe algorithm is based on a Breadth-First Search (BFS) traversal and its\\ntime complexity is $O(n + m)$, where $n$ is the number of nodes and $m$ the\\nnumber of edges in the graph.\",\n  \"documentation_truncated\": false,\n  \"group\": \"connectivity\",\n  \"id\": \"networkx.is_connected\",\n  \"library\": \"networkx\",\n  \"name\": \"is_connected\",\n  \"signature\": \"solve(n, edges)\",\n  \"version\": \"3.6.1\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:4b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:14:05.376412734Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 273,
+    "eval_duration": 4944108000,
+    "load_duration": 567717,
+    "message": {
+      "content": "{\n  \"method_id\": \"networkx.is_connected\",\n  \"signature\": \"solve(n, edges)\",\n  \"purpose\": \"Determine if an undirected graph with n vertices (labeled 0 to n-1) and given edges is connected\",\n  \"inputs\": \"n: integer >= 1; edges: list of distinct [u,v] pairs where 0<=u<v<n\",\n  \"output\": \"bool: True if the graph is connected, False otherwise\",\n  \"algorithm\": [\n    \"Perform a BFS starting from vertex 0\",\n    \"Count the number of visited vertices during BFS\",\n    \"Compare count to n: if equal, graph is connected; else disconnected\"\n  ],\n  \"edge_cases\": [\n    \"n=1 (single node with no edges): returns True\",\n    \"n>1 with no edges: returns False\",\n    \"n>1 with all vertices isolated: returns False\",\n    \"n=0: not applicable (n>=1 per contract)\"\n  ],\n  \"constraints\": [\n    \"Vertices are labeled 0 to n-1\",\n    \"Edges are distinct and satisfy 0<=u<v<n\",\n    \"Graph must be simple undirected\",\n    \"No self-loops or multiple edges\",\n    \"BFS must be used for traversal\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:4b",
+    "prompt_eval_cached_count": 424,
+    "prompt_eval_count": 803,
+    "prompt_eval_duration": 159655000,
+    "total_duration": 5207646022
+  },
+  "started_at": "2026-11-14T13:14:00.168444+00:00",
+  "valid": true
+}

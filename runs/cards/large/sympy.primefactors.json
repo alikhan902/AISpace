@@ -1,0 +1,121 @@
+{
+  "elapsed_seconds": 7.09955412599993,
+  "finished_at": "2026-11-14T13:13:37.955478+00:00",
+  "parsed": {
+    "algorithm": [
+      "For the given positive integer n, find all prime numbers that divide n exactly without remainder.",
+      "Ignore any composite factors that remain if the factorization limit is set too low for complete factorization.",
+      "Return the list of prime factors sorted in ascending order."
+    ],
+    "constraints": [
+      "n must be a positive integer <= 5000",
+      "The function does not return -1 or 0",
+      "The output list must be sorted in ascending order",
+      "The function ignores multiplicity of prime factors",
+      "The function may return fewer prime factors if the factorization limit is set too low (as per the examples)"
+    ],
+    "edge_cases": [
+      "n = 1: returns empty list (no prime factors)",
+      "n = 2: returns [2] (smallest prime)",
+      "n = 4: returns [2] (ignores multiplicity)",
+      "n = 0 or negative n: returns absolute value's prime factors (e.g., primefactors(-5) returns [5])",
+      "n = 10000000001 with limit=200: returns [101, 99009901] (but 99009901 is composite, so only [101] is returned when limit=300)"
+    ],
+    "inputs": "n: integer (positive integer <= 5000)",
+    "method_id": "sympy.primefactors",
+    "output": "list of distinct positive integers (sorted ascending) that are prime factors of n",
+    "purpose": "Return a sorted list of distinct prime factors of n, ignoring multiplicity and composite factors that may remain due to factorization limits.",
+    "signature": "solve(n)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"n is a positive integer <=5000. Return a plain Python ascending list of distinct positive prime factors, no symbolic objects.\",\n  \"documentation\": \"Return a sorted list of n's prime factors, ignoring multiplicity\\nand any composite factor that remains if the limit was set too low\\nfor complete factorization. Unlike factorint(), primefactors() does\\nnot return -1 or 0.\\n\\nParameters\\n==========\\n\\nn : integer\\nlimit, verbose, **kwargs :\\n    Additional keyword arguments to be passed to ``factorint``.\\n    Since ``kwargs`` is new in version 1.13,\\n    ``limit`` and ``verbose`` are retained for compatibility purposes.\\n\\nReturns\\n=======\\n\\nlist(int) : List of prime numbers dividing ``n``\\n\\nExamples\\n========\\n\\n>>> from sympy.ntheory import primefactors, factorint, isprime\\n>>> primefactors(6)\\n[2, 3]\\n>>> primefactors(-5)\\n[5]\\n\\n>>> sorted(factorint(123456).items())\\n[(2, 6), (3, 1), (643, 1)]\\n>>> primefactors(123456)\\n[2, 3, 643]\\n\\n>>> sorted(factorint(10000000001, limit=200).items())\\n[(101, 1), (99009901, 1)]\\n>>> isprime(99009901)\\nFalse\\n>>> primefactors(10000000001, limit=300)\\n[101]\\n\\nSee Also\\n========\\n\\nfactorint, divisors\",\n  \"documentation_truncated\": false,\n  \"group\": \"primes\",\n  \"id\": \"sympy.primefactors\",\n  \"library\": \"sympy\",\n  \"name\": \"primefactors\",\n  \"signature\": \"solve(n)\",\n  \"version\": \"1.14.0\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:4b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:13:37.955185474Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 395,
+    "eval_duration": 6808823000,
+    "load_duration": 614581,
+    "message": {
+      "content": "{\n  \"method_id\": \"sympy.primefactors\",\n  \"signature\": \"solve(n)\",\n  \"purpose\": \"Return a sorted list of distinct prime factors of n, ignoring multiplicity and composite factors that may remain due to factorization limits.\",\n  \"inputs\": \"n: integer (positive integer <= 5000)\",\n  \"output\": \"list of distinct positive integers (sorted ascending) that are prime factors of n\",\n  \"algorithm\": [\n    \"For the given positive integer n, find all prime numbers that divide n exactly without remainder.\",\n    \"Ignore any composite factors that remain if the factorization limit is set too low for complete factorization.\",\n    \"Return the list of prime factors sorted in ascending order.\"\n  ],\n  \"edge_cases\": [\n    \"n = 1: returns empty list (no prime factors)\",\n    \"n = 2: returns [2] (smallest prime)\",\n    \"n = 4: returns [2] (ignores multiplicity)\",\n    \"n = 0 or negative n: returns absolute value's prime factors (e.g., primefactors(-5) returns [5])\",\n    \"n = 10000000001 with limit=200: returns [101, 99009901] (but 99009901 is composite, so only [101] is returned when limit=300)\"\n  ],\n  \"constraints\": [\n    \"n must be a positive integer <= 5000\",\n    \"The function does not return -1 or 0\",\n    \"The output list must be sorted in ascending order\",\n    \"The function ignores multiplicity of prime factors\",\n    \"The function may return fewer prime factors if the factorization limit is set too low (as per the examples)\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:4b",
+    "prompt_eval_cached_count": 346,
+    "prompt_eval_count": 814,
+    "prompt_eval_duration": 248335000,
+    "total_duration": 7098917930
+  },
+  "started_at": "2026-11-14T13:13:30.855923+00:00",
+  "valid": true
+}

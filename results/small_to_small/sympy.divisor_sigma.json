@@ -1,0 +1,9238 @@
+{
+  "all_pass": false,
+  "cases": [
+    {
+      "case_id": "sympy.divisor_sigma:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 0,
+        "n": 1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 1,
+        "n": 1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0002",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 2,
+        "n": 1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0003",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 3,
+        "n": 1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0004",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "k": 4,
+        "n": 1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0005",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "k": 0,
+        "n": 2
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0006",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "k": 1,
+        "n": 2
+      },
+      "observed": {
+        "value": 3
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0007",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "k": 2,
+        "n": 2
+      },
+      "observed": {
+        "value": 7
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0008",
+      "category": "exhaustive",
+      "expected": {
+        "value": 9
+      },
+      "input": {
+        "k": 3,
+        "n": 2
+      },
+      "observed": {
+        "value": 15
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0009",
+      "category": "exhaustive",
+      "expected": {
+        "value": 17
+      },
+      "input": {
+        "k": 4,
+        "n": 2
+      },
+      "observed": {
+        "value": 31
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0010",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "k": 0,
+        "n": 3
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0011",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 1,
+        "n": 3
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0012",
+      "category": "exhaustive",
+      "expected": {
+        "value": 10
+      },
+      "input": {
+        "k": 2,
+        "n": 3
+      },
+      "observed": {
+        "value": 13
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0013",
+      "category": "exhaustive",
+      "expected": {
+        "value": 28
+      },
+      "input": {
+        "k": 3,
+        "n": 3
+      },
+      "observed": {
+        "value": 40
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0014",
+      "category": "exhaustive",
+      "expected": {
+        "value": 82
+      },
+      "input": {
+        "k": 4,
+        "n": 3
+      },
+      "observed": {
+        "value": 121
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0015",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "k": 0,
+        "n": 4
+      },
+      "observed": {
+        "value": 3
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0016",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "k": 1,
+        "n": 4
+      },
+      "observed": {
+        "value": 7
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0017",
+      "category": "exhaustive",
+      "expected": {
+        "value": 21
+      },
+      "input": {
+        "k": 2,
+        "n": 4
+      },
+      "observed": {
+        "value": 31
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0018",
+      "category": "exhaustive",
+      "expected": {
+        "value": 73
+      },
+      "input": {
+        "k": 3,
+        "n": 4
+      },
+      "observed": {
+        "value": 127
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0019",
+      "category": "exhaustive",
+      "expected": {
+        "value": 273
+      },
+      "input": {
+        "k": 4,
+        "n": 4
+      },
+      "observed": {
+        "value": 511
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0020",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "k": 0,
+        "n": 5
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0021",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "k": 1,
+        "n": 5
+      },
+      "observed": {
+        "value": 6
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0022",
+      "category": "exhaustive",
+      "expected": {
+        "value": 26
+      },
+      "input": {
+        "k": 2,
+        "n": 5
+      },
+      "observed": {
+        "value": 31
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0023",
+      "category": "exhaustive",
+      "expected": {
+        "value": 126
+      },
+      "input": {
+        "k": 3,
+        "n": 5
+      },
+      "observed": {
+        "value": 156
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0024",
+      "category": "exhaustive",
+      "expected": {
+        "value": 626
+      },
+      "input": {
+        "k": 4,
+        "n": 5
+      },
+      "observed": {
+        "value": 781
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0025",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 6
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0026",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "k": 1,
+        "n": 6
+      },
+      "observed": {
+        "value": 12
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0027",
+      "category": "exhaustive",
+      "expected": {
+        "value": 50
+      },
+      "input": {
+        "k": 2,
+        "n": 6
+      },
+      "observed": {
+        "value": 91
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0028",
+      "category": "exhaustive",
+      "expected": {
+        "value": 252
+      },
+      "input": {
+        "k": 3,
+        "n": 6
+      },
+      "observed": {
+        "value": 600
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0029",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1394
+      },
+      "input": {
+        "k": 4,
+        "n": 6
+      },
+      "observed": {
+        "value": 3751
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0030",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "k": 0,
+        "n": 7
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0031",
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "k": 1,
+        "n": 7
+      },
+      "observed": {
+        "value": 8
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0032",
+      "category": "exhaustive",
+      "expected": {
+        "value": 50
+      },
+      "input": {
+        "k": 2,
+        "n": 7
+      },
+      "observed": {
+        "value": 57
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0033",
+      "category": "exhaustive",
+      "expected": {
+        "value": 344
+      },
+      "input": {
+        "k": 3,
+        "n": 7
+      },
+      "observed": {
+        "value": 400
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0034",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2402
+      },
+      "input": {
+        "k": 4,
+        "n": 7
+      },
+      "observed": {
+        "value": 2801
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0035",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 8
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0036",
+      "category": "exhaustive",
+      "expected": {
+        "value": 15
+      },
+      "input": {
+        "k": 1,
+        "n": 8
+      },
+      "observed": {
+        "value": 15
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0037",
+      "category": "exhaustive",
+      "expected": {
+        "value": 85
+      },
+      "input": {
+        "k": 2,
+        "n": 8
+      },
+      "observed": {
+        "value": 127
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0038",
+      "category": "exhaustive",
+      "expected": {
+        "value": 585
+      },
+      "input": {
+        "k": 3,
+        "n": 8
+      },
+      "observed": {
+        "value": 1023
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0039",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4369
+      },
+      "input": {
+        "k": 4,
+        "n": 8
+      },
+      "observed": {
+        "value": 8191
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0040",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "k": 0,
+        "n": 9
+      },
+      "observed": {
+        "value": 3
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0041",
+      "category": "exhaustive",
+      "expected": {
+        "value": 13
+      },
+      "input": {
+        "k": 1,
+        "n": 9
+      },
+      "observed": {
+        "value": 13
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0042",
+      "category": "exhaustive",
+      "expected": {
+        "value": 91
+      },
+      "input": {
+        "k": 2,
+        "n": 9
+      },
+      "observed": {
+        "value": 121
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0043",
+      "category": "exhaustive",
+      "expected": {
+        "value": 757
+      },
+      "input": {
+        "k": 3,
+        "n": 9
+      },
+      "observed": {
+        "value": 1093
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0044",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6643
+      },
+      "input": {
+        "k": 4,
+        "n": 9
+      },
+      "observed": {
+        "value": 9841
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0045",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 10
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0046",
+      "category": "exhaustive",
+      "expected": {
+        "value": 18
+      },
+      "input": {
+        "k": 1,
+        "n": 10
+      },
+      "observed": {
+        "value": 18
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0047",
+      "category": "exhaustive",
+      "expected": {
+        "value": 130
+      },
+      "input": {
+        "k": 2,
+        "n": 10
+      },
+      "observed": {
+        "value": 217
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0048",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1134
+      },
+      "input": {
+        "k": 3,
+        "n": 10
+      },
+      "observed": {
+        "value": 2340
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0049",
+      "category": "exhaustive",
+      "expected": {
+        "value": 10642
+      },
+      "input": {
+        "k": 4,
+        "n": 10
+      },
+      "observed": {
+        "value": 24211
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0050",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "k": 0,
+        "n": 11
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0051",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "k": 1,
+        "n": 11
+      },
+      "observed": {
+        "value": 12
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0052",
+      "category": "exhaustive",
+      "expected": {
+        "value": 122
+      },
+      "input": {
+        "k": 2,
+        "n": 11
+      },
+      "observed": {
+        "value": 133
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0053",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1332
+      },
+      "input": {
+        "k": 3,
+        "n": 11
+      },
+      "observed": {
+        "value": 1464
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0054",
+      "category": "exhaustive",
+      "expected": {
+        "value": 14642
+      },
+      "input": {
+        "k": 4,
+        "n": 11
+      },
+      "observed": {
+        "value": 16105
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0055",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "k": 0,
+        "n": 12
+      },
+      "observed": {
+        "value": 6
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0056",
+      "category": "exhaustive",
+      "expected": {
+        "value": 28
+      },
+      "input": {
+        "k": 1,
+        "n": 12
+      },
+      "observed": {
+        "value": 28
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0057",
+      "category": "exhaustive",
+      "expected": {
+        "value": 210
+      },
+      "input": {
+        "k": 2,
+        "n": 12
+      },
+      "observed": {
+        "value": 403
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0058",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2044
+      },
+      "input": {
+        "k": 3,
+        "n": 12
+      },
+      "observed": {
+        "value": 5080
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0059",
+      "category": "exhaustive",
+      "expected": {
+        "value": 22386
+      },
+      "input": {
+        "k": 4,
+        "n": 12
+      },
+      "observed": {
+        "value": 61831
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0060",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "k": 0,
+        "n": 13
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0061",
+      "category": "exhaustive",
+      "expected": {
+        "value": 14
+      },
+      "input": {
+        "k": 1,
+        "n": 13
+      },
+      "observed": {
+        "value": 14
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0062",
+      "category": "exhaustive",
+      "expected": {
+        "value": 170
+      },
+      "input": {
+        "k": 2,
+        "n": 13
+      },
+      "observed": {
+        "value": 183
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0063",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2198
+      },
+      "input": {
+        "k": 3,
+        "n": 13
+      },
+      "observed": {
+        "value": 2380
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0064",
+      "category": "exhaustive",
+      "expected": {
+        "value": 28562
+      },
+      "input": {
+        "k": 4,
+        "n": 13
+      },
+      "observed": {
+        "value": 30941
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0065",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 14
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0066",
+      "category": "exhaustive",
+      "expected": {
+        "value": 24
+      },
+      "input": {
+        "k": 1,
+        "n": 14
+      },
+      "observed": {
+        "value": 24
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0067",
+      "category": "exhaustive",
+      "expected": {
+        "value": 250
+      },
+      "input": {
+        "k": 2,
+        "n": 14
+      },
+      "observed": {
+        "value": 399
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0068",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3096
+      },
+      "input": {
+        "k": 3,
+        "n": 14
+      },
+      "observed": {
+        "value": 6000
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0069",
+      "category": "exhaustive",
+      "expected": {
+        "value": 40834
+      },
+      "input": {
+        "k": 4,
+        "n": 14
+      },
+      "observed": {
+        "value": 86831
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0070",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 15
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0071",
+      "category": "exhaustive",
+      "expected": {
+        "value": 24
+      },
+      "input": {
+        "k": 1,
+        "n": 15
+      },
+      "observed": {
+        "value": 24
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0072",
+      "category": "exhaustive",
+      "expected": {
+        "value": 260
+      },
+      "input": {
+        "k": 2,
+        "n": 15
+      },
+      "observed": {
+        "value": 403
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0073",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3528
+      },
+      "input": {
+        "k": 3,
+        "n": 15
+      },
+      "observed": {
+        "value": 6240
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0074",
+      "category": "exhaustive",
+      "expected": {
+        "value": 51332
+      },
+      "input": {
+        "k": 4,
+        "n": 15
+      },
+      "observed": {
+        "value": 94501
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0075",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "k": 0,
+        "n": 16
+      },
+      "observed": {
+        "value": 5
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0076",
+      "category": "exhaustive",
+      "expected": {
+        "value": 31
+      },
+      "input": {
+        "k": 1,
+        "n": 16
+      },
+      "observed": {
+        "value": 31
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0077",
+      "category": "exhaustive",
+      "expected": {
+        "value": 341
+      },
+      "input": {
+        "k": 2,
+        "n": 16
+      },
+      "observed": {
+        "value": 511
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0078",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4681
+      },
+      "input": {
+        "k": 3,
+        "n": 16
+      },
+      "observed": {
+        "value": 8191
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0079",
+      "category": "exhaustive",
+      "expected": {
+        "value": 69905
+      },
+      "input": {
+        "k": 4,
+        "n": 16
+      },
+      "observed": {
+        "value": 131071
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0080",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "k": 0,
+        "n": 17
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0081",
+      "category": "exhaustive",
+      "expected": {
+        "value": 18
+      },
+      "input": {
+        "k": 1,
+        "n": 17
+      },
+      "observed": {
+        "value": 18
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0082",
+      "category": "exhaustive",
+      "expected": {
+        "value": 290
+      },
+      "input": {
+        "k": 2,
+        "n": 17
+      },
+      "observed": {
+        "value": 307
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0083",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4914
+      },
+      "input": {
+        "k": 3,
+        "n": 17
+      },
+      "observed": {
+        "value": 5220
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0084",
+      "category": "exhaustive",
+      "expected": {
+        "value": 83522
+      },
+      "input": {
+        "k": 4,
+        "n": 17
+      },
+      "observed": {
+        "value": 88741
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0085",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "k": 0,
+        "n": 18
+      },
+      "observed": {
+        "value": 6
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0086",
+      "category": "exhaustive",
+      "expected": {
+        "value": 39
+      },
+      "input": {
+        "k": 1,
+        "n": 18
+      },
+      "observed": {
+        "value": 39
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0087",
+      "category": "exhaustive",
+      "expected": {
+        "value": 455
+      },
+      "input": {
+        "k": 2,
+        "n": 18
+      },
+      "observed": {
+        "value": 847
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0088",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6813
+      },
+      "input": {
+        "k": 3,
+        "n": 18
+      },
+      "observed": {
+        "value": 16395
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0089",
+      "category": "exhaustive",
+      "expected": {
+        "value": 112931
+      },
+      "input": {
+        "k": 4,
+        "n": 18
+      },
+      "observed": {
+        "value": 305071
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0090",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "k": 0,
+        "n": 19
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0091",
+      "category": "exhaustive",
+      "expected": {
+        "value": 20
+      },
+      "input": {
+        "k": 1,
+        "n": 19
+      },
+      "observed": {
+        "value": 20
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0092",
+      "category": "exhaustive",
+      "expected": {
+        "value": 362
+      },
+      "input": {
+        "k": 2,
+        "n": 19
+      },
+      "observed": {
+        "value": 381
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0093",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6860
+      },
+      "input": {
+        "k": 3,
+        "n": 19
+      },
+      "observed": {
+        "value": 7240
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0094",
+      "category": "exhaustive",
+      "expected": {
+        "value": 130322
+      },
+      "input": {
+        "k": 4,
+        "n": 19
+      },
+      "observed": {
+        "value": 137561
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0095",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "k": 0,
+        "n": 20
+      },
+      "observed": {
+        "value": 6
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0096",
+      "category": "exhaustive",
+      "expected": {
+        "value": 42
+      },
+      "input": {
+        "k": 1,
+        "n": 20
+      },
+      "observed": {
+        "value": 42
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0097",
+      "category": "exhaustive",
+      "expected": {
+        "value": 546
+      },
+      "input": {
+        "k": 2,
+        "n": 20
+      },
+      "observed": {
+        "value": 961
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0098",
+      "category": "exhaustive",
+      "expected": {
+        "value": 9198
+      },
+      "input": {
+        "k": 3,
+        "n": 20
+      },
+      "observed": {
+        "value": 19812
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0099",
+      "category": "exhaustive",
+      "expected": {
+        "value": 170898
+      },
+      "input": {
+        "k": 4,
+        "n": 20
+      },
+      "observed": {
+        "value": 399091
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0100",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 21
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0101",
+      "category": "exhaustive",
+      "expected": {
+        "value": 32
+      },
+      "input": {
+        "k": 1,
+        "n": 21
+      },
+      "observed": {
+        "value": 32
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0102",
+      "category": "exhaustive",
+      "expected": {
+        "value": 500
+      },
+      "input": {
+        "k": 2,
+        "n": 21
+      },
+      "observed": {
+        "value": 741
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0103",
+      "category": "exhaustive",
+      "expected": {
+        "value": 9632
+      },
+      "input": {
+        "k": 3,
+        "n": 21
+      },
+      "observed": {
+        "value": 16000
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0104",
+      "category": "exhaustive",
+      "expected": {
+        "value": 196964
+      },
+      "input": {
+        "k": 4,
+        "n": 21
+      },
+      "observed": {
+        "value": 338921
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0105",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 22
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0106",
+      "category": "exhaustive",
+      "expected": {
+        "value": 36
+      },
+      "input": {
+        "k": 1,
+        "n": 22
+      },
+      "observed": {
+        "value": 36
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0107",
+      "category": "exhaustive",
+      "expected": {
+        "value": 610
+      },
+      "input": {
+        "k": 2,
+        "n": 22
+      },
+      "observed": {
+        "value": 931
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0108",
+      "category": "exhaustive",
+      "expected": {
+        "value": 11988
+      },
+      "input": {
+        "k": 3,
+        "n": 22
+      },
+      "observed": {
+        "value": 21960
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0109",
+      "category": "exhaustive",
+      "expected": {
+        "value": 248914
+      },
+      "input": {
+        "k": 4,
+        "n": 22
+      },
+      "observed": {
+        "value": 499255
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0110",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "k": 0,
+        "n": 23
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0111",
+      "category": "exhaustive",
+      "expected": {
+        "value": 24
+      },
+      "input": {
+        "k": 1,
+        "n": 23
+      },
+      "observed": {
+        "value": 24
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0112",
+      "category": "exhaustive",
+      "expected": {
+        "value": 530
+      },
+      "input": {
+        "k": 2,
+        "n": 23
+      },
+      "observed": {
+        "value": 553
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0113",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12168
+      },
+      "input": {
+        "k": 3,
+        "n": 23
+      },
+      "observed": {
+        "value": 12720
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0114",
+      "category": "exhaustive",
+      "expected": {
+        "value": 279842
+      },
+      "input": {
+        "k": 4,
+        "n": 23
+      },
+      "observed": {
+        "value": 292561
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0115",
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "k": 0,
+        "n": 24
+      },
+      "observed": {
+        "value": 8
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0116",
+      "category": "exhaustive",
+      "expected": {
+        "value": 60
+      },
+      "input": {
+        "k": 1,
+        "n": 24
+      },
+      "observed": {
+        "value": 60
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0117",
+      "category": "exhaustive",
+      "expected": {
+        "value": 850
+      },
+      "input": {
+        "k": 2,
+        "n": 24
+      },
+      "observed": {
+        "value": 1651
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0118",
+      "category": "exhaustive",
+      "expected": {
+        "value": 16380
+      },
+      "input": {
+        "k": 3,
+        "n": 24
+      },
+      "observed": {
+        "value": 40920
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0119",
+      "category": "exhaustive",
+      "expected": {
+        "value": 358258
+      },
+      "input": {
+        "k": 4,
+        "n": 24
+      },
+      "observed": {
+        "value": 991111
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0120",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "k": 0,
+        "n": 25
+      },
+      "observed": {
+        "value": 3
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0121",
+      "category": "exhaustive",
+      "expected": {
+        "value": 31
+      },
+      "input": {
+        "k": 1,
+        "n": 25
+      },
+      "observed": {
+        "value": 31
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0122",
+      "category": "exhaustive",
+      "expected": {
+        "value": 651
+      },
+      "input": {
+        "k": 2,
+        "n": 25
+      },
+      "observed": {
+        "value": 781
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0123",
+      "category": "exhaustive",
+      "expected": {
+        "value": 15751
+      },
+      "input": {
+        "k": 3,
+        "n": 25
+      },
+      "observed": {
+        "value": 19531
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0124",
+      "category": "exhaustive",
+      "expected": {
+        "value": 391251
+      },
+      "input": {
+        "k": 4,
+        "n": 25
+      },
+      "observed": {
+        "value": 488281
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0125",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 26
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0126",
+      "category": "exhaustive",
+      "expected": {
+        "value": 42
+      },
+      "input": {
+        "k": 1,
+        "n": 26
+      },
+      "observed": {
+        "value": 42
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0127",
+      "category": "exhaustive",
+      "expected": {
+        "value": 850
+      },
+      "input": {
+        "k": 2,
+        "n": 26
+      },
+      "observed": {
+        "value": 1281
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0128",
+      "category": "exhaustive",
+      "expected": {
+        "value": 19782
+      },
+      "input": {
+        "k": 3,
+        "n": 26
+      },
+      "observed": {
+        "value": 35700
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0129",
+      "category": "exhaustive",
+      "expected": {
+        "value": 485554
+      },
+      "input": {
+        "k": 4,
+        "n": 26
+      },
+      "observed": {
+        "value": 959171
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0130",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 27
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0131",
+      "category": "exhaustive",
+      "expected": {
+        "value": 40
+      },
+      "input": {
+        "k": 1,
+        "n": 27
+      },
+      "observed": {
+        "value": 40
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0132",
+      "category": "exhaustive",
+      "expected": {
+        "value": 820
+      },
+      "input": {
+        "k": 2,
+        "n": 27
+      },
+      "observed": {
+        "value": 1093
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0133",
+      "category": "exhaustive",
+      "expected": {
+        "value": 20440
+      },
+      "input": {
+        "k": 3,
+        "n": 27
+      },
+      "observed": {
+        "value": 29524
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0134",
+      "category": "exhaustive",
+      "expected": {
+        "value": 538084
+      },
+      "input": {
+        "k": 4,
+        "n": 27
+      },
+      "observed": {
+        "value": 797161
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0135",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "k": 0,
+        "n": 28
+      },
+      "observed": {
+        "value": 6
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0136",
+      "category": "exhaustive",
+      "expected": {
+        "value": 56
+      },
+      "input": {
+        "k": 1,
+        "n": 28
+      },
+      "observed": {
+        "value": 56
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0137",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1050
+      },
+      "input": {
+        "k": 2,
+        "n": 28
+      },
+      "observed": {
+        "value": 1767
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0138",
+      "category": "exhaustive",
+      "expected": {
+        "value": 25112
+      },
+      "input": {
+        "k": 3,
+        "n": 28
+      },
+      "observed": {
+        "value": 50800
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0139",
+      "category": "exhaustive",
+      "expected": {
+        "value": 655746
+      },
+      "input": {
+        "k": 4,
+        "n": 28
+      },
+      "observed": {
+        "value": 1431311
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0140",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "k": 0,
+        "n": 29
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0141",
+      "category": "exhaustive",
+      "expected": {
+        "value": 30
+      },
+      "input": {
+        "k": 1,
+        "n": 29
+      },
+      "observed": {
+        "value": 30
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0142",
+      "category": "exhaustive",
+      "expected": {
+        "value": 842
+      },
+      "input": {
+        "k": 2,
+        "n": 29
+      },
+      "observed": {
+        "value": 871
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0143",
+      "category": "exhaustive",
+      "expected": {
+        "value": 24390
+      },
+      "input": {
+        "k": 3,
+        "n": 29
+      },
+      "observed": {
+        "value": 25260
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0144",
+      "category": "exhaustive",
+      "expected": {
+        "value": 707282
+      },
+      "input": {
+        "k": 4,
+        "n": 29
+      },
+      "observed": {
+        "value": 732541
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0145",
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "k": 0,
+        "n": 30
+      },
+      "observed": {
+        "value": 8
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0146",
+      "category": "exhaustive",
+      "expected": {
+        "value": 72
+      },
+      "input": {
+        "k": 1,
+        "n": 30
+      },
+      "observed": {
+        "value": 72
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0147",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1300
+      },
+      "input": {
+        "k": 2,
+        "n": 30
+      },
+      "observed": {
+        "value": 2821
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0148",
+      "category": "exhaustive",
+      "expected": {
+        "value": 31752
+      },
+      "input": {
+        "k": 3,
+        "n": 30
+      },
+      "observed": {
+        "value": 93600
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0149",
+      "category": "exhaustive",
+      "expected": {
+        "value": 872644
+      },
+      "input": {
+        "k": 4,
+        "n": 30
+      },
+      "observed": {
+        "value": 2929531
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0150",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "k": 0,
+        "n": 31
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0151",
+      "category": "exhaustive",
+      "expected": {
+        "value": 32
+      },
+      "input": {
+        "k": 1,
+        "n": 31
+      },
+      "observed": {
+        "value": 32
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0152",
+      "category": "exhaustive",
+      "expected": {
+        "value": 962
+      },
+      "input": {
+        "k": 2,
+        "n": 31
+      },
+      "observed": {
+        "value": 993
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0153",
+      "category": "exhaustive",
+      "expected": {
+        "value": 29792
+      },
+      "input": {
+        "k": 3,
+        "n": 31
+      },
+      "observed": {
+        "value": 30784
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0154",
+      "category": "exhaustive",
+      "expected": {
+        "value": 923522
+      },
+      "input": {
+        "k": 4,
+        "n": 31
+      },
+      "observed": {
+        "value": 954305
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0155",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "k": 0,
+        "n": 32
+      },
+      "observed": {
+        "value": 6
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0156",
+      "category": "exhaustive",
+      "expected": {
+        "value": 63
+      },
+      "input": {
+        "k": 1,
+        "n": 32
+      },
+      "observed": {
+        "value": 63
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0157",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1365
+      },
+      "input": {
+        "k": 2,
+        "n": 32
+      },
+      "observed": {
+        "value": 2047
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0158",
+      "category": "exhaustive",
+      "expected": {
+        "value": 37449
+      },
+      "input": {
+        "k": 3,
+        "n": 32
+      },
+      "observed": {
+        "value": 65535
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0159",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1118481
+      },
+      "input": {
+        "k": 4,
+        "n": 32
+      },
+      "observed": {
+        "value": 2097151
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0160",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 33
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0161",
+      "category": "exhaustive",
+      "expected": {
+        "value": 48
+      },
+      "input": {
+        "k": 1,
+        "n": 33
+      },
+      "observed": {
+        "value": 48
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0162",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1220
+      },
+      "input": {
+        "k": 2,
+        "n": 33
+      },
+      "observed": {
+        "value": 1729
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0163",
+      "category": "exhaustive",
+      "expected": {
+        "value": 37296
+      },
+      "input": {
+        "k": 3,
+        "n": 33
+      },
+      "observed": {
+        "value": 58560
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0164",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1200644
+      },
+      "input": {
+        "k": 4,
+        "n": 33
+      },
+      "observed": {
+        "value": 1948705
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0165",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 34
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0166",
+      "category": "exhaustive",
+      "expected": {
+        "value": 54
+      },
+      "input": {
+        "k": 1,
+        "n": 34
+      },
+      "observed": {
+        "value": 54
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0167",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1450
+      },
+      "input": {
+        "k": 2,
+        "n": 34
+      },
+      "observed": {
+        "value": 2149
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0168",
+      "category": "exhaustive",
+      "expected": {
+        "value": 44226
+      },
+      "input": {
+        "k": 3,
+        "n": 34
+      },
+      "observed": {
+        "value": 78300
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0169",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1419874
+      },
+      "input": {
+        "k": 4,
+        "n": 34
+      },
+      "observed": {
+        "value": 2750971
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0170",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 35
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0171",
+      "category": "exhaustive",
+      "expected": {
+        "value": 48
+      },
+      "input": {
+        "k": 1,
+        "n": 35
+      },
+      "observed": {
+        "value": 48
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0172",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1300
+      },
+      "input": {
+        "k": 2,
+        "n": 35
+      },
+      "observed": {
+        "value": 1767
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0173",
+      "category": "exhaustive",
+      "expected": {
+        "value": 43344
+      },
+      "input": {
+        "k": 3,
+        "n": 35
+      },
+      "observed": {
+        "value": 62400
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0174",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1503652
+      },
+      "input": {
+        "k": 4,
+        "n": 35
+      },
+      "observed": {
+        "value": 2187581
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0175",
+      "category": "exhaustive",
+      "expected": {
+        "value": 9
+      },
+      "input": {
+        "k": 0,
+        "n": 36
+      },
+      "observed": {
+        "value": 9
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0176",
+      "category": "exhaustive",
+      "expected": {
+        "value": 91
+      },
+      "input": {
+        "k": 1,
+        "n": 36
+      },
+      "observed": {
+        "value": 91
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0177",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1911
+      },
+      "input": {
+        "k": 2,
+        "n": 36
+      },
+      "observed": {
+        "value": 3751
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0178",
+      "category": "exhaustive",
+      "expected": {
+        "value": 55261
+      },
+      "input": {
+        "k": 3,
+        "n": 36
+      },
+      "observed": {
+        "value": 138811
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0179",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1813539
+      },
+      "input": {
+        "k": 4,
+        "n": 36
+      },
+      "observed": {
+        "value": 5028751
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0180",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "k": 0,
+        "n": 37
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0181",
+      "category": "exhaustive",
+      "expected": {
+        "value": 38
+      },
+      "input": {
+        "k": 1,
+        "n": 37
+      },
+      "observed": {
+        "value": 38
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0182",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1370
+      },
+      "input": {
+        "k": 2,
+        "n": 37
+      },
+      "observed": {
+        "value": 1407
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0183",
+      "category": "exhaustive",
+      "expected": {
+        "value": 50654
+      },
+      "input": {
+        "k": 3,
+        "n": 37
+      },
+      "observed": {
+        "value": 52060
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0184",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1874162
+      },
+      "input": {
+        "k": 4,
+        "n": 37
+      },
+      "observed": {
+        "value": 1926221
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0185",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 38
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0186",
+      "category": "exhaustive",
+      "expected": {
+        "value": 60
+      },
+      "input": {
+        "k": 1,
+        "n": 38
+      },
+      "observed": {
+        "value": 60
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0187",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1810
+      },
+      "input": {
+        "k": 2,
+        "n": 38
+      },
+      "observed": {
+        "value": 2667
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0188",
+      "category": "exhaustive",
+      "expected": {
+        "value": 61740
+      },
+      "input": {
+        "k": 3,
+        "n": 38
+      },
+      "observed": {
+        "value": 108600
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0189",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2215474
+      },
+      "input": {
+        "k": 4,
+        "n": 38
+      },
+      "observed": {
+        "value": 4264391
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0190",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 39
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0191",
+      "category": "exhaustive",
+      "expected": {
+        "value": 56
+      },
+      "input": {
+        "k": 1,
+        "n": 39
+      },
+      "observed": {
+        "value": 56
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0192",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1700
+      },
+      "input": {
+        "k": 2,
+        "n": 39
+      },
+      "observed": {
+        "value": 2379
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0193",
+      "category": "exhaustive",
+      "expected": {
+        "value": 61544
+      },
+      "input": {
+        "k": 3,
+        "n": 39
+      },
+      "observed": {
+        "value": 95200
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0194",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2342084
+      },
+      "input": {
+        "k": 4,
+        "n": 39
+      },
+      "observed": {
+        "value": 3743861
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0195",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "k": 0,
+        "n": 856
+      },
+      "observed": {
+        "value": 8
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0196",
+      "category": "random",
+      "expected": {
+        "value": 1620
+      },
+      "input": {
+        "k": 1,
+        "n": 856
+      },
+      "observed": {
+        "value": 1620
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0197",
+      "category": "random",
+      "expected": {
+        "value": 973250
+      },
+      "input": {
+        "k": 2,
+        "n": 856
+      },
+      "observed": {
+        "value": 1467739
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0198",
+      "category": "random",
+      "expected": {
+        "value": 716650740
+      },
+      "input": {
+        "k": 3,
+        "n": 856
+      },
+      "observed": {
+        "value": 1265041800
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0199",
+      "category": "random",
+      "expected": {
+        "value": 572686781138
+      },
+      "input": {
+        "k": 4,
+        "n": 856
+      },
+      "observed": {
+        "value": 1083802002391
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0200",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "k": 0,
+        "n": 66
+      },
+      "observed": {
+        "value": 8
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0201",
+      "category": "random",
+      "expected": {
+        "value": 144
+      },
+      "input": {
+        "k": 1,
+        "n": 66
+      },
+      "observed": {
+        "value": 144
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0202",
+      "category": "random",
+      "expected": {
+        "value": 6100
+      },
+      "input": {
+        "k": 2,
+        "n": 66
+      },
+      "observed": {
+        "value": 12103
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0203",
+      "category": "random",
+      "expected": {
+        "value": 335664
+      },
+      "input": {
+        "k": 3,
+        "n": 66
+      },
+      "observed": {
+        "value": 878400
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0204",
+      "category": "random",
+      "expected": {
+        "value": 20410948
+      },
+      "input": {
+        "k": 4,
+        "n": 66
+      },
+      "observed": {
+        "value": 60409855
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0205",
+      "category": "random",
+      "expected": {
+        "value": 16
+      },
+      "input": {
+        "k": 0,
+        "n": 510
+      },
+      "observed": {
+        "value": 16
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0206",
+      "category": "random",
+      "expected": {
+        "value": 1296
+      },
+      "input": {
+        "k": 1,
+        "n": 510
+      },
+      "observed": {
+        "value": 1296
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0207",
+      "category": "random",
+      "expected": {
+        "value": 377000
+      },
+      "input": {
+        "k": 2,
+        "n": 510
+      },
+      "observed": {
+        "value": 866047
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0208",
+      "category": "random",
+      "expected": {
+        "value": 156029328
+      },
+      "input": {
+        "k": 3,
+        "n": 510
+      },
+      "observed": {
+        "value": 488592000
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0209",
+      "category": "random",
+      "expected": {
+        "value": 72884972168
+      },
+      "input": {
+        "k": 4,
+        "n": 510
+      },
+      "observed": {
+        "value": 259969510471
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0210",
+      "category": "random",
+      "expected": {
+        "value": 16
+      },
+      "input": {
+        "k": 0,
+        "n": 984
+      },
+      "observed": {
+        "value": 16
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0211",
+      "category": "random",
+      "expected": {
+        "value": 2520
+      },
+      "input": {
+        "k": 1,
+        "n": 984
+      },
+      "observed": {
+        "value": 2520
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0212",
+      "category": "random",
+      "expected": {
+        "value": 1429700
+      },
+      "input": {
+        "k": 2,
+        "n": 984
+      },
+      "observed": {
+        "value": 2844673
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0213",
+      "category": "random",
+      "expected": {
+        "value": 1128942360
+      },
+      "input": {
+        "k": 3,
+        "n": 984
+      },
+      "observed": {
+        "value": 2890752480
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0214",
+      "category": "random",
+      "expected": {
+        "value": 1012351842596
+      },
+      "input": {
+        "k": 4,
+        "n": 984
+      },
+      "observed": {
+        "value": 2870658855955
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0215",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 295
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0216",
+      "category": "random",
+      "expected": {
+        "value": 360
+      },
+      "input": {
+        "k": 1,
+        "n": 295
+      },
+      "observed": {
+        "value": 360
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0217",
+      "category": "random",
+      "expected": {
+        "value": 90532
+      },
+      "input": {
+        "k": 2,
+        "n": 295
+      },
+      "observed": {
+        "value": 109771
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0218",
+      "category": "random",
+      "expected": {
+        "value": 25877880
+      },
+      "input": {
+        "k": 3,
+        "n": 295
+      },
+      "observed": {
+        "value": 32591520
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0219",
+      "category": "random",
+      "expected": {
+        "value": 7585468612
+      },
+      "input": {
+        "k": 4,
+        "n": 295
+      },
+      "observed": {
+        "value": 9626825461
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0220",
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "k": 0,
+        "n": 892
+      },
+      "observed": {
+        "value": 6
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0221",
+      "category": "random",
+      "expected": {
+        "value": 1568
+      },
+      "input": {
+        "k": 1,
+        "n": 892
+      },
+      "observed": {
+        "value": 1568
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0222",
+      "category": "random",
+      "expected": {
+        "value": 1044330
+      },
+      "input": {
+        "k": 2,
+        "n": 892
+      },
+      "observed": {
+        "value": 1548543
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0223",
+      "category": "random",
+      "expected": {
+        "value": 809538464
+      },
+      "input": {
+        "k": 3,
+        "n": 892
+      },
+      "observed": {
+        "value": 1414719040
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0224",
+      "category": "random",
+      "expected": {
+        "value": 675121749666
+      },
+      "input": {
+        "k": 4,
+        "n": 892
+      },
+      "observed": {
+        "value": 1269381723071
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0225",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 305
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0226",
+      "category": "random",
+      "expected": {
+        "value": 372
+      },
+      "input": {
+        "k": 1,
+        "n": 305
+      },
+      "observed": {
+        "value": 372
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0227",
+      "category": "random",
+      "expected": {
+        "value": 96772
+      },
+      "input": {
+        "k": 2,
+        "n": 305
+      },
+      "observed": {
+        "value": 117273
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0228",
+      "category": "random",
+      "expected": {
+        "value": 28599732
+      },
+      "input": {
+        "k": 3,
+        "n": 305
+      },
+      "observed": {
+        "value": 35999184
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0229",
+      "category": "random",
+      "expected": {
+        "value": 8667497092
+      },
+      "input": {
+        "k": 4,
+        "n": 305
+      },
+      "observed": {
+        "value": 10993828505
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0230",
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "k": 0,
+        "n": 261
+      },
+      "observed": {
+        "value": 6
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0231",
+      "category": "random",
+      "expected": {
+        "value": 390
+      },
+      "input": {
+        "k": 1,
+        "n": 261
+      },
+      "observed": {
+        "value": 390
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0232",
+      "category": "random",
+      "expected": {
+        "value": 76622
+      },
+      "input": {
+        "k": 2,
+        "n": 261
+      },
+      "observed": {
+        "value": 105391
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0233",
+      "category": "random",
+      "expected": {
+        "value": 18463230
+      },
+      "input": {
+        "k": 3,
+        "n": 261
+      },
+      "observed": {
+        "value": 27609180
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0234",
+      "category": "random",
+      "expected": {
+        "value": 4698474326
+      },
+      "input": {
+        "k": 4,
+        "n": 261
+      },
+      "observed": {
+        "value": 7208935981
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0235",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "k": 0,
+        "n": 479
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0236",
+      "category": "random",
+      "expected": {
+        "value": 480
+      },
+      "input": {
+        "k": 1,
+        "n": 479
+      },
+      "observed": {
+        "value": 480
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0237",
+      "category": "random",
+      "expected": {
+        "value": 229442
+      },
+      "input": {
+        "k": 2,
+        "n": 479
+      },
+      "observed": {
+        "value": 229921
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0238",
+      "category": "random",
+      "expected": {
+        "value": 109902240
+      },
+      "input": {
+        "k": 3,
+        "n": 479
+      },
+      "observed": {
+        "value": 110132160
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0239",
+      "category": "random",
+      "expected": {
+        "value": 52643172482
+      },
+      "input": {
+        "k": 4,
+        "n": 479
+      },
+      "observed": {
+        "value": 52753304641
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0240",
+      "category": "random",
+      "expected": {
+        "value": 20
+      },
+      "input": {
+        "k": 0,
+        "n": 816
+      },
+      "observed": {
+        "value": 20
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0241",
+      "category": "random",
+      "expected": {
+        "value": 2232
+      },
+      "input": {
+        "k": 1,
+        "n": 816
+      },
+      "observed": {
+        "value": 2232
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0242",
+      "category": "random",
+      "expected": {
+        "value": 988900
+      },
+      "input": {
+        "k": 2,
+        "n": 816
+      },
+      "observed": {
+        "value": 2039401
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0243",
+      "category": "random",
+      "expected": {
+        "value": 644068152
+      },
+      "input": {
+        "k": 3,
+        "n": 816
+      },
+      "observed": {
+        "value": 1710280800
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0244",
+      "category": "random",
+      "expected": {
+        "value": 478765643620
+      },
+      "input": {
+        "k": 4,
+        "n": 816
+      },
+      "observed": {
+        "value": 1407395964931
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0245",
+      "category": "random",
+      "expected": {
+        "value": 18
+      },
+      "input": {
+        "k": 0,
+        "n": 700
+      },
+      "observed": {
+        "value": 18
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0246",
+      "category": "random",
+      "expected": {
+        "value": 1736
+      },
+      "input": {
+        "k": 1,
+        "n": 700
+      },
+      "observed": {
+        "value": 1736
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0247",
+      "category": "random",
+      "expected": {
+        "value": 683550
+      },
+      "input": {
+        "k": 2,
+        "n": 700
+      },
+      "observed": {
+        "value": 1380027
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0248",
+      "category": "random",
+      "expected": {
+        "value": 395539112
+      },
+      "input": {
+        "k": 3,
+        "n": 700
+      },
+      "observed": {
+        "value": 992174800
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0249",
+      "category": "random",
+      "expected": {
+        "value": 256561278246
+      },
+      "input": {
+        "k": 4,
+        "n": 700
+      },
+      "observed": {
+        "value": 698881966391
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0250",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "k": 0,
+        "n": 78
+      },
+      "observed": {
+        "value": 8
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0251",
+      "category": "random",
+      "expected": {
+        "value": 168
+      },
+      "input": {
+        "k": 1,
+        "n": 78
+      },
+      "observed": {
+        "value": 168
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0252",
+      "category": "random",
+      "expected": {
+        "value": 8500
+      },
+      "input": {
+        "k": 2,
+        "n": 78
+      },
+      "observed": {
+        "value": 16653
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0253",
+      "category": "random",
+      "expected": {
+        "value": 553896
+      },
+      "input": {
+        "k": 3,
+        "n": 78
+      },
+      "observed": {
+        "value": 1428000
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0254",
+      "category": "random",
+      "expected": {
+        "value": 39815428
+      },
+      "input": {
+        "k": 4,
+        "n": 78
+      },
+      "observed": {
+        "value": 116059691
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0255",
+      "category": "random",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "k": 0,
+        "n": 729
+      },
+      "observed": {
+        "value": 7
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0256",
+      "category": "random",
+      "expected": {
+        "value": 1093
+      },
+      "input": {
+        "k": 1,
+        "n": 729
+      },
+      "observed": {
+        "value": 1093
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0257",
+      "category": "random",
+      "expected": {
+        "value": 597871
+      },
+      "input": {
+        "k": 2,
+        "n": 729
+      },
+      "observed": {
+        "value": 797161
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0258",
+      "category": "random",
+      "expected": {
+        "value": 402321277
+      },
+      "input": {
+        "k": 3,
+        "n": 729
+      },
+      "observed": {
+        "value": 581130733
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0259",
+      "category": "random",
+      "expected": {
+        "value": 285959905687
+      },
+      "input": {
+        "k": 4,
+        "n": 729
+      },
+      "observed": {
+        "value": 423644304721
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0260",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 386
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0261",
+      "category": "random",
+      "expected": {
+        "value": 582
+      },
+      "input": {
+        "k": 1,
+        "n": 386
+      },
+      "observed": {
+        "value": 582
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0262",
+      "category": "random",
+      "expected": {
+        "value": 186250
+      },
+      "input": {
+        "k": 2,
+        "n": 386
+      },
+      "observed": {
+        "value": 262101
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0263",
+      "category": "random",
+      "expected": {
+        "value": 64701522
+      },
+      "input": {
+        "k": 3,
+        "n": 386
+      },
+      "observed": {
+        "value": 108397500
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0264",
+      "category": "random",
+      "expected": {
+        "value": 23587296034
+      },
+      "input": {
+        "k": 4,
+        "n": 386
+      },
+      "observed": {
+        "value": 43236149531
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0265",
+      "category": "random",
+      "expected": {
+        "value": 24
+      },
+      "input": {
+        "k": 0,
+        "n": 792
+      },
+      "observed": {
+        "value": 24
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0266",
+      "category": "random",
+      "expected": {
+        "value": 2340
+      },
+      "input": {
+        "k": 1,
+        "n": 792
+      },
+      "observed": {
+        "value": 2340
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0267",
+      "category": "random",
+      "expected": {
+        "value": 943670
+      },
+      "input": {
+        "k": 2,
+        "n": 792
+      },
+      "observed": {
+        "value": 2043811
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0268",
+      "category": "random",
+      "expected": {
+        "value": 589869540
+      },
+      "input": {
+        "k": 3,
+        "n": 792
+      },
+      "observed": {
+        "value": 1636955496
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0269",
+      "category": "random",
+      "expected": {
+        "value": 424958675414
+      },
+      "input": {
+        "k": 4,
+        "n": 792
+      },
+      "observed": {
+        "value": 1298185897255
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0270",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "k": 0,
+        "n": 769
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0271",
+      "category": "random",
+      "expected": {
+        "value": 770
+      },
+      "input": {
+        "k": 1,
+        "n": 769
+      },
+      "observed": {
+        "value": 770
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0272",
+      "category": "random",
+      "expected": {
+        "value": 591362
+      },
+      "input": {
+        "k": 2,
+        "n": 769
+      },
+      "observed": {
+        "value": 592131
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0273",
+      "category": "random",
+      "expected": {
+        "value": 454756610
+      },
+      "input": {
+        "k": 3,
+        "n": 769
+      },
+      "observed": {
+        "value": 455348740
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0274",
+      "category": "random",
+      "expected": {
+        "value": 349707832322
+      },
+      "input": {
+        "k": 4,
+        "n": 769
+      },
+      "observed": {
+        "value": 350163181061
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0275",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "k": 0,
+        "n": 366
+      },
+      "observed": {
+        "value": 8
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0276",
+      "category": "random",
+      "expected": {
+        "value": 744
+      },
+      "input": {
+        "k": 1,
+        "n": 366
+      },
+      "observed": {
+        "value": 744
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0277",
+      "category": "random",
+      "expected": {
+        "value": 186100
+      },
+      "input": {
+        "k": 2,
+        "n": 366
+      },
+      "observed": {
+        "value": 344253
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0278",
+      "category": "random",
+      "expected": {
+        "value": 57199464
+      },
+      "input": {
+        "k": 3,
+        "n": 366
+      },
+      "observed": {
+        "value": 138458400
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0279",
+      "category": "random",
+      "expected": {
+        "value": 19301103748
+      },
+      "input": {
+        "k": 4,
+        "n": 366
+      },
+      "observed": {
+        "value": 52801345355
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0280",
+      "category": "random",
+      "expected": {
+        "value": 10
+      },
+      "input": {
+        "k": 0,
+        "n": 304
+      },
+      "observed": {
+        "value": 10
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0281",
+      "category": "random",
+      "expected": {
+        "value": 620
+      },
+      "input": {
+        "k": 1,
+        "n": 304
+      },
+      "observed": {
+        "value": 620
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0282",
+      "category": "random",
+      "expected": {
+        "value": 123442
+      },
+      "input": {
+        "k": 2,
+        "n": 304
+      },
+      "observed": {
+        "value": 194691
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0283",
+      "category": "random",
+      "expected": {
+        "value": 32111660
+      },
+      "input": {
+        "k": 3,
+        "n": 304
+      },
+      "observed": {
+        "value": 59302840
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0284",
+      "category": "random",
+      "expected": {
+        "value": 9110159410
+      },
+      "input": {
+        "k": 4,
+        "n": 304
+      },
+      "observed": {
+        "value": 18030257831
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0285",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 249
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0286",
+      "category": "random",
+      "expected": {
+        "value": 336
+      },
+      "input": {
+        "k": 1,
+        "n": 249
+      },
+      "observed": {
+        "value": 336
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0287",
+      "category": "random",
+      "expected": {
+        "value": 68900
+      },
+      "input": {
+        "k": 2,
+        "n": 249
+      },
+      "observed": {
+        "value": 90649
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0288",
+      "category": "random",
+      "expected": {
+        "value": 16010064
+      },
+      "input": {
+        "k": 3,
+        "n": 249
+      },
+      "observed": {
+        "value": 23150400
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0289",
+      "category": "random",
+      "expected": {
+        "value": 3891582404
+      },
+      "input": {
+        "k": 4,
+        "n": 249
+      },
+      "observed": {
+        "value": 5812486801
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0290",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 321
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0291",
+      "category": "random",
+      "expected": {
+        "value": 432
+      },
+      "input": {
+        "k": 1,
+        "n": 321
+      },
+      "observed": {
+        "value": 432
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0292",
+      "category": "random",
+      "expected": {
+        "value": 114500
+      },
+      "input": {
+        "k": 2,
+        "n": 321
+      },
+      "observed": {
+        "value": 150241
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0293",
+      "category": "random",
+      "expected": {
+        "value": 34301232
+      },
+      "input": {
+        "k": 3,
+        "n": 321
+      },
+      "observed": {
+        "value": 49464000
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0294",
+      "category": "random",
+      "expected": {
+        "value": 10748527364
+      },
+      "input": {
+        "k": 4,
+        "n": 321
+      },
+      "observed": {
+        "value": 16010260321
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0295",
+      "category": "random",
+      "expected": {
+        "value": 15
+      },
+      "input": {
+        "k": 0,
+        "n": 400
+      },
+      "observed": {
+        "value": 15
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0296",
+      "category": "random",
+      "expected": {
+        "value": 961
+      },
+      "input": {
+        "k": 1,
+        "n": 400
+      },
+      "observed": {
+        "value": 961
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0297",
+      "category": "random",
+      "expected": {
+        "value": 221991
+      },
+      "input": {
+        "k": 2,
+        "n": 400
+      },
+      "observed": {
+        "value": 399091
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0298",
+      "category": "random",
+      "expected": {
+        "value": 73730431
+      },
+      "input": {
+        "k": 3,
+        "n": 400
+      },
+      "observed": {
+        "value": 159978421
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0299",
+      "category": "random",
+      "expected": {
+        "value": 27350401155
+      },
+      "input": {
+        "k": 4,
+        "n": 400
+      },
+      "observed": {
+        "value": 63999478951
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0300",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "k": 0,
+        "n": 776
+      },
+      "observed": {
+        "value": 8
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0301",
+      "category": "random",
+      "expected": {
+        "value": 1470
+      },
+      "input": {
+        "k": 1,
+        "n": 776
+      },
+      "observed": {
+        "value": 1470
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0302",
+      "category": "random",
+      "expected": {
+        "value": 799850
+      },
+      "input": {
+        "k": 2,
+        "n": 776
+      },
+      "observed": {
+        "value": 1207389
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0303",
+      "category": "random",
+      "expected": {
+        "value": 533914290
+      },
+      "input": {
+        "k": 3,
+        "n": 776
+      },
+      "observed": {
+        "value": 943390140
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0304",
+      "category": "random",
+      "expected": {
+        "value": 386784433058
+      },
+      "input": {
+        "k": 4,
+        "n": 776
+      },
+      "observed": {
+        "value": 732696917051
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0305",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 478
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0306",
+      "category": "random",
+      "expected": {
+        "value": 720
+      },
+      "input": {
+        "k": 1,
+        "n": 478
+      },
+      "observed": {
+        "value": 720
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0307",
+      "category": "random",
+      "expected": {
+        "value": 285610
+      },
+      "input": {
+        "k": 2,
+        "n": 478
+      },
+      "observed": {
+        "value": 401527
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0308",
+      "category": "random",
+      "expected": {
+        "value": 122867280
+      },
+      "input": {
+        "k": 3,
+        "n": 478
+      },
+      "observed": {
+        "value": 205639200
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0309",
+      "category": "random",
+      "expected": {
+        "value": 55467746914
+      },
+      "input": {
+        "k": 4,
+        "n": 478
+      },
+      "observed": {
+        "value": 101572055551
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0310",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 679
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0311",
+      "category": "random",
+      "expected": {
+        "value": 784
+      },
+      "input": {
+        "k": 1,
+        "n": 679
+      },
+      "observed": {
+        "value": 784
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0312",
+      "category": "random",
+      "expected": {
+        "value": 470500
+      },
+      "input": {
+        "k": 2,
+        "n": 679
+      },
+      "observed": {
+        "value": 541899
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0313",
+      "category": "random",
+      "expected": {
+        "value": 313959856
+      },
+      "input": {
+        "k": 3,
+        "n": 679
+      },
+      "observed": {
+        "value": 368872000
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0314",
+      "category": "random",
+      "expected": {
+        "value": 212647335364
+      },
+      "input": {
+        "k": 4,
+        "n": 679
+      },
+      "observed": {
+        "value": 250553542261
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0315",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 247
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0316",
+      "category": "random",
+      "expected": {
+        "value": 280
+      },
+      "input": {
+        "k": 1,
+        "n": 247
+      },
+      "observed": {
+        "value": 280
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0317",
+      "category": "random",
+      "expected": {
+        "value": 61540
+      },
+      "input": {
+        "k": 2,
+        "n": 247
+      },
+      "observed": {
+        "value": 69723
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0318",
+      "category": "random",
+      "expected": {
+        "value": 15078280
+      },
+      "input": {
+        "k": 3,
+        "n": 247
+      },
+      "observed": {
+        "value": 17231200
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0319",
+      "category": "random",
+      "expected": {
+        "value": 3722256964
+      },
+      "input": {
+        "k": 4,
+        "n": 247
+      },
+      "observed": {
+        "value": 4256274901
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0320",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "k": 0,
+        "n": 406
+      },
+      "observed": {
+        "value": 8
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0321",
+      "category": "random",
+      "expected": {
+        "value": 720
+      },
+      "input": {
+        "k": 1,
+        "n": 406
+      },
+      "observed": {
+        "value": 720
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0322",
+      "category": "random",
+      "expected": {
+        "value": 210500
+      },
+      "input": {
+        "k": 2,
+        "n": 406
+      },
+      "observed": {
+        "value": 347529
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0323",
+      "category": "random",
+      "expected": {
+        "value": 75511440
+      },
+      "input": {
+        "k": 3,
+        "n": 406
+      },
+      "observed": {
+        "value": 151560000
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0324",
+      "category": "random",
+      "expected": {
+        "value": 28881153188
+      },
+      "input": {
+        "k": 4,
+        "n": 406
+      },
+      "observed": {
+        "value": 63607267571
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0325",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "k": 0,
+        "n": 997
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0326",
+      "category": "random",
+      "expected": {
+        "value": 998
+      },
+      "input": {
+        "k": 1,
+        "n": 997
+      },
+      "observed": {
+        "value": 998
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0327",
+      "category": "random",
+      "expected": {
+        "value": 994010
+      },
+      "input": {
+        "k": 2,
+        "n": 997
+      },
+      "observed": {
+        "value": 995007
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0328",
+      "category": "random",
+      "expected": {
+        "value": 991026974
+      },
+      "input": {
+        "k": 3,
+        "n": 997
+      },
+      "observed": {
+        "value": 992021980
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0329",
+      "category": "random",
+      "expected": {
+        "value": 988053892082
+      },
+      "input": {
+        "k": 4,
+        "n": 997
+      },
+      "observed": {
+        "value": 989045914061
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0330",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 922
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0331",
+      "category": "random",
+      "expected": {
+        "value": 1386
+      },
+      "input": {
+        "k": 1,
+        "n": 922
+      },
+      "observed": {
+        "value": 1386
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0332",
+      "category": "random",
+      "expected": {
+        "value": 1062610
+      },
+      "input": {
+        "k": 2,
+        "n": 922
+      },
+      "observed": {
+        "value": 1490881
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0333",
+      "category": "random",
+      "expected": {
+        "value": 881749638
+      },
+      "input": {
+        "k": 3,
+        "n": 922
+      },
+      "observed": {
+        "value": 1472777460
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0334",
+      "category": "random",
+      "expected": {
+        "value": 767807982514
+      },
+      "input": {
+        "k": 4,
+        "n": 922
+      },
+      "observed": {
+        "value": 1403164178755
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0335",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "k": 0,
+        "n": 435
+      },
+      "observed": {
+        "value": 8
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0336",
+      "category": "random",
+      "expected": {
+        "value": 720
+      },
+      "input": {
+        "k": 1,
+        "n": 435
+      },
+      "observed": {
+        "value": 720
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0337",
+      "category": "random",
+      "expected": {
+        "value": 218920
+      },
+      "input": {
+        "k": 2,
+        "n": 435
+      },
+      "observed": {
+        "value": 351013
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0338",
+      "category": "random",
+      "expected": {
+        "value": 86047920
+      },
+      "input": {
+        "k": 3,
+        "n": 435
+      },
+      "observed": {
+        "value": 157622400
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0339",
+      "category": "random",
+      "expected": {
+        "value": 36306199624
+      },
+      "input": {
+        "k": 4,
+        "n": 435
+      },
+      "observed": {
+        "value": 69225857041
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0340",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 291
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0341",
+      "category": "random",
+      "expected": {
+        "value": 392
+      },
+      "input": {
+        "k": 1,
+        "n": 291
+      },
+      "observed": {
+        "value": 392
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0342",
+      "category": "random",
+      "expected": {
+        "value": 94100
+      },
+      "input": {
+        "k": 2,
+        "n": 291
+      },
+      "observed": {
+        "value": 123591
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0343",
+      "category": "random",
+      "expected": {
+        "value": 25554872
+      },
+      "input": {
+        "k": 3,
+        "n": 291
+      },
+      "observed": {
+        "value": 36887200
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0344",
+      "category": "random",
+      "expected": {
+        "value": 7259401124
+      },
+      "input": {
+        "k": 4,
+        "n": 291
+      },
+      "observed": {
+        "value": 10823626781
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0345",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "k": 0,
+        "n": 863
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0346",
+      "category": "random",
+      "expected": {
+        "value": 864
+      },
+      "input": {
+        "k": 1,
+        "n": 863
+      },
+      "observed": {
+        "value": 864
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0347",
+      "category": "random",
+      "expected": {
+        "value": 744770
+      },
+      "input": {
+        "k": 2,
+        "n": 863
+      },
+      "observed": {
+        "value": 745633
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0348",
+      "category": "random",
+      "expected": {
+        "value": 642735648
+      },
+      "input": {
+        "k": 3,
+        "n": 863
+      },
+      "observed": {
+        "value": 643481280
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0349",
+      "category": "random",
+      "expected": {
+        "value": 554680863362
+      },
+      "input": {
+        "k": 4,
+        "n": 863
+      },
+      "observed": {
+        "value": 555324344641
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0350",
+      "category": "random",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "k": 0,
+        "n": 352
+      },
+      "observed": {
+        "value": 12
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0351",
+      "category": "random",
+      "expected": {
+        "value": 756
+      },
+      "input": {
+        "k": 1,
+        "n": 352
+      },
+      "observed": {
+        "value": 756
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0352",
+      "category": "random",
+      "expected": {
+        "value": 166530
+      },
+      "input": {
+        "k": 2,
+        "n": 352
+      },
+      "observed": {
+        "value": 272251
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0353",
+      "category": "random",
+      "expected": {
+        "value": 49882068
+      },
+      "input": {
+        "k": 3,
+        "n": 352
+      },
+      "observed": {
+        "value": 95943240
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0354",
+      "category": "random",
+      "expected": {
+        "value": 16376798802
+      },
+      "input": {
+        "k": 4,
+        "n": 352
+      },
+      "observed": {
+        "value": 33774616855
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0355",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "k": 0,
+        "n": 786
+      },
+      "observed": {
+        "value": 8
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0356",
+      "category": "random",
+      "expected": {
+        "value": 1584
+      },
+      "input": {
+        "k": 1,
+        "n": 786
+      },
+      "observed": {
+        "value": 1584
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0357",
+      "category": "random",
+      "expected": {
+        "value": 858100
+      },
+      "input": {
+        "k": 2,
+        "n": 786
+      },
+      "observed": {
+        "value": 1573663
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0358",
+      "category": "random",
+      "expected": {
+        "value": 566519184
+      },
+      "input": {
+        "k": 3,
+        "n": 786
+      },
+      "observed": {
+        "value": 1359230400
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0359",
+      "category": "random",
+      "expected": {
+        "value": 410532891268
+      },
+      "input": {
+        "k": 4,
+        "n": 786
+      },
+      "observed": {
+        "value": 1113166659055
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0360",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 407
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0361",
+      "category": "random",
+      "expected": {
+        "value": 456
+      },
+      "input": {
+        "k": 1,
+        "n": 407
+      },
+      "observed": {
+        "value": 456
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0362",
+      "category": "random",
+      "expected": {
+        "value": 167140
+      },
+      "input": {
+        "k": 2,
+        "n": 407
+      },
+      "observed": {
+        "value": 187131
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0363",
+      "category": "random",
+      "expected": {
+        "value": 67471128
+      },
+      "input": {
+        "k": 3,
+        "n": 407
+      },
+      "observed": {
+        "value": 76215840
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0364",
+      "category": "random",
+      "expected": {
+        "value": 27441480004
+      },
+      "input": {
+        "k": 4,
+        "n": 407
+      },
+      "observed": {
+        "value": 31021789205
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0365",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "k": 0,
+        "n": 541
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0366",
+      "category": "random",
+      "expected": {
+        "value": 542
+      },
+      "input": {
+        "k": 1,
+        "n": 541
+      },
+      "observed": {
+        "value": 542
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0367",
+      "category": "random",
+      "expected": {
+        "value": 292682
+      },
+      "input": {
+        "k": 2,
+        "n": 541
+      },
+      "observed": {
+        "value": 293223
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0368",
+      "category": "random",
+      "expected": {
+        "value": 158340422
+      },
+      "input": {
+        "k": 3,
+        "n": 541
+      },
+      "observed": {
+        "value": 158633644
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0369",
+      "category": "random",
+      "expected": {
+        "value": 85662167762
+      },
+      "input": {
+        "k": 4,
+        "n": 541
+      },
+      "observed": {
+        "value": 85820801405
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0370",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 662
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0371",
+      "category": "random",
+      "expected": {
+        "value": 996
+      },
+      "input": {
+        "k": 1,
+        "n": 662
+      },
+      "observed": {
+        "value": 996
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0372",
+      "category": "random",
+      "expected": {
+        "value": 547810
+      },
+      "input": {
+        "k": 2,
+        "n": 662
+      },
+      "observed": {
+        "value": 769251
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0373",
+      "category": "random",
+      "expected": {
+        "value": 326382228
+      },
+      "input": {
+        "k": 3,
+        "n": 662
+      },
+      "observed": {
+        "value": 545618760
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0374",
+      "category": "random",
+      "expected": {
+        "value": 204061416274
+      },
+      "input": {
+        "k": 4,
+        "n": 662
+      },
+      "observed": {
+        "value": 373239606455
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0375",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "k": 0,
+        "n": 641
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0376",
+      "category": "random",
+      "expected": {
+        "value": 642
+      },
+      "input": {
+        "k": 1,
+        "n": 641
+      },
+      "observed": {
+        "value": 642
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0377",
+      "category": "random",
+      "expected": {
+        "value": 410882
+      },
+      "input": {
+        "k": 2,
+        "n": 641
+      },
+      "observed": {
+        "value": 411523
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0378",
+      "category": "random",
+      "expected": {
+        "value": 263374722
+      },
+      "input": {
+        "k": 3,
+        "n": 641
+      },
+      "observed": {
+        "value": 263786244
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0379",
+      "category": "random",
+      "expected": {
+        "value": 168823196162
+      },
+      "input": {
+        "k": 4,
+        "n": 641
+      },
+      "observed": {
+        "value": 169086982405
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0380",
+      "category": "random",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "k": 0,
+        "n": 416
+      },
+      "observed": {
+        "value": 12
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0381",
+      "category": "random",
+      "expected": {
+        "value": 882
+      },
+      "input": {
+        "k": 1,
+        "n": 416
+      },
+      "observed": {
+        "value": 882
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0382",
+      "category": "random",
+      "expected": {
+        "value": 232050
+      },
+      "input": {
+        "k": 2,
+        "n": 416
+      },
+      "observed": {
+        "value": 374601
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0383",
+      "category": "random",
+      "expected": {
+        "value": 82312902
+      },
+      "input": {
+        "k": 3,
+        "n": 416
+      },
+      "observed": {
+        "value": 155973300
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0384",
+      "category": "random",
+      "expected": {
+        "value": 31946054322
+      },
+      "input": {
+        "k": 4,
+        "n": 416
+      },
+      "observed": {
+        "value": 64887949091
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0385",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "k": 0,
+        "n": 682
+      },
+      "observed": {
+        "value": 8
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0386",
+      "category": "random",
+      "expected": {
+        "value": 1152
+      },
+      "input": {
+        "k": 1,
+        "n": 682
+      },
+      "observed": {
+        "value": 1152
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0387",
+      "category": "random",
+      "expected": {
+        "value": 586820
+      },
+      "input": {
+        "k": 2,
+        "n": 682
+      },
+      "observed": {
+        "value": 924483
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0388",
+      "category": "random",
+      "expected": {
+        "value": 357146496
+      },
+      "input": {
+        "k": 3,
+        "n": 682
+      },
+      "observed": {
+        "value": 676016640
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0389",
+      "category": "random",
+      "expected": {
+        "value": 229877555108
+      },
+      "input": {
+        "k": 4,
+        "n": 682
+      },
+      "observed": {
+        "value": 476441542775
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0390",
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "k": 0,
+        "n": 99
+      },
+      "observed": {
+        "value": 6
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0391",
+      "category": "random",
+      "expected": {
+        "value": 156
+      },
+      "input": {
+        "k": 1,
+        "n": 99
+      },
+      "observed": {
+        "value": 156
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0392",
+      "category": "random",
+      "expected": {
+        "value": 11102
+      },
+      "input": {
+        "k": 2,
+        "n": 99
+      },
+      "observed": {
+        "value": 16093
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0393",
+      "category": "random",
+      "expected": {
+        "value": 1008324
+      },
+      "input": {
+        "k": 3,
+        "n": 99
+      },
+      "observed": {
+        "value": 1600152
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0394",
+      "category": "random",
+      "expected": {
+        "value": 97266806
+      },
+      "input": {
+        "k": 4,
+        "n": 99
+      },
+      "observed": {
+        "value": 158489305
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0395",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "k": 0,
+        "n": 273
+      },
+      "observed": {
+        "value": 8
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0396",
+      "category": "random",
+      "expected": {
+        "value": 448
+      },
+      "input": {
+        "k": 1,
+        "n": 273
+      },
+      "observed": {
+        "value": 448
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0397",
+      "category": "random",
+      "expected": {
+        "value": 85000
+      },
+      "input": {
+        "k": 2,
+        "n": 273
+      },
+      "observed": {
+        "value": 135603
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0398",
+      "category": "random",
+      "expected": {
+        "value": 21171136
+      },
+      "input": {
+        "k": 3,
+        "n": 273
+      },
+      "observed": {
+        "value": 38080000
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0399",
+      "category": "random",
+      "expected": {
+        "value": 5625685768
+      },
+      "input": {
+        "k": 4,
+        "n": 273
+      },
+      "observed": {
+        "value": 10486554661
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0400",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "k": 0,
+        "n": 619
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0401",
+      "category": "random",
+      "expected": {
+        "value": 620
+      },
+      "input": {
+        "k": 1,
+        "n": 619
+      },
+      "observed": {
+        "value": 620
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0402",
+      "category": "random",
+      "expected": {
+        "value": 383162
+      },
+      "input": {
+        "k": 2,
+        "n": 619
+      },
+      "observed": {
+        "value": 383781
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0403",
+      "category": "random",
+      "expected": {
+        "value": 237176660
+      },
+      "input": {
+        "k": 3,
+        "n": 619
+      },
+      "observed": {
+        "value": 237560440
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0404",
+      "category": "random",
+      "expected": {
+        "value": 146812351922
+      },
+      "input": {
+        "k": 4,
+        "n": 619
+      },
+      "observed": {
+        "value": 147049912361
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0405",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 527
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0406",
+      "category": "random",
+      "expected": {
+        "value": 576
+      },
+      "input": {
+        "k": 1,
+        "n": 527
+      },
+      "observed": {
+        "value": 576
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0407",
+      "category": "random",
+      "expected": {
+        "value": 278980
+      },
+      "input": {
+        "k": 2,
+        "n": 527
+      },
+      "observed": {
+        "value": 304851
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0408",
+      "category": "random",
+      "expected": {
+        "value": 146397888
+      },
+      "input": {
+        "k": 3,
+        "n": 527
+      },
+      "observed": {
+        "value": 160692480
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0409",
+      "category": "random",
+      "expected": {
+        "value": 77134404484
+      },
+      "input": {
+        "k": 4,
+        "n": 527
+      },
+      "observed": {
+        "value": 84685980005
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0410",
+      "category": "random",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "k": 0,
+        "n": 108
+      },
+      "observed": {
+        "value": 12
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0411",
+      "category": "random",
+      "expected": {
+        "value": 280
+      },
+      "input": {
+        "k": 1,
+        "n": 108
+      },
+      "observed": {
+        "value": 280
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0412",
+      "category": "random",
+      "expected": {
+        "value": 17220
+      },
+      "input": {
+        "k": 2,
+        "n": 108
+      },
+      "observed": {
+        "value": 33883
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0413",
+      "category": "random",
+      "expected": {
+        "value": 1492120
+      },
+      "input": {
+        "k": 3,
+        "n": 108
+      },
+      "observed": {
+        "value": 3749548
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0414",
+      "category": "random",
+      "expected": {
+        "value": 146896932
+      },
+      "input": {
+        "k": 4,
+        "n": 108
+      },
+      "observed": {
+        "value": 407349271
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0415",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "k": 0,
+        "n": 238
+      },
+      "observed": {
+        "value": 8
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0416",
+      "category": "random",
+      "expected": {
+        "value": 432
+      },
+      "input": {
+        "k": 1,
+        "n": 238
+      },
+      "observed": {
+        "value": 432
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0417",
+      "category": "random",
+      "expected": {
+        "value": 72500
+      },
+      "input": {
+        "k": 2,
+        "n": 238
+      },
+      "observed": {
+        "value": 122493
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0418",
+      "category": "random",
+      "expected": {
+        "value": 15213744
+      },
+      "input": {
+        "k": 3,
+        "n": 238
+      },
+      "observed": {
+        "value": 31320000
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0419",
+      "category": "random",
+      "expected": {
+        "value": 3410537348
+      },
+      "input": {
+        "k": 4,
+        "n": 238
+      },
+      "observed": {
+        "value": 7705469771
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0420",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 446
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0421",
+      "category": "random",
+      "expected": {
+        "value": 672
+      },
+      "input": {
+        "k": 1,
+        "n": 446
+      },
+      "observed": {
+        "value": 672
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0422",
+      "category": "random",
+      "expected": {
+        "value": 248650
+      },
+      "input": {
+        "k": 2,
+        "n": 446
+      },
+      "observed": {
+        "value": 349671
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0423",
+      "category": "random",
+      "expected": {
+        "value": 99806112
+      },
+      "input": {
+        "k": 3,
+        "n": 446
+      },
+      "observed": {
+        "value": 167092800
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0424",
+      "category": "random",
+      "expected": {
+        "value": 42040548514
+      },
+      "input": {
+        "k": 4,
+        "n": 446
+      },
+      "observed": {
+        "value": 77007501791
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0425",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "k": 0,
+        "n": 474
+      },
+      "observed": {
+        "value": 8
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0426",
+      "category": "random",
+      "expected": {
+        "value": 960
+      },
+      "input": {
+        "k": 1,
+        "n": 474
+      },
+      "observed": {
+        "value": 960
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0427",
+      "category": "random",
+      "expected": {
+        "value": 312100
+      },
+      "input": {
+        "k": 2,
+        "n": 474
+      },
+      "observed": {
+        "value": 575211
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0428",
+      "category": "random",
+      "expected": {
+        "value": 124246080
+      },
+      "input": {
+        "k": 3,
+        "n": 474
+      },
+      "observed": {
+        "value": 299616000
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0429",
+      "category": "random",
+      "expected": {
+        "value": 54296414308
+      },
+      "input": {
+        "k": 4,
+        "n": 474
+      },
+      "observed": {
+        "value": 147974853191
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0430",
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "k": 0,
+        "n": 603
+      },
+      "observed": {
+        "value": 6
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0431",
+      "category": "random",
+      "expected": {
+        "value": 884
+      },
+      "input": {
+        "k": 1,
+        "n": 603
+      },
+      "observed": {
+        "value": 884
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0432",
+      "category": "random",
+      "expected": {
+        "value": 408590
+      },
+      "input": {
+        "k": 2,
+        "n": 603
+      },
+      "observed": {
+        "value": 551397
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0433",
+      "category": "random",
+      "expected": {
+        "value": 227678348
+      },
+      "input": {
+        "k": 3,
+        "n": 603
+      },
+      "observed": {
+        "value": 333714760
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0434",
+      "category": "random",
+      "expected": {
+        "value": 133863903446
+      },
+      "input": {
+        "k": 4,
+        "n": 603
+      },
+      "observed": {
+        "value": 201311835881
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0435",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 86
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0436",
+      "category": "random",
+      "expected": {
+        "value": 132
+      },
+      "input": {
+        "k": 1,
+        "n": 86
+      },
+      "observed": {
+        "value": 132
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0437",
+      "category": "random",
+      "expected": {
+        "value": 9250
+      },
+      "input": {
+        "k": 2,
+        "n": 86
+      },
+      "observed": {
+        "value": 13251
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0438",
+      "category": "random",
+      "expected": {
+        "value": 715572
+      },
+      "input": {
+        "k": 3,
+        "n": 86
+      },
+      "observed": {
+        "value": 1221000
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0439",
+      "category": "random",
+      "expected": {
+        "value": 58119634
+      },
+      "input": {
+        "k": 4,
+        "n": 86
+      },
+      "observed": {
+        "value": 108506231
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0440",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 329
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0441",
+      "category": "random",
+      "expected": {
+        "value": 384
+      },
+      "input": {
+        "k": 1,
+        "n": 329
+      },
+      "observed": {
+        "value": 384
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0442",
+      "category": "random",
+      "expected": {
+        "value": 110500
+      },
+      "input": {
+        "k": 2,
+        "n": 329
+      },
+      "observed": {
+        "value": 128649
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0443",
+      "category": "random",
+      "expected": {
+        "value": 35715456
+      },
+      "input": {
+        "k": 3,
+        "n": 329
+      },
+      "observed": {
+        "value": 42432000
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0444",
+      "category": "random",
+      "expected": {
+        "value": 11720996164
+      },
+      "input": {
+        "k": 4,
+        "n": 329
+      },
+      "observed": {
+        "value": 13965116561
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0445",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 807
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0446",
+      "category": "random",
+      "expected": {
+        "value": 1080
+      },
+      "input": {
+        "k": 1,
+        "n": 807
+      },
+      "observed": {
+        "value": 1080
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0447",
+      "category": "random",
+      "expected": {
+        "value": 723620
+      },
+      "input": {
+        "k": 2,
+        "n": 807
+      },
+      "observed": {
+        "value": 944203
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0448",
+      "category": "random",
+      "expected": {
+        "value": 545023080
+      },
+      "input": {
+        "k": 3,
+        "n": 807
+      },
+      "observed": {
+        "value": 781509600
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0449",
+      "category": "random",
+      "expected": {
+        "value": 429361374404
+      },
+      "input": {
+        "k": 4,
+        "n": 807
+      },
+      "observed": {
+        "value": 635933899381
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0450",
+      "category": "random",
+      "expected": {
+        "value": 16
+      },
+      "input": {
+        "k": 0,
+        "n": 966
+      },
+      "observed": {
+        "value": 16
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0451",
+      "category": "random",
+      "expected": {
+        "value": 2304
+      },
+      "input": {
+        "k": 1,
+        "n": 966
+      },
+      "observed": {
+        "value": 2304
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0452",
+      "category": "random",
+      "expected": {
+        "value": 1325000
+      },
+      "input": {
+        "k": 2,
+        "n": 966
+      },
+      "observed": {
+        "value": 2868411
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0453",
+      "category": "random",
+      "expected": {
+        "value": 1054819584
+      },
+      "input": {
+        "k": 3,
+        "n": 966
+      },
+      "observed": {
+        "value": 3052800000
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0454",
+      "category": "random",
+      "expected": {
+        "value": 937019594696
+      },
+      "input": {
+        "k": 4,
+        "n": 966
+      },
+      "observed": {
+        "value": 3073807067111
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0455",
+      "category": "random",
+      "expected": {
+        "value": 15
+      },
+      "input": {
+        "k": 0,
+        "n": 784
+      },
+      "observed": {
+        "value": 15
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0456",
+      "category": "random",
+      "expected": {
+        "value": 1767
+      },
+      "input": {
+        "k": 1,
+        "n": 784
+      },
+      "observed": {
+        "value": 1767
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0457",
+      "category": "random",
+      "expected": {
+        "value": 835791
+      },
+      "input": {
+        "k": 2,
+        "n": 784
+      },
+      "observed": {
+        "value": 1431311
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0458",
+      "category": "random",
+      "expected": {
+        "value": 552325233
+      },
+      "input": {
+        "k": 3,
+        "n": 784
+      },
+      "observed": {
+        "value": 1124272087
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0459",
+      "category": "random",
+      "expected": {
+        "value": 403156325715
+      },
+      "input": {
+        "k": 4,
+        "n": 784
+      },
+      "observed": {
+        "value": 881531248671
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0460",
+      "category": "random",
+      "expected": {
+        "value": 18
+      },
+      "input": {
+        "k": 0,
+        "n": 252
+      },
+      "observed": {
+        "value": 18
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0461",
+      "category": "random",
+      "expected": {
+        "value": 728
+      },
+      "input": {
+        "k": 1,
+        "n": 252
+      },
+      "observed": {
+        "value": 728
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0462",
+      "category": "random",
+      "expected": {
+        "value": 95550
+      },
+      "input": {
+        "k": 2,
+        "n": 252
+      },
+      "observed": {
+        "value": 213807
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0463",
+      "category": "random",
+      "expected": {
+        "value": 19009784
+      },
+      "input": {
+        "k": 3,
+        "n": 252
+      },
+      "observed": {
+        "value": 55524400
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0464",
+      "category": "random",
+      "expected": {
+        "value": 4356120678
+      },
+      "input": {
+        "k": 4,
+        "n": 252
+      },
+      "observed": {
+        "value": 14085531551
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0465",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "k": 0,
+        "n": 241
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0466",
+      "category": "random",
+      "expected": {
+        "value": 242
+      },
+      "input": {
+        "k": 1,
+        "n": 241
+      },
+      "observed": {
+        "value": 242
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0467",
+      "category": "random",
+      "expected": {
+        "value": 58082
+      },
+      "input": {
+        "k": 2,
+        "n": 241
+      },
+      "observed": {
+        "value": 58323
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0468",
+      "category": "random",
+      "expected": {
+        "value": 13997522
+      },
+      "input": {
+        "k": 3,
+        "n": 241
+      },
+      "observed": {
+        "value": 14055844
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0469",
+      "category": "random",
+      "expected": {
+        "value": 3373402562
+      },
+      "input": {
+        "k": 4,
+        "n": 241
+      },
+      "observed": {
+        "value": 3387458405
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0470",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "k": 0,
+        "n": 615
+      },
+      "observed": {
+        "value": 8
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0471",
+      "category": "random",
+      "expected": {
+        "value": 1008
+      },
+      "input": {
+        "k": 1,
+        "n": 615
+      },
+      "observed": {
+        "value": 1008
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0472",
+      "category": "random",
+      "expected": {
+        "value": 437320
+      },
+      "input": {
+        "k": 2,
+        "n": 615
+      },
+      "observed": {
+        "value": 694369
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0473",
+      "category": "random",
+      "expected": {
+        "value": 243156816
+      },
+      "input": {
+        "k": 3,
+        "n": 615
+      },
+      "observed": {
+        "value": 440818560
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0474",
+      "category": "random",
+      "expected": {
+        "value": 145052014984
+      },
+      "input": {
+        "k": 4,
+        "n": 615
+      },
+      "observed": {
+        "value": 273713168905
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0475",
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "k": 0,
+        "n": 524
+      },
+      "observed": {
+        "value": 6
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0476",
+      "category": "random",
+      "expected": {
+        "value": 924
+      },
+      "input": {
+        "k": 1,
+        "n": 524
+      },
+      "observed": {
+        "value": 924
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0477",
+      "category": "random",
+      "expected": {
+        "value": 360402
+      },
+      "input": {
+        "k": 2,
+        "n": 524
+      },
+      "observed": {
+        "value": 536083
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0478",
+      "category": "random",
+      "expected": {
+        "value": 164110716
+      },
+      "input": {
+        "k": 3,
+        "n": 524
+      },
+      "observed": {
+        "value": 287703768
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0479",
+      "category": "random",
+      "expected": {
+        "value": 80398478706
+      },
+      "input": {
+        "k": 4,
+        "n": 524
+      },
+      "observed": {
+        "value": 151647070855
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0480",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 394
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0481",
+      "category": "random",
+      "expected": {
+        "value": 594
+      },
+      "input": {
+        "k": 1,
+        "n": 394
+      },
+      "observed": {
+        "value": 594
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0482",
+      "category": "random",
+      "expected": {
+        "value": 194050
+      },
+      "input": {
+        "k": 2,
+        "n": 394
+      },
+      "observed": {
+        "value": 273049
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0483",
+      "category": "random",
+      "expected": {
+        "value": 68808366
+      },
+      "input": {
+        "k": 3,
+        "n": 394
+      },
+      "observed": {
+        "value": 115265700
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0484",
+      "category": "random",
+      "expected": {
+        "value": 25604354194
+      },
+      "input": {
+        "k": 4,
+        "n": 394
+      },
+      "observed": {
+        "value": 46928508691
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0485",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 843
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0486",
+      "category": "random",
+      "expected": {
+        "value": 1128
+      },
+      "input": {
+        "k": 1,
+        "n": 843
+      },
+      "observed": {
+        "value": 1128
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0487",
+      "category": "random",
+      "expected": {
+        "value": 789620
+      },
+      "input": {
+        "k": 2,
+        "n": 843
+      },
+      "observed": {
+        "value": 1030159
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0488",
+      "category": "random",
+      "expected": {
+        "value": 621265176
+      },
+      "input": {
+        "k": 3,
+        "n": 843
+      },
+      "observed": {
+        "value": 890691360
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0489",
+      "category": "random",
+      "expected": {
+        "value": 511256840804
+      },
+      "input": {
+        "k": 4,
+        "n": 843
+      },
+      "observed": {
+        "value": 757109923405
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0490",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 445
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0491",
+      "category": "random",
+      "expected": {
+        "value": 540
+      },
+      "input": {
+        "k": 1,
+        "n": 445
+      },
+      "observed": {
+        "value": 540
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0492",
+      "category": "random",
+      "expected": {
+        "value": 205972
+      },
+      "input": {
+        "k": 2,
+        "n": 445
+      },
+      "observed": {
+        "value": 248341
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0493",
+      "category": "random",
+      "expected": {
+        "value": 88826220
+      },
+      "input": {
+        "k": 3,
+        "n": 445
+      },
+      "observed": {
+        "value": 111224880
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0494",
+      "category": "random",
+      "expected": {
+        "value": 39276643492
+      },
+      "input": {
+        "k": 4,
+        "n": 445
+      },
+      "observed": {
+        "value": 49558527601
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0495",
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "k": 0,
+        "n": 605
+      },
+      "observed": {
+        "value": 6
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0496",
+      "category": "random",
+      "expected": {
+        "value": 798
+      },
+      "input": {
+        "k": 1,
+        "n": 605
+      },
+      "observed": {
+        "value": 798
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0497",
+      "category": "random",
+      "expected": {
+        "value": 383838
+      },
+      "input": {
+        "k": 2,
+        "n": 605
+      },
+      "observed": {
+        "value": 499255
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0498",
+      "category": "random",
+      "expected": {
+        "value": 223384518
+      },
+      "input": {
+        "k": 3,
+        "n": 605
+      },
+      "observed": {
+        "value": 303999852
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0499",
+      "category": "random",
+      "expected": {
+        "value": 134197825398
+      },
+      "input": {
+        "k": 4,
+        "n": 605
+      },
+      "observed": {
+        "value": 184155714589
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0500",
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "k": 0,
+        "n": 175
+      },
+      "observed": {
+        "value": 6
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0501",
+      "category": "random",
+      "expected": {
+        "value": 248
+      },
+      "input": {
+        "k": 1,
+        "n": 175
+      },
+      "observed": {
+        "value": 248
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0502",
+      "category": "random",
+      "expected": {
+        "value": 32550
+      },
+      "input": {
+        "k": 2,
+        "n": 175
+      },
+      "observed": {
+        "value": 44517
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0503",
+      "category": "random",
+      "expected": {
+        "value": 5418344
+      },
+      "input": {
+        "k": 3,
+        "n": 175
+      },
+      "observed": {
+        "value": 7812400
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0504",
+      "category": "random",
+      "expected": {
+        "value": 939784902
+      },
+      "input": {
+        "k": 4,
+        "n": 175
+      },
+      "observed": {
+        "value": 1367675081
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0505",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "k": 0,
+        "n": 806
+      },
+      "observed": {
+        "value": 8
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0506",
+      "category": "random",
+      "expected": {
+        "value": 1344
+      },
+      "input": {
+        "k": 1,
+        "n": 806
+      },
+      "observed": {
+        "value": 1344
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0507",
+      "category": "random",
+      "expected": {
+        "value": 817700
+      },
+      "input": {
+        "k": 2,
+        "n": 806
+      },
+      "observed": {
+        "value": 1272033
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0508",
+      "category": "random",
+      "expected": {
+        "value": 589345344
+      },
+      "input": {
+        "k": 3,
+        "n": 806
+      },
+      "observed": {
+        "value": 1098988800
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0509",
+      "category": "random",
+      "expected": {
+        "value": 448419801188
+      },
+      "input": {
+        "k": 4,
+        "n": 806
+      },
+      "observed": {
+        "value": 915341681155
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0510",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "k": 0,
+        "n": 645
+      },
+      "observed": {
+        "value": 8
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0511",
+      "category": "random",
+      "expected": {
+        "value": 1056
+      },
+      "input": {
+        "k": 1,
+        "n": 645
+      },
+      "observed": {
+        "value": 1056
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0512",
+      "category": "random",
+      "expected": {
+        "value": 481000
+      },
+      "input": {
+        "k": 2,
+        "n": 645
+      },
+      "observed": {
+        "value": 762879
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0513",
+      "category": "random",
+      "expected": {
+        "value": 280504224
+      },
+      "input": {
+        "k": 3,
+        "n": 645
+      },
+      "observed": {
+        "value": 507936000
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0514",
+      "category": "random",
+      "expected": {
+        "value": 175493944264
+      },
+      "input": {
+        "k": 4,
+        "n": 645
+      },
+      "observed": {
+        "value": 330772494701
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0515",
+      "category": "random",
+      "expected": {
+        "value": 24
+      },
+      "input": {
+        "k": 0,
+        "n": 756
+      },
+      "observed": {
+        "value": 24
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0516",
+      "category": "random",
+      "expected": {
+        "value": 2240
+      },
+      "input": {
+        "k": 1,
+        "n": 756
+      },
+      "observed": {
+        "value": 2240
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0517",
+      "category": "random",
+      "expected": {
+        "value": 861000
+      },
+      "input": {
+        "k": 2,
+        "n": 756
+      },
+      "observed": {
+        "value": 1931331
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0518",
+      "category": "random",
+      "expected": {
+        "value": 513289280
+      },
+      "input": {
+        "k": 3,
+        "n": 756
+      },
+      "observed": {
+        "value": 1499819200
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0519",
+      "category": "random",
+      "expected": {
+        "value": 352846430664
+      },
+      "input": {
+        "k": 4,
+        "n": 756
+      },
+      "observed": {
+        "value": 1140985308071
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0520",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "k": 0,
+        "n": 935
+      },
+      "observed": {
+        "value": 8
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0521",
+      "category": "random",
+      "expected": {
+        "value": 1296
+      },
+      "input": {
+        "k": 1,
+        "n": 935
+      },
+      "observed": {
+        "value": 1296
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0522",
+      "category": "random",
+      "expected": {
+        "value": 919880
+      },
+      "input": {
+        "k": 2,
+        "n": 935
+      },
+      "observed": {
+        "value": 1265761
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0523",
+      "category": "random",
+      "expected": {
+        "value": 824726448
+      },
+      "input": {
+        "k": 3,
+        "n": 935
+      },
+      "observed": {
+        "value": 1192164480
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0524",
+      "category": "random",
+      "expected": {
+        "value": 765553631624
+      },
+      "input": {
+        "k": 4,
+        "n": 935
+      },
+      "observed": {
+        "value": 1116184741705
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0525",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "k": 0,
+        "n": 547
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0526",
+      "category": "random",
+      "expected": {
+        "value": 548
+      },
+      "input": {
+        "k": 1,
+        "n": 547
+      },
+      "observed": {
+        "value": 548
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0527",
+      "category": "random",
+      "expected": {
+        "value": 299210
+      },
+      "input": {
+        "k": 2,
+        "n": 547
+      },
+      "observed": {
+        "value": 299757
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0528",
+      "category": "random",
+      "expected": {
+        "value": 163667324
+      },
+      "input": {
+        "k": 3,
+        "n": 547
+      },
+      "observed": {
+        "value": 163967080
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0529",
+      "category": "random",
+      "expected": {
+        "value": 89526025682
+      },
+      "input": {
+        "k": 4,
+        "n": 547
+      },
+      "observed": {
+        "value": 89689992761
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0530",
+      "category": "random",
+      "expected": {
+        "value": 16
+      },
+      "input": {
+        "k": 0,
+        "n": 896
+      },
+      "observed": {
+        "value": 16
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0531",
+      "category": "random",
+      "expected": {
+        "value": 2040
+      },
+      "input": {
+        "k": 1,
+        "n": 896
+      },
+      "observed": {
+        "value": 2040
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0532",
+      "category": "random",
+      "expected": {
+        "value": 1092250
+      },
+      "input": {
+        "k": 2,
+        "n": 896
+      },
+      "observed": {
+        "value": 1867719
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0533",
+      "category": "random",
+      "expected": {
+        "value": 824480280
+      },
+      "input": {
+        "k": 3,
+        "n": 896
+      },
+      "observed": {
+        "value": 1677721200
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0534",
+      "category": "random",
+      "expected": {
+        "value": 687767429506
+      },
+      "input": {
+        "k": 4,
+        "n": 896
+      },
+      "observed": {
+        "value": 1503775421711
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0535",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "k": 0,
+        "n": 861
+      },
+      "observed": {
+        "value": 8
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0536",
+      "category": "random",
+      "expected": {
+        "value": 1344
+      },
+      "input": {
+        "k": 1,
+        "n": 861
+      },
+      "observed": {
+        "value": 1344
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0537",
+      "category": "random",
+      "expected": {
+        "value": 841000
+      },
+      "input": {
+        "k": 2,
+        "n": 861
+      },
+      "observed": {
+        "value": 1276743
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0538",
+      "category": "random",
+      "expected": {
+        "value": 663856704
+      },
+      "input": {
+        "k": 3,
+        "n": 861
+      },
+      "observed": {
+        "value": 1130304000
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0539",
+      "category": "random",
+      "expected": {
+        "value": 556573386568
+      },
+      "input": {
+        "k": 4,
+        "n": 861
+      },
+      "observed": {
+        "value": 981652479005
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0540",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "k": 0,
+        "n": 757
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0541",
+      "category": "random",
+      "expected": {
+        "value": 758
+      },
+      "input": {
+        "k": 1,
+        "n": 757
+      },
+      "observed": {
+        "value": 758
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0542",
+      "category": "random",
+      "expected": {
+        "value": 573050
+      },
+      "input": {
+        "k": 2,
+        "n": 757
+      },
+      "observed": {
+        "value": 573807
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0543",
+      "category": "random",
+      "expected": {
+        "value": 433798094
+      },
+      "input": {
+        "k": 3,
+        "n": 757
+      },
+      "observed": {
+        "value": 434371900
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0544",
+      "category": "random",
+      "expected": {
+        "value": 328385156402
+      },
+      "input": {
+        "k": 4,
+        "n": 757
+      },
+      "observed": {
+        "value": 328819528301
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0545",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "k": 0,
+        "n": 131
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0546",
+      "category": "random",
+      "expected": {
+        "value": 132
+      },
+      "input": {
+        "k": 1,
+        "n": 131
+      },
+      "observed": {
+        "value": 132
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0547",
+      "category": "random",
+      "expected": {
+        "value": 17162
+      },
+      "input": {
+        "k": 2,
+        "n": 131
+      },
+      "observed": {
+        "value": 17293
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0548",
+      "category": "random",
+      "expected": {
+        "value": 2248092
+      },
+      "input": {
+        "k": 3,
+        "n": 131
+      },
+      "observed": {
+        "value": 2265384
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0549",
+      "category": "random",
+      "expected": {
+        "value": 294499922
+      },
+      "input": {
+        "k": 4,
+        "n": 131
+      },
+      "observed": {
+        "value": 296765305
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0550",
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "k": 0,
+        "n": 964
+      },
+      "observed": {
+        "value": 6
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0551",
+      "category": "random",
+      "expected": {
+        "value": 1694
+      },
+      "input": {
+        "k": 1,
+        "n": 964
+      },
+      "observed": {
+        "value": 1694
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0552",
+      "category": "random",
+      "expected": {
+        "value": 1219722
+      },
+      "input": {
+        "k": 2,
+        "n": 964
+      },
+      "observed": {
+        "value": 1808013
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0553",
+      "category": "random",
+      "expected": {
+        "value": 1021819106
+      },
+      "input": {
+        "k": 3,
+        "n": 964
+      },
+      "observed": {
+        "value": 1785092188
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0554",
+      "category": "random",
+      "expected": {
+        "value": 920938899426
+      },
+      "input": {
+        "k": 4,
+        "n": 964
+      },
+      "observed": {
+        "value": 1730991244955
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0555",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 958
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0556",
+      "category": "random",
+      "expected": {
+        "value": 1440
+      },
+      "input": {
+        "k": 1,
+        "n": 958
+      },
+      "observed": {
+        "value": 1440
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0557",
+      "category": "random",
+      "expected": {
+        "value": 1147210
+      },
+      "input": {
+        "k": 2,
+        "n": 958
+      },
+      "observed": {
+        "value": 1609447
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0558",
+      "category": "random",
+      "expected": {
+        "value": 989120160
+      },
+      "input": {
+        "k": 3,
+        "n": 958
+      },
+      "observed": {
+        "value": 1651982400
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0559",
+      "category": "random",
+      "expected": {
+        "value": 894933932194
+      },
+      "input": {
+        "k": 4,
+        "n": 958
+      },
+      "observed": {
+        "value": 1635352443871
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0560",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "k": 0,
+        "n": 182
+      },
+      "observed": {
+        "value": 8
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0561",
+      "category": "random",
+      "expected": {
+        "value": 336
+      },
+      "input": {
+        "k": 1,
+        "n": 182
+      },
+      "observed": {
+        "value": 336
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0562",
+      "category": "random",
+      "expected": {
+        "value": 42500
+      },
+      "input": {
+        "k": 2,
+        "n": 182
+      },
+      "observed": {
+        "value": 73017
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0563",
+      "category": "random",
+      "expected": {
+        "value": 6805008
+      },
+      "input": {
+        "k": 3,
+        "n": 182
+      },
+      "observed": {
+        "value": 14280000
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0564",
+      "category": "random",
+      "expected": {
+        "value": 1166300708
+      },
+      "input": {
+        "k": 4,
+        "n": 182
+      },
+      "observed": {
+        "value": 2686637971
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0565",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 358
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0566",
+      "category": "random",
+      "expected": {
+        "value": 540
+      },
+      "input": {
+        "k": 1,
+        "n": 358
+      },
+      "observed": {
+        "value": 540
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0567",
+      "category": "random",
+      "expected": {
+        "value": 160210
+      },
+      "input": {
+        "k": 2,
+        "n": 358
+      },
+      "observed": {
+        "value": 225547
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0568",
+      "category": "random",
+      "expected": {
+        "value": 51618060
+      },
+      "input": {
+        "k": 3,
+        "n": 358
+      },
+      "observed": {
+        "value": 86513400
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0569",
+      "category": "random",
+      "expected": {
+        "value": 17452636594
+      },
+      "input": {
+        "k": 4,
+        "n": 358
+      },
+      "observed": {
+        "value": 32004190471
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0570",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 51
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0571",
+      "category": "random",
+      "expected": {
+        "value": 72
+      },
+      "input": {
+        "k": 1,
+        "n": 51
+      },
+      "observed": {
+        "value": 72
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0572",
+      "category": "random",
+      "expected": {
+        "value": 2900
+      },
+      "input": {
+        "k": 2,
+        "n": 51
+      },
+      "observed": {
+        "value": 3991
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0573",
+      "category": "random",
+      "expected": {
+        "value": 137592
+      },
+      "input": {
+        "k": 3,
+        "n": 51
+      },
+      "observed": {
+        "value": 208800
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0574",
+      "category": "random",
+      "expected": {
+        "value": 6848804
+      },
+      "input": {
+        "k": 4,
+        "n": 51
+      },
+      "observed": {
+        "value": 10737661
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0575",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 623
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0576",
+      "category": "random",
+      "expected": {
+        "value": 720
+      },
+      "input": {
+        "k": 1,
+        "n": 623
+      },
+      "observed": {
+        "value": 720
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0577",
+      "category": "random",
+      "expected": {
+        "value": 396100
+      },
+      "input": {
+        "k": 2,
+        "n": 623
+      },
+      "observed": {
+        "value": 456627
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0578",
+      "category": "random",
+      "expected": {
+        "value": 242509680
+      },
+      "input": {
+        "k": 3,
+        "n": 623
+      },
+      "observed": {
+        "value": 285192000
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0579",
+      "category": "random",
+      "expected": {
+        "value": 150706865284
+      },
+      "input": {
+        "k": 4,
+        "n": 623
+      },
+      "observed": {
+        "value": 177738074021
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0580",
+      "category": "random",
+      "expected": {
+        "value": 20
+      },
+      "input": {
+        "k": 0,
+        "n": 528
+      },
+      "observed": {
+        "value": 20
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0581",
+      "category": "random",
+      "expected": {
+        "value": 1488
+      },
+      "input": {
+        "k": 1,
+        "n": 528
+      },
+      "observed": {
+        "value": 1488
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0582",
+      "category": "random",
+      "expected": {
+        "value": 416020
+      },
+      "input": {
+        "k": 2,
+        "n": 528
+      },
+      "observed": {
+        "value": 883519
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0583",
+      "category": "random",
+      "expected": {
+        "value": 174582576
+      },
+      "input": {
+        "k": 3,
+        "n": 528
+      },
+      "observed": {
+        "value": 479664960
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0584",
+      "category": "random",
+      "expected": {
+        "value": 83931018820
+      },
+      "input": {
+        "k": 4,
+        "n": 528
+      },
+      "observed": {
+        "value": 255418713055
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0585",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "k": 0,
+        "n": 678
+      },
+      "observed": {
+        "value": 8
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0586",
+      "category": "random",
+      "expected": {
+        "value": 1368
+      },
+      "input": {
+        "k": 1,
+        "n": 678
+      },
+      "observed": {
+        "value": 1368
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0587",
+      "category": "random",
+      "expected": {
+        "value": 638500
+      },
+      "input": {
+        "k": 2,
+        "n": 678
+      },
+      "observed": {
+        "value": 1172353
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0588",
+      "category": "random",
+      "expected": {
+        "value": 363610296
+      },
+      "input": {
+        "k": 3,
+        "n": 678
+      },
+      "observed": {
+        "value": 873468000
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0589",
+      "category": "random",
+      "expected": {
+        "value": 227288022628
+      },
+      "input": {
+        "k": 4,
+        "n": 678
+      },
+      "observed": {
+        "value": 617051281891
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0590",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 262
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0591",
+      "category": "random",
+      "expected": {
+        "value": 396
+      },
+      "input": {
+        "k": 1,
+        "n": 262
+      },
+      "observed": {
+        "value": 396
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0592",
+      "category": "random",
+      "expected": {
+        "value": 85810
+      },
+      "input": {
+        "k": 2,
+        "n": 262
+      },
+      "observed": {
+        "value": 121051
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0593",
+      "category": "random",
+      "expected": {
+        "value": 20232828
+      },
+      "input": {
+        "k": 3,
+        "n": 262
+      },
+      "observed": {
+        "value": 33980760
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0594",
+      "category": "random",
+      "expected": {
+        "value": 5006498674
+      },
+      "input": {
+        "k": 4,
+        "n": 262
+      },
+      "observed": {
+        "value": 9199724455
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0595",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "k": 0,
+        "n": 902
+      },
+      "observed": {
+        "value": 8
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0596",
+      "category": "random",
+      "expected": {
+        "value": 1512
+      },
+      "input": {
+        "k": 1,
+        "n": 902
+      },
+      "observed": {
+        "value": 1512
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0597",
+      "category": "random",
+      "expected": {
+        "value": 1026020
+      },
+      "input": {
+        "k": 2,
+        "n": 902
+      },
+      "observed": {
+        "value": 1604113
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0598",
+      "category": "random",
+      "expected": {
+        "value": 826236936
+      },
+      "input": {
+        "k": 3,
+        "n": 902
+      },
+      "observed": {
+        "value": 1551342240
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0599",
+      "category": "random",
+      "expected": {
+        "value": 703371722468
+      },
+      "input": {
+        "k": 4,
+        "n": 902
+      },
+      "observed": {
+        "value": 1446044678275
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0600",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "k": 0,
+        "n": 335
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0601",
+      "category": "random",
+      "expected": {
+        "value": 408
+      },
+      "input": {
+        "k": 1,
+        "n": 335
+      },
+      "observed": {
+        "value": 408
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0602",
+      "category": "random",
+      "expected": {
+        "value": 116740
+      },
+      "input": {
+        "k": 2,
+        "n": 335
+      },
+      "observed": {
+        "value": 141267
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0603",
+      "category": "random",
+      "expected": {
+        "value": 37896264
+      },
+      "input": {
+        "k": 3,
+        "n": 335
+      },
+      "observed": {
+        "value": 47629920
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0604",
+      "category": "random",
+      "expected": {
+        "value": 12614602372
+      },
+      "input": {
+        "k": 4,
+        "n": 335
+      },
+      "observed": {
+        "value": 15976480421
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0605",
+      "category": "random",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "k": 0,
+        "n": 650
+      },
+      "observed": {
+        "value": 12
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0606",
+      "category": "random",
+      "expected": {
+        "value": 1302
+      },
+      "input": {
+        "k": 1,
+        "n": 650
+      },
+      "observed": {
+        "value": 1302
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0607",
+      "category": "random",
+      "expected": {
+        "value": 553350
+      },
+      "input": {
+        "k": 2,
+        "n": 650
+      },
+      "observed": {
+        "value": 1000461
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0608",
+      "category": "random",
+      "expected": {
+        "value": 311586282
+      },
+      "input": {
+        "k": 3,
+        "n": 650
+      },
+      "observed": {
+        "value": 697256700
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0609",
+      "category": "random",
+      "expected": {
+        "value": 189973488054
+      },
+      "input": {
+        "k": 4,
+        "n": 650
+      },
+      "observed": {
+        "value": 468344975051
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0610",
+      "category": "random",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "k": 0,
+        "n": 150
+      },
+      "observed": {
+        "value": 12
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0611",
+      "category": "random",
+      "expected": {
+        "value": 372
+      },
+      "input": {
+        "k": 1,
+        "n": 150
+      },
+      "observed": {
+        "value": 372
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0612",
+      "category": "random",
+      "expected": {
+        "value": 32550
+      },
+      "input": {
+        "k": 2,
+        "n": 150
+      },
+      "observed": {
+        "value": 71071
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0613",
+      "category": "random",
+      "expected": {
+        "value": 3969252
+      },
+      "input": {
+        "k": 3,
+        "n": 150
+      },
+      "observed": {
+        "value": 11718600
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_sigma:0614",
+      "category": "random",
+      "expected": {
+        "value": 545403894
+      },
+      "input": {
+        "k": 4,
+        "n": 150
+      },
+      "observed": {
+        "value": 1831542031
+      },
+      "passed": false
+    }
+  ],
+  "condition": "small_to_small",
+  "elapsed_seconds": 0.037267530000008264,
+  "group": "divisors",
+  "library": "sympy",
+  "load_error": null,
+  "method_id": "sympy.divisor_sigma",
+  "passed": 249,
+  "total": 615
+}

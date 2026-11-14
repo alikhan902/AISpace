@@ -1,0 +1,26 @@
+{
+  "algorithm": [
+    "Recursively traverse the input array `a` (which may contain nested lists) to count elements that are non-zero.",
+    "For each element in `a`, if the element is a non-zero value (i.e., it evaluates to truthy in a boolean context), increment the count.",
+    "If the element is a list, recursively apply the same count to that sublist.",
+    "Return the total count as a single integer."
+  ],
+  "constraints": [
+    "The input `a` is a one-dimensional list of integers (possibly empty).",
+    "All intermediate values fit within a signed 64-bit integer.",
+    "No NumPy objects are used; the implementation must work with pure Python lists.",
+    "The function returns a single integer for the total count (not a list or array)."
+  ],
+  "edge_cases": [
+    "Empty array: returns 0",
+    "Array with all zeros: returns 0",
+    "Array with mixed zeros and non-zeros: returns the count of non-zero elements",
+    "Nested lists: recursively counts non-zeros in all sub-lists",
+    "Single-element array: returns 1 if non-zero, 0 if zero"
+  ],
+  "inputs": "a: a one-dimensional list of integers (possibly empty)",
+  "method_id": "numpy.count_nonzero",
+  "output": "A single Python integer representing the total count of non-zero values in the array (where non-zero is defined as any value that evaluates to truthy in a boolean context, including non-zero numbers and non-empty strings).",
+  "purpose": "Count the number of non-zero values in the input array, recursively including sub-arrays, returning a single integer for the total count.",
+  "signature": "solve(a)"
+}

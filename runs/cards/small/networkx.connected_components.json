@@ -1,0 +1,118 @@
+{
+  "elapsed_seconds": 1.9881532590000006,
+  "finished_at": "2026-11-14T13:08:06.557397+00:00",
+  "parsed": {
+    "algorithm": [
+      "Perform a BFS traversal of the graph starting from each unvisited node.",
+      "Track visited nodes and build components as we traverse the graph.",
+      "Ensure components are internally sorted and the outer list is lexicographically sorted."
+    ],
+    "constraints": [
+      "Edges are distinct and represent a simple undirected graph.",
+      "Vertices are numbered from 0 to n-1.",
+      "The graph is undirected and unweighted.",
+      "Components are returned as internally sorted lists, with the outer list lexicographically sorted."
+    ],
+    "edge_cases": [
+      "When the graph has a single node with no edges (connected component of size 1).",
+      "When the graph has no edges (all nodes are isolated).",
+      "When the graph is disconnected (multiple components)."
+    ],
+    "inputs": "n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.",
+    "method_id": "networkx.connected_components",
+    "output": "A list of sets, where each set represents a connected component of the graph.",
+    "purpose": "Generate connected components of an undirected graph.",
+    "signature": "solve(n, edges)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"n is an integer >= 1; vertices are 0,...,n-1. edges is a list of distinct [u,v] pairs with 0<=u<v<n. Construct a simple undirected unweighted graph including isolated vertices. Return plain JSON-compatible Python values. Dictionary vertex keys must be strings. Return components as internally sorted lists, with the outer list lexicographically sorted.\",\n  \"documentation\": \"Generate connected components.\\n\\nThe connected components of an undirected graph partition the graph into\\ndisjoint sets of nodes. Each of these sets induces a subgraph of graph\\n`G` that is connected and not part of any larger connected subgraph.\\n\\nA graph is connected (:func:`is_connected`) if, for every pair of distinct\\nnodes, there is a path between them. If there is a pair of nodes for\\nwhich such path does not exist, the graph is not connected (also referred\\nto as \\\"disconnected\\\").\\n\\nA graph consisting of a single node and no edges is connected.\\nConnectivity is undefined for the null graph (graph with no nodes).\\n\\nParameters\\n----------\\nG : NetworkX graph\\n   An undirected graph\\n\\nYields\\n------\\ncomp : set\\n   A set of nodes in one connected component of the graph.\\n\\nRaises\\n------\\nNetworkXNotImplemented\\n    If G is directed.\\n\\nExamples\\n--------\\nGenerate a sorted list of connected components, largest first.\\n\\n>>> G = nx.path_graph(4)\\n>>> nx.add_path(G, [10, 11, 12])\\n>>> [len(c) for c in sorted(nx.connected_components(G), key=len, reverse=True)]\\n[4, 3]\\n\\nIf you only want the largest connected component, it's more\\nefficient to use max instead of sort.\\n\\n>>> largest_cc = max(nx.connected_components(G), key=len)\\n\\nTo create the induced subgraph of each component use:\\n\\n>>> S = [G.subgraph(c).copy() for c in nx.connected_components(G)]\\n\\nSee Also\\n--------\\nnumber_connected_components\\nis_connected\\nnumber_weakly_connected_components\\nnumber_strongly_connected_components\\n\\nNotes\\n-----\\nThis function is for undirected graphs only. For directed graphs, use\\n:func:`strongly_connected_components` or\\n:func:`weakly_connected_components`.\\n\\nThe algorithm is based on a Breadth-First Search (BFS) traversal and its\\ntime complexity is $O(n + m)$, where $n$ is the number of nodes and $m$ the\\nnumber of edges in the graph.\",\n  \"documentation_truncated\": false,\n  \"group\": \"connectivity\",\n  \"id\": \"networkx.connected_components\",\n  \"library\": \"networkx\",\n  \"name\": \"connected_components\",\n  \"signature\": \"solve(n, edges)\",\n  \"version\": \"3.6.1\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:1.7b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:08:06.55694517Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 267,
+    "eval_duration": 1858051000,
+    "load_duration": 545062,
+    "message": {
+      "content": "{\n  \"method_id\": \"networkx.connected_components\",\n  \"signature\": \"solve(n, edges)\",\n  \"purpose\": \"Generate connected components of an undirected graph.\",\n  \"inputs\": \"n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.\",\n  \"output\": \"A list of sets, where each set represents a connected component of the graph.\",\n  \"algorithm\": [\n    \"Perform a BFS traversal of the graph starting from each unvisited node.\",\n    \"Track visited nodes and build components as we traverse the graph.\",\n    \"Ensure components are internally sorted and the outer list is lexicographically sorted.\"\n  ],\n  \"edge_cases\": [\n    \"When the graph has a single node with no edges (connected component of size 1).\",\n    \"When the graph has no edges (all nodes are isolated).\",\n    \"When the graph is disconnected (multiple components).\"\n  ],\n  \"constraints\": [\n    \"Edges are distinct and represent a simple undirected graph.\",\n    \"Vertices are numbered from 0 to n-1.\",\n    \"The graph is undirected and unweighted.\",\n    \"Components are returned as internally sorted lists, with the outer list lexicographically sorted.\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:1.7b",
+    "prompt_eval_cached_count": 408,
+    "prompt_eval_count": 987,
+    "prompt_eval_duration": 93927000,
+    "total_duration": 1987403245
+  },
+  "started_at": "2026-11-14T13:08:04.569239+00:00",
+  "valid": true
+}

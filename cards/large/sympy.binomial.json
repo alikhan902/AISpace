@@ -1,0 +1,31 @@
+{
+  "algorithm": [
+    "For combinatorial case (nonnegative integers n, k): Compute binomial coefficient using prime factorization for efficiency.",
+    "For generalized case (arbitrary n, nonnegative integer k): Use the falling factorial formula (n)_k = n*(n-1)*...*(n-k+1) divided by k!.",
+    "For negative k: Return 0 immediately without computation.",
+    "For k > n (with nonnegative n): Return 0 immediately without computation."
+  ],
+  "constraints": [
+    "n must be an integer in 0..50 for combinatorial case",
+    "k must be an integer in -3..55 for combinatorial case",
+    "For generalized case, k must be nonnegative integer",
+    "The function returns exact rational numbers for fractional inputs",
+    "The function handles large n (up to 50) and k (up to 55) without overflow"
+  ],
+  "edge_cases": [
+    "k < 0: return 0",
+    "k > n (with n nonnegative): return 0",
+    "n = 0: binomial(0, 0) = 1, binomial(0, k) = 0 for k > 0",
+    "n = 1: binomial(1, 0) = 1, binomial(1, 1) = 1, binomial(1, k) = 0 for k > 1",
+    "Fractional inputs: e.g., binomial(Rational(5, 4), 3) = -5/128",
+    "Negative n: e.g., binomial(-5, 3) = -195/128",
+    "Large n (up to 50) and k (up to 55): use efficient computation to avoid overflow",
+    "k = 0: always returns 1 for any n",
+    "n = k: returns 1 for any n"
+  ],
+  "inputs": "n: integer in 0..50 (for combinatorial case) or any real number (for generalized case); k: integer in -3..55 (for combinatorial case) or any nonnegative integer (for generalized case).",
+  "method_id": "sympy.binomial",
+  "output": "Exact Python int for integer inputs (with zero when k < 0 or k > n), or Rational number for fractional inputs (e.g., Rational(5, 4), Rational(-5, 4)).",
+  "purpose": "Compute the exact binomial coefficient for integer inputs, including zero for negative k or k > n, and supporting fractional inputs via Rational numbers.",
+  "signature": "solve(n, k)"
+}

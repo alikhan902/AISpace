@@ -1,0 +1,23 @@
+{
+  "algorithm": [
+    "If n == 0, return 0",
+    "If n == 1, return 1",
+    "If n > 1, compute using the recurrence relation F_n = F_{n-1} + F_{n-2}",
+    "For Fibonacci polynomials, compute using F_n(x) = x*F_{n-1}(x) + F_{n-2}(x)"
+  ],
+  "constraints": [
+    "n must be an integer in the range 0..100",
+    "No symbolic results are returned",
+    "Fibonacci polynomials are computed with x = 1"
+  ],
+  "edge_cases": [
+    "n = 0",
+    "n = 1",
+    "n = 100"
+  ],
+  "inputs": "n is an integer in 0..100",
+  "method_id": "sympy.fibonacci",
+  "output": "The nth Fibonacci number or Fibonacci polynomial as an integer",
+  "purpose": "Compute the nth Fibonacci number or Fibonacci polynomial.",
+  "signature": "solve(n)"
+}

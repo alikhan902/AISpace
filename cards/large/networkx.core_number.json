@@ -1,0 +1,30 @@
+{
+  "algorithm": [
+    "Initialize a degree count for each vertex from 0 to n-1.",
+    "Iterate through the edges to update the degree counts.",
+    "Initialize a queue for vertices with degree less than the current core number (starting at 0).",
+    "For each vertex in the queue, decrement the degree of its neighbors and check if neighbors now have degree less than the current core number.",
+    "Repeat until no more vertices can be processed.",
+    "The core number of a vertex is the highest core number for which it remains in the graph after the process."
+  ],
+  "constraints": [
+    "n is an integer >= 1",
+    "Vertices are labeled 0 to n-1",
+    "Edges are distinct [u,v] pairs with 0<=u<v<n",
+    "The graph is simple and undirected",
+    "Core numbers must be integers >= 0",
+    "Output dictionary must have string keys corresponding to vertex labels"
+  ],
+  "edge_cases": [
+    "n=1 with no edges (isolated vertex)",
+    "n=2 with one edge (two connected vertices)",
+    "Graph with multiple connected components",
+    "Graph with isolated vertices",
+    "Graph where all vertices have the same degree"
+  ],
+  "inputs": "n: integer >= 1; edges: list of distinct [u,v] pairs with 0<=u<v<n",
+  "method_id": "networkx.core_number",
+  "output": "Dictionary mapping each string vertex key (e.g., \"0\", \"1\", ...) to its integer core number, including isolated vertices.",
+  "purpose": "Compute the core number for each node in a simple undirected unweighted graph, including isolated vertices.",
+  "signature": "solve(n, edges)"
+}

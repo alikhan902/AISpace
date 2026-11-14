@@ -1,0 +1,22 @@
+{
+  "algorithm": [
+    "Iterate through each element of the array.",
+    "Check if the element is a non-zero value (i.e., non-zero number or non-empty string).",
+    "Increment a counter for each non-zero value found."
+  ],
+  "constraints": [
+    "All intermediate values fit signed int64.",
+    "Return a single Python int counting nonzero values."
+  ],
+  "edge_cases": [
+    "Empty input array",
+    "All elements are zero",
+    "Mixed zero and non-zero elements",
+    "Input is a single element (e.g., 0 or non-zero)"
+  ],
+  "inputs": "a is a one-dimensional list of integers, possibly empty.",
+  "method_id": "count_nonzero",
+  "output": "A single Python integer counting the number of non-zero values in the array.",
+  "purpose": "Counts the number of non-zero values in the array `a`.",
+  "signature": "solve(a)"
+}

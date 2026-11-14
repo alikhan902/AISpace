@@ -1,0 +1,2575 @@
+{
+  "brief": {
+    "contract": "n is an integer in 3..5000. Return the prime strictly less than n. Return a plain Python int, no symbolic objects.",
+    "documentation": "Return the largest prime smaller than n.\n\nNotes\n=====\n\nPotential primes are located at 6*j +/- 1. This\nproperty is used during searching.\n\n>>> from sympy import prevprime\n>>> [(i, prevprime(i)) for i in range(10, 15)]\n[(10, 7), (11, 7), (12, 11), (13, 11), (14, 13)]\n\nSee Also\n========\n\nnextprime : Return the ith prime greater than n\nprimerange : Generates all primes in a given range",
+    "documentation_truncated": false,
+    "group": "primes",
+    "id": "sympy.prevprime",
+    "library": "sympy",
+    "name": "prevprime",
+    "signature": "solve(n)",
+    "version": "1.14.0"
+  },
+  "cases": [
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "sympy.prevprime:0000",
+      "input": {
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "sympy.prevprime:0001",
+      "input": {
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "sympy.prevprime:0002",
+      "input": {
+        "n": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "id": "sympy.prevprime:0003",
+      "input": {
+        "n": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "id": "sympy.prevprime:0004",
+      "input": {
+        "n": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "id": "sympy.prevprime:0005",
+      "input": {
+        "n": 8
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "id": "sympy.prevprime:0006",
+      "input": {
+        "n": 9
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "id": "sympy.prevprime:0007",
+      "input": {
+        "n": 10
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "id": "sympy.prevprime:0008",
+      "input": {
+        "n": 11
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 11
+      },
+      "id": "sympy.prevprime:0009",
+      "input": {
+        "n": 12
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 11
+      },
+      "id": "sympy.prevprime:0010",
+      "input": {
+        "n": 13
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 13
+      },
+      "id": "sympy.prevprime:0011",
+      "input": {
+        "n": 14
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 13
+      },
+      "id": "sympy.prevprime:0012",
+      "input": {
+        "n": 15
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 13
+      },
+      "id": "sympy.prevprime:0013",
+      "input": {
+        "n": 16
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 13
+      },
+      "id": "sympy.prevprime:0014",
+      "input": {
+        "n": 17
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 17
+      },
+      "id": "sympy.prevprime:0015",
+      "input": {
+        "n": 18
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 17
+      },
+      "id": "sympy.prevprime:0016",
+      "input": {
+        "n": 19
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 19
+      },
+      "id": "sympy.prevprime:0017",
+      "input": {
+        "n": 20
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 19
+      },
+      "id": "sympy.prevprime:0018",
+      "input": {
+        "n": 21
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 19
+      },
+      "id": "sympy.prevprime:0019",
+      "input": {
+        "n": 22
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 19
+      },
+      "id": "sympy.prevprime:0020",
+      "input": {
+        "n": 23
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 23
+      },
+      "id": "sympy.prevprime:0021",
+      "input": {
+        "n": 24
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 23
+      },
+      "id": "sympy.prevprime:0022",
+      "input": {
+        "n": 25
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 23
+      },
+      "id": "sympy.prevprime:0023",
+      "input": {
+        "n": 26
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 23
+      },
+      "id": "sympy.prevprime:0024",
+      "input": {
+        "n": 27
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 23
+      },
+      "id": "sympy.prevprime:0025",
+      "input": {
+        "n": 28
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 23
+      },
+      "id": "sympy.prevprime:0026",
+      "input": {
+        "n": 29
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 29
+      },
+      "id": "sympy.prevprime:0027",
+      "input": {
+        "n": 30
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 29
+      },
+      "id": "sympy.prevprime:0028",
+      "input": {
+        "n": 31
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 31
+      },
+      "id": "sympy.prevprime:0029",
+      "input": {
+        "n": 32
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 31
+      },
+      "id": "sympy.prevprime:0030",
+      "input": {
+        "n": 33
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 31
+      },
+      "id": "sympy.prevprime:0031",
+      "input": {
+        "n": 34
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 31
+      },
+      "id": "sympy.prevprime:0032",
+      "input": {
+        "n": 35
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 31
+      },
+      "id": "sympy.prevprime:0033",
+      "input": {
+        "n": 36
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 31
+      },
+      "id": "sympy.prevprime:0034",
+      "input": {
+        "n": 37
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 37
+      },
+      "id": "sympy.prevprime:0035",
+      "input": {
+        "n": 38
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 37
+      },
+      "id": "sympy.prevprime:0036",
+      "input": {
+        "n": 39
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 37
+      },
+      "id": "sympy.prevprime:0037",
+      "input": {
+        "n": 40
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 37
+      },
+      "id": "sympy.prevprime:0038",
+      "input": {
+        "n": 41
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 41
+      },
+      "id": "sympy.prevprime:0039",
+      "input": {
+        "n": 42
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 41
+      },
+      "id": "sympy.prevprime:0040",
+      "input": {
+        "n": 43
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 43
+      },
+      "id": "sympy.prevprime:0041",
+      "input": {
+        "n": 44
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 43
+      },
+      "id": "sympy.prevprime:0042",
+      "input": {
+        "n": 45
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 43
+      },
+      "id": "sympy.prevprime:0043",
+      "input": {
+        "n": 46
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 43
+      },
+      "id": "sympy.prevprime:0044",
+      "input": {
+        "n": 47
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 47
+      },
+      "id": "sympy.prevprime:0045",
+      "input": {
+        "n": 48
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 47
+      },
+      "id": "sympy.prevprime:0046",
+      "input": {
+        "n": 49
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 47
+      },
+      "id": "sympy.prevprime:0047",
+      "input": {
+        "n": 50
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 47
+      },
+      "id": "sympy.prevprime:0048",
+      "input": {
+        "n": 51
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 47
+      },
+      "id": "sympy.prevprime:0049",
+      "input": {
+        "n": 52
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 47
+      },
+      "id": "sympy.prevprime:0050",
+      "input": {
+        "n": 53
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 53
+      },
+      "id": "sympy.prevprime:0051",
+      "input": {
+        "n": 54
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 53
+      },
+      "id": "sympy.prevprime:0052",
+      "input": {
+        "n": 55
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 53
+      },
+      "id": "sympy.prevprime:0053",
+      "input": {
+        "n": 56
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 53
+      },
+      "id": "sympy.prevprime:0054",
+      "input": {
+        "n": 57
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 53
+      },
+      "id": "sympy.prevprime:0055",
+      "input": {
+        "n": 58
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 53
+      },
+      "id": "sympy.prevprime:0056",
+      "input": {
+        "n": 59
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 59
+      },
+      "id": "sympy.prevprime:0057",
+      "input": {
+        "n": 60
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 59
+      },
+      "id": "sympy.prevprime:0058",
+      "input": {
+        "n": 61
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 61
+      },
+      "id": "sympy.prevprime:0059",
+      "input": {
+        "n": 62
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 61
+      },
+      "id": "sympy.prevprime:0060",
+      "input": {
+        "n": 63
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 61
+      },
+      "id": "sympy.prevprime:0061",
+      "input": {
+        "n": 64
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 61
+      },
+      "id": "sympy.prevprime:0062",
+      "input": {
+        "n": 65
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 61
+      },
+      "id": "sympy.prevprime:0063",
+      "input": {
+        "n": 66
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 61
+      },
+      "id": "sympy.prevprime:0064",
+      "input": {
+        "n": 67
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 67
+      },
+      "id": "sympy.prevprime:0065",
+      "input": {
+        "n": 68
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 67
+      },
+      "id": "sympy.prevprime:0066",
+      "input": {
+        "n": 69
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 67
+      },
+      "id": "sympy.prevprime:0067",
+      "input": {
+        "n": 70
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 67
+      },
+      "id": "sympy.prevprime:0068",
+      "input": {
+        "n": 71
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 71
+      },
+      "id": "sympy.prevprime:0069",
+      "input": {
+        "n": 72
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 71
+      },
+      "id": "sympy.prevprime:0070",
+      "input": {
+        "n": 73
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 73
+      },
+      "id": "sympy.prevprime:0071",
+      "input": {
+        "n": 74
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 73
+      },
+      "id": "sympy.prevprime:0072",
+      "input": {
+        "n": 75
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 73
+      },
+      "id": "sympy.prevprime:0073",
+      "input": {
+        "n": 76
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 73
+      },
+      "id": "sympy.prevprime:0074",
+      "input": {
+        "n": 77
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 73
+      },
+      "id": "sympy.prevprime:0075",
+      "input": {
+        "n": 78
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 73
+      },
+      "id": "sympy.prevprime:0076",
+      "input": {
+        "n": 79
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 79
+      },
+      "id": "sympy.prevprime:0077",
+      "input": {
+        "n": 80
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 79
+      },
+      "id": "sympy.prevprime:0078",
+      "input": {
+        "n": 81
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 79
+      },
+      "id": "sympy.prevprime:0079",
+      "input": {
+        "n": 82
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 79
+      },
+      "id": "sympy.prevprime:0080",
+      "input": {
+        "n": 83
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 83
+      },
+      "id": "sympy.prevprime:0081",
+      "input": {
+        "n": 84
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 83
+      },
+      "id": "sympy.prevprime:0082",
+      "input": {
+        "n": 85
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 83
+      },
+      "id": "sympy.prevprime:0083",
+      "input": {
+        "n": 86
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 83
+      },
+      "id": "sympy.prevprime:0084",
+      "input": {
+        "n": 87
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 83
+      },
+      "id": "sympy.prevprime:0085",
+      "input": {
+        "n": 88
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 83
+      },
+      "id": "sympy.prevprime:0086",
+      "input": {
+        "n": 89
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 89
+      },
+      "id": "sympy.prevprime:0087",
+      "input": {
+        "n": 90
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 89
+      },
+      "id": "sympy.prevprime:0088",
+      "input": {
+        "n": 91
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 89
+      },
+      "id": "sympy.prevprime:0089",
+      "input": {
+        "n": 92
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 89
+      },
+      "id": "sympy.prevprime:0090",
+      "input": {
+        "n": 93
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 89
+      },
+      "id": "sympy.prevprime:0091",
+      "input": {
+        "n": 94
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 89
+      },
+      "id": "sympy.prevprime:0092",
+      "input": {
+        "n": 95
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 89
+      },
+      "id": "sympy.prevprime:0093",
+      "input": {
+        "n": 96
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 89
+      },
+      "id": "sympy.prevprime:0094",
+      "input": {
+        "n": 97
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 97
+      },
+      "id": "sympy.prevprime:0095",
+      "input": {
+        "n": 98
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 97
+      },
+      "id": "sympy.prevprime:0096",
+      "input": {
+        "n": 99
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 97
+      },
+      "id": "sympy.prevprime:0097",
+      "input": {
+        "n": 100
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 113
+      },
+      "id": "sympy.prevprime:0098",
+      "input": {
+        "n": 121
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 167
+      },
+      "id": "sympy.prevprime:0099",
+      "input": {
+        "n": 169
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 211
+      },
+      "id": "sympy.prevprime:0100",
+      "input": {
+        "n": 221
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 337
+      },
+      "id": "sympy.prevprime:0101",
+      "input": {
+        "n": 341
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 557
+      },
+      "id": "sympy.prevprime:0102",
+      "input": {
+        "n": 561
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1103
+      },
+      "id": "sympy.prevprime:0103",
+      "input": {
+        "n": 1105
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1723
+      },
+      "id": "sympy.prevprime:0104",
+      "input": {
+        "n": 1729
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2039
+      },
+      "id": "sympy.prevprime:0105",
+      "input": {
+        "n": 2047
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4093
+      },
+      "id": "sympy.prevprime:0106",
+      "input": {
+        "n": 4096
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4993
+      },
+      "id": "sympy.prevprime:0107",
+      "input": {
+        "n": 4999
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4999
+      },
+      "id": "sympy.prevprime:0108",
+      "input": {
+        "n": 5000
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 409
+      },
+      "id": "sympy.prevprime:0109",
+      "input": {
+        "n": 412
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1567
+      },
+      "id": "sympy.prevprime:0110",
+      "input": {
+        "n": 1569
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4789
+      },
+      "id": "sympy.prevprime:0111",
+      "input": {
+        "n": 4790
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4567
+      },
+      "id": "sympy.prevprime:0112",
+      "input": {
+        "n": 4569
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4519
+      },
+      "id": "sympy.prevprime:0113",
+      "input": {
+        "n": 4521
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4051
+      },
+      "id": "sympy.prevprime:0114",
+      "input": {
+        "n": 4053
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3803
+      },
+      "id": "sympy.prevprime:0115",
+      "input": {
+        "n": 3812
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 163
+      },
+      "id": "sympy.prevprime:0116",
+      "input": {
+        "n": 166
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4099
+      },
+      "id": "sympy.prevprime:0117",
+      "input": {
+        "n": 4107
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3923
+      },
+      "id": "sympy.prevprime:0118",
+      "input": {
+        "n": 3929
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2971
+      },
+      "id": "sympy.prevprime:0119",
+      "input": {
+        "n": 2993
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4951
+      },
+      "id": "sympy.prevprime:0120",
+      "input": {
+        "n": 4954
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3229
+      },
+      "id": "sympy.prevprime:0121",
+      "input": {
+        "n": 3230
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 113
+      },
+      "id": "sympy.prevprime:0122",
+      "input": {
+        "n": 124
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4549
+      },
+      "id": "sympy.prevprime:0123",
+      "input": {
+        "n": 4552
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3089
+      },
+      "id": "sympy.prevprime:0124",
+      "input": {
+        "n": 3098
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1759
+      },
+      "id": "sympy.prevprime:0125",
+      "input": {
+        "n": 1763
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3391
+      },
+      "id": "sympy.prevprime:0126",
+      "input": {
+        "n": 3395
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4373
+      },
+      "id": "sympy.prevprime:0127",
+      "input": {
+        "n": 4375
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 457
+      },
+      "id": "sympy.prevprime:0128",
+      "input": {
+        "n": 459
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 997
+      },
+      "id": "sympy.prevprime:0129",
+      "input": {
+        "n": 1000
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 907
+      },
+      "id": "sympy.prevprime:0130",
+      "input": {
+        "n": 910
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3187
+      },
+      "id": "sympy.prevprime:0131",
+      "input": {
+        "n": 3189
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1381
+      },
+      "id": "sympy.prevprime:0132",
+      "input": {
+        "n": 1384
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 821
+      },
+      "id": "sympy.prevprime:0133",
+      "input": {
+        "n": 823
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3067
+      },
+      "id": "sympy.prevprime:0134",
+      "input": {
+        "n": 3075
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 331
+      },
+      "id": "sympy.prevprime:0135",
+      "input": {
+        "n": 337
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 317
+      },
+      "id": "sympy.prevprime:0136",
+      "input": {
+        "n": 322
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 199
+      },
+      "id": "sympy.prevprime:0137",
+      "input": {
+        "n": 211
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2579
+      },
+      "id": "sympy.prevprime:0138",
+      "input": {
+        "n": 2582
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 787
+      },
+      "id": "sympy.prevprime:0139",
+      "input": {
+        "n": 793
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3011
+      },
+      "id": "sympy.prevprime:0140",
+      "input": {
+        "n": 3018
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 547
+      },
+      "id": "sympy.prevprime:0141",
+      "input": {
+        "n": 556
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3733
+      },
+      "id": "sympy.prevprime:0142",
+      "input": {
+        "n": 3738
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2089
+      },
+      "id": "sympy.prevprime:0143",
+      "input": {
+        "n": 2098
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4733
+      },
+      "id": "sympy.prevprime:0144",
+      "input": {
+        "n": 4735
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1789
+      },
+      "id": "sympy.prevprime:0145",
+      "input": {
+        "n": 1801
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4159
+      },
+      "id": "sympy.prevprime:0146",
+      "input": {
+        "n": 4174
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 997
+      },
+      "id": "sympy.prevprime:0147",
+      "input": {
+        "n": 1004
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3011
+      },
+      "id": "sympy.prevprime:0148",
+      "input": {
+        "n": 3016
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4051
+      },
+      "id": "sympy.prevprime:0149",
+      "input": {
+        "n": 4057
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3709
+      },
+      "id": "sympy.prevprime:0150",
+      "input": {
+        "n": 3712
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3457
+      },
+      "id": "sympy.prevprime:0151",
+      "input": {
+        "n": 3460
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4703
+      },
+      "id": "sympy.prevprime:0152",
+      "input": {
+        "n": 4709
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 823
+      },
+      "id": "sympy.prevprime:0153",
+      "input": {
+        "n": 827
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4051
+      },
+      "id": "sympy.prevprime:0154",
+      "input": {
+        "n": 4054
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4289
+      },
+      "id": "sympy.prevprime:0155",
+      "input": {
+        "n": 4293
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 991
+      },
+      "id": "sympy.prevprime:0156",
+      "input": {
+        "n": 995
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4549
+      },
+      "id": "sympy.prevprime:0157",
+      "input": {
+        "n": 4555
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 439
+      },
+      "id": "sympy.prevprime:0158",
+      "input": {
+        "n": 443
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2447
+      },
+      "id": "sympy.prevprime:0159",
+      "input": {
+        "n": 2449
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3229
+      },
+      "id": "sympy.prevprime:0160",
+      "input": {
+        "n": 3235
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4409
+      },
+      "id": "sympy.prevprime:0161",
+      "input": {
+        "n": 4417
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4463
+      },
+      "id": "sympy.prevprime:0162",
+      "input": {
+        "n": 4479
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3229
+      },
+      "id": "sympy.prevprime:0163",
+      "input": {
+        "n": 3231
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2557
+      },
+      "id": "sympy.prevprime:0164",
+      "input": {
+        "n": 2564
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 173
+      },
+      "id": "sympy.prevprime:0165",
+      "input": {
+        "n": 174
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4679
+      },
+      "id": "sympy.prevprime:0166",
+      "input": {
+        "n": 4686
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3803
+      },
+      "id": "sympy.prevprime:0167",
+      "input": {
+        "n": 3804
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2791
+      },
+      "id": "sympy.prevprime:0168",
+      "input": {
+        "n": 2795
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2503
+      },
+      "id": "sympy.prevprime:0169",
+      "input": {
+        "n": 2515
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4523
+      },
+      "id": "sympy.prevprime:0170",
+      "input": {
+        "n": 4536
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 787
+      },
+      "id": "sympy.prevprime:0171",
+      "input": {
+        "n": 792
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1409
+      },
+      "id": "sympy.prevprime:0172",
+      "input": {
+        "n": 1418
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 823
+      },
+      "id": "sympy.prevprime:0173",
+      "input": {
+        "n": 825
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 997
+      },
+      "id": "sympy.prevprime:0174",
+      "input": {
+        "n": 1001
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4561
+      },
+      "id": "sympy.prevprime:0175",
+      "input": {
+        "n": 4566
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4621
+      },
+      "id": "sympy.prevprime:0176",
+      "input": {
+        "n": 4624
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4567
+      },
+      "id": "sympy.prevprime:0177",
+      "input": {
+        "n": 4574
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 487
+      },
+      "id": "sympy.prevprime:0178",
+      "input": {
+        "n": 491
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4093
+      },
+      "id": "sympy.prevprime:0179",
+      "input": {
+        "n": 4094
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1237
+      },
+      "id": "sympy.prevprime:0180",
+      "input": {
+        "n": 1247
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4261
+      },
+      "id": "sympy.prevprime:0181",
+      "input": {
+        "n": 4262
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 277
+      },
+      "id": "sympy.prevprime:0182",
+      "input": {
+        "n": 281
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1367
+      },
+      "id": "sympy.prevprime:0183",
+      "input": {
+        "n": 1372
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4177
+      },
+      "id": "sympy.prevprime:0184",
+      "input": {
+        "n": 4178
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1327
+      },
+      "id": "sympy.prevprime:0185",
+      "input": {
+        "n": 1332
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4159
+      },
+      "id": "sympy.prevprime:0186",
+      "input": {
+        "n": 4167
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1321
+      },
+      "id": "sympy.prevprime:0187",
+      "input": {
+        "n": 1322
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 643
+      },
+      "id": "sympy.prevprime:0188",
+      "input": {
+        "n": 647
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2777
+      },
+      "id": "sympy.prevprime:0189",
+      "input": {
+        "n": 2780
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4073
+      },
+      "id": "sympy.prevprime:0190",
+      "input": {
+        "n": 4075
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3221
+      },
+      "id": "sympy.prevprime:0191",
+      "input": {
+        "n": 3222
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1499
+      },
+      "id": "sympy.prevprime:0192",
+      "input": {
+        "n": 1509
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2749
+      },
+      "id": "sympy.prevprime:0193",
+      "input": {
+        "n": 2750
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1889
+      },
+      "id": "sympy.prevprime:0194",
+      "input": {
+        "n": 1895
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1907
+      },
+      "id": "sympy.prevprime:0195",
+      "input": {
+        "n": 1912
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3433
+      },
+      "id": "sympy.prevprime:0196",
+      "input": {
+        "n": 3446
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2621
+      },
+      "id": "sympy.prevprime:0197",
+      "input": {
+        "n": 2626
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2179
+      },
+      "id": "sympy.prevprime:0198",
+      "input": {
+        "n": 2182
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1031
+      },
+      "id": "sympy.prevprime:0199",
+      "input": {
+        "n": 1032
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3547
+      },
+      "id": "sympy.prevprime:0200",
+      "input": {
+        "n": 3554
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3271
+      },
+      "id": "sympy.prevprime:0201",
+      "input": {
+        "n": 3293
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 607
+      },
+      "id": "sympy.prevprime:0202",
+      "input": {
+        "n": 610
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1291
+      },
+      "id": "sympy.prevprime:0203",
+      "input": {
+        "n": 1293
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2671
+      },
+      "id": "sympy.prevprime:0204",
+      "input": {
+        "n": 2673
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1913
+      },
+      "id": "sympy.prevprime:0205",
+      "input": {
+        "n": 1915
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1459
+      },
+      "id": "sympy.prevprime:0206",
+      "input": {
+        "n": 1469
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1433
+      },
+      "id": "sympy.prevprime:0207",
+      "input": {
+        "n": 1434
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3373
+      },
+      "id": "sympy.prevprime:0208",
+      "input": {
+        "n": 3379
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 479
+      },
+      "id": "sympy.prevprime:0209",
+      "input": {
+        "n": 484
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3271
+      },
+      "id": "sympy.prevprime:0210",
+      "input": {
+        "n": 3291
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3407
+      },
+      "id": "sympy.prevprime:0211",
+      "input": {
+        "n": 3412
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 223
+      },
+      "id": "sympy.prevprime:0212",
+      "input": {
+        "n": 225
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2357
+      },
+      "id": "sympy.prevprime:0213",
+      "input": {
+        "n": 2366
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3623
+      },
+      "id": "sympy.prevprime:0214",
+      "input": {
+        "n": 3625
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 853
+      },
+      "id": "sympy.prevprime:0215",
+      "input": {
+        "n": 857
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4297
+      },
+      "id": "sympy.prevprime:0216",
+      "input": {
+        "n": 4325
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 113
+      },
+      "id": "sympy.prevprime:0217",
+      "input": {
+        "n": 123
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2393
+      },
+      "id": "sympy.prevprime:0218",
+      "input": {
+        "n": 2396
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1123
+      },
+      "id": "sympy.prevprime:0219",
+      "input": {
+        "n": 1127
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4111
+      },
+      "id": "sympy.prevprime:0220",
+      "input": {
+        "n": 4119
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2857
+      },
+      "id": "sympy.prevprime:0221",
+      "input": {
+        "n": 2860
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 409
+      },
+      "id": "sympy.prevprime:0222",
+      "input": {
+        "n": 419
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3221
+      },
+      "id": "sympy.prevprime:0223",
+      "input": {
+        "n": 3228
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 523
+      },
+      "id": "sympy.prevprime:0224",
+      "input": {
+        "n": 527
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2399
+      },
+      "id": "sympy.prevprime:0225",
+      "input": {
+        "n": 2402
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3323
+      },
+      "id": "sympy.prevprime:0226",
+      "input": {
+        "n": 3328
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4723
+      },
+      "id": "sympy.prevprime:0227",
+      "input": {
+        "n": 4726
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4877
+      },
+      "id": "sympy.prevprime:0228",
+      "input": {
+        "n": 4883
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2143
+      },
+      "id": "sympy.prevprime:0229",
+      "input": {
+        "n": 2144
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2521
+      },
+      "id": "sympy.prevprime:0230",
+      "input": {
+        "n": 2530
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4691
+      },
+      "id": "sympy.prevprime:0231",
+      "input": {
+        "n": 4702
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4463
+      },
+      "id": "sympy.prevprime:0232",
+      "input": {
+        "n": 4471
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2797
+      },
+      "id": "sympy.prevprime:0233",
+      "input": {
+        "n": 2798
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4813
+      },
+      "id": "sympy.prevprime:0234",
+      "input": {
+        "n": 4815
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 151
+      },
+      "id": "sympy.prevprime:0235",
+      "input": {
+        "n": 155
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 157
+      },
+      "id": "sympy.prevprime:0236",
+      "input": {
+        "n": 161
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2017
+      },
+      "id": "sympy.prevprime:0237",
+      "input": {
+        "n": 2020
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 773
+      },
+      "id": "sympy.prevprime:0238",
+      "input": {
+        "n": 781
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1231
+      },
+      "id": "sympy.prevprime:0239",
+      "input": {
+        "n": 1232
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1229
+      },
+      "id": "sympy.prevprime:0240",
+      "input": {
+        "n": 1231
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1499
+      },
+      "id": "sympy.prevprime:0241",
+      "input": {
+        "n": 1502
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1259
+      },
+      "id": "sympy.prevprime:0242",
+      "input": {
+        "n": 1272
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2539
+      },
+      "id": "sympy.prevprime:0243",
+      "input": {
+        "n": 2540
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 919
+      },
+      "id": "sympy.prevprime:0244",
+      "input": {
+        "n": 928
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4951
+      },
+      "id": "sympy.prevprime:0245",
+      "input": {
+        "n": 4956
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4759
+      },
+      "id": "sympy.prevprime:0246",
+      "input": {
+        "n": 4765
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4261
+      },
+      "id": "sympy.prevprime:0247",
+      "input": {
+        "n": 4268
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3413
+      },
+      "id": "sympy.prevprime:0248",
+      "input": {
+        "n": 3427
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1109
+      },
+      "id": "sympy.prevprime:0249",
+      "input": {
+        "n": 1115
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3413
+      },
+      "id": "sympy.prevprime:0250",
+      "input": {
+        "n": 3426
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4243
+      },
+      "id": "sympy.prevprime:0251",
+      "input": {
+        "n": 4246
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3889
+      },
+      "id": "sympy.prevprime:0252",
+      "input": {
+        "n": 3898
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2939
+      },
+      "id": "sympy.prevprime:0253",
+      "input": {
+        "n": 2948
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3209
+      },
+      "id": "sympy.prevprime:0254",
+      "input": {
+        "n": 3215
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4423
+      },
+      "id": "sympy.prevprime:0255",
+      "input": {
+        "n": 4436
+      }
+    }
+  ]
+}

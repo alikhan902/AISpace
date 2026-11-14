@@ -1,0 +1,119 @@
+{
+  "elapsed_seconds": 2.2885825710000063,
+  "finished_at": "2026-11-14T13:08:32.259226+00:00",
+  "parsed": {
+    "algorithm": [
+      "Compute the degree of each node.",
+      "Identify all k-core subgraphs for k = 1, 2, ..., n.",
+      "For each node, determine the largest k for which the node is in a k-core.",
+      "Return the core number dictionary."
+    ],
+    "constraints": [
+      "The graph must be simple and undirected.",
+      "All edges must be distinct and satisfy 0 <= u < v < n.",
+      "The graph must be connected or contain isolated vertices.",
+      "The function raises NetworkXNotImplemented if the graph is a multigraph or contains self loops."
+    ],
+    "edge_cases": [
+      "When n = 1, the graph is a single isolated vertex.",
+      "When the graph is empty (no edges), all nodes have core number 0.",
+      "When a node has degree 0, its core number is 0."
+    ],
+    "inputs": "n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.",
+    "method_id": "networkx.core_number",
+    "output": "A dictionary mapping every string vertex key to its integer core number, including isolated vertices.",
+    "purpose": "Return the core number for each node in a given graph.",
+    "signature": "solve(n, edges)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"n is an integer >= 1; vertices are 0,...,n-1. edges is a list of distinct [u,v] pairs with 0<=u<v<n. Construct a simple undirected unweighted graph including isolated vertices. Return plain JSON-compatible Python values. Dictionary vertex keys must be strings. Return a dict mapping every string vertex key to its integer core number, including isolated vertices.\",\n  \"documentation\": \"Returns the core number for each node.\\n\\nA k-core is a maximal subgraph that contains nodes of degree k or more.\\n\\nThe core number of a node is the largest value k of a k-core containing\\nthat node.\\n\\nParameters\\n----------\\nG : NetworkX graph\\n   An undirected or directed graph\\n\\nReturns\\n-------\\ncore_number : dictionary\\n   A dictionary keyed by node to the core number.\\n\\nRaises\\n------\\nNetworkXNotImplemented\\n    If `G` is a multigraph or contains self loops.\\n\\nNotes\\n-----\\nFor directed graphs the node degree is defined to be the\\nin-degree + out-degree.\\n\\nExamples\\n--------\\n>>> degrees = [0, 1, 2, 2, 2, 2, 3]\\n>>> H = nx.havel_hakimi_graph(degrees)\\n>>> nx.core_number(H)\\n{0: 1, 1: 2, 2: 2, 3: 2, 4: 1, 5: 2, 6: 0}\\n>>> G = nx.DiGraph()\\n>>> G.add_edges_from([(1, 2), (2, 1), (2, 3), (2, 4), (3, 4), (4, 3)])\\n>>> nx.core_number(G)\\n{1: 2, 2: 2, 3: 2, 4: 2}\\n\\nReferences\\n----------\\n.. [1] An O(m) Algorithm for Cores Decomposition of Networks\\n   Vladimir Batagelj and Matjaz Zaversnik, 2003.\\n   https://arxiv.org/abs/cs.DS/0310049\",\n  \"documentation_truncated\": false,\n  \"group\": \"local_structure\",\n  \"id\": \"networkx.core_number\",\n  \"library\": \"networkx\",\n  \"name\": \"core_number\",\n  \"signature\": \"solve(n, edges)\",\n  \"version\": \"3.6.1\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:1.7b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:08:32.258870848Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 292,
+    "eval_duration": 2124049000,
+    "load_duration": 588184,
+    "message": {
+      "content": "{\n  \"method_id\": \"networkx.core_number\",\n  \"signature\": \"solve(n, edges)\",\n  \"purpose\": \"Return the core number for each node in a given graph.\",\n  \"inputs\": \"n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.\",\n  \"output\": \"A dictionary mapping every string vertex key to its integer core number, including isolated vertices.\",\n  \"algorithm\": [\n    \"Compute the degree of each node.\",\n    \"Identify all k-core subgraphs for k = 1, 2, ..., n.\",\n    \"For each node, determine the largest k for which the node is in a k-core.\",\n    \"Return the core number dictionary.\"\n  ],\n  \"edge_cases\": [\n    \"When n = 1, the graph is a single isolated vertex.\",\n    \"When the graph is empty (no edges), all nodes have core number 0.\",\n    \"When a node has degree 0, its core number is 0.\"\n  ],\n  \"constraints\": [\n    \"The graph must be simple and undirected.\",\n    \"All edges must be distinct and satisfy 0 <= u < v < n.\",\n    \"The graph must be connected or contain isolated vertices.\",\n    \"The function raises NetworkXNotImplemented if the graph is a multigraph or contains self loops.\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:1.7b",
+    "prompt_eval_cached_count": 418,
+    "prompt_eval_count": 893,
+    "prompt_eval_duration": 83884000,
+    "total_duration": 2287804477
+  },
+  "started_at": "2026-11-14T13:08:29.970642+00:00",
+  "valid": true
+}

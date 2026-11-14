@@ -1,0 +1,2969 @@
+[
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "networkx.articulation_points:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "edges": [],
+        "n": 1
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    "load_error": "ValueError:forbidden_import",
+    "method_id": "networkx.articulation_points",
+    "passed": 0,
+    "total": 185
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "networkx.bridges:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "edges": [],
+        "n": 1
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    "load_error": "ValueError:forbidden_import",
+    "method_id": "networkx.bridges",
+    "passed": 0,
+    "total": 188
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "networkx.connected_components:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0
+          ]
+        ]
+      },
+      "input": {
+        "edges": [],
+        "n": 1
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.connected_components",
+    "passed": 0,
+    "total": 189
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "networkx.core_number:0006",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "0": 1,
+          "1": 1,
+          "2": 1
+        }
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "n": 3
+      },
+      "observed": {
+        "value": {
+          "0": 2,
+          "1": 1,
+          "2": 1
+        }
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.core_number",
+    "passed": 39,
+    "total": 189
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "networkx.diameter:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "edges": [],
+        "n": 1
+      },
+      "observed": {
+        "value": {
+          "0": 0
+        }
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.diameter",
+    "passed": 47,
+    "total": 184
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "networkx.eccentricity:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "0": 0
+        }
+      },
+      "input": {
+        "edges": [],
+        "n": 1
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.eccentricity",
+    "passed": 0,
+    "total": 186
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "networkx.is_bipartite:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "input": {
+        "edges": [],
+        "n": 2
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list index out of range"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.is_bipartite",
+    "passed": 90,
+    "total": 189
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "networkx.is_connected:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "input": {
+        "edges": [],
+        "n": 1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.is_connected",
+    "passed": 0,
+    "total": 184
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "networkx.is_tree:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "input": {
+        "edges": [],
+        "n": 1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.is_tree",
+    "passed": 0,
+    "total": 187
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "networkx.node_connected_component:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          0
+        ]
+      },
+      "input": {
+        "edges": [],
+        "n": 1,
+        "node": 0
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.node_connected_component",
+    "passed": 0,
+    "total": 377
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "networkx.radius:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "edges": [],
+        "n": 1
+      },
+      "observed": {
+        "error": "ValueError:missing_solve"
+      },
+      "passed": false
+    },
+    "load_error": "ValueError:missing_solve",
+    "method_id": "networkx.radius",
+    "passed": 0,
+    "total": 188
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "networkx.shortest_path_length:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "edges": [],
+        "n": 1,
+        "source": 0,
+        "target": 0
+      },
+      "observed": {
+        "error": "SyntaxError:closing parenthesis ')' does not match opening parenthesis '[' (<unknown>, line 35)"
+      },
+      "passed": false
+    },
+    "load_error": "SyntaxError:closing parenthesis ')' does not match opening parenthesis '[' (<unknown>, line 35)",
+    "method_id": "networkx.shortest_path_length",
+    "passed": 0,
+    "total": 726
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "networkx.single_source_shortest_path_length:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "0": 0
+        }
+      },
+      "input": {
+        "edges": [],
+        "n": 1,
+        "source": 0
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.single_source_shortest_path_length",
+    "passed": 0,
+    "total": 369
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "networkx.triangles:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "0": 0
+        }
+      },
+      "input": {
+        "edges": [],
+        "n": 1
+      },
+      "observed": {
+        "value": {}
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.triangles",
+    "passed": 0,
+    "total": 188
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "numpy.bincount:0001",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0
+        ]
+      },
+      "input": {
+        "a": [],
+        "minlength": 1
+      },
+      "observed": {
+        "value": []
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "numpy.bincount",
+    "passed": 244,
+    "total": 492
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "numpy.count_nonzero:0000",
+      "category": "boundary",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": []
+      },
+      "observed": {
+        "error": "SyntaxError:unexpected character after line continuation character (<unknown>, line 1)"
+      },
+      "passed": false
+    },
+    "load_error": "SyntaxError:unexpected character after line continuation character (<unknown>, line 1)",
+    "method_id": "numpy.count_nonzero",
+    "passed": 0,
+    "total": 118
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "numpy.cumsum:0000",
+      "category": "boundary",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "a": []
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    "load_error": "ValueError:forbidden_import",
+    "method_id": "numpy.cumsum",
+    "passed": 0,
+    "total": 126
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "numpy.diff:0000",
+      "category": "boundary",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "a": [],
+        "n": 0
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    "load_error": "ValueError:forbidden_import",
+    "method_id": "numpy.diff",
+    "passed": 0,
+    "total": 744
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "numpy.floor_divide:0211",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          -1,
+          0,
+          0
+        ]
+      },
+      "input": {
+        "x": [
+          5,
+          7,
+          -4,
+          6,
+          0
+        ],
+        "y": 7
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "unsupported operand type(s) for //: 'list' and 'int'"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "numpy.floor_divide",
+    "passed": 241,
+    "total": 297
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "numpy.gcd:0225",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          4,
+          8,
+          1
+        ]
+      },
+      "input": {
+        "x": 8,
+        "y": [
+          7,
+          2,
+          12,
+          4,
+          8,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "'list' object cannot be interpreted as an integer"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "numpy.gcd",
+    "passed": 254,
+    "total": 313
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "numpy.lcm:0112",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": 0,
+        "y": 0
+      },
+      "observed": {
+        "error": "ZeroDivisionError",
+        "message": "division by zero"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "numpy.lcm",
+    "passed": 251,
+    "total": 311
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "numpy.power:0090",
+      "category": "random",
+      "expected": {
+        "value": [
+          25,
+          25,
+          -125,
+          -3125,
+          390625,
+          25,
+          -5
+        ]
+      },
+      "input": {
+        "x": -5,
+        "y": [
+          2,
+          2,
+          3,
+          5,
+          8,
+          2,
+          1
+        ]
+      },
+      "observed": {
+        "value": [
+          0.03125,
+          0.03125,
+          0.00411522633744856,
+          0.00032,
+          3.0517578125e-05,
+          0.03125,
+          1.0
+        ]
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "numpy.power",
+    "passed": 152,
+    "total": 180
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "numpy.remainder:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": -7,
+        "y": -7
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    "load_error": "ValueError:forbidden_import",
+    "method_id": "numpy.remainder",
+    "passed": 0,
+    "total": 300
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "numpy.searchsorted:0000",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "input": {
+        "a": [],
+        "side": "left",
+        "v": [
+          -5,
+          -4,
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "observed": {
+        "value": 0
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "numpy.searchsorted",
+    "passed": 14,
+    "total": 516
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "sympy.divisor_sigma:0007",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "k": 2,
+        "n": 2
+      },
+      "observed": {
+        "value": 7
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.divisor_sigma",
+    "passed": 249,
+    "total": 615
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "sympy.factorial:0022",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1124000727777607680000
+      },
+      "input": {
+        "n": 22
+      },
+      "observed": {
+        "value": 11240007277771345728000
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.factorial",
+    "passed": 27,
+    "total": 36
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "sympy.factorint:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 1
+        }
+      },
+      "input": {
+        "n": 2
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.factorint",
+    "passed": 1,
+    "total": 259
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "sympy.fibonacci:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "n": 0
+      },
+      "observed": {
+        "error": "ValueError:forbidden_name:__name__"
+      },
+      "passed": false
+    },
+    "load_error": "ValueError:forbidden_name:__name__",
+    "method_id": "sympy.fibonacci",
+    "passed": 0,
+    "total": 101
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "sympy.isprime:0023",
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "input": {
+        "n": 3
+      },
+      "observed": {
+        "value": false
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.isprime",
+    "passed": 272,
+    "total": 283
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "sympy.mobius:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "input": {
+        "n": 2
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.mobius",
+    "passed": 1,
+    "total": 258
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "sympy.nextprime:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": -10
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    "load_error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)",
+    "method_id": "sympy.nextprime",
+    "passed": 0,
+    "total": 271
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "sympy.prevprime:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 3
+      },
+      "observed": {
+        "value": null
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.prevprime",
+    "passed": 2,
+    "total": 256
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "sympy.primefactors:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2
+        ]
+      },
+      "input": {
+        "n": 2
+      },
+      "observed": {
+        "value": []
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.primefactors",
+    "passed": 81,
+    "total": 259
+  },
+  {
+    "condition": "small_to_small",
+    "first_failure": {
+      "case_id": "sympy.totient:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "n": 2
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.totient",
+    "passed": 7,
+    "total": 256
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "networkx.articulation_points:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "edges": [],
+        "n": 1
+      },
+      "observed": {
+        "error": "SyntaxError:invalid syntax (<unknown>, line 38)"
+      },
+      "passed": false
+    },
+    "load_error": "SyntaxError:invalid syntax (<unknown>, line 38)",
+    "method_id": "networkx.articulation_points",
+    "passed": 0,
+    "total": 185
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "networkx.bridges:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "edges": [],
+        "n": 2
+      },
+      "observed": {
+        "error": "KeyError",
+        "message": "0"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.bridges",
+    "passed": 61,
+    "total": 188
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "networkx.connected_components:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0
+          ]
+        ]
+      },
+      "input": {
+        "edges": [],
+        "n": 1
+      },
+      "observed": {
+        "value": [
+          [
+            "0"
+          ]
+        ]
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.connected_components",
+    "passed": 0,
+    "total": 189
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "networkx.core_number:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "0": 0
+        }
+      },
+      "input": {
+        "edges": [],
+        "n": 1
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    "load_error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)",
+    "method_id": "networkx.core_number",
+    "passed": 0,
+    "total": 189
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "networkx.diameter:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "edges": [],
+        "n": 1
+      },
+      "observed": {
+        "error": "SyntaxError:unexpected character after line continuation character (<unknown>, line 33)"
+      },
+      "passed": false
+    },
+    "load_error": "SyntaxError:unexpected character after line continuation character (<unknown>, line 33)",
+    "method_id": "networkx.diameter",
+    "passed": 0,
+    "total": 184
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "networkx.eccentricity:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "0": 0
+        }
+      },
+      "input": {
+        "edges": [],
+        "n": 1
+      },
+      "observed": {
+        "error": "SyntaxError:unexpected character after line continuation character (<unknown>, line 31)"
+      },
+      "passed": false
+    },
+    "load_error": "SyntaxError:unexpected character after line continuation character (<unknown>, line 31)",
+    "method_id": "networkx.eccentricity",
+    "passed": 0,
+    "total": 186
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "networkx.is_connected:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "input": {
+        "edges": [],
+        "n": 2
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'collections' is not defined"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.is_connected",
+    "passed": 1,
+    "total": 184
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "networkx.is_tree:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "input": {
+        "edges": [],
+        "n": 1
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'collections' is not defined"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.is_tree",
+    "passed": 149,
+    "total": 187
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "networkx.node_connected_component:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          0
+        ]
+      },
+      "input": {
+        "edges": [],
+        "n": 1,
+        "node": 0
+      },
+      "observed": {
+        "value": [
+          "0"
+        ]
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.node_connected_component",
+    "passed": 0,
+    "total": 377
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "networkx.shortest_path_length:0002",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [],
+        "n": 2,
+        "source": 0,
+        "target": 1
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'collections' is not defined"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.shortest_path_length",
+    "passed": 213,
+    "total": 726
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "networkx.single_source_shortest_path_length:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "0": 0
+        }
+      },
+      "input": {
+        "edges": [],
+        "n": 1,
+        "source": 0
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'collections' is not defined"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.single_source_shortest_path_length",
+    "passed": 0,
+    "total": 369
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "networkx.triangles:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "0": 0
+        }
+      },
+      "input": {
+        "edges": [],
+        "n": 1
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    "load_error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)",
+    "method_id": "networkx.triangles",
+    "passed": 0,
+    "total": 188
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "numpy.bincount:0000",
+      "category": "boundary",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "a": [],
+        "minlength": 0
+      },
+      "observed": {
+        "value": [
+          0
+        ]
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "numpy.bincount",
+    "passed": 489,
+    "total": 492
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "numpy.cumprod:0001",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0
+        ]
+      },
+      "input": {
+        "a": [
+          0
+        ]
+      },
+      "observed": {
+        "value": 0
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "numpy.cumprod",
+    "passed": 119,
+    "total": 124
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "numpy.cumsum:0000",
+      "category": "boundary",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "a": []
+      },
+      "observed": {
+        "value": 0
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "numpy.cumsum",
+    "passed": 125,
+    "total": 126
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "numpy.lcm:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "x": -7,
+        "y": -7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    "load_error": "SyntaxError:'[' was never closed (<unknown>, line 14)",
+    "method_id": "numpy.lcm",
+    "passed": 0,
+    "total": 311
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "numpy.prod:0000",
+      "category": "boundary",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "a": []
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    "load_error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)",
+    "method_id": "numpy.prod",
+    "passed": 0,
+    "total": 121
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "numpy.searchsorted:0000",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "input": {
+        "a": [],
+        "side": "left",
+        "v": [
+          -5,
+          -4,
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    "load_error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)",
+    "method_id": "numpy.searchsorted",
+    "passed": 0,
+    "total": 516
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "numpy.unique:0001",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0
+        ]
+      },
+      "input": {
+        "a": [
+          0
+        ]
+      },
+      "observed": {
+        "value": []
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "numpy.unique",
+    "passed": 1,
+    "total": 128
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "sympy.binomial:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -2,
+        "n": 0
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    "load_error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)",
+    "method_id": "sympy.binomial",
+    "passed": 0,
+    "total": 297
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "sympy.divisor_count:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "n": 1
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'proper' is not defined"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.divisor_count",
+    "passed": 0,
+    "total": 255
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "sympy.divisor_sigma:0005",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "k": 0,
+        "n": 2
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.divisor_sigma",
+    "passed": 5,
+    "total": 615
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "sympy.divisors:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1,
+          2
+        ]
+      },
+      "input": {
+        "n": 2
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'generator' is not defined"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.divisors",
+    "passed": 1,
+    "total": 260
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "sympy.factorial:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "n": 0
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    "load_error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)",
+    "method_id": "sympy.factorial",
+    "passed": 0,
+    "total": 36
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "sympy.nextprime:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": -10
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.nextprime",
+    "passed": 0,
+    "total": 271
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "sympy.prevprime:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "n": 4
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.prevprime",
+    "passed": 254,
+    "total": 256
+  },
+  {
+    "condition": "large_to_large",
+    "first_failure": {
+      "case_id": "sympy.primefactors:0008",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          3
+        ]
+      },
+      "input": {
+        "n": 9
+      },
+      "observed": {
+        "value": [
+          3,
+          3
+        ]
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.primefactors",
+    "passed": 213,
+    "total": 259
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "networkx.articulation_points:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "edges": [],
+        "n": 1
+      },
+      "observed": {
+        "value": [
+          0
+        ]
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.articulation_points",
+    "passed": 8,
+    "total": 185
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "networkx.bridges:0002",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "n": 2
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'collections' is not defined"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.bridges",
+    "passed": 8,
+    "total": 188
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "networkx.core_number:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "0": 0
+        }
+      },
+      "input": {
+        "edges": [],
+        "n": 1
+      },
+      "observed": {
+        "value": null
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.core_number",
+    "passed": 0,
+    "total": 189
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "networkx.diameter:0002",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "n": 2
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'collections' is not defined"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.diameter",
+    "passed": 72,
+    "total": 184
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "networkx.eccentricity:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "0": 0
+        }
+      },
+      "input": {
+        "edges": [],
+        "n": 1
+      },
+      "observed": {
+        "error": "SyntaxError:unexpected character after line continuation character (<unknown>, line 17)"
+      },
+      "passed": false
+    },
+    "load_error": "SyntaxError:unexpected character after line continuation character (<unknown>, line 17)",
+    "method_id": "networkx.eccentricity",
+    "passed": 0,
+    "total": 186
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "networkx.node_connected_component:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          0
+        ]
+      },
+      "input": {
+        "edges": [],
+        "n": 1,
+        "node": 0
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'collections' is not defined"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.node_connected_component",
+    "passed": 0,
+    "total": 377
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "networkx.radius:0001",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [],
+        "n": 2
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'eccentric' is not defined"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.radius",
+    "passed": 1,
+    "total": 188
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "networkx.shortest_path_length:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "edges": [],
+        "n": 1,
+        "source": 0,
+        "target": 0
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    "load_error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)",
+    "method_id": "networkx.shortest_path_length",
+    "passed": 0,
+    "total": 726
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "networkx.single_source_shortest_path_length:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "0": 0
+        }
+      },
+      "input": {
+        "edges": [],
+        "n": 1,
+        "source": 0
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 25)"
+      },
+      "passed": false
+    },
+    "load_error": "SyntaxError:'(' was never closed (<unknown>, line 25)",
+    "method_id": "networkx.single_source_shortest_path_length",
+    "passed": 0,
+    "total": 369
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "networkx.triangles:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "0": 0
+        }
+      },
+      "input": {
+        "edges": [],
+        "n": 1
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.triangles",
+    "passed": 0,
+    "total": 188
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "numpy.bincount:0000",
+      "category": "boundary",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "a": [],
+        "minlength": 0
+      },
+      "observed": {
+        "value": [
+          0
+        ]
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "numpy.bincount",
+    "passed": 122,
+    "total": 492
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "numpy.cumsum:0000",
+      "category": "boundary",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "a": []
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    "load_error": "ValueError:forbidden_import",
+    "method_id": "numpy.cumsum",
+    "passed": 0,
+    "total": 126
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "numpy.diff:0007",
+      "category": "boundary",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "a": [
+          0
+        ],
+        "n": 1
+      },
+      "observed": {
+        "value": [
+          0
+        ]
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "numpy.diff",
+    "passed": 222,
+    "total": 744
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "numpy.gcd:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "x": -7,
+        "y": -7
+      },
+      "observed": {
+        "error": "SyntaxError:invalid syntax (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    "load_error": "SyntaxError:invalid syntax (<unknown>, line 5)",
+    "method_id": "numpy.gcd",
+    "passed": 0,
+    "total": 313
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "numpy.lcm:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "x": -7,
+        "y": -7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 23)"
+      },
+      "passed": false
+    },
+    "load_error": "SyntaxError:'[' was never closed (<unknown>, line 23)",
+    "method_id": "numpy.lcm",
+    "passed": 0,
+    "total": 311
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "numpy.power:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -7,
+        "y": 0
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    "load_error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)",
+    "method_id": "numpy.power",
+    "passed": 0,
+    "total": 180
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "numpy.searchsorted:0000",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "input": {
+        "a": [],
+        "side": "left",
+        "v": [
+          -5,
+          -4,
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:unexpected character after line continuation character (<unknown>, line 1)"
+      },
+      "passed": false
+    },
+    "load_error": "SyntaxError:unexpected character after line continuation character (<unknown>, line 1)",
+    "method_id": "numpy.searchsorted",
+    "passed": 0,
+    "total": 516
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "sympy.binomial:0030",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "k": 2,
+        "n": 4
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.binomial",
+    "passed": 172,
+    "total": 297
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "sympy.divisor_count:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "n": 1
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    "load_error": "SyntaxError:'(' was never closed (<unknown>, line 5)",
+    "method_id": "sympy.divisor_count",
+    "passed": 0,
+    "total": 255
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "sympy.divisor_sigma:0005",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "k": 0,
+        "n": 2
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.divisor_sigma",
+    "passed": 5,
+    "total": 615
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "sympy.divisors:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "input": {
+        "n": 1
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    "load_error": "SyntaxError:'(' was never closed (<unknown>, line 5)",
+    "method_id": "sympy.divisors",
+    "passed": 0,
+    "total": 260
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "sympy.factorial:0007",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5040
+      },
+      "input": {
+        "n": 7
+      },
+      "observed": {
+        "value": 486
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.factorial",
+    "passed": 12,
+    "total": 36
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "sympy.factorint:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 1
+        }
+      },
+      "input": {
+        "n": 2
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.factorint",
+    "passed": 1,
+    "total": 259
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "sympy.isprime:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "input": {
+        "n": -20
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    "load_error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)",
+    "method_id": "sympy.isprime",
+    "passed": 0,
+    "total": 283
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "sympy.nextprime:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": -10
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'ith' is not defined"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.nextprime",
+    "passed": 0,
+    "total": 271
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "sympy.prevprime:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "n": 4
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.prevprime",
+    "passed": 170,
+    "total": 256
+  },
+  {
+    "condition": "small_to_large",
+    "first_failure": {
+      "case_id": "sympy.totient:0003",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 4
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'math' is not defined"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.totient",
+    "passed": 48,
+    "total": 256
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "networkx.articulation_points:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "edges": [],
+        "n": 1
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    "load_error": "ValueError:forbidden_import",
+    "method_id": "networkx.articulation_points",
+    "passed": 0,
+    "total": 185
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "networkx.bridges:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "edges": [],
+        "n": 1
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    "load_error": "ValueError:forbidden_import",
+    "method_id": "networkx.bridges",
+    "passed": 0,
+    "total": 188
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "networkx.connected_components:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          [
+            0
+          ]
+        ]
+      },
+      "input": {
+        "edges": [],
+        "n": 1
+      },
+      "observed": {
+        "value": [
+          [
+            "0"
+          ]
+        ]
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.connected_components",
+    "passed": 0,
+    "total": 189
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "networkx.core_number:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "0": 0
+        }
+      },
+      "input": {
+        "edges": [],
+        "n": 1
+      },
+      "observed": {
+        "error": "ValueError:missing_solve"
+      },
+      "passed": false
+    },
+    "load_error": "ValueError:missing_solve",
+    "method_id": "networkx.core_number",
+    "passed": 0,
+    "total": 189
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "networkx.is_bipartite:0002",
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "n": 2
+      },
+      "observed": {
+        "value": false
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.is_bipartite",
+    "passed": 104,
+    "total": 189
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "networkx.is_connected:0002",
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "n": 2
+      },
+      "observed": {
+        "value": false
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.is_connected",
+    "passed": 66,
+    "total": 184
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "networkx.is_tree:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": false
+      },
+      "input": {
+        "edges": [],
+        "n": 2
+      },
+      "observed": {
+        "error": "ValueError",
+        "message": "graph must have exactly n-1 edges"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.is_tree",
+    "passed": 1,
+    "total": 187
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "networkx.node_connected_component:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          0
+        ]
+      },
+      "input": {
+        "edges": [],
+        "n": 1,
+        "node": 0
+      },
+      "observed": {
+        "error": "ValueError:missing_solve"
+      },
+      "passed": false
+    },
+    "load_error": "ValueError:missing_solve",
+    "method_id": "networkx.node_connected_component",
+    "passed": 0,
+    "total": 377
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "networkx.number_connected_components:0002",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "n": 2
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.number_connected_components",
+    "passed": 8,
+    "total": 188
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "networkx.radius:0001",
+      "category": "exhaustive",
+      "expected": {
+        "error": "ValueError"
+      },
+      "input": {
+        "edges": [],
+        "n": 2
+      },
+      "observed": {
+        "error": "IndexError",
+        "message": "list assignment index out of range"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.radius",
+    "passed": 1,
+    "total": 188
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "networkx.single_source_shortest_path_length:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "0": 0
+        }
+      },
+      "input": {
+        "edges": [],
+        "n": 1,
+        "source": 0
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "networkx.single_source_shortest_path_length",
+    "passed": 0,
+    "total": 369
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "numpy.bincount:0000",
+      "category": "boundary",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "a": [],
+        "minlength": 0
+      },
+      "observed": {
+        "value": [
+          0
+        ]
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "numpy.bincount",
+    "passed": 92,
+    "total": 492
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "numpy.cumprod:0000",
+      "category": "boundary",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "a": []
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    "load_error": "ValueError:forbidden_import",
+    "method_id": "numpy.cumprod",
+    "passed": 0,
+    "total": 124
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "numpy.cumsum:0000",
+      "category": "boundary",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "a": []
+      },
+      "observed": {
+        "value": 0
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "numpy.cumsum",
+    "passed": 125,
+    "total": 126
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "numpy.floor_divide:0210",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "input": {
+        "x": 0,
+        "y": [
+          -2,
+          -1,
+          6,
+          -4,
+          8,
+          10,
+          6,
+          1
+        ]
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "unsupported operand type(s) for //: 'int' and 'list'"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "numpy.floor_divide",
+    "passed": 238,
+    "total": 297
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "numpy.gcd:0225",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          4,
+          8,
+          1
+        ]
+      },
+      "input": {
+        "x": 8,
+        "y": [
+          7,
+          2,
+          12,
+          4,
+          8,
+          -3
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          12,
+          4,
+          8,
+          3
+        ]
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "numpy.gcd",
+    "passed": 269,
+    "total": 313
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "numpy.lcm:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "x": -7,
+        "y": -7
+      },
+      "observed": {
+        "error": "AttributeError",
+        "message": "module 'fractions' has no attribute 'lcm'"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "numpy.lcm",
+    "passed": 2,
+    "total": 311
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "numpy.remainder:0211",
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          -5,
+          -6
+        ]
+      },
+      "input": {
+        "x": [
+          6,
+          -5,
+          -6
+        ],
+        "y": -7
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "unsupported operand type(s) for %: 'int' and 'list'"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "numpy.remainder",
+    "passed": 271,
+    "total": 300
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "numpy.searchsorted:0000",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "input": {
+        "a": [],
+        "side": "left",
+        "v": [
+          -5,
+          -4,
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "observed": {
+        "value": 0
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "numpy.searchsorted",
+    "passed": 393,
+    "total": 516
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "numpy.sort:0006",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          -2,
+          -1
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          -2,
+          -3
+        ]
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "numpy.sort",
+    "passed": 9,
+    "total": 122
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "numpy.sum:0004",
+      "category": "boundary",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "a": [
+          0,
+          0
+        ]
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'axis' is not defined"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "numpy.sum",
+    "passed": 7,
+    "total": 121
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "numpy.unique:0001",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0
+        ]
+      },
+      "input": {
+        "a": [
+          0
+        ]
+      },
+      "observed": {
+        "value": []
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "numpy.unique",
+    "passed": 1,
+    "total": 128
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "sympy.binomial:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "k": -2,
+        "n": 0
+      },
+      "observed": {
+        "error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)"
+      },
+      "passed": false
+    },
+    "load_error": "JSONDecodeError:Unterminated string starting at: line 2 column 11 (char 12)",
+    "method_id": "sympy.binomial",
+    "passed": 0,
+    "total": 297
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "sympy.catalan:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "n": 1
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.catalan",
+    "passed": 1,
+    "total": 36
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "sympy.factorint:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": {}
+      },
+      "input": {
+        "n": 1
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    "load_error": "ValueError:forbidden_import",
+    "method_id": "sympy.factorint",
+    "passed": 0,
+    "total": 259
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "sympy.isprime:0023",
+      "category": "exhaustive",
+      "expected": {
+        "value": true
+      },
+      "input": {
+        "n": 3
+      },
+      "observed": {
+        "value": false
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.isprime",
+    "passed": 240,
+    "total": 283
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "sympy.mobius:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "input": {
+        "n": 2
+      },
+      "observed": {
+        "value": 0
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.mobius",
+    "passed": 78,
+    "total": 258
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "sympy.nextprime:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": -10
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.nextprime",
+    "passed": 1,
+    "total": 271
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "sympy.prevprime:0004",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "n": 7
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.prevprime",
+    "passed": 4,
+    "total": 256
+  },
+  {
+    "condition": "large_to_small",
+    "first_failure": {
+      "case_id": "sympy.primefactors:0007",
+      "category": "exhaustive",
+      "expected": {
+        "value": [
+          2
+        ]
+      },
+      "input": {
+        "n": 8
+      },
+      "observed": {
+        "value": [
+          2,
+          4
+        ]
+      },
+      "passed": false
+    },
+    "load_error": null,
+    "method_id": "sympy.primefactors",
+    "passed": 157,
+    "total": 259
+  }
+]

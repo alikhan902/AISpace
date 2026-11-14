@@ -1,0 +1,24 @@
+{
+  "algorithm": [
+    "Trial division to find small factors",
+    "Pollard's rho and p-1 algorithms for finding large factors",
+    "Periodic checks for prime or perfect power factors"
+  ],
+  "constraints": [
+    "n is a positive integer <= 5000",
+    "Handles factorization with limit parameter",
+    "Returns {0: 1} for n=0",
+    "Returns empty dict for n=1"
+  ],
+  "edge_cases": [
+    "n=0 returns {0: 1}",
+    "n=1 returns {}",
+    "n < 2 returns empty factorization",
+    "n with large prime factors"
+  ],
+  "inputs": "n is a positive integer <= 5000",
+  "method_id": "factorint",
+  "output": "A plain Python dict with string prime keys and integer multiplicities, or {0: 1} for n=0.",
+  "purpose": "Return a dictionary of prime factors of a positive integer n, with multiplicities.",
+  "signature": "solve(n)"
+}

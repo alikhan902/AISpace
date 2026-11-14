@@ -1,0 +1,22 @@
+{
+  "algorithm": [
+    "For n in 0..35: use a precomputed lookup table",
+    "For n > 35: use Prime-Swing algorithm which computes n! via prime factorization of swing numbers"
+  ],
+  "constraints": [
+    "n must be an integer",
+    "For n < 0, output is complex infinity",
+    "For n >= 0, output is exact integer with arbitrary precision"
+  ],
+  "edge_cases": [
+    "n = 0 returns 1",
+    "n = -1 returns complex infinity",
+    "n = -2 returns complex infinity",
+    "n = : returns factorial(n) (symbolic expression)"
+  ],
+  "inputs": "n: integer in the range 0..35 (for small n) or any integer (for larger n, using Prime-Swing algorithm)",
+  "method_id": "sympy.factorial",
+  "output": "Exact Python int for nonnegative n; complex infinity for negative n",
+  "purpose": "Compute the factorial of a nonnegative integer n with arbitrary precision, returning complex infinity for negative integers.",
+  "signature": "solve(n)"
+}

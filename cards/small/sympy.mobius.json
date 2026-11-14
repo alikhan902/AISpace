@@ -1,0 +1,24 @@
+{
+  "algorithm": [
+    "If n == 1, return 1.",
+    "If n has a squared prime factor, return 0.",
+    "Otherwise, count the number of distinct prime factors of n.",
+    "If the count is even, return 1; if the count is odd, return -1."
+  ],
+  "constraints": [
+    "n is a positive integer <= 5000",
+    "n must be square-free",
+    "n must not have any squared prime factors"
+  ],
+  "edge_cases": [
+    "n = 1",
+    "n = 0 (not applicable, since n is positive)",
+    "n = 4 (has squared prime factor, returns 0)",
+    "n = 6 (two distinct prime factors, returns 1)"
+  ],
+  "inputs": "n is a positive integer <= 5000",
+  "method_id": "sympy.mobius",
+  "output": "An exact Python int, which is the Mobius function value of n.",
+  "purpose": "Compute the Mobius function for a given positive integer n.",
+  "signature": "solve(n)"
+}

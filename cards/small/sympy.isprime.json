@@ -1,0 +1,26 @@
+{
+  "algorithm": [
+    "Check if n is less than 2. If so, return False.",
+    "Check for trivial factors (e.g., even numbers). If found, return False.",
+    "For n > 2, perform deterministic Miller-Rabin tests with bases that are known to have no counterexamples in their range.",
+    "If the number is larger than 2^64, perform a strong BPSW test.",
+    "Return the result based on the tests performed."
+  ],
+  "constraints": [
+    "n must be an integer in the range -20 to 10000",
+    "Negative numbers are not considered prime",
+    "For n > 2^64, the test is probabilistic and may return False even if the number is prime",
+    "The function returns False for numbers that are not prime but may appear prime due to pseudoprime properties"
+  ],
+  "edge_cases": [
+    "n < 2: return False",
+    "n = 2: return True",
+    "n = 1: return False",
+    "n = -2: return False"
+  ],
+  "inputs": "n is an integer in -20..10000",
+  "method_id": "sympy.isprime",
+  "output": "A plain Python bool (True or False)",
+  "purpose": "Test if n is a prime number (True) or not (False).",
+  "signature": "solve(n)"
+}

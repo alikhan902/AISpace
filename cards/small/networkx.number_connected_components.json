@@ -1,0 +1,26 @@
+{
+  "algorithm": [
+    "Initialize a visited set and a queue.",
+    "For each unvisited node, perform a BFS/DFS to mark all reachable nodes.",
+    "Each BFS/DFS traversal corresponds to one connected component.",
+    "Count the number of such traversals."
+  ],
+  "constraints": [
+    "Edges are distinct and 0 <= u < v < n.",
+    "Graph is undirected and simple.",
+    "No cycles are allowed in the graph.",
+    "Graph is connected if all nodes are reachable from any starting node."
+  ],
+  "edge_cases": [
+    "n = 1 (single node, no edges): returns 1",
+    "n = 2, edges = []: returns 2",
+    "n = 2, edges = [(0, 1)]: returns 1",
+    "n = 3, edges = [(0, 1), (0, 2)]: returns 1",
+    "n = 3, edges = [(0, 1), (2, 3)]: returns 2"
+  ],
+  "inputs": "n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.",
+  "method_id": "networkx.number_connected_components",
+  "output": "int",
+  "purpose": "Returns the number of connected components in an undirected graph.",
+  "signature": "solve(n, edges)"
+}

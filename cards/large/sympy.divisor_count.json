@@ -1,0 +1,28 @@
+{
+  "algorithm": [
+    "If proper is True, exclude n itself from the count",
+    "If modulus > 1, only count divisors divisible by modulus",
+    "For modulus=1, count all divisors",
+    "For modulus>1, the count is the number of divisors of n that are multiples of modulus",
+    "The count can be computed by finding the prime factorization of n, then using the formula: (e1+1)(e2+1)...(ek+1) for the total number of divisors, where ei are the exponents in the prime factorization",
+    "If modulus > 1, the count is the number of divisors of n//modulus that are multiples of 1 (i.e., all divisors of n//modulus) but only if modulus divides n; otherwise 0"
+  ],
+  "constraints": [
+    "n must be a positive integer <= 5000",
+    "modulus must be a positive integer (default 1)",
+    "proper is a boolean (default False)"
+  ],
+  "edge_cases": [
+    "n=1: returns 1 divisor (1) if proper=False, 0 if proper=True",
+    "n=0: not allowed (n is positive integer)",
+    "modulus=1: returns total number of divisors",
+    "modulus>1: returns 0 if modulus does not divide n",
+    "proper=True: excludes n itself from the count",
+    "n=5000: returns 36 divisors (if modulus=1 and proper=False)"
+  ],
+  "inputs": "n: positive integer <= 500: integer",
+  "method_id": "sympy.divisor_count",
+  "output": "int: number of divisors (if modulus=1 and proper=False) or list of divisors (if modulus=1 and proper=True) or int (if modulus>1 and proper=False) or int (if modulus>1 and proper=True)",
+  "purpose": "Return the number of positive divisors of n, with optional modulus and proper divisor constraints",
+  "signature": "solve(n)"
+}

@@ -1,0 +1,27 @@
+{
+  "algorithm": [
+    "Initialize an empty list to store bridge pairs.",
+    "Iterate through each edge in the graph.",
+    "For each edge, check if it is a bridge by determining if its removal increases the number of connected components.",
+    "If the edge is a bridge, add it to the list.",
+    "Return the list of bridges, sorted lexicographically."
+  ],
+  "constraints": [
+    "Edges must be distinct and satisfy 0 <= u < v < n.",
+    "The graph must be simple (no multi-edges).",
+    "The graph must be undirected.",
+    "The graph must be connected.",
+    "If `root` is specified, only bridges in the connected component containing `root` are returned."
+  ],
+  "edge_cases": [
+    "n = 1: No edges, no bridges.",
+    "n = 2: One edge, which is a bridge.",
+    "Edges forming a cycle: No bridges.",
+    "Edges forming a tree: All edges are bridges."
+  ],
+  "inputs": "n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.",
+  "method_id": "networkx.bridges",
+  "output": "A sorted list of [u, v] bridge pairs, where u < v, lexicographically sorted.",
+  "purpose": "Generate all bridges in a graph.",
+  "signature": "solve(n, edges)"
+}

@@ -1,0 +1,26 @@
+{
+  "algorithm": [
+    "For each integer i from 1 to sqrt(n), check if i divides n evenly",
+    "If i divides n evenly, add i and n//i to the list of divisors",
+    "Sort the list of divisors in ascending order",
+    "If generator=True, return the list as an unordered generator instead of a sorted list"
+  ],
+  "constraints": [
+    "n must be a positive integer <= 5000",
+    "divisors returns a sorted list by default (ascending order from 1 to n)",
+    "generator=True returns an unordered generator of divisors",
+    "divisor_count uses default modulus=1 and proper=False (not implemented here)",
+    "The function does not handle negative numbers or non-integer inputs"
+  ],
+  "edge_cases": [
+    "n=1: divisors are [1]",
+    "n=prime: divisors are [1, n]",
+    "n=0: not allowed (n is positive integer)",
+    "n=5000: maximum input size"
+  ],
+  "inputs": "n: positive integer <= 5000",
+  "method_id": "sympy.divisors",
+  "output": "If generator=False (default): sorted list of all positive divisors of n from 1 to n. If generator=True: unordered generator of all positive divisors of n",
+  "purpose": "Return all positive divisors of n sorted in ascending order by default, or an unordered generator if generator=True",
+  "signature": "solve(n)"
+}

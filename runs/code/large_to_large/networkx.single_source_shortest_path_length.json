@@ -1,0 +1,61 @@
+{
+  "elapsed_seconds": 3.8851922630001354,
+  "finished_at": "2026-11-14T13:21:16.146750+00:00",
+  "parsed": {
+    "code": "def solve(n, edges, source):\n    # Create an adjacency list for the graph\n    graph = {}\n    for u, v in edges:\n        if u not in graph:\n            graph[u] = []\n        if v not in graph:\n            graph[v] = []\n        graph[u].append(v)\n        graph[v].append(u)\n\n    # BFS starting from `source`\n    visited = set()\n    queue = collections.deque()\n    queue.append(source)\n    visited.add(source)\n    dist = {source: 0}\n\n    while queue:\n        current = queue.popleft()\n        for neighbor in graph.get(current, []):\n            if neighbor not in visited:\n                visited.add(neighbor)\n                dist[neighbor] = dist[current] + 1\n                queue.append(neighbor)\n\n    return dist"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Implement a Python function from a JSON behavioral card. The card is the only task specification. Return a JSON object with a single string field code containing executable Python source. Define solve with the card's exact signature. Use only Python's standard library. Allowed imports: math, itertools, functools, collections, heapq, bisect, statistics, fractions, operator, typing. Do not import or call NumPy, SymPy, NetworkX or any other third-party library. Do not read files, use network, introspection, eval, exec, input or print. Implement computations yourself using built-ins and the allowed standard library. Return plain JSON-compatible values, not iterators or sets; use string keys in dictionaries. Include any helper functions in the code. No tests or main block. Raise ValueError where the card requires it.",
+        "role": "system"
+      },
+      {
+        "content": "Implement this card:\n{\n  \"algorithm\": [\n    \"Construct a simple undirected graph from the given vertices and edges\",\n    \"Perform a breadth-first search (BFS) starting from `source` to compute shortest path lengths\",\n    \"For each node reached during BFS, record the shortest path length from `source`\",\n    \"Return a dictionary mapping each node to its shortest path length from `source`\"\n  ],\n  \"constraints\": [\n    \"Vertices are labeled 0 to n-1\",\n    \"Edges are distinct and satisfy 0<=u<v<n\",\n    \"Source must be a valid vertex (0<=source<n)\",\n    \"No cutoff is applied (as per reference brief)\",\n    \"Graph must be simple and undirected\"\n  ],\n  \"edge_cases\": [\n    \"n=1: single vertex with no edges\",\n    \"source is isolated (no reachable nodes except itself)\",\n    \"Graph is disconnected: only reachable nodes from source are included\",\n    \"All nodes are reachable from source\"\n  ],\n  \"inputs\": \"n: integer >= 1; edges: list of distinct [u,v] pairs with 0<=u<v<n; source: valid vertex (string)\",\n  \"method_id\": \"networkx.single_source_shortest_path_length\",\n  \"output\": \"Dictionary with string vertex keys and integer shortest-path lengths for reachable nodes only; includes source:0\",\n  \"purpose\": \"Compute the shortest path lengths from `source` to all reachable nodes in a simple undirected unweighted graph\",\n  \"signature\": \"solve(n, edges, source)\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:4b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 3072,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:21:16.146395087Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 201,
+    "eval_duration": 3697575000,
+    "load_duration": 542811,
+    "message": {
+      "content": "{\n  \"code\": \"def solve(n, edges, source):\\n    # Create an adjacency list for the graph\\n    graph = {}\\n    for u, v in edges:\\n        if u not in graph:\\n            graph[u] = []\\n        if v not in graph:\\n            graph[v] = []\\n        graph[u].append(v)\\n        graph[v].append(u)\\n\\n    # BFS starting from `source`\\n    visited = set()\\n    queue = collections.deque()\\n    queue.append(source)\\n    visited.add(source)\\n    dist = {source: 0}\\n\\n    while queue:\\n        current = queue.popleft()\\n        for neighbor in graph.get(current, []):\\n            if neighbor not in visited:\\n                visited.add(neighbor)\\n                dist[neighbor] = dist[current] + 1\\n                queue.append(neighbor)\\n\\n    return dist\"\n  }",
+      "role": "assistant"
+    },
+    "model": "qwen3:4b",
+    "prompt_eval_cached_count": 183,
+    "prompt_eval_count": 505,
+    "prompt_eval_duration": 159377000,
+    "total_duration": 3884512478
+  },
+  "started_at": "2026-11-14T13:21:12.261555+00:00",
+  "valid": true
+}

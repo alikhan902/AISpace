@@ -1,0 +1,25 @@
+{
+  "algorithm": [
+    "Use Dijkstra's algorithm for unweighted graphs",
+    "Initialize distances to infinity",
+    "Set distance to source as 0",
+    "Relax edges in order of increasing distance",
+    "Stop when all reachable nodes are processed"
+  ],
+  "constraints": [
+    "Vertices are 0 to n-1",
+    "Edges are distinct and 0 <= u < v < n",
+    "Source is a valid vertex",
+    "No cutoff specified, so all reachable nodes are included"
+  ],
+  "edge_cases": [
+    "Source is the only node in the graph",
+    "No edges exist, so all nodes are isolated",
+    "Graph is disconnected, some nodes are unreachable"
+  ],
+  "inputs": "n: integer >= 1, edges: list of distinct [u, v] pairs with 0 <= u < v < n, source: valid vertex",
+  "method_id": "networkx.single_source_shortest_path_length",
+  "output": "Dict with string vertex keys and integer shortest-path lengths for reachable nodes, including source:0",
+  "purpose": "Compute the shortest path lengths from `source` to all reachable nodes in the graph `G`.",
+  "signature": "solve(n, edges, source)"
+}

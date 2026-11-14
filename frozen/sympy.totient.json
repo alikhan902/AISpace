@@ -1,0 +1,2575 @@
+{
+  "brief": {
+    "contract": "n is a positive integer <=5000. Return an exact Python int, except divisors returns an ascending list of all positive divisors. For divisors use generator=False, proper=False; divisor_count uses default modulus=1, proper=False.",
+    "documentation": "Calculate the Euler totient function phi(n)\n\n``totient(n)`` or `\\phi(n)` is the number of positive integers `\\leq` n\nthat are relatively prime to n.\n\nExamples\n========\n\n>>> from sympy.functions.combinatorial.numbers import totient\n>>> totient(1)\n1\n>>> totient(25)\n20\n>>> totient(45) == totient(5)*totient(9)\nTrue\n\nSee Also\n========\n\nsympy.ntheory.factor_.divisor_count\n\nReferences\n==========\n\n.. [1] https://en.wikipedia.org/wiki/Euler%27s_totient_function\n.. [2] https://mathworld.wolfram.com/TotientFunction.html\n.. [3] https://oeis.org/A000010",
+    "documentation_truncated": false,
+    "group": "divisors",
+    "id": "sympy.totient",
+    "library": "sympy",
+    "name": "totient",
+    "signature": "solve(n)",
+    "version": "1.14.0"
+  },
+  "cases": [
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.totient:0000",
+      "input": {
+        "n": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.totient:0001",
+      "input": {
+        "n": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "sympy.totient:0002",
+      "input": {
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "sympy.totient:0003",
+      "input": {
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "id": "sympy.totient:0004",
+      "input": {
+        "n": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "sympy.totient:0005",
+      "input": {
+        "n": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "id": "sympy.totient:0006",
+      "input": {
+        "n": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "id": "sympy.totient:0007",
+      "input": {
+        "n": 8
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "id": "sympy.totient:0008",
+      "input": {
+        "n": 9
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "id": "sympy.totient:0009",
+      "input": {
+        "n": 10
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 10
+      },
+      "id": "sympy.totient:0010",
+      "input": {
+        "n": 11
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "id": "sympy.totient:0011",
+      "input": {
+        "n": 12
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "id": "sympy.totient:0012",
+      "input": {
+        "n": 13
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "id": "sympy.totient:0013",
+      "input": {
+        "n": 14
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "id": "sympy.totient:0014",
+      "input": {
+        "n": 15
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "id": "sympy.totient:0015",
+      "input": {
+        "n": 16
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 16
+      },
+      "id": "sympy.totient:0016",
+      "input": {
+        "n": 17
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "id": "sympy.totient:0017",
+      "input": {
+        "n": 18
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 18
+      },
+      "id": "sympy.totient:0018",
+      "input": {
+        "n": 19
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "id": "sympy.totient:0019",
+      "input": {
+        "n": 20
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "id": "sympy.totient:0020",
+      "input": {
+        "n": 21
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 10
+      },
+      "id": "sympy.totient:0021",
+      "input": {
+        "n": 22
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 22
+      },
+      "id": "sympy.totient:0022",
+      "input": {
+        "n": 23
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "id": "sympy.totient:0023",
+      "input": {
+        "n": 24
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 20
+      },
+      "id": "sympy.totient:0024",
+      "input": {
+        "n": 25
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "id": "sympy.totient:0025",
+      "input": {
+        "n": 26
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 18
+      },
+      "id": "sympy.totient:0026",
+      "input": {
+        "n": 27
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "id": "sympy.totient:0027",
+      "input": {
+        "n": 28
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 28
+      },
+      "id": "sympy.totient:0028",
+      "input": {
+        "n": 29
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "id": "sympy.totient:0029",
+      "input": {
+        "n": 30
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 30
+      },
+      "id": "sympy.totient:0030",
+      "input": {
+        "n": 31
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 16
+      },
+      "id": "sympy.totient:0031",
+      "input": {
+        "n": 32
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 20
+      },
+      "id": "sympy.totient:0032",
+      "input": {
+        "n": 33
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 16
+      },
+      "id": "sympy.totient:0033",
+      "input": {
+        "n": 34
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 24
+      },
+      "id": "sympy.totient:0034",
+      "input": {
+        "n": 35
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "id": "sympy.totient:0035",
+      "input": {
+        "n": 36
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 36
+      },
+      "id": "sympy.totient:0036",
+      "input": {
+        "n": 37
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 18
+      },
+      "id": "sympy.totient:0037",
+      "input": {
+        "n": 38
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 24
+      },
+      "id": "sympy.totient:0038",
+      "input": {
+        "n": 39
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 16
+      },
+      "id": "sympy.totient:0039",
+      "input": {
+        "n": 40
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 40
+      },
+      "id": "sympy.totient:0040",
+      "input": {
+        "n": 41
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "id": "sympy.totient:0041",
+      "input": {
+        "n": 42
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 42
+      },
+      "id": "sympy.totient:0042",
+      "input": {
+        "n": 43
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 20
+      },
+      "id": "sympy.totient:0043",
+      "input": {
+        "n": 44
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 24
+      },
+      "id": "sympy.totient:0044",
+      "input": {
+        "n": 45
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 22
+      },
+      "id": "sympy.totient:0045",
+      "input": {
+        "n": 46
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 46
+      },
+      "id": "sympy.totient:0046",
+      "input": {
+        "n": 47
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 16
+      },
+      "id": "sympy.totient:0047",
+      "input": {
+        "n": 48
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 42
+      },
+      "id": "sympy.totient:0048",
+      "input": {
+        "n": 49
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 20
+      },
+      "id": "sympy.totient:0049",
+      "input": {
+        "n": 50
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 32
+      },
+      "id": "sympy.totient:0050",
+      "input": {
+        "n": 51
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 24
+      },
+      "id": "sympy.totient:0051",
+      "input": {
+        "n": 52
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 52
+      },
+      "id": "sympy.totient:0052",
+      "input": {
+        "n": 53
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 18
+      },
+      "id": "sympy.totient:0053",
+      "input": {
+        "n": 54
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 40
+      },
+      "id": "sympy.totient:0054",
+      "input": {
+        "n": 55
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 24
+      },
+      "id": "sympy.totient:0055",
+      "input": {
+        "n": 56
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 36
+      },
+      "id": "sympy.totient:0056",
+      "input": {
+        "n": 57
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 28
+      },
+      "id": "sympy.totient:0057",
+      "input": {
+        "n": 58
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 58
+      },
+      "id": "sympy.totient:0058",
+      "input": {
+        "n": 59
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 16
+      },
+      "id": "sympy.totient:0059",
+      "input": {
+        "n": 60
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 60
+      },
+      "id": "sympy.totient:0060",
+      "input": {
+        "n": 61
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 30
+      },
+      "id": "sympy.totient:0061",
+      "input": {
+        "n": 62
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 36
+      },
+      "id": "sympy.totient:0062",
+      "input": {
+        "n": 63
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 32
+      },
+      "id": "sympy.totient:0063",
+      "input": {
+        "n": 64
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 48
+      },
+      "id": "sympy.totient:0064",
+      "input": {
+        "n": 65
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 20
+      },
+      "id": "sympy.totient:0065",
+      "input": {
+        "n": 66
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 66
+      },
+      "id": "sympy.totient:0066",
+      "input": {
+        "n": 67
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 32
+      },
+      "id": "sympy.totient:0067",
+      "input": {
+        "n": 68
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 44
+      },
+      "id": "sympy.totient:0068",
+      "input": {
+        "n": 69
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 24
+      },
+      "id": "sympy.totient:0069",
+      "input": {
+        "n": 70
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 70
+      },
+      "id": "sympy.totient:0070",
+      "input": {
+        "n": 71
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 24
+      },
+      "id": "sympy.totient:0071",
+      "input": {
+        "n": 72
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 72
+      },
+      "id": "sympy.totient:0072",
+      "input": {
+        "n": 73
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 36
+      },
+      "id": "sympy.totient:0073",
+      "input": {
+        "n": 74
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 40
+      },
+      "id": "sympy.totient:0074",
+      "input": {
+        "n": 75
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 36
+      },
+      "id": "sympy.totient:0075",
+      "input": {
+        "n": 76
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 60
+      },
+      "id": "sympy.totient:0076",
+      "input": {
+        "n": 77
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 24
+      },
+      "id": "sympy.totient:0077",
+      "input": {
+        "n": 78
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 78
+      },
+      "id": "sympy.totient:0078",
+      "input": {
+        "n": 79
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 32
+      },
+      "id": "sympy.totient:0079",
+      "input": {
+        "n": 80
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 54
+      },
+      "id": "sympy.totient:0080",
+      "input": {
+        "n": 81
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 40
+      },
+      "id": "sympy.totient:0081",
+      "input": {
+        "n": 82
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 82
+      },
+      "id": "sympy.totient:0082",
+      "input": {
+        "n": 83
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 24
+      },
+      "id": "sympy.totient:0083",
+      "input": {
+        "n": 84
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 64
+      },
+      "id": "sympy.totient:0084",
+      "input": {
+        "n": 85
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 42
+      },
+      "id": "sympy.totient:0085",
+      "input": {
+        "n": 86
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 56
+      },
+      "id": "sympy.totient:0086",
+      "input": {
+        "n": 87
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 40
+      },
+      "id": "sympy.totient:0087",
+      "input": {
+        "n": 88
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 88
+      },
+      "id": "sympy.totient:0088",
+      "input": {
+        "n": 89
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 24
+      },
+      "id": "sympy.totient:0089",
+      "input": {
+        "n": 90
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 72
+      },
+      "id": "sympy.totient:0090",
+      "input": {
+        "n": 91
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 44
+      },
+      "id": "sympy.totient:0091",
+      "input": {
+        "n": 92
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 60
+      },
+      "id": "sympy.totient:0092",
+      "input": {
+        "n": 93
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 46
+      },
+      "id": "sympy.totient:0093",
+      "input": {
+        "n": 94
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 72
+      },
+      "id": "sympy.totient:0094",
+      "input": {
+        "n": 95
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 32
+      },
+      "id": "sympy.totient:0095",
+      "input": {
+        "n": 96
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 96
+      },
+      "id": "sympy.totient:0096",
+      "input": {
+        "n": 97
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 42
+      },
+      "id": "sympy.totient:0097",
+      "input": {
+        "n": 98
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 60
+      },
+      "id": "sympy.totient:0098",
+      "input": {
+        "n": 99
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 40
+      },
+      "id": "sympy.totient:0099",
+      "input": {
+        "n": 100
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 110
+      },
+      "id": "sympy.totient:0100",
+      "input": {
+        "n": 121
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 156
+      },
+      "id": "sympy.totient:0101",
+      "input": {
+        "n": 169
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 192
+      },
+      "id": "sympy.totient:0102",
+      "input": {
+        "n": 221
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 300
+      },
+      "id": "sympy.totient:0103",
+      "input": {
+        "n": 341
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 320
+      },
+      "id": "sympy.totient:0104",
+      "input": {
+        "n": 561
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 768
+      },
+      "id": "sympy.totient:0105",
+      "input": {
+        "n": 1105
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1296
+      },
+      "id": "sympy.totient:0106",
+      "input": {
+        "n": 1729
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1936
+      },
+      "id": "sympy.totient:0107",
+      "input": {
+        "n": 2047
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2048
+      },
+      "id": "sympy.totient:0108",
+      "input": {
+        "n": 4096
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4998
+      },
+      "id": "sympy.totient:0109",
+      "input": {
+        "n": 4999
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2000
+      },
+      "id": "sympy.totient:0110",
+      "input": {
+        "n": 5000
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 520
+      },
+      "id": "sympy.totient:0111",
+      "input": {
+        "n": 1310
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2496
+      },
+      "id": "sympy.totient:0112",
+      "input": {
+        "n": 2669
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1944
+      },
+      "id": "sympy.totient:0113",
+      "input": {
+        "n": 3423
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1632
+      },
+      "id": "sympy.totient:0114",
+      "input": {
+        "n": 4932
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 252
+      },
+      "id": "sympy.totient:0115",
+      "input": {
+        "n": 602
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2940
+      },
+      "id": "sympy.totient:0116",
+      "input": {
+        "n": 3479
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1356
+      },
+      "id": "sympy.totient:0117",
+      "input": {
+        "n": 1589
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1500
+      },
+      "id": "sympy.totient:0118",
+      "input": {
+        "n": 4506
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1248
+      },
+      "id": "sympy.totient:0119",
+      "input": {
+        "n": 3792
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1280
+      },
+      "id": "sympy.totient:0120",
+      "input": {
+        "n": 3936
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 216
+      },
+      "id": "sympy.totient:0121",
+      "input": {
+        "n": 654
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1044
+      },
+      "id": "sympy.totient:0122",
+      "input": {
+        "n": 1593
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1400
+      },
+      "id": "sympy.totient:0123",
+      "input": {
+        "n": 4686
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1428
+      },
+      "id": "sympy.totient:0124",
+      "input": {
+        "n": 1673
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1024
+      },
+      "id": "sympy.totient:0125",
+      "input": {
+        "n": 2056
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1316
+      },
+      "id": "sympy.totient:0126",
+      "input": {
+        "n": 2636
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4462
+      },
+      "id": "sympy.totient:0127",
+      "input": {
+        "n": 4463
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 88
+      },
+      "id": "sympy.totient:0128",
+      "input": {
+        "n": 178
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3322
+      },
+      "id": "sympy.totient:0129",
+      "input": {
+        "n": 3323
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 648
+      },
+      "id": "sympy.totient:0130",
+      "input": {
+        "n": 999
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4368
+      },
+      "id": "sympy.totient:0131",
+      "input": {
+        "n": 4901
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 128
+      },
+      "id": "sympy.totient:0132",
+      "input": {
+        "n": 510
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 168
+      },
+      "id": "sympy.totient:0133",
+      "input": {
+        "n": 522
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2640
+      },
+      "id": "sympy.totient:0134",
+      "input": {
+        "n": 3963
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 240
+      },
+      "id": "sympy.totient:0135",
+      "input": {
+        "n": 495
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1800
+      },
+      "id": "sympy.totient:0136",
+      "input": {
+        "n": 4774
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1200
+      },
+      "id": "sympy.totient:0137",
+      "input": {
+        "n": 3850
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1728
+      },
+      "id": "sympy.totient:0138",
+      "input": {
+        "n": 3464
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 520
+      },
+      "id": "sympy.totient:0139",
+      "input": {
+        "n": 655
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 760
+      },
+      "id": "sympy.totient:0140",
+      "input": {
+        "n": 955
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2160
+      },
+      "id": "sympy.totient:0141",
+      "input": {
+        "n": 4275
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 84
+      },
+      "id": "sympy.totient:0142",
+      "input": {
+        "n": 129
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2344
+      },
+      "id": "sympy.totient:0143",
+      "input": {
+        "n": 4696
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 996
+      },
+      "id": "sympy.totient:0144",
+      "input": {
+        "n": 997
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1032
+      },
+      "id": "sympy.totient:0145",
+      "input": {
+        "n": 2422
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 648
+      },
+      "id": "sympy.totient:0146",
+      "input": {
+        "n": 1962
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4720
+      },
+      "id": "sympy.totient:0147",
+      "input": {
+        "n": 4721
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 432
+      },
+      "id": "sympy.totient:0148",
+      "input": {
+        "n": 819
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3510
+      },
+      "id": "sympy.totient:0149",
+      "input": {
+        "n": 3511
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1704
+      },
+      "id": "sympy.totient:0150",
+      "input": {
+        "n": 2559
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4416
+      },
+      "id": "sympy.totient:0151",
+      "input": {
+        "n": 4559
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1282
+      },
+      "id": "sympy.totient:0152",
+      "input": {
+        "n": 1283
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2400
+      },
+      "id": "sympy.totient:0153",
+      "input": {
+        "n": 2567
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2136
+      },
+      "id": "sympy.totient:0154",
+      "input": {
+        "n": 3759
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4656
+      },
+      "id": "sympy.totient:0155",
+      "input": {
+        "n": 4657
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1032
+      },
+      "id": "sympy.totient:0156",
+      "input": {
+        "n": 1211
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 576
+      },
+      "id": "sympy.totient:0157",
+      "input": {
+        "n": 2142
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 160
+      },
+      "id": "sympy.totient:0158",
+      "input": {
+        "n": 410
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2880
+      },
+      "id": "sympy.totient:0159",
+      "input": {
+        "n": 4015
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1600
+      },
+      "id": "sympy.totient:0160",
+      "input": {
+        "n": 2005
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1636
+      },
+      "id": "sympy.totient:0161",
+      "input": {
+        "n": 1637
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1920
+      },
+      "id": "sympy.totient:0162",
+      "input": {
+        "n": 2975
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3852
+      },
+      "id": "sympy.totient:0163",
+      "input": {
+        "n": 4501
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 660
+      },
+      "id": "sympy.totient:0164",
+      "input": {
+        "n": 1694
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1232
+      },
+      "id": "sympy.totient:0165",
+      "input": {
+        "n": 4002
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 840
+      },
+      "id": "sympy.totient:0166",
+      "input": {
+        "n": 2526
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1740
+      },
+      "id": "sympy.totient:0167",
+      "input": {
+        "n": 1829
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3552
+      },
+      "id": "sympy.totient:0168",
+      "input": {
+        "n": 3791
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2016
+      },
+      "id": "sympy.totient:0169",
+      "input": {
+        "n": 2017
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 344
+      },
+      "id": "sympy.totient:0170",
+      "input": {
+        "n": 519
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 828
+      },
+      "id": "sympy.totient:0171",
+      "input": {
+        "n": 973
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2800
+      },
+      "id": "sympy.totient:0172",
+      "input": {
+        "n": 2911
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2112
+      },
+      "id": "sympy.totient:0173",
+      "input": {
+        "n": 2113
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1680
+      },
+      "id": "sympy.totient:0174",
+      "input": {
+        "n": 2695
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 192
+      },
+      "id": "sympy.totient:0175",
+      "input": {
+        "n": 520
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 384
+      },
+      "id": "sympy.totient:0176",
+      "input": {
+        "n": 1680
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1560
+      },
+      "id": "sympy.totient:0177",
+      "input": {
+        "n": 3286
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 826
+      },
+      "id": "sympy.totient:0178",
+      "input": {
+        "n": 827
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 880
+      },
+      "id": "sympy.totient:0179",
+      "input": {
+        "n": 1936
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2112
+      },
+      "id": "sympy.totient:0180",
+      "input": {
+        "n": 2471
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3582
+      },
+      "id": "sympy.totient:0181",
+      "input": {
+        "n": 3583
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 900
+      },
+      "id": "sympy.totient:0182",
+      "input": {
+        "n": 1359
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 640
+      },
+      "id": "sympy.totient:0183",
+      "input": {
+        "n": 1408
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3168
+      },
+      "id": "sympy.totient:0184",
+      "input": {
+        "n": 4255
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 960
+      },
+      "id": "sympy.totient:0185",
+      "input": {
+        "n": 2952
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 612
+      },
+      "id": "sympy.totient:0186",
+      "input": {
+        "n": 1226
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2628
+      },
+      "id": "sympy.totient:0187",
+      "input": {
+        "n": 3073
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1080
+      },
+      "id": "sympy.totient:0188",
+      "input": {
+        "n": 2168
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 478
+      },
+      "id": "sympy.totient:0189",
+      "input": {
+        "n": 958
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1192
+      },
+      "id": "sympy.totient:0190",
+      "input": {
+        "n": 2386
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2370
+      },
+      "id": "sympy.totient:0191",
+      "input": {
+        "n": 4742
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 864
+      },
+      "id": "sympy.totient:0192",
+      "input": {
+        "n": 1295
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1680
+      },
+      "id": "sympy.totient:0193",
+      "input": {
+        "n": 2529
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 528
+      },
+      "id": "sympy.totient:0194",
+      "input": {
+        "n": 2010
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1728
+      },
+      "id": "sympy.totient:0195",
+      "input": {
+        "n": 2555
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4704
+      },
+      "id": "sympy.totient:0196",
+      "input": {
+        "n": 4859
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 468
+      },
+      "id": "sympy.totient:0197",
+      "input": {
+        "n": 553
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 656
+      },
+      "id": "sympy.totient:0198",
+      "input": {
+        "n": 2490
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1848
+      },
+      "id": "sympy.totient:0199",
+      "input": {
+        "n": 4508
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2160
+      },
+      "id": "sympy.totient:0200",
+      "input": {
+        "n": 2717
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1040
+      },
+      "id": "sympy.totient:0201",
+      "input": {
+        "n": 2332
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1400
+      },
+      "id": "sympy.totient:0202",
+      "input": {
+        "n": 2103
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3670
+      },
+      "id": "sympy.totient:0203",
+      "input": {
+        "n": 3671
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2880
+      },
+      "id": "sympy.totient:0204",
+      "input": {
+        "n": 3689
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2040
+      },
+      "id": "sympy.totient:0205",
+      "input": {
+        "n": 3063
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2388
+      },
+      "id": "sympy.totient:0206",
+      "input": {
+        "n": 2389
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 408
+      },
+      "id": "sympy.totient:0207",
+      "input": {
+        "n": 818
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2304
+      },
+      "id": "sympy.totient:0208",
+      "input": {
+        "n": 3459
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3298
+      },
+      "id": "sympy.totient:0209",
+      "input": {
+        "n": 3299
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 480
+      },
+      "id": "sympy.totient:0210",
+      "input": {
+        "n": 1950
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2352
+      },
+      "id": "sympy.totient:0211",
+      "input": {
+        "n": 2561
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1878
+      },
+      "id": "sympy.totient:0212",
+      "input": {
+        "n": 3758
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2496
+      },
+      "id": "sympy.totient:0213",
+      "input": {
+        "n": 4996
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2112
+      },
+      "id": "sympy.totient:0214",
+      "input": {
+        "n": 3115
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 64
+      },
+      "id": "sympy.totient:0215",
+      "input": {
+        "n": 160
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 882
+      },
+      "id": "sympy.totient:0216",
+      "input": {
+        "n": 883
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 800
+      },
+      "id": "sympy.totient:0217",
+      "input": {
+        "n": 1616
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2110
+      },
+      "id": "sympy.totient:0218",
+      "input": {
+        "n": 2111
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 136
+      },
+      "id": "sympy.totient:0219",
+      "input": {
+        "n": 137
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 982
+      },
+      "id": "sympy.totient:0220",
+      "input": {
+        "n": 983
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 408
+      },
+      "id": "sympy.totient:0221",
+      "input": {
+        "n": 1030
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1544
+      },
+      "id": "sympy.totient:0222",
+      "input": {
+        "n": 3092
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3888
+      },
+      "id": "sympy.totient:0223",
+      "input": {
+        "n": 4033
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 864
+      },
+      "id": "sympy.totient:0224",
+      "input": {
+        "n": 949
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1128
+      },
+      "id": "sympy.totient:0225",
+      "input": {
+        "n": 2264
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3360
+      },
+      "id": "sympy.totient:0226",
+      "input": {
+        "n": 4615
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 712
+      },
+      "id": "sympy.totient:0227",
+      "input": {
+        "n": 895
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2528
+      },
+      "id": "sympy.totient:0228",
+      "input": {
+        "n": 4755
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 712
+      },
+      "id": "sympy.totient:0229",
+      "input": {
+        "n": 2148
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1200
+      },
+      "id": "sympy.totient:0230",
+      "input": {
+        "n": 2828
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2880
+      },
+      "id": "sympy.totient:0231",
+      "input": {
+        "n": 3007
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 960
+      },
+      "id": "sympy.totient:0232",
+      "input": {
+        "n": 2870
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1800
+      },
+      "id": "sympy.totient:0233",
+      "input": {
+        "n": 1991
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 4140
+      },
+      "id": "sympy.totient:0234",
+      "input": {
+        "n": 4837
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1624
+      },
+      "id": "sympy.totient:0235",
+      "input": {
+        "n": 2523
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 784
+      },
+      "id": "sympy.totient:0236",
+      "input": {
+        "n": 1576
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 640
+      },
+      "id": "sympy.totient:0237",
+      "input": {
+        "n": 2112
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3696
+      },
+      "id": "sympy.totient:0238",
+      "input": {
+        "n": 3697
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 768
+      },
+      "id": "sympy.totient:0239",
+      "input": {
+        "n": 1792
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2208
+      },
+      "id": "sympy.totient:0240",
+      "input": {
+        "n": 4935
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2448
+      },
+      "id": "sympy.totient:0241",
+      "input": {
+        "n": 3681
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1680
+      },
+      "id": "sympy.totient:0242",
+      "input": {
+        "n": 4466
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 504
+      },
+      "id": "sympy.totient:0243",
+      "input": {
+        "n": 1270
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 3846
+      },
+      "id": "sympy.totient:0244",
+      "input": {
+        "n": 3847
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 2268
+      },
+      "id": "sympy.totient:0245",
+      "input": {
+        "n": 3483
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 224
+      },
+      "id": "sympy.totient:0246",
+      "input": {
+        "n": 435
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 712
+      },
+      "id": "sympy.totient:0247",
+      "input": {
+        "n": 1432
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 464
+      },
+      "id": "sympy.totient:0248",
+      "input": {
+        "n": 944
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 292
+      },
+      "id": "sympy.totient:0249",
+      "input": {
+        "n": 586
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1104
+      },
+      "id": "sympy.totient:0250",
+      "input": {
+        "n": 4230
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 336
+      },
+      "id": "sympy.totient:0251",
+      "input": {
+        "n": 1290
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1424
+      },
+      "id": "sympy.totient:0252",
+      "input": {
+        "n": 2864
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 720
+      },
+      "id": "sympy.totient:0253",
+      "input": {
+        "n": 1810
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 820
+      },
+      "id": "sympy.totient:0254",
+      "input": {
+        "n": 1826
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1152
+      },
+      "id": "sympy.totient:0255",
+      "input": {
+        "n": 2920
+      }
+    }
+  ]
+}

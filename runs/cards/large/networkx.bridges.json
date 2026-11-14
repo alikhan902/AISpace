@@ -1,0 +1,121 @@
+{
+  "elapsed_seconds": 6.025321906000045,
+  "finished_at": "2026-11-14T13:15:01.552850+00:00",
+  "parsed": {
+    "algorithm": [
+      "Construct a simple undirected graph from the input using vertex labels 0 to n-1",
+      "Identify connected components of the graph",
+      "For each connected component, find all edges that are not part of any cycle (bridges)",
+      "Return bridges sorted lexicographically by (u, v) with u < v"
+    ],
+    "constraints": [
+      "Vertices are labeled 0 to n-1",
+      "Edges are distinct and satisfy 0<=u<v<n",
+      "Graph must be simple (no self-loops or multi-edges)",
+      "Bridges must be returned with u < v and lexicographically sorted"
+    ],
+    "edge_cases": [
+      "Graph with no edges (all isolated vertices)",
+      "Graph with a single edge (one bridge)",
+      "Graph with multiple connected components",
+      "Graph where all edges are bridges (no cycles)",
+      "Graph with cycles (no bridges in cycles)"
+    ],
+    "inputs": "n: integer >= 1; edges: list of distinct [u,v] pairs with 0<=u<v<n",
+    "method_id": "networkx.bridges",
+    "output": "Sorted list of [u,v] pairs with u<v, lexicographically sorted, where u and v are string vertex keys",
+    "purpose": "Generate all bridges in a simple undirected graph with isolated vertices",
+    "signature": "solve(n, edges)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"n is an integer >= 1; vertices are 0,...,n-1. edges is a list of distinct [u,v] pairs with 0<=u<v<n. Construct a simple undirected unweighted graph including isolated vertices. Return plain JSON-compatible Python values. Dictionary vertex keys must be strings. Return sorted [u,v] bridge pairs with u<v, lexicographically sorted. Work across all components.\",\n  \"documentation\": \"Generate all bridges in a graph.\\n\\nA *bridge* in a graph is an edge whose removal causes the number of\\nconnected components of the graph to increase.  Equivalently, a bridge is an\\nedge that does not belong to any cycle. Bridges are also known as cut-edges,\\nisthmuses, or cut arcs.\\n\\nParameters\\n----------\\nG : undirected graph\\n\\nroot : node (optional)\\n   A node in the graph `G`. If specified, only the bridges in the\\n   connected component containing this node will be returned.\\n\\nYields\\n------\\ne : edge\\n   An edge in the graph whose removal disconnects the graph (or\\n   causes the number of connected components to increase).\\n\\nRaises\\n------\\nNodeNotFound\\n   If `root` is not in the graph `G`.\\n\\nNetworkXNotImplemented\\n    If `G` is a directed graph.\\n\\nExamples\\n--------\\nThe barbell graph with parameter zero has a single bridge:\\n\\n>>> G = nx.barbell_graph(10, 0)\\n>>> list(nx.bridges(G))\\n[(9, 10)]\\n\\nNotes\\n-----\\nThis is an implementation of the algorithm described in [1]_.  An edge is a\\nbridge if and only if it is not contained in any chain. Chains are found\\nusing the :func:`networkx.chain_decomposition` function.\\n\\nThe algorithm described in [1]_ requires a simple graph. If the provided\\ngraph is a multigraph, we convert it to a simple graph and verify that any\\nbridges discovered by the chain decomposition algorithm are not multi-edges.\\n\\nIgnoring polylogarithmic factors, the worst-case time complexity is the\\nsame as the :func:`networkx.chain_decomposition` function,\\n$O(m + n)$, where $n$ is the number of nodes in the graph and $m$ is\\nthe number of edges.\\n\\nReferences\\n----------\\n.. [1] https://en.wikipedia.org/wiki/Bridge_%28graph_theory%29#Bridge-Finding_with_Chain_Decompositions\",\n  \"documentation_truncated\": false,\n  \"group\": \"local_structure\",\n  \"id\": \"networkx.bridges\",\n  \"library\": \"networkx\",\n  \"name\": \"bridges\",\n  \"signature\": \"solve(n, edges)\",\n  \"version\": \"3.6.1\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:4b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:15:01.552559827Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 311,
+    "eval_duration": 5605826000,
+    "load_duration": 520257,
+    "message": {
+      "content": "{\n  \"method_id\": \"networkx.bridges\",\n  \"signature\": \"solve(n, edges)\",\n  \"purpose\": \"Generate all bridges in a simple undirected graph with isolated vertices\",\n  \"inputs\": \"n: integer >= 1; edges: list of distinct [u,v] pairs with 0<=u<v<n\",\n  \"output\": \"Sorted list of [u,v] pairs with u<v, lexicographically sorted, where u and v are string vertex keys\",\n  \"algorithm\": [\n    \"Construct a simple undirected graph from the input using vertex labels 0 to n-1\",\n    \"Identify connected components of the graph\",\n    \"For each connected component, find all edges that are not part of any cycle (bridges)\",\n    \"Return bridges sorted lexicographically by (u, v) with u < v\"\n  ],\n  \"edge_cases\": [\n    \"Graph with no edges (all isolated vertices)\",\n    \"Graph with a single edge (one bridge)\",\n    \"Graph with multiple connected components\",\n    \"Graph where all edges are bridges (no cycles)\",\n    \"Graph with cycles (no bridges in cycles)\"\n  ],\n  \"constraints\": [\n    \"Vertices are labeled 0 to n-1\",\n    \"Edges are distinct and satisfy 0<=u<v<n\",\n    \"Graph must be simple (no self-loops or multi-edges)\",\n    \"Bridges must be returned with u < v and lexicographically sorted\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:4b",
+    "prompt_eval_cached_count": 408,
+    "prompt_eval_count": 963,
+    "prompt_eval_duration": 232773000,
+    "total_duration": 6024752485
+  },
+  "started_at": "2026-11-14T13:14:55.527527+00:00",
+  "valid": true
+}

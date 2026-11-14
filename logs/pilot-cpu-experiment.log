@@ -1,0 +1,4 @@
+Sandbox, import restrictions, timeout, exception and strict-comparison checks passed.
+2026-11-14T13:00:13.914442+00:00 cards_small 1/45 numpy.sum valid=True 36.5s
+2026-11-14T13:00:47.424791+00:00 cards_small 2/45 numpy.prod valid=True 33.5s
+2026-11-14T13:01:12.752340+00:00 cards_small 3/45 numpy.cumsum valid=True 25.3s

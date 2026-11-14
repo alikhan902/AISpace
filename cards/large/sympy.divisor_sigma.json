@@ -1,0 +1,26 @@
+{
+  "algorithm": [
+    "If n is 1, return 1 if k==0 else 1 (since 1^k=1 for any k)",
+    "Factorize n into its prime factors: n = \\prod_{i=1}^\\omega p_i^{m_i}",
+    "For each prime factor p_i with exponent m_i, compute the geometric series sum: S_i = 1 + p_i^k + p_i^{2k} + ... + p_i^{m_i k}",
+    "Multiply all S_i together to get \\sigma_k(n)",
+    "Return the product as the result"
+  ],
+  "constraints": [
+    "n must be a positive integer <= 1000",
+    "k must be an integer between 0 and 4 inclusive",
+    "The result must be an exact Python integer"
+  ],
+  "edge_cases": [
+    "n=1: \\sigma_k(1) = 1 for any k",
+    "k=0: \\sigma_0(n) = number of divisors of n",
+    "k= 4: \\sigma_4(n) = sum of fourth powers of divisors",
+    "n=prime: \\sigma_k(p) = 1 + p^k",
+    "n=prime^m: \\sigma_k(p^m) = (p^{(m+1)k} - 1)/(p^k - 1) for p^k != 1"
+  ],
+  "inputs": "n: positive integer <= 1000, k: integer in 0..4",
+  "method_id": "sympy.divisor_sigma",
+  "output": "exact Python int representing \\sigma_k(n)",
+  "purpose": "Calculate the divisor function \\sigma_k(n) for positive integer n, which is the sum of k-th powers of all positive divisors of n.",
+  "signature": "solve(n, k=1)"
+}

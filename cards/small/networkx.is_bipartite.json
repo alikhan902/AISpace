@@ -1,0 +1,30 @@
+{
+  "algorithm": [
+    "Initialize a color array to track the bipartition of each vertex.",
+    "Perform a BFS or DFS traversal of the graph, assigning colors to vertices.",
+    "Check if any vertex has an adjacent vertex with the same color.",
+    "If no such pair exists, the graph is bipartite."
+  ],
+  "constraints": [
+    "Edges must be distinct and valid (0 <= u < v < n).",
+    "Vertices are 0 to n-1.",
+    "The graph is simple and undirected.",
+    "Isolated vertices are allowed and considered bipartite.",
+    "The function returns a boolean value for predicates."
+  ],
+  "edge_cases": [
+    "n = 1 (single vertex, trivially bipartite)",
+    "n = 2 (two vertices with no edge: bipartite)",
+    "n = 3 (three vertices with no edges: bipartite)",
+    "n = 3 (three vertices with one edge: bipartite)",
+    "n = 3 (three vertices with two edges: bipartite)",
+    "n = 4 (a cycle of length 3: bipartite)",
+    "n = 4 (a cycle of length 4: bipartite)",
+    "n = 4 (a cycle of length 5: bipartite)"
+  ],
+  "inputs": "n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.",
+  "method_id": "networkx.is_bipartite",
+  "output": "Returns True if the graph is bipartite, False otherwise.",
+  "purpose": "Determines if a given graph is bipartite.",
+  "signature": "solve(n, edges)"
+}

@@ -1,0 +1,25 @@
+{
+  "algorithm": [
+    "Compute the prime factorization of n",
+    "For each prime factor p_i^m_i, compute the geometric series 1 + p_i + p_i^2 + ... + p_i^{m_i*k}",
+    "Multiply the results of the geometric series for all prime factors",
+    "Return the product as the result"
+  ],
+  "constraints": [
+    "n must be a positive integer <= 1000",
+    "k must be an integer in the range 0..4",
+    "If k = 0, σ_0(n) is the number of positive divisors of n",
+    "If k > 0, σ_k(n) is the sum of the k-th powers of the divisors of n"
+  ],
+  "edge_cases": [
+    "n = 1, k = 0: σ_0(1) = 1",
+    "n = 1, k = 4: σ_4(1) = 1",
+    "k = 0: σ_0(n) is the number of positive divisors of n",
+    "k = 4: σ_4(n) is the sum of the fourth powers of the divisors of n"
+  ],
+  "inputs": "n is a positive integer <= 1000, k is an integer in 0..4",
+  "method_id": "sympy.divisor_sigma",
+  "output": "An exact Python int",
+  "purpose": "Calculate the divisor function σ_k(n) for a positive integer n",
+  "signature": "solve(n, k=1)"
+}

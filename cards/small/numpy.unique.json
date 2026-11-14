@@ -1,0 +1,21 @@
+{
+  "algorithm": [
+    "Sort the input array in ascending order.",
+    "Remove duplicate elements while preserving the order of their first occurrence.",
+    "Return the resulting sorted unique elements."
+  ],
+  "constraints": [
+    "All intermediate values fit signed int64.",
+    "Use default unique behavior: sorted distinct values only, no indices or counts."
+  ],
+  "edge_cases": [
+    "Input is empty list.",
+    "Input contains only one element.",
+    "Input contains all elements the same."
+  ],
+  "inputs": "a is a one-dimensional list of integers, possibly empty.",
+  "method_id": "solve",
+  "output": "A list of sorted distinct integers, or a list of sorted distinct integers if the input is empty.",
+  "purpose": "Return the sorted unique elements of an array.",
+  "signature": "solve(a)"
+}

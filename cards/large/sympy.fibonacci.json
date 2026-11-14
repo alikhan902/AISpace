@@ -1,0 +1,27 @@
+{
+  "algorithm": [
+    "For Fibonacci numbers: use iterative computation starting from F_0=0, F_1=1 to compute F_n for n in 0..100",
+    "For Fibonacci polynomials: use recurrence F_1(x)=1, F_2(x)=x, F_n(x)=x*F_{n-1}(x)+F_{n-2}(x) for n>2 to compute F_n(x)"
+  ],
+  "constraints": [
+    "n must be an integer between 0 and 100 inclusive for Fibonacci numbers",
+    "For Fibonacci polynomials, n must be a non-negative integer and x must be a symbolic variable",
+    "The output for Fibonacci numbers must be an exact integer with arbitrary precision",
+    "The output for Fibonacci polynomials must be a polynomial with integer coefficients"
+  ],
+  "edge_cases": [
+    "n=0 returns 0",
+    "n=1 returns 1",
+    "n=2 returns 1",
+    "n=100 returns 354224848179261915075 (Fibonacci number)",
+    "Fibonacci polynomial F_1(x) = 1",
+    "Fibonacci polynomial F_2(x) = x",
+    "Fibonacci polynomial F_3(x) = x^2 + x",
+    "Fibonacci polynomial F_4(x) = x^3 + 2x^2 + x"
+  ],
+  "inputs": "n: integer in 0..100 (for Fibonacci numbers); n: integer >= 0 (for Fibonacci polynomials) and x: symbolic variable (for Fibonacci polynomials)",
+  "method_id": "sympy.fibonacci",
+  "output": "For Fibonacci numbers: exact integer F_n (F_0=0, F_1=1, F_n = F_{n-1}+F_{n-2}); For Fibonacci polynomials: polynomial F_n(x) with coefficients in integers",
+  "purpose": "Compute the n-th Fibonacci number or Fibonacci polynomial in x, returning an exact integer or polynomial with arbitrary precision",
+  "signature": "solve(n)"
+}

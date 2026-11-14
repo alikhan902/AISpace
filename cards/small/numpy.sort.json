@@ -1,0 +1,25 @@
+{
+  "algorithm": [
+    "Timsort (default, for integer data types)",
+    "Quicksort (fallback if Timsort is not available)",
+    "Merge sort (for stable sorting)",
+    "Heap sort (for unstable sorting)"
+  ],
+  "constraints": [
+    "All intermediate values fit signed int64",
+    "Return ascending sorted values",
+    "No in-place modification required",
+    "No NumPy objects returned"
+  ],
+  "edge_cases": [
+    "Empty input array",
+    "Input array with all elements the same",
+    "Input array with mixed values and NaNs",
+    "Input array with non-integer elements"
+  ],
+  "inputs": "a is a one-dimensional list of integers, possibly empty.",
+  "method_id": "sort",
+  "output": "A sorted list of integers, in ascending order, with the same type and shape as `a`.",
+  "purpose": "Return a sorted copy of an array.",
+  "signature": "solve(a)"
+}

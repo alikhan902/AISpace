@@ -1,0 +1,1080 @@
+[
+  {
+    "algorithm": [
+      "Perform a depth-first search (DFS) to identify articulation points.",
+      "Track the discovery time of each node and the lowest discovery time of its children.",
+      "A node is an articulation point if it has at least one child in the DFS tree with a lowest discovery time equal to or greater than the discovery time of the node."
+    ],
+    "constraints": [
+      "The graph is undirected and simple.",
+      "Vertices are numbered from 0 to n-1.",
+      "Edges are distinct and do not form cycles.",
+      "The graph is connected.",
+      "The function raises NetworkXNotImplemented if the graph is not undirected."
+    ],
+    "edge_cases": [
+      "When the graph has no edges (n=1), the single node is an articulation point.",
+      "When the graph is a single edge (n=2), the two nodes are not articulation points.",
+      "When the graph is a single node (n=1), it is an articulation point."
+    ],
+    "inputs": "n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.",
+    "method_id": "networkx.articulation_points",
+    "output": "An ascending list of articulation vertices (nodes) in the graph.",
+    "purpose": "Yield the articulation points (cut vertices) of a graph.",
+    "signature": "solve(n, edges)"
+  },
+  {
+    "algorithm": [
+      "Initialize an empty list to store bridge pairs.",
+      "Iterate through each edge in the graph.",
+      "For each edge, check if it is a bridge by determining if its removal increases the number of connected components.",
+      "If the edge is a bridge, add it to the list.",
+      "Return the list of bridges, sorted lexicographically."
+    ],
+    "constraints": [
+      "Edges must be distinct and satisfy 0 <= u < v < n.",
+      "The graph must be simple (no multi-edges).",
+      "The graph must be undirected.",
+      "The graph must be connected.",
+      "If `root` is specified, only bridges in the connected component containing `root` are returned."
+    ],
+    "edge_cases": [
+      "n = 1: No edges, no bridges.",
+      "n = 2: One edge, which is a bridge.",
+      "Edges forming a cycle: No bridges.",
+      "Edges forming a tree: All edges are bridges."
+    ],
+    "inputs": "n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.",
+    "method_id": "networkx.bridges",
+    "output": "A sorted list of [u, v] bridge pairs, where u < v, lexicographically sorted.",
+    "purpose": "Generate all bridges in a graph.",
+    "signature": "solve(n, edges)"
+  },
+  {
+    "algorithm": [
+      "Perform a BFS traversal of the graph starting from each unvisited node.",
+      "Track visited nodes and build components as we traverse the graph.",
+      "Ensure components are internally sorted and the outer list is lexicographically sorted."
+    ],
+    "constraints": [
+      "Edges are distinct and represent a simple undirected graph.",
+      "Vertices are numbered from 0 to n-1.",
+      "The graph is undirected and unweighted.",
+      "Components are returned as internally sorted lists, with the outer list lexicographically sorted."
+    ],
+    "edge_cases": [
+      "When the graph has a single node with no edges (connected component of size 1).",
+      "When the graph has no edges (all nodes are isolated).",
+      "When the graph is disconnected (multiple components)."
+    ],
+    "inputs": "n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.",
+    "method_id": "networkx.connected_components",
+    "output": "A list of sets, where each set represents a connected component of the graph.",
+    "purpose": "Generate connected components of an undirected graph.",
+    "signature": "solve(n, edges)"
+  },
+  {
+    "algorithm": [
+      "Compute the degree of each node.",
+      "Identify all k-core subgraphs for k = 1, 2, ..., n.",
+      "For each node, determine the largest k for which the node is in a k-core.",
+      "Return the core number dictionary."
+    ],
+    "constraints": [
+      "The graph must be simple and undirected.",
+      "All edges must be distinct and satisfy 0 <= u < v < n.",
+      "The graph must be connected or contain isolated vertices.",
+      "The function raises NetworkXNotImplemented if the graph is a multigraph or contains self loops."
+    ],
+    "edge_cases": [
+      "When n = 1, the graph is a single isolated vertex.",
+      "When the graph is empty (no edges), all nodes have core number 0.",
+      "When a node has degree 0, its core number is 0."
+    ],
+    "inputs": "n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.",
+    "method_id": "networkx.core_number",
+    "output": "A dictionary mapping every string vertex key to its integer core number, including isolated vertices.",
+    "purpose": "Return the core number for each node in a given graph.",
+    "signature": "solve(n, edges)"
+  },
+  {
+    "algorithm": [
+      "Compute the eccentricity of each vertex.",
+      "Find the maximum eccentricity (diameter).",
+      "Return the maximum eccentricity as the diameter."
+    ],
+    "constraints": [
+      "Vertices are numbered 0 to n-1.",
+      "Edges are distinct and contain only distinct pairs.",
+      "Graph is simple and undirected.",
+      "Graph is unweighted.",
+      "If graph is disconnected, raise ValueError."
+    ],
+    "edge_cases": [
+      "A singleton graph (n=1) has diameter 0.",
+      "A disconnected graph raises ValueError."
+    ],
+    "inputs": "n is an integer >= 1, edges is a list of distinct [u, v] pairs with 0 <= u < v < n.",
+    "method_id": "networkx.diameter",
+    "output": "A dictionary of every vertex's eccentricity, with keys as strings and values as integers, or an integer if the graph is disconnected.",
+    "purpose": "Compute the diameter of a simple undirected unweighted graph.",
+    "signature": "solve(n, edges)"
+  },
+  {
+    "algorithm": [
+      "Compute all pairs shortest paths using BFS for each node.",
+      "For each node, find the maximum distance to any other node.",
+      "Return the dictionary of eccentricities."
+    ],
+    "constraints": [
+      "Vertices are 0 to n-1.",
+      "Edges are distinct and valid.",
+      "Graph is simple and undirected.",
+      "Weights are positive and can be floating point.",
+      "Return a dictionary of eccentricities or a single integer for singleton graphs."
+    ],
+    "edge_cases": [
+      "A singleton graph (n=1) has eccentricity 0.",
+      "A disconnected graph raises ValueError."
+    ],
+    "inputs": "n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.",
+    "method_id": "networkx.eccentricity",
+    "output": "A dictionary of eccentricity values keyed by node. If the graph is disconnected, raise ValueError.",
+    "purpose": "Compute the eccentricity of each node in a graph.",
+    "signature": "solve(n, edges)"
+  },
+  {
+    "algorithm": [
+      "Initialize a color array to track the bipartition of each vertex.",
+      "Perform a BFS or DFS traversal of the graph, assigning colors to vertices.",
+      "Check if any vertex has an adjacent vertex with the same color.",
+      "If no such pair exists, the graph is bipartite."
+    ],
+    "constraints": [
+      "Edges must be distinct and valid (0 <= u < v < n).",
+      "Vertices are 0 to n-1.",
+      "The graph is simple and undirected.",
+      "Isolated vertices are allowed and considered bipartite.",
+      "The function returns a boolean value for predicates."
+    ],
+    "edge_cases": [
+      "n = 1 (single vertex, trivially bipartite)",
+      "n = 2 (two vertices with no edge: bipartite)",
+      "n = 3 (three vertices with no edges: bipartite)",
+      "n = 3 (three vertices with one edge: bipartite)",
+      "n = 3 (three vertices with two edges: bipartite)",
+      "n = 4 (a cycle of length 3: bipartite)",
+      "n = 4 (a cycle of length 4: bipartite)",
+      "n = 4 (a cycle of length 5: bipartite)"
+    ],
+    "inputs": "n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.",
+    "method_id": "networkx.is_bipartite",
+    "output": "Returns True if the graph is bipartite, False otherwise.",
+    "purpose": "Determines if a given graph is bipartite.",
+    "signature": "solve(n, edges)"
+  },
+  {
+    "algorithm": [
+      "Perform a BFS traversal starting from an arbitrary node.",
+      "Track visited nodes during traversal.",
+      "If all nodes are visited, the graph is connected; otherwise, it is not."
+    ],
+    "constraints": [
+      "Edges are distinct and represent simple undirected unweighted graphs.",
+      "Vertices are numbered from 0 to n-1.",
+      "The graph is undirected and unweighted.",
+      "The function raises NetworkXNotImplemented for directed graphs."
+    ],
+    "edge_cases": [
+      "Graph with a single node (connected)",
+      "Graph with no edges (connected)",
+      "Graph with disconnected components (not connected)",
+      "Graph with multiple components (not connected)"
+    ],
+    "inputs": "n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.",
+    "method_id": "networkx.is_connected",
+    "output": "int for number_connected_components and bool for predicates.",
+    "purpose": "Determines if a given undirected graph is connected.",
+    "signature": "solve(n, edges)"
+  },
+  {
+    "algorithm": [
+      "Check if the graph has exactly n-1 edges.",
+      "Verify that the graph is connected.",
+      "Ensure there are no cycles in the graph."
+    ],
+    "constraints": [
+      "Edges must be distinct and valid (0 <= u < v < n).",
+      "The graph must be simple (no loops, no multiple edges).",
+      "The graph must be connected.",
+      "The graph must have exactly n-1 edges."
+    ],
+    "edge_cases": [
+      "n = 1 (single vertex, no edges): returns True",
+      "n = 2 (two vertices, one edge): returns True",
+      "n = 3 (three vertices, three edges): returns True",
+      "n = 3 (three vertices, four edges): returns False"
+    ],
+    "inputs": "n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.",
+    "method_id": "networkx.is_tree",
+    "output": "int for number_connected_components and bool for predicates.",
+    "purpose": "Determines if a given graph is a tree.",
+    "signature": "solve(n, edges)"
+  },
+  {
+    "algorithm": [
+      "Perform a BFS starting from the specified node.",
+      "Traverse the graph, visiting nodes and their neighbors.",
+      "Collect all nodes visited during the traversal.",
+      "Return the collected nodes as a set."
+    ],
+    "constraints": [
+      "n is an integer >= 1",
+      "edges is a list of distinct [u, v] pairs with 0 <= u < v < n",
+      "node is a valid vertex label in the graph",
+      "The graph is undirected and unweighted",
+      "The function raises NetworkXNotImplemented if the graph is directed"
+    ],
+    "edge_cases": [
+      "When the graph is a single node with no edges (returns {n})",
+      "When the graph is disconnected (returns the component containing the specified node)",
+      "When the specified node is isolated (returns {n})",
+      "When the graph has no edges (returns {n})"
+    ],
+    "inputs": "n: integer >= 1, edges: list of distinct [u, v] pairs, node: valid vertex label in the graph",
+    "method_id": "networkx.node_connected_component",
+    "output": "A set of strings representing the nodes in the component containing the specified node.",
+    "purpose": "Return the set of nodes in the component of the graph containing the specified node.",
+    "signature": "solve(n, edges, node)"
+  },
+  {
+    "algorithm": [
+      "Initialize a visited set and a queue.",
+      "For each unvisited node, perform a BFS/DFS to mark all reachable nodes.",
+      "Each BFS/DFS traversal corresponds to one connected component.",
+      "Count the number of such traversals."
+    ],
+    "constraints": [
+      "Edges are distinct and 0 <= u < v < n.",
+      "Graph is undirected and simple.",
+      "No cycles are allowed in the graph.",
+      "Graph is connected if all nodes are reachable from any starting node."
+    ],
+    "edge_cases": [
+      "n = 1 (single node, no edges): returns 1",
+      "n = 2, edges = []: returns 2",
+      "n = 2, edges = [(0, 1)]: returns 1",
+      "n = 3, edges = [(0, 1), (0, 2)]: returns 1",
+      "n = 3, edges = [(0, 1), (2, 3)]: returns 2"
+    ],
+    "inputs": "n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.",
+    "method_id": "networkx.number_connected_components",
+    "output": "int",
+    "purpose": "Returns the number of connected components in an undirected graph.",
+    "signature": "solve(n, edges)"
+  },
+  {
+    "algorithm": [
+      "Compute the eccentricity of each vertex.",
+      "Find the minimum eccentricity among all vertices.",
+      "Return the minimum eccentricity as the radius."
+    ],
+    "constraints": [
+      "Vertices are numbered 0 to n-1.",
+      "Edges are distinct and contain only distinct pairs.",
+      "Graph is simple and undirected.",
+      "Return a dict of eccentricities (string keys) or an int.",
+      "Raise ValueError for disconnected graphs."
+    ],
+    "edge_cases": [
+      "A singleton graph (n=1) has radius 0.",
+      "A disconnected graph raises ValueError."
+    ],
+    "inputs": "n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.",
+    "method_id": "radius",
+    "output": "A single integer representing the radius of the graph.",
+    "purpose": "Compute the radius of a graph.",
+    "signature": "solve(n, edges)"
+  },
+  {
+    "algorithm": [
+      "Use Dijkstra's algorithm if method is 'dijkstra'",
+      "Use Bellman-Ford algorithm if method is 'bellman-ford'",
+      "Default to Dijkstra's algorithm if method is not specified"
+    ],
+    "constraints": [
+      "Edges are distinct and form a simple undirected unweighted graph",
+      "Vertices are numbered 0 to n-1",
+      "source and target are valid vertices",
+      "If method is not specified, default to Dijkstra's algorithm",
+      "If weight is not specified, assume weight is 1"
+    ],
+    "edge_cases": [
+      "source == target returns 0",
+      "No path exists between source and target, raises ValueError",
+      "Graph is disconnected, returns None or raises ValueError"
+    ],
+    "inputs": "n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n; source and target are valid vertices.",
+    "method_id": "networkx.shortest_path_length",
+    "output": "Integer shortest-path length; raises ValueError if no path exists.",
+    "purpose": "Compute the shortest path length in a graph with specified source and target nodes.",
+    "signature": "solve(n, edges, source, target)"
+  },
+  {
+    "algorithm": [
+      "Use Dijkstra's algorithm for unweighted graphs",
+      "Initialize distances to infinity",
+      "Set distance to source as 0",
+      "Relax edges in order of increasing distance",
+      "Stop when all reachable nodes are processed"
+    ],
+    "constraints": [
+      "Vertices are 0 to n-1",
+      "Edges are distinct and 0 <= u < v < n",
+      "Source is a valid vertex",
+      "No cutoff specified, so all reachable nodes are included"
+    ],
+    "edge_cases": [
+      "Source is the only node in the graph",
+      "No edges exist, so all nodes are isolated",
+      "Graph is disconnected, some nodes are unreachable"
+    ],
+    "inputs": "n: integer >= 1, edges: list of distinct [u, v] pairs with 0 <= u < v < n, source: valid vertex",
+    "method_id": "networkx.single_source_shortest_path_length",
+    "output": "Dict with string vertex keys and integer shortest-path lengths for reachable nodes, including source:0",
+    "purpose": "Compute the shortest path lengths from `source` to all reachable nodes in the graph `G`.",
+    "signature": "solve(n, edges, source)"
+  },
+  {
+    "algorithm": [
+      "Initialize a dictionary to store triangle counts for each vertex.",
+      "For each vertex, iterate through all possible pairs of vertices that form edges with it.",
+      "For each valid edge pair, increment the triangle count for the vertex that is the common endpoint of the edge pair.",
+      "Return the dictionary of triangle counts."
+    ],
+    "constraints": [
+      "Vertices are numbered 0 to n-1.",
+      "Edges are distinct and satisfy 0 <= u < v < n.",
+      "Self loops are ignored.",
+      "Only isolated vertices are counted as triangles."
+    ],
+    "edge_cases": [
+      "n = 1: Only one vertex, no triangles.",
+      "n = 2: Two vertices with no edge, no triangles.",
+      "n = 3: Three vertices with all edges, one triangle.",
+      "n = 4: Four vertices with all edges, six triangles."
+    ],
+    "inputs": "n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.",
+    "method_id": "networkx.triangles",
+    "output": "A dictionary mapping every string vertex key to its integer triangle count.",
+    "purpose": "Compute the number of triangles in a graph.",
+    "signature": "solve(n, edges)"
+  },
+  {
+    "algorithm": [
+      "Determine the maximum value in the input list.",
+      "Create an output list with length equal to max_value + 1.",
+      "Initialize all elements of the output list to 0.",
+      "Iterate through each element in the input list and increment the corresponding index in the output list."
+    ],
+    "constraints": [
+      "Input list must be of nonnegative integers.",
+      "minlength must be a nonnegative integer.",
+      "If minlength is specified, it must be less than or equal to the maximum value in the input list.",
+      "If minlength is not specified, the output list will have length equal to the maximum value in the input list plus one."
+    ],
+    "edge_cases": [
+      "Empty input list: returns an empty list.",
+      "Input list contains negative values: raises ValueError.",
+      "minlength is negative: raises ValueError.",
+      "Input list is not 1-dimensional: raises ValueError."
+    ],
+    "inputs": "a is a list of nonnegative integers; minlength is a nonnegative integer. Empty input is allowed.",
+    "method_id": "numpy.bincount",
+    "output": "A list of integers where each index corresponds to the count of that value in the input list. The length of the output is equal to the maximum value in the input list plus one.",
+    "purpose": "Count the number of occurrences of each value in a list of nonnegative integers using NumPy's default unweighted behavior.",
+    "signature": "solve(a, minlength=0)"
+  },
+  {
+    "algorithm": [
+      "Iterate through each element of the array.",
+      "Check if the element is a non-zero value (i.e., non-zero number or non-empty string).",
+      "Increment a counter for each non-zero value found."
+    ],
+    "constraints": [
+      "All intermediate values fit signed int64.",
+      "Return a single Python int counting nonzero values."
+    ],
+    "edge_cases": [
+      "Empty input array",
+      "All elements are zero",
+      "Mixed zero and non-zero elements",
+      "Input is a single element (e.g., 0 or non-zero)"
+    ],
+    "inputs": "a is a one-dimensional list of integers, possibly empty.",
+    "method_id": "count_nonzero",
+    "output": "A single Python integer counting the number of non-zero values in the array.",
+    "purpose": "Counts the number of non-zero values in the array `a`.",
+    "signature": "solve(a)"
+  },
+  {
+    "algorithm": [
+      "Compute the cumulative product of elements along the specified axis.",
+      "Initialize the result array with the first element of `a`.",
+      "Iterate through the elements of `a` and multiply the current result by the next element.",
+      "Handle overflow by using integer arithmetic (modular arithmetic)."
+    ],
+    "constraints": [
+      "All intermediate values fit signed int64.",
+      "Use NumPy's default operation on the whole 1-D list, with dtype=int64.",
+      "No NumPy objects are returned; only Python int or list[int] is returned.",
+      "The result is returned as a new array unless `out` is specified."
+    ],
+    "edge_cases": [
+      "Empty input array: returns an empty list.",
+      "Input array with one element: returns a list with that element.",
+      "Specifying an axis that is out of bounds: returns the array as is.",
+      "Specifying a dtype that is not compatible with the input array: returns the array as is."
+    ],
+    "inputs": "a is a one-dimensional list of integers, possibly empty.",
+    "method_id": "cumprod",
+    "output": "A new array holding the result, or a reference to `out` if specified. The result is a list of integers.",
+    "purpose": "Compute the cumulative product of elements along a given axis.",
+    "signature": "solve(a)"
+  },
+  {
+    "algorithm": [
+      "Compute the cumulative sum along the specified axis.",
+      "Use NumPy's default operation on the entire 1-D list, with dtype=int64.",
+      "Return the result as a new array unless `out` is specified."
+    ],
+    "constraints": [
+      "All intermediate values fit signed int64.",
+      "Use NumPy's default operation on the whole 1-D list.",
+      "Return the result as a new array unless `out` is specified."
+    ],
+    "edge_cases": [
+      "Empty input list",
+      "Input list with all elements zero",
+      "Input list with mixed positive and negative values",
+      "Input list with large values that may cause overflow"
+    ],
+    "inputs": "a is a one-dimensional list of integers, possibly empty.",
+    "method_id": "cumsum",
+    "output": "A new array holding the result, with the same size as `a`, and the same shape as `a` if `axis` is not None.",
+    "purpose": "Compute the cumulative sum of elements along a given axis.",
+    "signature": "solve(a)"
+  },
+  {
+    "algorithm": [
+      "If n == 0, return a copy of `a`.",
+      "If n > len(a), return an empty list.",
+      "Otherwise, compute the n-th discrete forward difference along the specified axis."
+    ],
+    "constraints": [
+      "n must be an integer from 0 to 5.",
+      "If n > len(a), the result is empty unless n = 0.",
+      "If n == 0, return a copy of `a`."
+    ],
+    "edge_cases": [
+      "n = 0: return a copy of `a`.",
+      "n >= len(a): return an empty list unless n = 0.",
+      "a is empty: return an empty list."
+    ],
+    "inputs": "a is a one-dimensional list of integers, possibly empty. n is an integer from 0 to 5.",
+    "method_id": "numpy.diff",
+    "output": "A list of integers, possibly empty, with the same shape as `a` except along the specified axis, where the dimension is reduced by `n`. The type is the same as the type of the difference between any two elements of `a`.",
+    "purpose": "Compute the n-th discrete forward difference of a one-dimensional array.",
+    "signature": "solve(a, n=1)"
+  },
+  {
+    "algorithm": [
+      "Compute the floor division of the inputs using the `//` operator in Python.",
+      "Ensure that the inputs are broadcasted to a common shape if necessary.",
+      "Return the result as a list if the inputs are not scalars, otherwise as a scalar."
+    ],
+    "constraints": [
+      "All inputs must be integers or 1-D lists of integers.",
+      "No other broadcasting is required beyond the specified cases.",
+      "The result must fit within signed int64.",
+      "Divisors must be nonzero."
+    ],
+    "edge_cases": [
+      "When the divisor is zero, an error is raised.",
+      "When the inputs are empty lists, the output is also an empty list.",
+      "When the inputs are of different shapes, they must be broadcasted to a common shape.",
+      "When the inputs are of different types (e.g., scalar and list), the result is a list."
+    ],
+    "inputs": "x and y are integers or 1-D lists of integers. Support scalar/scalar, scalar/list, list/scalar and lists of the same length (including empty). Scalar/scalar returns int, all other inputs return a list. No other broadcasting is required. Values and results fit signed int64. Divisors are nonzero.",
+    "method_id": "numpy.floor_divide",
+    "output": "y: ndarray, which is a scalar if both x and y are scalars, otherwise a list of the same length as x.",
+    "purpose": "Compute the floor division of two inputs, returning the largest integer less than or equal to the division result.",
+    "signature": "solve(x, y)"
+  },
+  {
+    "algorithm": [
+      "Compute the absolute values of the inputs.",
+      "Use the Euclidean algorithm to find the GCD.",
+      "Return the result as a scalar if both inputs are scalars, otherwise return as a list."
+    ],
+    "constraints": [
+      "Inputs must be integers or 1-D lists of integers.",
+      "Supports broadcasting for scalar/scalar, scalar/list, list/scalar, and lists of the same length.",
+      "No other broadcasting is required.",
+      "Values and results fit signed int64."
+    ],
+    "edge_cases": [
+      "Empty lists (e.g., np.gcd([], [])) return 0.",
+      "Negative numbers are handled by taking absolute values.",
+      "Scalar inputs return integers, list inputs return lists."
+    ],
+    "inputs": "x and y are integers or 1-D lists of integers. Support scalar/scalar, scalar/list, list/scalar and lists of the same length (including empty). Scalar/scalar returns int, all other inputs return a list. No other broadcasting is required. Values and results fit signed int64.",
+    "method_id": "numpy.gcd",
+    "output": "A scalar if both x and y are scalars, otherwise a list. The output is the GCD of the absolute values of the inputs.",
+    "purpose": "Compute the greatest common divisor (GCD) of two inputs.",
+    "signature": "solve(x, y)"
+  },
+  {
+    "algorithm": [
+      "Compute the absolute values of the inputs.",
+      "Compute the greatest common divisor (GCD) of the absolute values using the Euclidean algorithm.",
+      "Use the formula: LCM(a, b) = (a * b) // GCD(a, b)."
+    ],
+    "constraints": [
+      "Inputs must be integers or 1-D lists of integers.",
+      "Supports scalar/scalar, scalar/list, list/scalar, and lists of the same length.",
+      "No other broadcasting is required.",
+      "Values and results fit signed int64."
+    ],
+    "edge_cases": [
+      "When both inputs are scalars, the output is an integer.",
+      "When one input is a list and the other is a scalar, the output is a list.",
+      "When inputs are empty lists, the output is an empty list.",
+      "When inputs are of different lengths, they are broadcasted to a common shape.",
+      "When inputs are not integers or lists, the function may raise an error."
+    ],
+    "inputs": "x and y are integers or 1-D lists of integers. Support scalar/scalar, scalar/list, list/scalar and lists of the same length (including empty). Scalar/scalar returns int, all other inputs return a list. No other broadcasting is required. Values and results fit signed int64.",
+    "method_id": "numpy.lcm",
+    "output": "A list or scalar, depending on input type. The output is the LCM of the absolute values of the inputs.",
+    "purpose": "Compute the lowest common multiple (LCM) of two inputs.",
+    "signature": "solve(x, y)"
+  },
+  {
+    "algorithm": [
+      "Broadcast x and y to the same shape.",
+      "For each element in the resulting shape, compute x[i] ** y[i].",
+      "Handle edge cases such as 0**0, negative exponents, and non-integer exponents."
+    ],
+    "constraints": [
+      "x and y must be broadcastable to the same shape.",
+      "Exponents must be integers in 0..8.",
+      "Negative values raised to non-integer exponents result in nan.",
+      "Values and results fit signed int64."
+    ],
+    "edge_cases": [
+      "0**0 is treated as 1.",
+      "Negative values raised to non-integer exponents result in nan.",
+      "Exponents must be integers in 0..8."
+    ],
+    "inputs": "x and y are integers or 1-D lists of integers. Support scalar/scalar, scalar/list, list/scalar and lists of the same length (including empty). Scalar/scalar returns int, all other inputs return a list. No other broadcasting is required. Values and results fit signed int64. Exponents are integers in 0..8; define 0**0 as 1.",
+    "method_id": "numpy.power",
+    "output": "y: ndarray. This is a scalar if both x and y are scalars.",
+    "purpose": "Compute the element-wise power of arrays.",
+    "signature": "solve(x, y)"
+  },
+  {
+    "algorithm": [
+      "Compute the product of all elements in the input list.",
+      "If an axis is specified, compute the product along that axis.",
+      "Handle empty input by returning 1.",
+      "Support for modular arithmetic and overflow handling."
+    ],
+    "constraints": [
+      "All intermediate values fit signed int64.",
+      "Use NumPy's default operation on the whole 1-D list.",
+      "Return a reference to `out` if specified.",
+      "Support for modular arithmetic and overflow handling."
+    ],
+    "edge_cases": [
+      "Empty input returns 1.",
+      "Product of an empty array is 1.0.",
+      "Product of a single element returns that element.",
+      "Product of a list with all elements zero returns 0."
+    ],
+    "inputs": "a is a one-dimensional list of integers, possibly empty.",
+    "method_id": "numpy.prod",
+    "output": "A Python int or list[int], as appropriate; no NumPy objects. The output is of type int64.",
+    "purpose": "Compute the product of elements in a one-dimensional list along a specified axis.",
+    "signature": "solve(a)"
+  },
+  {
+    "algorithm": [
+      "Compute the element-wise remainder using the formula: y[i] = x1[i] % x2[i]",
+      "Handle broadcasting according to the rules specified in the documentation",
+      "Ensure that the result fits within the signed int64 range",
+      "Return 0 when x2 is 0 and both x1 and x2 are integers"
+    ],
+    "constraints": [
+      "x and y must be integers or 1-D lists of integers.",
+      "Support scalar/scalar, scalar/list, list/scalar, and lists of the same length.",
+      "Scalar/scalar returns int, all other inputs return a list.",
+      "No other broadcasting is required.",
+      "Values and results fit signed int64.",
+      "Divisors are nonzero."
+    ],
+    "edge_cases": [
+      "When x1 and x2 are scalars, the result is a single integer.",
+      "When x1 is a scalar and x2 is a list, the result is a list of length 1.",
+      "When x2 is a scalar and x1 is a list, the result is a list of length equal to x1.",
+      "When x1 and x2 are lists of the same length, the result is a list of the same length.",
+      "When x2 is 0, the result is 0.",
+      "When x1 and x2 are of different shapes, they must be broadcastable to a common shape."
+    ],
+    "inputs": "x and y are integers or 1-D lists of integers. Support scalar/scalar, scalar/list, list/scalar and lists of the same length (including empty). Scalar/scalar returns int, all other inputs return a list. No other broadcasting is required. Values and results fit signed int64. Divisors are nonzero.",
+    "method_id": "remainder",
+    "output": "y: ndarray, the element-wise remainder of division. If both x and y are scalars, it is a scalar; otherwise, it is a list.",
+    "purpose": "Compute the element-wise remainder of division.",
+    "signature": "solve(x, y)"
+  },
+  {
+    "algorithm": [
+      "Use binary search to find the insertion points in a sorted array `a`.",
+      "For 'left' side, find the first suitable index where `v` can be inserted while maintaining order.",
+      "For 'right' side, find the last suitable index where `v` can be inserted while maintaining order."
+    ],
+    "constraints": [
+      "If `sorter` is provided, the returned indices refer to the sorted array `a` and not the original array `a`.",
+      "If `side` is 'left', return the first suitable index; if 'right', return the last suitable index.",
+      "If no suitable index is found, return 0 or N (length of `a`), depending on the side.",
+      "If `v` is a list, return a list of indices with the same shape as `v`."
+    ],
+    "edge_cases": [
+      "When `v` is empty, return an empty list.",
+      "When `a` is empty, return 0 or N (length of `a`), depending on the side.",
+      "When `v` is a scalar and `a` is empty, return 0.",
+      "When `v` contains `nan` values, handle them according to the NumPy implementation."
+    ],
+    "inputs": "a is a nondecreasing list of integers, possibly empty; v is an integer or list of integers; side is 'left' or 'right'.",
+    "method_id": "numpy.searchsorted",
+    "output": "int for scalar v and list[int] for list v.",
+    "purpose": "Find the indices into a sorted array `a` such that, if the corresponding elements in `v` were inserted before the indices, the order of `a` would be preserved.",
+    "signature": "solve(a, v, side='left')"
+  },
+  {
+    "algorithm": [
+      "Timsort (default, for integer data types)",
+      "Quicksort (fallback if Timsort is not available)",
+      "Merge sort (for stable sorting)",
+      "Heap sort (for unstable sorting)"
+    ],
+    "constraints": [
+      "All intermediate values fit signed int64",
+      "Return ascending sorted values",
+      "No in-place modification required",
+      "No NumPy objects returned"
+    ],
+    "edge_cases": [
+      "Empty input array",
+      "Input array with all elements the same",
+      "Input array with mixed values and NaNs",
+      "Input array with non-integer elements"
+    ],
+    "inputs": "a is a one-dimensional list of integers, possibly empty.",
+    "method_id": "sort",
+    "output": "A sorted list of integers, in ascending order, with the same type and shape as `a`.",
+    "purpose": "Return a sorted copy of an array.",
+    "signature": "solve(a)"
+  },
+  {
+    "algorithm": [
+      "Sum all elements of the input list.",
+      "If the list is empty, return 0.",
+      "If the list is not empty, return the sum of all elements."
+    ],
+    "constraints": [
+      "All intermediate values fit signed int64.",
+      "Use NumPy's default operation on the whole 1-D list, with dtype=int64."
+    ],
+    "edge_cases": [
+      "Empty list: return 0.",
+      "List with one element: return that element.",
+      "List with multiple elements: return the sum of all elements."
+    ],
+    "inputs": "a is a one-dimensional list of integers, possibly empty.",
+    "method_id": "numpy.sum",
+    "output": "A Python int or list[int], as appropriate; no NumPy objects.",
+    "purpose": "Compute the sum of elements in a 1-dimensional list.",
+    "signature": "solve(a)"
+  },
+  {
+    "algorithm": [
+      "Sort the input array in ascending order.",
+      "Remove duplicate elements while preserving the order of their first occurrence.",
+      "Return the resulting sorted unique elements."
+    ],
+    "constraints": [
+      "All intermediate values fit signed int64.",
+      "Use default unique behavior: sorted distinct values only, no indices or counts."
+    ],
+    "edge_cases": [
+      "Input is empty list.",
+      "Input contains only one element.",
+      "Input contains all elements the same."
+    ],
+    "inputs": "a is a one-dimensional list of integers, possibly empty.",
+    "method_id": "solve",
+    "output": "A list of sorted distinct integers, or a list of sorted distinct integers if the input is empty.",
+    "purpose": "Return the sorted unique elements of an array.",
+    "signature": "solve(a)"
+  },
+  {
+    "algorithm": [
+      "Compute the binomial coefficient using the formula: \\binom{n}{k} = \\frac{n!}{k!(n-k)!} for nonnegative integers n and k.",
+      "For negative k, return 0.",
+      "For k > n, return 0.",
+      "Use efficient algorithms based on prime factorization for performance."
+    ],
+    "constraints": [
+      "n must be an integer in 0..50",
+      "k must be an integer in -3..55",
+      "If k < 0, return 0",
+      "If k > n, return 0"
+    ],
+    "edge_cases": [
+      "k < 0: return 0",
+      "k > n: return 0",
+      "n = 0: return 1 (by definition)",
+      "k = 0: return 1 (by definition)"
+    ],
+    "inputs": "n is an integer in 0..50; k is an integer in -3..55.",
+    "method_id": "sympy.binomial",
+    "output": "Exact Python int binomial coefficient, including zero when k < 0 or k > n.",
+    "purpose": "Compute the binomial coefficient, returning the exact value including zero for negative k or k > n.",
+    "signature": "solve(n, k)"
+  },
+  {
+    "algorithm": [
+      "Use the formula for Catalan numbers: C_n = (1/(n+1)) * binomial(2n, n)",
+      "Compute the binomial coefficient binomial(2n, n) using combinatorial mathematics",
+      "Divide the result by (n+1) to obtain the Catalan number"
+    ],
+    "constraints": [
+      "n must be an integer in the range 0 to 35 inclusive",
+      "No symbolic computation is allowed; result must be an exact Python integer",
+      "No floating-point approximations are used"
+    ],
+    "edge_cases": [
+      "n = 0: Catalan number is 1",
+      "n = 35: Catalan number is computed with arbitrary precision"
+    ],
+    "inputs": "n is an integer in 0..35",
+    "method_id": "sympy.catalan",
+    "output": "The nth Catalan number as an exact Python integer",
+    "purpose": "Compute the nth Catalan number",
+    "signature": "solve(n)"
+  },
+  {
+    "algorithm": [
+      "Compute all divisors of `n`",
+      "Count the number of divisors",
+      "Return the count"
+    ],
+    "constraints": [
+      "Only positive integers are considered",
+      "Divisors are counted as per the function's parameters (proper, modulus)",
+      "Divisor count is computed efficiently"
+    ],
+    "edge_cases": [
+      "n = 1: returns 1",
+      "n = 0: not applicable (since n is positive)",
+      "n = 5000: returns the correct count of divisors"
+    ],
+    "inputs": "n is a positive integer <= 5000",
+    "method_id": "sympy.divisor_count",
+    "output": "An exact Python int representing the number of divisors of `n`.",
+    "purpose": "Return the number of divisors of `n`.",
+    "signature": "solve(n)"
+  },
+  {
+    "algorithm": [
+      "Compute the prime factorization of n",
+      "For each prime factor p_i^m_i, compute the geometric series 1 + p_i + p_i^2 + ... + p_i^{m_i*k}",
+      "Multiply the results of the geometric series for all prime factors",
+      "Return the product as the result"
+    ],
+    "constraints": [
+      "n must be a positive integer <= 1000",
+      "k must be an integer in the range 0..4",
+      "If k = 0, σ_0(n) is the number of positive divisors of n",
+      "If k > 0, σ_k(n) is the sum of the k-th powers of the divisors of n"
+    ],
+    "edge_cases": [
+      "n = 1, k = 0: σ_0(1) = 1",
+      "n = 1, k = 4: σ_4(1) = 1",
+      "k = 0: σ_0(n) is the number of positive divisors of n",
+      "k = 4: σ_4(n) is the sum of the fourth powers of the divisors of n"
+    ],
+    "inputs": "n is a positive integer <= 1000, k is an integer in 0..4",
+    "method_id": "sympy.divisor_sigma",
+    "output": "An exact Python int",
+    "purpose": "Calculate the divisor function σ_k(n) for a positive integer n",
+    "signature": "solve(n, k=1)"
+  },
+  {
+    "algorithm": [
+      "Generate all integers from 1 to n that divide n without remainder.",
+      "Sort the list in ascending order.",
+      "Return the list as the result."
+    ],
+    "constraints": [
+      "n is a positive integer <= 5000",
+      "Divisors are returned in ascending order",
+      "Generator flag is set to False",
+      "Proper flag is set to False"
+    ],
+    "edge_cases": [
+      "n = 1: return [1]",
+      "n = 2: return [1, 2]",
+      "n = 5000: return all divisors of 5000 in ascending order"
+    ],
+    "inputs": "n is a positive integer <= 5000",
+    "method_id": "sympy.divisors",
+    "output": "An ascending list of all positive divisors of n",
+    "purpose": "Return all divisors of n sorted from 1 to n.",
+    "signature": "solve(n)"
+  },
+  {
+    "algorithm": [
+      "For small n, use a precomputed lookup table for fast computation.",
+      "For larger n, use the Prime-Swing algorithm, which computes n! via prime factorization of 'Swing Numbers'."
+    ],
+    "constraints": [
+      "n must be an integer in the range 0..35",
+      "n = -2 is not allowed",
+      "n = S(1)/2 is not allowed",
+      "n = 2*n is allowed"
+    ],
+    "edge_cases": [
+      "n = 0: returns 1",
+      "n = 35: returns 35!",
+      "n = -2: returns complex infinity",
+      "n = S(1)/2: returns factorial(1/2)"
+    ],
+    "inputs": "n is an integer in 0..35",
+    "method_id": "sympy.factorial",
+    "output": "The exact Python integer result of n!",
+    "purpose": "Compute the factorial of a nonnegative integer `n` using efficient algorithms.",
+    "signature": "solve(n)"
+  },
+  {
+    "algorithm": [
+      "Trial division to find small factors",
+      "Pollard's rho and p-1 algorithms for finding large factors",
+      "Periodic checks for prime or perfect power factors"
+    ],
+    "constraints": [
+      "n is a positive integer <= 5000",
+      "Handles factorization with limit parameter",
+      "Returns {0: 1} for n=0",
+      "Returns empty dict for n=1"
+    ],
+    "edge_cases": [
+      "n=0 returns {0: 1}",
+      "n=1 returns {}",
+      "n < 2 returns empty factorization",
+      "n with large prime factors"
+    ],
+    "inputs": "n is a positive integer <= 5000",
+    "method_id": "factorint",
+    "output": "A plain Python dict with string prime keys and integer multiplicities, or {0: 1} for n=0.",
+    "purpose": "Return a dictionary of prime factors of a positive integer n, with multiplicities.",
+    "signature": "solve(n)"
+  },
+  {
+    "algorithm": [
+      "If n == 0, return 0",
+      "If n == 1, return 1",
+      "If n > 1, compute using the recurrence relation F_n = F_{n-1} + F_{n-2}",
+      "For Fibonacci polynomials, compute using F_n(x) = x*F_{n-1}(x) + F_{n-2}(x)"
+    ],
+    "constraints": [
+      "n must be an integer in the range 0..100",
+      "No symbolic results are returned",
+      "Fibonacci polynomials are computed with x = 1"
+    ],
+    "edge_cases": [
+      "n = 0",
+      "n = 1",
+      "n = 100"
+    ],
+    "inputs": "n is an integer in 0..100",
+    "method_id": "sympy.fibonacci",
+    "output": "The nth Fibonacci number or Fibonacci polynomial as an integer",
+    "purpose": "Compute the nth Fibonacci number or Fibonacci polynomial.",
+    "signature": "solve(n)"
+  },
+  {
+    "algorithm": [
+      "Check if n is less than 2. If so, return False.",
+      "Check for trivial factors (e.g., even numbers). If found, return False.",
+      "For n > 2, perform deterministic Miller-Rabin tests with bases that are known to have no counterexamples in their range.",
+      "If the number is larger than 2^64, perform a strong BPSW test.",
+      "Return the result based on the tests performed."
+    ],
+    "constraints": [
+      "n must be an integer in the range -20 to 10000",
+      "Negative numbers are not considered prime",
+      "For n > 2^64, the test is probabilistic and may return False even if the number is prime",
+      "The function returns False for numbers that are not prime but may appear prime due to pseudoprime properties"
+    ],
+    "edge_cases": [
+      "n < 2: return False",
+      "n = 2: return True",
+      "n = 1: return False",
+      "n = -2: return False"
+    ],
+    "inputs": "n is an integer in -20..10000",
+    "method_id": "sympy.isprime",
+    "output": "A plain Python bool (True or False)",
+    "purpose": "Test if n is a prime number (True) or not (False).",
+    "signature": "solve(n)"
+  },
+  {
+    "algorithm": [
+      "Use the recurrence relation: L(0) = 2, L(1) = 1, and L(n) = L(n-1) + L(n-2) for n >= 2",
+      "Compute the value iteratively using dynamic programming to avoid overflow and ensure precision"
+    ],
+    "constraints": [
+      "n must be an integer in the range 0 to 100",
+      "No symbolic computation is allowed; the result must be an exact Python integer"
+    ],
+    "edge_cases": [
+      "n = 0: returns 2",
+      "n = 1: returns 1",
+      "n = 100: returns the 100th Lucas number (computed iteratively)"
+    ],
+    "inputs": "n is an integer in 0..100",
+    "method_id": "sympy.lucas",
+    "output": "The nth Lucas number as an exact Python integer",
+    "purpose": "Compute the nth Lucas number",
+    "signature": "solve(n)"
+  },
+  {
+    "algorithm": [
+      "If n == 1, return 1.",
+      "If n has a squared prime factor, return 0.",
+      "Otherwise, count the number of distinct prime factors of n.",
+      "If the count is even, return 1; if the count is odd, return -1."
+    ],
+    "constraints": [
+      "n is a positive integer <= 5000",
+      "n must be square-free",
+      "n must not have any squared prime factors"
+    ],
+    "edge_cases": [
+      "n = 1",
+      "n = 0 (not applicable, since n is positive)",
+      "n = 4 (has squared prime factor, returns 0)",
+      "n = 6 (two distinct prime factors, returns 1)"
+    ],
+    "inputs": "n is a positive integer <= 5000",
+    "method_id": "sympy.mobius",
+    "output": "An exact Python int, which is the Mobius function value of n.",
+    "purpose": "Compute the Mobius function for a given positive integer n.",
+    "signature": "solve(n)"
+  },
+  {
+    "algorithm": [
+      "Use the Sieve of Eratosthenes to generate potential primes",
+      "Check for primality using the 6*j ± 1 property",
+      "Iterate until the ith prime is found",
+      "Return the result"
+    ],
+    "constraints": [
+      "ith must be a positive integer",
+      "n must be an integer",
+      "ith must be greater than 0",
+      "n must be within the range -10 to 5000"
+    ],
+    "edge_cases": [
+      "n = -10, ith = 1",
+      "n = 5000, ith = 1",
+      "ith = 0",
+      "n is not an integer"
+    ],
+    "inputs": "n: integer in -10..5000, ith: positive integer",
+    "method_id": "sympy.nextprime",
+    "output": "int: Return the ith prime greater than n",
+    "purpose": "Return the ith prime greater than n.",
+    "signature": "solve(n)"
+  },
+  {
+    "algorithm": [
+      "Generate potential candidates using the form 6*j ± 1 (to skip composites)",
+      "Check for primality of each candidate using trial division or optimized methods",
+      "Return the largest candidate that is prime"
+    ],
+    "constraints": [
+      "n must be an integer in the range 3 to 5000",
+      "Return a plain Python int, no symbolic objects",
+      "Do not use any external libraries or functions beyond the provided reference"
+    ],
+    "edge_cases": [
+      "n = 3: return 2 (the only prime less than 3)",
+      "n = 5: return 3 (the only prime less than 5)",
+      "n = 5000: return the largest prime less than 5000"
+    ],
+    "inputs": "n is an integer in 3..5000",
+    "method_id": "sympy.prevprime",
+    "output": "A plain Python int, the largest prime strictly less than n",
+    "purpose": "Return the largest prime strictly less than n.",
+    "signature": "solve(n)"
+  },
+  {
+    "algorithm": [
+      "Factor `n` into its prime factors using a trial division approach.",
+      "Remove duplicates by considering only distinct prime factors.",
+      "Sort the resulting list in ascending order."
+    ],
+    "constraints": [
+      "n must be a positive integer <= 5000.",
+      "Do not include composite factors that remain if the limit was too low.",
+      "Do not return -1 or 0."
+    ],
+    "edge_cases": [
+      "When `n` is 1, return an empty list.",
+      "When `n` is a prime number, return a list containing just that number.",
+      "When `n` is 0, return an empty list (though `n` is not allowed per the input domain)."
+    ],
+    "inputs": "n: positive integer <= 5000",
+    "method_id": "primefactors",
+    "output": "list(int): Sorted list of distinct prime factors of `n`",
+    "purpose": "Return a sorted list of distinct prime factors of `n`.",
+    "signature": "solve(n)"
+  },
+  {
+    "algorithm": [
+      "Initialize a result variable as n.",
+      "Iterate over all integers from 2 to sqrt(n).",
+      "For each integer i, if i divides n, check if i and n/i are coprime.",
+      "If they are coprime, multiply the result by (i-1)/i and add (n/i - 1)/i.",
+      "If i is a prime factor of n, add (i-1) to the result.",
+      "Finally, return the result."
+    ],
+    "constraints": [
+      "n is a positive integer <= 5000",
+      "Use generator=False and proper=False for divisor calculations",
+      "Use default modulus=1 for divisor_count"
+    ],
+    "edge_cases": [
+      "n = 1: φ(1) = 1",
+      "n = 2: φ(2) = 1",
+      "n = 5000: φ(5000) = 2000"
+    ],
+    "inputs": "n is a positive integer <= 5000",
+    "method_id": "sympy.totient",
+    "output": "An exact Python int, which is the value of the Euler totient function φ(n)",
+    "purpose": "Calculate the Euler totient function φ(n), which counts the number of integers up to n that are relatively prime to n.",
+    "signature": "solve(n)"
+  }
+]

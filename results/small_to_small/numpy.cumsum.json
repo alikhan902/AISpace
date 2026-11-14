@@ -1,0 +1,3703 @@
+{
+  "all_pass": false,
+  "cases": [
+    {
+      "case_id": "numpy.cumsum:0000",
+      "category": "boundary",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "a": []
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0001",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0
+        ]
+      },
+      "input": {
+        "a": [
+          0
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0002",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "input": {
+        "a": [
+          1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0003",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          -1
+        ]
+      },
+      "input": {
+        "a": [
+          -1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0004",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0,
+          0
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          0
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0005",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          1,
+          1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0006",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          -3,
+          -5,
+          -6
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          -2,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0007",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          3,
+          2,
+          2,
+          5,
+          4
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          -1,
+          0,
+          3,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0008",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          5,
+          9,
+          12,
+          14,
+          15
+        ]
+      },
+      "input": {
+        "a": [
+          5,
+          4,
+          3,
+          2,
+          1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0009",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          -2,
+          0,
+          -2,
+          0
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          2,
+          -2,
+          2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0010",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          0,
+          3,
+          6,
+          4,
+          3,
+          4,
+          4
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          3,
+          3,
+          3,
+          -2,
+          -1,
+          1,
+          0
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0011",
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          2,
+          2,
+          -1,
+          -1,
+          -4
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          3,
+          0,
+          -3,
+          0,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0012",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -3,
+          -3
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          -1,
+          0
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0013",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          6,
+          3,
+          0,
+          -2,
+          -2,
+          1,
+          2,
+          4,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          3,
+          3,
+          -3,
+          -3,
+          -2,
+          0,
+          3,
+          1,
+          2,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0014",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          2,
+          5,
+          6,
+          9,
+          6,
+          9,
+          8,
+          9
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          0,
+          3,
+          1,
+          3,
+          -3,
+          3,
+          -1,
+          1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0015",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          3,
+          6,
+          6,
+          7,
+          6,
+          8,
+          10,
+          10
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          0,
+          3,
+          0,
+          1,
+          -1,
+          2,
+          2,
+          0
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0016",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -5,
+          -4
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          -2,
+          1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0017",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0018",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1,
+          1,
+          0,
+          -3,
+          -1,
+          1
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          -1,
+          0,
+          -1,
+          -3,
+          2,
+          2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0019",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          1,
+          3,
+          5,
+          2,
+          1,
+          0,
+          2,
+          0
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          -2,
+          2,
+          2,
+          -3,
+          -1,
+          -1,
+          2,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0020",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2
+        ]
+      },
+      "input": {
+        "a": [
+          -2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0021",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1,
+          0,
+          2,
+          4,
+          6,
+          5,
+          2,
+          -1,
+          -2,
+          -3
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          -1,
+          -1,
+          2,
+          2,
+          2,
+          -1,
+          -3,
+          -3,
+          -1,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0022",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          0,
+          1,
+          0,
+          -3,
+          0
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          3,
+          1,
+          -1,
+          -3,
+          3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0023",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          4,
+          3,
+          5,
+          6,
+          8,
+          11,
+          9,
+          10,
+          13
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          0,
+          0,
+          3,
+          -1,
+          2,
+          1,
+          2,
+          3,
+          -2,
+          1,
+          3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0024",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -3,
+          -3,
+          -6,
+          -8,
+          -8
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          -1,
+          0,
+          -3,
+          -2,
+          0
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0025",
+      "category": "random",
+      "expected": {
+        "value": [
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0026",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          1,
+          4,
+          3,
+          0
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          1,
+          2,
+          3,
+          -1,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0027",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          4,
+          3,
+          6,
+          3,
+          1
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          3,
+          1,
+          -1,
+          3,
+          -3,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0028",
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          1,
+          2,
+          3,
+          2,
+          1,
+          1,
+          0,
+          1,
+          3,
+          2,
+          1
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          2,
+          1,
+          1,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          2,
+          -1,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0029",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          -1,
+          -1,
+          -4,
+          -1,
+          -1,
+          -3,
+          -3,
+          -6,
+          -6,
+          -6
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          -3,
+          0,
+          -3,
+          3,
+          0,
+          -2,
+          0,
+          -3,
+          0,
+          0
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0030",
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          2,
+          4,
+          5,
+          3,
+          6,
+          7,
+          4,
+          1,
+          -1,
+          0
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          3,
+          2,
+          1,
+          -2,
+          3,
+          1,
+          -3,
+          -3,
+          -2,
+          1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0031",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          0,
+          0,
+          3,
+          5,
+          2,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          2,
+          0,
+          3,
+          2,
+          -3,
+          -1,
+          0
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0032",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          -1,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          -1,
+          -1,
+          2,
+          0
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0033",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          4,
+          6,
+          8,
+          11,
+          11,
+          11,
+          11,
+          12
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          1,
+          1,
+          2,
+          2,
+          3,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0034",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          1,
+          3,
+          4,
+          2,
+          5,
+          7,
+          4,
+          5,
+          5
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          3,
+          2,
+          1,
+          -2,
+          3,
+          2,
+          -3,
+          1,
+          0
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0035",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          -1,
+          -1,
+          -4,
+          -3,
+          -3,
+          -1,
+          -2,
+          0,
+          3,
+          2,
+          1
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          -1,
+          0,
+          -3,
+          1,
+          0,
+          2,
+          -1,
+          2,
+          3,
+          -1,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0036",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0037",
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          -2,
+          -3,
+          -4
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0038",
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          -1,
+          -4,
+          -7,
+          -6,
+          -4,
+          -2,
+          -2,
+          1,
+          4
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          0,
+          -3,
+          -3,
+          1,
+          2,
+          2,
+          0,
+          3,
+          3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0039",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -3,
+          -3,
+          -4,
+          -5,
+          -6,
+          -8,
+          -11
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          -1,
+          0,
+          -1,
+          -1,
+          -1,
+          -2,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0040",
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          -3,
+          -4,
+          -4,
+          -7,
+          -4,
+          -7,
+          -4,
+          -6
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          -2,
+          -1,
+          0,
+          -3,
+          3,
+          -3,
+          3,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0041",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -2,
+          1
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          0,
+          3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0042",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          5,
+          8,
+          8,
+          9,
+          10,
+          11
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          2,
+          3,
+          0,
+          1,
+          1,
+          1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0043",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -5,
+          -3
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          -3,
+          2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0044",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          6,
+          8,
+          6,
+          6,
+          8
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          3,
+          2,
+          -2,
+          0,
+          2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0045",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0046",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          4,
+          1,
+          -1,
+          -4
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          1,
+          -3,
+          -2,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0047",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          2,
+          0,
+          -1,
+          2,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          1,
+          1,
+          -2,
+          -1,
+          3,
+          -3,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0048",
+      "category": "random",
+      "expected": {
+        "value": [
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0049",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          4,
+          5,
+          8,
+          6,
+          8,
+          5
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          3,
+          1,
+          3,
+          -2,
+          2,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0050",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          0,
+          -2,
+          -5,
+          -4,
+          -5,
+          -4,
+          -3,
+          -3,
+          -2,
+          -4,
+          -6
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          -2,
+          -2,
+          -3,
+          1,
+          -1,
+          1,
+          1,
+          0,
+          1,
+          -2,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0051",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          2,
+          1,
+          -1,
+          -2,
+          -4,
+          -1,
+          -4,
+          -1
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          0,
+          2,
+          -1,
+          -2,
+          -1,
+          -2,
+          3,
+          -3,
+          3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0052",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -3,
+          -6,
+          -3,
+          -1,
+          -2,
+          -3,
+          -6
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          -1,
+          -3,
+          3,
+          2,
+          -1,
+          -1,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0053",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -4,
+          -1,
+          0,
+          0,
+          -1,
+          -4,
+          -4,
+          -6,
+          -6,
+          -4
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          -2,
+          3,
+          1,
+          0,
+          -1,
+          -3,
+          0,
+          -2,
+          0,
+          2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0054",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          0,
+          0,
+          -3
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          1,
+          -1,
+          0,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0055",
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          1,
+          -2,
+          -3,
+          -5,
+          -8
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          2,
+          -3,
+          -1,
+          -2,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0056",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -3,
+          -5,
+          -8,
+          -7,
+          -7
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          0,
+          -2,
+          -3,
+          1,
+          0
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0057",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          2,
+          4,
+          2,
+          1,
+          -2,
+          -3,
+          -2
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          3,
+          -1,
+          2,
+          -2,
+          -1,
+          -3,
+          -1,
+          1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0058",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          -1
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0059",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          -1,
+          -2,
+          0,
+          3,
+          3,
+          0,
+          -2,
+          0,
+          0,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          -3,
+          -1,
+          2,
+          3,
+          0,
+          -3,
+          -2,
+          2,
+          0,
+          2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0060",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -3,
+          -4,
+          -6,
+          -7,
+          -5
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          0,
+          -1,
+          -2,
+          -1,
+          2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0061",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          2,
+          0
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          0,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0062",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          4,
+          2,
+          -1,
+          -3,
+          -6,
+          -6
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          1,
+          -2,
+          -3,
+          -2,
+          -3,
+          0
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0063",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          3,
+          3,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          0,
+          0,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0064",
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          2,
+          1,
+          0,
+          0,
+          -3,
+          -1,
+          -2
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          3,
+          -1,
+          -1,
+          0,
+          -3,
+          2,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0065",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          -2,
+          -4,
+          -5
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          1,
+          -1,
+          -2,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0066",
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          -3,
+          -6,
+          -9,
+          -11,
+          -11,
+          -10,
+          -11,
+          -13,
+          -12,
+          -11,
+          -10
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          -2,
+          -3,
+          -3,
+          -2,
+          0,
+          1,
+          -1,
+          -2,
+          1,
+          1,
+          1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0067",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          0,
+          -1
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          2,
+          1,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0068",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          5,
+          6
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          3,
+          1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0069",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          4,
+          4
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          2,
+          0
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0070",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          -1
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0071",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          5,
+          8,
+          6,
+          9,
+          7,
+          7,
+          9,
+          10,
+          10,
+          10,
+          9
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          2,
+          3,
+          -2,
+          3,
+          -2,
+          0,
+          2,
+          1,
+          0,
+          0,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0072",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          2,
+          1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0073",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          -2,
+          1,
+          0,
+          2,
+          3,
+          5,
+          7,
+          6
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          -2,
+          3,
+          -1,
+          2,
+          1,
+          2,
+          2,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0074",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          3,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          3,
+          0,
+          0
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0075",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -5
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0076",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          -1,
+          -1,
+          -4,
+          -6
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          1,
+          0,
+          0,
+          -3,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0077",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          5,
+          2,
+          2,
+          5,
+          8
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          2,
+          -3,
+          0,
+          3,
+          3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0078",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          0
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0079",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -4,
+          -4,
+          -7,
+          -5,
+          -7
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          -1,
+          0,
+          -3,
+          2,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0080",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0081",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -5,
+          -2,
+          1,
+          2,
+          3,
+          1,
+          -2,
+          -2
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          -3,
+          3,
+          3,
+          1,
+          1,
+          -2,
+          -3,
+          0
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0082",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          0,
+          1,
+          4,
+          4,
+          4,
+          6,
+          4
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          1,
+          -2,
+          1,
+          3,
+          0,
+          0,
+          2,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0083",
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          0,
+          0,
+          -3
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          1,
+          0,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0084",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3
+        ]
+      },
+      "input": {
+        "a": [
+          -3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0085",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          5,
+          7,
+          7,
+          6,
+          6,
+          5,
+          8,
+          11
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          2,
+          2,
+          0,
+          -1,
+          0,
+          -1,
+          3,
+          3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0086",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          6,
+          9
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          2,
+          3,
+          3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0087",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          2,
+          5,
+          6,
+          4,
+          2,
+          4,
+          4,
+          6,
+          9
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          2,
+          0,
+          3,
+          1,
+          -2,
+          -2,
+          2,
+          0,
+          2,
+          3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0088",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -6
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0089",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          -2,
+          -4,
+          -5,
+          -4,
+          -4,
+          -1
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          -2,
+          -2,
+          -1,
+          1,
+          0,
+          3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0090",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          0,
+          -3,
+          -3,
+          -1,
+          -3,
+          -1,
+          -2,
+          -1,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          2,
+          -3,
+          0,
+          2,
+          -2,
+          2,
+          -1,
+          1,
+          3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0091",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          2,
+          0,
+          1,
+          4,
+          5,
+          5,
+          3,
+          1
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          -1,
+          -2,
+          1,
+          3,
+          1,
+          0,
+          -2,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0092",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          0,
+          -1,
+          -3,
+          -1,
+          -1,
+          -1,
+          -2
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          -2,
+          -1,
+          -2,
+          2,
+          0,
+          0,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0093",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -6,
+          -5,
+          -8,
+          -10,
+          -7,
+          -4,
+          -3,
+          -5,
+          -5,
+          -3,
+          -3
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          -3,
+          1,
+          -3,
+          -2,
+          3,
+          3,
+          1,
+          -2,
+          0,
+          2,
+          0
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0094",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          1
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          0,
+          1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0095",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          2,
+          1,
+          1,
+          -1,
+          -4
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          0,
+          2,
+          -1,
+          0,
+          -2,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0096",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          -3,
+          -5,
+          -7,
+          -8,
+          -11,
+          -9,
+          -9,
+          -8,
+          -7,
+          -5,
+          -6
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          -3,
+          -2,
+          -2,
+          -1,
+          -3,
+          2,
+          0,
+          1,
+          1,
+          2,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0097",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -4,
+          -3
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          -2,
+          1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0098",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          -2,
+          -4,
+          -5,
+          -3,
+          -4,
+          -4,
+          -7,
+          -6,
+          -9,
+          -8
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          -2,
+          -2,
+          -1,
+          2,
+          -1,
+          0,
+          -3,
+          1,
+          -3,
+          1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0099",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          0,
+          3,
+          6,
+          5,
+          5,
+          7
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          3,
+          3,
+          3,
+          -1,
+          0,
+          2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0100",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -5,
+          -7,
+          -10,
+          -11,
+          -8,
+          -6,
+          -9
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          1,
+          -3,
+          -2,
+          -3,
+          -1,
+          3,
+          2,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0101",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -3,
+          0,
+          -1,
+          -3,
+          0,
+          2,
+          5
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          -1,
+          3,
+          -1,
+          -2,
+          3,
+          2,
+          3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0102",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          -2,
+          1,
+          -1,
+          1,
+          -2,
+          -1,
+          -2,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          0,
+          -3,
+          3,
+          -2,
+          2,
+          -3,
+          1,
+          -1,
+          3,
+          0
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0103",
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          7,
+          6,
+          5
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          -1,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0104",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          3,
+          1,
+          2,
+          2,
+          3,
+          2,
+          -1,
+          0,
+          -1,
+          -3
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          0,
+          2,
+          -2,
+          1,
+          0,
+          1,
+          -1,
+          -3,
+          1,
+          -1,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0105",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -4,
+          -4,
+          -5,
+          -4
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          -1,
+          0,
+          -1,
+          1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0106",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          2,
+          -1,
+          -3,
+          0,
+          -2,
+          0,
+          -1,
+          2,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          2,
+          -1,
+          -3,
+          -2,
+          3,
+          -2,
+          2,
+          -1,
+          3,
+          0
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0107",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          -1,
+          1,
+          0,
+          -3,
+          -1,
+          -2
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          -2,
+          2,
+          -1,
+          -3,
+          2,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0108",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          1,
+          2,
+          5,
+          5
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          -1,
+          1,
+          1,
+          3,
+          0
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0109",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          0,
+          -3,
+          -6,
+          -6,
+          -6
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          2,
+          -3,
+          -3,
+          0,
+          0
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0110",
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          1,
+          0,
+          1,
+          -1
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          2,
+          -1,
+          1,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0111",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          3,
+          4,
+          6,
+          8,
+          5,
+          7,
+          10
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          0,
+          1,
+          2,
+          2,
+          -3,
+          2,
+          3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0112",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          -1,
+          -2,
+          0,
+          -2,
+          -4,
+          -6,
+          -9,
+          -11,
+          -8,
+          -6
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          -1,
+          -1,
+          2,
+          -2,
+          -2,
+          -2,
+          -3,
+          -2,
+          3,
+          2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0113",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          -1,
+          -2,
+          -3,
+          -6,
+          -4
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          0,
+          -2,
+          -1,
+          -1,
+          -3,
+          2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0114",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          -1,
+          -1,
+          0,
+          3,
+          1,
+          -2,
+          1,
+          4
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          -3,
+          0,
+          1,
+          3,
+          -2,
+          -3,
+          3,
+          3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0115",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          4,
+          3,
+          2,
+          3,
+          4
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0116",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1,
+          2,
+          5,
+          5,
+          4,
+          6
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          -1,
+          1,
+          3,
+          0,
+          -1,
+          2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0117",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          -1,
+          -4,
+          -4,
+          -5,
+          -3,
+          -5,
+          -2,
+          1,
+          3,
+          5
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          2,
+          -3,
+          -3,
+          0,
+          -1,
+          2,
+          -2,
+          3,
+          3,
+          2,
+          2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0118",
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          -2,
+          0
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          -1,
+          2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0119",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -5,
+          -2,
+          -5,
+          -4,
+          -1,
+          -2,
+          0,
+          -1,
+          0,
+          0,
+          -2
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          -3,
+          3,
+          -3,
+          1,
+          3,
+          -1,
+          2,
+          -1,
+          1,
+          0,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0120",
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          1,
+          1,
+          3,
+          6,
+          5,
+          7,
+          4,
+          6,
+          7,
+          7,
+          8
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          2,
+          0,
+          2,
+          3,
+          -1,
+          2,
+          -3,
+          2,
+          1,
+          0,
+          1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0121",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -3,
+          -3,
+          0,
+          3,
+          1,
+          -2,
+          -4
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          0,
+          0,
+          3,
+          3,
+          -2,
+          -3,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0122",
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          1,
+          -2,
+          1,
+          -2,
+          1,
+          -2,
+          0,
+          -1
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          2,
+          -3,
+          3,
+          -3,
+          3,
+          -3,
+          2,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0123",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -4
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0124",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          2,
+          0,
+          -2,
+          -1,
+          -1,
+          -2,
+          -1,
+          -3,
+          -6,
+          -3
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          0,
+          -2,
+          -2,
+          1,
+          0,
+          -1,
+          1,
+          -2,
+          -3,
+          3
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.cumsum:0125",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          -2,
+          -1,
+          0
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          -1,
+          -2,
+          1,
+          1
+        ]
+      },
+      "observed": {
+        "error": "ValueError:forbidden_import"
+      },
+      "passed": false
+    }
+  ],
+  "condition": "small_to_small",
+  "elapsed_seconds": 0.02531592299988006,
+  "group": "reductions",
+  "library": "numpy",
+  "load_error": "ValueError:forbidden_import",
+  "method_id": "numpy.cumsum",
+  "passed": 0,
+  "total": 126
+}

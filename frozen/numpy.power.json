@@ -1,0 +1,3390 @@
+{
+  "brief": {
+    "contract": "x and y are integers or 1-D lists of integers. Support scalar/scalar, scalar/list, list/scalar and lists of the same length (including empty). Scalar/scalar returns int, all other inputs return a list. No other broadcasting is required. Values and results fit signed int64. Exponents are integers in 0..8; define 0**0 as 1.",
+    "documentation": "power(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])\n\nFirst array elements raised to powers from second array, element-wise.\n\nRaise each base in `x1` to the positionally-corresponding power in\n`x2`.  `x1` and `x2` must be broadcastable to the same shape.\n\nAn integer type raised to a negative integer power will raise a\n``ValueError``.\n\nNegative values raised to a non-integral value will return ``nan``.\nTo get complex results, cast the input to complex, or specify the\n``dtype`` to be ``complex`` (see the example below).\n\nParameters\n----------\nx1 : array_like\n    The bases.\nx2 : array_like\n    The exponents.\n    If ``x1.shape != x2.shape``, they must be broadcastable to a common\n    shape (which becomes the shape of the output).\nout : ndarray, None, or tuple of ndarray and None, optional\n    A location into which the result is stored. If provided, it must have\n    a shape that the inputs broadcast to. If not provided or None,\n    a freshly-allocated array is returned. A tuple (possible only as a\n    keyword argument) must have length equal to the number of outputs.\nwhere : array_like, optional\n    This condition is broadcast over the input. At locations where the\n    condition is True, the `out` array will be set to the ufunc result.\n    Elsewhere, the `out` array will retain its original value.\n    Note that if an uninitialized `out` array is created via the default\n    ``out=None``, locations within it where the condition is False will\n    remain uninitialized.\n**kwargs\n    For other keyword-only arguments, see the\n    :ref:`ufunc docs <ufuncs.kwargs>`.\n\nReturns\n-------\ny : ndarray\n    The bases in `x1` raised to the exponents in `x2`.\n    This is a scalar if both `x1` and `x2` are scalars.\n\nSee Also\n--------\nfloat_power : power function that promotes integers to float\n\nExamples\n--------\n>>> import numpy as np\n\nCube each element in an array.\n\n>>> x1 = np.arange(6)\n>>> x1\n[0, 1, 2, 3, 4, 5]\n>>> np.power(x1, 3)\narray([  0,   1,   8,  27,  64, 125])\n\nRaise the bases to different exponents.\n\n>>> x2 = [1.0, 2.0, 3.0, 3.0, 2.0, 1.0]\n>>> np.power(x1, x2)\narray([  0.,   1.,   8.,  27.,  16.,   5.])\n\nThe effect of broadcasting.\n\n>>> x2 = np.array([[1, 2, 3, 3, 2, 1], [1, 2, 3, 3, 2, 1]])\n>>> x2\narray([[1, 2, 3, 3, 2, 1],\n       [1, 2, 3, 3, 2, 1]])\n>>> np.power(x1, x2)\narray([[ 0,  1,  8, 27, 16,  5],\n       [ 0,  1,  8, 27, 16,  5]])\n\nThe ``**`` operator can be used as a shorthand for ``np.power`` on\nndarrays.\n\n>>> x2 = np.array([1, 2, 3, 3, 2, 1])\n>>> x1 = np.arange(6)\n>>> x1 ** x2\narray([ 0,  1,  8, 27, 16,  5])\n\nNegative values raised to a non-integral value will result in ``nan``\n(and a warning will be generated).\n\n>>> x3 = np.array([-1.0, -4.0])\n>>> with np.errstate(invalid='ignore'):\n...     p = np.power(x3, 1.5)\n...\n>>> p\narray([nan, nan])\n\nTo get complex results, give the argument ``dtype=np.complex128``.\n\n>>> np.power(x3, 1.5, dtype=np.complex128)\narray([-1.83697020e-16-1.j, -1.46957616e-15-8.j])",
+    "documentation_truncated": false,
+    "group": "integer_arithmetic",
+    "id": "numpy.power",
+    "library": "numpy",
+    "name": "power",
+    "signature": "solve(x, y)",
+    "version": "2.5.4"
+  },
+  "cases": [
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.power:0000",
+      "input": {
+        "x": -7,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -7
+      },
+      "id": "numpy.power:0001",
+      "input": {
+        "x": -7,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 49
+      },
+      "id": "numpy.power:0002",
+      "input": {
+        "x": -7,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -343
+      },
+      "id": "numpy.power:0003",
+      "input": {
+        "x": -7,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2401
+      },
+      "id": "numpy.power:0004",
+      "input": {
+        "x": -7,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -16807
+      },
+      "id": "numpy.power:0005",
+      "input": {
+        "x": -7,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.power:0006",
+      "input": {
+        "x": -6,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -6
+      },
+      "id": "numpy.power:0007",
+      "input": {
+        "x": -6,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 36
+      },
+      "id": "numpy.power:0008",
+      "input": {
+        "x": -6,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -216
+      },
+      "id": "numpy.power:0009",
+      "input": {
+        "x": -6,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1296
+      },
+      "id": "numpy.power:0010",
+      "input": {
+        "x": -6,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -7776
+      },
+      "id": "numpy.power:0011",
+      "input": {
+        "x": -6,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.power:0012",
+      "input": {
+        "x": -5,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -5
+      },
+      "id": "numpy.power:0013",
+      "input": {
+        "x": -5,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 25
+      },
+      "id": "numpy.power:0014",
+      "input": {
+        "x": -5,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -125
+      },
+      "id": "numpy.power:0015",
+      "input": {
+        "x": -5,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 625
+      },
+      "id": "numpy.power:0016",
+      "input": {
+        "x": -5,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -3125
+      },
+      "id": "numpy.power:0017",
+      "input": {
+        "x": -5,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.power:0018",
+      "input": {
+        "x": -4,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -4
+      },
+      "id": "numpy.power:0019",
+      "input": {
+        "x": -4,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 16
+      },
+      "id": "numpy.power:0020",
+      "input": {
+        "x": -4,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -64
+      },
+      "id": "numpy.power:0021",
+      "input": {
+        "x": -4,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 256
+      },
+      "id": "numpy.power:0022",
+      "input": {
+        "x": -4,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1024
+      },
+      "id": "numpy.power:0023",
+      "input": {
+        "x": -4,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.power:0024",
+      "input": {
+        "x": -3,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -3
+      },
+      "id": "numpy.power:0025",
+      "input": {
+        "x": -3,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 9
+      },
+      "id": "numpy.power:0026",
+      "input": {
+        "x": -3,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -27
+      },
+      "id": "numpy.power:0027",
+      "input": {
+        "x": -3,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 81
+      },
+      "id": "numpy.power:0028",
+      "input": {
+        "x": -3,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -243
+      },
+      "id": "numpy.power:0029",
+      "input": {
+        "x": -3,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.power:0030",
+      "input": {
+        "x": -2,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -2
+      },
+      "id": "numpy.power:0031",
+      "input": {
+        "x": -2,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.power:0032",
+      "input": {
+        "x": -2,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -8
+      },
+      "id": "numpy.power:0033",
+      "input": {
+        "x": -2,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 16
+      },
+      "id": "numpy.power:0034",
+      "input": {
+        "x": -2,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -32
+      },
+      "id": "numpy.power:0035",
+      "input": {
+        "x": -2,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.power:0036",
+      "input": {
+        "x": -1,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.power:0037",
+      "input": {
+        "x": -1,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.power:0038",
+      "input": {
+        "x": -1,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.power:0039",
+      "input": {
+        "x": -1,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.power:0040",
+      "input": {
+        "x": -1,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.power:0041",
+      "input": {
+        "x": -1,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.power:0042",
+      "input": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.power:0043",
+      "input": {
+        "x": 0,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.power:0044",
+      "input": {
+        "x": 0,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.power:0045",
+      "input": {
+        "x": 0,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.power:0046",
+      "input": {
+        "x": 0,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.power:0047",
+      "input": {
+        "x": 0,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.power:0048",
+      "input": {
+        "x": 1,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.power:0049",
+      "input": {
+        "x": 1,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.power:0050",
+      "input": {
+        "x": 1,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.power:0051",
+      "input": {
+        "x": 1,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.power:0052",
+      "input": {
+        "x": 1,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.power:0053",
+      "input": {
+        "x": 1,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.power:0054",
+      "input": {
+        "x": 2,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.power:0055",
+      "input": {
+        "x": 2,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.power:0056",
+      "input": {
+        "x": 2,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "id": "numpy.power:0057",
+      "input": {
+        "x": 2,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 16
+      },
+      "id": "numpy.power:0058",
+      "input": {
+        "x": 2,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 32
+      },
+      "id": "numpy.power:0059",
+      "input": {
+        "x": 2,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.power:0060",
+      "input": {
+        "x": 3,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.power:0061",
+      "input": {
+        "x": 3,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 9
+      },
+      "id": "numpy.power:0062",
+      "input": {
+        "x": 3,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 27
+      },
+      "id": "numpy.power:0063",
+      "input": {
+        "x": 3,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 81
+      },
+      "id": "numpy.power:0064",
+      "input": {
+        "x": 3,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 243
+      },
+      "id": "numpy.power:0065",
+      "input": {
+        "x": 3,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.power:0066",
+      "input": {
+        "x": 4,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.power:0067",
+      "input": {
+        "x": 4,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 16
+      },
+      "id": "numpy.power:0068",
+      "input": {
+        "x": 4,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 64
+      },
+      "id": "numpy.power:0069",
+      "input": {
+        "x": 4,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 256
+      },
+      "id": "numpy.power:0070",
+      "input": {
+        "x": 4,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1024
+      },
+      "id": "numpy.power:0071",
+      "input": {
+        "x": 4,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.power:0072",
+      "input": {
+        "x": 5,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.power:0073",
+      "input": {
+        "x": 5,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 25
+      },
+      "id": "numpy.power:0074",
+      "input": {
+        "x": 5,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 125
+      },
+      "id": "numpy.power:0075",
+      "input": {
+        "x": 5,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 625
+      },
+      "id": "numpy.power:0076",
+      "input": {
+        "x": 5,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3125
+      },
+      "id": "numpy.power:0077",
+      "input": {
+        "x": 5,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.power:0078",
+      "input": {
+        "x": 6,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "id": "numpy.power:0079",
+      "input": {
+        "x": 6,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 36
+      },
+      "id": "numpy.power:0080",
+      "input": {
+        "x": 6,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 216
+      },
+      "id": "numpy.power:0081",
+      "input": {
+        "x": 6,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1296
+      },
+      "id": "numpy.power:0082",
+      "input": {
+        "x": 6,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 7776
+      },
+      "id": "numpy.power:0083",
+      "input": {
+        "x": 6,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.power:0084",
+      "input": {
+        "x": 7,
+        "y": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "id": "numpy.power:0085",
+      "input": {
+        "x": 7,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 49
+      },
+      "id": "numpy.power:0086",
+      "input": {
+        "x": 7,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 343
+      },
+      "id": "numpy.power:0087",
+      "input": {
+        "x": 7,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2401
+      },
+      "id": "numpy.power:0088",
+      "input": {
+        "x": 7,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 16807
+      },
+      "id": "numpy.power:0089",
+      "input": {
+        "x": 7,
+        "y": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          25,
+          25,
+          -125,
+          -3125,
+          390625,
+          25,
+          -5
+        ]
+      },
+      "id": "numpy.power:0090",
+      "input": {
+        "x": -5,
+        "y": [
+          2,
+          2,
+          3,
+          5,
+          8,
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          214358881,
+          390625,
+          43046721,
+          6561,
+          100000000,
+          429981696,
+          256,
+          1679616,
+          390625,
+          429981696,
+          256
+        ]
+      },
+      "id": "numpy.power:0091",
+      "input": {
+        "x": [
+          11,
+          5,
+          -9,
+          -3,
+          -10,
+          -12,
+          -2,
+          6,
+          -5,
+          -12,
+          2
+        ],
+        "y": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1331,
+          100000000,
+          5,
+          1
+        ]
+      },
+      "id": "numpy.power:0092",
+      "input": {
+        "x": [
+          11,
+          10,
+          5,
+          -10
+        ],
+        "y": [
+          3,
+          8,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "id": "numpy.power:0093",
+      "input": {
+        "x": 1,
+        "y": [
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -59049,
+          -32768,
+          32,
+          32,
+          -248832,
+          0,
+          -16807
+        ]
+      },
+      "id": "numpy.power:0094",
+      "input": {
+        "x": [
+          -9,
+          -8,
+          2,
+          2,
+          -12,
+          0,
+          -7
+        ],
+        "y": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -7776,
+          390625,
+          1,
+          -12
+        ]
+      },
+      "id": "numpy.power:0095",
+      "input": {
+        "x": [
+          -6,
+          -5,
+          -6,
+          -12
+        ],
+        "y": [
+          5,
+          8,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          36,
+          1296,
+          -216
+        ]
+      },
+      "id": "numpy.power:0096",
+      "input": {
+        "x": -6,
+        "y": [
+          2,
+          4,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -161051,
+          32,
+          -248832
+        ]
+      },
+      "id": "numpy.power:0097",
+      "input": {
+        "x": [
+          -11,
+          2,
+          -12
+        ],
+        "y": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          121,
+          -248832,
+          1,
+          -161051,
+          1,
+          531441,
+          81,
+          -2097152,
+          12,
+          64,
+          4096
+        ]
+      },
+      "id": "numpy.power:0098",
+      "input": {
+        "x": [
+          11,
+          -12,
+          1,
+          -11,
+          -4,
+          9,
+          -9,
+          -8,
+          12,
+          2,
+          -8
+        ],
+        "y": [
+          2,
+          5,
+          0,
+          5,
+          0,
+          6,
+          2,
+          7,
+          1,
+          6,
+          4
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          125
+        ]
+      },
+      "id": "numpy.power:0099",
+      "input": {
+        "x": 5,
+        "y": [
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "id": "numpy.power:0100",
+      "input": {
+        "x": [],
+        "y": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          248832,
+          -125,
+          14641
+        ]
+      },
+      "id": "numpy.power:0101",
+      "input": {
+        "x": [
+          12,
+          -5,
+          11
+        ],
+        "y": [
+          5,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          9,
+          43046721,
+          59049,
+          729,
+          1,
+          531441,
+          4782969
+        ]
+      },
+      "id": "numpy.power:0102",
+      "input": {
+        "x": 9,
+        "y": [
+          0,
+          1,
+          8,
+          5,
+          3,
+          0,
+          6,
+          7
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          9,
+          16,
+          1,
+          121,
+          144,
+          64
+        ]
+      },
+      "id": "numpy.power:0103",
+      "input": {
+        "x": [
+          3,
+          -4,
+          1,
+          -11,
+          12,
+          8
+        ],
+        "y": 2
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          100000000,
+          64,
+          2401
+        ]
+      },
+      "id": "numpy.power:0104",
+      "input": {
+        "x": [
+          -10,
+          -2,
+          -7
+        ],
+        "y": [
+          8,
+          6,
+          4
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.power:0105",
+      "input": {
+        "x": 1,
+        "y": [
+          8,
+          7,
+          3,
+          7,
+          0,
+          5
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          14641,
+          256,
+          1296,
+          6561
+        ]
+      },
+      "id": "numpy.power:0106",
+      "input": {
+        "x": [
+          11,
+          4,
+          -6,
+          -9
+        ],
+        "y": 4
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          2985984,
+          0,
+          -10,
+          279936,
+          65536,
+          1000,
+          4096
+        ]
+      },
+      "id": "numpy.power:0107",
+      "input": {
+        "x": [
+          10,
+          1,
+          12,
+          0,
+          -10,
+          6,
+          4,
+          10,
+          4
+        ],
+        "y": [
+          0,
+          4,
+          6,
+          1,
+          1,
+          7,
+          8,
+          3,
+          6
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2097152,
+          -512,
+          16777216,
+          -512,
+          4096
+        ]
+      },
+      "id": "numpy.power:0108",
+      "input": {
+        "x": -8,
+        "y": [
+          7,
+          3,
+          8,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          10000000,
+          10000000,
+          -35831808,
+          -2187,
+          -78125,
+          -2187,
+          -4782969,
+          -279936,
+          0
+        ]
+      },
+      "id": "numpy.power:0109",
+      "input": {
+        "x": [
+          10,
+          10,
+          -12,
+          -3,
+          -5,
+          -3,
+          -9,
+          -6,
+          0
+        ],
+        "y": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          10000000,
+          12,
+          1,
+          144,
+          1,
+          64,
+          4096,
+          9,
+          -729,
+          625
+        ]
+      },
+      "id": "numpy.power:0110",
+      "input": {
+        "x": [
+          10,
+          12,
+          -7,
+          -12,
+          1,
+          4,
+          -4,
+          9,
+          -9,
+          5
+        ],
+        "y": [
+          7,
+          1,
+          0,
+          2,
+          6,
+          3,
+          6,
+          1,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2187,
+          729,
+          6561,
+          9
+        ]
+      },
+      "id": "numpy.power:0111",
+      "input": {
+        "x": -3,
+        "y": [
+          7,
+          6,
+          8,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          256,
+          1,
+          0,
+          429981696
+        ]
+      },
+      "id": "numpy.power:0112",
+      "input": {
+        "x": [
+          2,
+          1,
+          0,
+          -12
+        ],
+        "y": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          -2097152,
+          1,
+          1,
+          -2187,
+          46656
+        ]
+      },
+      "id": "numpy.power:0113",
+      "input": {
+        "x": [
+          -7,
+          -8,
+          1,
+          1,
+          -3,
+          -6
+        ],
+        "y": [
+          0,
+          7,
+          4,
+          7,
+          7,
+          6
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "id": "numpy.power:0114",
+      "input": {
+        "x": -1,
+        "y": []
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          625,
+          16,
+          10000,
+          14641
+        ]
+      },
+      "id": "numpy.power:0115",
+      "input": {
+        "x": [
+          -5,
+          -2,
+          -10,
+          -11
+        ],
+        "y": 4
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          6561,
+          20736
+        ]
+      },
+      "id": "numpy.power:0116",
+      "input": {
+        "x": [
+          9,
+          -12
+        ],
+        "y": [
+          4,
+          4
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -4,
+          256,
+          -4,
+          -64,
+          -64,
+          65536,
+          4096,
+          256
+        ]
+      },
+      "id": "numpy.power:0117",
+      "input": {
+        "x": -4,
+        "y": [
+          1,
+          4,
+          1,
+          3,
+          3,
+          8,
+          6,
+          4
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "id": "numpy.power:0118",
+      "input": {
+        "x": [],
+        "y": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          49,
+          9,
+          100,
+          -19487171,
+          1
+        ]
+      },
+      "id": "numpy.power:0119",
+      "input": {
+        "x": [
+          7,
+          3,
+          10,
+          -11,
+          -1
+        ],
+        "y": [
+          2,
+          2,
+          2,
+          7,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1024,
+          16,
+          256,
+          65536,
+          -64,
+          -1024,
+          -4,
+          1
+        ]
+      },
+      "id": "numpy.power:0120",
+      "input": {
+        "x": -4,
+        "y": [
+          5,
+          2,
+          4,
+          8,
+          3,
+          5,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "id": "numpy.power:0121",
+      "input": {
+        "x": [
+          1
+        ],
+        "y": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -4782969,
+          16,
+          1,
+          -243,
+          100000000,
+          1,
+          16807
+        ]
+      },
+      "id": "numpy.power:0122",
+      "input": {
+        "x": [
+          -9,
+          -2,
+          9,
+          -3,
+          10,
+          -1,
+          7
+        ],
+        "y": [
+          7,
+          4,
+          0,
+          5,
+          8,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -823543,
+          5764801,
+          5764801,
+          5764801,
+          -343,
+          -823543,
+          -16807
+        ]
+      },
+      "id": "numpy.power:0123",
+      "input": {
+        "x": -7,
+        "y": [
+          7,
+          8,
+          8,
+          8,
+          3,
+          7,
+          5
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          64,
+          -512
+        ]
+      },
+      "id": "numpy.power:0124",
+      "input": {
+        "x": [
+          4,
+          -8
+        ],
+        "y": 3
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "id": "numpy.power:0125",
+      "input": {
+        "x": [],
+        "y": []
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2187,
+          9,
+          6561,
+          27,
+          27,
+          243
+        ]
+      },
+      "id": "numpy.power:0126",
+      "input": {
+        "x": 3,
+        "y": [
+          7,
+          2,
+          8,
+          3,
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "id": "numpy.power:0127",
+      "input": {
+        "x": [
+          -1
+        ],
+        "y": 4
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          256,
+          9,
+          248832,
+          1,
+          7,
+          19487171,
+          128
+        ]
+      },
+      "id": "numpy.power:0128",
+      "input": {
+        "x": [
+          -2,
+          9,
+          12,
+          -10,
+          7,
+          11,
+          2
+        ],
+        "y": [
+          8,
+          1,
+          5,
+          0,
+          1,
+          7,
+          7
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          81,
+          2187,
+          3,
+          729,
+          9,
+          1,
+          3,
+          3,
+          729
+        ]
+      },
+      "id": "numpy.power:0129",
+      "input": {
+        "x": 3,
+        "y": [
+          1,
+          4,
+          7,
+          1,
+          6,
+          2,
+          0,
+          1,
+          1,
+          6
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          343,
+          1000,
+          1000,
+          -1331,
+          -1331,
+          -27,
+          729
+        ]
+      },
+      "id": "numpy.power:0130",
+      "input": {
+        "x": [
+          7,
+          10,
+          10,
+          -11,
+          -11,
+          -3,
+          9
+        ],
+        "y": 3
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          78125
+        ]
+      },
+      "id": "numpy.power:0131",
+      "input": {
+        "x": [
+          1,
+          5
+        ],
+        "y": [
+          3,
+          7
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.power:0132",
+      "input": {
+        "x": 1,
+        "y": [
+          4,
+          5,
+          7,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          625,
+          2401,
+          16,
+          10000,
+          81,
+          10000,
+          4096,
+          2401
+        ]
+      },
+      "id": "numpy.power:0133",
+      "input": {
+        "x": [
+          -1,
+          5,
+          7,
+          -2,
+          10,
+          -3,
+          10,
+          8,
+          -7
+        ],
+        "y": 4
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          531441,
+          144,
+          256,
+          81,
+          8,
+          0,
+          0,
+          -78125
+        ]
+      },
+      "id": "numpy.power:0134",
+      "input": {
+        "x": [
+          -9,
+          -12,
+          -4,
+          3,
+          2,
+          0,
+          0,
+          -5
+        ],
+        "y": [
+          6,
+          2,
+          4,
+          4,
+          3,
+          4,
+          1,
+          7
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          5764801,
+          117649
+        ]
+      },
+      "id": "numpy.power:0135",
+      "input": {
+        "x": -7,
+        "y": [
+          8,
+          6
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          10000,
+          6561,
+          16,
+          6561,
+          10000,
+          6561,
+          625,
+          14641,
+          2401,
+          6561
+        ]
+      },
+      "id": "numpy.power:0136",
+      "input": {
+        "x": [
+          10,
+          -9,
+          2,
+          -9,
+          -10,
+          9,
+          -5,
+          -11,
+          -7,
+          -9
+        ],
+        "y": 4
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -12,
+          64,
+          81,
+          -5,
+          1,
+          1728
+        ]
+      },
+      "id": "numpy.power:0137",
+      "input": {
+        "x": [
+          -12,
+          8,
+          3,
+          -5,
+          0,
+          12
+        ],
+        "y": [
+          1,
+          2,
+          4,
+          1,
+          0,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          81,
+          43046721,
+          -729,
+          -9,
+          6561,
+          1,
+          531441,
+          -729
+        ]
+      },
+      "id": "numpy.power:0138",
+      "input": {
+        "x": -9,
+        "y": [
+          2,
+          8,
+          3,
+          1,
+          4,
+          0,
+          6,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          49,
+          49,
+          16
+        ]
+      },
+      "id": "numpy.power:0139",
+      "input": {
+        "x": [
+          -7,
+          -7,
+          4
+        ],
+        "y": 2
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2985984,
+          1,
+          1000000,
+          0,
+          625,
+          1,
+          -1728
+        ]
+      },
+      "id": "numpy.power:0140",
+      "input": {
+        "x": [
+          12,
+          7,
+          -10,
+          0,
+          -5,
+          1,
+          -12
+        ],
+        "y": [
+          6,
+          0,
+          6,
+          7,
+          4,
+          6,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          4782969
+        ]
+      },
+      "id": "numpy.power:0141",
+      "input": {
+        "x": 9,
+        "y": [
+          7
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -16384,
+          -2187,
+          -279936,
+          -10000000,
+          4782969,
+          -823543
+        ]
+      },
+      "id": "numpy.power:0142",
+      "input": {
+        "x": [
+          -4,
+          -3,
+          -6,
+          -10,
+          9,
+          -7
+        ],
+        "y": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          -216
+        ]
+      },
+      "id": "numpy.power:0143",
+      "input": {
+        "x": [
+          1,
+          -6
+        ],
+        "y": [
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          10000000,
+          100000,
+          1000,
+          10,
+          10,
+          10000
+        ]
+      },
+      "id": "numpy.power:0144",
+      "input": {
+        "x": 10,
+        "y": [
+          7,
+          5,
+          3,
+          1,
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          5,
+          8,
+          2,
+          -6,
+          4,
+          -6,
+          2,
+          11,
+          12,
+          8
+        ]
+      },
+      "id": "numpy.power:0145",
+      "input": {
+        "x": [
+          5,
+          8,
+          2,
+          -6,
+          4,
+          -6,
+          2,
+          11,
+          12,
+          8
+        ],
+        "y": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          46656,
+          46656,
+          100,
+          20736,
+          1000000,
+          216
+        ]
+      },
+      "id": "numpy.power:0146",
+      "input": {
+        "x": [
+          6,
+          6,
+          -10,
+          12,
+          10,
+          6
+        ],
+        "y": [
+          6,
+          6,
+          2,
+          4,
+          6,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1
+        ]
+      },
+      "id": "numpy.power:0147",
+      "input": {
+        "x": 1,
+        "y": [
+          6,
+          6
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          531441,
+          531441,
+          46656,
+          2985984,
+          2985984,
+          1771561,
+          117649,
+          0
+        ]
+      },
+      "id": "numpy.power:0148",
+      "input": {
+        "x": [
+          9,
+          -9,
+          -6,
+          -12,
+          12,
+          -11,
+          7,
+          0
+        ],
+        "y": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1024,
+          20736,
+          -10,
+          1024,
+          81,
+          64,
+          2,
+          -1000
+        ]
+      },
+      "id": "numpy.power:0149",
+      "input": {
+        "x": [
+          4,
+          -12,
+          -10,
+          4,
+          -3,
+          8,
+          2,
+          -10
+        ],
+        "y": [
+          5,
+          4,
+          1,
+          5,
+          4,
+          2,
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          46656,
+          -216,
+          1296,
+          -216,
+          46656,
+          1679616,
+          1296,
+          1679616,
+          -6,
+          -7776
+        ]
+      },
+      "id": "numpy.power:0150",
+      "input": {
+        "x": -6,
+        "y": [
+          6,
+          3,
+          4,
+          3,
+          6,
+          8,
+          4,
+          8,
+          1,
+          5
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          256,
+          10000,
+          1296,
+          1,
+          1,
+          6561,
+          10000,
+          2401,
+          4096
+        ]
+      },
+      "id": "numpy.power:0151",
+      "input": {
+        "x": [
+          4,
+          -10,
+          6,
+          -1,
+          1,
+          9,
+          -10,
+          7,
+          -8
+        ],
+        "y": 4
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          10,
+          16777216,
+          1,
+          65536,
+          6561,
+          81,
+          1728,
+          1
+        ]
+      },
+      "id": "numpy.power:0152",
+      "input": {
+        "x": [
+          1,
+          10,
+          8,
+          1,
+          4,
+          9,
+          3,
+          12,
+          2
+        ],
+        "y": [
+          7,
+          1,
+          8,
+          7,
+          8,
+          4,
+          4,
+          3,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.power:0153",
+      "input": {
+        "x": 0,
+        "y": [
+          7,
+          2,
+          7,
+          3,
+          6
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          9,
+          1,
+          -7,
+          5,
+          -11,
+          -9,
+          10,
+          5
+        ]
+      },
+      "id": "numpy.power:0154",
+      "input": {
+        "x": [
+          9,
+          1,
+          -7,
+          5,
+          -11,
+          -9,
+          10,
+          5
+        ],
+        "y": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          117649,
+          -3125,
+          15625
+        ]
+      },
+      "id": "numpy.power:0155",
+      "input": {
+        "x": [
+          7,
+          -5,
+          -5
+        ],
+        "y": [
+          6,
+          5,
+          6
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          729,
+          1,
+          9,
+          9,
+          6561,
+          -3,
+          -2187,
+          6561,
+          6561,
+          6561
+        ]
+      },
+      "id": "numpy.power:0156",
+      "input": {
+        "x": -3,
+        "y": [
+          1,
+          6,
+          0,
+          2,
+          2,
+          8,
+          1,
+          7,
+          8,
+          8,
+          8
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          64,
+          531441,
+          46656
+        ]
+      },
+      "id": "numpy.power:0157",
+      "input": {
+        "x": [
+          -2,
+          9,
+          -6
+        ],
+        "y": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          279936,
+          161051,
+          0,
+          625,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.power:0158",
+      "input": {
+        "x": [
+          6,
+          11,
+          0,
+          5,
+          -12,
+          -12
+        ],
+        "y": [
+          7,
+          5,
+          8,
+          4,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -125,
+          -3125,
+          15625,
+          -78125,
+          15625,
+          625
+        ]
+      },
+      "id": "numpy.power:0159",
+      "input": {
+        "x": -5,
+        "y": [
+          3,
+          5,
+          6,
+          7,
+          6,
+          4
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "id": "numpy.power:0160",
+      "input": {
+        "x": [],
+        "y": 5
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          81,
+          -1,
+          -729
+        ]
+      },
+      "id": "numpy.power:0161",
+      "input": {
+        "x": [
+          9,
+          -1,
+          -9
+        ],
+        "y": [
+          2,
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -78125,
+          25,
+          1,
+          15625,
+          25,
+          25,
+          625,
+          15625,
+          1,
+          -125,
+          625
+        ]
+      },
+      "id": "numpy.power:0162",
+      "input": {
+        "x": -5,
+        "y": [
+          7,
+          2,
+          0,
+          6,
+          2,
+          2,
+          4,
+          6,
+          0,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          117649,
+          64,
+          262144,
+          2985984
+        ]
+      },
+      "id": "numpy.power:0163",
+      "input": {
+        "x": [
+          -7,
+          -2,
+          -8,
+          -12
+        ],
+        "y": 6
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          429981696,
+          -1
+        ]
+      },
+      "id": "numpy.power:0164",
+      "input": {
+        "x": [
+          0,
+          -12,
+          -1
+        ],
+        "y": [
+          8,
+          8,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          4096,
+          -32768,
+          1,
+          1,
+          64,
+          262144,
+          4096
+        ]
+      },
+      "id": "numpy.power:0165",
+      "input": {
+        "x": -8,
+        "y": [
+          4,
+          5,
+          0,
+          0,
+          2,
+          6,
+          4
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          16,
+          1296,
+          16,
+          4096,
+          81,
+          4096,
+          256,
+          14641,
+          20736,
+          20736
+        ]
+      },
+      "id": "numpy.power:0166",
+      "input": {
+        "x": [
+          -2,
+          -6,
+          -2,
+          8,
+          3,
+          8,
+          -4,
+          -11,
+          12,
+          -12
+        ],
+        "y": 4
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          100,
+          -9,
+          19487171,
+          5,
+          100000000,
+          -12
+        ]
+      },
+      "id": "numpy.power:0167",
+      "input": {
+        "x": [
+          -10,
+          -9,
+          11,
+          5,
+          -10,
+          -12
+        ],
+        "y": [
+          2,
+          1,
+          7,
+          1,
+          8,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1000,
+          -10,
+          -1000,
+          100000000,
+          -10,
+          -10,
+          100,
+          -10000000,
+          100000000,
+          1
+        ]
+      },
+      "id": "numpy.power:0168",
+      "input": {
+        "x": -10,
+        "y": [
+          3,
+          1,
+          3,
+          8,
+          1,
+          1,
+          2,
+          7,
+          8,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          65536,
+          16777216,
+          1679616,
+          16777216,
+          390625,
+          6561,
+          100000000
+        ]
+      },
+      "id": "numpy.power:0169",
+      "input": {
+        "x": [
+          4,
+          8,
+          -6,
+          -8,
+          5,
+          -3,
+          10
+        ],
+        "y": 8
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          16,
+          9,
+          1,
+          1,
+          1,
+          -1000
+        ]
+      },
+      "id": "numpy.power:0170",
+      "input": {
+        "x": [
+          4,
+          9,
+          1,
+          -12,
+          1,
+          -10
+        ],
+        "y": [
+          2,
+          1,
+          3,
+          0,
+          7,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          -1,
+          1,
+          -1,
+          1
+        ]
+      },
+      "id": "numpy.power:0171",
+      "input": {
+        "x": -1,
+        "y": [
+          6,
+          2,
+          4,
+          2,
+          3,
+          4,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          -7,
+          2,
+          1,
+          10
+        ]
+      },
+      "id": "numpy.power:0172",
+      "input": {
+        "x": [
+          3,
+          -7,
+          2,
+          1,
+          10
+        ],
+        "y": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -59049,
+          1,
+          1000000,
+          1,
+          -2097152,
+          81,
+          1
+        ]
+      },
+      "id": "numpy.power:0173",
+      "input": {
+        "x": [
+          -9,
+          1,
+          -10,
+          -5,
+          -8,
+          3,
+          1
+        ],
+        "y": [
+          5,
+          5,
+          6,
+          0,
+          7,
+          4,
+          4
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          16,
+          -8,
+          1,
+          256,
+          64,
+          -128,
+          -2,
+          4
+        ]
+      },
+      "id": "numpy.power:0174",
+      "input": {
+        "x": -2,
+        "y": [
+          1,
+          4,
+          3,
+          0,
+          8,
+          6,
+          7,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2097152
+        ]
+      },
+      "id": "numpy.power:0175",
+      "input": {
+        "x": [
+          -8
+        ],
+        "y": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          64,
+          59049,
+          625,
+          -2097152,
+          0,
+          16777216,
+          1,
+          1331,
+          2
+        ]
+      },
+      "id": "numpy.power:0176",
+      "input": {
+        "x": [
+          -1,
+          2,
+          9,
+          -5,
+          -8,
+          0,
+          8,
+          1,
+          11,
+          2
+        ],
+        "y": [
+          5,
+          6,
+          5,
+          4,
+          7,
+          5,
+          8,
+          5,
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2401,
+          7,
+          823543,
+          117649,
+          5764801,
+          343,
+          7,
+          5764801,
+          343,
+          16807
+        ]
+      },
+      "id": "numpy.power:0177",
+      "input": {
+        "x": 7,
+        "y": [
+          4,
+          1,
+          7,
+          6,
+          8,
+          3,
+          1,
+          8,
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.power:0178",
+      "input": {
+        "x": [
+          4,
+          9,
+          -12,
+          -11,
+          5,
+          4,
+          3,
+          1,
+          12,
+          -11
+        ],
+        "y": 0
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          4096,
+          64,
+          1,
+          2187,
+          531441
+        ]
+      },
+      "id": "numpy.power:0179",
+      "input": {
+        "x": [
+          4,
+          8,
+          1,
+          3,
+          -9
+        ],
+        "y": [
+          6,
+          2,
+          3,
+          7,
+          6
+        ]
+      }
+    }
+  ]
+}

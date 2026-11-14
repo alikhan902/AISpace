@@ -1,0 +1,119 @@
+{
+  "elapsed_seconds": 2.8402441589998944,
+  "finished_at": "2026-11-14T13:07:31.106078+00:00",
+  "parsed": {
+    "algorithm": [
+      "Use binary search to find the insertion points in a sorted array `a`.",
+      "For 'left' side, find the first suitable index where `v` can be inserted while maintaining order.",
+      "For 'right' side, find the last suitable index where `v` can be inserted while maintaining order."
+    ],
+    "constraints": [
+      "If `sorter` is provided, the returned indices refer to the sorted array `a` and not the original array `a`.",
+      "If `side` is 'left', return the first suitable index; if 'right', return the last suitable index.",
+      "If no suitable index is found, return 0 or N (length of `a`), depending on the side.",
+      "If `v` is a list, return a list of indices with the same shape as `v`."
+    ],
+    "edge_cases": [
+      "When `v` is empty, return an empty list.",
+      "When `a` is empty, return 0 or N (length of `a`), depending on the side.",
+      "When `v` is a scalar and `a` is empty, return 0.",
+      "When `v` contains `nan` values, handle them according to the NumPy implementation."
+    ],
+    "inputs": "a is a nondecreasing list of integers, possibly empty; v is an integer or list of integers; side is 'left' or 'right'.",
+    "method_id": "numpy.searchsorted",
+    "output": "int for scalar v and list[int] for list v.",
+    "purpose": "Find the indices into a sorted array `a` such that, if the corresponding elements in `v` were inserted before the indices, the order of `a` would be preserved.",
+    "signature": "solve(a, v, side='left')"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"a is a nondecreasing list of integers, possibly empty; v is an integer or list of integers; side is 'left' or 'right'. Return int for scalar v and list[int] for list v. No sorter argument.\",\n  \"documentation\": \"Find indices where elements should be inserted to maintain order.\\n\\nFind the indices into a sorted array `a` such that, if the\\ncorresponding elements in `v` were inserted before the indices, the\\norder of `a` would be preserved.\\n\\nAssuming that `a` is sorted:\\n\\n======  ============================\\n`side`  returned index `i` satisfies\\n======  ============================\\nleft    ``a[i-1] < v <= a[i]``\\nright   ``a[i-1] <= v < a[i]``\\n======  ============================\\n\\nParameters\\n----------\\na : 1-D array_like\\n    Input array. If `sorter` is None, then it must be sorted in\\n    ascending order, otherwise `sorter` must be an array of indices\\n    that sort it.\\nv : array_like\\n    Values to insert into `a`.\\nside : {'left', 'right'}, optional\\n    If 'left', the index of the first suitable location found is given.\\n    If 'right', return the last such index.  If there is no suitable\\n    index, return either 0 or N (where N is the length of `a`).\\nsorter : 1-D array_like, optional\\n    Optional array of integer indices that sort array a into ascending\\n    order. They are typically the result of argsort.\\n\\nReturns\\n-------\\nindices : int or array of ints\\n    Array of insertion points with the same shape as `v`,\\n    or an integer if `v` is a scalar.\\n\\nSee Also\\n--------\\nsort : Return a sorted copy of an array.\\nhistogram : Produce histogram from 1-D data.\\n\\nNotes\\n-----\\nBinary search is used to find the required insertion points.\\n\\nAs of NumPy 1.4.0 `searchsorted` works with real/complex arrays containing\\n`nan` values. The enhanced sort order is documented in `sort`.\\n\\nThis function uses the same algorithm as the builtin python\\n`bisect.bisect_left` (``side='left'``) and `bisect.bisect_right`\\n(``side='right'``) functions, which is also vectorized\\nin the `v` argument.\\n\\nExamples\\n--------\\n>>> import numpy as np\\n>>> np.searchsorted([11,12,13,14,15], 13)\\n2\\n>>> np.searchsorted([11,12,13,14,15], 13, side='right')\\n3\\n>>> np.searchsorted([11,12,13,14,15], [-10, 20, 12, 13])\\narray([0, 5, 1, 2])\\n\\nWhen `sorter` is used, the returned indices refer to the sorted\\narray of `a` and not `a` itself:\\n\\n>>> a = np.array([40, 10, 20, 30])\\n>>> sorter = np.argsort(a)\\n>>> sorter\\narray([1, 2, 3, 0])  # Indices that would sort the array 'a'\\n>>> result = np.searchsorted(a, 25, sorter=sorter)\\n>>> result\\n2\\n>>> a[sorter[result]]\\n30  # The element at index 2 of the sorted array is 30.\",\n  \"documentation_truncated\": false,\n  \"group\": \"ordering_counting\",\n  \"id\": \"numpy.searchsorted\",\n  \"library\": \"numpy\",\n  \"name\": \"searchsorted\",\n  \"signature\": \"solve(a, v, side='left')\",\n  \"version\": \"2.5.4\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:1.7b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:07:31.105736666Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 399,
+    "eval_duration": 2676415000,
+    "load_duration": 524165,
+    "message": {
+      "content": "{\n  \"method_id\": \"numpy.searchsorted\",\n  \"signature\": \"solve(a, v, side='left')\",\n  \"purpose\": \"Find the indices into a sorted array `a` such that, if the corresponding elements in `v` were inserted before the indices, the order of `a` would be preserved.\",\n  \"inputs\": \"a is a nondecreasing list of integers, possibly empty; v is an integer or list of integers; side is 'left' or 'right'.\",\n  \"output\": \"int for scalar v and list[int] for list v.\",\n  \"algorithm\": [\n    \"Use binary search to find the insertion points in a sorted array `a`.\",\n    \"For 'left' side, find the first suitable index where `v` can be inserted while maintaining order.\",\n    \"For 'right' side, find the last suitable index where `v` can be inserted while maintaining order.\"\n  ],\n  \"edge_cases\": [\n    \"When `v` is empty, return an empty list.\",\n    \"When `a` is empty, return 0 or N (length of `a`), depending on the side.\",\n    \"When `v` is a scalar and `a` is empty, return 0.\",\n    \"When `v` contains `nan` values, handle them according to the NumPy implementation.\"\n  ],\n  \"constraints\": [\n    \"If `sorter` is provided, the returned indices refer to the sorted array `a` and not the original array `a`.\",\n    \"If `side` is 'left', return the first suitable index; if 'right', return the last suitable index.\",\n    \"If no suitable index is found, return 0 or N (length of `a`), depending on the side.\",\n    \"If `v` is a list, return a list of indices with the same shape as `v`.\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:1.7b",
+    "prompt_eval_cached_count": 347,
+    "prompt_eval_count": 1236,
+    "prompt_eval_duration": 125434000,
+    "total_duration": 2839569426
+  },
+  "started_at": "2026-11-14T13:07:28.265831+00:00",
+  "valid": true
+}

@@ -1,0 +1,3849 @@
+{
+  "all_pass": false,
+  "cases": [
+    {
+      "case_id": "sympy.prevprime:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 3
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.prevprime:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "n": 4
+      },
+      "observed": {
+        "value": 3
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.prevprime:0002",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "n": 5
+      },
+      "observed": {
+        "value": 3
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.prevprime:0003",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "n": 6
+      },
+      "observed": {
+        "value": 5
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.prevprime:0004",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "n": 7
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0005",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "n": 8
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0006",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "n": 9
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0007",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "n": 10
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0008",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "n": 11
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0009",
+      "category": "exhaustive",
+      "expected": {
+        "value": 11
+      },
+      "input": {
+        "n": 12
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0010",
+      "category": "exhaustive",
+      "expected": {
+        "value": 11
+      },
+      "input": {
+        "n": 13
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0011",
+      "category": "exhaustive",
+      "expected": {
+        "value": 13
+      },
+      "input": {
+        "n": 14
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0012",
+      "category": "exhaustive",
+      "expected": {
+        "value": 13
+      },
+      "input": {
+        "n": 15
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0013",
+      "category": "exhaustive",
+      "expected": {
+        "value": 13
+      },
+      "input": {
+        "n": 16
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0014",
+      "category": "exhaustive",
+      "expected": {
+        "value": 13
+      },
+      "input": {
+        "n": 17
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0015",
+      "category": "exhaustive",
+      "expected": {
+        "value": 17
+      },
+      "input": {
+        "n": 18
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0016",
+      "category": "exhaustive",
+      "expected": {
+        "value": 17
+      },
+      "input": {
+        "n": 19
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0017",
+      "category": "exhaustive",
+      "expected": {
+        "value": 19
+      },
+      "input": {
+        "n": 20
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0018",
+      "category": "exhaustive",
+      "expected": {
+        "value": 19
+      },
+      "input": {
+        "n": 21
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0019",
+      "category": "exhaustive",
+      "expected": {
+        "value": 19
+      },
+      "input": {
+        "n": 22
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0020",
+      "category": "exhaustive",
+      "expected": {
+        "value": 19
+      },
+      "input": {
+        "n": 23
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0021",
+      "category": "exhaustive",
+      "expected": {
+        "value": 23
+      },
+      "input": {
+        "n": 24
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0022",
+      "category": "exhaustive",
+      "expected": {
+        "value": 23
+      },
+      "input": {
+        "n": 25
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0023",
+      "category": "exhaustive",
+      "expected": {
+        "value": 23
+      },
+      "input": {
+        "n": 26
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0024",
+      "category": "exhaustive",
+      "expected": {
+        "value": 23
+      },
+      "input": {
+        "n": 27
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0025",
+      "category": "exhaustive",
+      "expected": {
+        "value": 23
+      },
+      "input": {
+        "n": 28
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0026",
+      "category": "exhaustive",
+      "expected": {
+        "value": 23
+      },
+      "input": {
+        "n": 29
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0027",
+      "category": "exhaustive",
+      "expected": {
+        "value": 29
+      },
+      "input": {
+        "n": 30
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0028",
+      "category": "exhaustive",
+      "expected": {
+        "value": 29
+      },
+      "input": {
+        "n": 31
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0029",
+      "category": "exhaustive",
+      "expected": {
+        "value": 31
+      },
+      "input": {
+        "n": 32
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0030",
+      "category": "exhaustive",
+      "expected": {
+        "value": 31
+      },
+      "input": {
+        "n": 33
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0031",
+      "category": "exhaustive",
+      "expected": {
+        "value": 31
+      },
+      "input": {
+        "n": 34
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0032",
+      "category": "exhaustive",
+      "expected": {
+        "value": 31
+      },
+      "input": {
+        "n": 35
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0033",
+      "category": "exhaustive",
+      "expected": {
+        "value": 31
+      },
+      "input": {
+        "n": 36
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0034",
+      "category": "exhaustive",
+      "expected": {
+        "value": 31
+      },
+      "input": {
+        "n": 37
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0035",
+      "category": "exhaustive",
+      "expected": {
+        "value": 37
+      },
+      "input": {
+        "n": 38
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0036",
+      "category": "exhaustive",
+      "expected": {
+        "value": 37
+      },
+      "input": {
+        "n": 39
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0037",
+      "category": "exhaustive",
+      "expected": {
+        "value": 37
+      },
+      "input": {
+        "n": 40
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0038",
+      "category": "exhaustive",
+      "expected": {
+        "value": 37
+      },
+      "input": {
+        "n": 41
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0039",
+      "category": "exhaustive",
+      "expected": {
+        "value": 41
+      },
+      "input": {
+        "n": 42
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0040",
+      "category": "exhaustive",
+      "expected": {
+        "value": 41
+      },
+      "input": {
+        "n": 43
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0041",
+      "category": "exhaustive",
+      "expected": {
+        "value": 43
+      },
+      "input": {
+        "n": 44
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0042",
+      "category": "exhaustive",
+      "expected": {
+        "value": 43
+      },
+      "input": {
+        "n": 45
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0043",
+      "category": "exhaustive",
+      "expected": {
+        "value": 43
+      },
+      "input": {
+        "n": 46
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0044",
+      "category": "exhaustive",
+      "expected": {
+        "value": 43
+      },
+      "input": {
+        "n": 47
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0045",
+      "category": "exhaustive",
+      "expected": {
+        "value": 47
+      },
+      "input": {
+        "n": 48
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0046",
+      "category": "exhaustive",
+      "expected": {
+        "value": 47
+      },
+      "input": {
+        "n": 49
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0047",
+      "category": "exhaustive",
+      "expected": {
+        "value": 47
+      },
+      "input": {
+        "n": 50
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0048",
+      "category": "exhaustive",
+      "expected": {
+        "value": 47
+      },
+      "input": {
+        "n": 51
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0049",
+      "category": "exhaustive",
+      "expected": {
+        "value": 47
+      },
+      "input": {
+        "n": 52
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0050",
+      "category": "exhaustive",
+      "expected": {
+        "value": 47
+      },
+      "input": {
+        "n": 53
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0051",
+      "category": "exhaustive",
+      "expected": {
+        "value": 53
+      },
+      "input": {
+        "n": 54
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0052",
+      "category": "exhaustive",
+      "expected": {
+        "value": 53
+      },
+      "input": {
+        "n": 55
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0053",
+      "category": "exhaustive",
+      "expected": {
+        "value": 53
+      },
+      "input": {
+        "n": 56
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0054",
+      "category": "exhaustive",
+      "expected": {
+        "value": 53
+      },
+      "input": {
+        "n": 57
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0055",
+      "category": "exhaustive",
+      "expected": {
+        "value": 53
+      },
+      "input": {
+        "n": 58
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0056",
+      "category": "exhaustive",
+      "expected": {
+        "value": 53
+      },
+      "input": {
+        "n": 59
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0057",
+      "category": "exhaustive",
+      "expected": {
+        "value": 59
+      },
+      "input": {
+        "n": 60
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0058",
+      "category": "exhaustive",
+      "expected": {
+        "value": 59
+      },
+      "input": {
+        "n": 61
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0059",
+      "category": "exhaustive",
+      "expected": {
+        "value": 61
+      },
+      "input": {
+        "n": 62
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0060",
+      "category": "exhaustive",
+      "expected": {
+        "value": 61
+      },
+      "input": {
+        "n": 63
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0061",
+      "category": "exhaustive",
+      "expected": {
+        "value": 61
+      },
+      "input": {
+        "n": 64
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0062",
+      "category": "exhaustive",
+      "expected": {
+        "value": 61
+      },
+      "input": {
+        "n": 65
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0063",
+      "category": "exhaustive",
+      "expected": {
+        "value": 61
+      },
+      "input": {
+        "n": 66
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0064",
+      "category": "exhaustive",
+      "expected": {
+        "value": 61
+      },
+      "input": {
+        "n": 67
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0065",
+      "category": "exhaustive",
+      "expected": {
+        "value": 67
+      },
+      "input": {
+        "n": 68
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0066",
+      "category": "exhaustive",
+      "expected": {
+        "value": 67
+      },
+      "input": {
+        "n": 69
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0067",
+      "category": "exhaustive",
+      "expected": {
+        "value": 67
+      },
+      "input": {
+        "n": 70
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0068",
+      "category": "exhaustive",
+      "expected": {
+        "value": 67
+      },
+      "input": {
+        "n": 71
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0069",
+      "category": "exhaustive",
+      "expected": {
+        "value": 71
+      },
+      "input": {
+        "n": 72
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0070",
+      "category": "exhaustive",
+      "expected": {
+        "value": 71
+      },
+      "input": {
+        "n": 73
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0071",
+      "category": "exhaustive",
+      "expected": {
+        "value": 73
+      },
+      "input": {
+        "n": 74
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0072",
+      "category": "exhaustive",
+      "expected": {
+        "value": 73
+      },
+      "input": {
+        "n": 75
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0073",
+      "category": "exhaustive",
+      "expected": {
+        "value": 73
+      },
+      "input": {
+        "n": 76
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0074",
+      "category": "exhaustive",
+      "expected": {
+        "value": 73
+      },
+      "input": {
+        "n": 77
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0075",
+      "category": "exhaustive",
+      "expected": {
+        "value": 73
+      },
+      "input": {
+        "n": 78
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0076",
+      "category": "exhaustive",
+      "expected": {
+        "value": 73
+      },
+      "input": {
+        "n": 79
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0077",
+      "category": "exhaustive",
+      "expected": {
+        "value": 79
+      },
+      "input": {
+        "n": 80
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0078",
+      "category": "exhaustive",
+      "expected": {
+        "value": 79
+      },
+      "input": {
+        "n": 81
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0079",
+      "category": "exhaustive",
+      "expected": {
+        "value": 79
+      },
+      "input": {
+        "n": 82
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0080",
+      "category": "exhaustive",
+      "expected": {
+        "value": 79
+      },
+      "input": {
+        "n": 83
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0081",
+      "category": "exhaustive",
+      "expected": {
+        "value": 83
+      },
+      "input": {
+        "n": 84
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0082",
+      "category": "exhaustive",
+      "expected": {
+        "value": 83
+      },
+      "input": {
+        "n": 85
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0083",
+      "category": "exhaustive",
+      "expected": {
+        "value": 83
+      },
+      "input": {
+        "n": 86
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0084",
+      "category": "exhaustive",
+      "expected": {
+        "value": 83
+      },
+      "input": {
+        "n": 87
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0085",
+      "category": "exhaustive",
+      "expected": {
+        "value": 83
+      },
+      "input": {
+        "n": 88
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0086",
+      "category": "exhaustive",
+      "expected": {
+        "value": 83
+      },
+      "input": {
+        "n": 89
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0087",
+      "category": "exhaustive",
+      "expected": {
+        "value": 89
+      },
+      "input": {
+        "n": 90
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0088",
+      "category": "exhaustive",
+      "expected": {
+        "value": 89
+      },
+      "input": {
+        "n": 91
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0089",
+      "category": "exhaustive",
+      "expected": {
+        "value": 89
+      },
+      "input": {
+        "n": 92
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0090",
+      "category": "exhaustive",
+      "expected": {
+        "value": 89
+      },
+      "input": {
+        "n": 93
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0091",
+      "category": "exhaustive",
+      "expected": {
+        "value": 89
+      },
+      "input": {
+        "n": 94
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0092",
+      "category": "exhaustive",
+      "expected": {
+        "value": 89
+      },
+      "input": {
+        "n": 95
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0093",
+      "category": "exhaustive",
+      "expected": {
+        "value": 89
+      },
+      "input": {
+        "n": 96
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0094",
+      "category": "exhaustive",
+      "expected": {
+        "value": 89
+      },
+      "input": {
+        "n": 97
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0095",
+      "category": "exhaustive",
+      "expected": {
+        "value": 97
+      },
+      "input": {
+        "n": 98
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0096",
+      "category": "exhaustive",
+      "expected": {
+        "value": 97
+      },
+      "input": {
+        "n": 99
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0097",
+      "category": "exhaustive",
+      "expected": {
+        "value": 97
+      },
+      "input": {
+        "n": 100
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0098",
+      "category": "random",
+      "expected": {
+        "value": 113
+      },
+      "input": {
+        "n": 121
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0099",
+      "category": "random",
+      "expected": {
+        "value": 167
+      },
+      "input": {
+        "n": 169
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0100",
+      "category": "random",
+      "expected": {
+        "value": 211
+      },
+      "input": {
+        "n": 221
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0101",
+      "category": "random",
+      "expected": {
+        "value": 337
+      },
+      "input": {
+        "n": 341
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0102",
+      "category": "random",
+      "expected": {
+        "value": 557
+      },
+      "input": {
+        "n": 561
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0103",
+      "category": "random",
+      "expected": {
+        "value": 1103
+      },
+      "input": {
+        "n": 1105
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0104",
+      "category": "random",
+      "expected": {
+        "value": 1723
+      },
+      "input": {
+        "n": 1729
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0105",
+      "category": "random",
+      "expected": {
+        "value": 2039
+      },
+      "input": {
+        "n": 2047
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0106",
+      "category": "random",
+      "expected": {
+        "value": 4093
+      },
+      "input": {
+        "n": 4096
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0107",
+      "category": "random",
+      "expected": {
+        "value": 4993
+      },
+      "input": {
+        "n": 4999
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0108",
+      "category": "random",
+      "expected": {
+        "value": 4999
+      },
+      "input": {
+        "n": 5000
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0109",
+      "category": "random",
+      "expected": {
+        "value": 409
+      },
+      "input": {
+        "n": 412
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0110",
+      "category": "random",
+      "expected": {
+        "value": 1567
+      },
+      "input": {
+        "n": 1569
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0111",
+      "category": "random",
+      "expected": {
+        "value": 4789
+      },
+      "input": {
+        "n": 4790
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0112",
+      "category": "random",
+      "expected": {
+        "value": 4567
+      },
+      "input": {
+        "n": 4569
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0113",
+      "category": "random",
+      "expected": {
+        "value": 4519
+      },
+      "input": {
+        "n": 4521
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0114",
+      "category": "random",
+      "expected": {
+        "value": 4051
+      },
+      "input": {
+        "n": 4053
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0115",
+      "category": "random",
+      "expected": {
+        "value": 3803
+      },
+      "input": {
+        "n": 3812
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0116",
+      "category": "random",
+      "expected": {
+        "value": 163
+      },
+      "input": {
+        "n": 166
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0117",
+      "category": "random",
+      "expected": {
+        "value": 4099
+      },
+      "input": {
+        "n": 4107
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0118",
+      "category": "random",
+      "expected": {
+        "value": 3923
+      },
+      "input": {
+        "n": 3929
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0119",
+      "category": "random",
+      "expected": {
+        "value": 2971
+      },
+      "input": {
+        "n": 2993
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0120",
+      "category": "random",
+      "expected": {
+        "value": 4951
+      },
+      "input": {
+        "n": 4954
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0121",
+      "category": "random",
+      "expected": {
+        "value": 3229
+      },
+      "input": {
+        "n": 3230
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0122",
+      "category": "random",
+      "expected": {
+        "value": 113
+      },
+      "input": {
+        "n": 124
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0123",
+      "category": "random",
+      "expected": {
+        "value": 4549
+      },
+      "input": {
+        "n": 4552
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0124",
+      "category": "random",
+      "expected": {
+        "value": 3089
+      },
+      "input": {
+        "n": 3098
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0125",
+      "category": "random",
+      "expected": {
+        "value": 1759
+      },
+      "input": {
+        "n": 1763
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0126",
+      "category": "random",
+      "expected": {
+        "value": 3391
+      },
+      "input": {
+        "n": 3395
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0127",
+      "category": "random",
+      "expected": {
+        "value": 4373
+      },
+      "input": {
+        "n": 4375
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0128",
+      "category": "random",
+      "expected": {
+        "value": 457
+      },
+      "input": {
+        "n": 459
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0129",
+      "category": "random",
+      "expected": {
+        "value": 997
+      },
+      "input": {
+        "n": 1000
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0130",
+      "category": "random",
+      "expected": {
+        "value": 907
+      },
+      "input": {
+        "n": 910
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0131",
+      "category": "random",
+      "expected": {
+        "value": 3187
+      },
+      "input": {
+        "n": 3189
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0132",
+      "category": "random",
+      "expected": {
+        "value": 1381
+      },
+      "input": {
+        "n": 1384
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0133",
+      "category": "random",
+      "expected": {
+        "value": 821
+      },
+      "input": {
+        "n": 823
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0134",
+      "category": "random",
+      "expected": {
+        "value": 3067
+      },
+      "input": {
+        "n": 3075
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0135",
+      "category": "random",
+      "expected": {
+        "value": 331
+      },
+      "input": {
+        "n": 337
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0136",
+      "category": "random",
+      "expected": {
+        "value": 317
+      },
+      "input": {
+        "n": 322
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0137",
+      "category": "random",
+      "expected": {
+        "value": 199
+      },
+      "input": {
+        "n": 211
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0138",
+      "category": "random",
+      "expected": {
+        "value": 2579
+      },
+      "input": {
+        "n": 2582
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0139",
+      "category": "random",
+      "expected": {
+        "value": 787
+      },
+      "input": {
+        "n": 793
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0140",
+      "category": "random",
+      "expected": {
+        "value": 3011
+      },
+      "input": {
+        "n": 3018
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0141",
+      "category": "random",
+      "expected": {
+        "value": 547
+      },
+      "input": {
+        "n": 556
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0142",
+      "category": "random",
+      "expected": {
+        "value": 3733
+      },
+      "input": {
+        "n": 3738
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0143",
+      "category": "random",
+      "expected": {
+        "value": 2089
+      },
+      "input": {
+        "n": 2098
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0144",
+      "category": "random",
+      "expected": {
+        "value": 4733
+      },
+      "input": {
+        "n": 4735
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0145",
+      "category": "random",
+      "expected": {
+        "value": 1789
+      },
+      "input": {
+        "n": 1801
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0146",
+      "category": "random",
+      "expected": {
+        "value": 4159
+      },
+      "input": {
+        "n": 4174
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0147",
+      "category": "random",
+      "expected": {
+        "value": 997
+      },
+      "input": {
+        "n": 1004
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0148",
+      "category": "random",
+      "expected": {
+        "value": 3011
+      },
+      "input": {
+        "n": 3016
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0149",
+      "category": "random",
+      "expected": {
+        "value": 4051
+      },
+      "input": {
+        "n": 4057
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0150",
+      "category": "random",
+      "expected": {
+        "value": 3709
+      },
+      "input": {
+        "n": 3712
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0151",
+      "category": "random",
+      "expected": {
+        "value": 3457
+      },
+      "input": {
+        "n": 3460
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0152",
+      "category": "random",
+      "expected": {
+        "value": 4703
+      },
+      "input": {
+        "n": 4709
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0153",
+      "category": "random",
+      "expected": {
+        "value": 823
+      },
+      "input": {
+        "n": 827
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0154",
+      "category": "random",
+      "expected": {
+        "value": 4051
+      },
+      "input": {
+        "n": 4054
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0155",
+      "category": "random",
+      "expected": {
+        "value": 4289
+      },
+      "input": {
+        "n": 4293
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0156",
+      "category": "random",
+      "expected": {
+        "value": 991
+      },
+      "input": {
+        "n": 995
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0157",
+      "category": "random",
+      "expected": {
+        "value": 4549
+      },
+      "input": {
+        "n": 4555
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0158",
+      "category": "random",
+      "expected": {
+        "value": 439
+      },
+      "input": {
+        "n": 443
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0159",
+      "category": "random",
+      "expected": {
+        "value": 2447
+      },
+      "input": {
+        "n": 2449
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0160",
+      "category": "random",
+      "expected": {
+        "value": 3229
+      },
+      "input": {
+        "n": 3235
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0161",
+      "category": "random",
+      "expected": {
+        "value": 4409
+      },
+      "input": {
+        "n": 4417
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0162",
+      "category": "random",
+      "expected": {
+        "value": 4463
+      },
+      "input": {
+        "n": 4479
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0163",
+      "category": "random",
+      "expected": {
+        "value": 3229
+      },
+      "input": {
+        "n": 3231
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0164",
+      "category": "random",
+      "expected": {
+        "value": 2557
+      },
+      "input": {
+        "n": 2564
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0165",
+      "category": "random",
+      "expected": {
+        "value": 173
+      },
+      "input": {
+        "n": 174
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0166",
+      "category": "random",
+      "expected": {
+        "value": 4679
+      },
+      "input": {
+        "n": 4686
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0167",
+      "category": "random",
+      "expected": {
+        "value": 3803
+      },
+      "input": {
+        "n": 3804
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0168",
+      "category": "random",
+      "expected": {
+        "value": 2791
+      },
+      "input": {
+        "n": 2795
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0169",
+      "category": "random",
+      "expected": {
+        "value": 2503
+      },
+      "input": {
+        "n": 2515
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0170",
+      "category": "random",
+      "expected": {
+        "value": 4523
+      },
+      "input": {
+        "n": 4536
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0171",
+      "category": "random",
+      "expected": {
+        "value": 787
+      },
+      "input": {
+        "n": 792
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0172",
+      "category": "random",
+      "expected": {
+        "value": 1409
+      },
+      "input": {
+        "n": 1418
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0173",
+      "category": "random",
+      "expected": {
+        "value": 823
+      },
+      "input": {
+        "n": 825
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0174",
+      "category": "random",
+      "expected": {
+        "value": 997
+      },
+      "input": {
+        "n": 1001
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0175",
+      "category": "random",
+      "expected": {
+        "value": 4561
+      },
+      "input": {
+        "n": 4566
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0176",
+      "category": "random",
+      "expected": {
+        "value": 4621
+      },
+      "input": {
+        "n": 4624
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0177",
+      "category": "random",
+      "expected": {
+        "value": 4567
+      },
+      "input": {
+        "n": 4574
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0178",
+      "category": "random",
+      "expected": {
+        "value": 487
+      },
+      "input": {
+        "n": 491
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0179",
+      "category": "random",
+      "expected": {
+        "value": 4093
+      },
+      "input": {
+        "n": 4094
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0180",
+      "category": "random",
+      "expected": {
+        "value": 1237
+      },
+      "input": {
+        "n": 1247
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0181",
+      "category": "random",
+      "expected": {
+        "value": 4261
+      },
+      "input": {
+        "n": 4262
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0182",
+      "category": "random",
+      "expected": {
+        "value": 277
+      },
+      "input": {
+        "n": 281
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0183",
+      "category": "random",
+      "expected": {
+        "value": 1367
+      },
+      "input": {
+        "n": 1372
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0184",
+      "category": "random",
+      "expected": {
+        "value": 4177
+      },
+      "input": {
+        "n": 4178
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0185",
+      "category": "random",
+      "expected": {
+        "value": 1327
+      },
+      "input": {
+        "n": 1332
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0186",
+      "category": "random",
+      "expected": {
+        "value": 4159
+      },
+      "input": {
+        "n": 4167
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0187",
+      "category": "random",
+      "expected": {
+        "value": 1321
+      },
+      "input": {
+        "n": 1322
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0188",
+      "category": "random",
+      "expected": {
+        "value": 643
+      },
+      "input": {
+        "n": 647
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0189",
+      "category": "random",
+      "expected": {
+        "value": 2777
+      },
+      "input": {
+        "n": 2780
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0190",
+      "category": "random",
+      "expected": {
+        "value": 4073
+      },
+      "input": {
+        "n": 4075
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0191",
+      "category": "random",
+      "expected": {
+        "value": 3221
+      },
+      "input": {
+        "n": 3222
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0192",
+      "category": "random",
+      "expected": {
+        "value": 1499
+      },
+      "input": {
+        "n": 1509
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0193",
+      "category": "random",
+      "expected": {
+        "value": 2749
+      },
+      "input": {
+        "n": 2750
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0194",
+      "category": "random",
+      "expected": {
+        "value": 1889
+      },
+      "input": {
+        "n": 1895
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0195",
+      "category": "random",
+      "expected": {
+        "value": 1907
+      },
+      "input": {
+        "n": 1912
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0196",
+      "category": "random",
+      "expected": {
+        "value": 3433
+      },
+      "input": {
+        "n": 3446
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0197",
+      "category": "random",
+      "expected": {
+        "value": 2621
+      },
+      "input": {
+        "n": 2626
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0198",
+      "category": "random",
+      "expected": {
+        "value": 2179
+      },
+      "input": {
+        "n": 2182
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0199",
+      "category": "random",
+      "expected": {
+        "value": 1031
+      },
+      "input": {
+        "n": 1032
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0200",
+      "category": "random",
+      "expected": {
+        "value": 3547
+      },
+      "input": {
+        "n": 3554
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0201",
+      "category": "random",
+      "expected": {
+        "value": 3271
+      },
+      "input": {
+        "n": 3293
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0202",
+      "category": "random",
+      "expected": {
+        "value": 607
+      },
+      "input": {
+        "n": 610
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0203",
+      "category": "random",
+      "expected": {
+        "value": 1291
+      },
+      "input": {
+        "n": 1293
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0204",
+      "category": "random",
+      "expected": {
+        "value": 2671
+      },
+      "input": {
+        "n": 2673
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0205",
+      "category": "random",
+      "expected": {
+        "value": 1913
+      },
+      "input": {
+        "n": 1915
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0206",
+      "category": "random",
+      "expected": {
+        "value": 1459
+      },
+      "input": {
+        "n": 1469
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0207",
+      "category": "random",
+      "expected": {
+        "value": 1433
+      },
+      "input": {
+        "n": 1434
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0208",
+      "category": "random",
+      "expected": {
+        "value": 3373
+      },
+      "input": {
+        "n": 3379
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0209",
+      "category": "random",
+      "expected": {
+        "value": 479
+      },
+      "input": {
+        "n": 484
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0210",
+      "category": "random",
+      "expected": {
+        "value": 3271
+      },
+      "input": {
+        "n": 3291
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0211",
+      "category": "random",
+      "expected": {
+        "value": 3407
+      },
+      "input": {
+        "n": 3412
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0212",
+      "category": "random",
+      "expected": {
+        "value": 223
+      },
+      "input": {
+        "n": 225
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0213",
+      "category": "random",
+      "expected": {
+        "value": 2357
+      },
+      "input": {
+        "n": 2366
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0214",
+      "category": "random",
+      "expected": {
+        "value": 3623
+      },
+      "input": {
+        "n": 3625
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0215",
+      "category": "random",
+      "expected": {
+        "value": 853
+      },
+      "input": {
+        "n": 857
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0216",
+      "category": "random",
+      "expected": {
+        "value": 4297
+      },
+      "input": {
+        "n": 4325
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0217",
+      "category": "random",
+      "expected": {
+        "value": 113
+      },
+      "input": {
+        "n": 123
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0218",
+      "category": "random",
+      "expected": {
+        "value": 2393
+      },
+      "input": {
+        "n": 2396
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0219",
+      "category": "random",
+      "expected": {
+        "value": 1123
+      },
+      "input": {
+        "n": 1127
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0220",
+      "category": "random",
+      "expected": {
+        "value": 4111
+      },
+      "input": {
+        "n": 4119
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0221",
+      "category": "random",
+      "expected": {
+        "value": 2857
+      },
+      "input": {
+        "n": 2860
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0222",
+      "category": "random",
+      "expected": {
+        "value": 409
+      },
+      "input": {
+        "n": 419
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0223",
+      "category": "random",
+      "expected": {
+        "value": 3221
+      },
+      "input": {
+        "n": 3228
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0224",
+      "category": "random",
+      "expected": {
+        "value": 523
+      },
+      "input": {
+        "n": 527
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0225",
+      "category": "random",
+      "expected": {
+        "value": 2399
+      },
+      "input": {
+        "n": 2402
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0226",
+      "category": "random",
+      "expected": {
+        "value": 3323
+      },
+      "input": {
+        "n": 3328
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0227",
+      "category": "random",
+      "expected": {
+        "value": 4723
+      },
+      "input": {
+        "n": 4726
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0228",
+      "category": "random",
+      "expected": {
+        "value": 4877
+      },
+      "input": {
+        "n": 4883
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0229",
+      "category": "random",
+      "expected": {
+        "value": 2143
+      },
+      "input": {
+        "n": 2144
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0230",
+      "category": "random",
+      "expected": {
+        "value": 2521
+      },
+      "input": {
+        "n": 2530
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0231",
+      "category": "random",
+      "expected": {
+        "value": 4691
+      },
+      "input": {
+        "n": 4702
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0232",
+      "category": "random",
+      "expected": {
+        "value": 4463
+      },
+      "input": {
+        "n": 4471
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0233",
+      "category": "random",
+      "expected": {
+        "value": 2797
+      },
+      "input": {
+        "n": 2798
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0234",
+      "category": "random",
+      "expected": {
+        "value": 4813
+      },
+      "input": {
+        "n": 4815
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0235",
+      "category": "random",
+      "expected": {
+        "value": 151
+      },
+      "input": {
+        "n": 155
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0236",
+      "category": "random",
+      "expected": {
+        "value": 157
+      },
+      "input": {
+        "n": 161
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0237",
+      "category": "random",
+      "expected": {
+        "value": 2017
+      },
+      "input": {
+        "n": 2020
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0238",
+      "category": "random",
+      "expected": {
+        "value": 773
+      },
+      "input": {
+        "n": 781
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0239",
+      "category": "random",
+      "expected": {
+        "value": 1231
+      },
+      "input": {
+        "n": 1232
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0240",
+      "category": "random",
+      "expected": {
+        "value": 1229
+      },
+      "input": {
+        "n": 1231
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0241",
+      "category": "random",
+      "expected": {
+        "value": 1499
+      },
+      "input": {
+        "n": 1502
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0242",
+      "category": "random",
+      "expected": {
+        "value": 1259
+      },
+      "input": {
+        "n": 1272
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0243",
+      "category": "random",
+      "expected": {
+        "value": 2539
+      },
+      "input": {
+        "n": 2540
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0244",
+      "category": "random",
+      "expected": {
+        "value": 919
+      },
+      "input": {
+        "n": 928
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0245",
+      "category": "random",
+      "expected": {
+        "value": 4951
+      },
+      "input": {
+        "n": 4956
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0246",
+      "category": "random",
+      "expected": {
+        "value": 4759
+      },
+      "input": {
+        "n": 4765
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0247",
+      "category": "random",
+      "expected": {
+        "value": 4261
+      },
+      "input": {
+        "n": 4268
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0248",
+      "category": "random",
+      "expected": {
+        "value": 3413
+      },
+      "input": {
+        "n": 3427
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0249",
+      "category": "random",
+      "expected": {
+        "value": 1109
+      },
+      "input": {
+        "n": 1115
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0250",
+      "category": "random",
+      "expected": {
+        "value": 3413
+      },
+      "input": {
+        "n": 3426
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0251",
+      "category": "random",
+      "expected": {
+        "value": 4243
+      },
+      "input": {
+        "n": 4246
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0252",
+      "category": "random",
+      "expected": {
+        "value": 3889
+      },
+      "input": {
+        "n": 3898
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0253",
+      "category": "random",
+      "expected": {
+        "value": 2939
+      },
+      "input": {
+        "n": 2948
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0254",
+      "category": "random",
+      "expected": {
+        "value": 3209
+      },
+      "input": {
+        "n": 3215
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.prevprime:0255",
+      "category": "random",
+      "expected": {
+        "value": 4423
+      },
+      "input": {
+        "n": 4436
+      },
+      "observed": {
+        "error": "NameError",
+        "message": "name 'is_prime' is not defined"
+      },
+      "passed": false
+    }
+  ],
+  "condition": "large_to_small",
+  "elapsed_seconds": 0.031169433999821194,
+  "group": "primes",
+  "library": "sympy",
+  "load_error": null,
+  "method_id": "sympy.prevprime",
+  "passed": 4,
+  "total": 256
+}

@@ -1,0 +1,3583 @@
+{
+  "all_pass": false,
+  "cases": [
+    {
+      "case_id": "sympy.divisor_count:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "n": 1
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 2
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0002",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 3
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0003",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "n": 4
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0004",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 5
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0005",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 6
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0006",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 7
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0007",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 8
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0008",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "n": 9
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0009",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 10
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0010",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 11
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0011",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 12
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0012",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 13
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0013",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 14
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0014",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 15
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0015",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "n": 16
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0016",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 17
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0017",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 18
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0018",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 19
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0019",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 20
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0020",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 21
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0021",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 22
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0022",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 23
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0023",
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 24
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0024",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "n": 25
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0025",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 26
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0026",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 27
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0027",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 28
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0028",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 29
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0029",
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 30
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0030",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 31
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0031",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 32
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0032",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 33
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0033",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 34
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0034",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 35
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0035",
+      "category": "exhaustive",
+      "expected": {
+        "value": 9
+      },
+      "input": {
+        "n": 36
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0036",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 37
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0037",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 38
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0038",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 39
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0039",
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 40
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0040",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 41
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0041",
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 42
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0042",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 43
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0043",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 44
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0044",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 45
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0045",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 46
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0046",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 47
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0047",
+      "category": "exhaustive",
+      "expected": {
+        "value": 10
+      },
+      "input": {
+        "n": 48
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0048",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "n": 49
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0049",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 50
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0050",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 51
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0051",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 52
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0052",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 53
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0053",
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 54
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0054",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 55
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0055",
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 56
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0056",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 57
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0057",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 58
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0058",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 59
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0059",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 60
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0060",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 61
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0061",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 62
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0062",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 63
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0063",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "n": 64
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0064",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 65
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0065",
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 66
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0066",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 67
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0067",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 68
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0068",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 69
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0069",
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 70
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0070",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 71
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0071",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 72
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0072",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 73
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0073",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 74
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0074",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 75
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0075",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 76
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0076",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 77
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0077",
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 78
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0078",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 79
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0079",
+      "category": "exhaustive",
+      "expected": {
+        "value": 10
+      },
+      "input": {
+        "n": 80
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0080",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "n": 81
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0081",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 82
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0082",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 83
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0083",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 84
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0084",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 85
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0085",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 86
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0086",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 87
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0087",
+      "category": "exhaustive",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 88
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0088",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 89
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0089",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 90
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0090",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 91
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0091",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 92
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0092",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 93
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0093",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 94
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0094",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 95
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0095",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 96
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0096",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 97
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0097",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 98
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0098",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 99
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0099",
+      "category": "exhaustive",
+      "expected": {
+        "value": 9
+      },
+      "input": {
+        "n": 100
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0100",
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "n": 121
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0101",
+      "category": "random",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "n": 169
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0102",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 221
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0103",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 341
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0104",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 561
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0105",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 1105
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0106",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 1729
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0107",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 2047
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0108",
+      "category": "random",
+      "expected": {
+        "value": 13
+      },
+      "input": {
+        "n": 4096
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0109",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 4999
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0110",
+      "category": "random",
+      "expected": {
+        "value": 20
+      },
+      "input": {
+        "n": 5000
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0111",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 3553
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0112",
+      "category": "random",
+      "expected": {
+        "value": 16
+      },
+      "input": {
+        "n": 1518
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0113",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 2634
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0114",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 2053
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0115",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 1047
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0116",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 1967
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0117",
+      "category": "random",
+      "expected": {
+        "value": 14
+      },
+      "input": {
+        "n": 1856
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0118",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 3037
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0119",
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 2367
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0120",
+      "category": "random",
+      "expected": {
+        "value": 16
+      },
+      "input": {
+        "n": 270
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0121",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 1418
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0122",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 4331
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0123",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 2374
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0124",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 3507
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0125",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 897
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0126",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 3083
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0127",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 890
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0128",
+      "category": "random",
+      "expected": {
+        "value": 28
+      },
+      "input": {
+        "n": 4416
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0129",
+      "category": "random",
+      "expected": {
+        "value": 18
+      },
+      "input": {
+        "n": 1700
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0130",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 1771
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0131",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 4474
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0132",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 982
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0133",
+      "category": "random",
+      "expected": {
+        "value": 20
+      },
+      "input": {
+        "n": 2560
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0134",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 2686
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0135",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 2755
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0136",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 2261
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0137",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 2833
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0138",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 4713
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0139",
+      "category": "random",
+      "expected": {
+        "value": 16
+      },
+      "input": {
+        "n": 4515
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0140",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 1735
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0141",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 530
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0142",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 4501
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0143",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 3421
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0144",
+      "category": "random",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 1425
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0145",
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 212
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0146",
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 2036
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0147",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 1563
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0148",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 3955
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0149",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 781
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0150",
+      "category": "random",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 4014
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0151",
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 539
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0152",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 4381
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0153",
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 3644
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0154",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 1649
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0155",
+      "category": "random",
+      "expected": {
+        "value": 24
+      },
+      "input": {
+        "n": 2464
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0156",
+      "category": "random",
+      "expected": {
+        "value": 15
+      },
+      "input": {
+        "n": 144
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0157",
+      "category": "random",
+      "expected": {
+        "value": 18
+      },
+      "input": {
+        "n": 3042
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0158",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 2923
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0159",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 4865
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0160",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 3035
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0161",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 1238
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0162",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 1959
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0163",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 3487
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0164",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 3183
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0165",
+      "category": "random",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 3796
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0166",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 3027
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0167",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 4015
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0168",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 1793
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0169",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 1635
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0170",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 1249
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0171",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 2274
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0172",
+      "category": "random",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 3516
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0173",
+      "category": "random",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 3460
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0174",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 1647
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0175",
+      "category": "random",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 2848
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0176",
+      "category": "random",
+      "expected": {
+        "value": 16
+      },
+      "input": {
+        "n": 4470
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0177",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 638
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0178",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 1895
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0179",
+      "category": "random",
+      "expected": {
+        "value": 16
+      },
+      "input": {
+        "n": 210
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0180",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 727
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0181",
+      "category": "random",
+      "expected": {
+        "value": 20
+      },
+      "input": {
+        "n": 2288
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0182",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 230
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0183",
+      "category": "random",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 1078
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0184",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 4267
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0185",
+      "category": "random",
+      "expected": {
+        "value": 16
+      },
+      "input": {
+        "n": 4520
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0186",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 643
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0187",
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 2425
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0188",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 1066
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0189",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 2229
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0190",
+      "category": "random",
+      "expected": {
+        "value": 9
+      },
+      "input": {
+        "n": 256
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0191",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 1390
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0192",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 4558
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0193",
+      "category": "random",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 2890
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0194",
+      "category": "random",
+      "expected": {
+        "value": 24
+      },
+      "input": {
+        "n": 4644
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0195",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 1883
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0196",
+      "category": "random",
+      "expected": {
+        "value": 24
+      },
+      "input": {
+        "n": 3808
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0197",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 1987
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0198",
+      "category": "random",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 3195
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0199",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 2897
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0200",
+      "category": "random",
+      "expected": {
+        "value": 24
+      },
+      "input": {
+        "n": 2460
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0201",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 665
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0202",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 1581
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0203",
+      "category": "random",
+      "expected": {
+        "value": 16
+      },
+      "input": {
+        "n": 3190
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0204",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 1599
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0205",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 247
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0206",
+      "category": "random",
+      "expected": {
+        "value": 30
+      },
+      "input": {
+        "n": 2352
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0207",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 129
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0208",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 4251
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0209",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 1763
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0210",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 3554
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0211",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 4105
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0212",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 3017
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0213",
+      "category": "random",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 2934
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0214",
+      "category": "random",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 3940
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0215",
+      "category": "random",
+      "expected": {
+        "value": 40
+      },
+      "input": {
+        "n": 1680
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0216",
+      "category": "random",
+      "expected": {
+        "value": 18
+      },
+      "input": {
+        "n": 2196
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0217",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 4357
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0218",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 1495
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0219",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 2674
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0220",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 1003
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0221",
+      "category": "random",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 348
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0222",
+      "category": "random",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 4235
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0223",
+      "category": "random",
+      "expected": {
+        "value": 15
+      },
+      "input": {
+        "n": 4624
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0224",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 4523
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0225",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 1079
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0226",
+      "category": "random",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 812
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0227",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 755
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0228",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 1978
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0229",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 3358
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0230",
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 833
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0231",
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 356
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0232",
+      "category": "random",
+      "expected": {
+        "value": 18
+      },
+      "input": {
+        "n": 2028
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0233",
+      "category": "random",
+      "expected": {
+        "value": 16
+      },
+      "input": {
+        "n": 2457
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0234",
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 363
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0235",
+      "category": "random",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 3114
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0236",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 2546
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0237",
+      "category": "random",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "n": 1627
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0238",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 502
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0239",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 3601
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0240",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 2489
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0241",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 4102
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0242",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 1366
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0243",
+      "category": "random",
+      "expected": {
+        "value": 16
+      },
+      "input": {
+        "n": 3942
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0244",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 2077
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0245",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 1653
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0246",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 2757
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0247",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 2498
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0248",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 958
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0249",
+      "category": "random",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "n": 3639
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0250",
+      "category": "random",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "n": 1175
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0251",
+      "category": "random",
+      "expected": {
+        "value": 24
+      },
+      "input": {
+        "n": 3978
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0252",
+      "category": "random",
+      "expected": {
+        "value": 8
+      },
+      "input": {
+        "n": 2874
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0253",
+      "category": "random",
+      "expected": {
+        "value": 16
+      },
+      "input": {
+        "n": 4758
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.divisor_count:0254",
+      "category": "random",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "n": 1460
+      },
+      "observed": {
+        "error": "SyntaxError:'(' was never closed (<unknown>, line 5)"
+      },
+      "passed": false
+    }
+  ],
+  "condition": "small_to_large",
+  "elapsed_seconds": 0.026488652999887563,
+  "group": "divisors",
+  "library": "sympy",
+  "load_error": "SyntaxError:'(' was never closed (<unknown>, line 5)",
+  "method_id": "sympy.divisor_count",
+  "passed": 0,
+  "total": 255
+}

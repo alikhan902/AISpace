@@ -1,0 +1,23 @@
+{
+  "algorithm": [
+    "Perform a BFS traversal of the graph starting from each unvisited node.",
+    "Track visited nodes and build components as we traverse the graph.",
+    "Ensure components are internally sorted and the outer list is lexicographically sorted."
+  ],
+  "constraints": [
+    "Edges are distinct and represent a simple undirected graph.",
+    "Vertices are numbered from 0 to n-1.",
+    "The graph is undirected and unweighted.",
+    "Components are returned as internally sorted lists, with the outer list lexicographically sorted."
+  ],
+  "edge_cases": [
+    "When the graph has a single node with no edges (connected component of size 1).",
+    "When the graph has no edges (all nodes are isolated).",
+    "When the graph is disconnected (multiple components)."
+  ],
+  "inputs": "n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.",
+  "method_id": "networkx.connected_components",
+  "output": "A list of sets, where each set represents a connected component of the graph.",
+  "purpose": "Generate connected components of an undirected graph.",
+  "signature": "solve(n, edges)"
+}

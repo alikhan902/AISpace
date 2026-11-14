@@ -1,0 +1,25 @@
+{
+  "algorithm": [
+    "Determine the maximum value in the input list.",
+    "Create an output list with length equal to max_value + 1.",
+    "Initialize all elements of the output list to 0.",
+    "Iterate through each element in the input list and increment the corresponding index in the output list."
+  ],
+  "constraints": [
+    "Input list must be of nonnegative integers.",
+    "minlength must be a nonnegative integer.",
+    "If minlength is specified, it must be less than or equal to the maximum value in the input list.",
+    "If minlength is not specified, the output list will have length equal to the maximum value in the input list plus one."
+  ],
+  "edge_cases": [
+    "Empty input list: returns an empty list.",
+    "Input list contains negative values: raises ValueError.",
+    "minlength is negative: raises ValueError.",
+    "Input list is not 1-dimensional: raises ValueError."
+  ],
+  "inputs": "a is a list of nonnegative integers; minlength is a nonnegative integer. Empty input is allowed.",
+  "method_id": "numpy.bincount",
+  "output": "A list of integers where each index corresponds to the count of that value in the input list. The length of the output is equal to the maximum value in the input list plus one.",
+  "purpose": "Count the number of occurrences of each value in a list of nonnegative integers using NumPy's default unweighted behavior.",
+  "signature": "solve(a, minlength=0)"
+}

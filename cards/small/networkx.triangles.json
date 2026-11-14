@@ -1,0 +1,25 @@
+{
+  "algorithm": [
+    "Initialize a dictionary to store triangle counts for each vertex.",
+    "For each vertex, iterate through all possible pairs of vertices that form edges with it.",
+    "For each valid edge pair, increment the triangle count for the vertex that is the common endpoint of the edge pair.",
+    "Return the dictionary of triangle counts."
+  ],
+  "constraints": [
+    "Vertices are numbered 0 to n-1.",
+    "Edges are distinct and satisfy 0 <= u < v < n.",
+    "Self loops are ignored.",
+    "Only isolated vertices are counted as triangles."
+  ],
+  "edge_cases": [
+    "n = 1: Only one vertex, no triangles.",
+    "n = 2: Two vertices with no edge, no triangles.",
+    "n = 3: Three vertices with all edges, one triangle.",
+    "n = 4: Four vertices with all edges, six triangles."
+  ],
+  "inputs": "n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.",
+  "method_id": "networkx.triangles",
+  "output": "A dictionary mapping every string vertex key to its integer triangle count.",
+  "purpose": "Compute the number of triangles in a graph.",
+  "signature": "solve(n, edges)"
+}

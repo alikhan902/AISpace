@@ -1,0 +1,4692 @@
+{
+  "all_pass": false,
+  "cases": [
+    {
+      "case_id": "sympy.factorint:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": {}
+      },
+      "input": {
+        "n": 1
+      },
+      "observed": {
+        "value": {}
+      },
+      "passed": true
+    },
+    {
+      "case_id": "sympy.factorint:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 1
+        }
+      },
+      "input": {
+        "n": 2
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0002",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "3": 1
+        }
+      },
+      "input": {
+        "n": 3
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0003",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 2
+        }
+      },
+      "input": {
+        "n": 4
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0004",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 5
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0005",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 1,
+          "3": 1
+        }
+      },
+      "input": {
+        "n": 6
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0006",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 7
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0007",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 3
+        }
+      },
+      "input": {
+        "n": 8
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0008",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "3": 2
+        }
+      },
+      "input": {
+        "n": 9
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0009",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 1,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 10
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0010",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "11": 1
+        }
+      },
+      "input": {
+        "n": 11
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0011",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 2,
+          "3": 1
+        }
+      },
+      "input": {
+        "n": 12
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0012",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "13": 1
+        }
+      },
+      "input": {
+        "n": 13
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0013",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 1,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 14
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0014",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "3": 1,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 15
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0015",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 4
+        }
+      },
+      "input": {
+        "n": 16
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0016",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "17": 1
+        }
+      },
+      "input": {
+        "n": 17
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0017",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 1,
+          "3": 2
+        }
+      },
+      "input": {
+        "n": 18
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0018",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "19": 1
+        }
+      },
+      "input": {
+        "n": 19
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0019",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 2,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 20
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0020",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "3": 1,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 21
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0021",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "11": 1,
+          "2": 1
+        }
+      },
+      "input": {
+        "n": 22
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0022",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "23": 1
+        }
+      },
+      "input": {
+        "n": 23
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0023",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 3,
+          "3": 1
+        }
+      },
+      "input": {
+        "n": 24
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0024",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "5": 2
+        }
+      },
+      "input": {
+        "n": 25
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0025",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "13": 1,
+          "2": 1
+        }
+      },
+      "input": {
+        "n": 26
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0026",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "3": 3
+        }
+      },
+      "input": {
+        "n": 27
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0027",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 2,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 28
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0028",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "29": 1
+        }
+      },
+      "input": {
+        "n": 29
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0029",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 1,
+          "3": 1,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 30
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0030",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "31": 1
+        }
+      },
+      "input": {
+        "n": 31
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0031",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 5
+        }
+      },
+      "input": {
+        "n": 32
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0032",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "11": 1,
+          "3": 1
+        }
+      },
+      "input": {
+        "n": 33
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0033",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "17": 1,
+          "2": 1
+        }
+      },
+      "input": {
+        "n": 34
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0034",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "5": 1,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 35
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0035",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 2,
+          "3": 2
+        }
+      },
+      "input": {
+        "n": 36
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0036",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "37": 1
+        }
+      },
+      "input": {
+        "n": 37
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0037",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "19": 1,
+          "2": 1
+        }
+      },
+      "input": {
+        "n": 38
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0038",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "13": 1,
+          "3": 1
+        }
+      },
+      "input": {
+        "n": 39
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0039",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 3,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 40
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0040",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "41": 1
+        }
+      },
+      "input": {
+        "n": 41
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0041",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 1,
+          "3": 1,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 42
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0042",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "43": 1
+        }
+      },
+      "input": {
+        "n": 43
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0043",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "11": 1,
+          "2": 2
+        }
+      },
+      "input": {
+        "n": 44
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0044",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "3": 2,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 45
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0045",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 1,
+          "23": 1
+        }
+      },
+      "input": {
+        "n": 46
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0046",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "47": 1
+        }
+      },
+      "input": {
+        "n": 47
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0047",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 4,
+          "3": 1
+        }
+      },
+      "input": {
+        "n": 48
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0048",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "7": 2
+        }
+      },
+      "input": {
+        "n": 49
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0049",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 1,
+          "5": 2
+        }
+      },
+      "input": {
+        "n": 50
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0050",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "17": 1,
+          "3": 1
+        }
+      },
+      "input": {
+        "n": 51
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0051",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "13": 1,
+          "2": 2
+        }
+      },
+      "input": {
+        "n": 52
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0052",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "53": 1
+        }
+      },
+      "input": {
+        "n": 53
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0053",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 1,
+          "3": 3
+        }
+      },
+      "input": {
+        "n": 54
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0054",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "11": 1,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 55
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0055",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 3,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 56
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0056",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "19": 1,
+          "3": 1
+        }
+      },
+      "input": {
+        "n": 57
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0057",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 1,
+          "29": 1
+        }
+      },
+      "input": {
+        "n": 58
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0058",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "59": 1
+        }
+      },
+      "input": {
+        "n": 59
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0059",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 2,
+          "3": 1,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 60
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0060",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "61": 1
+        }
+      },
+      "input": {
+        "n": 61
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0061",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 1,
+          "31": 1
+        }
+      },
+      "input": {
+        "n": 62
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0062",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "3": 2,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 63
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0063",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 6
+        }
+      },
+      "input": {
+        "n": 64
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0064",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "13": 1,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 65
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0065",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "11": 1,
+          "2": 1,
+          "3": 1
+        }
+      },
+      "input": {
+        "n": 66
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0066",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "67": 1
+        }
+      },
+      "input": {
+        "n": 67
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0067",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "17": 1,
+          "2": 2
+        }
+      },
+      "input": {
+        "n": 68
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0068",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "23": 1,
+          "3": 1
+        }
+      },
+      "input": {
+        "n": 69
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0069",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 1,
+          "5": 1,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 70
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0070",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "71": 1
+        }
+      },
+      "input": {
+        "n": 71
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0071",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 3,
+          "3": 2
+        }
+      },
+      "input": {
+        "n": 72
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0072",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "73": 1
+        }
+      },
+      "input": {
+        "n": 73
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0073",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 1,
+          "37": 1
+        }
+      },
+      "input": {
+        "n": 74
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0074",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "3": 1,
+          "5": 2
+        }
+      },
+      "input": {
+        "n": 75
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0075",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "19": 1,
+          "2": 2
+        }
+      },
+      "input": {
+        "n": 76
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0076",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "11": 1,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 77
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0077",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "13": 1,
+          "2": 1,
+          "3": 1
+        }
+      },
+      "input": {
+        "n": 78
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0078",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "79": 1
+        }
+      },
+      "input": {
+        "n": 79
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0079",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 4,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 80
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0080",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "3": 4
+        }
+      },
+      "input": {
+        "n": 81
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0081",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 1,
+          "41": 1
+        }
+      },
+      "input": {
+        "n": 82
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0082",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "83": 1
+        }
+      },
+      "input": {
+        "n": 83
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0083",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 2,
+          "3": 1,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 84
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0084",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "17": 1,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 85
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0085",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 1,
+          "43": 1
+        }
+      },
+      "input": {
+        "n": 86
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0086",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "29": 1,
+          "3": 1
+        }
+      },
+      "input": {
+        "n": 87
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0087",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "11": 1,
+          "2": 3
+        }
+      },
+      "input": {
+        "n": 88
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0088",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "89": 1
+        }
+      },
+      "input": {
+        "n": 89
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0089",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 1,
+          "3": 2,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 90
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0090",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "13": 1,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 91
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0091",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 2,
+          "23": 1
+        }
+      },
+      "input": {
+        "n": 92
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0092",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "3": 1,
+          "31": 1
+        }
+      },
+      "input": {
+        "n": 93
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0093",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 1,
+          "47": 1
+        }
+      },
+      "input": {
+        "n": 94
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0094",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "19": 1,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 95
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0095",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 5,
+          "3": 1
+        }
+      },
+      "input": {
+        "n": 96
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0096",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "97": 1
+        }
+      },
+      "input": {
+        "n": 97
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0097",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 1,
+          "7": 2
+        }
+      },
+      "input": {
+        "n": 98
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0098",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "11": 1,
+          "3": 2
+        }
+      },
+      "input": {
+        "n": 99
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0099",
+      "category": "exhaustive",
+      "expected": {
+        "value": {
+          "2": 2,
+          "5": 2
+        }
+      },
+      "input": {
+        "n": 100
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0100",
+      "category": "random",
+      "expected": {
+        "value": {
+          "11": 2
+        }
+      },
+      "input": {
+        "n": 121
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0101",
+      "category": "random",
+      "expected": {
+        "value": {
+          "13": 2
+        }
+      },
+      "input": {
+        "n": 169
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0102",
+      "category": "random",
+      "expected": {
+        "value": {
+          "13": 1,
+          "17": 1
+        }
+      },
+      "input": {
+        "n": 221
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0103",
+      "category": "random",
+      "expected": {
+        "value": {
+          "11": 1,
+          "31": 1
+        }
+      },
+      "input": {
+        "n": 341
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0104",
+      "category": "random",
+      "expected": {
+        "value": {
+          "11": 1,
+          "17": 1,
+          "3": 1
+        }
+      },
+      "input": {
+        "n": 561
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0105",
+      "category": "random",
+      "expected": {
+        "value": {
+          "13": 1,
+          "17": 1,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 1105
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0106",
+      "category": "random",
+      "expected": {
+        "value": {
+          "13": 1,
+          "19": 1,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 1729
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0107",
+      "category": "random",
+      "expected": {
+        "value": {
+          "23": 1,
+          "89": 1
+        }
+      },
+      "input": {
+        "n": 2047
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0108",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 12
+        }
+      },
+      "input": {
+        "n": 4096
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0109",
+      "category": "random",
+      "expected": {
+        "value": {
+          "4999": 1
+        }
+      },
+      "input": {
+        "n": 4999
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0110",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 3,
+          "5": 4
+        }
+      },
+      "input": {
+        "n": 5000
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0111",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 4,
+          "43": 1,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 3440
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0112",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 1,
+          "211": 1,
+          "3": 2
+        }
+      },
+      "input": {
+        "n": 3798
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0113",
+      "category": "random",
+      "expected": {
+        "value": {
+          "1307": 1
+        }
+      },
+      "input": {
+        "n": 1307
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0114",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 1,
+          "691": 1
+        }
+      },
+      "input": {
+        "n": 1382
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0115",
+      "category": "random",
+      "expected": {
+        "value": {
+          "3191": 1
+        }
+      },
+      "input": {
+        "n": 3191
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0116",
+      "category": "random",
+      "expected": {
+        "value": {
+          "281": 1
+        }
+      },
+      "input": {
+        "n": 281
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0117",
+      "category": "random",
+      "expected": {
+        "value": {
+          "1283": 1,
+          "2": 1
+        }
+      },
+      "input": {
+        "n": 2566
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0118",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2689": 1
+        }
+      },
+      "input": {
+        "n": 2689
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0119",
+      "category": "random",
+      "expected": {
+        "value": {
+          "1091": 1,
+          "3": 1
+        }
+      },
+      "input": {
+        "n": 3273
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0120",
+      "category": "random",
+      "expected": {
+        "value": {
+          "11": 1,
+          "167": 1
+        }
+      },
+      "input": {
+        "n": 1837
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0121",
+      "category": "random",
+      "expected": {
+        "value": {
+          "1009": 1
+        }
+      },
+      "input": {
+        "n": 1009
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0122",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 1,
+          "863": 1
+        }
+      },
+      "input": {
+        "n": 1726
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0123",
+      "category": "random",
+      "expected": {
+        "value": {
+          "3701": 1
+        }
+      },
+      "input": {
+        "n": 3701
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0124",
+      "category": "random",
+      "expected": {
+        "value": {
+          "1571": 1,
+          "2": 1
+        }
+      },
+      "input": {
+        "n": 3142
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0125",
+      "category": "random",
+      "expected": {
+        "value": {
+          "23": 1,
+          "59": 1
+        }
+      },
+      "input": {
+        "n": 1357
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0126",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 1,
+          "3": 1,
+          "61": 1,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 2562
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0127",
+      "category": "random",
+      "expected": {
+        "value": {
+          "101": 1,
+          "5": 2
+        }
+      },
+      "input": {
+        "n": 2525
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0128",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 2,
+          "3": 1,
+          "47": 1,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 3948
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0129",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 1,
+          "23": 1,
+          "71": 1
+        }
+      },
+      "input": {
+        "n": 3266
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0130",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 3,
+          "3": 1,
+          "73": 1
+        }
+      },
+      "input": {
+        "n": 1752
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0131",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 2,
+          "23": 1,
+          "31": 1
+        }
+      },
+      "input": {
+        "n": 2852
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0132",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 2,
+          "257": 1
+        }
+      },
+      "input": {
+        "n": 1028
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0133",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 1,
+          "31": 1,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 434
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0134",
+      "category": "random",
+      "expected": {
+        "value": {
+          "1453": 1
+        }
+      },
+      "input": {
+        "n": 1453
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0135",
+      "category": "random",
+      "expected": {
+        "value": {
+          "11": 1,
+          "17": 1,
+          "5": 2
+        }
+      },
+      "input": {
+        "n": 4675
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0136",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 1,
+          "3": 1,
+          "757": 1
+        }
+      },
+      "input": {
+        "n": 4542
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0137",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 1,
+          "263": 1,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 3682
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0138",
+      "category": "random",
+      "expected": {
+        "value": {
+          "1423": 1,
+          "3": 1
+        }
+      },
+      "input": {
+        "n": 4269
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0139",
+      "category": "random",
+      "expected": {
+        "value": {
+          "13": 1,
+          "19": 1,
+          "3": 1,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 3705
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0140",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 2,
+          "3": 2,
+          "5": 1,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 1260
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0141",
+      "category": "random",
+      "expected": {
+        "value": {
+          "701": 1
+        }
+      },
+      "input": {
+        "n": 701
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0142",
+      "category": "random",
+      "expected": {
+        "value": {
+          "17": 1,
+          "2": 4,
+          "3": 1,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 4080
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0143",
+      "category": "random",
+      "expected": {
+        "value": {
+          "1153": 1
+        }
+      },
+      "input": {
+        "n": 1153
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0144",
+      "category": "random",
+      "expected": {
+        "value": {
+          "13": 1,
+          "163": 1
+        }
+      },
+      "input": {
+        "n": 2119
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0145",
+      "category": "random",
+      "expected": {
+        "value": {
+          "11": 1,
+          "139": 1,
+          "2": 1
+        }
+      },
+      "input": {
+        "n": 3058
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0146",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 4,
+          "67": 1
+        }
+      },
+      "input": {
+        "n": 1072
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0147",
+      "category": "random",
+      "expected": {
+        "value": {
+          "461": 1,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 2305
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0148",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 7,
+          "23": 1
+        }
+      },
+      "input": {
+        "n": 2944
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0149",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 1,
+          "47": 1,
+          "7": 2
+        }
+      },
+      "input": {
+        "n": 4606
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0150",
+      "category": "random",
+      "expected": {
+        "value": {
+          "131": 1,
+          "2": 3
+        }
+      },
+      "input": {
+        "n": 1048
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0151",
+      "category": "random",
+      "expected": {
+        "value": {
+          "5": 1,
+          "97": 1
+        }
+      },
+      "input": {
+        "n": 485
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0152",
+      "category": "random",
+      "expected": {
+        "value": {
+          "1279": 1,
+          "3": 1
+        }
+      },
+      "input": {
+        "n": 3837
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0153",
+      "category": "random",
+      "expected": {
+        "value": {
+          "11": 1,
+          "2": 3,
+          "5": 1,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 3080
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0154",
+      "category": "random",
+      "expected": {
+        "value": {
+          "29": 1,
+          "3": 1,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 435
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0155",
+      "category": "random",
+      "expected": {
+        "value": {
+          "3": 2,
+          "359": 1
+        }
+      },
+      "input": {
+        "n": 3231
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0156",
+      "category": "random",
+      "expected": {
+        "value": {
+          "127": 1,
+          "19": 1,
+          "2": 1
+        }
+      },
+      "input": {
+        "n": 4826
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0157",
+      "category": "random",
+      "expected": {
+        "value": {
+          "3": 1,
+          "41": 1,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 861
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0158",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 1,
+          "449": 1
+        }
+      },
+      "input": {
+        "n": 898
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0159",
+      "category": "random",
+      "expected": {
+        "value": {
+          "11": 1,
+          "19": 1,
+          "2": 1
+        }
+      },
+      "input": {
+        "n": 418
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0160",
+      "category": "random",
+      "expected": {
+        "value": {
+          "4003": 1
+        }
+      },
+      "input": {
+        "n": 4003
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0161",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 2,
+          "73": 1
+        }
+      },
+      "input": {
+        "n": 292
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0162",
+      "category": "random",
+      "expected": {
+        "value": {
+          "19": 1,
+          "257": 1
+        }
+      },
+      "input": {
+        "n": 4883
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0163",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 2,
+          "3": 1,
+          "5": 1,
+          "7": 2
+        }
+      },
+      "input": {
+        "n": 2940
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0164",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 3,
+          "3": 1,
+          "61": 1
+        }
+      },
+      "input": {
+        "n": 1464
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0165",
+      "category": "random",
+      "expected": {
+        "value": {
+          "41": 1,
+          "79": 1
+        }
+      },
+      "input": {
+        "n": 3239
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0166",
+      "category": "random",
+      "expected": {
+        "value": {
+          "3": 1,
+          "751": 1
+        }
+      },
+      "input": {
+        "n": 2253
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0167",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 1,
+          "3": 1,
+          "73": 1
+        }
+      },
+      "input": {
+        "n": 438
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0168",
+      "category": "random",
+      "expected": {
+        "value": {
+          "3": 1,
+          "653": 1
+        }
+      },
+      "input": {
+        "n": 1959
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0169",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 1,
+          "463": 1,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 4630
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0170",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 1,
+          "29": 1,
+          "79": 1
+        }
+      },
+      "input": {
+        "n": 4582
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0171",
+      "category": "random",
+      "expected": {
+        "value": {
+          "239": 1,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 1673
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0172",
+      "category": "random",
+      "expected": {
+        "value": {
+          "13": 1,
+          "2": 2,
+          "61": 1
+        }
+      },
+      "input": {
+        "n": 3172
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0173",
+      "category": "random",
+      "expected": {
+        "value": {
+          "953": 1
+        }
+      },
+      "input": {
+        "n": 953
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0174",
+      "category": "random",
+      "expected": {
+        "value": {
+          "197": 1,
+          "23": 1
+        }
+      },
+      "input": {
+        "n": 4531
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0175",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 3,
+          "3": 1,
+          "5": 2
+        }
+      },
+      "input": {
+        "n": 600
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0176",
+      "category": "random",
+      "expected": {
+        "value": {
+          "1951": 1
+        }
+      },
+      "input": {
+        "n": 1951
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0177",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 4,
+          "73": 1
+        }
+      },
+      "input": {
+        "n": 1168
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0178",
+      "category": "random",
+      "expected": {
+        "value": {
+          "157": 1,
+          "2": 1,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 1570
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0179",
+      "category": "random",
+      "expected": {
+        "value": {
+          "17": 1,
+          "2": 2,
+          "59": 1
+        }
+      },
+      "input": {
+        "n": 4012
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0180",
+      "category": "random",
+      "expected": {
+        "value": {
+          "3": 3,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 135
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0181",
+      "category": "random",
+      "expected": {
+        "value": {
+          "433": 1
+        }
+      },
+      "input": {
+        "n": 433
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0182",
+      "category": "random",
+      "expected": {
+        "value": {
+          "109": 1,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 763
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0183",
+      "category": "random",
+      "expected": {
+        "value": {
+          "3989": 1
+        }
+      },
+      "input": {
+        "n": 3989
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0184",
+      "category": "random",
+      "expected": {
+        "value": {
+          "29": 1,
+          "59": 1
+        }
+      },
+      "input": {
+        "n": 1711
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0185",
+      "category": "random",
+      "expected": {
+        "value": {
+          "5": 1,
+          "821": 1
+        }
+      },
+      "input": {
+        "n": 4105
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0186",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2399": 1
+        }
+      },
+      "input": {
+        "n": 2399
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0187",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 4,
+          "37": 1,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 4144
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0188",
+      "category": "random",
+      "expected": {
+        "value": {
+          "269": 1,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 1883
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0189",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 2,
+          "373": 1
+        }
+      },
+      "input": {
+        "n": 1492
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0190",
+      "category": "random",
+      "expected": {
+        "value": {
+          "3": 3,
+          "5": 1,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 945
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0191",
+      "category": "random",
+      "expected": {
+        "value": {
+          "3": 1,
+          "479": 1
+        }
+      },
+      "input": {
+        "n": 1437
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0192",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2753": 1
+        }
+      },
+      "input": {
+        "n": 2753
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0193",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 1,
+          "3": 1,
+          "5": 4
+        }
+      },
+      "input": {
+        "n": 3750
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0194",
+      "category": "random",
+      "expected": {
+        "value": {
+          "3": 1,
+          "5": 1,
+          "67": 1
+        }
+      },
+      "input": {
+        "n": 1005
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0195",
+      "category": "random",
+      "expected": {
+        "value": {
+          "19": 1,
+          "31": 1,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 4123
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0196",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 1,
+          "3": 1,
+          "619": 1
+        }
+      },
+      "input": {
+        "n": 3714
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0197",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 1,
+          "3": 1,
+          "307": 1
+        }
+      },
+      "input": {
+        "n": 1842
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0198",
+      "category": "random",
+      "expected": {
+        "value": {
+          "11": 1,
+          "2": 1,
+          "3": 1,
+          "61": 1
+        }
+      },
+      "input": {
+        "n": 4026
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0199",
+      "category": "random",
+      "expected": {
+        "value": {
+          "31": 1,
+          "47": 1
+        }
+      },
+      "input": {
+        "n": 1457
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0200",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 2,
+          "977": 1
+        }
+      },
+      "input": {
+        "n": 3908
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0201",
+      "category": "random",
+      "expected": {
+        "value": {
+          "41": 1,
+          "97": 1
+        }
+      },
+      "input": {
+        "n": 3977
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0202",
+      "category": "random",
+      "expected": {
+        "value": {
+          "101": 1,
+          "2": 2,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 2828
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0203",
+      "category": "random",
+      "expected": {
+        "value": {
+          "3": 1,
+          "829": 1
+        }
+      },
+      "input": {
+        "n": 2487
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0204",
+      "category": "random",
+      "expected": {
+        "value": {
+          "13": 1,
+          "19": 1,
+          "3": 1
+        }
+      },
+      "input": {
+        "n": 741
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0205",
+      "category": "random",
+      "expected": {
+        "value": {
+          "1861": 1,
+          "2": 1
+        }
+      },
+      "input": {
+        "n": 3722
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0206",
+      "category": "random",
+      "expected": {
+        "value": {
+          "5": 1,
+          "907": 1
+        }
+      },
+      "input": {
+        "n": 4535
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0207",
+      "category": "random",
+      "expected": {
+        "value": {
+          "11": 1,
+          "181": 1,
+          "2": 1
+        }
+      },
+      "input": {
+        "n": 3982
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0208",
+      "category": "random",
+      "expected": {
+        "value": {
+          "3547": 1
+        }
+      },
+      "input": {
+        "n": 3547
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0209",
+      "category": "random",
+      "expected": {
+        "value": {
+          "13": 1,
+          "157": 1,
+          "2": 1
+        }
+      },
+      "input": {
+        "n": 4082
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0210",
+      "category": "random",
+      "expected": {
+        "value": {
+          "3529": 1
+        }
+      },
+      "input": {
+        "n": 3529
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0211",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 3,
+          "397": 1
+        }
+      },
+      "input": {
+        "n": 3176
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0212",
+      "category": "random",
+      "expected": {
+        "value": {
+          "3083": 1
+        }
+      },
+      "input": {
+        "n": 3083
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0213",
+      "category": "random",
+      "expected": {
+        "value": {
+          "109": 1,
+          "41": 1
+        }
+      },
+      "input": {
+        "n": 4469
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0214",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 1,
+          "787": 1
+        }
+      },
+      "input": {
+        "n": 1574
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0215",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 1,
+          "719": 1
+        }
+      },
+      "input": {
+        "n": 1438
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0216",
+      "category": "random",
+      "expected": {
+        "value": {
+          "1559": 1,
+          "3": 1
+        }
+      },
+      "input": {
+        "n": 4677
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0217",
+      "category": "random",
+      "expected": {
+        "value": {
+          "13": 1,
+          "29": 1,
+          "3": 1
+        }
+      },
+      "input": {
+        "n": 1131
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0218",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 1,
+          "7": 4
+        }
+      },
+      "input": {
+        "n": 4802
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0219",
+      "category": "random",
+      "expected": {
+        "value": {
+          "4099": 1
+        }
+      },
+      "input": {
+        "n": 4099
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0220",
+      "category": "random",
+      "expected": {
+        "value": {
+          "103": 1,
+          "2": 1,
+          "3": 1,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 3090
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0221",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2903": 1
+        }
+      },
+      "input": {
+        "n": 2903
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0222",
+      "category": "random",
+      "expected": {
+        "value": {
+          "353": 1
+        }
+      },
+      "input": {
+        "n": 353
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0223",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 1,
+          "397": 1,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 3970
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0224",
+      "category": "random",
+      "expected": {
+        "value": {
+          "103": 1,
+          "11": 1,
+          "3": 1
+        }
+      },
+      "input": {
+        "n": 3399
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0225",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 1,
+          "757": 1
+        }
+      },
+      "input": {
+        "n": 1514
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0226",
+      "category": "random",
+      "expected": {
+        "value": {
+          "17": 1,
+          "2": 1,
+          "73": 1
+        }
+      },
+      "input": {
+        "n": 2482
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0227",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 1,
+          "241": 1,
+          "3": 2
+        }
+      },
+      "input": {
+        "n": 4338
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0228",
+      "category": "random",
+      "expected": {
+        "value": {
+          "163": 1,
+          "2": 1,
+          "3": 2
+        }
+      },
+      "input": {
+        "n": 2934
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0229",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 2,
+          "3": 1,
+          "37": 1,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 2220
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0230",
+      "category": "random",
+      "expected": {
+        "value": {
+          "223": 1
+        }
+      },
+      "input": {
+        "n": 223
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0231",
+      "category": "random",
+      "expected": {
+        "value": {
+          "151": 1,
+          "3": 1
+        }
+      },
+      "input": {
+        "n": 453
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0232",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 1,
+          "3": 3,
+          "5": 2
+        }
+      },
+      "input": {
+        "n": 1350
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0233",
+      "category": "random",
+      "expected": {
+        "value": {
+          "29": 1,
+          "71": 1
+        }
+      },
+      "input": {
+        "n": 2059
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0234",
+      "category": "random",
+      "expected": {
+        "value": {
+          "17": 1,
+          "2": 5,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 2720
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0235",
+      "category": "random",
+      "expected": {
+        "value": {
+          "107": 1,
+          "5": 1,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 3745
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0236",
+      "category": "random",
+      "expected": {
+        "value": {
+          "13": 1,
+          "3": 1,
+          "31": 1
+        }
+      },
+      "input": {
+        "n": 1209
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0237",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 5,
+          "3": 2,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 1440
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0238",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 2,
+          "313": 1
+        }
+      },
+      "input": {
+        "n": 1252
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0239",
+      "category": "random",
+      "expected": {
+        "value": {
+          "829": 1
+        }
+      },
+      "input": {
+        "n": 829
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0240",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 3,
+          "3": 1,
+          "37": 1
+        }
+      },
+      "input": {
+        "n": 888
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0241",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 2,
+          "757": 1
+        }
+      },
+      "input": {
+        "n": 3028
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0242",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 1,
+          "2213": 1
+        }
+      },
+      "input": {
+        "n": 4426
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0243",
+      "category": "random",
+      "expected": {
+        "value": {
+          "11": 1,
+          "2": 1,
+          "3": 2,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 1386
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0244",
+      "category": "random",
+      "expected": {
+        "value": {
+          "3": 3,
+          "53": 1
+        }
+      },
+      "input": {
+        "n": 1431
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0245",
+      "category": "random",
+      "expected": {
+        "value": {
+          "13": 1,
+          "2": 2,
+          "3": 1,
+          "5": 2
+        }
+      },
+      "input": {
+        "n": 3900
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0246",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 1,
+          "29": 1,
+          "71": 1
+        }
+      },
+      "input": {
+        "n": 4118
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0247",
+      "category": "random",
+      "expected": {
+        "value": {
+          "11": 1,
+          "163": 1,
+          "2": 1
+        }
+      },
+      "input": {
+        "n": 3586
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0248",
+      "category": "random",
+      "expected": {
+        "value": {
+          "11": 2,
+          "3": 1
+        }
+      },
+      "input": {
+        "n": 363
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0249",
+      "category": "random",
+      "expected": {
+        "value": {
+          "1409": 1,
+          "3": 1
+        }
+      },
+      "input": {
+        "n": 4227
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0250",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 1,
+          "5": 1,
+          "7": 2
+        }
+      },
+      "input": {
+        "n": 490
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0251",
+      "category": "random",
+      "expected": {
+        "value": {
+          "3181": 1
+        }
+      },
+      "input": {
+        "n": 3181
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0252",
+      "category": "random",
+      "expected": {
+        "value": {
+          "3": 1,
+          "809": 1
+        }
+      },
+      "input": {
+        "n": 2427
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0253",
+      "category": "random",
+      "expected": {
+        "value": {
+          "863": 1
+        }
+      },
+      "input": {
+        "n": 863
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0254",
+      "category": "random",
+      "expected": {
+        "value": {
+          "2": 2,
+          "37": 1,
+          "7": 1
+        }
+      },
+      "input": {
+        "n": 1036
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0255",
+      "category": "random",
+      "expected": {
+        "value": {
+          "53": 2
+        }
+      },
+      "input": {
+        "n": 2809
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0256",
+      "category": "random",
+      "expected": {
+        "value": {
+          "131": 1,
+          "2": 5
+        }
+      },
+      "input": {
+        "n": 4192
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0257",
+      "category": "random",
+      "expected": {
+        "value": {
+          "113": 1,
+          "2": 1,
+          "5": 1
+        }
+      },
+      "input": {
+        "n": 1130
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "sympy.factorint:0258",
+      "category": "random",
+      "expected": {
+        "value": {
+          "127": 1,
+          "2": 1,
+          "3": 2
+        }
+      },
+      "input": {
+        "n": 2286
+      },
+      "observed": {
+        "error": "TypeError",
+        "message": "Return value must use plain JSON types and string dictionary keys"
+      },
+      "passed": false
+    }
+  ],
+  "condition": "small_to_large",
+  "elapsed_seconds": 0.030064029000186565,
+  "group": "primes",
+  "library": "sympy",
+  "load_error": null,
+  "method_id": "sympy.factorint",
+  "passed": 1,
+  "total": 259
+}

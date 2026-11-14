@@ -1,0 +1,22 @@
+{
+  "algorithm": [
+    "Factor `n` into its prime factors using a trial division approach.",
+    "Remove duplicates by considering only distinct prime factors.",
+    "Sort the resulting list in ascending order."
+  ],
+  "constraints": [
+    "n must be a positive integer <= 5000.",
+    "Do not include composite factors that remain if the limit was too low.",
+    "Do not return -1 or 0."
+  ],
+  "edge_cases": [
+    "When `n` is 1, return an empty list.",
+    "When `n` is a prime number, return a list containing just that number.",
+    "When `n` is 0, return an empty list (though `n` is not allowed per the input domain)."
+  ],
+  "inputs": "n: positive integer <= 5000",
+  "method_id": "primefactors",
+  "output": "list(int): Sorted list of distinct prime factors of `n`",
+  "purpose": "Return a sorted list of distinct prime factors of `n`.",
+  "signature": "solve(n)"
+}

@@ -1,0 +1,122 @@
+{
+  "elapsed_seconds": 7.9670072360001996,
+  "finished_at": "2026-11-14T13:10:53.034346+00:00",
+  "parsed": {
+    "algorithm": [
+      "For each pair of elements (x_i, y_i) after broadcasting x and y to the same shape, compute the GCD of |x_i| and |y_i| using the Euclidean algorithm (repeated division until remainder is zero).",
+      "If both inputs are scalars, return the GCD as a single integer.",
+      "If inputs are lists, return a list of GCDs for corresponding elements after broadcasting to the same shape (e.g., if one is scalar, it broadcasts to the length of the other).",
+      "For empty lists, return an empty list."
+    ],
+    "constraints": [
+      "Values and results must fit within signed 64-bit integers.",
+      "No broadcasting beyond the specified rules (scalar/scalar, scalar/list, list/scalar, lists of same length).",
+      "Inputs must be integers or 1-D lists of integers; non-integer or multi-dimensional inputs are invalid.",
+      "The GCD is computed for absolute values of inputs."
+    ],
+    "edge_cases": [
+      "Both inputs are empty lists: return empty list.",
+      "One input is a scalar and the other is a list of length 0: return empty list.",
+      "One input is a scalar and the other is a list of length 1: return a single integer.",
+      "Both inputs are scalars: return a single integer.",
+      "Inputs with different lengths but broadcastable (e.g., scalar and list): return a list of length equal to the longer list.",
+      "Inputs with non-integer values: raise error (not supported per contract)."
+    ],
+    "inputs": "x and y are integers or 1-D lists of integers. Scalar/scalar inputs return an integer; scalar/list or list/scalar inputs return a list; lists of the same length (including empty) return a list. Inputs must be broadcastable if shapes differ.",
+    "method_id": "numpy.gcd",
+    "output": "A scalar integer if both inputs are scalars; otherwise, a list of integers representing the GCD of the absolute values of corresponding elements after broadcasting.",
+    "purpose": "Compute the greatest common divisor (GCD) of the absolute values of two inputs, supporting scalar and list inputs with broadcasting rules.",
+    "signature": "solve(x, y)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"x and y are integers or 1-D lists of integers. Support scalar/scalar, scalar/list, list/scalar and lists of the same length (including empty). Scalar/scalar returns int, all other inputs return a list. No other broadcasting is required. Values and results fit signed int64.\",\n  \"documentation\": \"gcd(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])\\n\\nReturns the greatest common divisor of ``|x1|`` and ``|x2|``\\n\\nParameters\\n----------\\nx1, x2 : array_like, int\\n    Arrays of values.\\n    If ``x1.shape != x2.shape``, they must be broadcastable to a common\\n    shape (which becomes the shape of the output).\\n\\nReturns\\n-------\\ny : ndarray or scalar\\n    The greatest common divisor of the absolute value of the inputs\\n    This is a scalar if both `x1` and `x2` are scalars.\\n\\nSee Also\\n--------\\nlcm : The lowest common multiple\\n\\nExamples\\n--------\\n>>> import numpy as np\\n>>> np.gcd(12, 20)\\n4\\n>>> np.gcd.reduce([15, 25, 35])\\n5\\n>>> np.gcd(np.arange(6), 20)\\narray([20,  1,  2,  1,  4,  5])\",\n  \"documentation_truncated\": false,\n  \"group\": \"integer_arithmetic\",\n  \"id\": \"numpy.gcd\",\n  \"library\": \"numpy\",\n  \"name\": \"gcd\",\n  \"signature\": \"solve(x, y)\",\n  \"version\": \"2.5.4\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:4b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:10:53.034033688Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 488,
+    "eval_duration": 7745035000,
+    "load_duration": 463329,
+    "message": {
+      "content": "{\n  \"method_id\": \"numpy.gcd\",\n  \"signature\": \"solve(x, y)\",\n  \"purpose\": \"Compute the greatest common divisor (GCD) of the absolute values of two inputs, supporting scalar and list inputs with broadcasting rules.\",\n  \"inputs\": \"x and y are integers or 1-D lists of integers. Scalar/scalar inputs return an integer; scalar/list or list/scalar inputs return a list; lists of the same length (including empty) return a list. Inputs must be broadcastable if shapes differ.\",\n  \"output\": \"A scalar integer if both inputs are scalars; otherwise, a list of integers representing the GCD of the absolute values of corresponding elements after broadcasting.\",\n  \"algorithm\": [\n    \"For each pair of elements (x_i, y_i) after broadcasting x and y to the same shape, compute the GCD of |x_i| and |y_i| using the Euclidean algorithm (repeated division until remainder is zero).\",\n    \"If both inputs are scalars, return the GCD as a single integer.\",\n    \"If inputs are lists, return a list of GCDs for corresponding elements after broadcasting to the same shape (e.g., if one is scalar, it broadcasts to the length of the other).\",\n    \"For empty lists, return an empty list.\"\n  ],\n  \"edge_cases\": [\n    \"Both inputs are empty lists: return empty list.\",\n    \"One input is a scalar and the other is a list of length 0: return empty list.\",\n    \"One input is a scalar and the other is a list of length 1: return a single integer.\",\n    \"Both inputs are scalars: return a single integer.\",\n    \"Inputs with different lengths but broadcastable (e.g., scalar and list): return a list of length equal to the longer list.\",\n    \"Inputs with non-integer values: raise error (not supported per contract).\"\n  ],\n  \"constraints\": [\n    \"Values and results must fit within signed 64-bit integers.\",\n    \"No broadcasting beyond the specified rules (scalar/scalar, scalar/list, list/scalar, lists of same length).\",\n    \"Inputs must be integers or 1-D lists of integers; non-integer or multi-dimensional inputs are invalid.\",\n    \"The GCD is computed for absolute values of inputs.\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:4b",
+    "prompt_eval_cached_count": 344,
+    "prompt_eval_count": 739,
+    "prompt_eval_duration": 182425000,
+    "total_duration": 7966392215
+  },
+  "started_at": "2026-11-14T13:10:45.067337+00:00",
+  "valid": true
+}

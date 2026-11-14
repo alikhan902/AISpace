@@ -1,0 +1,3965 @@
+{
+  "all_pass": false,
+  "cases": [
+    {
+      "case_id": "numpy.unique:0000",
+      "category": "boundary",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "a": []
+      },
+      "observed": {
+        "value": []
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.unique:0001",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0
+        ]
+      },
+      "input": {
+        "a": [
+          0
+        ]
+      },
+      "observed": {
+        "value": []
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0002",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "input": {
+        "a": [
+          1
+        ]
+      },
+      "observed": {
+        "value": []
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0003",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          -1
+        ]
+      },
+      "input": {
+        "a": [
+          -1
+        ]
+      },
+      "observed": {
+        "value": []
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0004",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          0
+        ]
+      },
+      "observed": {
+        "value": []
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0005",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          1,
+          1
+        ]
+      },
+      "observed": {
+        "value": []
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0006",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          -2,
+          -1
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0007",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          -1,
+          0,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          -1,
+          0,
+          3,
+          -1
+        ]
+      },
+      "observed": {
+        "value": [
+          0,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0008",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "input": {
+        "a": [
+          5,
+          4,
+          3,
+          2,
+          1
+        ]
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0009",
+      "category": "boundary",
+      "expected": {
+        "value": [
+          -2,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          2,
+          -2,
+          2
+        ]
+      },
+      "observed": {
+        "value": [
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0010",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          -1,
+          3,
+          1,
+          -1,
+          -1,
+          -3,
+          -2,
+          0,
+          3
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0011",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          3
+        ]
+      },
+      "observed": {
+        "value": [
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0012",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          2,
+          -2
+        ]
+      },
+      "observed": {
+        "value": [
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0013",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          -2,
+          1,
+          1,
+          2,
+          0,
+          -2,
+          0,
+          -1
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0014",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          -3,
+          -1
+        ]
+      },
+      "observed": {
+        "value": [
+          -1
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0015",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          1,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          2,
+          -1,
+          2,
+          1,
+          -2,
+          -3,
+          2
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          1,
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0016",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          0,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          2,
+          -3,
+          -1,
+          2,
+          -3,
+          0,
+          3
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0017",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          -2,
+          3,
+          3,
+          -3,
+          2,
+          1,
+          -1,
+          0,
+          -1,
+          1
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0018",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          1,
+          3,
+          -2,
+          2,
+          1,
+          3
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0019",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          2,
+          -3,
+          -2,
+          0,
+          0,
+          0,
+          3,
+          3,
+          1,
+          0,
+          -3
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0020",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          -3,
+          1,
+          -1
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0021",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          3,
+          0,
+          -2,
+          2,
+          -2,
+          1,
+          3,
+          0
+        ]
+      },
+      "observed": {
+        "value": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0022",
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          -1,
+          1,
+          3
+        ]
+      },
+      "observed": {
+        "value": [
+          0,
+          1,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0023",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          -3,
+          -2,
+          -3,
+          1,
+          3,
+          -2,
+          -1,
+          3,
+          0,
+          -2,
+          -2
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0024",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          0,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          -2,
+          0,
+          3
+        ]
+      },
+      "observed": {
+        "value": [
+          0,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0025",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          2,
+          -2,
+          -1,
+          -1,
+          -2,
+          0
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0,
+          1,
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0026",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          0
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          -1,
+          0,
+          -3
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0027",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          -1,
+          0,
+          2,
+          0,
+          -2,
+          -2,
+          -3,
+          1,
+          0,
+          -3
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0028",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          0
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          0
+        ]
+      },
+      "observed": {
+        "value": [
+          0
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0029",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          1
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          -1,
+          -2,
+          -2
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          1
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0030",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          1
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          -3,
+          1
+        ]
+      },
+      "observed": {
+        "value": [
+          1
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0031",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          -3,
+          2,
+          3,
+          3,
+          -2,
+          -1,
+          2,
+          2,
+          0
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          0,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0032",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          -1,
+          -3,
+          3,
+          -2,
+          0,
+          -2
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          0,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0033",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          0,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          2,
+          -2
+        ]
+      },
+      "observed": {
+        "value": [
+          0,
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0034",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          2,
+          2,
+          3
+        ]
+      },
+      "observed": {
+        "value": [
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0035",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          -3,
+          3,
+          0,
+          3,
+          3,
+          -2,
+          2,
+          -1,
+          -1,
+          0
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          0,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0036",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          0,
+          -3,
+          -3,
+          1,
+          -1,
+          1,
+          2,
+          -3,
+          3,
+          0
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0037",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          -2,
+          1,
+          -1,
+          0,
+          -3,
+          1
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0038",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          -1,
+          2
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0039",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          -2,
+          1,
+          0,
+          2,
+          -1,
+          -1,
+          -1,
+          2
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0040",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          -1,
+          3,
+          1,
+          -3,
+          2,
+          2
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0041",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          -2,
+          -3,
+          3,
+          -1,
+          2,
+          2,
+          3,
+          -1,
+          -2,
+          -2
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0042",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          3,
+          3,
+          -2,
+          -3,
+          1,
+          2,
+          2,
+          0,
+          0,
+          -2
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0043",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          1,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          2,
+          2,
+          1
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0044",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          0,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          -2,
+          3
+        ]
+      },
+      "observed": {
+        "value": [
+          0,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0045",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          0,
+          1,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          -2,
+          3,
+          3,
+          0,
+          1
+        ]
+      },
+      "observed": {
+        "value": [
+          0,
+          1,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0046",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          3,
+          -2,
+          0,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          2,
+          -2,
+          -2
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0047",
+      "category": "random",
+      "expected": {
+        "value": [
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          2
+        ]
+      },
+      "observed": {
+        "value": []
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0048",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          0,
+          -3,
+          2,
+          -2,
+          -2,
+          -2
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          0,
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0049",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          -1,
+          -2,
+          -1,
+          -1,
+          -3,
+          -1,
+          -1,
+          -3
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0050",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          0
+        ]
+      },
+      "observed": {
+        "value": [
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0051",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          -1,
+          2,
+          -2
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0,
+          1,
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0052",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          -2,
+          0,
+          0,
+          2,
+          0,
+          -2,
+          -1
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0,
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0053",
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          2,
+          1,
+          1,
+          2,
+          3,
+          3,
+          3,
+          3,
+          2
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0054",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          3,
+          3,
+          -1,
+          -2,
+          2,
+          -3,
+          -1
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          0,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0055",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          0,
+          -3,
+          1,
+          0,
+          2,
+          2,
+          -1,
+          2,
+          0,
+          3
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0056",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          0
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          -3,
+          -2
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          0
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0057",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          2,
+          -2,
+          1,
+          -3,
+          1,
+          -1,
+          0,
+          0,
+          1,
+          -1
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0058",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          -2
+        ]
+      },
+      "observed": {
+        "value": [
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0059",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          2,
+          -3,
+          0,
+          0,
+          1,
+          2,
+          3,
+          -3,
+          -2,
+          0
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0060",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          0,
+          3,
+          3,
+          -3,
+          -1,
+          -1,
+          0,
+          1
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0061",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          -3,
+          -3,
+          -3,
+          3
+        ]
+      },
+      "observed": {
+        "value": [
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0062",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          0
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          0,
+          0
+        ]
+      },
+      "observed": {
+        "value": [
+          0
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0063",
+      "category": "random",
+      "expected": {
+        "value": [
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          3
+        ]
+      },
+      "observed": {
+        "value": []
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0064",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          1,
+          3,
+          -1,
+          0,
+          3,
+          -3,
+          -3,
+          -3,
+          3,
+          2
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0065",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          -2,
+          0
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0066",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          0,
+          -3,
+          3,
+          -1,
+          1,
+          2,
+          2,
+          3,
+          3,
+          1,
+          -2
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0067",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          -2,
+          -1,
+          2,
+          2,
+          -2,
+          3,
+          0,
+          3,
+          0,
+          -2
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0068",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          0,
+          3,
+          3,
+          1,
+          3,
+          -2,
+          -1,
+          0,
+          -2
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0069",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          -3,
+          -3,
+          -2,
+          -1,
+          1,
+          0,
+          1,
+          -1,
+          3
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0070",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          3,
+          1,
+          2,
+          0,
+          1,
+          2,
+          1,
+          1
+        ]
+      },
+      "observed": {
+        "value": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0071",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          -2,
+          0,
+          1,
+          -1,
+          1
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0,
+          1
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0072",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          1,
+          -2,
+          2,
+          1,
+          1,
+          0,
+          -1,
+          -2,
+          2
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0073",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          0,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          -2,
+          2,
+          0,
+          2
+        ]
+      },
+      "observed": {
+        "value": [
+          0,
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0074",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          0
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          0,
+          -3
+        ]
+      },
+      "observed": {
+        "value": [
+          0
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0075",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          0,
+          1,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          0,
+          0,
+          1,
+          2,
+          -3
+        ]
+      },
+      "observed": {
+        "value": [
+          0,
+          1,
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0076",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          -3
+        ]
+      },
+      "observed": {
+        "value": [
+          -1
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0077",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          0,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          -3,
+          2,
+          -1,
+          0,
+          2
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0,
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0078",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          0,
+          1,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          1,
+          -1,
+          -3,
+          0,
+          -1,
+          2,
+          1,
+          0,
+          0,
+          0,
+          -3
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0,
+          1,
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0079",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          2,
+          2,
+          -1,
+          -2,
+          -1,
+          -1,
+          -1,
+          0,
+          -1
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0,
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0080",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          1,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          -3,
+          -1,
+          2
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          1,
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0081",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          0,
+          1,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          2,
+          0,
+          -1,
+          1
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0,
+          1,
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0082",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          -3
+        ]
+      },
+      "observed": {
+        "value": [
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0083",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          2,
+          1,
+          1,
+          1,
+          3,
+          -3,
+          1,
+          1,
+          -2
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0084",
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          0,
+          1
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          0
+        ]
+      },
+      "observed": {
+        "value": [
+          0,
+          1
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0085",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          0,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          0,
+          -2,
+          3
+        ]
+      },
+      "observed": {
+        "value": [
+          0,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0086",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          -3,
+          2,
+          -3,
+          1,
+          -3,
+          1
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0087",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          0,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          0,
+          -3,
+          2,
+          -1,
+          -1
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0,
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0088",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          1,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          -3,
+          -2,
+          -3,
+          3,
+          1
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          1,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0089",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          1,
+          0,
+          1,
+          3,
+          -3,
+          -3,
+          1,
+          -1,
+          -3,
+          -1,
+          0
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0090",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          1,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          -1,
+          2,
+          -3,
+          2,
+          -3,
+          1,
+          2
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          1,
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0091",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          0,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          0,
+          -3,
+          3,
+          -3,
+          2
+        ]
+      },
+      "observed": {
+        "value": [
+          0,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0092",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          1,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          -3,
+          -1,
+          -2,
+          1,
+          -2,
+          2,
+          2,
+          2
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          1,
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0093",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          0,
+          -2,
+          3,
+          -1,
+          1,
+          -3,
+          1,
+          -2
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0094",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          -2,
+          0,
+          1,
+          -2,
+          0,
+          3
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0095",
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          1,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          3,
+          1,
+          3,
+          -1
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0096",
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          0
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          0
+        ]
+      },
+      "observed": {
+        "value": [
+          0
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0097",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          -3,
+          -3,
+          1,
+          3,
+          1,
+          1,
+          -2,
+          -2,
+          -3,
+          2
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0098",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          0,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          3,
+          2,
+          -3,
+          0,
+          -2
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          0,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0099",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          0
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          0,
+          -3
+        ]
+      },
+      "observed": {
+        "value": [
+          0
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0100",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          1,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          -2,
+          1,
+          2,
+          -1,
+          -3,
+          -1,
+          -1,
+          -3
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          1,
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0101",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          0,
+          1,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          1,
+          -3,
+          1,
+          1,
+          2,
+          1,
+          0,
+          -2,
+          0
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          0,
+          1,
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0102",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          3,
+          2,
+          -1,
+          -2,
+          3,
+          -1,
+          -2,
+          -3,
+          -1,
+          -3
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0103",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          3,
+          -2,
+          -2,
+          -1,
+          -1,
+          2,
+          2
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0104",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          1,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          -3,
+          -3,
+          -2,
+          3,
+          3,
+          3
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          1,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0105",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          1,
+          -2,
+          -2,
+          2,
+          -2,
+          -1,
+          -3,
+          -2,
+          3,
+          -3
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0106",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          -1,
+          -2,
+          2,
+          3,
+          -3,
+          -1,
+          -3,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0107",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          2,
+          -3,
+          -1,
+          2,
+          -3,
+          -1,
+          1,
+          3,
+          -3,
+          -1,
+          -2
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0108",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          2
+        ]
+      },
+      "observed": {
+        "value": [
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0109",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          -1,
+          -2,
+          1,
+          3,
+          1,
+          3
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0110",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          -3
+        ]
+      },
+      "observed": {
+        "value": [
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0111",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          -2,
+          -2,
+          -3,
+          1,
+          -1,
+          -3,
+          -1,
+          0,
+          -2
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0112",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          1,
+          3,
+          3,
+          0,
+          2,
+          -1,
+          3,
+          -2,
+          -2
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0113",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          0,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          2,
+          0,
+          -3
+        ]
+      },
+      "observed": {
+        "value": [
+          0,
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0114",
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          0,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          3,
+          0,
+          -1,
+          3,
+          -1,
+          0
+        ]
+      },
+      "observed": {
+        "value": [
+          0,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0115",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          -2,
+          -2,
+          -1,
+          -3,
+          3,
+          -2,
+          1,
+          -1,
+          2,
+          -2
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0116",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          2,
+          -3
+        ]
+      },
+      "observed": {
+        "value": [
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0117",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          -2,
+          0,
+          -2,
+          -3
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          0
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0118",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          2,
+          -1,
+          2,
+          -2,
+          0,
+          -2,
+          -2,
+          3,
+          -3
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          0,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0119",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          0,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          -1,
+          -3,
+          2,
+          -3
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0,
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0120",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          3,
+          1,
+          2,
+          -3,
+          -1,
+          -1,
+          -1,
+          1,
+          0,
+          2,
+          1,
+          -2
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0121",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          0,
+          1,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          1,
+          -2,
+          3
+        ]
+      },
+      "observed": {
+        "value": [
+          0,
+          1,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0122",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          0,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          3,
+          0,
+          -3,
+          0
+        ]
+      },
+      "observed": {
+        "value": [
+          0,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0123",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          0,
+          0,
+          -2,
+          1,
+          -3,
+          -1,
+          3
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0124",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1
+        ]
+      },
+      "input": {
+        "a": [
+          -1,
+          -2
+        ]
+      },
+      "observed": {
+        "value": [
+          -1
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0125",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          1,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          -3,
+          -2,
+          2,
+          1,
+          -3,
+          -1,
+          2,
+          -2
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          1,
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0126",
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          2
+        ]
+      },
+      "input": {
+        "a": [
+          2,
+          -2,
+          -2,
+          0,
+          -2,
+          -1,
+          2
+        ]
+      },
+      "observed": {
+        "value": [
+          -1,
+          0,
+          2
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.unique:0127",
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          1,
+          3
+        ]
+      },
+      "input": {
+        "a": [
+          1,
+          -2,
+          -1,
+          3,
+          -3
+        ]
+      },
+      "observed": {
+        "value": [
+          -2,
+          -1,
+          1,
+          3
+        ]
+      },
+      "passed": false
+    }
+  ],
+  "condition": "large_to_large",
+  "elapsed_seconds": 0.030463079000128346,
+  "group": "ordering_counting",
+  "library": "numpy",
+  "load_error": null,
+  "method_id": "numpy.unique",
+  "passed": 1,
+  "total": 128
+}

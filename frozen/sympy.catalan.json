@@ -1,0 +1,375 @@
+{
+  "brief": {
+    "contract": "n is an integer in 0..35. Return the exact Python int, with arbitrary precision; no symbolic result.",
+    "documentation": "Catalan numbers\n\nThe `n^{th}` catalan number is given by:\n\n.. math :: C_n = \\frac{1}{n+1} \\binom{2n}{n}\n\n* ``catalan(n)`` gives the `n^{th}` Catalan number, `C_n`\n\nExamples\n========\n\n>>> from sympy import (Symbol, binomial, gamma, hyper,\n...     catalan, diff, combsimp, Rational, I)\n\n>>> [catalan(i) for i in range(1,10)]\n[1, 2, 5, 14, 42, 132, 429, 1430, 4862]\n\n>>> n = Symbol(\"n\", integer=True)\n\n>>> catalan(n)\ncatalan(n)\n\nCatalan numbers can be transformed into several other, identical\nexpressions involving other mathematical functions\n\n>>> catalan(n).rewrite(binomial)\nbinomial(2*n, n)/(n + 1)\n\n>>> catalan(n).rewrite(gamma)\n4**n*gamma(n + 1/2)/(sqrt(pi)*gamma(n + 2))\n\n>>> catalan(n).rewrite(hyper)\nhyper((-n, 1 - n), (2,), 1)\n\nFor some non-integer values of n we can get closed form\nexpressions by rewriting in terms of gamma functions:\n\n>>> catalan(Rational(1, 2)).rewrite(gamma)\n8/(3*pi)\n\nWe can differentiate the Catalan numbers C(n) interpreted as a\ncontinuous real function in n:\n\n>>> diff(catalan(n), n)\n(polygamma(0, n + 1/2) - polygamma(0, n + 2) + log(4))*catalan(n)\n\nAs a more advanced example consider the following ratio\nbetween consecutive numbers:\n\n>>> combsimp((catalan(n + 1)/catalan(n)).rewrite(binomial))\n2*(2*n + 1)/(n + 2)\n\nThe Catalan numbers can be generalized to complex numbers:\n\n>>> catalan(I).rewrite(gamma)\n4**I*gamma(1/2 + I)/(sqrt(pi)*gamma(2 + I))\n\nand evaluated with arbitrary precision:\n\n>>> catalan(I).evalf(20)\n0.39764993382373624267 - 0.020884341620842555705*I\n\nSee Also\n========\n\nandre, bell, bernoulli, euler, fibonacci, harmonic, lucas, genocchi,\npartition, tribonacci, sympy.functions.combinatorial.factorials.binomial\n\nReferences\n==========\n\n.. [1] https://en.wikipedia.org/wiki/Catalan_number\n.. [2] https://mathworld.wolfram.com/CatalanNumber.html\n.. [3] https://functions.wolfram.com/GammaBetaErf/CatalanNumber/\n.. [4] http://geometer.org/mathcircles/catalan.pdf",
+    "documentation_truncated": false,
+    "group": "combinatorics",
+    "id": "sympy.catalan",
+    "library": "sympy",
+    "name": "catalan",
+    "signature": "solve(n)",
+    "version": "1.14.0"
+  },
+  "cases": [
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.catalan:0000",
+      "input": {
+        "n": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.catalan:0001",
+      "input": {
+        "n": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "sympy.catalan:0002",
+      "input": {
+        "n": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "id": "sympy.catalan:0003",
+      "input": {
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 14
+      },
+      "id": "sympy.catalan:0004",
+      "input": {
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 42
+      },
+      "id": "sympy.catalan:0005",
+      "input": {
+        "n": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 132
+      },
+      "id": "sympy.catalan:0006",
+      "input": {
+        "n": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 429
+      },
+      "id": "sympy.catalan:0007",
+      "input": {
+        "n": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1430
+      },
+      "id": "sympy.catalan:0008",
+      "input": {
+        "n": 8
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4862
+      },
+      "id": "sympy.catalan:0009",
+      "input": {
+        "n": 9
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 16796
+      },
+      "id": "sympy.catalan:0010",
+      "input": {
+        "n": 10
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 58786
+      },
+      "id": "sympy.catalan:0011",
+      "input": {
+        "n": 11
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 208012
+      },
+      "id": "sympy.catalan:0012",
+      "input": {
+        "n": 12
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 742900
+      },
+      "id": "sympy.catalan:0013",
+      "input": {
+        "n": 13
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2674440
+      },
+      "id": "sympy.catalan:0014",
+      "input": {
+        "n": 14
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 9694845
+      },
+      "id": "sympy.catalan:0015",
+      "input": {
+        "n": 15
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 35357670
+      },
+      "id": "sympy.catalan:0016",
+      "input": {
+        "n": 16
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 129644790
+      },
+      "id": "sympy.catalan:0017",
+      "input": {
+        "n": 17
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 477638700
+      },
+      "id": "sympy.catalan:0018",
+      "input": {
+        "n": 18
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1767263190
+      },
+      "id": "sympy.catalan:0019",
+      "input": {
+        "n": 19
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 6564120420
+      },
+      "id": "sympy.catalan:0020",
+      "input": {
+        "n": 20
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 24466267020
+      },
+      "id": "sympy.catalan:0021",
+      "input": {
+        "n": 21
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 91482563640
+      },
+      "id": "sympy.catalan:0022",
+      "input": {
+        "n": 22
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 343059613650
+      },
+      "id": "sympy.catalan:0023",
+      "input": {
+        "n": 23
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1289904147324
+      },
+      "id": "sympy.catalan:0024",
+      "input": {
+        "n": 24
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4861946401452
+      },
+      "id": "sympy.catalan:0025",
+      "input": {
+        "n": 25
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 18367353072152
+      },
+      "id": "sympy.catalan:0026",
+      "input": {
+        "n": 26
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 69533550916004
+      },
+      "id": "sympy.catalan:0027",
+      "input": {
+        "n": 27
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 263747951750360
+      },
+      "id": "sympy.catalan:0028",
+      "input": {
+        "n": 28
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1002242216651368
+      },
+      "id": "sympy.catalan:0029",
+      "input": {
+        "n": 29
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3814986502092304
+      },
+      "id": "sympy.catalan:0030",
+      "input": {
+        "n": 30
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 14544636039226909
+      },
+      "id": "sympy.catalan:0031",
+      "input": {
+        "n": 31
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 55534064877048198
+      },
+      "id": "sympy.catalan:0032",
+      "input": {
+        "n": 32
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 212336130412243110
+      },
+      "id": "sympy.catalan:0033",
+      "input": {
+        "n": 33
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 812944042149730764
+      },
+      "id": "sympy.catalan:0034",
+      "input": {
+        "n": 34
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3116285494907301262
+      },
+      "id": "sympy.catalan:0035",
+      "input": {
+        "n": 35
+      }
+    }
+  ]
+}

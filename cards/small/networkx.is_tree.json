@@ -1,0 +1,24 @@
+{
+  "algorithm": [
+    "Check if the graph has exactly n-1 edges.",
+    "Verify that the graph is connected.",
+    "Ensure there are no cycles in the graph."
+  ],
+  "constraints": [
+    "Edges must be distinct and valid (0 <= u < v < n).",
+    "The graph must be simple (no loops, no multiple edges).",
+    "The graph must be connected.",
+    "The graph must have exactly n-1 edges."
+  ],
+  "edge_cases": [
+    "n = 1 (single vertex, no edges): returns True",
+    "n = 2 (two vertices, one edge): returns True",
+    "n = 3 (three vertices, three edges): returns True",
+    "n = 3 (three vertices, four edges): returns False"
+  ],
+  "inputs": "n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.",
+  "method_id": "networkx.is_tree",
+  "output": "int for number_connected_components and bool for predicates.",
+  "purpose": "Determines if a given graph is a tree.",
+  "signature": "solve(n, edges)"
+}

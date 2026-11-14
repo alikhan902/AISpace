@@ -1,0 +1,26 @@
+{
+  "algorithm": [
+    "Construct a simple undirected graph from the given vertices and edges",
+    "Perform a breadth-first search (BFS) starting from `source` to compute shortest path lengths",
+    "For each node reached during BFS, record the shortest path length from `source`",
+    "Return a dictionary mapping each node to its shortest path length from `source`"
+  ],
+  "constraints": [
+    "Vertices are labeled 0 to n-1",
+    "Edges are distinct and satisfy 0<=u<v<n",
+    "Source must be a valid vertex (0<=source<n)",
+    "No cutoff is applied (as per reference brief)",
+    "Graph must be simple and undirected"
+  ],
+  "edge_cases": [
+    "n=1: single vertex with no edges",
+    "source is isolated (no reachable nodes except itself)",
+    "Graph is disconnected: only reachable nodes from source are included",
+    "All nodes are reachable from source"
+  ],
+  "inputs": "n: integer >= 1; edges: list of distinct [u,v] pairs with 0<=u<v<n; source: valid vertex (string)",
+  "method_id": "networkx.single_source_shortest_path_length",
+  "output": "Dictionary with string vertex keys and integer shortest-path lengths for reachable nodes only; includes source:0",
+  "purpose": "Compute the shortest path lengths from `source` to all reachable nodes in a simple undirected unweighted graph",
+  "signature": "solve(n, edges, source)"
+}

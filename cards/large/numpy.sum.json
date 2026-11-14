@@ -1,0 +1,28 @@
+{
+  "algorithm": [
+    "If the input list `a` is empty, return 0.",
+    "For a non-empty list, compute the sum of all elements if `axis` is None.",
+    "If `axis` is specified (e.g., 0 for rows or 1 for columns), sum elements along that axis.",
+    "Handle integer overflow by using signed 64-bit integers as the accumulator.",
+    "Ensure intermediate results fit within signed 64-bit integers to avoid overflow."
+  ],
+  "constraints": [
+    "Input list `a` must be one-dimensional.",
+    "All intermediate values must fit within signed 64-bit integers.",
+    "No NumPy objects are used; the implementation must work with pure Python lists.",
+    "The function must handle empty lists without raising errors.",
+    "The output must be an integer (for scalar results) or a list of integers (for reduced dimensions)."
+  ],
+  "edge_cases": [
+    "Empty list: return 0.",
+    "List with a single element: return that element.",
+    "List with negative integers: sum includes negative values.",
+    "Integer overflow: when the sum exceeds the maximum value of signed 64-bit integers, return the result modulo 2^64 (but note: the reference says no error is raised on overflow, so it wraps around).",
+    "List containing NaN: skip NaN values if `where` is specified to include only valid elements."
+  ],
+  "inputs": "a: A one-dimensional list of integers (possibly empty).",
+  "method_id": "numpy.sum",
+  "output": "An integer (if axis is None or a 0-d array) or a list of integers (if axis is specified) representing the sum of elements along the given axis.",
+  "purpose": "Compute the sum of elements in a one-dimensional list of integers along a specified axis, with support for edge cases like empty arrays and integer overflow.",
+  "signature": "solve(a)"
+}

@@ -1,0 +1,122 @@
+{
+  "elapsed_seconds": 8.220066897000152,
+  "finished_at": "2026-11-14T13:12:15.731649+00:00",
+  "parsed": {
+    "algorithm": [
+      "For Fibonacci numbers: use iterative computation starting from F_0=0, F_1=1 to compute F_n for n in 0..100",
+      "For Fibonacci polynomials: use recurrence F_1(x)=1, F_2(x)=x, F_n(x)=x*F_{n-1}(x)+F_{n-2}(x) for n>2 to compute F_n(x)"
+    ],
+    "constraints": [
+      "n must be an integer between 0 and 100 inclusive for Fibonacci numbers",
+      "For Fibonacci polynomials, n must be a non-negative integer and x must be a symbolic variable",
+      "The output for Fibonacci numbers must be an exact integer with arbitrary precision",
+      "The output for Fibonacci polynomials must be a polynomial with integer coefficients"
+    ],
+    "edge_cases": [
+      "n=0 returns 0",
+      "n=1 returns 1",
+      "n=2 returns 1",
+      "n=100 returns 354224848179261915075 (Fibonacci number)",
+      "Fibonacci polynomial F_1(x) = 1",
+      "Fibonacci polynomial F_2(x) = x",
+      "Fibonacci polynomial F_3(x) = x^2 + x",
+      "Fibonacci polynomial F_4(x) = x^3 + 2x^2 + x"
+    ],
+    "inputs": "n: integer in 0..100 (for Fibonacci numbers); n: integer >= 0 (for Fibonacci polynomials) and x: symbolic variable (for Fibonacci polynomials)",
+    "method_id": "sympy.fibonacci",
+    "output": "For Fibonacci numbers: exact integer F_n (F_0=0, F_1=1, F_n = F_{n-1}+F_{n-2}); For Fibonacci polynomials: polynomial F_n(x) with coefficients in integers",
+    "purpose": "Compute the n-th Fibonacci number or Fibonacci polynomial in x, returning an exact integer or polynomial with arbitrary precision",
+    "signature": "solve(n)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"n is an integer in 0..100. Return the exact Python int, with arbitrary precision; no symbolic result.\",\n  \"documentation\": \"Fibonacci numbers / Fibonacci polynomials\\n\\nThe Fibonacci numbers are the integer sequence defined by the\\ninitial terms `F_0 = 0`, `F_1 = 1` and the two-term recurrence\\nrelation `F_n = F_{n-1} + F_{n-2}`.  This definition\\nextended to arbitrary real and complex arguments using\\nthe formula\\n\\n.. math :: F_z = \\\\frac{\\\\phi^z - \\\\cos(\\\\pi z) \\\\phi^{-z}}{\\\\sqrt 5}\\n\\nThe Fibonacci polynomials are defined by `F_1(x) = 1`,\\n`F_2(x) = x`, and `F_n(x) = x*F_{n-1}(x) + F_{n-2}(x)` for `n > 2`.\\nFor all positive integers `n`, `F_n(1) = F_n`.\\n\\n* ``fibonacci(n)`` gives the `n^{th}` Fibonacci number, `F_n`\\n* ``fibonacci(n, x)`` gives the `n^{th}` Fibonacci polynomial in `x`, `F_n(x)`\\n\\nExamples\\n========\\n\\n>>> from sympy import fibonacci, Symbol\\n\\n>>> [fibonacci(x) for x in range(11)]\\n[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]\\n>>> fibonacci(5, Symbol('t'))\\nt**4 + 3*t**2 + 1\\n\\nSee Also\\n========\\n\\nbell, bernoulli, catalan, euler, harmonic, lucas, genocchi, partition, tribonacci\\n\\nReferences\\n==========\\n\\n.. [1] https://en.wikipedia.org/wiki/Fibonacci_number\\n.. [2] https://mathworld.wolfram.com/FibonacciNumber.html\",\n  \"documentation_truncated\": false,\n  \"group\": \"combinatorics\",\n  \"id\": \"sympy.fibonacci\",\n  \"library\": \"sympy\",\n  \"name\": \"fibonacci\",\n  \"signature\": \"solve(n)\",\n  \"version\": \"1.14.0\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:4b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:12:15.731363681Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 472,
+    "eval_duration": 7917898000,
+    "load_duration": 563403,
+    "message": {
+      "content": "{\n  \"method_id\": \"sympy.fibonacci\",\n  \"signature\": \"solve(n)\",\n  \"purpose\": \"Compute the n-th Fibonacci number or Fibonacci polynomial in x, returning an exact integer or polynomial with arbitrary precision\",\n  \"inputs\": \"n: integer in 0..100 (for Fibonacci numbers); n: integer >= 0 (for Fibonacci polynomials) and x: symbolic variable (for Fibonacci polynomials)\",\n  \"output\": \"For Fibonacci numbers: exact integer F_n (F_0=0, F_1=1, F_n = F_{n-1}+F_{n-2}); For Fibonacci polynomials: polynomial F_n(x) with coefficients in integers\",\n  \"algorithm\": [\n    \"For Fibonacci numbers: use iterative computation starting from F_0=0, F_1=1 to compute F_n for n in 0..100\",\n    \"For Fibonacci polynomials: use recurrence F_1(x)=1, F_2(x)=x, F_n(x)=x*F_{n-1}(x)+F_{n-2}(x) for n>2 to compute F_n(x)\"\n  ],\n  \"edge_cases\": [\n    \"n=0 returns 0\",\n    \"n=1 returns 1\",\n    \"n=2 returns 1\",\n    \"n=100 returns 354224848179261915075 (Fibonacci number)\",\n    \"Fibonacci polynomial F_1(x) = 1\",\n    \"Fibonacci polynomial F_2(x) = x\",\n    \"Fibonacci polynomial F_3(x) = x^2 + x\",\n    \"Fibonacci polynomial F_4(x) = x^3 + 2x^2 + x\"\n  ],\n  \"constraints\": [\n    \"n must be an integer between 0 and 100 inclusive for Fibonacci numbers\",\n    \"For Fibonacci polynomials, n must be a non-negative integer and x must be a symbolic variable\",\n    \"The output for Fibonacci numbers must be an exact integer with arbitrary precision\",\n    \"The output for Fibonacci polynomials must be a polynomial with integer coefficients\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:4b",
+    "prompt_eval_cached_count": 352,
+    "prompt_eval_count": 866,
+    "prompt_eval_duration": 252651000,
+    "total_duration": 8219465998
+  },
+  "started_at": "2026-11-14T13:12:07.511580+00:00",
+  "valid": true
+}

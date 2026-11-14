@@ -1,0 +1,121 @@
+{
+  "elapsed_seconds": 2.2507490519999465,
+  "finished_at": "2026-11-14T13:08:34.518654+00:00",
+  "parsed": {
+    "algorithm": [
+      "Perform a BFS starting from the specified node.",
+      "Traverse the graph, visiting nodes and their neighbors.",
+      "Collect all nodes visited during the traversal.",
+      "Return the collected nodes as a set."
+    ],
+    "constraints": [
+      "n is an integer >= 1",
+      "edges is a list of distinct [u, v] pairs with 0 <= u < v < n",
+      "node is a valid vertex label in the graph",
+      "The graph is undirected and unweighted",
+      "The function raises NetworkXNotImplemented if the graph is directed"
+    ],
+    "edge_cases": [
+      "When the graph is a single node with no edges (returns {n})",
+      "When the graph is disconnected (returns the component containing the specified node)",
+      "When the specified node is isolated (returns {n})",
+      "When the graph has no edges (returns {n})"
+    ],
+    "inputs": "n: integer >= 1, edges: list of distinct [u, v] pairs, node: valid vertex label in the graph",
+    "method_id": "networkx.node_connected_component",
+    "output": "A set of strings representing the nodes in the component containing the specified node.",
+    "purpose": "Return the set of nodes in the component of the graph containing the specified node.",
+    "signature": "solve(n, edges, node)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"n is an integer >= 1; vertices are 0,...,n-1. edges is a list of distinct [u,v] pairs with 0<=u<v<n. Construct a simple undirected unweighted graph including isolated vertices. Return plain JSON-compatible Python values. Dictionary vertex keys must be strings. node is a valid vertex. Return the ascending list of vertices in its component, including node.\",\n  \"documentation\": \"Returns the set of nodes in the component of graph containing node n.\\n\\nA connected component is a set of nodes that induces a subgraph of graph\\n`G` that is connected and not part of any larger connected subgraph.\\n\\nA graph is connected (:func:`is_connected`) if, for every pair of distinct\\nnodes, there is a path between them. If there is a pair of nodes for\\nwhich such path does not exist, the graph is not connected (also referred\\nto as \\\"disconnected\\\").\\n\\nA graph consisting of a single node and no edges is connected.\\nConnectivity is undefined for the null graph (graph with no nodes).\\n\\nParameters\\n----------\\nG : NetworkX Graph\\n   An undirected graph.\\n\\nn : node label\\n   A node in G\\n\\nReturns\\n-------\\ncomp : set\\n   A set of nodes in the component of G containing node n.\\n\\nRaises\\n------\\nNetworkXNotImplemented\\n    If G is directed.\\n\\nExamples\\n--------\\n>>> G = nx.Graph([(0, 1), (1, 2), (5, 6), (3, 4)])\\n>>> nx.node_connected_component(G, 0)  # nodes of component that contains node 0\\n{0, 1, 2}\\n\\nSee Also\\n--------\\nconnected_components\\n\\nNotes\\n-----\\nThis function is for undirected graphs only.\\n\\nThe algorithm is based on a Breadth-First Search (BFS) traversal and its\\ntime complexity is $O(n + m)$, where $n$ is the number of nodes and $m$ the\\nnumber of edges in the graph.\",\n  \"documentation_truncated\": false,\n  \"group\": \"local_structure\",\n  \"id\": \"networkx.node_connected_component\",\n  \"library\": \"networkx\",\n  \"name\": \"node_connected_component\",\n  \"signature\": \"solve(n, edges, node)\",\n  \"version\": \"3.6.1\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:1.7b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:08:34.51820801Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 300,
+    "eval_duration": 2121036000,
+    "load_duration": 1391478,
+    "message": {
+      "content": "{\n  \"method_id\": \"networkx.node_connected_component\",\n  \"signature\": \"solve(n, edges, node)\",\n  \"purpose\": \"Return the set of nodes in the component of the graph containing the specified node.\",\n  \"inputs\": \"n: integer >= 1, edges: list of distinct [u, v] pairs, node: valid vertex label in the graph\",\n  \"output\": \"A set of strings representing the nodes in the component containing the specified node.\",\n  \"algorithm\": [\n    \"Perform a BFS starting from the specified node.\",\n    \"Traverse the graph, visiting nodes and their neighbors.\",\n    \"Collect all nodes visited during the traversal.\",\n    \"Return the collected nodes as a set.\"\n  ],\n  \"edge_cases\": [\n    \"When the graph is a single node with no edges (returns {n})\",\n    \"When the graph is disconnected (returns the component containing the specified node)\",\n    \"When the specified node is isolated (returns {n})\",\n    \"When the graph has no edges (returns {n})\"\n  ],\n  \"constraints\": [\n    \"n is an integer >= 1\",\n    \"edges is a list of distinct [u, v] pairs with 0 <= u < v < n\",\n    \"node is a valid vertex label in the graph\",\n    \"The graph is undirected and unweighted\",\n    \"The function raises NetworkXNotImplemented if the graph is directed\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:1.7b",
+    "prompt_eval_cached_count": 407,
+    "prompt_eval_count": 875,
+    "prompt_eval_duration": 80697000,
+    "total_duration": 2249899235
+  },
+  "started_at": "2026-11-14T13:08:32.267902+00:00",
+  "valid": true
+}

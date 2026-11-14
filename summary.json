@@ -1,0 +1,716 @@
+{
+  "by_case_category": {
+    "large_to_large": {
+      "boundary": {
+        "passed": 221,
+        "total": 530
+      },
+      "exhaustive": {
+        "passed": 1950,
+        "total": 4037
+      },
+      "random": {
+        "passed": 3514,
+        "total": 6706
+      }
+    },
+    "large_to_small": {
+      "boundary": {
+        "passed": 264,
+        "total": 530
+      },
+      "exhaustive": {
+        "passed": 2233,
+        "total": 4037
+      },
+      "random": {
+        "passed": 3642,
+        "total": 6706
+      }
+    },
+    "small_to_large": {
+      "boundary": {
+        "passed": 195,
+        "total": 530
+      },
+      "exhaustive": {
+        "passed": 1489,
+        "total": 4037
+      },
+      "random": {
+        "passed": 2180,
+        "total": 6706
+      }
+    },
+    "small_to_small": {
+      "boundary": {
+        "passed": 108,
+        "total": 530
+      },
+      "exhaustive": {
+        "passed": 1695,
+        "total": 4037
+      },
+      "random": {
+        "passed": 1922,
+        "total": 6706
+      }
+    }
+  },
+  "by_group": {
+    "large_to_large": {
+      "networkx.connectivity": {
+        "function_accuracy": 0.4,
+        "functions": 5,
+        "load_errors": 0,
+        "macro_accuracy": 0.5604452452917926,
+        "micro_accuracy": 0.5624332977588047,
+        "passed_tests": 527,
+        "perfect": 2,
+        "total_tests": 937
+      },
+      "networkx.distances": {
+        "function_accuracy": 0.2,
+        "functions": 5,
+        "load_errors": 2,
+        "macro_accuracy": 0.25867768595041324,
+        "micro_accuracy": 0.2425892316999395,
+        "passed_tests": 401,
+        "perfect": 1,
+        "total_tests": 1653
+      },
+      "networkx.local_structure": {
+        "function_accuracy": 0.0,
+        "functions": 5,
+        "load_errors": 3,
+        "macro_accuracy": 0.06489361702127659,
+        "micro_accuracy": 0.05412599822537711,
+        "passed_tests": 61,
+        "perfect": 0,
+        "total_tests": 1127
+      },
+      "numpy.integer_arithmetic": {
+        "function_accuracy": 0.8,
+        "functions": 5,
+        "load_errors": 1,
+        "macro_accuracy": 0.8,
+        "micro_accuracy": 0.7780157030692363,
+        "passed_tests": 1090,
+        "perfect": 4,
+        "total_tests": 1401
+      },
+      "numpy.ordering_counting": {
+        "function_accuracy": 0.4,
+        "functions": 5,
+        "load_errors": 1,
+        "macro_accuracy": 0.600342987804878,
+        "micro_accuracy": 0.5305232558139535,
+        "passed_tests": 730,
+        "perfect": 2,
+        "total_tests": 1376
+      },
+      "numpy.reductions": {
+        "function_accuracy": 0.4,
+        "functions": 5,
+        "load_errors": 1,
+        "macro_accuracy": 0.7903481822836662,
+        "micro_accuracy": 0.8972491909385113,
+        "passed_tests": 1109,
+        "perfect": 2,
+        "total_tests": 1236
+      },
+      "sympy.combinatorics": {
+        "function_accuracy": 0.6,
+        "functions": 5,
+        "load_errors": 2,
+        "macro_accuracy": 0.6,
+        "micro_accuracy": 0.4168126094570928,
+        "passed_tests": 238,
+        "perfect": 3,
+        "total_tests": 571
+      },
+      "sympy.divisors": {
+        "function_accuracy": 0.4,
+        "functions": 5,
+        "load_errors": 0,
+        "macro_accuracy": 0.4023952470293934,
+        "micro_accuracy": 0.31630170316301703,
+        "passed_tests": 520,
+        "perfect": 2,
+        "total_tests": 1644
+      },
+      "sympy.primes": {
+        "function_accuracy": 0.4,
+        "functions": 5,
+        "load_errors": 0,
+        "macro_accuracy": 0.7629162644787645,
+        "micro_accuracy": 0.759789156626506,
+        "passed_tests": 1009,
+        "perfect": 2,
+        "total_tests": 1328
+      }
+    },
+    "large_to_small": {
+      "networkx.connectivity": {
+        "function_accuracy": 0.0,
+        "functions": 5,
+        "load_errors": 0,
+        "macro_accuracy": 0.19137219750214254,
+        "micro_accuracy": 0.1910352187833511,
+        "passed_tests": 179,
+        "perfect": 0,
+        "total_tests": 937
+      },
+      "networkx.distances": {
+        "function_accuracy": 0.6,
+        "functions": 5,
+        "load_errors": 0,
+        "macro_accuracy": 0.601063829787234,
+        "micro_accuracy": 0.6636418632788869,
+        "passed_tests": 1097,
+        "perfect": 3,
+        "total_tests": 1653
+      },
+      "networkx.local_structure": {
+        "function_accuracy": 0.2,
+        "functions": 5,
+        "load_errors": 4,
+        "macro_accuracy": 0.2,
+        "micro_accuracy": 0.1668145519077196,
+        "passed_tests": 188,
+        "perfect": 1,
+        "total_tests": 1127
+      },
+      "numpy.integer_arithmetic": {
+        "function_accuracy": 0.2,
+        "functions": 5,
+        "load_errors": 0,
+        "macro_accuracy": 0.7141071845950265,
+        "micro_accuracy": 0.6852248394004282,
+        "passed_tests": 960,
+        "perfect": 1,
+        "total_tests": 1401
+      },
+      "numpy.ordering_counting": {
+        "function_accuracy": 0.2,
+        "functions": 5,
+        "load_errors": 0,
+        "macro_accuracy": 0.4060405537397444,
+        "micro_accuracy": 0.44549418604651164,
+        "passed_tests": 613,
+        "perfect": 1,
+        "total_tests": 1376
+      },
+      "numpy.reductions": {
+        "function_accuracy": 0.4,
+        "functions": 5,
+        "load_errors": 1,
+        "macro_accuracy": 0.6099829463465827,
+        "micro_accuracy": 0.8066343042071198,
+        "passed_tests": 997,
+        "perfect": 2,
+        "total_tests": 1236
+      },
+      "sympy.combinatorics": {
+        "function_accuracy": 0.6,
+        "functions": 5,
+        "load_errors": 1,
+        "macro_accuracy": 0.6055555555555555,
+        "micro_accuracy": 0.4185639229422067,
+        "passed_tests": 239,
+        "perfect": 3,
+        "total_tests": 571
+      },
+      "sympy.divisors": {
+        "function_accuracy": 0.8,
+        "functions": 5,
+        "load_errors": 0,
+        "macro_accuracy": 0.8604651162790697,
+        "micro_accuracy": 0.8905109489051095,
+        "passed_tests": 1464,
+        "perfect": 4,
+        "total_tests": 1644
+      },
+      "sympy.primes": {
+        "function_accuracy": 0.0,
+        "functions": 5,
+        "load_errors": 1,
+        "macro_accuracy": 0.29470983603608975,
+        "micro_accuracy": 0.30271084337349397,
+        "passed_tests": 402,
+        "perfect": 0,
+        "total_tests": 1328
+      }
+    },
+    "small_to_large": {
+      "networkx.connectivity": {
+        "function_accuracy": 1.0,
+        "functions": 5,
+        "load_errors": 0,
+        "macro_accuracy": 1.0,
+        "micro_accuracy": 1.0,
+        "passed_tests": 937,
+        "perfect": 5,
+        "total_tests": 937
+      },
+      "networkx.distances": {
+        "function_accuracy": 0.0,
+        "functions": 5,
+        "load_errors": 3,
+        "macro_accuracy": 0.07932469935245144,
+        "micro_accuracy": 0.044162129461584994,
+        "passed_tests": 73,
+        "perfect": 0,
+        "total_tests": 1653
+      },
+      "networkx.local_structure": {
+        "function_accuracy": 0.0,
+        "functions": 5,
+        "load_errors": 0,
+        "macro_accuracy": 0.01715928694652099,
+        "micro_accuracy": 0.01419698314108252,
+        "passed_tests": 16,
+        "perfect": 0,
+        "total_tests": 1127
+      },
+      "numpy.integer_arithmetic": {
+        "function_accuracy": 0.4,
+        "functions": 5,
+        "load_errors": 3,
+        "macro_accuracy": 0.4,
+        "micro_accuracy": 0.4261241970021413,
+        "passed_tests": 597,
+        "perfect": 2,
+        "total_tests": 1401
+      },
+      "numpy.ordering_counting": {
+        "function_accuracy": 0.6,
+        "functions": 5,
+        "load_errors": 1,
+        "macro_accuracy": 0.6495934959349593,
+        "micro_accuracy": 0.3561046511627907,
+        "passed_tests": 490,
+        "perfect": 3,
+        "total_tests": 1376
+      },
+      "numpy.reductions": {
+        "function_accuracy": 0.6,
+        "functions": 5,
+        "load_errors": 1,
+        "macro_accuracy": 0.6596774193548387,
+        "micro_accuracy": 0.47572815533980584,
+        "passed_tests": 588,
+        "perfect": 3,
+        "total_tests": 1236
+      },
+      "sympy.combinatorics": {
+        "function_accuracy": 0.6,
+        "functions": 5,
+        "load_errors": 0,
+        "macro_accuracy": 0.7824915824915825,
+        "micro_accuracy": 0.7390542907180385,
+        "passed_tests": 422,
+        "perfect": 3,
+        "total_tests": 571
+      },
+      "sympy.divisors": {
+        "function_accuracy": 0.2,
+        "functions": 5,
+        "load_errors": 2,
+        "macro_accuracy": 0.2391260162601626,
+        "micro_accuracy": 0.18917274939172748,
+        "passed_tests": 311,
+        "perfect": 1,
+        "total_tests": 1644
+      },
+      "sympy.primes": {
+        "function_accuracy": 0.2,
+        "functions": 5,
+        "load_errors": 1,
+        "macro_accuracy": 0.33358470077220076,
+        "micro_accuracy": 0.32379518072289154,
+        "passed_tests": 430,
+        "perfect": 1,
+        "total_tests": 1328
+      }
+    },
+    "small_to_small": {
+      "networkx.connectivity": {
+        "function_accuracy": 0.2,
+        "functions": 5,
+        "load_errors": 0,
+        "macro_accuracy": 0.29523809523809524,
+        "micro_accuracy": 0.29669156883671294,
+        "passed_tests": 278,
+        "perfect": 1,
+        "total_tests": 937
+      },
+      "networkx.distances": {
+        "function_accuracy": 0.0,
+        "functions": 5,
+        "load_errors": 2,
+        "macro_accuracy": 0.051086956521739134,
+        "micro_accuracy": 0.028433151845130067,
+        "passed_tests": 47,
+        "perfect": 0,
+        "total_tests": 1653
+      },
+      "networkx.local_structure": {
+        "function_accuracy": 0.0,
+        "functions": 5,
+        "load_errors": 2,
+        "macro_accuracy": 0.04126984126984127,
+        "micro_accuracy": 0.03460514640638864,
+        "passed_tests": 39,
+        "perfect": 0,
+        "total_tests": 1127
+      },
+      "numpy.integer_arithmetic": {
+        "function_accuracy": 0.0,
+        "functions": 5,
+        "load_errors": 1,
+        "macro_accuracy": 0.6548935616640537,
+        "micro_accuracy": 0.6409707351891506,
+        "passed_tests": 898,
+        "perfect": 0,
+        "total_tests": 1401
+      },
+      "numpy.ordering_counting": {
+        "function_accuracy": 0.4,
+        "functions": 5,
+        "load_errors": 1,
+        "macro_accuracy": 0.504613348459066,
+        "micro_accuracy": 0.3691860465116279,
+        "passed_tests": 508,
+        "perfect": 2,
+        "total_tests": 1376
+      },
+      "numpy.reductions": {
+        "function_accuracy": 0.6,
+        "functions": 5,
+        "load_errors": 2,
+        "macro_accuracy": 0.6,
+        "micro_accuracy": 0.2961165048543689,
+        "passed_tests": 366,
+        "perfect": 3,
+        "total_tests": 1236
+      },
+      "sympy.combinatorics": {
+        "function_accuracy": 0.6,
+        "functions": 5,
+        "load_errors": 1,
+        "macro_accuracy": 0.75,
+        "micro_accuracy": 0.8073555166374781,
+        "passed_tests": 461,
+        "perfect": 3,
+        "total_tests": 571
+      },
+      "sympy.divisors": {
+        "function_accuracy": 0.4,
+        "functions": 5,
+        "load_errors": 0,
+        "macro_accuracy": 0.48721955355454716,
+        "micro_accuracy": 0.46958637469586373,
+        "passed_tests": 772,
+        "perfect": 2,
+        "total_tests": 1644
+      },
+      "sympy.primes": {
+        "function_accuracy": 0.0,
+        "functions": 5,
+        "load_errors": 1,
+        "macro_accuracy": 0.2571091117303573,
+        "micro_accuracy": 0.2680722891566265,
+        "passed_tests": 356,
+        "perfect": 0,
+        "total_tests": 1328
+      }
+    }
+  },
+  "by_library": {
+    "large_to_large": {
+      "networkx": {
+        "function_accuracy": 0.2,
+        "functions": 15,
+        "load_errors": 5,
+        "macro_accuracy": 0.29467218275449414,
+        "micro_accuracy": 0.2660747914985203,
+        "passed_tests": 989,
+        "perfect": 3,
+        "total_tests": 3717
+      },
+      "numpy": {
+        "function_accuracy": 0.5333333333333333,
+        "functions": 15,
+        "load_errors": 3,
+        "macro_accuracy": 0.7302303900295147,
+        "micro_accuracy": 0.7298778968352854,
+        "passed_tests": 2929,
+        "perfect": 8,
+        "total_tests": 4013
+      },
+      "sympy": {
+        "function_accuracy": 0.4666666666666667,
+        "functions": 15,
+        "load_errors": 2,
+        "macro_accuracy": 0.5884371705027193,
+        "micro_accuracy": 0.4987298899237934,
+        "passed_tests": 1767,
+        "perfect": 7,
+        "total_tests": 3543
+      }
+    },
+    "large_to_small": {
+      "networkx": {
+        "function_accuracy": 0.26666666666666666,
+        "functions": 15,
+        "load_errors": 4,
+        "macro_accuracy": 0.33081200909645886,
+        "micro_accuracy": 0.39386602098466506,
+        "passed_tests": 1464,
+        "perfect": 4,
+        "total_tests": 3717
+      },
+      "numpy": {
+        "function_accuracy": 0.26666666666666666,
+        "functions": 15,
+        "load_errors": 1,
+        "macro_accuracy": 0.5767102282271179,
+        "micro_accuracy": 0.6404186394218789,
+        "passed_tests": 2570,
+        "perfect": 4,
+        "total_tests": 4013
+      },
+      "sympy": {
+        "function_accuracy": 0.4666666666666667,
+        "functions": 15,
+        "load_errors": 2,
+        "macro_accuracy": 0.5869101692902383,
+        "micro_accuracy": 0.5941292689810894,
+        "passed_tests": 2105,
+        "perfect": 7,
+        "total_tests": 3543
+      }
+    },
+    "small_to_large": {
+      "networkx": {
+        "function_accuracy": 0.3333333333333333,
+        "functions": 15,
+        "load_errors": 3,
+        "macro_accuracy": 0.3654946620996575,
+        "micro_accuracy": 0.27602905569007263,
+        "passed_tests": 1026,
+        "perfect": 5,
+        "total_tests": 3717
+      },
+      "numpy": {
+        "function_accuracy": 0.5333333333333333,
+        "functions": 15,
+        "load_errors": 5,
+        "macro_accuracy": 0.569756971763266,
+        "micro_accuracy": 0.41739347121853976,
+        "passed_tests": 1675,
+        "perfect": 8,
+        "total_tests": 4013
+      },
+      "sympy": {
+        "function_accuracy": 0.3333333333333333,
+        "functions": 15,
+        "load_errors": 3,
+        "macro_accuracy": 0.4517340998413153,
+        "micro_accuracy": 0.3282528930285069,
+        "passed_tests": 1163,
+        "perfect": 5,
+        "total_tests": 3543
+      }
+    },
+    "small_to_small": {
+      "networkx": {
+        "function_accuracy": 0.06666666666666667,
+        "functions": 15,
+        "load_errors": 4,
+        "macro_accuracy": 0.12919829767655855,
+        "micro_accuracy": 0.09792843691148775,
+        "passed_tests": 364,
+        "perfect": 1,
+        "total_tests": 3717
+      },
+      "numpy": {
+        "function_accuracy": 0.3333333333333333,
+        "functions": 15,
+        "load_errors": 4,
+        "macro_accuracy": 0.5865023033743733,
+        "micro_accuracy": 0.44156491402940445,
+        "passed_tests": 1772,
+        "perfect": 5,
+        "total_tests": 4013
+      },
+      "sympy": {
+        "function_accuracy": 0.3333333333333333,
+        "functions": 15,
+        "load_errors": 2,
+        "macro_accuracy": 0.4981095550949682,
+        "micro_accuracy": 0.4484899802427321,
+        "passed_tests": 1589,
+        "perfect": 5,
+        "total_tests": 3543
+      }
+    }
+  },
+  "cards": {
+    "large": {
+      "generated": 45,
+      "signature_exact": 45,
+      "truncated": 0,
+      "valid": 45
+    },
+    "small": {
+      "generated": 45,
+      "signature_exact": 45,
+      "truncated": 0,
+      "valid": 45
+    }
+  },
+  "complete": true,
+  "conditions": {
+    "large_to_large": {
+      "function_accuracy": 0.4,
+      "functions": 45,
+      "load_errors": 10,
+      "macro_accuracy": 0.5377799144289094,
+      "micro_accuracy": 0.5043023152665661,
+      "passed_tests": 5685,
+      "perfect": 18,
+      "total_tests": 11273
+    },
+    "large_to_small": {
+      "function_accuracy": 0.3333333333333333,
+      "functions": 45,
+      "load_errors": 7,
+      "macro_accuracy": 0.49814413553793835,
+      "micro_accuracy": 0.5445755344628759,
+      "passed_tests": 6139,
+      "perfect": 15,
+      "total_tests": 11273
+    },
+    "small_to_large": {
+      "function_accuracy": 0.4,
+      "functions": 45,
+      "load_errors": 11,
+      "macro_accuracy": 0.4623285779014129,
+      "micro_accuracy": 0.34276590082498004,
+      "passed_tests": 3864,
+      "perfect": 18,
+      "total_tests": 11273
+    },
+    "small_to_small": {
+      "function_accuracy": 0.24444444444444444,
+      "functions": 45,
+      "load_errors": 10,
+      "macro_accuracy": 0.40460338538196666,
+      "micro_accuracy": 0.3304355539785328,
+      "passed_tests": 3725,
+      "perfect": 11,
+      "total_tests": 11273
+    }
+  },
+  "finished_at": "2026-11-14T13:31:31.901277+00:00",
+  "generation": {
+    "cards": {
+      "records": 90,
+      "truncated": 0,
+      "valid": 90
+    },
+    "code": {
+      "records": 180,
+      "truncated": 11,
+      "valid": 169
+    }
+  },
+  "generation_seconds": 1464.6269572439962,
+  "model_calls": 270,
+  "output_tokens": 98784,
+  "paired_comparisons": [
+    {
+      "a": "small_to_small",
+      "a_only": 6,
+      "b": "large_to_large",
+      "b_only": 13,
+      "bootstrap_95": [
+        -0.022222222222222223,
+        0.3333333333333333
+      ],
+      "difference_b_minus_a": 0.15555555555555556,
+      "holm_p": 0.8353424072265625,
+      "mcnemar_exact_p": 0.1670684814453125
+    },
+    {
+      "a": "small_to_small",
+      "a_only": 3,
+      "b": "small_to_large",
+      "b_only": 10,
+      "bootstrap_95": [
+        0.022222222222222223,
+        0.3111111111111111
+      ],
+      "difference_b_minus_a": 0.15555555555555556,
+      "holm_p": 0.5537109375,
+      "mcnemar_exact_p": 0.09228515625
+    },
+    {
+      "a": "small_to_small",
+      "a_only": 7,
+      "b": "large_to_small",
+      "b_only": 11,
+      "bootstrap_95": [
+        -0.08888888888888889,
+        0.26666666666666666
+      ],
+      "difference_b_minus_a": 0.08888888888888889,
+      "holm_p": 1.0,
+      "mcnemar_exact_p": 0.480682373046875
+    },
+    {
+      "a": "large_to_large",
+      "a_only": 7,
+      "b": "small_to_large",
+      "b_only": 7,
+      "bootstrap_95": [
+        -0.15555555555555556,
+        0.15555555555555556
+      ],
+      "difference_b_minus_a": 0.0,
+      "holm_p": 1.0,
+      "mcnemar_exact_p": 1.0
+    },
+    {
+      "a": "large_to_large",
+      "a_only": 12,
+      "b": "large_to_small",
+      "b_only": 9,
+      "bootstrap_95": [
+        -0.26666666666666666,
+        0.13333333333333333
+      ],
+      "difference_b_minus_a": -0.06666666666666667,
+      "holm_p": 1.0,
+      "mcnemar_exact_p": 0.6636238098144531
+    },
+    {
+      "a": "small_to_large",
+      "a_only": 14,
+      "b": "large_to_small",
+      "b_only": 11,
+      "bootstrap_95": [
+        -0.26666666666666666,
+        0.15555555555555556
+      ],
+      "difference_b_minus_a": -0.06666666666666667,
+      "holm_p": 1.0,
+      "mcnemar_exact_p": 0.6900379657745361
+    }
+  ],
+  "prompt_tokens": 185478,
+  "started_at": "2026-11-14T13:07:00.457485+00:00",
+  "test_cases_per_condition": 11273
+}

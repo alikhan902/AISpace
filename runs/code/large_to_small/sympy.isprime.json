@@ -1,0 +1,61 @@
+{
+  "elapsed_seconds": 3.168688946999737,
+  "finished_at": "2026-11-14T13:30:54.879437+00:00",
+  "parsed": {
+    "code": "import math\nimport functools\nimport collections\nimport operator\n\ndef solve(n):\n    if not isinstance(n, int):\n        raise ValueError(\"Input must be an integer\")\n\n    if n <= 1:\n        return False\n\n    if n == 2:\n        return True\n\n    if n % 2 == 0:\n        return False\n\n    # Check for trivial factors up to sqrt(n)\n    i = 3\n    while i * i <= n:\n        if n % i == 0:\n            return False\n        i += 2\n\n    # Handle special cases for n <= 2^64\n    if n <= 2**64:\n        # Use deterministic Miller-Rabin tests with known bases\n        # For this example, we use a deterministic set of bases\n        bases = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]\n        for base in bases:\n            if not is_prime(n, base):\n                return False\n        return True\n\n    # For n > 2^64, use strong BPSW test\n    if is_prime(n):\n        return True\n    return False\n\ndef is_prime(n, base):\n    # Miller-Rabin test for a single base\n    # This is a simplified version for demonstration\n    d = n - 1\n    s = 0\n    while d % 2 == 0:\n        d //= 2\n        s += 1\n\n    for _ in range(base):\n        if pow(base, d, n) == base or pow(base, d, n) == 1:\n            return True\n    return False"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Implement a Python function from a JSON behavioral card. The card is the only task specification. Return a JSON object with a single string field code containing executable Python source. Define solve with the card's exact signature. Use only Python's standard library. Allowed imports: math, itertools, functools, collections, heapq, bisect, statistics, fractions, operator, typing. Do not import or call NumPy, SymPy, NetworkX or any other third-party library. Do not read files, use network, introspection, eval, exec, input or print. Implement computations yourself using built-ins and the allowed standard library. Return plain JSON-compatible values, not iterators or sets; use string keys in dictionaries. Include any helper functions in the code. No tests or main block. Raise ValueError where the card requires it.",
+        "role": "system"
+      },
+      {
+        "content": "Implement this card:\n{\n  \"algorithm\": [\n    \"Check if n < 2: return False (since primes are positive integers greater than 1).\",\n    \"Check for trivial factors (divisors other than 1 and n) up to sqrt(n). If found, return False.\",\n    \"For n <= 2^64: use deterministic Miller-Rabin tests with bases known to have no counterexamples in the range.\",\n    \"For n > 2^64: perform a strong BPSW primality test (probabilistic but with no known counterexamples).\",\n    \"Reject floats and non-integer inputs as per the contract.\"\n  ],\n  \"constraints\": [\n    \"n must be an integer in the range [-20, 10000] (per contract).\",\n    \"Negative numbers are not prime.\",\n    \"Floats are rejected as input (must be integers).\",\n    \"For n < 2, return False.\",\n    \"The algorithm uses deterministic tests for n <= 2^64 and probabilistic tests for n > 2^64.\"\n  ],\n  \"edge_cases\": [\n    \"n = 2: prime (True)\",\n    \"n = 1: not prime (False)\",\n    \"n = 0: not prime (False)\",\n    \"n = -1: not prime (False)\",\n    \"n = 2^64 + 1: large number requiring strong BPSW test\",\n    \"n = 1e23: float input rejected (must be integer)\"\n  ],\n  \"inputs\": \"An integer n in the range [-20, 10000] (per contract), but note that negative numbers are not prime and floats are rejected.\",\n  \"method_id\": \"sympy.isprime\",\n  \"output\": \"A plain Python bool (True if n is prime, False otherwise).\",\n  \"purpose\": \"Determine if an integer n is prime (True) or composite (False).\",\n  \"signature\": \"solve(n)\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:1.7b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 3072,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:30:54.879120658Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 404,
+    "eval_duration": 3060330000,
+    "load_duration": 597364,
+    "message": {
+      "content": "{\n  \"code\": \"import math\\nimport functools\\nimport collections\\nimport operator\\n\\ndef solve(n):\\n    if not isinstance(n, int):\\n        raise ValueError(\\\"Input must be an integer\\\")\\n\\n    if n <= 1:\\n        return False\\n\\n    if n == 2:\\n        return True\\n\\n    if n % 2 == 0:\\n        return False\\n\\n    # Check for trivial factors up to sqrt(n)\\n    i = 3\\n    while i * i <= n:\\n        if n % i == 0:\\n            return False\\n        i += 2\\n\\n    # Handle special cases for n <= 2^64\\n    if n <= 2**64:\\n        # Use deterministic Miller-Rabin tests with known bases\\n        # For this example, we use a deterministic set of bases\\n        bases = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]\\n        for base in bases:\\n            if not is_prime(n, base):\\n                return False\\n        return True\\n\\n    # For n > 2^64, use strong BPSW test\\n    if is_prime(n):\\n        return True\\n    return False\\n\\ndef is_prime(n, base):\\n    # Miller-Rabin test for a single base\\n    # This is a simplified version for demonstration\\n    d = n - 1\\n    s = 0\\n    while d % 2 == 0:\\n        d //= 2\\n        s += 1\\n\\n    for _ in range(base):\\n        if pow(base, d, n) == base or pow(base, d, n) == 1:\\n            return True\\n    return False\"\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:1.7b",
+    "prompt_eval_cached_count": 183,
+    "prompt_eval_count": 612,
+    "prompt_eval_duration": 86332000,
+    "total_duration": 3167957263
+  },
+  "started_at": "2026-11-14T13:30:51.710747+00:00",
+  "valid": true
+}

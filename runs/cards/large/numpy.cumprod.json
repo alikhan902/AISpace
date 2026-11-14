@@ -1,0 +1,125 @@
+{
+  "elapsed_seconds": 8.876389604999986,
+  "finished_at": "2026-11-14T13:10:38.820824+00:00",
+  "parsed": {
+    "algorithm": [
+      "For a single element input, return the element as a Python int.",
+      "For a non-empty list, compute the cumulative product starting from the first element, multiplying each subsequent element with the running product.",
+      "If the input is empty, return an empty list.",
+      "For a 1D list with axis not specified, flatten the list and compute the cumulative product across all elements.",
+      "For a 1D list with axis=0, compute the cumulative product across rows (each row is a single element, so this is equivalent to the cumulative product of the list).",
+      "For a 1D list with axis=1, compute the cumulative product across columns (each column is a single element, so this is equivalent to the cumulative product of the list).",
+      "Ensure all intermediate values fit within a signed 64-bit integer (int64).",
+      "Return the result as a Python int if the output is a single value, otherwise return a list[int]."
+    ],
+    "constraints": [
+      "The input list must be one-dimensional.",
+      "All intermediate values must fit within a signed 64-bit integer (int64).",
+      "The output must be a Python int for single-element results or a list[int] for multi-element results.",
+      "No NumPy objects are allowed in the output.",
+      "The function must use NumPy's default operation on the whole 1-D list with dtype=int64."
+    ],
+    "edge_cases": [
+      "Input list is empty: return an empty list.",
+      "Input list has a single element: return that element as a Python int.",
+      "Input list has multiple elements: compute cumulative product from left to right.",
+      "When the cumulative product overflows the int64 range: handle as per NumPy's default behavior (no error, modular arithmetic)."
+    ],
+    "inputs": "a: a one-dimensional list of integers (possibly empty)",
+    "method_id": "numpy.cumprod",
+    "output": "A Python int if the result is a single value (e.g., when axis is not specified and the input is a single element), or a list[int] of the cumulative products for the specified axis (e.g., for a 1D list with multiple elements or a 2D list with axis=0 or axis=1).",
+    "purpose": "Compute the cumulative product of elements along a specified axis for a 1D list of integers, returning the result as a Python int or list[int] based on the output size.",
+    "signature": "solve(a)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"a is a one-dimensional list of integers, possibly empty. Return Python int or list[int], as appropriate; no NumPy objects. All intermediate values fit signed int64. Use NumPy's default operation on the whole 1-D list, with dtype=int64.\",\n  \"documentation\": \"Return the cumulative product of elements along a given axis.\\n\\nParameters\\n----------\\na : array_like\\n    Input array.\\naxis : int, optional\\n    Axis along which the cumulative product is computed.  By default\\n    the input is flattened.\\ndtype : dtype, optional\\n    Type of the returned array, as well as of the accumulator in which\\n    the elements are multiplied.  If *dtype* is not specified, it\\n    defaults to the dtype of `a`, unless `a` has an integer dtype with\\n    a precision less than that of the default platform integer.  In\\n    that case, the default platform integer is used instead.\\nout : ndarray, optional\\n    Alternative output array in which to place the result. It must\\n    have the same shape and buffer length as the expected output\\n    but the type of the resulting values will be cast if necessary.\\n\\nReturns\\n-------\\ncumprod : ndarray\\n    A new array holding the result is returned unless `out` is\\n    specified, in which case a reference to out is returned.\\n\\nSee Also\\n--------\\ncumulative_prod : Array API compatible alternative for ``cumprod``.\\n:ref:`ufuncs-output-type`\\n\\nNotes\\n-----\\nArithmetic is modular when using integer types, and no error is\\nraised on overflow.\\n\\nExamples\\n--------\\n>>> import numpy as np\\n>>> a = np.array([1,2,3])\\n>>> np.cumprod(a) # intermediate results 1, 1*2\\n...               # total product 1*2*3 = 6\\narray([1, 2, 6])\\n>>> a = np.array([[1, 2, 3], [4, 5, 6]])\\n>>> np.cumprod(a, dtype=np.float64)  # specify type of output\\narray([   1.,    2.,    6.,   24.,  120.,  720.])\\n\\nThe cumulative product for each column (i.e., over the rows) of `a`:\\n\\n>>> np.cumprod(a, axis=0)\\narray([[ 1,  2,  3],\\n       [ 4, 10, 18]])\\n\\nThe cumulative product for each row (i.e. over the columns) of `a`:\\n\\n>>> np.cumprod(a,axis=1)\\narray([[  1,   2,   6],\\n       [  4,  20, 120]])\",\n  \"documentation_truncated\": false,\n  \"group\": \"reductions\",\n  \"id\": \"numpy.cumprod\",\n  \"library\": \"numpy\",\n  \"name\": \"cumprod\",\n  \"signature\": \"solve(a)\",\n  \"version\": \"2.5.4\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:4b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:10:38.820448218Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 546,
+    "eval_duration": 8548326999,
+    "load_duration": 595307,
+    "message": {
+      "content": "{\n  \"method_id\": \"numpy.cumprod\",\n  \"signature\": \"solve(a)\",\n  \"purpose\": \"Compute the cumulative product of elements along a specified axis for a 1D list of integers, returning the result as a Python int or list[int] based on the output size.\",\n  \"inputs\": \"a: a one-dimensional list of integers (possibly empty)\",\n  \"output\": \"A Python int if the result is a single value (e.g., when axis is not specified and the input is a single element), or a list[int] of the cumulative products for the specified axis (e.g., for a 1D list with multiple elements or a 2D list with axis=0 or axis=1).\",\n  \"algorithm\": [\n    \"For a single element input, return the element as a Python int.\",\n    \"For a non-empty list, compute the cumulative product starting from the first element, multiplying each subsequent element with the running product.\",\n    \"If the input is empty, return an empty list.\",\n    \"For a 1D list with axis not specified, flatten the list and compute the cumulative product across all elements.\",\n    \"For a 1D list with axis=0, compute the cumulative product across rows (each row is a single element, so this is equivalent to the cumulative product of the list).\",\n    \"For a 1D list with axis=1, compute the cumulative product across columns (each column is a single element, so this is equivalent to the cumulative product of the list).\",\n    \"Ensure all intermediate values fit within a signed 64-bit integer (int64).\",\n    \"Return the result as a Python int if the output is a single value, otherwise return a list[int].\"\n  ],\n  \"edge_cases\": [\n    \"Input list is empty: return an empty list.\",\n    \"Input list has a single element: return that element as a Python int.\",\n    \"Input list has multiple elements: compute cumulative product from left to right.\",\n    \"When the cumulative product overflows the int64 range: handle as per NumPy's default behavior (no error, modular arithmetic).\"\n  ],\n  \"constraints\": [\n    \"The input list must be one-dimensional.\",\n    \"All intermediate values must fit within a signed 64-bit integer (int64).\",\n    \"The output must be a Python int for single-element results or a list[int] for multi-element results.\",\n    \"No NumPy objects are allowed in the output.\",\n    \"The function must use NumPy's default operation on the whole 1-D list with dtype=int64.\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:4b",
+    "prompt_eval_cached_count": 408,
+    "prompt_eval_count": 1034,
+    "prompt_eval_duration": 288419000,
+    "total_duration": 8875601784
+  },
+  "started_at": "2026-11-14T13:10:29.944434+00:00",
+  "valid": true
+}

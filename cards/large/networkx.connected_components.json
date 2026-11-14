@@ -1,0 +1,29 @@
+{
+  "algorithm": [
+    "Perform BFS/DFS starting from each unvisited node to find connected components",
+    "For each node, if not visited, initiate BFS to explore all reachable nodes",
+    "Collect all reachable nodes as a component",
+    "Sort each component lexicographically",
+    "Sort the list of components lexicographically"
+  ],
+  "constraints": [
+    "Vertices are labeled 0 to n-1",
+    "Edges are distinct and unordered pairs with u < v",
+    "Graph is simple (no self-loops or multiple edges)",
+    "Output must be JSON-compatible (strings for vertices)",
+    "Components must be internally sorted lexicographically",
+    "Outer list of components must be lexicographically sorted"
+  ],
+  "edge_cases": [
+    "n=1 with no edges: single component [\"0\"]",
+    "n=2 with one edge: two components [\"0\", \"1\"]",
+    "n=3 with two edges: one component [\"0\", \"1\", \"2\"]",
+    "n=0: not applicable (n>=1 per contract)",
+    "All nodes isolated: n components each with one node"
+  ],
+  "inputs": "n: integer >= 1; edges: list of distinct [u,v] pairs with 0<=u<v<n",
+  "method_id": "networkx.connected_components",
+  "output": "List of lists of vertex strings, each inner list sorted lexicographically, outer list sorted lexicographically",
+  "purpose": "Generate connected components for an und:graph with n nodes and edges list",
+  "signature": "solve(n, edges)"
+}

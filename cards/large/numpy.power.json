@@ -1,0 +1,30 @@
+{
+  "algorithm": [
+    "For each element in the first input array (x), raise it to the power specified by the corresponding element in the second input array (y).",
+    "If both inputs are scalars, return a single integer result.",
+    "If inputs are lists, broadcast them to the same shape (e.g., if one is a scalar, it is repeated to match the length of the other list).",
+    "For exponent 0, any base (including 0) results in 1 (with 0**0 defined as 1).",
+    "For negative bases and positive exponents, return the result as an integer if the exponent is a non-negative integer; otherwise, return nan (for non-integer exponents) or raise an error (for negative exponents).",
+    "Ensure all results fit within signed int64 range."
+  ],
+  "constraints": [
+    "x and y must be integers or 1-D lists of integers",
+    "Exponents (y) are integers in the range 0 to 8 (inclusive)",
+    "Values and results must fit within signed int64 range",
+    "No broadcasting beyond the specified rules (scalar/scalar, scalar/list, list/scalar, same-length lists)",
+    "0**0 is defined as 1"
+  ],
+  "edge_cases": [
+    "0**0 returns 1",
+    "Negative bases raised to non-integer exponents return nan",
+    "Integer bases raised to negative exponents raise ValueError",
+    "Empty lists (both inputs) result in empty list",
+    "Scalar inputs (x and y) return a single integer",
+    "Broadcasting: when inputs have different shapes but are broadcastable (e.g., scalar and list), the scalar is repeated to match the list length"
+  ],
+  "inputs": "x and y are integers or 1-D lists of integers. Support scalar/scalar, scalar/list, list/scalar and lists of the same length (including empty).",
+  "method_id": "numpy.power",
+  "output": "A scalar integer if both inputs are scalars; otherwise, a list of integers. Values and results fit signed int64. Exponents are integers in 0..8; define 0**0 as 1.",
+  "purpose": "Compute each element in the first input array raised to the corresponding power in the second input array, supporting scalar and list inputs with broadcasting rules.",
+  "signature": "solve(x, y)"
+}

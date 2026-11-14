@@ -1,0 +1,25 @@
+{
+  "algorithm": [
+    "Check if the graph can be colored with two colors such that no two adjacent vertices share the same color.",
+    "Perform a BFS or DFS traversal starting from an arbitrary vertex, assigning alternating colors (0 and 1).",
+    "If during traversal, an adjacent vertex has the same color as the current vertex, the graph is not bipartite.",
+    "If all vertices are colored without conflicts, the graph is bipartite."
+  ],
+  "constraints": [
+    "n is an integer >= : 1",
+    "edges contains distinct pairs with 0<=u<v<n",
+    "Graph is simple and undirected",
+    "Vertices are labeled 0 to n-1"
+  ],
+  "edge_cases": [
+    "Graph with a single vertex (n=1) is bipartite.",
+    "Graph with no edges (n vertices) is bipartite.",
+    "Graph with an odd-length cycle is not bipartite.",
+    "Graph with multiple connected components: each component must be bipartite for the entire graph to be bipartite."
+  ],
+  "inputs": "n (integer >= 1) and edges (list of distinct [u,v] pairs where 0<=u<v<n)",
+  "method_id": "networkx.is_bipartite",
+  "output": "True if the graph is bipartite, False otherwise",
+  "purpose": "Determine if a simple undirected graph with n vertices (labeled 0 to n-1) and given edges is bipartite.",
+  "signature": "solve(n, edges)"
+}

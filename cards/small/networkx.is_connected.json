@@ -1,0 +1,24 @@
+{
+  "algorithm": [
+    "Perform a BFS traversal starting from an arbitrary node.",
+    "Track visited nodes during traversal.",
+    "If all nodes are visited, the graph is connected; otherwise, it is not."
+  ],
+  "constraints": [
+    "Edges are distinct and represent simple undirected unweighted graphs.",
+    "Vertices are numbered from 0 to n-1.",
+    "The graph is undirected and unweighted.",
+    "The function raises NetworkXNotImplemented for directed graphs."
+  ],
+  "edge_cases": [
+    "Graph with a single node (connected)",
+    "Graph with no edges (connected)",
+    "Graph with disconnected components (not connected)",
+    "Graph with multiple components (not connected)"
+  ],
+  "inputs": "n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.",
+  "method_id": "networkx.is_connected",
+  "output": "int for number_connected_components and bool for predicates.",
+  "purpose": "Determines if a given undirected graph is connected.",
+  "signature": "solve(n, edges)"
+}

@@ -1,0 +1,6569 @@
+{
+  "all_pass": true,
+  "cases": [
+    {
+      "case_id": "numpy.gcd:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "x": -7,
+        "y": -7
+      },
+      "observed": {
+        "value": 7
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -7,
+        "y": -6
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0002",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -7,
+        "y": -5
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0003",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -7,
+        "y": -4
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0004",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -7,
+        "y": -3
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0005",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -7,
+        "y": -2
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0006",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -7,
+        "y": -1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0007",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "x": -7,
+        "y": 0
+      },
+      "observed": {
+        "value": 7
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0008",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -7,
+        "y": 1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0009",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -7,
+        "y": 2
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0010",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -7,
+        "y": 3
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0011",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -7,
+        "y": 4
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0012",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -7,
+        "y": 5
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0013",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -7,
+        "y": 6
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0014",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "x": -7,
+        "y": 7
+      },
+      "observed": {
+        "value": 7
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0015",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -6,
+        "y": -7
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0016",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": -6,
+        "y": -6
+      },
+      "observed": {
+        "value": 6
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0017",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -6,
+        "y": -5
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0018",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": -6,
+        "y": -4
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0019",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": -6,
+        "y": -3
+      },
+      "observed": {
+        "value": 3
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0020",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": -6,
+        "y": -2
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0021",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -6,
+        "y": -1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0022",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": -6,
+        "y": 0
+      },
+      "observed": {
+        "value": 6
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0023",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -6,
+        "y": 1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0024",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": -6,
+        "y": 2
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0025",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": -6,
+        "y": 3
+      },
+      "observed": {
+        "value": 3
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0026",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": -6,
+        "y": 4
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0027",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -6,
+        "y": 5
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0028",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": -6,
+        "y": 6
+      },
+      "observed": {
+        "value": 6
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0029",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -6,
+        "y": 7
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0030",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -5,
+        "y": -7
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0031",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -5,
+        "y": -6
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0032",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "x": -5,
+        "y": -5
+      },
+      "observed": {
+        "value": 5
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0033",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -5,
+        "y": -4
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0034",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -5,
+        "y": -3
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0035",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -5,
+        "y": -2
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0036",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -5,
+        "y": -1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0037",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "x": -5,
+        "y": 0
+      },
+      "observed": {
+        "value": 5
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0038",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -5,
+        "y": 1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0039",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -5,
+        "y": 2
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0040",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -5,
+        "y": 3
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0041",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -5,
+        "y": 4
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0042",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "x": -5,
+        "y": 5
+      },
+      "observed": {
+        "value": 5
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0043",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -5,
+        "y": 6
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0044",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -5,
+        "y": 7
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0045",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -4,
+        "y": -7
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0046",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": -4,
+        "y": -6
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0047",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -4,
+        "y": -5
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0048",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": -4,
+        "y": -4
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0049",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -4,
+        "y": -3
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0050",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": -4,
+        "y": -2
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0051",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -4,
+        "y": -1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0052",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": -4,
+        "y": 0
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0053",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -4,
+        "y": 1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0054",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": -4,
+        "y": 2
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0055",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -4,
+        "y": 3
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0056",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": -4,
+        "y": 4
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0057",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -4,
+        "y": 5
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0058",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": -4,
+        "y": 6
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0059",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -4,
+        "y": 7
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0060",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -3,
+        "y": -7
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0061",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": -3,
+        "y": -6
+      },
+      "observed": {
+        "value": 3
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0062",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -3,
+        "y": -5
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0063",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -3,
+        "y": -4
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0064",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": -3,
+        "y": -3
+      },
+      "observed": {
+        "value": 3
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0065",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -3,
+        "y": -2
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0066",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -3,
+        "y": -1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0067",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": -3,
+        "y": 0
+      },
+      "observed": {
+        "value": 3
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0068",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -3,
+        "y": 1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0069",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -3,
+        "y": 2
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0070",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": -3,
+        "y": 3
+      },
+      "observed": {
+        "value": 3
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0071",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -3,
+        "y": 4
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0072",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -3,
+        "y": 5
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0073",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": -3,
+        "y": 6
+      },
+      "observed": {
+        "value": 3
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0074",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -3,
+        "y": 7
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0075",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -2,
+        "y": -7
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0076",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": -2,
+        "y": -6
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0077",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -2,
+        "y": -5
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0078",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": -2,
+        "y": -4
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0079",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -2,
+        "y": -3
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0080",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": -2,
+        "y": -2
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0081",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -2,
+        "y": -1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0082",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": -2,
+        "y": 0
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0083",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -2,
+        "y": 1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0084",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": -2,
+        "y": 2
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0085",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -2,
+        "y": 3
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0086",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": -2,
+        "y": 4
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0087",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -2,
+        "y": 5
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0088",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": -2,
+        "y": 6
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0089",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -2,
+        "y": 7
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0090",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -1,
+        "y": -7
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0091",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -1,
+        "y": -6
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0092",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -1,
+        "y": -5
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0093",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -1,
+        "y": -4
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0094",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -1,
+        "y": -3
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0095",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -1,
+        "y": -2
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0096",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -1,
+        "y": -1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0097",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -1,
+        "y": 0
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0098",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -1,
+        "y": 1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0099",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -1,
+        "y": 2
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0100",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -1,
+        "y": 3
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0101",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -1,
+        "y": 4
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0102",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -1,
+        "y": 5
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0103",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -1,
+        "y": 6
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0104",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -1,
+        "y": 7
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0105",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "x": 0,
+        "y": -7
+      },
+      "observed": {
+        "value": 7
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0106",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": 0,
+        "y": -6
+      },
+      "observed": {
+        "value": 6
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0107",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "x": 0,
+        "y": -5
+      },
+      "observed": {
+        "value": 5
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0108",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": 0,
+        "y": -4
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0109",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": 0,
+        "y": -3
+      },
+      "observed": {
+        "value": 3
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0110",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": 0,
+        "y": -2
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0111",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 0,
+        "y": -1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0112",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": 0,
+        "y": 0
+      },
+      "observed": {
+        "value": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0113",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 0,
+        "y": 1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0114",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": 0,
+        "y": 2
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0115",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": 0,
+        "y": 3
+      },
+      "observed": {
+        "value": 3
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0116",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": 0,
+        "y": 4
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0117",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "x": 0,
+        "y": 5
+      },
+      "observed": {
+        "value": 5
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0118",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": 0,
+        "y": 6
+      },
+      "observed": {
+        "value": 6
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0119",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "x": 0,
+        "y": 7
+      },
+      "observed": {
+        "value": 7
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0120",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 1,
+        "y": -7
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0121",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 1,
+        "y": -6
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0122",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 1,
+        "y": -5
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0123",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 1,
+        "y": -4
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0124",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 1,
+        "y": -3
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0125",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 1,
+        "y": -2
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0126",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 1,
+        "y": -1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0127",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 1,
+        "y": 0
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0128",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 1,
+        "y": 1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0129",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 1,
+        "y": 2
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0130",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 1,
+        "y": 3
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0131",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 1,
+        "y": 4
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0132",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 1,
+        "y": 5
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0133",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 1,
+        "y": 6
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0134",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 1,
+        "y": 7
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0135",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 2,
+        "y": -7
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0136",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": 2,
+        "y": -6
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0137",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 2,
+        "y": -5
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0138",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": 2,
+        "y": -4
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0139",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 2,
+        "y": -3
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0140",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": 2,
+        "y": -2
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0141",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 2,
+        "y": -1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0142",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": 2,
+        "y": 0
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0143",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 2,
+        "y": 1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0144",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": 2,
+        "y": 2
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0145",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 2,
+        "y": 3
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0146",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": 2,
+        "y": 4
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0147",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 2,
+        "y": 5
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0148",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": 2,
+        "y": 6
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0149",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 2,
+        "y": 7
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0150",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 3,
+        "y": -7
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0151",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": 3,
+        "y": -6
+      },
+      "observed": {
+        "value": 3
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0152",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 3,
+        "y": -5
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0153",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 3,
+        "y": -4
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0154",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": 3,
+        "y": -3
+      },
+      "observed": {
+        "value": 3
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0155",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 3,
+        "y": -2
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0156",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 3,
+        "y": -1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0157",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": 3,
+        "y": 0
+      },
+      "observed": {
+        "value": 3
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0158",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 3,
+        "y": 1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0159",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 3,
+        "y": 2
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0160",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": 3,
+        "y": 3
+      },
+      "observed": {
+        "value": 3
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0161",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 3,
+        "y": 4
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0162",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 3,
+        "y": 5
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0163",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": 3,
+        "y": 6
+      },
+      "observed": {
+        "value": 3
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0164",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 3,
+        "y": 7
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0165",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 4,
+        "y": -7
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0166",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": 4,
+        "y": -6
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0167",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 4,
+        "y": -5
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0168",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": 4,
+        "y": -4
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0169",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 4,
+        "y": -3
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0170",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": 4,
+        "y": -2
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0171",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 4,
+        "y": -1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0172",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": 4,
+        "y": 0
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0173",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 4,
+        "y": 1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0174",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": 4,
+        "y": 2
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0175",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 4,
+        "y": 3
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0176",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": 4,
+        "y": 4
+      },
+      "observed": {
+        "value": 4
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0177",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 4,
+        "y": 5
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0178",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": 4,
+        "y": 6
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0179",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 4,
+        "y": 7
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0180",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 5,
+        "y": -7
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0181",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 5,
+        "y": -6
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0182",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "x": 5,
+        "y": -5
+      },
+      "observed": {
+        "value": 5
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0183",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 5,
+        "y": -4
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0184",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 5,
+        "y": -3
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0185",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 5,
+        "y": -2
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0186",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 5,
+        "y": -1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0187",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "x": 5,
+        "y": 0
+      },
+      "observed": {
+        "value": 5
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0188",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 5,
+        "y": 1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0189",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 5,
+        "y": 2
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0190",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 5,
+        "y": 3
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0191",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 5,
+        "y": 4
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0192",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "x": 5,
+        "y": 5
+      },
+      "observed": {
+        "value": 5
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0193",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 5,
+        "y": 6
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0194",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 5,
+        "y": 7
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0195",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 6,
+        "y": -7
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0196",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": 6,
+        "y": -6
+      },
+      "observed": {
+        "value": 6
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0197",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 6,
+        "y": -5
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0198",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": 6,
+        "y": -4
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0199",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": 6,
+        "y": -3
+      },
+      "observed": {
+        "value": 3
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0200",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": 6,
+        "y": -2
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0201",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 6,
+        "y": -1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0202",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": 6,
+        "y": 0
+      },
+      "observed": {
+        "value": 6
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0203",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 6,
+        "y": 1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0204",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": 6,
+        "y": 2
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0205",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": 6,
+        "y": 3
+      },
+      "observed": {
+        "value": 3
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0206",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": 6,
+        "y": 4
+      },
+      "observed": {
+        "value": 2
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0207",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 6,
+        "y": 5
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0208",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": 6,
+        "y": 6
+      },
+      "observed": {
+        "value": 6
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0209",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 6,
+        "y": 7
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0210",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "x": 7,
+        "y": -7
+      },
+      "observed": {
+        "value": 7
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0211",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 7,
+        "y": -6
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0212",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 7,
+        "y": -5
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0213",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 7,
+        "y": -4
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0214",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 7,
+        "y": -3
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0215",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 7,
+        "y": -2
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0216",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 7,
+        "y": -1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0217",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "x": 7,
+        "y": 0
+      },
+      "observed": {
+        "value": 7
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0218",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 7,
+        "y": 1
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0219",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 7,
+        "y": 2
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0220",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 7,
+        "y": 3
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0221",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 7,
+        "y": 4
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0222",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 7,
+        "y": 5
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0223",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 7,
+        "y": 6
+      },
+      "observed": {
+        "value": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0224",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "x": 7,
+        "y": 7
+      },
+      "observed": {
+        "value": 7
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0225",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          4,
+          4,
+          8,
+          1
+        ]
+      },
+      "input": {
+        "x": 8,
+        "y": [
+          7,
+          2,
+          12,
+          4,
+          8,
+          -3
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          4,
+          4,
+          8,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0226",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          0,
+          9,
+          11,
+          -11,
+          3,
+          7,
+          11,
+          -10,
+          11,
+          -9,
+          -4
+        ],
+        "y": -1
+      },
+      "observed": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0227",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          4,
+          1,
+          2,
+          8,
+          5,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          1,
+          8,
+          -11,
+          6,
+          -8,
+          0,
+          -4,
+          2,
+          12,
+          -2,
+          7
+        ],
+        "y": [
+          -5,
+          12,
+          9,
+          -2,
+          8,
+          -5,
+          -3,
+          -7,
+          -11,
+          1,
+          8
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          4,
+          1,
+          2,
+          8,
+          5,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0228",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": 5,
+        "y": [
+          7,
+          -11,
+          2
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0229",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          9,
+          0,
+          -1,
+          -12,
+          4,
+          6,
+          -12,
+          -2
+        ],
+        "y": -1
+      },
+      "observed": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0230",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          4
+        ]
+      },
+      "input": {
+        "x": [
+          9,
+          -1,
+          8
+        ],
+        "y": [
+          10,
+          11,
+          12
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          1,
+          4
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0231",
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "x": -7,
+        "y": []
+      },
+      "observed": {
+        "value": []
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0232",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          7
+        ]
+      },
+      "input": {
+        "x": [
+          9,
+          -3,
+          -7
+        ],
+        "y": -7
+      },
+      "observed": {
+        "value": [
+          1,
+          1,
+          7
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0233",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          4,
+          1,
+          3,
+          1,
+          2,
+          8
+        ]
+      },
+      "input": {
+        "x": [
+          -11,
+          4,
+          -2,
+          9,
+          1,
+          2,
+          -8
+        ],
+        "y": [
+          -5,
+          -12,
+          -5,
+          -6,
+          -5,
+          -4,
+          0
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          4,
+          1,
+          3,
+          1,
+          2,
+          8
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0234",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1,
+          4,
+          1,
+          1,
+          4,
+          1,
+          8
+        ]
+      },
+      "input": {
+        "x": 8,
+        "y": [
+          2,
+          -3,
+          -4,
+          7,
+          -1,
+          4,
+          -11,
+          -8
+        ]
+      },
+      "observed": {
+        "value": [
+          2,
+          1,
+          4,
+          1,
+          1,
+          4,
+          1,
+          8
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0235",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          10,
+          6,
+          -3,
+          10
+        ],
+        "y": -7
+      },
+      "observed": {
+        "value": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0236",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          9,
+          2,
+          1,
+          8,
+          1,
+          1,
+          1,
+          2,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          3,
+          -9,
+          2,
+          8,
+          8,
+          -9,
+          1,
+          7,
+          2,
+          -9
+        ],
+        "y": [
+          -4,
+          9,
+          6,
+          7,
+          -8,
+          11,
+          0,
+          -2,
+          -10,
+          1
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          9,
+          2,
+          1,
+          8,
+          1,
+          1,
+          1,
+          2,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0237",
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "input": {
+        "x": 7,
+        "y": [
+          -9
+        ]
+      },
+      "observed": {
+        "value": [
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0238",
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          5
+        ],
+        "y": -1
+      },
+      "observed": {
+        "value": [
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0239",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          2,
+          9
+        ]
+      },
+      "input": {
+        "x": [
+          -5,
+          11,
+          -8,
+          0
+        ],
+        "y": [
+          4,
+          -12,
+          2,
+          -9
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          1,
+          2,
+          9
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0240",
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "input": {
+        "x": -7,
+        "y": [
+          -4
+        ]
+      },
+      "observed": {
+        "value": [
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0241",
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          -11
+        ],
+        "y": -7
+      },
+      "observed": {
+        "value": [
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0242",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          1,
+          3,
+          2,
+          4,
+          1,
+          5,
+          1,
+          2,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          2,
+          3,
+          9,
+          9,
+          10,
+          8,
+          -11,
+          5,
+          5,
+          -2,
+          7
+        ],
+        "y": [
+          12,
+          -12,
+          11,
+          -6,
+          2,
+          12,
+          -9,
+          0,
+          6,
+          12,
+          4
+        ]
+      },
+      "observed": {
+        "value": [
+          2,
+          3,
+          1,
+          3,
+          2,
+          4,
+          1,
+          5,
+          1,
+          2,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0243",
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "input": {
+        "x": 9,
+        "y": [
+          8
+        ]
+      },
+      "observed": {
+        "value": [
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0244",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          7,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          3,
+          0,
+          11,
+          1,
+          -1,
+          -3,
+          9
+        ],
+        "y": 7
+      },
+      "observed": {
+        "value": [
+          1,
+          7,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0245",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          0,
+          4,
+          4,
+          3,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          4,
+          -7,
+          0,
+          -4,
+          12,
+          -9,
+          -1,
+          11
+        ],
+        "y": [
+          11,
+          -12,
+          0,
+          4,
+          8,
+          -12,
+          -10,
+          5
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          1,
+          0,
+          4,
+          4,
+          3,
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0246",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2,
+          1,
+          2
+        ]
+      },
+      "input": {
+        "x": 4,
+        "y": [
+          7,
+          6,
+          -10,
+          9,
+          -6
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          2,
+          1,
+          2
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0247",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          5,
+          1,
+          -9,
+          -4
+        ],
+        "y": -1
+      },
+      "observed": {
+        "value": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0248",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          -10,
+          11,
+          11,
+          2,
+          9,
+          -1,
+          -2,
+          7,
+          10,
+          12,
+          -7
+        ],
+        "y": [
+          2,
+          8,
+          -10,
+          -12,
+          -11,
+          -3,
+          12,
+          3,
+          -1,
+          -2,
+          -5
+        ]
+      },
+      "observed": {
+        "value": [
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0249",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          8,
+          1,
+          8
+        ]
+      },
+      "input": {
+        "x": -8,
+        "y": [
+          -9,
+          -8,
+          -3,
+          0
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          8,
+          1,
+          8
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0250",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          6,
+          8
+        ],
+        "y": -7
+      },
+      "observed": {
+        "value": [
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0251",
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          4
+        ],
+        "y": [
+          5
+        ]
+      },
+      "observed": {
+        "value": [
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0252",
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          1,
+          2,
+          1
+        ]
+      },
+      "input": {
+        "x": 4,
+        "y": [
+          -8,
+          -9,
+          -6,
+          -9
+        ]
+      },
+      "observed": {
+        "value": [
+          4,
+          1,
+          2,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0253",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          -7,
+          -11,
+          0,
+          4,
+          11,
+          1,
+          -6,
+          1
+        ],
+        "y": 1
+      },
+      "observed": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0254",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          1,
+          3,
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          11,
+          -3,
+          9,
+          3,
+          -12,
+          11,
+          -1,
+          4
+        ],
+        "y": [
+          4,
+          -9,
+          10,
+          3,
+          9,
+          -12,
+          -3,
+          -5
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          1,
+          3,
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0255",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": -1,
+        "y": [
+          7,
+          -3
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0256",
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "x": [],
+        "y": 1
+      },
+      "observed": {
+        "value": []
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0257",
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "x": [],
+        "y": []
+      },
+      "observed": {
+        "value": []
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0258",
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          1,
+          1,
+          4,
+          2,
+          2,
+          1
+        ]
+      },
+      "input": {
+        "x": -4,
+        "y": [
+          -4,
+          -5,
+          5,
+          -8,
+          2,
+          10,
+          -5
+        ]
+      },
+      "observed": {
+        "value": [
+          4,
+          1,
+          1,
+          4,
+          2,
+          2,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0259",
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          -4
+        ],
+        "y": -1
+      },
+      "observed": {
+        "value": [
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0260",
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          -4,
+          -10
+        ],
+        "y": [
+          -8,
+          -3
+        ]
+      },
+      "observed": {
+        "value": [
+          4,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0261",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          2,
+          2,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ]
+      },
+      "input": {
+        "x": -6,
+        "y": [
+          9,
+          8,
+          -2,
+          -6,
+          -6,
+          6,
+          6,
+          -6,
+          12
+        ]
+      },
+      "observed": {
+        "value": [
+          3,
+          2,
+          2,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0262",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          11,
+          -12,
+          -6,
+          3,
+          2,
+          -10,
+          -2,
+          8,
+          -12,
+          -5,
+          5
+        ],
+        "y": -1
+      },
+      "observed": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0263",
+      "category": "random",
+      "expected": {
+        "value": [
+          6,
+          2,
+          2,
+          4
+        ]
+      },
+      "input": {
+        "x": [
+          -6,
+          8,
+          2,
+          -4
+        ],
+        "y": [
+          -12,
+          6,
+          8,
+          8
+        ]
+      },
+      "observed": {
+        "value": [
+          6,
+          2,
+          2,
+          4
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0264",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          3,
+          1,
+          3,
+          3
+        ]
+      },
+      "input": {
+        "x": 3,
+        "y": [
+          -1,
+          -7,
+          0,
+          5,
+          9,
+          3
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          1,
+          3,
+          1,
+          3,
+          3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0265",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          5,
+          -12,
+          -2,
+          -11,
+          3,
+          4
+        ],
+        "y": 7
+      },
+      "observed": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0266",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1,
+          1,
+          8,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          4,
+          2,
+          7,
+          0,
+          3,
+          9,
+          2,
+          -8,
+          -5,
+          8,
+          -6
+        ],
+        "y": [
+          -2,
+          3,
+          3,
+          -8,
+          -6,
+          -6,
+          -8,
+          11,
+          -11,
+          3,
+          -7
+        ]
+      },
+      "observed": {
+        "value": [
+          2,
+          1,
+          1,
+          8,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0267",
+      "category": "random",
+      "expected": {
+        "value": [
+          5,
+          1,
+          1,
+          1,
+          5
+        ]
+      },
+      "input": {
+        "x": 5,
+        "y": [
+          5,
+          -4,
+          -7,
+          -7,
+          0
+        ]
+      },
+      "observed": {
+        "value": [
+          5,
+          1,
+          1,
+          1,
+          5
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0268",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          6,
+          9,
+          2,
+          9,
+          7,
+          -5,
+          3,
+          3,
+          -6,
+          -12
+        ],
+        "y": 1
+      },
+      "observed": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0269",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          6,
+          1,
+          3,
+          7,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          3,
+          12,
+          1,
+          -3,
+          -7,
+          5
+        ],
+        "y": [
+          5,
+          6,
+          -12,
+          6,
+          -7,
+          12
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          6,
+          1,
+          3,
+          7,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0270",
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          10,
+          5,
+          7,
+          12
+        ]
+      },
+      "input": {
+        "x": 0,
+        "y": [
+          4,
+          -10,
+          5,
+          -7,
+          -12
+        ]
+      },
+      "observed": {
+        "value": [
+          4,
+          10,
+          5,
+          7,
+          12
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0271",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          7,
+          7
+        ]
+      },
+      "input": {
+        "x": [
+          4,
+          1,
+          -9,
+          -12,
+          -11,
+          -7,
+          7
+        ],
+        "y": 7
+      },
+      "observed": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          7,
+          7
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0272",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          -10,
+          -4
+        ],
+        "y": [
+          7,
+          5
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0273",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          7,
+          1,
+          1,
+          7,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": -7,
+        "y": [
+          -1,
+          0,
+          4,
+          5,
+          7,
+          6,
+          9,
+          -8,
+          10
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          7,
+          1,
+          1,
+          7,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0274",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          7,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          -2,
+          -1,
+          0,
+          -1,
+          10,
+          -6,
+          -6,
+          -11,
+          -9
+        ],
+        "y": -7
+      },
+      "observed": {
+        "value": [
+          1,
+          1,
+          7,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0275",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2
+        ]
+      },
+      "input": {
+        "x": [
+          -1,
+          -10
+        ],
+        "y": [
+          -2,
+          8
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          2
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0276",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1,
+          4,
+          4,
+          1
+        ]
+      },
+      "input": {
+        "x": 4,
+        "y": [
+          6,
+          -5,
+          -4,
+          4,
+          1
+        ]
+      },
+      "observed": {
+        "value": [
+          2,
+          1,
+          4,
+          4,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0277",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          -6,
+          11,
+          3,
+          -1,
+          -8,
+          -11,
+          -4,
+          -9,
+          -3,
+          3
+        ],
+        "y": 1
+      },
+      "observed": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0278",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          -5,
+          -1
+        ],
+        "y": [
+          -6,
+          9
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0279",
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "x": 9,
+        "y": []
+      },
+      "observed": {
+        "value": []
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0280",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          -5,
+          11,
+          12,
+          5,
+          -4,
+          0,
+          6,
+          -11,
+          -4,
+          5
+        ],
+        "y": 1
+      },
+      "observed": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0281",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          4,
+          1,
+          2
+        ]
+      },
+      "input": {
+        "x": [
+          -2,
+          -2,
+          7,
+          6,
+          2,
+          6,
+          -2,
+          -2,
+          12,
+          -7,
+          -8
+        ],
+        "y": [
+          -8,
+          9,
+          6,
+          -7,
+          -7,
+          2,
+          -3,
+          -12,
+          8,
+          -6,
+          -2
+        ]
+      },
+      "observed": {
+        "value": [
+          2,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          4,
+          1,
+          2
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0282",
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "x": -8,
+        "y": []
+      },
+      "observed": {
+        "value": []
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0283",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          3,
+          11,
+          11,
+          -3,
+          -8,
+          -2,
+          -8,
+          5,
+          3,
+          -1
+        ],
+        "y": -1
+      },
+      "observed": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0284",
+      "category": "random",
+      "expected": {
+        "value": [
+          4
+        ]
+      },
+      "input": {
+        "x": [
+          4
+        ],
+        "y": [
+          12
+        ]
+      },
+      "observed": {
+        "value": [
+          4
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0285",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": -1,
+        "y": [
+          -5,
+          -11
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0286",
+      "category": "random",
+      "expected": {
+        "value": [
+          7,
+          1,
+          1,
+          1,
+          1,
+          7
+        ]
+      },
+      "input": {
+        "x": [
+          0,
+          2,
+          -9,
+          -11,
+          9,
+          -7
+        ],
+        "y": -7
+      },
+      "observed": {
+        "value": [
+          7,
+          1,
+          1,
+          1,
+          1,
+          7
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0287",
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          0,
+          5,
+          3,
+          11,
+          -6,
+          6,
+          11
+        ],
+        "y": [
+          4,
+          6,
+          -7,
+          4,
+          -5,
+          -8,
+          -7
+        ]
+      },
+      "observed": {
+        "value": [
+          4,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0288",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          4,
+          4
+        ]
+      },
+      "input": {
+        "x": 8,
+        "y": [
+          6,
+          -4,
+          -4
+        ]
+      },
+      "observed": {
+        "value": [
+          2,
+          4,
+          4
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0289",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          -9,
+          -4,
+          3
+        ],
+        "y": -7
+      },
+      "observed": {
+        "value": [
+          1,
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0290",
+      "category": "random",
+      "expected": {
+        "value": [
+          6,
+          1,
+          1,
+          5,
+          2,
+          1,
+          1,
+          1,
+          1,
+          3
+        ]
+      },
+      "input": {
+        "x": [
+          -12,
+          -3,
+          4,
+          0,
+          10,
+          -6,
+          5,
+          10,
+          -1,
+          -12
+        ],
+        "y": [
+          6,
+          8,
+          -3,
+          -5,
+          -2,
+          7,
+          -11,
+          -3,
+          2,
+          -3
+        ]
+      },
+      "observed": {
+        "value": [
+          6,
+          1,
+          1,
+          5,
+          2,
+          1,
+          1,
+          1,
+          1,
+          3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0291",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          7,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          -5,
+          -6,
+          6,
+          -11,
+          6,
+          -2,
+          1,
+          -12,
+          -10,
+          7,
+          -9
+        ],
+        "y": 7
+      },
+      "observed": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          7,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0292",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          3,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          11,
+          9,
+          9,
+          -5
+        ],
+        "y": [
+          -2,
+          -11,
+          -3,
+          -9
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          1,
+          3,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0293",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": 7,
+        "y": [
+          -11,
+          -8,
+          -11,
+          10,
+          11,
+          -11,
+          12,
+          -6,
+          -1,
+          -11,
+          11
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0294",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          7,
+          1,
+          1,
+          1,
+          1,
+          1,
+          7,
+          1,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          2,
+          7,
+          -12,
+          11,
+          -3,
+          -5,
+          -11,
+          7,
+          -2,
+          3,
+          9
+        ],
+        "y": -7
+      },
+      "observed": {
+        "value": [
+          1,
+          7,
+          1,
+          1,
+          1,
+          1,
+          1,
+          7,
+          1,
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0295",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          4,
+          1,
+          1,
+          1,
+          1,
+          1,
+          5
+        ]
+      },
+      "input": {
+        "x": [
+          -3,
+          -4,
+          9,
+          -9,
+          -3,
+          8,
+          1,
+          5
+        ],
+        "y": [
+          1,
+          4,
+          5,
+          2,
+          11,
+          3,
+          -12,
+          5
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          4,
+          1,
+          1,
+          1,
+          1,
+          1,
+          5
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0296",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": -7,
+        "y": [
+          5,
+          -6,
+          12,
+          10,
+          -5,
+          -4,
+          10,
+          2,
+          -11,
+          -4,
+          11
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0297",
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          8
+        ],
+        "y": 7
+      },
+      "observed": {
+        "value": [
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0298",
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          4,
+          1,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          8,
+          -8,
+          3,
+          -10,
+          -6,
+          7,
+          -5,
+          3,
+          -1,
+          -11
+        ],
+        "y": [
+          -4,
+          4,
+          5,
+          2,
+          -2,
+          4,
+          -11,
+          5,
+          3,
+          5
+        ]
+      },
+      "observed": {
+        "value": [
+          4,
+          4,
+          1,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0299",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          5,
+          1,
+          5
+        ]
+      },
+      "input": {
+        "x": -5,
+        "y": [
+          4,
+          11,
+          -1,
+          -9,
+          -6,
+          1,
+          7,
+          10,
+          1,
+          10
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          5,
+          1,
+          5
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0300",
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          -2
+        ],
+        "y": 7
+      },
+      "observed": {
+        "value": [
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0301",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          1
+        ]
+      },
+      "input": {
+        "x": -2,
+        "y": [
+          4,
+          9
+        ]
+      },
+      "observed": {
+        "value": [
+          2,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0302",
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "x": [],
+        "y": -7
+      },
+      "observed": {
+        "value": []
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0303",
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          3,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          8,
+          -6,
+          1,
+          1,
+          1,
+          5,
+          -1,
+          11,
+          3
+        ],
+        "y": [
+          12,
+          -9,
+          1,
+          -9,
+          9,
+          3,
+          -3,
+          -2,
+          -4
+        ]
+      },
+      "observed": {
+        "value": [
+          4,
+          3,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0304",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          6,
+          2,
+          3,
+          1
+        ]
+      },
+      "input": {
+        "x": 6,
+        "y": [
+          -1,
+          10,
+          6,
+          2,
+          9,
+          -7
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          2,
+          6,
+          2,
+          3,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0305",
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "x": [],
+        "y": 7
+      },
+      "observed": {
+        "value": []
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0306",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          5,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          2
+        ]
+      },
+      "input": {
+        "x": [
+          -1,
+          -10,
+          -7,
+          1,
+          12,
+          1,
+          -11,
+          10,
+          9,
+          -8,
+          6
+        ],
+        "y": [
+          8,
+          -5,
+          2,
+          3,
+          -5,
+          -3,
+          12,
+          11,
+          -6,
+          1,
+          10
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          5,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          2
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0307",
+      "category": "random",
+      "expected": {
+        "value": [
+          2
+        ]
+      },
+      "input": {
+        "x": 2,
+        "y": [
+          -10
+        ]
+      },
+      "observed": {
+        "value": [
+          2
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0308",
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          0
+        ],
+        "y": 1
+      },
+      "observed": {
+        "value": [
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0309",
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          -4,
+          -10
+        ],
+        "y": [
+          0,
+          1
+        ]
+      },
+      "observed": {
+        "value": [
+          4,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0310",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          1,
+          1,
+          3,
+          1
+        ]
+      },
+      "input": {
+        "x": -3,
+        "y": [
+          -7,
+          -9,
+          -7,
+          2,
+          -6,
+          -7
+        ]
+      },
+      "observed": {
+        "value": [
+          1,
+          3,
+          1,
+          1,
+          3,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0311",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          1,
+          4,
+          12,
+          10
+        ],
+        "y": -7
+      },
+      "observed": {
+        "value": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case_id": "numpy.gcd:0312",
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          -11
+        ],
+        "y": [
+          12
+        ]
+      },
+      "observed": {
+        "value": [
+          1
+        ]
+      },
+      "passed": true
+    }
+  ],
+  "condition": "large_to_large",
+  "elapsed_seconds": 0.03030249899984483,
+  "group": "integer_arithmetic",
+  "library": "numpy",
+  "load_error": null,
+  "method_id": "numpy.gcd",
+  "passed": 313,
+  "total": 313
+}

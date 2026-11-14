@@ -1,0 +1,122 @@
+{
+  "elapsed_seconds": 7.712658094000062,
+  "finished_at": "2026-11-14T13:14:37.404430+00:00",
+  "parsed": {
+    "algorithm": [
+      "Construct a simple undirected graph from the input vertices and edges",
+      "For each vertex v in the graph, compute the shortest path distances to all other vertices",
+      "Determine the maximum distance from v to any other vertex as the eccentricity of v",
+      "Return a dictionary mapping each vertex to its eccentricity"
+    ],
+    "constraints": [
+      "Vertices are labeled 0 to n-1",
+      "Edges are distinct and satisfy 0<=u<v<n",
+      "Graph must be simple (no self-loops or multiple edges)",
+      "Eccentricity is defined for all vertices in the graph",
+      "Output must be a dictionary with string keys and integer values"
+    ],
+    "edge_cases": [
+      "n=1: single vertex with no edges (eccentricity 0)",
+      "Disconnected graph: raise ValueError",
+      "Singleton graph: eccentricity 0",
+      "Graph with isolated vertices: include in eccentricity calculation",
+      "Graph with multiple connected components: raise ValueError"
+    ],
+    "inputs": "n: integer >= 1; edges: list of distinct [u,v] pairs where 0<=u<v<n",
+    "method_id": "networkx.eccentricity",
+    "output": "Dictionary with string keys (vertex names) mapping to integers (eccentricity values). If the graph is disconnected, raise ValueError.",
+    "purpose": "Compute the eccentricity of each node in a simple undirected unweighted graph with n vertices (0 to n-1) and given edges. Eccentricity of a node is the maximum shortest path distance from that node to any other node in the graph.",
+    "signature": "solve(n, edges)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"n is an integer >= 1; vertices are 0,...,n-1. edges is a list of distinct [u,v] pairs with 0<=u<v<n. Construct a simple undirected unweighted graph including isolated vertices. Return plain JSON-compatible Python values. Dictionary vertex keys must be strings. Return a dict of every vertex's eccentricity for eccentricity (string keys), otherwise an int. For a disconnected graph raise ValueError. A singleton has eccentricity, diameter and radius 0.\",\n  \"documentation\": \"Returns the eccentricity of nodes in G.\\n\\nThe eccentricity of a node v is the maximum distance from v to\\nall other nodes in G.\\n\\nParameters\\n----------\\nG : NetworkX graph\\n   A graph\\n\\nv : node, optional\\n   Return value of specified node\\n\\nsp : dict of dicts, optional\\n   All pairs shortest path lengths as a dictionary of dictionaries\\n\\nweight : string, function, or None (default=None)\\n    If this is a string, then edge weights will be accessed via the\\n    edge attribute with this key (that is, the weight of the edge\\n    joining `u` to `v` will be ``G.edges[u, v][weight]``). If no\\n    such edge attribute exists, the weight of the edge is assumed to\\n    be one.\\n\\n    If this is a function, the weight of an edge is the value\\n    returned by the function. The function must accept exactly three\\n    positional arguments: the two endpoints of an edge and the\\n    dictionary of edge attributes for that edge. The function must\\n    return a number.\\n\\n    If this is None, every edge has weight/distance/cost 1.\\n\\n    Weights stored as floating point values can lead to small round-off\\n    errors in distances. Use integer weights to avoid this.\\n\\n    Weights should be positive, since they are distances.\\n\\nReturns\\n-------\\necc : dictionary\\n   A dictionary of eccentricity values keyed by node.\\n\\nExamples\\n--------\\n>>> G = nx.Graph([(1, 2), (1, 3), (1, 4), (3, 4), (3, 5), (4, 5)])\\n>>> dict(nx.eccentricity(G))\\n{1: 2, 2: 3, 3: 2, 4: 2, 5: 3}\\n\\n>>> dict(\\n...     nx.eccentricity(G, v=[1, 5])\\n... )  # This returns the eccentricity of node 1 & 5\\n{1: 2, 5: 3}\",\n  \"documentation_truncated\": false,\n  \"group\": \"distances\",\n  \"id\": \"networkx.eccentricity\",\n  \"library\": \"networkx\",\n  \"name\": \"eccentricity\",\n  \"signature\": \"solve(n, edges)\",\n  \"version\": \"3.6.1\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:4b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:14:37.404067226Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 365,
+    "eval_duration": 6280771000,
+    "load_duration": 533059,
+    "message": {
+      "content": "{\n  \"method_id\": \"networkx.eccentricity\",\n  \"signature\": \"solve(n, edges)\",\n  \"purpose\": \"Compute the eccentricity of each node in a simple undirected unweighted graph with n vertices (0 to n-1) and given edges. Eccentricity of a node is the maximum shortest path distance from that node to any other node in the graph.\",\n  \"inputs\": \"n: integer >= 1; edges: list of distinct [u,v] pairs where 0<=u<v<n\",\n  \"output\": \"Dictionary with string keys (vertex names) mapping to integers (eccentricity values). If the graph is disconnected, raise ValueError.\",\n  \"algorithm\": [\n    \"Construct a simple undirected graph from the input vertices and edges\",\n    \"For each vertex v in the graph, compute the shortest path distances to all other vertices\",\n    \"Determine the maximum distance from v to any other vertex as the eccentricity of v\",\n    \"Return a dictionary mapping each vertex to its eccentricity\"\n  ],\n  \"edge_cases\": [\n    \"n=1: single vertex with no edges (eccentricity 0)\",\n    \"Disconnected graph: raise ValueError\",\n    \"Singleton graph: eccentricity 0\",\n    \"Graph with isolated vertices: include in eccentricity calculation\",\n    \"Graph with multiple connected components: raise ValueError\"\n  ],\n  \"constraints\": [\n    \"Vertices are labeled 0 to n-1\",\n    \"Edges are distinct and satisfy 0<=u<v<n\",\n    \"Graph must be simple (no self-loops or multiple edges)\",\n    \"Eccentricity is defined for all vertices in the graph\",\n    \"Output must be a dictionary with string keys and integer values\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:4b",
+    "prompt_eval_cached_count": 408,
+    "prompt_eval_count": 989,
+    "prompt_eval_duration": 222042000,
+    "total_duration": 7711985636
+  },
+  "started_at": "2026-11-14T13:14:29.691770+00:00",
+  "valid": true
+}

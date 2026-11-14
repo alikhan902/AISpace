@@ -1,0 +1,26 @@
+{
+  "algorithm": [
+    "For each value in v, find the position in a where it would be inserted to maintain nondecreasing order",
+    "If side='left', return the largest index i such that a[i-1] < v <= a[i] (with i=0 for v < a[0])",
+    "If side='right', return the smallest index i such that a[i-1] <= v < a[i] (with i=0 for v < a[0] and i=len(a) for v >= a[-1])",
+    "Use binary search for efficiency"
+  ],
+  "constraints": [
+    "a must be nondecreasing (sorted in ascending order)",
+    "side must be 'left' or 'right' (default 'left')",
+    "v must be a scalar integer or list of integers",
+    "No sorter argument is used (as per reference)"
+  ],
+  "edge_cases": [
+    "a is empty list: return 0 for all v",
+    "v is a single value less than all elements in a: return 0",
+    "v is a single value greater than or equal to all elements in a: return len(a) for side='right'",
+    "a has duplicate values: handle with strict inequality for side='left' and non-strict for side='right'",
+    "v is a list with multiple values: return list of insertion indices for each value"
+  ],
+  "inputs": "a: nondecreasing list of integers (possibly empty); v: integer or list of integers; side: 'left' or 'right' (default 'left')",
+  "method_id": "numpy.searchsorted",
+  "output": "int for scalar v, list[int] for list v: indices where elements should be inserted to maintain sorted order",
+  "purpose": "Find insertion indices in a sorted array to maintain order for given values",
+  "signature": "solve(a, v, side='left')"
+}

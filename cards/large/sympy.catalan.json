@@ -1,0 +1,20 @@
+{
+  "algorithm": [
+    "Compute the binomial coefficient binom(2n, n) = (2n)! / (n! * n!)",
+    "Divide the result by (n + 1) to get the Catalan number",
+    "Ensure the result is an integer (the Catalan numbers are always integers for integer n >= 0)"
+  ],
+  "constraints": [
+    "n must be an integer between 0 and 35 inclusive",
+    "The result must be an exact integer with arbitrary precision (no symbolic results)"
+  ],
+  "edge_cases": [
+    "n = 0: Returns 1 (the 0th Catalan number)",
+    "n = 35: Returns 4862 (the 35th Catalan number)"
+  ],
+  "inputs": "An integer n in the range 0 to 35 (inclusive).",
+  "method_id": "sympy.catalan",
+  "output": "The exact integer value of the nth Catalan number, C_n = (1/(n+1)) * binom(2n, n).",
+  "purpose": "Compute the exact integer value of the nth Catalan number using the binomial coefficient formula with arbitrary precision.",
+  "signature": "solve(n)"
+}

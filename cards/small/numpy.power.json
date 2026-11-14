@@ -1,0 +1,23 @@
+{
+  "algorithm": [
+    "Broadcast x and y to the same shape.",
+    "For each element in the resulting shape, compute x[i] ** y[i].",
+    "Handle edge cases such as 0**0, negative exponents, and non-integer exponents."
+  ],
+  "constraints": [
+    "x and y must be broadcastable to the same shape.",
+    "Exponents must be integers in 0..8.",
+    "Negative values raised to non-integer exponents result in nan.",
+    "Values and results fit signed int64."
+  ],
+  "edge_cases": [
+    "0**0 is treated as 1.",
+    "Negative values raised to non-integer exponents result in nan.",
+    "Exponents must be integers in 0..8."
+  ],
+  "inputs": "x and y are integers or 1-D lists of integers. Support scalar/scalar, scalar/list, list/scalar and lists of the same length (including empty). Scalar/scalar returns int, all other inputs return a list. No other broadcasting is required. Values and results fit signed int64. Exponents are integers in 0..8; define 0**0 as 1.",
+  "method_id": "numpy.power",
+  "output": "y: ndarray. This is a scalar if both x and y are scalars.",
+  "purpose": "Compute the element-wise power of arrays.",
+  "signature": "solve(x, y)"
+}

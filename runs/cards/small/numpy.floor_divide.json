@@ -1,0 +1,119 @@
+{
+  "elapsed_seconds": 2.4094541890001437,
+  "finished_at": "2026-11-14T13:07:18.697625+00:00",
+  "parsed": {
+    "algorithm": [
+      "Compute the floor division of the inputs using the `//` operator in Python.",
+      "Ensure that the inputs are broadcasted to a common shape if necessary.",
+      "Return the result as a list if the inputs are not scalars, otherwise as a scalar."
+    ],
+    "constraints": [
+      "All inputs must be integers or 1-D lists of integers.",
+      "No other broadcasting is required beyond the specified cases.",
+      "The result must fit within signed int64.",
+      "Divisors must be nonzero."
+    ],
+    "edge_cases": [
+      "When the divisor is zero, an error is raised.",
+      "When the inputs are empty lists, the output is also an empty list.",
+      "When the inputs are of different shapes, they must be broadcasted to a common shape.",
+      "When the inputs are of different types (e.g., scalar and list), the result is a list."
+    ],
+    "inputs": "x and y are integers or 1-D lists of integers. Support scalar/scalar, scalar/list, list/scalar and lists of the same length (including empty). Scalar/scalar returns int, all other inputs return a list. No other broadcasting is required. Values and results fit signed int64. Divisors are nonzero.",
+    "method_id": "numpy.floor_divide",
+    "output": "y: ndarray, which is a scalar if both x and y are scalars, otherwise a list of the same length as x.",
+    "purpose": "Compute the floor division of two inputs, returning the largest integer less than or equal to the division result.",
+    "signature": "solve(x, y)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"x and y are integers or 1-D lists of integers. Support scalar/scalar, scalar/list, list/scalar and lists of the same length (including empty). Scalar/scalar returns int, all other inputs return a list. No other broadcasting is required. Values and results fit signed int64. Divisors are nonzero.\",\n  \"documentation\": \"floor_divide(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])\\n\\nReturn the largest integer smaller or equal to the division of the inputs.\\nIt is equivalent to the Python ``//`` operator and pairs with the\\nPython ``%`` (`remainder`), function so that ``a = a % b + b * (a // b)``\\nup to roundoff.\\n\\nParameters\\n----------\\nx1 : array_like\\n    Numerator.\\nx2 : array_like\\n    Denominator.\\n    If ``x1.shape != x2.shape``, they must be broadcastable to a common\\n    shape (which becomes the shape of the output).\\nout : ndarray, None, or tuple of ndarray and None, optional\\n    A location into which the result is stored. If provided, it must have\\n    a shape that the inputs broadcast to. If not provided or None,\\n    a freshly-allocated array is returned. A tuple (possible only as a\\n    keyword argument) must have length equal to the number of outputs.\\nwhere : array_like, optional\\n    This condition is broadcast over the input. At locations where the\\n    condition is True, the `out` array will be set to the ufunc result.\\n    Elsewhere, the `out` array will retain its original value.\\n    Note that if an uninitialized `out` array is created via the default\\n    ``out=None``, locations within it where the condition is False will\\n    remain uninitialized.\\n**kwargs\\n    For other keyword-only arguments, see the\\n    :ref:`ufunc docs <ufuncs.kwargs>`.\\n\\nReturns\\n-------\\ny : ndarray\\n    y = floor(`x1`/`x2`)\\n    This is a scalar if both `x1` and `x2` are scalars.\\n\\nSee Also\\n--------\\nremainder : Remainder complementary to floor_divide.\\ndivmod : Simultaneous floor division and remainder.\\ndivide : Standard division.\\nfloor : Round a number to the nearest integer toward minus infinity.\\nceil : Round a number to the nearest integer toward infinity.\\n\\nExamples\\n--------\\n>>> import numpy as np\\n>>> np.floor_divide(7,3)\\n2\\n>>> np.floor_divide([1., 2., 3., 4.], 2.5)\\narray([ 0.,  0.,  1.,  1.])\\n\\nThe ``//`` operator can be used as a shorthand for ``np.floor_divide``\\non ndarrays.\\n\\n>>> x1 = np.array([1., 2., 3., 4.])\\n>>> x1 // 2.5\\narray([0., 0., 1., 1.])\",\n  \"documentation_truncated\": false,\n  \"group\": \"integer_arithmetic\",\n  \"id\": \"numpy.floor_divide\",\n  \"library\": \"numpy\",\n  \"name\": \"floor_divide\",\n  \"signature\": \"solve(x, y)\",\n  \"version\": \"2.5.4\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:1.7b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:07:18.697343546Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 351,
+    "eval_duration": 2270380000,
+    "load_duration": 578408,
+    "message": {
+      "content": "{\n  \"method_id\": \"numpy.floor_divide\",\n  \"signature\": \"solve(x, y)\",\n  \"purpose\": \"Compute the floor division of two inputs, returning the largest integer less than or equal to the division result.\",\n  \"inputs\": \"x and y are integers or 1-D lists of integers. Support scalar/scalar, scalar/list, list/scalar and lists of the same length (including empty). Scalar/scalar returns int, all other inputs return a list. No other broadcasting is required. Values and results fit signed int64. Divisors are nonzero.\",\n  \"output\": \"y: ndarray, which is a scalar if both x and y are scalars, otherwise a list of the same length as x.\",\n  \"algorithm\": [\n    \"Compute the floor division of the inputs using the `//` operator in Python.\",\n    \"Ensure that the inputs are broadcasted to a common shape if necessary.\",\n    \"Return the result as a list if the inputs are not scalars, otherwise as a scalar.\"\n  ],\n  \"edge_cases\": [\n    \"When the divisor is zero, an error is raised.\",\n    \"When the inputs are empty lists, the output is also an empty list.\",\n    \"When the inputs are of different shapes, they must be broadcasted to a common shape.\",\n    \"When the inputs are of different types (e.g., scalar and list), the result is a list.\"\n  ],\n  \"constraints\": [\n    \"All inputs must be integers or 1-D lists of integers.\",\n    \"No other broadcasting is required beyond the specified cases.\",\n    \"The result must fit within signed int64.\",\n    \"Divisors must be nonzero.\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:1.7b",
+    "prompt_eval_cached_count": 405,
+    "prompt_eval_count": 1105,
+    "prompt_eval_duration": 101031000,
+    "total_duration": 2408869455
+  },
+  "started_at": "2026-11-14T13:07:16.288168+00:00",
+  "valid": true
+}

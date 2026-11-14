@@ -1,0 +1,24 @@
+{
+  "algorithm": [
+    "Perform a depth-first search (DFS) to identify articulation points.",
+    "Track the discovery time of each node and the lowest discovery time of its children.",
+    "A node is an articulation point if it has at least one child in the DFS tree with a lowest discovery time equal to or greater than the discovery time of the node."
+  ],
+  "constraints": [
+    "The graph is undirected and simple.",
+    "Vertices are numbered from 0 to n-1.",
+    "Edges are distinct and do not form cycles.",
+    "The graph is connected.",
+    "The function raises NetworkXNotImplemented if the graph is not undirected."
+  ],
+  "edge_cases": [
+    "When the graph has no edges (n=1), the single node is an articulation point.",
+    "When the graph is a single edge (n=2), the two nodes are not articulation points.",
+    "When the graph is a single node (n=1), it is an articulation point."
+  ],
+  "inputs": "n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.",
+  "method_id": "networkx.articulation_points",
+  "output": "An ascending list of articulation vertices (nodes) in the graph.",
+  "purpose": "Yield the articulation points (cut vertices) of a graph.",
+  "signature": "solve(n, edges)"
+}

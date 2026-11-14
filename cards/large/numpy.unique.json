@@ -1,0 +1,28 @@
+{
+  "algorithm": [
+    "Sort the input list to group identical values together.",
+    "Iterate through the sorted list to collect unique values by checking if the current value differs from the previous one.",
+    "For return_index: Track the index of the first occurrence of each unique value in the original input list.",
+    "For return_inverse: Construct an inverse index array that maps each position in the original list to the corresponding unique value index.",
+    "For return_counts: Count the occurrences of each unique value in the original list."
+  ],
+  "constraints": [
+    "All intermediate values fit within a signed 64-bit integer.",
+    "No NumPy objects are used; the implementation must be in pure Python.",
+    "The output must be sorted distinct values only; no indices or counts are included by default.",
+    "The function must handle empty inputs gracefully.",
+    "The function must collapse multiple NaN values into a single unique value if equal_nan is True (but the reference specifies default behavior as sorted distinct values only)."
+  ],
+  "edge_cases": [
+    "Empty input list: returns empty list of unique values.",
+    "All elements are identical: returns a single unique value.",
+    "Input list contains NaN values: collapses all NaNs into one unique value (as per NumPy's behavior).",
+    "Input list is already sorted: still returns unique values without additional sorting.",
+    "Input list has multiple dimensions: flattens the list to 1D before processing (as per the reference)."
+  ],
+  "inputs": "a: a one-dimensional list of integers, possibly empty",
+  "method_id": "numpy.unique",
+  "output": "sorted list of unique integers (no duplicates), or optionally the indices of first occurrences, the inverse indices for reconstruction, or the counts of each unique value",
+  "purpose": "Find the sorted unique elements of a one-dimensional list of integers, with optional outputs for indices and counts.",
+  "signature": "solve(a)"
+}

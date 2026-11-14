@@ -1,0 +1,61 @@
+{
+  "elapsed_seconds": 1.73103074200003,
+  "finished_at": "2026-11-14T13:09:55.224758+00:00",
+  "parsed": {
+    "code": "from collections import defaultdict\n\ndef solve(n, edges):\n    if n == 1:\n        return {0}\n\n    graph = defaultdict(list)\n    for u, v in edges:\n        graph[u].append(v)\n        graph[v].append(u)\n\n    # Compute all pairs shortest paths using BFS\n    eccentricities = {}\n    for start in range(n):\n        visited = set()\n        queue = [(start, 0)]\n        while queue:\n            node, dist = queue.pop(0)\n            if node in visited:\n                continue\n            visited.add(node)\n            for neighbor in graph[node]:\n                if neighbor not in visited:\n                    queue.append((neighbor, dist + 1))\n        # Find maximum distance\n        max_dist = 0\n        for node in visited:\n            max_dist = max(max_dist, dist)\n        eccentricities[start] = max_dist\n\n    return eccentricities"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Implement a Python function from a JSON behavioral card. The card is the only task specification. Return a JSON object with a single string field code containing executable Python source. Define solve with the card's exact signature. Use only Python's standard library. Allowed imports: math, itertools, functools, collections, heapq, bisect, statistics, fractions, operator, typing. Do not import or call NumPy, SymPy, NetworkX or any other third-party library. Do not read files, use network, introspection, eval, exec, input or print. Implement computations yourself using built-ins and the allowed standard library. Return plain JSON-compatible values, not iterators or sets; use string keys in dictionaries. Include any helper functions in the code. No tests or main block. Raise ValueError where the card requires it.",
+        "role": "system"
+      },
+      {
+        "content": "Implement this card:\n{\n  \"algorithm\": [\n    \"Compute all pairs shortest paths using BFS for each node.\",\n    \"For each node, find the maximum distance to any other node.\",\n    \"Return the dictionary of eccentricities.\"\n  ],\n  \"constraints\": [\n    \"Vertices are 0 to n-1.\",\n    \"Edges are distinct and valid.\",\n    \"Graph is simple and undirected.\",\n    \"Weights are positive and can be floating point.\",\n    \"Return a dictionary of eccentricities or a single integer for singleton graphs.\"\n  ],\n  \"edge_cases\": [\n    \"A singleton graph (n=1) has eccentricity 0.\",\n    \"A disconnected graph raises ValueError.\"\n  ],\n  \"inputs\": \"n is an integer >= 1; edges is a list of distinct [u, v] pairs with 0 <= u < v < n.\",\n  \"method_id\": \"networkx.eccentricity\",\n  \"output\": \"A dictionary of eccentricity values keyed by node. If the graph is disconnected, raise ValueError.\",\n  \"purpose\": \"Compute the eccentricity of each node in a graph.\",\n  \"signature\": \"solve(n, edges)\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:1.7b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 3072,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:09:55.224462553Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 218,
+    "eval_duration": 1642931000,
+    "load_duration": 552263,
+    "message": {
+      "content": "{\n  \"code\": \"from collections import defaultdict\\n\\ndef solve(n, edges):\\n    if n == 1:\\n        return {0}\\n\\n    graph = defaultdict(list)\\n    for u, v in edges:\\n        graph[u].append(v)\\n        graph[v].append(u)\\n\\n    # Compute all pairs shortest paths using BFS\\n    eccentricities = {}\\n    for start in range(n):\\n        visited = set()\\n        queue = [(start, 0)]\\n        while queue:\\n            node, dist = queue.pop(0)\\n            if node in visited:\\n                continue\\n            visited.add(node)\\n            for neighbor in graph[node]:\\n                if neighbor not in visited:\\n                    queue.append((neighbor, dist + 1))\\n        # Find maximum distance\\n        max_dist = 0\\n        for node in visited:\\n            max_dist = max(max_dist, dist)\\n        eccentricities[start] = max_dist\\n\\n    return eccentricities\"\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:1.7b",
+    "prompt_eval_cached_count": 185,
+    "prompt_eval_count": 426,
+    "prompt_eval_duration": 55510000,
+    "total_duration": 1730402709
+  },
+  "started_at": "2026-11-14T13:09:53.493725+00:00",
+  "valid": true
+}

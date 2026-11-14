@@ -1,0 +1,24 @@
+{
+  "algorithm": [
+    "Compute the floor division of the inputs using the `//` operator in Python.",
+    "Ensure that the inputs are broadcasted to a common shape if necessary.",
+    "Return the result as a list if the inputs are not scalars, otherwise as a scalar."
+  ],
+  "constraints": [
+    "All inputs must be integers or 1-D lists of integers.",
+    "No other broadcasting is required beyond the specified cases.",
+    "The result must fit within signed int64.",
+    "Divisors must be nonzero."
+  ],
+  "edge_cases": [
+    "When the divisor is zero, an error is raised.",
+    "When the inputs are empty lists, the output is also an empty list.",
+    "When the inputs are of different shapes, they must be broadcasted to a common shape.",
+    "When the inputs are of different types (e.g., scalar and list), the result is a list."
+  ],
+  "inputs": "x and y are integers or 1-D lists of integers. Support scalar/scalar, scalar/list, list/scalar and lists of the same length (including empty). Scalar/scalar returns int, all other inputs return a list. No other broadcasting is required. Values and results fit signed int64. Divisors are nonzero.",
+  "method_id": "numpy.floor_divide",
+  "output": "y: ndarray, which is a scalar if both x and y are scalars, otherwise a list of the same length as x.",
+  "purpose": "Compute the floor division of two inputs, returning the largest integer less than or equal to the division result.",
+  "signature": "solve(x, y)"
+}

@@ -1,0 +1,118 @@
+{
+  "elapsed_seconds": 25.32257569799981,
+  "finished_at": "2026-11-14T13:01:12.747812+00:00",
+  "parsed": {
+    "algorithm": [
+      "Compute the cumulative sum along the specified axis.",
+      "Use NumPy's default operation on the entire 1-D list, with dtype=int64.",
+      "Return the result as a new array unless `out` is specified."
+    ],
+    "constraints": [
+      "All intermediate values fit signed int64.",
+      "Return type is int64 unless specified otherwise.",
+      "Use NumPy's default operation on the entire 1-D list."
+    ],
+    "edge_cases": [
+      "Empty input array.",
+      "Input array with all elements zero.",
+      "Input array with negative values.",
+      "Input array with overflow (but handled via integer arithmetic)."
+    ],
+    "inputs": "a is a one-dimensional list of integers, possibly empty.",
+    "method_id": "cumsum",
+    "output": "A new array holding the result, with the same size as `a`, and the same shape as `a` if `axis` is not None.",
+    "purpose": "Compute the cumulative sum of elements along a given axis.",
+    "signature": "solve(a)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"a is a one-dimensional list of integers, possibly empty. Return Python int or list[int], as appropriate; no NumPy objects. All intermediate values fit signed int64. Use NumPy's default operation on the whole 1-D list, with dtype=int64.\",\n  \"documentation\": \"Return the cumulative sum of the elements along a given axis.\\n\\nParameters\\n----------\\na : array_like\\n    Input array.\\naxis : int, optional\\n    Axis along which the cumulative sum is computed. The default\\n    (None) is to compute the cumsum over the flattened array.\\ndtype : dtype, optional\\n    Type of the returned array and of the accumulator in which the\\n    elements are summed.  If `dtype` is not specified, it defaults\\n    to the dtype of `a`, unless `a` has an integer dtype with a\\n    precision less than that of the default platform integer.  In\\n    that case, the default platform integer is used.\\nout : ndarray, optional\\n    Alternative output array in which to place the result. It must\\n    have the same shape and buffer length as the expected output\\n    but the type will be cast if necessary. See :ref:`ufuncs-output-type`\\n    for more details.\\n\\nReturns\\n-------\\ncumsum_along_axis : ndarray.\\n    A new array holding the result is returned unless `out` is\\n    specified, in which case a reference to `out` is returned. The\\n    result has the same size as `a`, and the same shape as `a` if\\n    `axis` is not None or `a` is a 1-d array.\\n\\nSee Also\\n--------\\ncumulative_sum : Array API compatible alternative for ``cumsum``.\\nsum : Sum array elements.\\ntrapezoid : Integration of array values using composite trapezoidal rule.\\ndiff : Calculate the n-th discrete difference along given axis.\\n\\nNotes\\n-----\\nArithmetic is modular when using integer types, and no error is\\nraised on overflow.\\n\\n``cumsum(a)[-1]`` may not be equal to ``sum(a)`` for floating-point\\nvalues since ``sum`` may use a pairwise summation routine, reducing\\nthe roundoff-error. See `sum` for more information.\\n\\nExamples\\n--------\\n>>> import numpy as np\\n>>> a = np.array([[1,2,3], [4,5,6]])\\n>>> a\\narray([[1, 2, 3],\\n       [4, 5, 6]])\\n>>> np.cumsum(a)\\narray([ 1,  3,  6, 10, 15, 21])\\n>>> np.cumsum(a, dtype=np.float64)  # specifies type of output value(s)\\narray([  1.,   3.,   6.,  10.,  15.,  21.])\\n\\n>>> np.cumsum(a,axis=0)      # sum over rows for each of the 3 columns\\narray([[1, 2, 3],\\n       [5, 7, 9]])\\n>>> np.cumsum(a,axis=1)      # sum over columns for each of the 2 rows\\narray([[ 1,  3,  6],\\n       [ 4,  9, 15]])\\n\\n``cumsum(b)[-1]`` may not be equal to ``sum(b)``\\n\\n>>> b = np.array([1, 2e-9, 3e-9] * 1000000)\\n>>> b.cumsum()[-1]\\n1000000.0050045159\\n>>> b.sum()\\n1000000.0050000029\",\n  \"documentation_truncated\": false,\n  \"group\": \"reductions\",\n  \"id\": \"numpy.cumsum\",\n  \"library\": \"numpy\",\n  \"name\": \"cumsum\",\n  \"signature\": \"solve(a)\",\n  \"version\": \"2.5.4\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:1.7b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:01:12.747507095Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 236,
+    "eval_duration": 16310924000,
+    "load_duration": 519824,
+    "message": {
+      "content": "{\n  \"method_id\": \"cumsum\",\n  \"signature\": \"solve(a)\",\n  \"purpose\": \"Compute the cumulative sum of elements along a given axis.\",\n  \"inputs\": \"a is a one-dimensional list of integers, possibly empty.\",\n  \"output\": \"A new array holding the result, with the same size as `a`, and the same shape as `a` if `axis` is not None.\",\n  \"algorithm\": [\n    \"Compute the cumulative sum along the specified axis.\",\n    \"Use NumPy's default operation on the entire 1-D list, with dtype=int64.\",\n    \"Return the result as a new array unless `out` is specified.\"\n  ],\n  \"edge_cases\": [\n    \"Empty input array.\",\n    \"Input array with all elements zero.\",\n    \"Input array with negative values.\",\n    \"Input array with overflow (but handled via integer arithmetic).\"\n  ],\n  \"constraints\": [\n    \"All intermediate values fit signed int64.\",\n    \"Return type is int64 unless specified otherwise.\",\n    \"Use NumPy's default operation on the entire 1-D list.\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:1.7b",
+    "prompt_eval_cached_count": 407,
+    "prompt_eval_count": 1259,
+    "prompt_eval_duration": 8980480000,
+    "total_duration": 25321985851
+  },
+  "started_at": "2026-11-14T13:00:47.425235+00:00",
+  "valid": true
+}

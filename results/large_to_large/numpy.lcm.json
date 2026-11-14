@@ -1,0 +1,5993 @@
+{
+  "all_pass": false,
+  "cases": [
+    {
+      "case_id": "numpy.lcm:0000",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "x": -7,
+        "y": -7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0001",
+      "category": "exhaustive",
+      "expected": {
+        "value": 42
+      },
+      "input": {
+        "x": -7,
+        "y": -6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0002",
+      "category": "exhaustive",
+      "expected": {
+        "value": 35
+      },
+      "input": {
+        "x": -7,
+        "y": -5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0003",
+      "category": "exhaustive",
+      "expected": {
+        "value": 28
+      },
+      "input": {
+        "x": -7,
+        "y": -4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0004",
+      "category": "exhaustive",
+      "expected": {
+        "value": 21
+      },
+      "input": {
+        "x": -7,
+        "y": -3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0005",
+      "category": "exhaustive",
+      "expected": {
+        "value": 14
+      },
+      "input": {
+        "x": -7,
+        "y": -2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0006",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "x": -7,
+        "y": -1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0007",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": -7,
+        "y": 0
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0008",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "x": -7,
+        "y": 1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0009",
+      "category": "exhaustive",
+      "expected": {
+        "value": 14
+      },
+      "input": {
+        "x": -7,
+        "y": 2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0010",
+      "category": "exhaustive",
+      "expected": {
+        "value": 21
+      },
+      "input": {
+        "x": -7,
+        "y": 3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0011",
+      "category": "exhaustive",
+      "expected": {
+        "value": 28
+      },
+      "input": {
+        "x": -7,
+        "y": 4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0012",
+      "category": "exhaustive",
+      "expected": {
+        "value": 35
+      },
+      "input": {
+        "x": -7,
+        "y": 5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0013",
+      "category": "exhaustive",
+      "expected": {
+        "value": 42
+      },
+      "input": {
+        "x": -7,
+        "y": 6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0014",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "x": -7,
+        "y": 7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0015",
+      "category": "exhaustive",
+      "expected": {
+        "value": 42
+      },
+      "input": {
+        "x": -6,
+        "y": -7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0016",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": -6,
+        "y": -6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0017",
+      "category": "exhaustive",
+      "expected": {
+        "value": 30
+      },
+      "input": {
+        "x": -6,
+        "y": -5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0018",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "x": -6,
+        "y": -4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0019",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": -6,
+        "y": -3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0020",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": -6,
+        "y": -2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0021",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": -6,
+        "y": -1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0022",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": -6,
+        "y": 0
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0023",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": -6,
+        "y": 1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0024",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": -6,
+        "y": 2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0025",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": -6,
+        "y": 3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0026",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "x": -6,
+        "y": 4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0027",
+      "category": "exhaustive",
+      "expected": {
+        "value": 30
+      },
+      "input": {
+        "x": -6,
+        "y": 5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0028",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": -6,
+        "y": 6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0029",
+      "category": "exhaustive",
+      "expected": {
+        "value": 42
+      },
+      "input": {
+        "x": -6,
+        "y": 7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0030",
+      "category": "exhaustive",
+      "expected": {
+        "value": 35
+      },
+      "input": {
+        "x": -5,
+        "y": -7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0031",
+      "category": "exhaustive",
+      "expected": {
+        "value": 30
+      },
+      "input": {
+        "x": -5,
+        "y": -6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0032",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "x": -5,
+        "y": -5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0033",
+      "category": "exhaustive",
+      "expected": {
+        "value": 20
+      },
+      "input": {
+        "x": -5,
+        "y": -4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0034",
+      "category": "exhaustive",
+      "expected": {
+        "value": 15
+      },
+      "input": {
+        "x": -5,
+        "y": -3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0035",
+      "category": "exhaustive",
+      "expected": {
+        "value": 10
+      },
+      "input": {
+        "x": -5,
+        "y": -2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0036",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "x": -5,
+        "y": -1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0037",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": -5,
+        "y": 0
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0038",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "x": -5,
+        "y": 1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0039",
+      "category": "exhaustive",
+      "expected": {
+        "value": 10
+      },
+      "input": {
+        "x": -5,
+        "y": 2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0040",
+      "category": "exhaustive",
+      "expected": {
+        "value": 15
+      },
+      "input": {
+        "x": -5,
+        "y": 3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0041",
+      "category": "exhaustive",
+      "expected": {
+        "value": 20
+      },
+      "input": {
+        "x": -5,
+        "y": 4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0042",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "x": -5,
+        "y": 5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0043",
+      "category": "exhaustive",
+      "expected": {
+        "value": 30
+      },
+      "input": {
+        "x": -5,
+        "y": 6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0044",
+      "category": "exhaustive",
+      "expected": {
+        "value": 35
+      },
+      "input": {
+        "x": -5,
+        "y": 7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0045",
+      "category": "exhaustive",
+      "expected": {
+        "value": 28
+      },
+      "input": {
+        "x": -4,
+        "y": -7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0046",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "x": -4,
+        "y": -6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0047",
+      "category": "exhaustive",
+      "expected": {
+        "value": 20
+      },
+      "input": {
+        "x": -4,
+        "y": -5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0048",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": -4,
+        "y": -4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0049",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "x": -4,
+        "y": -3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0050",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": -4,
+        "y": -2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0051",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": -4,
+        "y": -1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0052",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": -4,
+        "y": 0
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0053",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": -4,
+        "y": 1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0054",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": -4,
+        "y": 2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0055",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "x": -4,
+        "y": 3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0056",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": -4,
+        "y": 4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0057",
+      "category": "exhaustive",
+      "expected": {
+        "value": 20
+      },
+      "input": {
+        "x": -4,
+        "y": 5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0058",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "x": -4,
+        "y": 6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0059",
+      "category": "exhaustive",
+      "expected": {
+        "value": 28
+      },
+      "input": {
+        "x": -4,
+        "y": 7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0060",
+      "category": "exhaustive",
+      "expected": {
+        "value": 21
+      },
+      "input": {
+        "x": -3,
+        "y": -7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0061",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": -3,
+        "y": -6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0062",
+      "category": "exhaustive",
+      "expected": {
+        "value": 15
+      },
+      "input": {
+        "x": -3,
+        "y": -5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0063",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "x": -3,
+        "y": -4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0064",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": -3,
+        "y": -3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0065",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": -3,
+        "y": -2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0066",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": -3,
+        "y": -1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0067",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": -3,
+        "y": 0
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0068",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": -3,
+        "y": 1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0069",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": -3,
+        "y": 2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0070",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": -3,
+        "y": 3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0071",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "x": -3,
+        "y": 4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0072",
+      "category": "exhaustive",
+      "expected": {
+        "value": 15
+      },
+      "input": {
+        "x": -3,
+        "y": 5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0073",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": -3,
+        "y": 6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0074",
+      "category": "exhaustive",
+      "expected": {
+        "value": 21
+      },
+      "input": {
+        "x": -3,
+        "y": 7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0075",
+      "category": "exhaustive",
+      "expected": {
+        "value": 14
+      },
+      "input": {
+        "x": -2,
+        "y": -7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0076",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": -2,
+        "y": -6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0077",
+      "category": "exhaustive",
+      "expected": {
+        "value": 10
+      },
+      "input": {
+        "x": -2,
+        "y": -5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0078",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": -2,
+        "y": -4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0079",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": -2,
+        "y": -3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0080",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": -2,
+        "y": -2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0081",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": -2,
+        "y": -1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0082",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": -2,
+        "y": 0
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0083",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": -2,
+        "y": 1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0084",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": -2,
+        "y": 2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0085",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": -2,
+        "y": 3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0086",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": -2,
+        "y": 4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0087",
+      "category": "exhaustive",
+      "expected": {
+        "value": 10
+      },
+      "input": {
+        "x": -2,
+        "y": 5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0088",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": -2,
+        "y": 6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0089",
+      "category": "exhaustive",
+      "expected": {
+        "value": 14
+      },
+      "input": {
+        "x": -2,
+        "y": 7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0090",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "x": -1,
+        "y": -7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0091",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": -1,
+        "y": -6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0092",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "x": -1,
+        "y": -5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0093",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": -1,
+        "y": -4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0094",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": -1,
+        "y": -3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0095",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": -1,
+        "y": -2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0096",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -1,
+        "y": -1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0097",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": -1,
+        "y": 0
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0098",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": -1,
+        "y": 1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0099",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": -1,
+        "y": 2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0100",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": -1,
+        "y": 3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0101",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": -1,
+        "y": 4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0102",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "x": -1,
+        "y": 5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0103",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": -1,
+        "y": 6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0104",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "x": -1,
+        "y": 7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0105",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": 0,
+        "y": -7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0106",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": 0,
+        "y": -6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0107",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": 0,
+        "y": -5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0108",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": 0,
+        "y": -4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0109",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": 0,
+        "y": -3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0110",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": 0,
+        "y": -2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0111",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": 0,
+        "y": -1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0112",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": 0,
+        "y": 0
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0113",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": 0,
+        "y": 1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0114",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": 0,
+        "y": 2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0115",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": 0,
+        "y": 3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0116",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": 0,
+        "y": 4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0117",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": 0,
+        "y": 5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0118",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": 0,
+        "y": 6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0119",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": 0,
+        "y": 7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0120",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "x": 1,
+        "y": -7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0121",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": 1,
+        "y": -6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0122",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "x": 1,
+        "y": -5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0123",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": 1,
+        "y": -4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0124",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": 1,
+        "y": -3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0125",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": 1,
+        "y": -2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0126",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 1,
+        "y": -1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0127",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": 1,
+        "y": 0
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0128",
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "input": {
+        "x": 1,
+        "y": 1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0129",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": 1,
+        "y": 2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0130",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": 1,
+        "y": 3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0131",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": 1,
+        "y": 4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0132",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "x": 1,
+        "y": 5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0133",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": 1,
+        "y": 6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0134",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "x": 1,
+        "y": 7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0135",
+      "category": "exhaustive",
+      "expected": {
+        "value": 14
+      },
+      "input": {
+        "x": 2,
+        "y": -7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0136",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": 2,
+        "y": -6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0137",
+      "category": "exhaustive",
+      "expected": {
+        "value": 10
+      },
+      "input": {
+        "x": 2,
+        "y": -5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0138",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": 2,
+        "y": -4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0139",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": 2,
+        "y": -3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0140",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": 2,
+        "y": -2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0141",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": 2,
+        "y": -1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0142",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": 2,
+        "y": 0
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0143",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": 2,
+        "y": 1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0144",
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "input": {
+        "x": 2,
+        "y": 2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0145",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": 2,
+        "y": 3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0146",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": 2,
+        "y": 4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0147",
+      "category": "exhaustive",
+      "expected": {
+        "value": 10
+      },
+      "input": {
+        "x": 2,
+        "y": 5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0148",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": 2,
+        "y": 6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0149",
+      "category": "exhaustive",
+      "expected": {
+        "value": 14
+      },
+      "input": {
+        "x": 2,
+        "y": 7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0150",
+      "category": "exhaustive",
+      "expected": {
+        "value": 21
+      },
+      "input": {
+        "x": 3,
+        "y": -7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0151",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": 3,
+        "y": -6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0152",
+      "category": "exhaustive",
+      "expected": {
+        "value": 15
+      },
+      "input": {
+        "x": 3,
+        "y": -5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0153",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "x": 3,
+        "y": -4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0154",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": 3,
+        "y": -3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0155",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": 3,
+        "y": -2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0156",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": 3,
+        "y": -1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0157",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": 3,
+        "y": 0
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0158",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": 3,
+        "y": 1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0159",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": 3,
+        "y": 2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0160",
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "input": {
+        "x": 3,
+        "y": 3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0161",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "x": 3,
+        "y": 4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0162",
+      "category": "exhaustive",
+      "expected": {
+        "value": 15
+      },
+      "input": {
+        "x": 3,
+        "y": 5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0163",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": 3,
+        "y": 6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0164",
+      "category": "exhaustive",
+      "expected": {
+        "value": 21
+      },
+      "input": {
+        "x": 3,
+        "y": 7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0165",
+      "category": "exhaustive",
+      "expected": {
+        "value": 28
+      },
+      "input": {
+        "x": 4,
+        "y": -7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0166",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "x": 4,
+        "y": -6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0167",
+      "category": "exhaustive",
+      "expected": {
+        "value": 20
+      },
+      "input": {
+        "x": 4,
+        "y": -5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0168",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": 4,
+        "y": -4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0169",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "x": 4,
+        "y": -3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0170",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": 4,
+        "y": -2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0171",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": 4,
+        "y": -1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0172",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": 4,
+        "y": 0
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0173",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": 4,
+        "y": 1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0174",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": 4,
+        "y": 2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0175",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "x": 4,
+        "y": 3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0176",
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "input": {
+        "x": 4,
+        "y": 4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0177",
+      "category": "exhaustive",
+      "expected": {
+        "value": 20
+      },
+      "input": {
+        "x": 4,
+        "y": 5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0178",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "x": 4,
+        "y": 6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0179",
+      "category": "exhaustive",
+      "expected": {
+        "value": 28
+      },
+      "input": {
+        "x": 4,
+        "y": 7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0180",
+      "category": "exhaustive",
+      "expected": {
+        "value": 35
+      },
+      "input": {
+        "x": 5,
+        "y": -7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0181",
+      "category": "exhaustive",
+      "expected": {
+        "value": 30
+      },
+      "input": {
+        "x": 5,
+        "y": -6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0182",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "x": 5,
+        "y": -5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0183",
+      "category": "exhaustive",
+      "expected": {
+        "value": 20
+      },
+      "input": {
+        "x": 5,
+        "y": -4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0184",
+      "category": "exhaustive",
+      "expected": {
+        "value": 15
+      },
+      "input": {
+        "x": 5,
+        "y": -3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0185",
+      "category": "exhaustive",
+      "expected": {
+        "value": 10
+      },
+      "input": {
+        "x": 5,
+        "y": -2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0186",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "x": 5,
+        "y": -1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0187",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": 5,
+        "y": 0
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0188",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "x": 5,
+        "y": 1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0189",
+      "category": "exhaustive",
+      "expected": {
+        "value": 10
+      },
+      "input": {
+        "x": 5,
+        "y": 2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0190",
+      "category": "exhaustive",
+      "expected": {
+        "value": 15
+      },
+      "input": {
+        "x": 5,
+        "y": 3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0191",
+      "category": "exhaustive",
+      "expected": {
+        "value": 20
+      },
+      "input": {
+        "x": 5,
+        "y": 4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0192",
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "input": {
+        "x": 5,
+        "y": 5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0193",
+      "category": "exhaustive",
+      "expected": {
+        "value": 30
+      },
+      "input": {
+        "x": 5,
+        "y": 6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0194",
+      "category": "exhaustive",
+      "expected": {
+        "value": 35
+      },
+      "input": {
+        "x": 5,
+        "y": 7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0195",
+      "category": "exhaustive",
+      "expected": {
+        "value": 42
+      },
+      "input": {
+        "x": 6,
+        "y": -7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0196",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": 6,
+        "y": -6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0197",
+      "category": "exhaustive",
+      "expected": {
+        "value": 30
+      },
+      "input": {
+        "x": 6,
+        "y": -5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0198",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "x": 6,
+        "y": -4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0199",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": 6,
+        "y": -3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0200",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": 6,
+        "y": -2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0201",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": 6,
+        "y": -1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0202",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": 6,
+        "y": 0
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0203",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": 6,
+        "y": 1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0204",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": 6,
+        "y": 2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0205",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": 6,
+        "y": 3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0206",
+      "category": "exhaustive",
+      "expected": {
+        "value": 12
+      },
+      "input": {
+        "x": 6,
+        "y": 4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0207",
+      "category": "exhaustive",
+      "expected": {
+        "value": 30
+      },
+      "input": {
+        "x": 6,
+        "y": 5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0208",
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "input": {
+        "x": 6,
+        "y": 6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0209",
+      "category": "exhaustive",
+      "expected": {
+        "value": 42
+      },
+      "input": {
+        "x": 6,
+        "y": 7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0210",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "x": 7,
+        "y": -7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0211",
+      "category": "exhaustive",
+      "expected": {
+        "value": 42
+      },
+      "input": {
+        "x": 7,
+        "y": -6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0212",
+      "category": "exhaustive",
+      "expected": {
+        "value": 35
+      },
+      "input": {
+        "x": 7,
+        "y": -5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0213",
+      "category": "exhaustive",
+      "expected": {
+        "value": 28
+      },
+      "input": {
+        "x": 7,
+        "y": -4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0214",
+      "category": "exhaustive",
+      "expected": {
+        "value": 21
+      },
+      "input": {
+        "x": 7,
+        "y": -3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0215",
+      "category": "exhaustive",
+      "expected": {
+        "value": 14
+      },
+      "input": {
+        "x": 7,
+        "y": -2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0216",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "x": 7,
+        "y": -1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0217",
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "input": {
+        "x": 7,
+        "y": 0
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0218",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "x": 7,
+        "y": 1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0219",
+      "category": "exhaustive",
+      "expected": {
+        "value": 14
+      },
+      "input": {
+        "x": 7,
+        "y": 2
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0220",
+      "category": "exhaustive",
+      "expected": {
+        "value": 21
+      },
+      "input": {
+        "x": 7,
+        "y": 3
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0221",
+      "category": "exhaustive",
+      "expected": {
+        "value": 28
+      },
+      "input": {
+        "x": 7,
+        "y": 4
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0222",
+      "category": "exhaustive",
+      "expected": {
+        "value": 35
+      },
+      "input": {
+        "x": 7,
+        "y": 5
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0223",
+      "category": "exhaustive",
+      "expected": {
+        "value": 42
+      },
+      "input": {
+        "x": 7,
+        "y": 6
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0224",
+      "category": "exhaustive",
+      "expected": {
+        "value": 7
+      },
+      "input": {
+        "x": 7,
+        "y": 7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0225",
+      "category": "random",
+      "expected": {
+        "value": [
+          40,
+          10,
+          10,
+          40,
+          70,
+          10,
+          10,
+          10,
+          40,
+          30,
+          0
+        ]
+      },
+      "input": {
+        "x": 10,
+        "y": [
+          -8,
+          1,
+          -10,
+          -8,
+          7,
+          -5,
+          -2,
+          1,
+          -8,
+          3,
+          0
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0226",
+      "category": "random",
+      "expected": {
+        "value": [
+          70,
+          35,
+          28,
+          21
+        ]
+      },
+      "input": {
+        "x": [
+          10,
+          5,
+          4,
+          -3
+        ],
+        "y": 7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0227",
+      "category": "random",
+      "expected": {
+        "value": [
+          8,
+          60,
+          6,
+          55,
+          12,
+          42,
+          3,
+          9
+        ]
+      },
+      "input": {
+        "x": [
+          8,
+          -10,
+          -6,
+          -5,
+          -1,
+          7,
+          -1,
+          -3
+        ],
+        "y": [
+          8,
+          12,
+          2,
+          11,
+          -12,
+          -6,
+          3,
+          9
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0228",
+      "category": "random",
+      "expected": {
+        "value": [
+          5,
+          7,
+          2
+        ]
+      },
+      "input": {
+        "x": -1,
+        "y": [
+          -5,
+          -7,
+          -2
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0229",
+      "category": "random",
+      "expected": {
+        "value": [
+          6,
+          12,
+          12,
+          1,
+          11,
+          12,
+          1,
+          9,
+          7,
+          10,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          6,
+          -12,
+          12,
+          -1,
+          -11,
+          -12,
+          1,
+          -9,
+          -7,
+          10,
+          -1
+        ],
+        "y": 1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0230",
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          36,
+          28,
+          10,
+          24
+        ]
+      },
+      "input": {
+        "x": [
+          -2,
+          -12,
+          7,
+          10,
+          6
+        ],
+        "y": [
+          4,
+          -9,
+          -4,
+          5,
+          8
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0231",
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          9,
+          5,
+          12
+        ]
+      },
+      "input": {
+        "x": -1,
+        "y": [
+          -4,
+          9,
+          -5,
+          12
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0232",
+      "category": "random",
+      "expected": {
+        "value": [
+          7,
+          14,
+          7,
+          21,
+          0,
+          28,
+          56
+        ]
+      },
+      "input": {
+        "x": [
+          -7,
+          2,
+          -7,
+          -3,
+          0,
+          -4,
+          8
+        ],
+        "y": -7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0233",
+      "category": "random",
+      "expected": {
+        "value": [
+          35,
+          20,
+          10,
+          8,
+          9,
+          30,
+          84,
+          4,
+          45,
+          9
+        ]
+      },
+      "input": {
+        "x": [
+          5,
+          -4,
+          -10,
+          -2,
+          -9,
+          -3,
+          -7,
+          -4,
+          -9,
+          -9
+        ],
+        "y": [
+          7,
+          5,
+          -2,
+          8,
+          9,
+          10,
+          -12,
+          4,
+          5,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0234",
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "x": -4,
+        "y": []
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0235",
+      "category": "random",
+      "expected": {
+        "value": [
+          35,
+          7,
+          77,
+          35
+        ]
+      },
+      "input": {
+        "x": [
+          5,
+          -1,
+          11,
+          -5
+        ],
+        "y": 7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0236",
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "x": [],
+        "y": []
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0237",
+      "category": "random",
+      "expected": {
+        "value": [
+          30
+        ]
+      },
+      "input": {
+        "x": 10,
+        "y": [
+          -6
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0238",
+      "category": "random",
+      "expected": {
+        "value": [
+          7,
+          7,
+          12,
+          6,
+          2,
+          3,
+          6,
+          10
+        ]
+      },
+      "input": {
+        "x": [
+          -7,
+          -7,
+          -12,
+          6,
+          2,
+          -3,
+          6,
+          -10
+        ],
+        "y": 1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0239",
+      "category": "random",
+      "expected": {
+        "value": [
+          9
+        ]
+      },
+      "input": {
+        "x": [
+          -9
+        ],
+        "y": [
+          -3
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0240",
+      "category": "random",
+      "expected": {
+        "value": [
+          12,
+          14,
+          22,
+          2,
+          6,
+          8,
+          6
+        ]
+      },
+      "input": {
+        "x": 2,
+        "y": [
+          -12,
+          -7,
+          -11,
+          -2,
+          -3,
+          8,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0241",
+      "category": "random",
+      "expected": {
+        "value": [
+          10,
+          6,
+          8,
+          9,
+          10,
+          5,
+          8
+        ]
+      },
+      "input": {
+        "x": [
+          -10,
+          -6,
+          -8,
+          -9,
+          10,
+          5,
+          -8
+        ],
+        "y": -1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0242",
+      "category": "random",
+      "expected": {
+        "value": [
+          8,
+          40,
+          40,
+          88,
+          40,
+          56
+        ]
+      },
+      "input": {
+        "x": -8,
+        "y": [
+          -1,
+          -5,
+          5,
+          -11,
+          -5,
+          -7
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0243",
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "x": [],
+        "y": -1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0244",
+      "category": "random",
+      "expected": {
+        "value": [
+          10,
+          55,
+          30
+        ]
+      },
+      "input": {
+        "x": 5,
+        "y": [
+          2,
+          11,
+          6
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0245",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          36,
+          40,
+          55,
+          9,
+          10,
+          5,
+          12,
+          90,
+          6
+        ]
+      },
+      "input": {
+        "x": [
+          8,
+          12,
+          -10,
+          11,
+          -3,
+          -1,
+          5,
+          -12,
+          10,
+          1
+        ],
+        "y": [
+          0,
+          -9,
+          -8,
+          5,
+          -9,
+          10,
+          1,
+          1,
+          -9,
+          -6
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0246",
+      "category": "random",
+      "expected": {
+        "value": [
+          18,
+          90,
+          90,
+          72,
+          72,
+          18,
+          72,
+          9,
+          9
+        ]
+      },
+      "input": {
+        "x": -9,
+        "y": [
+          2,
+          10,
+          -10,
+          8,
+          8,
+          -2,
+          8,
+          -3,
+          -9
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0247",
+      "category": "random",
+      "expected": {
+        "value": [
+          21,
+          56,
+          70,
+          42
+        ]
+      },
+      "input": {
+        "x": [
+          3,
+          -8,
+          10,
+          6
+        ],
+        "y": -7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0248",
+      "category": "random",
+      "expected": {
+        "value": [
+          10,
+          77,
+          36
+        ]
+      },
+      "input": {
+        "x": [
+          10,
+          11,
+          -12
+        ],
+        "y": [
+          -10,
+          7,
+          9
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0249",
+      "category": "random",
+      "expected": {
+        "value": [
+          9,
+          9,
+          9
+        ]
+      },
+      "input": {
+        "x": -9,
+        "y": [
+          -1,
+          -9,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0250",
+      "category": "random",
+      "expected": {
+        "value": [
+          84,
+          14,
+          56,
+          56,
+          7,
+          77,
+          77,
+          14
+        ]
+      },
+      "input": {
+        "x": [
+          12,
+          2,
+          -8,
+          -8,
+          -7,
+          11,
+          11,
+          -2
+        ],
+        "y": -7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0251",
+      "category": "random",
+      "expected": {
+        "value": [
+          22,
+          90,
+          8,
+          90
+        ]
+      },
+      "input": {
+        "x": [
+          -2,
+          10,
+          8,
+          -9
+        ],
+        "y": [
+          11,
+          9,
+          4,
+          -10
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0252",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          7,
+          8,
+          6,
+          6,
+          12,
+          1,
+          10,
+          0
+        ]
+      },
+      "input": {
+        "x": -1,
+        "y": [
+          2,
+          -7,
+          8,
+          -6,
+          6,
+          -12,
+          1,
+          10,
+          0
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0253",
+      "category": "random",
+      "expected": {
+        "value": [
+          6,
+          6,
+          10,
+          8
+        ]
+      },
+      "input": {
+        "x": [
+          6,
+          -6,
+          -10,
+          -8
+        ],
+        "y": 1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0254",
+      "category": "random",
+      "expected": {
+        "value": [
+          10,
+          110,
+          10,
+          84,
+          99,
+          6,
+          0,
+          99
+        ]
+      },
+      "input": {
+        "x": [
+          -5,
+          -11,
+          -1,
+          7,
+          9,
+          -6,
+          -4,
+          -9
+        ],
+        "y": [
+          2,
+          10,
+          10,
+          -12,
+          -11,
+          1,
+          0,
+          11
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0255",
+      "category": "random",
+      "expected": {
+        "value": [
+          12,
+          6,
+          24,
+          6,
+          30,
+          30,
+          6
+        ]
+      },
+      "input": {
+        "x": 6,
+        "y": [
+          -12,
+          3,
+          8,
+          1,
+          -10,
+          5,
+          3
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0256",
+      "category": "random",
+      "expected": {
+        "value": [
+          12,
+          5,
+          6,
+          8,
+          1,
+          8,
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          -12,
+          5,
+          -6,
+          8,
+          1,
+          -8,
+          -1
+        ],
+        "y": -1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0257",
+      "category": "random",
+      "expected": {
+        "value": [
+          33,
+          14,
+          42,
+          10,
+          0,
+          10,
+          36,
+          12,
+          12
+        ]
+      },
+      "input": {
+        "x": [
+          -3,
+          7,
+          6,
+          -2,
+          0,
+          -10,
+          4,
+          -3,
+          -2
+        ],
+        "y": [
+          -11,
+          2,
+          -7,
+          5,
+          -12,
+          -1,
+          9,
+          -12,
+          12
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0258",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          8,
+          12,
+          7,
+          2
+        ]
+      },
+      "input": {
+        "x": 1,
+        "y": [
+          0,
+          -8,
+          -12,
+          -7,
+          2
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0259",
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          7,
+          6,
+          2,
+          12,
+          2,
+          11,
+          10,
+          2,
+          10,
+          12
+        ]
+      },
+      "input": {
+        "x": [
+          2,
+          -7,
+          -6,
+          2,
+          12,
+          -2,
+          -11,
+          -10,
+          2,
+          -10,
+          -12
+        ],
+        "y": 1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0260",
+      "category": "random",
+      "expected": {
+        "value": [
+          60,
+          10,
+          3,
+          20,
+          12,
+          10
+        ]
+      },
+      "input": {
+        "x": [
+          -12,
+          -10,
+          3,
+          4,
+          -12,
+          -5
+        ],
+        "y": [
+          -5,
+          -10,
+          -1,
+          10,
+          -2,
+          -10
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0261",
+      "category": "random",
+      "expected": {
+        "value": [
+          88,
+          8,
+          24,
+          24,
+          40,
+          24,
+          40,
+          24,
+          8
+        ]
+      },
+      "input": {
+        "x": 8,
+        "y": [
+          -11,
+          2,
+          6,
+          -12,
+          5,
+          -12,
+          5,
+          -3,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0262",
+      "category": "random",
+      "expected": {
+        "value": [
+          10,
+          11,
+          7,
+          9,
+          2,
+          11,
+          7,
+          5,
+          5
+        ]
+      },
+      "input": {
+        "x": [
+          10,
+          -11,
+          7,
+          9,
+          2,
+          11,
+          -7,
+          -5,
+          5
+        ],
+        "y": -1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0263",
+      "category": "random",
+      "expected": {
+        "value": [
+          88,
+          12,
+          7,
+          56
+        ]
+      },
+      "input": {
+        "x": [
+          11,
+          4,
+          -1,
+          -7
+        ],
+        "y": [
+          8,
+          -12,
+          7,
+          -8
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0264",
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          30,
+          30,
+          3,
+          3
+        ]
+      },
+      "input": {
+        "x": 3,
+        "y": [
+          -3,
+          -10,
+          -10,
+          -1,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0265",
+      "category": "random",
+      "expected": {
+        "value": [
+          14,
+          84,
+          7,
+          42,
+          56,
+          7,
+          7,
+          21,
+          56,
+          0,
+          7
+        ]
+      },
+      "input": {
+        "x": [
+          -2,
+          -12,
+          1,
+          6,
+          8,
+          -7,
+          7,
+          3,
+          8,
+          0,
+          7
+        ],
+        "y": 7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0266",
+      "category": "random",
+      "expected": {
+        "value": [
+          90
+        ]
+      },
+      "input": {
+        "x": [
+          9
+        ],
+        "y": [
+          -10
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0267",
+      "category": "random",
+      "expected": {
+        "value": [
+          63,
+          21,
+          7,
+          56,
+          21
+        ]
+      },
+      "input": {
+        "x": -7,
+        "y": [
+          -9,
+          3,
+          -1,
+          8,
+          -3
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0268",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          3,
+          10,
+          2,
+          2,
+          7
+        ]
+      },
+      "input": {
+        "x": [
+          1,
+          3,
+          -10,
+          -2,
+          2,
+          -7
+        ],
+        "y": 1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0269",
+      "category": "random",
+      "expected": {
+        "value": [
+          10,
+          60,
+          0,
+          2,
+          14,
+          8,
+          55,
+          77,
+          10
+        ]
+      },
+      "input": {
+        "x": [
+          -10,
+          -5,
+          12,
+          2,
+          2,
+          -8,
+          5,
+          -11,
+          10
+        ],
+        "y": [
+          10,
+          -12,
+          0,
+          1,
+          7,
+          2,
+          -11,
+          -7,
+          10
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0270",
+      "category": "random",
+      "expected": {
+        "value": [
+          20,
+          12,
+          20,
+          36,
+          4,
+          20,
+          44
+        ]
+      },
+      "input": {
+        "x": 4,
+        "y": [
+          10,
+          12,
+          5,
+          9,
+          -2,
+          5,
+          -11
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0271",
+      "category": "random",
+      "expected": {
+        "value": [
+          28,
+          42,
+          35,
+          42
+        ]
+      },
+      "input": {
+        "x": [
+          4,
+          6,
+          5,
+          -6
+        ],
+        "y": 7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0272",
+      "category": "random",
+      "expected": {
+        "value": [
+          12,
+          10,
+          33,
+          0,
+          15,
+          30,
+          0,
+          24,
+          45,
+          18
+        ]
+      },
+      "input": {
+        "x": [
+          -6,
+          5,
+          -11,
+          0,
+          -3,
+          -6,
+          -9,
+          -3,
+          5,
+          -9
+        ],
+        "y": [
+          12,
+          -2,
+          3,
+          8,
+          5,
+          10,
+          0,
+          -8,
+          9,
+          -6
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0273",
+      "category": "random",
+      "expected": {
+        "value": [
+          12,
+          4,
+          10,
+          7
+        ]
+      },
+      "input": {
+        "x": 1,
+        "y": [
+          -12,
+          -4,
+          10,
+          -7
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0274",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          8,
+          7,
+          4,
+          12,
+          12
+        ]
+      },
+      "input": {
+        "x": [
+          1,
+          -8,
+          7,
+          -4,
+          12,
+          12
+        ],
+        "y": 1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0275",
+      "category": "random",
+      "expected": {
+        "value": [
+          77,
+          70,
+          28,
+          3,
+          20,
+          11,
+          90,
+          45,
+          24,
+          0,
+          0
+        ]
+      },
+      "input": {
+        "x": [
+          -11,
+          -7,
+          -7,
+          3,
+          4,
+          -11,
+          10,
+          9,
+          6,
+          1,
+          9
+        ],
+        "y": [
+          -7,
+          -10,
+          4,
+          1,
+          5,
+          -1,
+          -9,
+          5,
+          8,
+          0,
+          0
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0276",
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "x": -2,
+        "y": []
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0277",
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          7,
+          6,
+          0
+        ]
+      },
+      "input": {
+        "x": [
+          -4,
+          -7,
+          6,
+          0
+        ],
+        "y": 1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0278",
+      "category": "random",
+      "expected": {
+        "value": [
+          110
+        ]
+      },
+      "input": {
+        "x": [
+          -11
+        ],
+        "y": [
+          10
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0279",
+      "category": "random",
+      "expected": {
+        "value": [
+          30,
+          12,
+          66,
+          6,
+          66,
+          12
+        ]
+      },
+      "input": {
+        "x": -6,
+        "y": [
+          -10,
+          -4,
+          11,
+          2,
+          11,
+          4
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0280",
+      "category": "random",
+      "expected": {
+        "value": [
+          11,
+          5,
+          8,
+          9,
+          7,
+          6,
+          5,
+          3
+        ]
+      },
+      "input": {
+        "x": [
+          11,
+          -5,
+          -8,
+          9,
+          -7,
+          6,
+          -5,
+          -3
+        ],
+        "y": -1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0281",
+      "category": "random",
+      "expected": {
+        "value": [
+          12
+        ]
+      },
+      "input": {
+        "x": [
+          12
+        ],
+        "y": [
+          -1
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0282",
+      "category": "random",
+      "expected": {
+        "value": [
+          56,
+          35,
+          77,
+          56,
+          7,
+          28,
+          7
+        ]
+      },
+      "input": {
+        "x": 7,
+        "y": [
+          8,
+          5,
+          11,
+          -8,
+          -1,
+          4,
+          -1
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0283",
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "input": {
+        "x": [
+          -1
+        ],
+        "y": 1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0284",
+      "category": "random",
+      "expected": {
+        "value": [
+          35,
+          40,
+          5,
+          15,
+          35,
+          10,
+          15,
+          55,
+          40,
+          40,
+          10
+        ]
+      },
+      "input": {
+        "x": -5,
+        "y": [
+          -7,
+          8,
+          -1,
+          -3,
+          -7,
+          10,
+          3,
+          -11,
+          8,
+          -8,
+          2
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0285",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          63,
+          77,
+          77,
+          70,
+          84,
+          63,
+          70
+        ]
+      },
+      "input": {
+        "x": [
+          0,
+          9,
+          11,
+          11,
+          10,
+          -12,
+          -9,
+          10
+        ],
+        "y": 7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0286",
+      "category": "random",
+      "expected": {
+        "value": [
+          28,
+          6,
+          0,
+          12
+        ]
+      },
+      "input": {
+        "x": [
+          7,
+          -3,
+          -5,
+          -2
+        ],
+        "y": [
+          4,
+          -6,
+          0,
+          -12
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0287",
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "input": {
+        "x": -8,
+        "y": []
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0288",
+      "category": "random",
+      "expected": {
+        "value": [
+          3
+        ]
+      },
+      "input": {
+        "x": [
+          3
+        ],
+        "y": -1
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0289",
+      "category": "random",
+      "expected": {
+        "value": [
+          10,
+          35,
+          18,
+          5,
+          4,
+          20,
+          10
+        ]
+      },
+      "input": {
+        "x": [
+          10,
+          -7,
+          -9,
+          -1,
+          4,
+          4,
+          1
+        ],
+        "y": [
+          5,
+          -5,
+          -6,
+          -5,
+          1,
+          10,
+          -10
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0290",
+      "category": "random",
+      "expected": {
+        "value": [
+          35,
+          5,
+          20,
+          5,
+          10,
+          5,
+          40,
+          10,
+          60,
+          5,
+          10
+        ]
+      },
+      "input": {
+        "x": 5,
+        "y": [
+          -7,
+          1,
+          4,
+          5,
+          10,
+          5,
+          -8,
+          -10,
+          -12,
+          1,
+          10
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0291",
+      "category": "random",
+      "expected": {
+        "value": [
+          56,
+          56
+        ]
+      },
+      "input": {
+        "x": [
+          -8,
+          8
+        ],
+        "y": -7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0292",
+      "category": "random",
+      "expected": {
+        "value": [
+          14
+        ]
+      },
+      "input": {
+        "x": [
+          -2
+        ],
+        "y": [
+          -7
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0293",
+      "category": "random",
+      "expected": {
+        "value": [
+          12,
+          2,
+          0,
+          6,
+          6,
+          10
+        ]
+      },
+      "input": {
+        "x": -2,
+        "y": [
+          12,
+          2,
+          0,
+          -3,
+          3,
+          10
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0294",
+      "category": "random",
+      "expected": {
+        "value": [
+          28,
+          28,
+          7,
+          70,
+          70,
+          77
+        ]
+      },
+      "input": {
+        "x": [
+          -4,
+          -4,
+          1,
+          10,
+          -10,
+          11
+        ],
+        "y": -7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0295",
+      "category": "random",
+      "expected": {
+        "value": [
+          56,
+          30,
+          10,
+          60,
+          9,
+          36,
+          0,
+          24,
+          9
+        ]
+      },
+      "input": {
+        "x": [
+          8,
+          5,
+          -10,
+          12,
+          -9,
+          4,
+          0,
+          -8,
+          3
+        ],
+        "y": [
+          -7,
+          -6,
+          -1,
+          10,
+          3,
+          -9,
+          7,
+          -12,
+          -9
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0296",
+      "category": "random",
+      "expected": {
+        "value": [
+          24,
+          21,
+          3,
+          0,
+          12,
+          9,
+          30,
+          30
+        ]
+      },
+      "input": {
+        "x": -3,
+        "y": [
+          -8,
+          7,
+          -3,
+          0,
+          -12,
+          9,
+          10,
+          10
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0297",
+      "category": "random",
+      "expected": {
+        "value": [
+          7,
+          35,
+          21,
+          7,
+          84,
+          14,
+          28,
+          21
+        ]
+      },
+      "input": {
+        "x": [
+          -7,
+          5,
+          -3,
+          -1,
+          -12,
+          2,
+          -4,
+          3
+        ],
+        "y": 7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0298",
+      "category": "random",
+      "expected": {
+        "value": [
+          30,
+          8,
+          55
+        ]
+      },
+      "input": {
+        "x": [
+          3,
+          1,
+          -11
+        ],
+        "y": [
+          -10,
+          -8,
+          5
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0299",
+      "category": "random",
+      "expected": {
+        "value": [
+          9,
+          9,
+          36,
+          9,
+          45,
+          9,
+          36,
+          45
+        ]
+      },
+      "input": {
+        "x": -9,
+        "y": [
+          -9,
+          9,
+          12,
+          -1,
+          5,
+          3,
+          12,
+          5
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0300",
+      "category": "random",
+      "expected": {
+        "value": [
+          14,
+          35,
+          7,
+          56,
+          21,
+          35,
+          42,
+          0,
+          35,
+          56,
+          63
+        ]
+      },
+      "input": {
+        "x": [
+          -2,
+          5,
+          -1,
+          8,
+          3,
+          5,
+          6,
+          0,
+          5,
+          -8,
+          9
+        ],
+        "y": 7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0301",
+      "category": "random",
+      "expected": {
+        "value": [
+          35,
+          8,
+          70,
+          21,
+          4,
+          77
+        ]
+      },
+      "input": {
+        "x": [
+          -5,
+          -8,
+          7,
+          -3,
+          1,
+          -11
+        ],
+        "y": [
+          7,
+          -2,
+          10,
+          7,
+          -4,
+          7
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0302",
+      "category": "random",
+      "expected": {
+        "value": [
+          84,
+          35,
+          7,
+          28,
+          35,
+          0,
+          84
+        ]
+      },
+      "input": {
+        "x": 7,
+        "y": [
+          -12,
+          5,
+          -1,
+          4,
+          5,
+          0,
+          -12
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0303",
+      "category": "random",
+      "expected": {
+        "value": [
+          56,
+          35,
+          63
+        ]
+      },
+      "input": {
+        "x": [
+          -8,
+          -5,
+          -9
+        ],
+        "y": 7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0304",
+      "category": "random",
+      "expected": {
+        "value": [
+          60,
+          9,
+          30,
+          0,
+          10
+        ]
+      },
+      "input": {
+        "x": [
+          -10,
+          3,
+          6,
+          4,
+          10
+        ],
+        "y": [
+          -12,
+          9,
+          -10,
+          0,
+          -10
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0305",
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          10,
+          6
+        ]
+      },
+      "input": {
+        "x": 1,
+        "y": [
+          1,
+          10,
+          -6
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0306",
+      "category": "random",
+      "expected": {
+        "value": [
+          21,
+          7
+        ]
+      },
+      "input": {
+        "x": [
+          3,
+          7
+        ],
+        "y": 7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0307",
+      "category": "random",
+      "expected": {
+        "value": [
+          22,
+          0,
+          21,
+          10,
+          77
+        ]
+      },
+      "input": {
+        "x": [
+          -2,
+          0,
+          7,
+          -10,
+          11
+        ],
+        "y": [
+          11,
+          -7,
+          -3,
+          5,
+          7
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0308",
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "input": {
+        "x": 0,
+        "y": [
+          -9,
+          -7,
+          -7,
+          5
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0309",
+      "category": "random",
+      "expected": {
+        "value": [
+          42,
+          14,
+          42,
+          42,
+          14,
+          7,
+          28,
+          35,
+          42
+        ]
+      },
+      "input": {
+        "x": [
+          -6,
+          2,
+          6,
+          -6,
+          -2,
+          7,
+          4,
+          -5,
+          -6
+        ],
+        "y": 7
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    },
+    {
+      "case_id": "numpy.lcm:0310",
+      "category": "random",
+      "expected": {
+        "value": [
+          8,
+          77,
+          12,
+          24,
+          2,
+          44
+        ]
+      },
+      "input": {
+        "x": [
+          4,
+          -7,
+          12,
+          -8,
+          -2,
+          -11
+        ],
+        "y": [
+          -8,
+          -11,
+          4,
+          -6,
+          2,
+          4
+        ]
+      },
+      "observed": {
+        "error": "SyntaxError:'[' was never closed (<unknown>, line 14)"
+      },
+      "passed": false
+    }
+  ],
+  "condition": "large_to_large",
+  "elapsed_seconds": 0.027497765000134677,
+  "group": "integer_arithmetic",
+  "library": "numpy",
+  "load_error": "SyntaxError:'[' was never closed (<unknown>, line 14)",
+  "method_id": "numpy.lcm",
+  "passed": 0,
+  "total": 311
+}

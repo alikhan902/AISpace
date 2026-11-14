@@ -1,0 +1,4736 @@
+{
+  "brief": {
+    "contract": "x and y are integers or 1-D lists of integers. Support scalar/scalar, scalar/list, list/scalar and lists of the same length (including empty). Scalar/scalar returns int, all other inputs return a list. No other broadcasting is required. Values and results fit signed int64. Divisors are nonzero.",
+    "documentation": "remainder(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])\n\nReturns the element-wise remainder of division.\n\nComputes the remainder complementary to the `floor_divide` function.  It is\nequivalent to the Python modulus operator ``x1 % x2`` and has the same sign\nas the divisor `x2`. The MATLAB function equivalent to ``np.remainder``\nis ``mod``.\n\n.. warning::\n\n    This should not be confused with:\n\n    * Python's `math.remainder` and C's ``remainder``, which\n      compute the IEEE remainder, which are the complement to\n      ``round(x1 / x2)``.\n    * The MATLAB ``rem`` function and or the C ``%`` operator which is the\n      complement to ``int(x1 / x2)``.\n\nParameters\n----------\nx1 : array_like\n    Dividend array.\nx2 : array_like\n    Divisor array.\n    If ``x1.shape != x2.shape``, they must be broadcastable to a common\n    shape (which becomes the shape of the output).\nout : ndarray, None, or tuple of ndarray and None, optional\n    A location into which the result is stored. If provided, it must have\n    a shape that the inputs broadcast to. If not provided or None,\n    a freshly-allocated array is returned. A tuple (possible only as a\n    keyword argument) must have length equal to the number of outputs.\nwhere : array_like, optional\n    This condition is broadcast over the input. At locations where the\n    condition is True, the `out` array will be set to the ufunc result.\n    Elsewhere, the `out` array will retain its original value.\n    Note that if an uninitialized `out` array is created via the default\n    ``out=None``, locations within it where the condition is False will\n    remain uninitialized.\n**kwargs\n    For other keyword-only arguments, see the\n    :ref:`ufunc docs <ufuncs.kwargs>`.\n\nReturns\n-------\ny : ndarray\n    The element-wise remainder of the quotient ``floor_divide(x1, x2)``.\n    This is a scalar if both `x1` and `x2` are scalars.\n\nSee Also\n--------\nfloor_divide : Equivalent of Python ``//`` operator.\ndivmod : Simultaneous floor division and remainder.\nfmod : Equivalent of the MATLAB ``rem`` function.\ndivide, floor\n\nNotes\n-----\nReturns 0 when `x2` is 0 and both `x1` and `x2` are (arrays of)\nintegers.\n``mod`` is an alias of ``remainder``.\n\nExamples\n--------\n>>> import numpy as np\n>>> np.remainder([4, 7], [2, 3])\narray([0, 1])\n>>> np.remainder(np.arange(7), 5)\narray([0, 1, 2, 3, 4, 0, 1])\n\nThe ``%`` operator can be used as a shorthand for ``np.remainder`` on\nndarrays.\n\n>>> x1 = np.arange(7)\n>>> x1 % 5\narray([0, 1, 2, 3, 4, 0, 1])",
+    "documentation_truncated": false,
+    "group": "integer_arithmetic",
+    "id": "numpy.remainder",
+    "library": "numpy",
+    "name": "remainder",
+    "signature": "solve(x, y)",
+    "version": "2.5.4"
+  },
+  "cases": [
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0000",
+      "input": {
+        "x": -7,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.remainder:0001",
+      "input": {
+        "x": -7,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -2
+      },
+      "id": "numpy.remainder:0002",
+      "input": {
+        "x": -7,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -3
+      },
+      "id": "numpy.remainder:0003",
+      "input": {
+        "x": -7,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.remainder:0004",
+      "input": {
+        "x": -7,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.remainder:0005",
+      "input": {
+        "x": -7,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0006",
+      "input": {
+        "x": -7,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0007",
+      "input": {
+        "x": -7,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.remainder:0008",
+      "input": {
+        "x": -7,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.remainder:0009",
+      "input": {
+        "x": -7,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.remainder:0010",
+      "input": {
+        "x": -7,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.remainder:0011",
+      "input": {
+        "x": -7,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.remainder:0012",
+      "input": {
+        "x": -7,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0013",
+      "input": {
+        "x": -7,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -6
+      },
+      "id": "numpy.remainder:0014",
+      "input": {
+        "x": -6,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0015",
+      "input": {
+        "x": -6,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.remainder:0016",
+      "input": {
+        "x": -6,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -2
+      },
+      "id": "numpy.remainder:0017",
+      "input": {
+        "x": -6,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0018",
+      "input": {
+        "x": -6,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0019",
+      "input": {
+        "x": -6,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0020",
+      "input": {
+        "x": -6,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0021",
+      "input": {
+        "x": -6,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0022",
+      "input": {
+        "x": -6,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0023",
+      "input": {
+        "x": -6,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.remainder:0024",
+      "input": {
+        "x": -6,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.remainder:0025",
+      "input": {
+        "x": -6,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0026",
+      "input": {
+        "x": -6,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.remainder:0027",
+      "input": {
+        "x": -6,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -5
+      },
+      "id": "numpy.remainder:0028",
+      "input": {
+        "x": -5,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -5
+      },
+      "id": "numpy.remainder:0029",
+      "input": {
+        "x": -5,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0030",
+      "input": {
+        "x": -5,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.remainder:0031",
+      "input": {
+        "x": -5,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -2
+      },
+      "id": "numpy.remainder:0032",
+      "input": {
+        "x": -5,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.remainder:0033",
+      "input": {
+        "x": -5,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0034",
+      "input": {
+        "x": -5,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0035",
+      "input": {
+        "x": -5,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.remainder:0036",
+      "input": {
+        "x": -5,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.remainder:0037",
+      "input": {
+        "x": -5,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.remainder:0038",
+      "input": {
+        "x": -5,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0039",
+      "input": {
+        "x": -5,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.remainder:0040",
+      "input": {
+        "x": -5,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.remainder:0041",
+      "input": {
+        "x": -5,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -4
+      },
+      "id": "numpy.remainder:0042",
+      "input": {
+        "x": -4,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -4
+      },
+      "id": "numpy.remainder:0043",
+      "input": {
+        "x": -4,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -4
+      },
+      "id": "numpy.remainder:0044",
+      "input": {
+        "x": -4,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0045",
+      "input": {
+        "x": -4,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.remainder:0046",
+      "input": {
+        "x": -4,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0047",
+      "input": {
+        "x": -4,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0048",
+      "input": {
+        "x": -4,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0049",
+      "input": {
+        "x": -4,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0050",
+      "input": {
+        "x": -4,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.remainder:0051",
+      "input": {
+        "x": -4,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0052",
+      "input": {
+        "x": -4,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.remainder:0053",
+      "input": {
+        "x": -4,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.remainder:0054",
+      "input": {
+        "x": -4,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.remainder:0055",
+      "input": {
+        "x": -4,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -3
+      },
+      "id": "numpy.remainder:0056",
+      "input": {
+        "x": -3,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -3
+      },
+      "id": "numpy.remainder:0057",
+      "input": {
+        "x": -3,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -3
+      },
+      "id": "numpy.remainder:0058",
+      "input": {
+        "x": -3,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -3
+      },
+      "id": "numpy.remainder:0059",
+      "input": {
+        "x": -3,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0060",
+      "input": {
+        "x": -3,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.remainder:0061",
+      "input": {
+        "x": -3,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0062",
+      "input": {
+        "x": -3,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0063",
+      "input": {
+        "x": -3,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.remainder:0064",
+      "input": {
+        "x": -3,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0065",
+      "input": {
+        "x": -3,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.remainder:0066",
+      "input": {
+        "x": -3,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.remainder:0067",
+      "input": {
+        "x": -3,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.remainder:0068",
+      "input": {
+        "x": -3,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.remainder:0069",
+      "input": {
+        "x": -3,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -2
+      },
+      "id": "numpy.remainder:0070",
+      "input": {
+        "x": -2,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -2
+      },
+      "id": "numpy.remainder:0071",
+      "input": {
+        "x": -2,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -2
+      },
+      "id": "numpy.remainder:0072",
+      "input": {
+        "x": -2,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -2
+      },
+      "id": "numpy.remainder:0073",
+      "input": {
+        "x": -2,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -2
+      },
+      "id": "numpy.remainder:0074",
+      "input": {
+        "x": -2,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0075",
+      "input": {
+        "x": -2,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0076",
+      "input": {
+        "x": -2,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0077",
+      "input": {
+        "x": -2,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0078",
+      "input": {
+        "x": -2,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.remainder:0079",
+      "input": {
+        "x": -2,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.remainder:0080",
+      "input": {
+        "x": -2,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.remainder:0081",
+      "input": {
+        "x": -2,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.remainder:0082",
+      "input": {
+        "x": -2,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.remainder:0083",
+      "input": {
+        "x": -2,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.remainder:0084",
+      "input": {
+        "x": -1,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.remainder:0085",
+      "input": {
+        "x": -1,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.remainder:0086",
+      "input": {
+        "x": -1,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.remainder:0087",
+      "input": {
+        "x": -1,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.remainder:0088",
+      "input": {
+        "x": -1,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.remainder:0089",
+      "input": {
+        "x": -1,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0090",
+      "input": {
+        "x": -1,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0091",
+      "input": {
+        "x": -1,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.remainder:0092",
+      "input": {
+        "x": -1,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.remainder:0093",
+      "input": {
+        "x": -1,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.remainder:0094",
+      "input": {
+        "x": -1,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.remainder:0095",
+      "input": {
+        "x": -1,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.remainder:0096",
+      "input": {
+        "x": -1,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "id": "numpy.remainder:0097",
+      "input": {
+        "x": -1,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0098",
+      "input": {
+        "x": 0,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0099",
+      "input": {
+        "x": 0,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0100",
+      "input": {
+        "x": 0,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0101",
+      "input": {
+        "x": 0,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0102",
+      "input": {
+        "x": 0,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0103",
+      "input": {
+        "x": 0,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0104",
+      "input": {
+        "x": 0,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0105",
+      "input": {
+        "x": 0,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0106",
+      "input": {
+        "x": 0,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0107",
+      "input": {
+        "x": 0,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0108",
+      "input": {
+        "x": 0,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0109",
+      "input": {
+        "x": 0,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0110",
+      "input": {
+        "x": 0,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0111",
+      "input": {
+        "x": 0,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -6
+      },
+      "id": "numpy.remainder:0112",
+      "input": {
+        "x": 1,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -5
+      },
+      "id": "numpy.remainder:0113",
+      "input": {
+        "x": 1,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -4
+      },
+      "id": "numpy.remainder:0114",
+      "input": {
+        "x": 1,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -3
+      },
+      "id": "numpy.remainder:0115",
+      "input": {
+        "x": 1,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -2
+      },
+      "id": "numpy.remainder:0116",
+      "input": {
+        "x": 1,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.remainder:0117",
+      "input": {
+        "x": 1,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0118",
+      "input": {
+        "x": 1,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0119",
+      "input": {
+        "x": 1,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.remainder:0120",
+      "input": {
+        "x": 1,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.remainder:0121",
+      "input": {
+        "x": 1,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.remainder:0122",
+      "input": {
+        "x": 1,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.remainder:0123",
+      "input": {
+        "x": 1,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.remainder:0124",
+      "input": {
+        "x": 1,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.remainder:0125",
+      "input": {
+        "x": 1,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -5
+      },
+      "id": "numpy.remainder:0126",
+      "input": {
+        "x": 2,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -4
+      },
+      "id": "numpy.remainder:0127",
+      "input": {
+        "x": 2,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -3
+      },
+      "id": "numpy.remainder:0128",
+      "input": {
+        "x": 2,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -2
+      },
+      "id": "numpy.remainder:0129",
+      "input": {
+        "x": 2,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.remainder:0130",
+      "input": {
+        "x": 2,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0131",
+      "input": {
+        "x": 2,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0132",
+      "input": {
+        "x": 2,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0133",
+      "input": {
+        "x": 2,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0134",
+      "input": {
+        "x": 2,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.remainder:0135",
+      "input": {
+        "x": 2,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.remainder:0136",
+      "input": {
+        "x": 2,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.remainder:0137",
+      "input": {
+        "x": 2,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.remainder:0138",
+      "input": {
+        "x": 2,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.remainder:0139",
+      "input": {
+        "x": 2,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -4
+      },
+      "id": "numpy.remainder:0140",
+      "input": {
+        "x": 3,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -3
+      },
+      "id": "numpy.remainder:0141",
+      "input": {
+        "x": 3,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -2
+      },
+      "id": "numpy.remainder:0142",
+      "input": {
+        "x": 3,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.remainder:0143",
+      "input": {
+        "x": 3,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0144",
+      "input": {
+        "x": 3,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.remainder:0145",
+      "input": {
+        "x": 3,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0146",
+      "input": {
+        "x": 3,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0147",
+      "input": {
+        "x": 3,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.remainder:0148",
+      "input": {
+        "x": 3,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0149",
+      "input": {
+        "x": 3,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.remainder:0150",
+      "input": {
+        "x": 3,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.remainder:0151",
+      "input": {
+        "x": 3,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.remainder:0152",
+      "input": {
+        "x": 3,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.remainder:0153",
+      "input": {
+        "x": 3,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -3
+      },
+      "id": "numpy.remainder:0154",
+      "input": {
+        "x": 4,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -2
+      },
+      "id": "numpy.remainder:0155",
+      "input": {
+        "x": 4,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.remainder:0156",
+      "input": {
+        "x": 4,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0157",
+      "input": {
+        "x": 4,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -2
+      },
+      "id": "numpy.remainder:0158",
+      "input": {
+        "x": 4,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0159",
+      "input": {
+        "x": 4,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0160",
+      "input": {
+        "x": 4,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0161",
+      "input": {
+        "x": 4,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0162",
+      "input": {
+        "x": 4,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.remainder:0163",
+      "input": {
+        "x": 4,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0164",
+      "input": {
+        "x": 4,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.remainder:0165",
+      "input": {
+        "x": 4,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.remainder:0166",
+      "input": {
+        "x": 4,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 4
+      },
+      "id": "numpy.remainder:0167",
+      "input": {
+        "x": 4,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -2
+      },
+      "id": "numpy.remainder:0168",
+      "input": {
+        "x": 5,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.remainder:0169",
+      "input": {
+        "x": 5,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0170",
+      "input": {
+        "x": 5,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -3
+      },
+      "id": "numpy.remainder:0171",
+      "input": {
+        "x": 5,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.remainder:0172",
+      "input": {
+        "x": 5,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.remainder:0173",
+      "input": {
+        "x": 5,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0174",
+      "input": {
+        "x": 5,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0175",
+      "input": {
+        "x": 5,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.remainder:0176",
+      "input": {
+        "x": 5,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.remainder:0177",
+      "input": {
+        "x": 5,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.remainder:0178",
+      "input": {
+        "x": 5,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0179",
+      "input": {
+        "x": 5,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.remainder:0180",
+      "input": {
+        "x": 5,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 5
+      },
+      "id": "numpy.remainder:0181",
+      "input": {
+        "x": 5,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.remainder:0182",
+      "input": {
+        "x": 6,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0183",
+      "input": {
+        "x": 6,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -4
+      },
+      "id": "numpy.remainder:0184",
+      "input": {
+        "x": 6,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -2
+      },
+      "id": "numpy.remainder:0185",
+      "input": {
+        "x": 6,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0186",
+      "input": {
+        "x": 6,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0187",
+      "input": {
+        "x": 6,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0188",
+      "input": {
+        "x": 6,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0189",
+      "input": {
+        "x": 6,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0190",
+      "input": {
+        "x": 6,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0191",
+      "input": {
+        "x": 6,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.remainder:0192",
+      "input": {
+        "x": 6,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.remainder:0193",
+      "input": {
+        "x": 6,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0194",
+      "input": {
+        "x": 6,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "id": "numpy.remainder:0195",
+      "input": {
+        "x": 6,
+        "y": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0196",
+      "input": {
+        "x": 7,
+        "y": -7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -5
+      },
+      "id": "numpy.remainder:0197",
+      "input": {
+        "x": 7,
+        "y": -6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -3
+      },
+      "id": "numpy.remainder:0198",
+      "input": {
+        "x": 7,
+        "y": -5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.remainder:0199",
+      "input": {
+        "x": 7,
+        "y": -4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -2
+      },
+      "id": "numpy.remainder:0200",
+      "input": {
+        "x": 7,
+        "y": -3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "numpy.remainder:0201",
+      "input": {
+        "x": 7,
+        "y": -2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0202",
+      "input": {
+        "x": 7,
+        "y": -1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0203",
+      "input": {
+        "x": 7,
+        "y": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.remainder:0204",
+      "input": {
+        "x": 7,
+        "y": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.remainder:0205",
+      "input": {
+        "x": 7,
+        "y": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3
+      },
+      "id": "numpy.remainder:0206",
+      "input": {
+        "x": 7,
+        "y": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "numpy.remainder:0207",
+      "input": {
+        "x": 7,
+        "y": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "numpy.remainder:0208",
+      "input": {
+        "x": 7,
+        "y": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "numpy.remainder:0209",
+      "input": {
+        "x": 7,
+        "y": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          -1,
+          0,
+          -6,
+          0,
+          -1,
+          0,
+          -2,
+          -1
+        ]
+      },
+      "id": "numpy.remainder:0210",
+      "input": {
+        "x": 8,
+        "y": [
+          -8,
+          -3,
+          2,
+          -7,
+          8,
+          -3,
+          -1,
+          -10,
+          -9
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          -5,
+          -6
+        ]
+      },
+      "id": "numpy.remainder:0211",
+      "input": {
+        "x": [
+          6,
+          -5,
+          -6
+        ],
+        "y": -7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          0,
+          -5,
+          1,
+          0,
+          -2,
+          -5,
+          -1,
+          -1,
+          5
+        ]
+      },
+      "id": "numpy.remainder:0212",
+      "input": {
+        "x": [
+          3,
+          -8,
+          -5,
+          3,
+          -7,
+          -11,
+          -5,
+          -5,
+          -11,
+          5
+        ],
+        "y": [
+          -6,
+          -2,
+          -10,
+          2,
+          1,
+          -9,
+          -7,
+          -4,
+          -5,
+          7
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          0,
+          -3,
+          -3
+        ]
+      },
+      "id": "numpy.remainder:0213",
+      "input": {
+        "x": -3,
+        "y": [
+          -2,
+          1,
+          -7,
+          -10
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0214",
+      "input": {
+        "x": [
+          -1,
+          11,
+          12,
+          9,
+          -2,
+          3
+        ],
+        "y": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          4,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0215",
+      "input": {
+        "x": [
+          -6,
+          -6,
+          4,
+          3
+        ],
+        "y": [
+          6,
+          9,
+          11,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          -3,
+          3,
+          -9,
+          3
+        ]
+      },
+      "id": "numpy.remainder:0216",
+      "input": {
+        "x": 3,
+        "y": [
+          6,
+          -6,
+          5,
+          -12,
+          6
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          6,
+          2,
+          5,
+          0,
+          3,
+          3,
+          3,
+          2,
+          2,
+          5
+        ]
+      },
+      "id": "numpy.remainder:0217",
+      "input": {
+        "x": [
+          -10,
+          -1,
+          -12,
+          -9,
+          -7,
+          3,
+          3,
+          10,
+          -5,
+          -12,
+          -2
+        ],
+        "y": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          0,
+          5,
+          -2,
+          0,
+          -5,
+          -3
+        ]
+      },
+      "id": "numpy.remainder:0218",
+      "input": {
+        "x": [
+          3,
+          0,
+          -9,
+          -9,
+          -5,
+          6,
+          -8
+        ],
+        "y": [
+          6,
+          -3,
+          7,
+          -7,
+          5,
+          -11,
+          -5
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          -7,
+          1
+        ]
+      },
+      "id": "numpy.remainder:0219",
+      "input": {
+        "x": -7,
+        "y": [
+          9,
+          10,
+          -6,
+          7,
+          -6,
+          2,
+          1,
+          -11,
+          4
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0220",
+      "input": {
+        "x": [
+          1,
+          5,
+          -3,
+          -2,
+          -11,
+          -11
+        ],
+        "y": -1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -3
+        ]
+      },
+      "id": "numpy.remainder:0221",
+      "input": {
+        "x": [
+          9,
+          11
+        ],
+        "y": [
+          -6,
+          -7
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          -4
+        ]
+      },
+      "id": "numpy.remainder:0222",
+      "input": {
+        "x": -4,
+        "y": [
+          7,
+          -8
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0223",
+      "input": {
+        "x": [
+          11,
+          -9,
+          -2,
+          -4
+        ],
+        "y": -1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          -7,
+          0,
+          -7,
+          2,
+          0,
+          4
+        ]
+      },
+      "id": "numpy.remainder:0224",
+      "input": {
+        "x": [
+          4,
+          2,
+          -7,
+          -5,
+          5,
+          2,
+          -12,
+          4
+        ],
+        "y": [
+          -1,
+          6,
+          -12,
+          -1,
+          -12,
+          8,
+          -1,
+          9
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          2,
+          7,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0225",
+      "input": {
+        "x": -1,
+        "y": [
+          -8,
+          3,
+          8,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0226",
+      "input": {
+        "x": [
+          -5,
+          -8,
+          -9,
+          -5,
+          4,
+          -11,
+          11,
+          4,
+          7,
+          -6
+        ],
+        "y": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          9
+        ]
+      },
+      "id": "numpy.remainder:0227",
+      "input": {
+        "x": [
+          9
+        ],
+        "y": [
+          11
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "id": "numpy.remainder:0228",
+      "input": {
+        "x": -10,
+        "y": []
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0229",
+      "input": {
+        "x": [
+          -12,
+          -1
+        ],
+        "y": -1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -7,
+          8
+        ]
+      },
+      "id": "numpy.remainder:0230",
+      "input": {
+        "x": [
+          -7,
+          5,
+          8
+        ],
+        "y": [
+          -4,
+          -12,
+          12
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          -1,
+          0,
+          0,
+          2,
+          5
+        ]
+      },
+      "id": "numpy.remainder:0231",
+      "input": {
+        "x": -6,
+        "y": [
+          -1,
+          -5,
+          1,
+          3,
+          8,
+          11
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0232",
+      "input": {
+        "x": [
+          -2,
+          -4,
+          0
+        ],
+        "y": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          9,
+          0,
+          -3,
+          2,
+          8,
+          2,
+          1,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0233",
+      "input": {
+        "x": [
+          5,
+          -2,
+          -5,
+          -3,
+          8,
+          -12,
+          12,
+          10,
+          0,
+          10
+        ],
+        "y": [
+          2,
+          11,
+          -1,
+          -4,
+          6,
+          10,
+          10,
+          3,
+          -9,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          7,
+          -2,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0234",
+      "input": {
+        "x": -2,
+        "y": [
+          9,
+          -4,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0235",
+      "input": {
+        "x": [
+          -11,
+          9,
+          3,
+          7,
+          9,
+          -4,
+          0,
+          -4
+        ],
+        "y": -1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "id": "numpy.remainder:0236",
+      "input": {
+        "x": [
+          11
+        ],
+        "y": [
+          10
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -5,
+          -5,
+          0,
+          -1,
+          5,
+          -3,
+          0,
+          -7,
+          5,
+          0,
+          -1
+        ]
+      },
+      "id": "numpy.remainder:0237",
+      "input": {
+        "x": 5,
+        "y": [
+          -10,
+          -10,
+          1,
+          -2,
+          7,
+          -8,
+          -5,
+          -12,
+          12,
+          -1,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0238",
+      "input": {
+        "x": [
+          -7,
+          -7,
+          -8,
+          10,
+          -7,
+          8,
+          -2,
+          -6
+        ],
+        "y": -1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1,
+          10,
+          0,
+          1
+        ]
+      },
+      "id": "numpy.remainder:0239",
+      "input": {
+        "x": [
+          -12,
+          12,
+          -1,
+          -11,
+          -12,
+          8,
+          -11,
+          -1,
+          0,
+          6
+        ],
+        "y": [
+          8,
+          12,
+          -10,
+          11,
+          -2,
+          -1,
+          6,
+          11,
+          -12,
+          5
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          1,
+          -9,
+          0,
+          0,
+          2
+        ]
+      },
+      "id": "numpy.remainder:0240",
+      "input": {
+        "x": -9,
+        "y": [
+          3,
+          10,
+          -12,
+          9,
+          -3,
+          11
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0241",
+      "input": {
+        "x": [
+          -5,
+          -2,
+          -9,
+          2,
+          -9,
+          -2
+        ],
+        "y": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          -9,
+          3,
+          2,
+          -7,
+          -6,
+          -10,
+          8,
+          7
+        ]
+      },
+      "id": "numpy.remainder:0242",
+      "input": {
+        "x": [
+          1,
+          -9,
+          3,
+          2,
+          11,
+          1,
+          2,
+          -1,
+          7
+        ],
+        "y": [
+          11,
+          -10,
+          6,
+          8,
+          -9,
+          -7,
+          -12,
+          9,
+          11
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          -1,
+          1,
+          0,
+          1,
+          3,
+          0,
+          0,
+          2,
+          1
+        ]
+      },
+      "id": "numpy.remainder:0243",
+      "input": {
+        "x": -9,
+        "y": [
+          10,
+          9,
+          -2,
+          2,
+          -3,
+          5,
+          4,
+          -9,
+          -1,
+          11,
+          10
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0244",
+      "input": {
+        "x": [
+          -11,
+          5,
+          12,
+          10,
+          -3,
+          -10,
+          6
+        ],
+        "y": -1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3,
+          -2,
+          3,
+          0,
+          -3,
+          5,
+          -1
+        ]
+      },
+      "id": "numpy.remainder:0245",
+      "input": {
+        "x": [
+          9,
+          7,
+          10,
+          -4,
+          3,
+          -10,
+          11,
+          -1
+        ],
+        "y": [
+          -3,
+          4,
+          -6,
+          7,
+          3,
+          -7,
+          6,
+          -4
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          -4,
+          8,
+          -4,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0246",
+      "input": {
+        "x": -4,
+        "y": [
+          -3,
+          -11,
+          12,
+          -6,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          2,
+          4,
+          4,
+          2,
+          0,
+          0,
+          2,
+          5,
+          6
+        ]
+      },
+      "id": "numpy.remainder:0247",
+      "input": {
+        "x": [
+          -10,
+          2,
+          4,
+          4,
+          9,
+          0,
+          -7,
+          9,
+          12,
+          -1
+        ],
+        "y": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3
+        ]
+      },
+      "id": "numpy.remainder:0248",
+      "input": {
+        "x": [
+          -2
+        ],
+        "y": [
+          5
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0249",
+      "input": {
+        "x": 0,
+        "y": [
+          -8,
+          8,
+          4,
+          6,
+          -10,
+          -11,
+          -2,
+          -8,
+          8,
+          10,
+          -8
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2,
+          4,
+          5
+        ]
+      },
+      "id": "numpy.remainder:0250",
+      "input": {
+        "x": [
+          7,
+          2,
+          4,
+          12
+        ],
+        "y": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          -1,
+          1,
+          -2,
+          -4,
+          5,
+          2
+        ]
+      },
+      "id": "numpy.remainder:0251",
+      "input": {
+        "x": [
+          10,
+          -8,
+          2,
+          11,
+          -2,
+          4,
+          -7,
+          -5
+        ],
+        "y": [
+          5,
+          -1,
+          -3,
+          10,
+          -7,
+          -8,
+          12,
+          7
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -4,
+          1,
+          1
+        ]
+      },
+      "id": "numpy.remainder:0252",
+      "input": {
+        "x": -9,
+        "y": [
+          -6,
+          -5,
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -6,
+          -1
+        ]
+      },
+      "id": "numpy.remainder:0253",
+      "input": {
+        "x": [
+          -6,
+          -1
+        ],
+        "y": -7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3
+        ]
+      },
+      "id": "numpy.remainder:0254",
+      "input": {
+        "x": [
+          2
+        ],
+        "y": [
+          -5
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          2,
+          2,
+          1,
+          -1,
+          -10,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0255",
+      "input": {
+        "x": -10,
+        "y": [
+          11,
+          12,
+          4,
+          11,
+          -3,
+          -12,
+          -5,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0256",
+      "input": {
+        "x": [
+          4,
+          -11
+        ],
+        "y": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -4,
+          0,
+          0,
+          3,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0257",
+      "input": {
+        "x": [
+          4,
+          0,
+          -12,
+          -5,
+          -6
+        ],
+        "y": [
+          -8,
+          -8,
+          2,
+          4,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          0,
+          0,
+          -8,
+          -8,
+          2,
+          2,
+          -8
+        ]
+      },
+      "id": "numpy.remainder:0258",
+      "input": {
+        "x": -8,
+        "y": [
+          10,
+          1,
+          -4,
+          -10,
+          -10,
+          5,
+          10,
+          -9
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0259",
+      "input": {
+        "x": [
+          6,
+          6,
+          -9,
+          9,
+          -3,
+          -12,
+          -12,
+          -2,
+          -9,
+          4
+        ],
+        "y": -1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          -7,
+          1,
+          -7,
+          0,
+          -1
+        ]
+      },
+      "id": "numpy.remainder:0260",
+      "input": {
+        "x": [
+          -9,
+          -7,
+          1,
+          5,
+          3,
+          9
+        ],
+        "y": [
+          10,
+          -12,
+          11,
+          -12,
+          3,
+          -5
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -5,
+          -5,
+          3,
+          -3,
+          0,
+          -1,
+          2,
+          -3,
+          0,
+          9,
+          9
+        ]
+      },
+      "id": "numpy.remainder:0261",
+      "input": {
+        "x": 9,
+        "y": [
+          -7,
+          -7,
+          6,
+          -6,
+          -1,
+          -5,
+          7,
+          -4,
+          3,
+          12,
+          10
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          4,
+          3,
+          2
+        ]
+      },
+      "id": "numpy.remainder:0262",
+      "input": {
+        "x": [
+          11,
+          11,
+          -4,
+          2
+        ],
+        "y": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3,
+          -2,
+          0,
+          -6
+        ]
+      },
+      "id": "numpy.remainder:0263",
+      "input": {
+        "x": [
+          11,
+          10,
+          -8,
+          -9,
+          5
+        ],
+        "y": [
+          3,
+          7,
+          -3,
+          -1,
+          -11
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -5,
+          3,
+          -5,
+          6,
+          3,
+          1,
+          -5,
+          -5,
+          6,
+          3,
+          -5
+        ]
+      },
+      "id": "numpy.remainder:0264",
+      "input": {
+        "x": -5,
+        "y": [
+          -12,
+          8,
+          -11,
+          11,
+          8,
+          3,
+          -7,
+          -11,
+          11,
+          8,
+          -10
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0
+        ]
+      },
+      "id": "numpy.remainder:0265",
+      "input": {
+        "x": [
+          6
+        ],
+        "y": -1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          8,
+          -5,
+          0,
+          2,
+          1,
+          0,
+          0,
+          -3,
+          0,
+          -3
+        ]
+      },
+      "id": "numpy.remainder:0266",
+      "input": {
+        "x": [
+          -2,
+          -5,
+          5,
+          -10,
+          7,
+          0,
+          9,
+          -11,
+          0,
+          7
+        ],
+        "y": [
+          10,
+          -10,
+          1,
+          6,
+          6,
+          7,
+          9,
+          -4,
+          11,
+          -5
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -4,
+          0,
+          7,
+          0,
+          2,
+          0,
+          4,
+          -4,
+          -4,
+          3
+        ]
+      },
+      "id": "numpy.remainder:0267",
+      "input": {
+        "x": -4,
+        "y": [
+          -12,
+          1,
+          11,
+          1,
+          6,
+          -1,
+          8,
+          -11,
+          -7,
+          7
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0268",
+      "input": {
+        "x": [
+          10,
+          3,
+          3,
+          -11
+        ],
+        "y": -1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          2,
+          -2,
+          0,
+          2,
+          0,
+          1,
+          -1,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0269",
+      "input": {
+        "x": [
+          -10,
+          9,
+          -7,
+          1,
+          -12,
+          -6,
+          -9,
+          7,
+          -5,
+          -8
+        ],
+        "y": [
+          -9,
+          7,
+          -5,
+          -1,
+          7,
+          2,
+          2,
+          -4,
+          -1,
+          4
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          7,
+          -1,
+          1,
+          1,
+          0,
+          -5,
+          -1,
+          7,
+          -3,
+          -5
+        ]
+      },
+      "id": "numpy.remainder:0270",
+      "input": {
+        "x": 7,
+        "y": [
+          9,
+          -4,
+          6,
+          6,
+          1,
+          -12,
+          -8,
+          12,
+          -5,
+          -6
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          0,
+          5,
+          4
+        ]
+      },
+      "id": "numpy.remainder:0271",
+      "input": {
+        "x": [
+          -3,
+          0,
+          -9,
+          -3
+        ],
+        "y": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          6,
+          -3,
+          1,
+          -10,
+          -4,
+          0,
+          0,
+          -4,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0272",
+      "input": {
+        "x": [
+          -6,
+          -10,
+          1,
+          12,
+          -4,
+          12,
+          4,
+          -4,
+          6,
+          -12
+        ],
+        "y": [
+          12,
+          -7,
+          6,
+          -11,
+          -7,
+          -3,
+          1,
+          -7,
+          -1,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          5,
+          5,
+          5
+        ]
+      },
+      "id": "numpy.remainder:0273",
+      "input": {
+        "x": 5,
+        "y": [
+          11,
+          9,
+          6
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0274",
+      "input": {
+        "x": [
+          4,
+          8
+        ],
+        "y": -1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          7,
+          7
+        ]
+      },
+      "id": "numpy.remainder:0275",
+      "input": {
+        "x": [
+          -8,
+          7,
+          7
+        ],
+        "y": [
+          6,
+          9,
+          10
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          5
+        ]
+      },
+      "id": "numpy.remainder:0276",
+      "input": {
+        "x": 5,
+        "y": [
+          10
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -6,
+          0,
+          -6,
+          -1
+        ]
+      },
+      "id": "numpy.remainder:0277",
+      "input": {
+        "x": [
+          -3,
+          1,
+          7,
+          1,
+          -8
+        ],
+        "y": -7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          0,
+          -5,
+          0,
+          5,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.remainder:0278",
+      "input": {
+        "x": [
+          -3,
+          -3,
+          5,
+          0,
+          -2,
+          11,
+          -4
+        ],
+        "y": [
+          7,
+          3,
+          -10,
+          5,
+          7,
+          5,
+          7
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          9,
+          3,
+          0,
+          2,
+          -3,
+          9,
+          -3,
+          1,
+          9,
+          -1,
+          -3
+        ]
+      },
+      "id": "numpy.remainder:0279",
+      "input": {
+        "x": 9,
+        "y": [
+          11,
+          6,
+          9,
+          7,
+          -4,
+          12,
+          -6,
+          4,
+          10,
+          -5,
+          -12
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -3,
+          -5,
+          -2,
+          0,
+          -4,
+          -5,
+          -2
+        ]
+      },
+      "id": "numpy.remainder:0280",
+      "input": {
+        "x": [
+          5,
+          11,
+          2,
+          5,
+          -7,
+          -11,
+          2,
+          12
+        ],
+        "y": -7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "id": "numpy.remainder:0281",
+      "input": {
+        "x": [
+          -2
+        ],
+        "y": [
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "id": "numpy.remainder:0282",
+      "input": {
+        "x": -4,
+        "y": []
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0283",
+      "input": {
+        "x": [
+          7,
+          1,
+          10,
+          6,
+          5,
+          -1,
+          -2,
+          -6,
+          -2
+        ],
+        "y": 1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "id": "numpy.remainder:0284",
+      "input": {
+        "x": [],
+        "y": []
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          0,
+          -3,
+          -1,
+          2,
+          -2
+        ]
+      },
+      "id": "numpy.remainder:0285",
+      "input": {
+        "x": -10,
+        "y": [
+          4,
+          2,
+          -7,
+          -9,
+          3,
+          -4
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          4,
+          5,
+          3,
+          6,
+          4,
+          4,
+          2,
+          4,
+          2
+        ]
+      },
+      "id": "numpy.remainder:0286",
+      "input": {
+        "x": [
+          11,
+          -2,
+          -4,
+          -8,
+          4,
+          -3,
+          9,
+          -10,
+          2
+        ],
+        "y": 7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          3,
+          -2,
+          0,
+          0,
+          1
+        ]
+      },
+      "id": "numpy.remainder:0287",
+      "input": {
+        "x": [
+          3,
+          -1,
+          -5,
+          9,
+          -7,
+          -4,
+          1
+        ],
+        "y": [
+          3,
+          -1,
+          4,
+          -11,
+          -7,
+          4,
+          11
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0288",
+      "input": {
+        "x": 0,
+        "y": [
+          -12,
+          2,
+          2,
+          -1,
+          -5,
+          -12,
+          -6
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -5,
+          -5,
+          -3,
+          -1
+        ]
+      },
+      "id": "numpy.remainder:0289",
+      "input": {
+        "x": [
+          9,
+          -12,
+          -3,
+          -1
+        ],
+        "y": -7
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -4,
+          1,
+          2,
+          -2,
+          -4,
+          0,
+          0,
+          0,
+          5,
+          -1
+        ]
+      },
+      "id": "numpy.remainder:0290",
+      "input": {
+        "x": [
+          8,
+          1,
+          -10,
+          -10,
+          1,
+          9,
+          0,
+          0,
+          -6,
+          -11
+        ],
+        "y": [
+          -6,
+          7,
+          12,
+          -8,
+          -5,
+          -3,
+          11,
+          -8,
+          11,
+          -10
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          1,
+          0,
+          -7,
+          0,
+          0,
+          1,
+          -1
+        ]
+      },
+      "id": "numpy.remainder:0291",
+      "input": {
+        "x": 9,
+        "y": [
+          4,
+          -3,
+          -8,
+          -9,
+          1,
+          4,
+          -10
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0292",
+      "input": {
+        "x": [
+          -4,
+          11,
+          10,
+          -10,
+          4,
+          4,
+          9,
+          -10
+        ],
+        "y": -1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          9,
+          3,
+          2,
+          -2
+        ]
+      },
+      "id": "numpy.remainder:0293",
+      "input": {
+        "x": [
+          -10,
+          9,
+          -12,
+          -10,
+          -11
+        ],
+        "y": [
+          5,
+          11,
+          5,
+          12,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "id": "numpy.remainder:0294",
+      "input": {
+        "x": -6,
+        "y": []
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "id": "numpy.remainder:0295",
+      "input": {
+        "x": [],
+        "y": -1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2
+        ]
+      },
+      "id": "numpy.remainder:0296",
+      "input": {
+        "x": [
+          10
+        ],
+        "y": [
+          -12
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": []
+      },
+      "id": "numpy.remainder:0297",
+      "input": {
+        "x": 6,
+        "y": []
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "numpy.remainder:0298",
+      "input": {
+        "x": [
+          0,
+          5,
+          -7,
+          8,
+          -3,
+          -6,
+          5,
+          -10
+        ],
+        "y": -1
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3,
+          1,
+          2,
+          -4,
+          -1,
+          0,
+          -8,
+          5,
+          -1,
+          2,
+          -4
+        ]
+      },
+      "id": "numpy.remainder:0299",
+      "input": {
+        "x": [
+          -5,
+          5,
+          5,
+          -10,
+          -1,
+          -8,
+          10,
+          5,
+          8,
+          -10,
+          4
+        ],
+        "y": [
+          4,
+          2,
+          3,
+          -6,
+          -4,
+          4,
+          -9,
+          10,
+          -9,
+          4,
+          -8
+        ]
+      }
+    }
+  ]
+}

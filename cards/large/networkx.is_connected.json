@@ -1,0 +1,25 @@
+{
+  "algorithm": [
+    "Perform a BFS starting from vertex 0",
+    "Count the number of visited vertices during BFS",
+    "Compare count to n: if equal, graph is connected; else disconnected"
+  ],
+  "constraints": [
+    "Vertices are labeled 0 to n-1",
+    "Edges are distinct and satisfy 0<=u<v<n",
+    "Graph must be simple undirected",
+    "No self-loops or multiple edges",
+    "BFS must be used for traversal"
+  ],
+  "edge_cases": [
+    "n=1 (single node with no edges): returns True",
+    "n>1 with no edges: returns False",
+    "n>1 with all vertices isolated: returns False",
+    "n=0: not applicable (n>=1 per contract)"
+  ],
+  "inputs": "n: integer >= 1; edges: list of distinct [u,v] pairs where 0<=u<v<n",
+  "method_id": "networkx.is_connected",
+  "output": "bool: True if the graph is connected, False otherwise",
+  "purpose": "Determine if an undirected graph with n vertices (labeled 0 to n-1) and given edges is connected",
+  "signature": "solve(n, edges)"
+}

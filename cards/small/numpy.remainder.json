@@ -1,0 +1,29 @@
+{
+  "algorithm": [
+    "Compute the element-wise remainder using the formula: y[i] = x1[i] % x2[i]",
+    "Handle broadcasting according to the rules specified in the documentation",
+    "Ensure that the result fits within the signed int64 range",
+    "Return 0 when x2 is 0 and both x1 and x2 are integers"
+  ],
+  "constraints": [
+    "x and y must be integers or 1-D lists of integers.",
+    "Support scalar/scalar, scalar/list, list/scalar, and lists of the same length.",
+    "Scalar/scalar returns int, all other inputs return a list.",
+    "No other broadcasting is required.",
+    "Values and results fit signed int64.",
+    "Divisors are nonzero."
+  ],
+  "edge_cases": [
+    "When x1 and x2 are scalars, the result is a single integer.",
+    "When x1 is a scalar and x2 is a list, the result is a list of length 1.",
+    "When x2 is a scalar and x1 is a list, the result is a list of length equal to x1.",
+    "When x1 and x2 are lists of the same length, the result is a list of the same length.",
+    "When x2 is 0, the result is 0.",
+    "When x1 and x2 are of different shapes, they must be broadcastable to a common shape."
+  ],
+  "inputs": "x and y are integers or 1-D lists of integers. Support scalar/scalar, scalar/list, list/scalar and lists of the same length (including empty). Scalar/scalar returns int, all other inputs return a list. No other broadcasting is required. Values and results fit signed int64. Divisors are nonzero.",
+  "method_id": "remainder",
+  "output": "y: ndarray, the element-wise remainder of division. If both x and y are scalars, it is a scalar; otherwise, it is a list.",
+  "purpose": "Compute the element-wise remainder of division.",
+  "signature": "solve(x, y)"
+}

@@ -1,0 +1,29 @@
+{
+  "algorithm": [
+    "Check if n < 2: return False (since primes are positive integers greater than 1).",
+    "Check for trivial factors (divisors other than 1 and n) up to sqrt(n). If found, return False.",
+    "For n <= 2^64: use deterministic Miller-Rabin tests with bases known to have no counterexamples in the range.",
+    "For n > 2^64: perform a strong BPSW primality test (probabilistic but with no known counterexamples).",
+    "Reject floats and non-integer inputs as per the contract."
+  ],
+  "constraints": [
+    "n must be an integer in the range [-20, 10000] (per contract).",
+    "Negative numbers are not prime.",
+    "Floats are rejected as input (must be integers).",
+    "For n < 2, return False.",
+    "The algorithm uses deterministic tests for n <= 2^64 and probabilistic tests for n > 2^64."
+  ],
+  "edge_cases": [
+    "n = 2: prime (True)",
+    "n = 1: not prime (False)",
+    "n = 0: not prime (False)",
+    "n = -1: not prime (False)",
+    "n = 2^64 + 1: large number requiring strong BPSW test",
+    "n = 1e23: float input rejected (must be integer)"
+  ],
+  "inputs": "An integer n in the range [-20, 10000] (per contract), but note that negative numbers are not prime and floats are rejected.",
+  "method_id": "sympy.isprime",
+  "output": "A plain Python bool (True if n is prime, False otherwise).",
+  "purpose": "Determine if an integer n is prime (True) or composite (False).",
+  "signature": "solve(n)"
+}

@@ -1,0 +1,2595 @@
+{
+  "brief": {
+    "contract": "n is a positive integer <=5000. Return an exact Python int, except divisors returns an ascending list of all positive divisors. For divisors use generator=False, proper=False; divisor_count uses default modulus=1, proper=False.",
+    "documentation": "Mobius function maps natural number to {-1, 0, 1}\n\nIt is defined as follows:\n    1) `1` if `n = 1`.\n    2) `0` if `n` has a squared prime factor.\n    3) `(-1)^k` if `n` is a square-free positive integer with `k`\n       number of prime factors.\n\nIt is an important multiplicative function in number theory\nand combinatorics.  It has applications in mathematical series,\nalgebraic number theory and also physics (Fermion operator has very\nconcrete realization with Mobius Function model).\n\nExamples\n========\n\n>>> from sympy.functions.combinatorial.numbers import mobius\n>>> mobius(13*7)\n1\n>>> mobius(1)\n1\n>>> mobius(13*7*5)\n-1\n>>> mobius(13**2)\n0\n\nEven in the case of a symbol, if it clearly contains a squared prime factor, it will be zero.\n\n>>> from sympy import Symbol\n>>> n = Symbol(\"n\", integer=True, positive=True)\n>>> mobius(4*n)\n0\n>>> mobius(n**2)\n0\n\nReferences\n==========\n\n.. [1] https://en.wikipedia.org/wiki/M%C3%B6bius_function\n.. [2] Thomas Koshy \"Elementary Number Theory with Applications\"\n.. [3] https://oeis.org/A008683",
+    "documentation_truncated": false,
+    "group": "divisors",
+    "id": "sympy.mobius",
+    "library": "sympy",
+    "name": "mobius",
+    "signature": "solve(n)",
+    "version": "1.14.0"
+  },
+  "cases": [
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0000",
+      "input": {
+        "n": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0001",
+      "input": {
+        "n": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0002",
+      "input": {
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0003",
+      "input": {
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0004",
+      "input": {
+        "n": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0005",
+      "input": {
+        "n": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0006",
+      "input": {
+        "n": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0007",
+      "input": {
+        "n": 8
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0008",
+      "input": {
+        "n": 9
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0009",
+      "input": {
+        "n": 10
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0010",
+      "input": {
+        "n": 11
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0011",
+      "input": {
+        "n": 12
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0012",
+      "input": {
+        "n": 13
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0013",
+      "input": {
+        "n": 14
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0014",
+      "input": {
+        "n": 15
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0015",
+      "input": {
+        "n": 16
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0016",
+      "input": {
+        "n": 17
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0017",
+      "input": {
+        "n": 18
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0018",
+      "input": {
+        "n": 19
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0019",
+      "input": {
+        "n": 20
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0020",
+      "input": {
+        "n": 21
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0021",
+      "input": {
+        "n": 22
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0022",
+      "input": {
+        "n": 23
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0023",
+      "input": {
+        "n": 24
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0024",
+      "input": {
+        "n": 25
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0025",
+      "input": {
+        "n": 26
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0026",
+      "input": {
+        "n": 27
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0027",
+      "input": {
+        "n": 28
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0028",
+      "input": {
+        "n": 29
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0029",
+      "input": {
+        "n": 30
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0030",
+      "input": {
+        "n": 31
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0031",
+      "input": {
+        "n": 32
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0032",
+      "input": {
+        "n": 33
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0033",
+      "input": {
+        "n": 34
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0034",
+      "input": {
+        "n": 35
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0035",
+      "input": {
+        "n": 36
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0036",
+      "input": {
+        "n": 37
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0037",
+      "input": {
+        "n": 38
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0038",
+      "input": {
+        "n": 39
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0039",
+      "input": {
+        "n": 40
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0040",
+      "input": {
+        "n": 41
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0041",
+      "input": {
+        "n": 42
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0042",
+      "input": {
+        "n": 43
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0043",
+      "input": {
+        "n": 44
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0044",
+      "input": {
+        "n": 45
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0045",
+      "input": {
+        "n": 46
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0046",
+      "input": {
+        "n": 47
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0047",
+      "input": {
+        "n": 48
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0048",
+      "input": {
+        "n": 49
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0049",
+      "input": {
+        "n": 50
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0050",
+      "input": {
+        "n": 51
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0051",
+      "input": {
+        "n": 52
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0052",
+      "input": {
+        "n": 53
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0053",
+      "input": {
+        "n": 54
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0054",
+      "input": {
+        "n": 55
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0055",
+      "input": {
+        "n": 56
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0056",
+      "input": {
+        "n": 57
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0057",
+      "input": {
+        "n": 58
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0058",
+      "input": {
+        "n": 59
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0059",
+      "input": {
+        "n": 60
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0060",
+      "input": {
+        "n": 61
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0061",
+      "input": {
+        "n": 62
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0062",
+      "input": {
+        "n": 63
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0063",
+      "input": {
+        "n": 64
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0064",
+      "input": {
+        "n": 65
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0065",
+      "input": {
+        "n": 66
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0066",
+      "input": {
+        "n": 67
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0067",
+      "input": {
+        "n": 68
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0068",
+      "input": {
+        "n": 69
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0069",
+      "input": {
+        "n": 70
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0070",
+      "input": {
+        "n": 71
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0071",
+      "input": {
+        "n": 72
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0072",
+      "input": {
+        "n": 73
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0073",
+      "input": {
+        "n": 74
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0074",
+      "input": {
+        "n": 75
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0075",
+      "input": {
+        "n": 76
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0076",
+      "input": {
+        "n": 77
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0077",
+      "input": {
+        "n": 78
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0078",
+      "input": {
+        "n": 79
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0079",
+      "input": {
+        "n": 80
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0080",
+      "input": {
+        "n": 81
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0081",
+      "input": {
+        "n": 82
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0082",
+      "input": {
+        "n": 83
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0083",
+      "input": {
+        "n": 84
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0084",
+      "input": {
+        "n": 85
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0085",
+      "input": {
+        "n": 86
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0086",
+      "input": {
+        "n": 87
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0087",
+      "input": {
+        "n": 88
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0088",
+      "input": {
+        "n": 89
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0089",
+      "input": {
+        "n": 90
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0090",
+      "input": {
+        "n": 91
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0091",
+      "input": {
+        "n": 92
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0092",
+      "input": {
+        "n": 93
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0093",
+      "input": {
+        "n": 94
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0094",
+      "input": {
+        "n": 95
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0095",
+      "input": {
+        "n": 96
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0096",
+      "input": {
+        "n": 97
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0097",
+      "input": {
+        "n": 98
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0098",
+      "input": {
+        "n": 99
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0099",
+      "input": {
+        "n": 100
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0100",
+      "input": {
+        "n": 121
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0101",
+      "input": {
+        "n": 169
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0102",
+      "input": {
+        "n": 221
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0103",
+      "input": {
+        "n": 341
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0104",
+      "input": {
+        "n": 561
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0105",
+      "input": {
+        "n": 1105
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0106",
+      "input": {
+        "n": 1729
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0107",
+      "input": {
+        "n": 2047
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0108",
+      "input": {
+        "n": 4096
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0109",
+      "input": {
+        "n": 4999
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0110",
+      "input": {
+        "n": 5000
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0111",
+      "input": {
+        "n": 305
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0112",
+      "input": {
+        "n": 1522
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0113",
+      "input": {
+        "n": 2220
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0114",
+      "input": {
+        "n": 499
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0115",
+      "input": {
+        "n": 4399
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0116",
+      "input": {
+        "n": 2920
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0117",
+      "input": {
+        "n": 2096
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0118",
+      "input": {
+        "n": 2643
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0119",
+      "input": {
+        "n": 4921
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0120",
+      "input": {
+        "n": 1074
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0121",
+      "input": {
+        "n": 4339
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0122",
+      "input": {
+        "n": 4265
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0123",
+      "input": {
+        "n": 299
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0124",
+      "input": {
+        "n": 3640
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0125",
+      "input": {
+        "n": 1690
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0126",
+      "input": {
+        "n": 1495
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0127",
+      "input": {
+        "n": 4833
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0128",
+      "input": {
+        "n": 2836
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0129",
+      "input": {
+        "n": 4650
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0130",
+      "input": {
+        "n": 2396
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0131",
+      "input": {
+        "n": 4208
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0132",
+      "input": {
+        "n": 1466
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0133",
+      "input": {
+        "n": 1894
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0134",
+      "input": {
+        "n": 3450
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0135",
+      "input": {
+        "n": 2667
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0136",
+      "input": {
+        "n": 2830
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0137",
+      "input": {
+        "n": 1589
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0138",
+      "input": {
+        "n": 4491
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0139",
+      "input": {
+        "n": 4793
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0140",
+      "input": {
+        "n": 436
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0141",
+      "input": {
+        "n": 4821
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0142",
+      "input": {
+        "n": 373
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0143",
+      "input": {
+        "n": 4854
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0144",
+      "input": {
+        "n": 916
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0145",
+      "input": {
+        "n": 1417
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0146",
+      "input": {
+        "n": 3192
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0147",
+      "input": {
+        "n": 4413
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0148",
+      "input": {
+        "n": 136
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0149",
+      "input": {
+        "n": 3542
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0150",
+      "input": {
+        "n": 4555
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0151",
+      "input": {
+        "n": 3284
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0152",
+      "input": {
+        "n": 667
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0153",
+      "input": {
+        "n": 374
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0154",
+      "input": {
+        "n": 2697
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0155",
+      "input": {
+        "n": 2772
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0156",
+      "input": {
+        "n": 4225
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0157",
+      "input": {
+        "n": 2241
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0158",
+      "input": {
+        "n": 3632
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0159",
+      "input": {
+        "n": 3099
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0160",
+      "input": {
+        "n": 3103
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0161",
+      "input": {
+        "n": 4774
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0162",
+      "input": {
+        "n": 1837
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0163",
+      "input": {
+        "n": 1909
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0164",
+      "input": {
+        "n": 1739
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0165",
+      "input": {
+        "n": 126
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0166",
+      "input": {
+        "n": 3868
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0167",
+      "input": {
+        "n": 1456
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0168",
+      "input": {
+        "n": 1993
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0169",
+      "input": {
+        "n": 901
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0170",
+      "input": {
+        "n": 4324
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0171",
+      "input": {
+        "n": 3530
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0172",
+      "input": {
+        "n": 375
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0173",
+      "input": {
+        "n": 3123
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0174",
+      "input": {
+        "n": 405
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0175",
+      "input": {
+        "n": 3146
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0176",
+      "input": {
+        "n": 1630
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0177",
+      "input": {
+        "n": 3043
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0178",
+      "input": {
+        "n": 367
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0179",
+      "input": {
+        "n": 869
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0180",
+      "input": {
+        "n": 2883
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0181",
+      "input": {
+        "n": 4255
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0182",
+      "input": {
+        "n": 728
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0183",
+      "input": {
+        "n": 1709
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0184",
+      "input": {
+        "n": 3176
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0185",
+      "input": {
+        "n": 1953
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0186",
+      "input": {
+        "n": 2074
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0187",
+      "input": {
+        "n": 4401
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0188",
+      "input": {
+        "n": 4827
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0189",
+      "input": {
+        "n": 2549
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0190",
+      "input": {
+        "n": 2202
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0191",
+      "input": {
+        "n": 1767
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0192",
+      "input": {
+        "n": 2797
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0193",
+      "input": {
+        "n": 2433
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0194",
+      "input": {
+        "n": 2021
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0195",
+      "input": {
+        "n": 1149
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0196",
+      "input": {
+        "n": 1354
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0197",
+      "input": {
+        "n": 4337
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0198",
+      "input": {
+        "n": 1143
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0199",
+      "input": {
+        "n": 2661
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0200",
+      "input": {
+        "n": 1259
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0201",
+      "input": {
+        "n": 939
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0202",
+      "input": {
+        "n": 3004
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0203",
+      "input": {
+        "n": 4272
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0204",
+      "input": {
+        "n": 852
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0205",
+      "input": {
+        "n": 2552
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0206",
+      "input": {
+        "n": 4639
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0207",
+      "input": {
+        "n": 4890
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0208",
+      "input": {
+        "n": 3584
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0209",
+      "input": {
+        "n": 3514
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0210",
+      "input": {
+        "n": 261
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0211",
+      "input": {
+        "n": 267
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0212",
+      "input": {
+        "n": 3975
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0213",
+      "input": {
+        "n": 3000
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0214",
+      "input": {
+        "n": 3699
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0215",
+      "input": {
+        "n": 4297
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0216",
+      "input": {
+        "n": 4459
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0217",
+      "input": {
+        "n": 1836
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0218",
+      "input": {
+        "n": 1908
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0219",
+      "input": {
+        "n": 4528
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0220",
+      "input": {
+        "n": 1427
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0221",
+      "input": {
+        "n": 3565
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0222",
+      "input": {
+        "n": 2000
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0223",
+      "input": {
+        "n": 3272
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0224",
+      "input": {
+        "n": 321
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0225",
+      "input": {
+        "n": 1610
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0226",
+      "input": {
+        "n": 386
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0227",
+      "input": {
+        "n": 1292
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0228",
+      "input": {
+        "n": 4487
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0229",
+      "input": {
+        "n": 351
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0230",
+      "input": {
+        "n": 2799
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0231",
+      "input": {
+        "n": 4729
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0232",
+      "input": {
+        "n": 648
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0233",
+      "input": {
+        "n": 4989
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0234",
+      "input": {
+        "n": 1673
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0235",
+      "input": {
+        "n": 1261
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0236",
+      "input": {
+        "n": 1362
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0237",
+      "input": {
+        "n": 1287
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0238",
+      "input": {
+        "n": 1134
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0239",
+      "input": {
+        "n": 1214
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0240",
+      "input": {
+        "n": 2647
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0241",
+      "input": {
+        "n": 2574
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0242",
+      "input": {
+        "n": 2907
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0243",
+      "input": {
+        "n": 2660
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0244",
+      "input": {
+        "n": 2546
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0245",
+      "input": {
+        "n": 898
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0246",
+      "input": {
+        "n": 2263
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0247",
+      "input": {
+        "n": 4384
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0248",
+      "input": {
+        "n": 3898
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0249",
+      "input": {
+        "n": 2869
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0250",
+      "input": {
+        "n": 1180
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0251",
+      "input": {
+        "n": 1340
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.mobius:0252",
+      "input": {
+        "n": 721
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0253",
+      "input": {
+        "n": 991
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0254",
+      "input": {
+        "n": 4782
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0255",
+      "input": {
+        "n": 1103
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": 0
+      },
+      "id": "sympy.mobius:0256",
+      "input": {
+        "n": 3393
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": -1
+      },
+      "id": "sympy.mobius:0257",
+      "input": {
+        "n": 3221
+      }
+    }
+  ]
+}

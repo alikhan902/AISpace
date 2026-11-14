@@ -1,0 +1,22 @@
+{
+  "algorithm": [
+    "If n == 0, return a copy of `a`.",
+    "If n > len(a), return an empty list.",
+    "Otherwise, compute the n-th discrete forward difference along the specified axis."
+  ],
+  "constraints": [
+    "n must be an integer from 0 to 5.",
+    "If n > len(a), the result is empty unless n = 0.",
+    "If n == 0, return a copy of `a`."
+  ],
+  "edge_cases": [
+    "n = 0: return a copy of `a`.",
+    "n >= len(a): return an empty list unless n = 0.",
+    "a is empty: return an empty list."
+  ],
+  "inputs": "a is a one-dimensional list of integers, possibly empty. n is an integer from 0 to 5.",
+  "method_id": "numpy.diff",
+  "output": "A list of integers, possibly empty, with the same shape as `a` except along the specified axis, where the dimension is reduced by `n`. The type is the same as the type of the difference between any two elements of `a`.",
+  "purpose": "Compute the n-th discrete forward difference of a one-dimensional array.",
+  "signature": "solve(a, n=1)"
+}

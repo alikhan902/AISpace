@@ -1,0 +1,375 @@
+{
+  "brief": {
+    "contract": "n is an integer in 0..35. Return the exact Python int, with arbitrary precision; no symbolic result.",
+    "documentation": "Implementation of factorial function over nonnegative integers.\nBy convention (consistent with the gamma function and the binomial\ncoefficients), factorial of a negative integer is complex infinity.\n\nThe factorial is very important in combinatorics where it gives\nthe number of ways in which `n` objects can be permuted. It also\narises in calculus, probability, number theory, etc.\n\nThere is strict relation of factorial with gamma function. In\nfact `n! = gamma(n+1)` for nonnegative integers. Rewrite of this\nkind is very useful in case of combinatorial simplification.\n\nComputation of the factorial is done using two algorithms. For\nsmall arguments a precomputed look up table is used. However for bigger\ninput algorithm Prime-Swing is used. It is the fastest algorithm\nknown and computes `n!` via prime factorization of special class\nof numbers, called here the 'Swing Numbers'.\n\nExamples\n========\n\n>>> from sympy import Symbol, factorial, S\n>>> n = Symbol('n', integer=True)\n\n>>> factorial(0)\n1\n\n>>> factorial(7)\n5040\n\n>>> factorial(-2)\nzoo\n\n>>> factorial(n)\nfactorial(n)\n\n>>> factorial(2*n)\nfactorial(2*n)\n\n>>> factorial(S(1)/2)\nfactorial(1/2)\n\nSee Also\n========\n\nfactorial2, RisingFactorial, FallingFactorial",
+    "documentation_truncated": false,
+    "group": "combinatorics",
+    "id": "sympy.factorial",
+    "library": "sympy",
+    "name": "factorial",
+    "signature": "solve(n)",
+    "version": "1.14.0"
+  },
+  "cases": [
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.factorial:0000",
+      "input": {
+        "n": 0
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1
+      },
+      "id": "sympy.factorial:0001",
+      "input": {
+        "n": 1
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2
+      },
+      "id": "sympy.factorial:0002",
+      "input": {
+        "n": 2
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 6
+      },
+      "id": "sympy.factorial:0003",
+      "input": {
+        "n": 3
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 24
+      },
+      "id": "sympy.factorial:0004",
+      "input": {
+        "n": 4
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 120
+      },
+      "id": "sympy.factorial:0005",
+      "input": {
+        "n": 5
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 720
+      },
+      "id": "sympy.factorial:0006",
+      "input": {
+        "n": 6
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 5040
+      },
+      "id": "sympy.factorial:0007",
+      "input": {
+        "n": 7
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 40320
+      },
+      "id": "sympy.factorial:0008",
+      "input": {
+        "n": 8
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 362880
+      },
+      "id": "sympy.factorial:0009",
+      "input": {
+        "n": 9
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 3628800
+      },
+      "id": "sympy.factorial:0010",
+      "input": {
+        "n": 10
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 39916800
+      },
+      "id": "sympy.factorial:0011",
+      "input": {
+        "n": 11
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 479001600
+      },
+      "id": "sympy.factorial:0012",
+      "input": {
+        "n": 12
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 6227020800
+      },
+      "id": "sympy.factorial:0013",
+      "input": {
+        "n": 13
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 87178291200
+      },
+      "id": "sympy.factorial:0014",
+      "input": {
+        "n": 14
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1307674368000
+      },
+      "id": "sympy.factorial:0015",
+      "input": {
+        "n": 15
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 20922789888000
+      },
+      "id": "sympy.factorial:0016",
+      "input": {
+        "n": 16
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 355687428096000
+      },
+      "id": "sympy.factorial:0017",
+      "input": {
+        "n": 17
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 6402373705728000
+      },
+      "id": "sympy.factorial:0018",
+      "input": {
+        "n": 18
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 121645100408832000
+      },
+      "id": "sympy.factorial:0019",
+      "input": {
+        "n": 19
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 2432902008176640000
+      },
+      "id": "sympy.factorial:0020",
+      "input": {
+        "n": 20
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 51090942171709440000
+      },
+      "id": "sympy.factorial:0021",
+      "input": {
+        "n": 21
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 1124000727777607680000
+      },
+      "id": "sympy.factorial:0022",
+      "input": {
+        "n": 22
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 25852016738884976640000
+      },
+      "id": "sympy.factorial:0023",
+      "input": {
+        "n": 23
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 620448401733239439360000
+      },
+      "id": "sympy.factorial:0024",
+      "input": {
+        "n": 24
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 15511210043330985984000000
+      },
+      "id": "sympy.factorial:0025",
+      "input": {
+        "n": 25
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 403291461126605635584000000
+      },
+      "id": "sympy.factorial:0026",
+      "input": {
+        "n": 26
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 10888869450418352160768000000
+      },
+      "id": "sympy.factorial:0027",
+      "input": {
+        "n": 27
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 304888344611713860501504000000
+      },
+      "id": "sympy.factorial:0028",
+      "input": {
+        "n": 28
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 8841761993739701954543616000000
+      },
+      "id": "sympy.factorial:0029",
+      "input": {
+        "n": 29
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 265252859812191058636308480000000
+      },
+      "id": "sympy.factorial:0030",
+      "input": {
+        "n": 30
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 8222838654177922817725562880000000
+      },
+      "id": "sympy.factorial:0031",
+      "input": {
+        "n": 31
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 263130836933693530167218012160000000
+      },
+      "id": "sympy.factorial:0032",
+      "input": {
+        "n": 32
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 8683317618811886495518194401280000000
+      },
+      "id": "sympy.factorial:0033",
+      "input": {
+        "n": 33
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 295232799039604140847618609643520000000
+      },
+      "id": "sympy.factorial:0034",
+      "input": {
+        "n": 34
+      }
+    },
+    {
+      "category": "exhaustive",
+      "expected": {
+        "value": 10333147966386144929666651337523200000000
+      },
+      "id": "sympy.factorial:0035",
+      "input": {
+        "n": 35
+      }
+    }
+  ]
+}

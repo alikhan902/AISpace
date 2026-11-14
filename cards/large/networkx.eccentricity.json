@@ -1,0 +1,27 @@
+{
+  "algorithm": [
+    "Construct a simple undirected graph from the input vertices and edges",
+    "For each vertex v in the graph, compute the shortest path distances to all other vertices",
+    "Determine the maximum distance from v to any other vertex as the eccentricity of v",
+    "Return a dictionary mapping each vertex to its eccentricity"
+  ],
+  "constraints": [
+    "Vertices are labeled 0 to n-1",
+    "Edges are distinct and satisfy 0<=u<v<n",
+    "Graph must be simple (no self-loops or multiple edges)",
+    "Eccentricity is defined for all vertices in the graph",
+    "Output must be a dictionary with string keys and integer values"
+  ],
+  "edge_cases": [
+    "n=1: single vertex with no edges (eccentricity 0)",
+    "Disconnected graph: raise ValueError",
+    "Singleton graph: eccentricity 0",
+    "Graph with isolated vertices: include in eccentricity calculation",
+    "Graph with multiple connected components: raise ValueError"
+  ],
+  "inputs": "n: integer >= 1; edges: list of distinct [u,v] pairs where 0<=u<v<n",
+  "method_id": "networkx.eccentricity",
+  "output": "Dictionary with string keys (vertex names) mapping to integers (eccentricity values). If the graph is disconnected, raise ValueError.",
+  "purpose": "Compute the eccentricity of each node in a simple undirected unweighted graph with n vertices (0 to n-1) and given edges. Eccentricity of a node is the maximum shortest path distance from that node to any other node in the graph.",
+  "signature": "solve(n, edges)"
+}

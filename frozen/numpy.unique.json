@@ -1,0 +1,2931 @@
+{
+  "brief": {
+    "contract": "a is a one-dimensional list of integers, possibly empty. Return Python int or list[int], as appropriate; no NumPy objects. All intermediate values fit signed int64. Use default unique behavior: sorted distinct values only, no indices or counts.",
+    "documentation": "Find the unique elements of an array.\n\nReturns the sorted unique elements of an array. There are three optional\noutputs in addition to the unique elements:\n\n* the indices of the input array that give the unique values\n* the indices of the unique array that reconstruct the input array\n* the number of times each unique value comes up in the input array\n\nParameters\n----------\nar : array_like\n    Input array. Unless `axis` is specified, this will be flattened if it\n    is not already 1-D.\nreturn_index : bool, optional\n    If True, also return the indices of `ar` (along the specified axis,\n    if provided, or in the flattened array) that result in the unique array.\nreturn_inverse : bool, optional\n    If True, also return the indices of the unique array (for the specified\n    axis, if provided) that can be used to reconstruct `ar`.\nreturn_counts : bool, optional\n    If True, also return the number of times each unique item appears\n    in `ar`.\naxis : int or None, optional\n    The axis to operate on. If None, `ar` will be flattened. If an integer,\n    the subarrays indexed by the given axis will be flattened and treated\n    as the elements of a 1-D array with the dimension of the given axis,\n    see the notes for more details.  Object arrays or structured arrays\n    that contain objects are not supported if the `axis` kwarg is used. The\n    default is None.\n\nequal_nan : bool, optional\n    If True, collapses multiple NaN values in the return array into one.\n\n    .. versionadded:: 1.24\n\nsorted : bool, optional\n    If True, the unique elements are sorted. Elements may be sorted in\n    practice even if ``sorted=False``, but this could change without\n    notice.\n\n    .. versionadded:: 2.3\n\nReturns\n-------\nunique : ndarray\n    The sorted unique values.\nunique_indices : ndarray, optional\n    The indices of the first occurrences of the unique values in the\n    original array. Only provided if `return_index` is True.\nunique_inverse : ndarray, optional\n    The indices to reconstruct the original array from the\n    unique array. Only provided if `return_inverse` is True.\nunique_counts : ndarray, optional\n    The number of times each of the unique values comes up in the\n    original array. Only provided if `return_counts` is True.\n\nSee Also\n--------\nrepeat : Repeat elements of an array.\nsort : Return a sorted copy of an array.\n\nNotes\n-----\nWhen an axis is specified the subarrays indexed by the axis are sorted.\nThis is done by making the specified axis the first dimension of the array\n(move the axis to the first dimension to keep the order of the other axes)\nand then flattening the subarrays in C order. The flattened subarrays are\nthen viewed as a structured type with each element given a label, with the\neffect that we end up with a 1-D array of structured types that can be\ntreated in the same way as any other 1-D array. The result is that the\nflattened subarrays are sorted in lexicographic order starting with the\nfirst element.\n\n.. versionchanged:: 1.21\n    Like np.sort, NaN will sort to the end of the values.\n    For complex arrays all NaN values are considered equivalent\n    (no matter whether the NaN is in the real or imaginary part).\n    As the representant for the returned array the smallest one in the\n    lexicographical order is chosen - see np.sort for how the lexicographical\n    order is defined for complex arrays.\n\n.. versionchanged:: 2.0\n    For multi-dimensional inputs, ``unique_inverse`` is reshaped\n    such that the input can be reconstructed using\n    ``np.take(unique, unique_inverse, axis=axis)``. The result is\n    now not 1-dimensional when ``axis=None``.\n\n    Note that in NumPy 2.0.0 a higher dimensional array was returned also\n    when ``axis`` was not ``None``.  This was reverted, but\n    ``inverse.reshape(-1)`` can be used to ensure compatibility with both\n    versions.\n\nExamples\n--------\n>>> import numpy as np\n>>> np.unique([1, 1, 2, 2, 3, 3])\narray([1, 2, 3])\n>>> a = np.array([[1, 1], [2, 3]])\n>>> np.unique(a)\narray([1, 2, 3])\n\nReturn the unique rows of a 2D array\n\n>>> a = np.array([[1, 0, 0], [1, 0, 0], [2, 3, 4]])\n>>> np.unique(a, axis=0)\narray([[1, 0, 0], [2, 3, 4]])\n\nReturn the indices of the original array that give the unique values:\n\n>>> a = np.array(['a', 'b', 'b', 'c', 'a'])\n>>> u, indices = np.unique(a, return_index=True)\n>>> u\narray(['a', 'b', 'c'], dtype='<U1')\n>>> indices\narray([0, 1, 3])\n>>> a[indices]\narray(['a', 'b', 'c'], dtype='<U1')\n\nReconstruct the input array from the unique values and inverse:\n\n>>> a = np.array([1, 2, 6, 4, 2, 3, 2])\n>>> u, indices = np.unique(a, return_inverse=True)\n>>> u\narray([1, 2, 3, 4, 6])\n>>> indices\narray([0, 1, 4, 3, 1, 2, 1])\n>>> u[indices]\narray([1, 2, 6, 4, 2, 3, 2])\n\nReconstruct the input values from the unique values and counts:\n\n>>> a = np.array([1, 2, 6, 4, 2, 3, 2])\n>>> values, counts = np.unique(a, return_counts=True)\n>>> values\narray([1, 2, 3, 4, 6])\n>>> counts\narray([1, 3, 1, 1, 1])\n>>> np.repeat(values, counts)\narray([1, 2, 2, 2, 3, 4, 6])    # original order not preserved",
+    "documentation_truncated": false,
+    "group": "ordering_counting",
+    "id": "numpy.unique",
+    "library": "numpy",
+    "name": "unique",
+    "signature": "solve(a)",
+    "version": "2.5.4"
+  },
+  "cases": [
+    {
+      "category": "boundary",
+      "expected": {
+        "value": []
+      },
+      "id": "numpy.unique:0000",
+      "input": {
+        "a": []
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0
+        ]
+      },
+      "id": "numpy.unique:0001",
+      "input": {
+        "a": [
+          0
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "id": "numpy.unique:0002",
+      "input": {
+        "a": [
+          1
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          -1
+        ]
+      },
+      "id": "numpy.unique:0003",
+      "input": {
+        "a": [
+          -1
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          0
+        ]
+      },
+      "id": "numpy.unique:0004",
+      "input": {
+        "a": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          1
+        ]
+      },
+      "id": "numpy.unique:0005",
+      "input": {
+        "a": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1
+        ]
+      },
+      "id": "numpy.unique:0006",
+      "input": {
+        "a": [
+          -3,
+          -2,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          -1,
+          0,
+          3
+        ]
+      },
+      "id": "numpy.unique:0007",
+      "input": {
+        "a": [
+          3,
+          -1,
+          0,
+          3,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "id": "numpy.unique:0008",
+      "input": {
+        "a": [
+          5,
+          4,
+          3,
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "category": "boundary",
+      "expected": {
+        "value": [
+          -2,
+          2
+        ]
+      },
+      "id": "numpy.unique:0009",
+      "input": {
+        "a": [
+          -2,
+          2,
+          -2,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.unique:0010",
+      "input": {
+        "a": [
+          -2,
+          -1,
+          3,
+          1,
+          -1,
+          -1,
+          -3,
+          -2,
+          0,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0011",
+      "input": {
+        "a": [
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          2
+        ]
+      },
+      "id": "numpy.unique:0012",
+      "input": {
+        "a": [
+          2,
+          2,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0013",
+      "input": {
+        "a": [
+          3,
+          -2,
+          1,
+          1,
+          2,
+          0,
+          -2,
+          0,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1
+        ]
+      },
+      "id": "numpy.unique:0014",
+      "input": {
+        "a": [
+          -3,
+          -3,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.unique:0015",
+      "input": {
+        "a": [
+          -1,
+          2,
+          -1,
+          2,
+          1,
+          -2,
+          -3,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          0,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0016",
+      "input": {
+        "a": [
+          -3,
+          2,
+          -3,
+          -1,
+          2,
+          -3,
+          0,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0017",
+      "input": {
+        "a": [
+          2,
+          -2,
+          3,
+          3,
+          -3,
+          2,
+          1,
+          -1,
+          0,
+          -1,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0018",
+      "input": {
+        "a": [
+          3,
+          1,
+          3,
+          -2,
+          2,
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0019",
+      "input": {
+        "a": [
+          0,
+          2,
+          -3,
+          -2,
+          0,
+          0,
+          0,
+          3,
+          3,
+          1,
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0020",
+      "input": {
+        "a": [
+          3,
+          2,
+          1,
+          -3,
+          1,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0021",
+      "input": {
+        "a": [
+          -2,
+          3,
+          0,
+          -2,
+          2,
+          -2,
+          1,
+          3,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.unique:0022",
+      "input": {
+        "a": [
+          0,
+          -1,
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.unique:0023",
+      "input": {
+        "a": [
+          1,
+          -3,
+          -2,
+          -3,
+          1,
+          3,
+          -2,
+          -1,
+          3,
+          0,
+          -2,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          0,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0024",
+      "input": {
+        "a": [
+          2,
+          -2,
+          0,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.unique:0025",
+      "input": {
+        "a": [
+          1,
+          2,
+          -2,
+          -1,
+          -1,
+          -2,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          0
+        ]
+      },
+      "id": "numpy.unique:0026",
+      "input": {
+        "a": [
+          0,
+          -1,
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.unique:0027",
+      "input": {
+        "a": [
+          0,
+          -1,
+          0,
+          2,
+          0,
+          -2,
+          -2,
+          -3,
+          1,
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          0
+        ]
+      },
+      "id": "numpy.unique:0028",
+      "input": {
+        "a": [
+          -2,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          1
+        ]
+      },
+      "id": "numpy.unique:0029",
+      "input": {
+        "a": [
+          1,
+          -1,
+          -2,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          1
+        ]
+      },
+      "id": "numpy.unique:0030",
+      "input": {
+        "a": [
+          -3,
+          -3,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0031",
+      "input": {
+        "a": [
+          -1,
+          -3,
+          2,
+          3,
+          3,
+          -2,
+          -1,
+          2,
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          3
+        ]
+      },
+      "id": "numpy.unique:0032",
+      "input": {
+        "a": [
+          -3,
+          -1,
+          -3,
+          3,
+          -2,
+          0,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          0,
+          2
+        ]
+      },
+      "id": "numpy.unique:0033",
+      "input": {
+        "a": [
+          0,
+          2,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0034",
+      "input": {
+        "a": [
+          -2,
+          2,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0035",
+      "input": {
+        "a": [
+          2,
+          -3,
+          3,
+          0,
+          3,
+          3,
+          -2,
+          2,
+          -1,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0036",
+      "input": {
+        "a": [
+          1,
+          0,
+          -3,
+          -3,
+          1,
+          -1,
+          1,
+          2,
+          -3,
+          3,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1
+        ]
+      },
+      "id": "numpy.unique:0037",
+      "input": {
+        "a": [
+          -3,
+          -2,
+          1,
+          -1,
+          0,
+          -3,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          2
+        ]
+      },
+      "id": "numpy.unique:0038",
+      "input": {
+        "a": [
+          -3,
+          -1,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0039",
+      "input": {
+        "a": [
+          3,
+          -2,
+          1,
+          0,
+          2,
+          -1,
+          -1,
+          -1,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0040",
+      "input": {
+        "a": [
+          1,
+          -1,
+          3,
+          1,
+          -3,
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0041",
+      "input": {
+        "a": [
+          3,
+          -2,
+          -3,
+          3,
+          -1,
+          2,
+          2,
+          3,
+          -1,
+          -2,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0042",
+      "input": {
+        "a": [
+          3,
+          3,
+          3,
+          -2,
+          -3,
+          1,
+          2,
+          2,
+          0,
+          0,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.unique:0043",
+      "input": {
+        "a": [
+          -3,
+          2,
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          0,
+          3
+        ]
+      },
+      "id": "numpy.unique:0044",
+      "input": {
+        "a": [
+          0,
+          -2,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          0,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.unique:0045",
+      "input": {
+        "a": [
+          -2,
+          -2,
+          3,
+          3,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0046",
+      "input": {
+        "a": [
+          3,
+          3,
+          -2,
+          0,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          2,
+          -2,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          2
+        ]
+      },
+      "id": "numpy.unique:0047",
+      "input": {
+        "a": [
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          2
+        ]
+      },
+      "id": "numpy.unique:0048",
+      "input": {
+        "a": [
+          -1,
+          0,
+          -3,
+          2,
+          -2,
+          -2,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1
+        ]
+      },
+      "id": "numpy.unique:0049",
+      "input": {
+        "a": [
+          -2,
+          -1,
+          -2,
+          -1,
+          -1,
+          -3,
+          -1,
+          -1,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          3
+        ]
+      },
+      "id": "numpy.unique:0050",
+      "input": {
+        "a": [
+          3,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.unique:0051",
+      "input": {
+        "a": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          -1,
+          2,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          2
+        ]
+      },
+      "id": "numpy.unique:0052",
+      "input": {
+        "a": [
+          2,
+          -2,
+          0,
+          0,
+          2,
+          0,
+          -2,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0053",
+      "input": {
+        "a": [
+          -1,
+          2,
+          1,
+          1,
+          2,
+          3,
+          3,
+          3,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0054",
+      "input": {
+        "a": [
+          0,
+          3,
+          3,
+          -1,
+          -2,
+          2,
+          -3,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0055",
+      "input": {
+        "a": [
+          3,
+          0,
+          -3,
+          1,
+          0,
+          2,
+          2,
+          -1,
+          2,
+          0,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          0
+        ]
+      },
+      "id": "numpy.unique:0056",
+      "input": {
+        "a": [
+          0,
+          -3,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.unique:0057",
+      "input": {
+        "a": [
+          0,
+          2,
+          -2,
+          1,
+          -3,
+          1,
+          -1,
+          0,
+          0,
+          1,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          2
+        ]
+      },
+      "id": "numpy.unique:0058",
+      "input": {
+        "a": [
+          2,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0059",
+      "input": {
+        "a": [
+          -2,
+          2,
+          -3,
+          0,
+          0,
+          1,
+          2,
+          3,
+          -3,
+          -2,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.unique:0060",
+      "input": {
+        "a": [
+          1,
+          0,
+          3,
+          3,
+          -3,
+          -1,
+          -1,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0061",
+      "input": {
+        "a": [
+          2,
+          -3,
+          -3,
+          -3,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          0
+        ]
+      },
+      "id": "numpy.unique:0062",
+      "input": {
+        "a": [
+          -3,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          3
+        ]
+      },
+      "id": "numpy.unique:0063",
+      "input": {
+        "a": [
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0064",
+      "input": {
+        "a": [
+          3,
+          1,
+          3,
+          -1,
+          0,
+          3,
+          -3,
+          -3,
+          -3,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0
+        ]
+      },
+      "id": "numpy.unique:0065",
+      "input": {
+        "a": [
+          -1,
+          -2,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0066",
+      "input": {
+        "a": [
+          0,
+          0,
+          -3,
+          3,
+          -1,
+          1,
+          2,
+          2,
+          3,
+          3,
+          1,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0067",
+      "input": {
+        "a": [
+          3,
+          -2,
+          -1,
+          2,
+          2,
+          -2,
+          3,
+          0,
+          3,
+          0,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0068",
+      "input": {
+        "a": [
+          2,
+          0,
+          3,
+          3,
+          1,
+          3,
+          -2,
+          -1,
+          0,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.unique:0069",
+      "input": {
+        "a": [
+          -3,
+          -3,
+          -3,
+          -2,
+          -1,
+          1,
+          0,
+          1,
+          -1,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0070",
+      "input": {
+        "a": [
+          -3,
+          3,
+          1,
+          2,
+          0,
+          1,
+          2,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1
+        ]
+      },
+      "id": "numpy.unique:0071",
+      "input": {
+        "a": [
+          1,
+          -2,
+          0,
+          1,
+          -1,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0072",
+      "input": {
+        "a": [
+          3,
+          1,
+          -2,
+          2,
+          1,
+          1,
+          0,
+          -1,
+          -2,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          0,
+          2
+        ]
+      },
+      "id": "numpy.unique:0073",
+      "input": {
+        "a": [
+          2,
+          -2,
+          2,
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          0
+        ]
+      },
+      "id": "numpy.unique:0074",
+      "input": {
+        "a": [
+          0,
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          0,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.unique:0075",
+      "input": {
+        "a": [
+          1,
+          0,
+          0,
+          1,
+          2,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1
+        ]
+      },
+      "id": "numpy.unique:0076",
+      "input": {
+        "a": [
+          -1,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          0,
+          2
+        ]
+      },
+      "id": "numpy.unique:0077",
+      "input": {
+        "a": [
+          -3,
+          -3,
+          2,
+          -1,
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          0,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.unique:0078",
+      "input": {
+        "a": [
+          -1,
+          1,
+          -1,
+          -3,
+          0,
+          -1,
+          2,
+          1,
+          0,
+          0,
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          2
+        ]
+      },
+      "id": "numpy.unique:0079",
+      "input": {
+        "a": [
+          0,
+          2,
+          2,
+          -1,
+          -2,
+          -1,
+          -1,
+          -1,
+          0,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.unique:0080",
+      "input": {
+        "a": [
+          1,
+          -3,
+          -1,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          0,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.unique:0081",
+      "input": {
+        "a": [
+          -3,
+          2,
+          0,
+          -1,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          2
+        ]
+      },
+      "id": "numpy.unique:0082",
+      "input": {
+        "a": [
+          2,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0083",
+      "input": {
+        "a": [
+          -2,
+          2,
+          1,
+          1,
+          1,
+          3,
+          -3,
+          1,
+          1,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          0,
+          1
+        ]
+      },
+      "id": "numpy.unique:0084",
+      "input": {
+        "a": [
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          0,
+          3
+        ]
+      },
+      "id": "numpy.unique:0085",
+      "input": {
+        "a": [
+          3,
+          0,
+          -2,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0086",
+      "input": {
+        "a": [
+          3,
+          -3,
+          2,
+          -3,
+          1,
+          -3,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          0,
+          2
+        ]
+      },
+      "id": "numpy.unique:0087",
+      "input": {
+        "a": [
+          -3,
+          0,
+          -3,
+          2,
+          -1,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.unique:0088",
+      "input": {
+        "a": [
+          1,
+          -3,
+          -2,
+          -3,
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.unique:0089",
+      "input": {
+        "a": [
+          -2,
+          1,
+          0,
+          1,
+          3,
+          -3,
+          -3,
+          1,
+          -1,
+          -3,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.unique:0090",
+      "input": {
+        "a": [
+          1,
+          -1,
+          2,
+          -3,
+          2,
+          -3,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          0,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0091",
+      "input": {
+        "a": [
+          3,
+          0,
+          -3,
+          3,
+          -3,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.unique:0092",
+      "input": {
+        "a": [
+          -2,
+          -3,
+          -1,
+          -2,
+          1,
+          -2,
+          2,
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.unique:0093",
+      "input": {
+        "a": [
+          -2,
+          0,
+          -2,
+          3,
+          -1,
+          1,
+          -3,
+          1,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.unique:0094",
+      "input": {
+        "a": [
+          -1,
+          -2,
+          0,
+          1,
+          -2,
+          0,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.unique:0095",
+      "input": {
+        "a": [
+          1,
+          3,
+          1,
+          3,
+          -1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          0
+        ]
+      },
+      "id": "numpy.unique:0096",
+      "input": {
+        "a": [
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0097",
+      "input": {
+        "a": [
+          -1,
+          -3,
+          -3,
+          1,
+          3,
+          1,
+          1,
+          -2,
+          -2,
+          -3,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          0,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0098",
+      "input": {
+        "a": [
+          2,
+          3,
+          2,
+          -3,
+          0,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          0
+        ]
+      },
+      "id": "numpy.unique:0099",
+      "input": {
+        "a": [
+          -3,
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.unique:0100",
+      "input": {
+        "a": [
+          -3,
+          -2,
+          1,
+          2,
+          -1,
+          -3,
+          -1,
+          -1,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          0,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.unique:0101",
+      "input": {
+        "a": [
+          0,
+          1,
+          -3,
+          1,
+          1,
+          2,
+          1,
+          0,
+          -2,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0102",
+      "input": {
+        "a": [
+          3,
+          3,
+          2,
+          -1,
+          -2,
+          3,
+          -1,
+          -2,
+          -3,
+          -1,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0103",
+      "input": {
+        "a": [
+          0,
+          3,
+          -2,
+          -2,
+          -1,
+          -1,
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.unique:0104",
+      "input": {
+        "a": [
+          1,
+          -3,
+          -3,
+          -2,
+          3,
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0105",
+      "input": {
+        "a": [
+          2,
+          1,
+          -2,
+          -2,
+          2,
+          -2,
+          -1,
+          -3,
+          -2,
+          3,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0106",
+      "input": {
+        "a": [
+          3,
+          -1,
+          -2,
+          2,
+          3,
+          -3,
+          -1,
+          -3,
+          0,
+          0,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0107",
+      "input": {
+        "a": [
+          0,
+          2,
+          -3,
+          -1,
+          2,
+          -3,
+          -1,
+          1,
+          3,
+          -3,
+          -1,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          0,
+          2
+        ]
+      },
+      "id": "numpy.unique:0108",
+      "input": {
+        "a": [
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.unique:0109",
+      "input": {
+        "a": [
+          0,
+          -1,
+          -2,
+          1,
+          3,
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          3
+        ]
+      },
+      "id": "numpy.unique:0110",
+      "input": {
+        "a": [
+          3,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1
+        ]
+      },
+      "id": "numpy.unique:0111",
+      "input": {
+        "a": [
+          1,
+          -2,
+          -2,
+          -3,
+          1,
+          -1,
+          -3,
+          -1,
+          0,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0112",
+      "input": {
+        "a": [
+          -3,
+          1,
+          3,
+          3,
+          0,
+          2,
+          -1,
+          3,
+          -2,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          0,
+          2
+        ]
+      },
+      "id": "numpy.unique:0113",
+      "input": {
+        "a": [
+          2,
+          2,
+          0,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -1,
+          0,
+          3
+        ]
+      },
+      "id": "numpy.unique:0114",
+      "input": {
+        "a": [
+          3,
+          3,
+          0,
+          -1,
+          3,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0115",
+      "input": {
+        "a": [
+          -2,
+          -2,
+          -1,
+          -3,
+          3,
+          -2,
+          1,
+          -1,
+          2,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0116",
+      "input": {
+        "a": [
+          3,
+          2,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0
+        ]
+      },
+      "id": "numpy.unique:0117",
+      "input": {
+        "a": [
+          -1,
+          -2,
+          0,
+          -2,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0118",
+      "input": {
+        "a": [
+          2,
+          2,
+          -1,
+          2,
+          -2,
+          0,
+          -2,
+          -2,
+          3,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -1,
+          0,
+          2
+        ]
+      },
+      "id": "numpy.unique:0119",
+      "input": {
+        "a": [
+          0,
+          -1,
+          -3,
+          2,
+          -3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "id": "numpy.unique:0120",
+      "input": {
+        "a": [
+          3,
+          1,
+          2,
+          -3,
+          -1,
+          -1,
+          -1,
+          1,
+          0,
+          2,
+          1,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          0,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.unique:0121",
+      "input": {
+        "a": [
+          0,
+          1,
+          -2,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          0,
+          3
+        ]
+      },
+      "id": "numpy.unique:0122",
+      "input": {
+        "a": [
+          -3,
+          3,
+          0,
+          -3,
+          0
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.unique:0123",
+      "input": {
+        "a": [
+          0,
+          0,
+          -2,
+          1,
+          -3,
+          -1,
+          3
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1
+        ]
+      },
+      "id": "numpy.unique:0124",
+      "input": {
+        "a": [
+          -1,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          1,
+          2
+        ]
+      },
+      "id": "numpy.unique:0125",
+      "input": {
+        "a": [
+          -3,
+          -2,
+          2,
+          1,
+          -3,
+          -1,
+          2,
+          -2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -2,
+          -1,
+          0,
+          2
+        ]
+      },
+      "id": "numpy.unique:0126",
+      "input": {
+        "a": [
+          2,
+          -2,
+          -2,
+          0,
+          -2,
+          -1,
+          2
+        ]
+      }
+    },
+    {
+      "category": "random",
+      "expected": {
+        "value": [
+          -3,
+          -2,
+          -1,
+          1,
+          3
+        ]
+      },
+      "id": "numpy.unique:0127",
+      "input": {
+        "a": [
+          1,
+          -2,
+          -1,
+          3,
+          -3
+        ]
+      }
+    }
+  ]
+}

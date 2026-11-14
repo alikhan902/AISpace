@@ -1,0 +1,23 @@
+{
+  "algorithm": [
+    "Generate all integers from 1 to n that divide n without remainder.",
+    "Sort the list in ascending order.",
+    "Return the list as the result."
+  ],
+  "constraints": [
+    "n is a positive integer <= 5000",
+    "Divisors are returned in ascending order",
+    "Generator flag is set to False",
+    "Proper flag is set to False"
+  ],
+  "edge_cases": [
+    "n = 1: return [1]",
+    "n = 2: return [1, 2]",
+    "n = 5000: return all divisors of 5000 in ascending order"
+  ],
+  "inputs": "n is a positive integer <= 5000",
+  "method_id": "sympy.divisors",
+  "output": "An ascending list of all positive divisors of n",
+  "purpose": "Return all divisors of n sorted from 1 to n.",
+  "signature": "solve(n)"
+}

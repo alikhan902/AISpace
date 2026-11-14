@@ -1,0 +1,28 @@
+{
+  "algorithm": [
+    "For each pair of elements (a, b) from the inputs (broadcasted to the same shape), compute the absolute value of each element.",
+    "Compute the lowest common multiple of |a| and |b| using the formula: lcm(a, b) = |a * b| / gcd(a, b), where gcd is the greatest common divisor.",
+    "If both inputs are scalars, return the computed lcm as a single integer; otherwise, return a list of computed lcms for each element pair.",
+    "Handle empty lists by returning an empty list."
+  ],
+  "constraints": [
+    "Inputs must be integers or 1-D lists of integers.",
+    "Values and results fit within signed 64-bit integers.",
+    "No broadcasting beyond the standard array broadcasting rules for 1-D lists.",
+    "Scalar inputs are treated as 1-element lists for broadcasting purposes.",
+    "The output must be a scalar if both inputs are scalars; otherwise, a list of the same length as the broadcasted input shape."
+  ],
+  "edge_cases": [
+    "Both inputs are empty lists: return an empty list.",
+    "One input is a scalar and the other is a list of length 1: return a single value.",
+    "One input is a scalar and the other is a list of length 0: return an empty list.",
+    "Inputs with negative values: take absolute values before computation.",
+    "Inputs with zero: lcm(0, x) = 0 for any x (since gcd(0, x) = |x|, and lcm(0, x) = 0).",
+    "Inputs that are not integers: not supported (per contract)."
+  ],
+  "inputs": "x and y are integers or 1-D lists of integers. Scalar/scalar inputs return an integer; scalar/list or list/scalar inputs return a list; lists of the same length (including empty) return a list. Inputs must be broadcastable if shapes differ.",
+  "method_id": "numpy.lcm",
+  "output": "A scalar integer if both inputs are scalars; otherwise, a list of integers representing the lowest common multiple of the absolute values of corresponding elements.",
+  "purpose": "Compute the lowest common multiple of the absolute values of two inputs, supporting scalar and list inputs with broadcasting rules.",
+  "signature": "solve(x, y)"
+}

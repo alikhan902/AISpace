@@ -1,0 +1,116 @@
+{
+  "elapsed_seconds": 1.6793782659999579,
+  "finished_at": "2026-11-14T13:07:41.126326+00:00",
+  "parsed": {
+    "algorithm": [
+      "Use the formula for Catalan numbers: C_n = (1/(n+1)) * binomial(2n, n)",
+      "Compute the binomial coefficient binomial(2n, n) using combinatorial mathematics",
+      "Divide the result by (n+1) to obtain the Catalan number"
+    ],
+    "constraints": [
+      "n must be an integer in the range 0 to 35 inclusive",
+      "No symbolic computation is allowed; result must be an exact Python integer",
+      "No floating-point approximations are used"
+    ],
+    "edge_cases": [
+      "n = 0: Catalan number is 1",
+      "n = 35: Catalan number is computed with arbitrary precision"
+    ],
+    "inputs": "n is an integer in 0..35",
+    "method_id": "sympy.catalan",
+    "output": "The nth Catalan number as an exact Python integer",
+    "purpose": "Compute the nth Catalan number",
+    "signature": "solve(n)"
+  },
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edge_cases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "inputs": {
+          "type": "string"
+        },
+        "method_id": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method_id",
+        "signature",
+        "purpose",
+        "inputs",
+        "output",
+        "algorithm",
+        "edge_cases",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You write precise JSON behavioral specification cards for Python functions. Use only the supplied reference brief. Summarize the function in English so a separate programmer can implement it without the reference. Preserve the exact solve signature, input domain, output shape, sorting, boundary cases and error rules. Describe an algorithm in plain language or mathematical formulas, not Python source. Never include executable code. Do not invent extra requirements. The card must be self-contained. Return only JSON matching the schema.",
+        "role": "system"
+      },
+      {
+        "content": "Create the specification card for this reference brief.\nJSON schema:\n{\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"algorithm\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"constraints\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"edge_cases\": {\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"inputs\": {\n      \"type\": \"string\"\n    },\n    \"method_id\": {\n      \"type\": \"string\"\n    },\n    \"output\": {\n      \"type\": \"string\"\n    },\n    \"purpose\": {\n      \"type\": \"string\"\n    },\n    \"signature\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"method_id\",\n    \"signature\",\n    \"purpose\",\n    \"inputs\",\n    \"output\",\n    \"algorithm\",\n    \"edge_cases\",\n    \"constraints\"\n  ],\n  \"type\": \"object\"\n}\nReference brief:\n{\n  \"contract\": \"n is an integer in 0..35. Return the exact Python int, with arbitrary precision; no symbolic result.\",\n  \"documentation\": \"Catalan numbers\\n\\nThe `n^{th}` catalan number is given by:\\n\\n.. math :: C_n = \\\\frac{1}{n+1} \\\\binom{2n}{n}\\n\\n* ``catalan(n)`` gives the `n^{th}` Catalan number, `C_n`\\n\\nExamples\\n========\\n\\n>>> from sympy import (Symbol, binomial, gamma, hyper,\\n...     catalan, diff, combsimp, Rational, I)\\n\\n>>> [catalan(i) for i in range(1,10)]\\n[1, 2, 5, 14, 42, 132, 429, 1430, 4862]\\n\\n>>> n = Symbol(\\\"n\\\", integer=True)\\n\\n>>> catalan(n)\\ncatalan(n)\\n\\nCatalan numbers can be transformed into several other, identical\\nexpressions involving other mathematical functions\\n\\n>>> catalan(n).rewrite(binomial)\\nbinomial(2*n, n)/(n + 1)\\n\\n>>> catalan(n).rewrite(gamma)\\n4**n*gamma(n + 1/2)/(sqrt(pi)*gamma(n + 2))\\n\\n>>> catalan(n).rewrite(hyper)\\nhyper((-n, 1 - n), (2,), 1)\\n\\nFor some non-integer values of n we can get closed form\\nexpressions by rewriting in terms of gamma functions:\\n\\n>>> catalan(Rational(1, 2)).rewrite(gamma)\\n8/(3*pi)\\n\\nWe can differentiate the Catalan numbers C(n) interpreted as a\\ncontinuous real function in n:\\n\\n>>> diff(catalan(n), n)\\n(polygamma(0, n + 1/2) - polygamma(0, n + 2) + log(4))*catalan(n)\\n\\nAs a more advanced example consider the following ratio\\nbetween consecutive numbers:\\n\\n>>> combsimp((catalan(n + 1)/catalan(n)).rewrite(binomial))\\n2*(2*n + 1)/(n + 2)\\n\\nThe Catalan numbers can be generalized to complex numbers:\\n\\n>>> catalan(I).rewrite(gamma)\\n4**I*gamma(1/2 + I)/(sqrt(pi)*gamma(2 + I))\\n\\nand evaluated with arbitrary precision:\\n\\n>>> catalan(I).evalf(20)\\n0.39764993382373624267 - 0.020884341620842555705*I\\n\\nSee Also\\n========\\n\\nandre, bell, bernoulli, euler, fibonacci, harmonic, lucas, genocchi,\\npartition, tribonacci, sympy.functions.combinatorial.factorials.binomial\\n\\nReferences\\n==========\\n\\n.. [1] https://en.wikipedia.org/wiki/Catalan_number\\n.. [2] https://mathworld.wolfram.com/CatalanNumber.html\\n.. [3] https://functions.wolfram.com/GammaBetaErf/CatalanNumber/\\n.. [4] http://geometer.org/mathcircles/catalan.pdf\",\n  \"documentation_truncated\": false,\n  \"group\": \"combinatorics\",\n  \"id\": \"sympy.catalan\",\n  \"library\": \"sympy\",\n  \"name\": \"catalan\",\n  \"signature\": \"solve(n)\",\n  \"version\": \"1.14.0\"\n}",
+        "role": "user"
+      }
+    ],
+    "model": "qwen3:1.7b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 2048,
+      "num_thread": 4,
+      "seed": 20261114,
+      "temperature": 0
+    },
+    "stream": false,
+    "think": false
+  },
+  "response": {
+    "created_at": "2026-11-14T13:07:41.126043727Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 228,
+    "eval_duration": 1525740000,
+    "load_duration": 536281,
+    "message": {
+      "content": "{\n  \"method_id\": \"sympy.catalan\",\n  \"signature\": \"solve(n)\",\n  \"purpose\": \"Compute the nth Catalan number\",\n  \"inputs\": \"n is an integer in 0..35\",\n  \"output\": \"The nth Catalan number as an exact Python integer\",\n  \"algorithm\": [\n    \"Use the formula for Catalan numbers: C_n = (1/(n+1)) * binomial(2n, n)\",\n    \"Compute the binomial coefficient binomial(2n, n) using combinatorial mathematics\",\n    \"Divide the result by (n+1) to obtain the Catalan number\"\n  ],\n  \"edge_cases\": [\n    \"n = 0: Catalan number is 1\",\n    \"n = 35: Catalan number is computed with arbitrary precision\"\n  ],\n  \"constraints\": [\n    \"n must be an integer in the range 0 to 35 inclusive\",\n    \"No symbolic computation is allowed; result must be an exact Python integer\",\n    \"No floating-point approximations are used\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "qwen3:1.7b",
+    "prompt_eval_cached_count": 352,
+    "prompt_eval_count": 1167,
+    "prompt_eval_duration": 128453000,
+    "total_duration": 1678779296
+  },
+  "started_at": "2026-11-14T13:07:39.446946+00:00",
+  "valid": true
+}

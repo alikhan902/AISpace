@@ -1,0 +1,25 @@
+{
+  "algorithm": [
+    "Use the Sieve of Eratosthenes to generate potential primes",
+    "Check for primality using the 6*j ± 1 property",
+    "Iterate until the ith prime is found",
+    "Return the result"
+  ],
+  "constraints": [
+    "ith must be a positive integer",
+    "n must be an integer",
+    "ith must be greater than 0",
+    "n must be within the range -10 to 5000"
+  ],
+  "edge_cases": [
+    "n = -10, ith = 1",
+    "n = 5000, ith = 1",
+    "ith = 0",
+    "n is not an integer"
+  ],
+  "inputs": "n: integer in -10..5000, ith: positive integer",
+  "method_id": "sympy.nextprime",
+  "output": "int: Return the ith prime greater than n",
+  "purpose": "Return the ith prime greater than n.",
+  "signature": "solve(n)"
+}
